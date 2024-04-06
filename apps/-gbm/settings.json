@@ -1,0 +1,39 @@
+[
+  {
+    "type": "multi-input",
+    "id": "gbm",
+    "title": "<img style='padding: 3px;background: #dae4ea;border-radius: 3px;width: 11px;vertical-align: text-bottom;' src='/media/apps/google.svg'> Google My Business",
+    "help": "https://support.google.com/business-messages/answer/11058813?hl=en",
+    "content": "Enter the details of your Google Business Messages.",
+    "value": [
+      {
+        "type": "text",
+        "id": "gbm-client-email",
+        "title": "Client email"
+      },
+      {
+        "type": "text",
+        "id": "gbm-private-key",
+        "title": "Private key"
+      },
+      {
+        "type": "text",
+        "id": "gbm-client-token",
+        "title": "Client token"
+      },
+      {
+        "type": "button",
+        "id": "gbm-webhook",
+        "title": "Webhook URL",
+        "button-text": "Webhook URL",
+        "button-url": "#"
+      }
+    ]
+  },
+  {
+    "type": "number",
+    "id": "gbm-department",
+    "title": "Department ID",
+    "content": "Assign a departments to all conversations started from Google Business Messages. Enter the department ID."
+  }
+]

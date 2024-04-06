@@ -1,0 +1,6 @@
+# Exclude specific files
+*.txt
+config.php
+
+# Exclude the uploads folder
+uploads/

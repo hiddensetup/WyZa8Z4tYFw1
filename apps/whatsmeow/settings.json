@@ -1,0 +1,47 @@
+[
+  {
+    "type": "multi-input",
+    "id": "whatsmeow-go",
+    "title": "WhatsApp <small style=\"color:var(--color-green);\">(new)</small>",
+    "content": "Explore our API for external use!<br><br>With WhatsApp Web, you can connect WhatsApp to your ERP directly or use it in Steamboxchat at no cost. Link up to 15 agents using your own hosting with no API cost.<br><br>Steamboxchat Support: Starting from $69/month, prepaid for 6 months.",
+    "help": "https://wa.me/5491156165558/?text=¡Hola!%20Estoy%20interesado%20en%20usar%20WhatsApp%20Web%20con%20Steamboxchat.%0A¿Podrías%20proporcionarme%20el%20token%20de%20acceso%3F%0A%0AOlá!%20Estou%20interessado%20em%20usar%20o%20WhatsApp%20Web%20com%20o%20Steamboxchat.%0AVocê%20poderia%20me%20fornecer%20o%20token%20de%20acesso%3F",
+    "value": [
+      {
+        "type": "text",
+        "id": "whatsmeow-go-phone",
+        "title": "WhatsApp Phone Number"
+      },
+      {
+        "type": "text",
+        "id": "whatsmeow-go-qr",
+        "title": "WhatsApp QR code link"
+      },
+      {
+        "type": "button",
+        "id": "whatsmeow-go-start",
+        "button-text": "Get the QR-Code"
+      },
+      {
+        "type": "text",
+        "id": "whatsmeow-go-url",
+        "title": "Auth Token"
+      },
+      {
+        "type": "button",
+        "id": "whatsmeow-go-restart",
+        "button-text": "Restart"
+      },
+      {
+        "type": "checkbox",
+        "id": "whatsmeow-go-active",
+        "title": "Active"
+      }
+    ]
+  },
+  {
+    "type": "number",
+    "id": "whatsmeow-department",
+    "title": "Department ID",
+    "content": "Assign a departments to all conversations started from WhatsApp. Insert the department ID."
+  }
+]
