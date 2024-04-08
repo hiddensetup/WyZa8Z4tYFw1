@@ -43,6 +43,8 @@
   var ND = "undefined";
   var cookies_supported = true;
   var utc_offset = new Date().getTimezoneOffset() * 60000;
+  var cloud_data = false;
+  // var articles_page = false;
   var load_more = 30;
   var total_more;
 
@@ -172,7 +174,9 @@
       if (!("language" in data) && typeof SB_LANG != ND) {
         data["language"] = SB_LANG;
       }
-
+      if (cloud_data) {
+        data["cloud"] = cloud_data;
+      }
       $.ajax({
         method: "POST",
         url: SB_AJAX_URL,
@@ -1562,6 +1566,7 @@
         }
       );
     },
+
     cloudChannelRename: function (channel) {
       return CHAT_SETTINGS.cloud || (admin && SB_ADMIN_SETTINGS.cloud)
         ? channel +
@@ -2254,7 +2259,7 @@
         : encodeURI(message)
     }">
             ${media_code}
-            <div style="max-width:30rem; min-width:5rem;margin:0px;text-align:start;margin:0px;cursor:pointer;" class="readThis copyTextOnClick">
+            <div style="max-width:30rem;margin:0px;text-align:start;margin:0px;cursor:pointer;" class="readThis copyTextOnClick">
                                   ${this.linksData
         ? this.linksData.message
         : message.replace(/\|/g, " ")
@@ -2284,7 +2289,7 @@
           }">
 				  ${media_code}
 				 
-				  <div style="max-width:30rem; min-width:5rem;margin:0px;text-align:start;margin:0px;cursor:pointer;" class="copyTextOnClick">
+				  <div style="margin:0px;text-align:start;margin:0px;cursor:pointer;" class="copyTextOnClick">
 					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
 				  </div>
 				</div>
@@ -2318,12 +2323,19 @@
         let codePlaceholder = `{{code_placeholder_${i}}}`;
         message = message.replace(codes[i], codePlaceholder);
       }
-    
+
+ // Inline code blocks with single backticks
+ let inlineCodes = message.match(/`([^`]+)`/g) || [];
+ for (var i = 0; i < inlineCodes.length; i++) {
+   let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
+   message = message.replace(inlineCodes[i], codePlaceholder);
+ }
+
       // Bold (requires spaces around asterisks)
       message = message.replace(/(?<!\*)\*(.*?)\*(?!\*)/g, "<strong>$1</strong>");
     
       // Italic (requires spaces around underscores)
-      message = message.replace(/(^|\s)\_([^\s\_]+)\_(?=\s|$)/g, "$1<i>$2</i>");
+      message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
     
       // Strikethrough (requires spaces around tildes)
       message = message.replace(/(^|\s)\~([^\s\~]+)\~(?=\s|$)/g, "$1<del>$2</del>");
@@ -2353,6 +2365,13 @@
       if (message.includes("http")) {
         message = message.autoLink({ target: "_blank" });
       }
+
+
+  // Inline code block restore
+  for (var i = 0; i < inlineCodes.length; i++) {
+    let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
+    message = message.replace(codePlaceholder, `<pre>${inlineCodes[i].substring(1, inlineCodes[i].length - 1)}</pre>`);
+  }
     
       // Code block restore
       for (var i = 0; i < codes.length; i++) {
@@ -2378,6 +2397,8 @@
 
       return message;
     }
+
+    
   }
 
   window.SBMessage = SBMessage;
@@ -6522,7 +6543,60 @@
 
   var SBApps = {
     // Get the login data
-   
+    login: function () {
+      if (
+        this.is("wp") &&
+        typeof SB_WP_ACTIVE_USER != ND &&
+        CHAT_SETTINGS["wp-users-system"] == "wp"
+      ) {
+        return [
+          [SB_WP_ACTIVE_USER, typeof SB_WP_AVATAR != ND ? SB_WP_AVATAR : ""],
+          "wp",
+        ];
+      }
+      if (typeof SB_PERFEX_ACTIVE_USER != ND) {
+        return [[SB_PERFEX_ACTIVE_USER, SB_PERFEX_CONTACT_ID], "perfex"];
+      }
+      if (typeof SB_WHMCS_ACTIVE_USER != ND) {
+        return [SB_WHMCS_ACTIVE_USER, "whmcs"];
+      }
+      if (typeof SB_AECOMMERCE_ACTIVE_USER != ND) {
+        return [SB_AECOMMERCE_ACTIVE_USER, "aecommerce"];
+      }
+      if (typeof SB_DEFAULT_USER != ND) {
+        return [SB_DEFAULT_USER, "default"];
+      }
+      return false;
+    },
+
+    // Check if an app is installed and active
+    is: function (name) {
+      if (admin) return SBAdmin.apps.is(name);
+      if (name == "wordpress" || name == "wp") return CHAT_SETTINGS["wp"];
+      return name in CHAT_SETTINGS ? CHAT_SETTINGS[name] : false;
+    },
+
+    wordpress: {
+      // Ajax
+      ajax: function (action, data, onSuccess = false) {
+        if (typeof SB_WP_AJAX_URL == ND) return;
+        $.ajax({
+          method: "POST",
+          url: SB_WP_AJAX_URL,
+          data: $.extend(
+            {
+              action: "sb_wp_ajax",
+              type: action,
+            },
+            data
+          ),
+        }).done((response) => {
+          if (onSuccess) {
+            onSuccess(response);
+          }
+        });
+      },
+    },
 
     dialogflow: {
       token: storage("dialogflow-token"),
@@ -6910,7 +6984,9 @@
       tickets = true;
       parameters["mode"] = "tickets";
     }
-
+    if ("cloud" in parameters) {
+      cloud_data = parameters["cloud"];
+    }
     let min = url_full.lastIndexOf("main.js");
     url = url_full.substr(
       0,
@@ -6923,6 +6999,7 @@
       "/include/init.php" +
       ("lang" in parameters ? "?lang=" + parameters["lang"] : "") +
       ("mode" in parameters ? "&mode=" + parameters["mode"] : "") +
+      (cloud_data ? "&cloud=" + cloud_data : "");
     SBF.cors("GET", url_chat.replace(".php&", ".php?"), (response) => {
       let target = "body";
       if (tickets && $("#sb-tickets").length) {

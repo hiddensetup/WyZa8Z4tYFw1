@@ -4176,7 +4176,7 @@
               SB_ADMIN_SETTINGS["allow-supervisor-delete-message"])
               ? `<li data-value="delete"><i style="font-size: 0.7rem;color: #926bff!important;padding-right:4px"  class="sb-icon-delete"></i>${sb_(
                   "Delete"
-                )}</li>`
+                )}</li><hr style="margin:5px; background-color: var(--chat-border-color">`
               : ""
           }
 					${readTextOption}
@@ -4461,6 +4461,7 @@
 		</li> 
 		`;
     },
+   
 
     newMsgTop(user = false, status) {
       const chat_list = document.querySelectorAll(
@@ -4484,6 +4485,7 @@
           );
           let order_css = `
 				  transition: all .5s ease;
+          webkit-transition: all .5s ease;
 				  width:-webkit-fill-available;width:-moz-available;
 				`;
 
@@ -5684,7 +5686,7 @@
       ".sb-article-parent-category select"
     );
     saved_replies = conversations_area.find(".sb-replies");
-    chat_status = conversations_area.find(".sb-status");
+    chat_status = conversations_area.find(".sb-status-chat");
     overlay = admin.find(".sb-lightbox-overlay");
     SITE_URL =
       typeof STMBX_URL != ND

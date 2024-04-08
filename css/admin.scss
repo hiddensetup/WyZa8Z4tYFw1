@@ -2977,15 +2977,23 @@ BODY
     padding: 10px 10px;
     text-decoration: none;
     display: block;
-    margin: 4px;
-}
+    margin: 0px 10px;
 
-.cstdown-content a:hover {
+
+&:hover {
     background-color: var(--chat-background-selected) !important;
     color: var(--chat-btn-not-pressed-color);
     border-radius: .5rem;
 
+
 }
+&:active {
+    box-shadow: var(--ring-shadow-button)
+}
+
+
+}
+
 
 .show {
     display: block;
@@ -3064,9 +3072,8 @@ BODY
             li,
             [data-conversation-status="1"] {
                 position: relative;
-                border-bottom: 1px solid var(--chat-border-color);
-                // border-left: 2px solid var(--chat-border-color);
-                // background: var(--chat-background-left-color);
+                // border-bottom: 1px solid var(--chat-border-color);
+              
                 padding: 10px 10px 10px 5px;
                 max-height: 105px;
                 overflow: hidden;
@@ -3419,7 +3426,7 @@ BODY
             padding: 0px 0px 40px 0px;
             // transition: var(--transition-3);
 
-            // background-color: var(--chat-background)!important;
+            background-color: var(--sb-list-color)!important;
 
 
             >div {
@@ -3487,6 +3494,10 @@ BODY
 
                     &:active {
                         color: var(--color-green);
+                        transition: var(--transition);
+
+                        scale: .95;
+
                     }
                 }
 
@@ -3499,9 +3510,12 @@ BODY
                         // right: 3px;
                         z-index: 0;
                         color: var(--chat-bubble-text);
+                        
 
                         &:active {
                             color: var(--color-green);
+                            transition: var(--transition);
+                            scale: .95;
                         }
                     }
 
@@ -3612,6 +3626,12 @@ BODY
                 display: flex;
                 justify-content: space-between;
                 margin-right: 5px;
+
+                &:hover, &:active {
+                    transition: var(--transition);
+                    -webkit-transition: var(--transition);
+                    scale: .9;
+                  }
             }
 
             .sb-bar {
@@ -7060,8 +7080,8 @@ grammarly-editor-plugin {
     }
 
     .dropdown-content {
-        animation: fade-in .3s ease-out;
-        -webkit-animation: fade-in 3s ease-in-out;
+        animation: fade-in .2s ease-out;
+        -webkit-animation: fade-in 2s ease-in-out;
         position: absolute !important;
         left: 70px;
         z-index: 99;

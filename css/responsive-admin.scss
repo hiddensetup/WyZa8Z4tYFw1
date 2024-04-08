@@ -1005,7 +1005,7 @@ a.sb-btn {
             position: absolute;
             // height: auto;
             width: auto;
-            padding: 3px 3px 3px 10px;
+            padding: 4px 8px;
             top: 8px;
         }
 
@@ -1069,9 +1069,6 @@ a.sb-btn {
         }
     }
 
-    .cstdown-content {
-        background: red;
-    }
 
     .steambox-sorting-bar {
         border-radius: 0px 0px 7px 7px;
@@ -1248,7 +1245,7 @@ a.sb-btn {
         }
     }
 
-    &.sb-replies,
+    &.sb-replies,&.sb-status-chat,
     &.sb-woocommerce-products {
         left: 0 !important;
         right: 0;

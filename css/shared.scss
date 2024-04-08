@@ -727,24 +727,38 @@ div ul.sb-menu,
   }
 
   .sb-message {
+min-width: 5rem;
+max-width:30rem
     //overflow-y: scroll;
     // text-overflow: ellipsis;
     // i {
     //     color: var(--chat-background)
     // }
 
-    b {
+    strong {
       font-weight: 200;
       // color: var(--chat-btn-color);
     }
 
     code {
-      padding: 3px 7px;
+      padding: 0px 4px;
       font-family: monospace;
-      // background: #00000032;
-      color: #ffffffb3;
       display: inline-block;
       border-radius: 3px;
+    }
+
+    pre {
+    background: var(--chat-border-color);
+    border-radius: .6rem;
+    padding: 0 6px;
+    font-family: monospace;
+    display: inline-block;
+    border-radius: .6rem;
+    min-width: 0rem!important;
+    margin: auto;
+
+
+
     }
 
     // pre {
@@ -1317,6 +1331,8 @@ div ul.sb-menu,
       padding: 0 5px 0 5px;
       z-index: 0;
     }
+
+
   }
 
   #stop {
@@ -1351,9 +1367,9 @@ div ul.sb-menu,
       cursor: default;
       border-radius: .6rem;
       animation: fade-in .5s linear;
-      color: var(--chat-btn-color);
+      
       border: .8px solid var(--chat-border-color);
-      background-color: var(--chat-background);
+      background-color: var(--chat-btn-color);
       font-weight: 200;
       box-shadow: 0 1px 2px -1px #434343;
 
@@ -1362,7 +1378,7 @@ div ul.sb-menu,
         margin: 0px 5px;
         cursor: pointer;
         transition: var(--transition);
-        -webkit-transition: var(--transition-2);
+        -webkit-transition: var(--transition);
         vertical-align: middle;
         font-weight: 600;
         line-height: 0;
@@ -2367,7 +2383,7 @@ a.sb-btn {
     // height: 20px;
     // font-size: 1.5rem;
     line-height: 14px;
-    right: 6px;
+    right: 10px;
     cursor: pointer;
     transition: color 0.4s;
     z-index: 2;
@@ -2462,12 +2478,12 @@ a.sb-btn {
     border-radius: 0.8rem;
     z-index: 1000;
     margin: 0px -100px;
-    padding: 20px 0 10px 0;
+    padding: 10px 0 10px 0;
     animation: fade-in 0.3s ease-out;
     -webkit-animation: fade-in 0.3s ease-out;
     background-color: var(--chat-background-menu);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: .5px solid var(--chat-border-color);
 
 
@@ -2475,7 +2491,7 @@ a.sb-btn {
 
   .sb-header {
     display: flex;
-    padding: 10px 20px 15px 20px;
+    padding: 10px 20px;
     
 
     .sb-search-btn>input {
@@ -2484,17 +2500,19 @@ a.sb-btn {
 
     .sb-title {
       font-weight: 500;
+      line-height: 25px;
+      position: relative;
     }
 
     .sb-search-btn {
-      height: 40px;
+      height: 0px;
 
       >i {
         top: 6px;
       }
 
       &.sb-active {
-        margin-top: -5px;
+        margin-top: 0px;
 
         >i {
           top: 8px;
@@ -2728,7 +2746,7 @@ div ul.sb-menu,
     padding: 4px 10px 4px 10px;
     //margin: 1px 0px;
     // font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 0.3px;
     //line-height: 20px;
     white-space: nowrap;
@@ -2820,15 +2838,13 @@ div ul.sb-menu,
   padding: 2px 2px 11px 2px;
   align-self: flex-end;
 
-  &:active {
+  &:active, &:hover {
     color: var(--chat-btn-color) !important;
     border-radius: 50px;
-    animation: scale-up-center .5s ease-in-out;
+    scale: .9;
+    transition: var(--transition);
   }
 
-  &:active {
-    border-radius: 50px;
-  }
 }
 
 .sb-icon-stop {

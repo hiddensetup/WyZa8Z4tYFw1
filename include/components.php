@@ -1038,7 +1038,7 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                             }
                         </style>
                     </div>
-                    <div class="sb-mobile" style="right: 0;top: -145px;animation: scale-up-br 0.2s ease-in-out">
+                    <div class="sb-mobile" style="right: 10px;top: -145px;animation: scale-up-br 0.2s ease-in-out">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
                         <hr style="margin: 0px 12px;background: var(--chat-hr-color); ">
                         <a href="#" class="themeToggleBtn"><i style="vertical-align:middle;" class='sb-icon-mobile'></i> <?php sb_e('Tema') ?></a>

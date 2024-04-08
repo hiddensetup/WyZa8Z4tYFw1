@@ -9359,7 +9359,7 @@ function sb_component_editor($admin = false)
 
 
 
-        <div style="display:flex;align-items: center;">
+        <div class="sb-show-menu-bar" style="display:flex;align-items: center;">
             <div class="menu-plus sb-icon-plus"></div>
 
 
@@ -9442,7 +9442,7 @@ function sb_component_editor($admin = false)
             <div class="sb-emoji-bar"></div>
         </div>
         <?php if ($admin) { ?>
-            <div id="CstBtn" class="cstdown-content sb-popup sb-status" style="height: auto;">
+            <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
                 <div class="sb-header">
                     <div style="margin: -5px 0px;" class="sb-title">
                         <?php sb_e("Client status"); ?>
@@ -9476,8 +9476,8 @@ function sb_component_editor($admin = false)
             </div>
 
             <div class="sb-popup sb-replies">
-                <div class="sb-header">
-                    <div style="margin: -5px 0px;" class="sb-title">
+                <div class="sb-header" style="justify-content: space-between;">
+                    <div class="sb-title">
                         <?php sb_e("Saved replies"); ?>
                     </div>
                     <div class="sb-search-btn">
@@ -9501,7 +9501,7 @@ function sb_component_editor($admin = false)
     </div>
     <script>
         // Get references to the elements
-        const sbIconDrag = document.querySelector(".sb-icon-plus");
+        const sbIconDrag = document.querySelector(".menu-plus");
         const sbBarIcons = document.querySelector(".sb-bar-icons");
 
         // Function to toggle the visibility of sb-bar-icons
