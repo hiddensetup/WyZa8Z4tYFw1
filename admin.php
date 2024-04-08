@@ -33,6 +33,7 @@ require('include/components.php');
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#181925" />
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="pragma" content="no-cache">
