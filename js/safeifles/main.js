@@ -144,18 +144,14 @@
           // Call the custom callback function if provided, otherwise create a standard link
           return (
             prefix + // Add the prefix (space, newline, or HTML tag) before the link
-            (typeof options.callback === "function"
-              ? options.callback(url)
-              : "") + // Custom callback function result or empty string
-            "<a href='" +
-            url +
-            "'" +
-            linkAttributes +
-            ">" +
-            url +
-            "</a>" + // Clickable link
-            (typeof options.callback === "function" ? "" : " ") // Add space after the link if no custom callback function is provided
-          );
+            (typeof options.callback === "function" ?
+                options.callback(url) :
+                "") + // Custom callback function result or empty string
+            "<a href='" + url + "'" + linkAttributes + ">" + url + "</a>" + // Clickable link
+            (typeof options.callback === "function" ?
+                "" :
+                " ") // Add space after the link if no custom callback function is provided
+        );
         }
       });
     };
@@ -255,8 +251,6 @@
     },
     // Uploads
     upload: function (form, onSuccess) {
-      if (cloud_data) form.append("cloud", cloud_data); //added from old
-
       jQuery.ajax({
         url: STMBX_URL + "/include/upload.php",
         cache: false,
@@ -418,7 +412,7 @@
       let time = date_string.toLocaleTimeString(navigator.language, {
         hour: "2-digit",
         minute: "2-digit",
-        hour12: false, // Force 24-hour format
+        hour12: false // Force 24-hour format
       });
       if (diff_days < 1) {
         return extended
@@ -434,6 +428,7 @@
         }`;
       }
     },
+        
 
     // Get the unix timestamp value of a data string with format yyyy-mm-dd hh:mm:ss
     unix: function (datetime) {
@@ -727,20 +722,14 @@
       const reply = pattern.test(message);
       return reply;
     },
-     // Get the active user
+    // Get the active user
     getActiveUser: function (database = false, onSuccess) {
       let app_login = SBApps.login();
       if (
-        !app_login &&
-        (storage("wp-login") ||
-          storage("whmcs-login") ||
-          storage("perfex-login") ||
-          storage("aecommerce-login"))
+        !app_login 
       ) {
         this.cookie("sb-login", "", "", "delete");
         activeUser(false);
-        storage("login", "");
-   
       }
       SBF.ajax(
         {
@@ -1094,22 +1083,22 @@
       return new Date(date.getTime() + utc_offset * -1);
     },
 
-    // Load a js or css file
-    loadResource: function (url, script = false) {
-      let head = document.getElementsByTagName("head")[0];
-      let resource = document.createElement(script ? "script" : "link");
-      if (script) {
-        resource.src = url + "?v=" + version;
-      } else {
-        resource.id = "steambox";
-        resource.rel = "stylesheet";
-        resource.type = "text/css";
-        resource.href = url + "?v=" + version;
-        resource.media = "all";
-      }
-      head.appendChild(resource);
+   // Load a js or css file
+   loadResource: function (url, script = false) {
+    let head = document.getElementsByTagName("head")[0];
+    let resource = document.createElement(script ? "script" : "link");
+    if (script) {
+      resource.src = url + "?v=" + version;
+    } else {
+      resource.id = "steambox";
+      resource.rel = "stylesheet";
+      resource.type = "text/css";
+      resource.href = url + "?v=" + version;
+      resource.media = "all";
+    }
+    head.appendChild(resource);
     },
-
+    
     uploadResponse: function (response) {
       response = JSON.parse(response);
       if (response[0] == "success") {
@@ -1304,6 +1293,16 @@
       }
     },
 
+
+
+
+
+
+
+
+
+
+
     // Initialize service worker
     initServiceWorker: function () {
       if ("serviceWorker" in navigator) {
@@ -1371,7 +1370,7 @@
                 SBChat.update();
               }
             });
-
+            
             this.presence(1, () => {
               this.started = true;
               SBChat.automations.run_all();
@@ -1516,6 +1515,7 @@
         this.online_ids.push(user_id);
         this.presenceUpdateAdmin(user_id);
         SBChat.updateUsersActivity();
+
       }
     },
 
@@ -2253,33 +2253,31 @@
         message = message.replace(/<p\s*\/?>\s*<p\s*\/?>/g, "");
         message = message.replace("{", "<b id='sb-reply-top-name'> ~");
         message = message.replace("@s.whatsapp.net}", "</b>");
-        code = `<div data-id="${
-          this.details["id"]
-        }" ${type} class="sb-shadow-conversation ${css}">${thumb}
+        code = `<div data-id="${this.details["id"]
+    }" ${type} class="sb-shadow-conversation ${css}">${thumb}
                           <div class="sb-cnt" style="min-width:80px;max-width:100%;padding:4px 4px;">
-                          <div class="sb-message" data-value="${
-                            this.linksData
-                              ? encodeURI(this.linksData.message)
-                              : encodeURI(message)
-                          }">
+                          <div class="sb-message" data-value="${this.linksData
+        ? encodeURI(this.linksData.message)
+        : encodeURI(message)
+    }">
             ${media_code}
             <div style="max-width:30rem;margin:0px;text-align:start;margin:0px;cursor:pointer;" class="readThis copyTextOnClick">
-                                  ${
-                                    this.linksData
-                                      ? this.linksData.message
-                                      : message.replace(/\|/g, " ")
-                                  }
+                                  ${this.linksData
+        ? this.linksData.message
+        : message.replace(/\|/g, " ")
+    }
                                   </div>
                               </div>
                              ${attachments_code}
                               <div class="menu-bubble">
                                   <div class="events"></div><div class="sb-time">
                                   ${SBF.beautifyTime(
-                                    this.details["creation_time"],
-                                    true
-                                  )}
+        this.details["creation_time"],
+        true
+    )}
                                   </div><small id="server-response"></small></div>
                           </div>${admin_menu}</div>`;
+
       } else {
         // MESSAGE CREATION CHAT
         code = `<div data-id="${
@@ -2317,10 +2315,10 @@
     render(message = false) {
       if (message === false) message = "" + this.details["message"];
       let len = message.length;
-
+    
       // Breakline
       message = message.replace(/(?:\r\n|\r|\n)/g, "<br>");
-
+    
       // Code block
       let codes = message.match(/```([\s\S]+?)```/g) || [];
       for (var i = 0; i < codes.length; i++) {
@@ -2328,28 +2326,22 @@
         message = message.replace(codes[i], codePlaceholder);
       }
 
-      // Inline code blocks with single backticks
-      let inlineCodes = message.match(/`([^`]+)`/g) || [];
-      for (var i = 0; i < inlineCodes.length; i++) {
-        let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
-        message = message.replace(inlineCodes[i], codePlaceholder);
-      }
+ // Inline code blocks with single backticks
+ let inlineCodes = message.match(/`([^`]+)`/g) || [];
+ for (var i = 0; i < inlineCodes.length; i++) {
+   let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
+   message = message.replace(inlineCodes[i], codePlaceholder);
+ }
 
       // Bold (requires spaces around asterisks)
-      message = message.replace(
-        /(?<!\*)\*(.*?)\*(?!\*)/g,
-        "<strong>$1</strong>"
-      );
-
+      message = message.replace(/(?<!\*)\*(.*?)\*(?!\*)/g, "<strong>$1</strong>");
+    
       // Italic (requires spaces around underscores)
       message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
-
+    
       // Strikethrough (requires spaces around tildes)
-      message = message.replace(
-        /(^|\s)\~([^\s\~]+)\~(?=\s|$)/g,
-        "$1<del>$2</del>"
-      );
-
+      message = message.replace(/(^|\s)\~([^\s\~]+)\~(?=\s|$)/g, "$1<del>$2</del>");
+    
       // Unicode
       let false_positives = ["cede", "ubbed", "udada", "ucced"];
       for (var i = 0; i < false_positives.length; i++) {
@@ -2359,7 +2351,7 @@
       for (var i = 0; i < false_positives.length; i++) {
         message = message.replaceAll(`SBR${i}`, false_positives[i]);
       }
-
+    
       // Single emoji
       if (
         ((len == 6 || len == 5) && message.startsWith("&#x")) ||
@@ -2370,32 +2362,28 @@
       ) {
         message = `<span class="emoji-large">${message}</span>`;
       }
-
+    
       // Links
       if (message.includes("http")) {
         message = message.autoLink({ target: "_blank" });
       }
 
-      // Inline code block restore
-      for (var i = 0; i < inlineCodes.length; i++) {
-        let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
-        message = message.replace(
-          codePlaceholder,
-          `<pre>${inlineCodes[i].substring(1, inlineCodes[i].length - 1)}</pre>`
-        );
-      }
 
+  // Inline code block restore
+  for (var i = 0; i < inlineCodes.length; i++) {
+    let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
+    message = message.replace(codePlaceholder, `<pre>${inlineCodes[i].substring(1, inlineCodes[i].length - 1)}</pre>`);
+  }
+    
       // Code block restore
       for (var i = 0; i < codes.length; i++) {
         let codePlaceholder = `{{code_placeholder_${i}}}`;
-        message = message.replace(
-          codePlaceholder,
-          `<code>${codes[i].substring(3, codes[i].length - 3)}</code>`
-        );
+        message = message.replace(codePlaceholder, `<code>${codes[i].substring(3, codes[i].length - 3)}</code>`);
       }
-
+    
       return message.replace(/&amp;lt;/g, "&lt;");
     }
+    
 
     strip(message = false) {
       if (message === false) message = "" + this.details["message"];
@@ -2411,6 +2399,8 @@
 
       return message;
     }
+
+    
   }
 
   window.SBMessage = SBMessage;
@@ -3303,13 +3293,14 @@
         }
         if (
           !active &&
-          (CHAT_SETTINGS["visitors-registration"] ||
+          ( CHAT_SETTINGS["visitors-registration"] ||
             CHAT_SETTINGS["subscribe"] ||
-            tickets) &&
+            tickets)
+             &&
           (!tickets || !CHAT_SETTINGS["tickets-registration-required"])
         ) {
           this.addUserAndLogin(() => {
-            this.welcome();
+            // this.welcome();
             // this.subscribe();
             // // SBApps.woocommerce.waitingList();
             this.finalizeInit();
@@ -3329,12 +3320,12 @@
             .find(".sb-title")
             .html(`${sb_("Hello")} ${activeUser().nameBeautified}!`);
         }
-        this.welcome();
+        // this.welcome();
         // this.subscribe();
         if (!SBPusher.active) {
           setInterval(() => {
-            this.updateConversations();
-            this.updateUsersActivity();
+              this.updateConversations();
+              this.updateUsersActivity();
           }, 10200);
         }
         // SBApps.woocommerce.waitingList();
@@ -3420,7 +3411,7 @@
         main.sbActive(true);
         $("body").addClass("sb-chat-open");
         if (CHAT_SETTINGS["welcome-trigger"] == "open") {
-          this.welcome();
+          // this.welcome();
         }
         this.calculateLabelDates();
       }
@@ -4074,7 +4065,8 @@
 
     // Start and stop the real time check of new messages
     startRealTime: function () {
-      if (SBPusher.active) return;
+      if (SBPusher.active) return
+      ;
       this.stopRealTime();
       this.real_time = setInterval(() => {
         this.update();
@@ -6194,7 +6186,7 @@
                   $(area).remove();
                   if (!SBChat.isInitDashboard()) SBChat.hideDashboard();
                 }
-
+                
                 delete this.cache["registration"];
                 setTimeout(() => {
                   SBF.event("SBRegistrationForm", {
@@ -6724,7 +6716,8 @@
                                 : (document.location = payload[payloads[1]]);
                             }, 500);
                           }
-
+                         
+                         
                           if (payloads[4] in payload) {
                             SBChat.showArticles(payload[payloads[4]]);
                           }
@@ -7015,7 +7008,9 @@
         target = "#sb-tickets";
       }
       $(target).append(response);
-      SBF.loadResource(url + "/css/" + (tickets ? "tickets" : "main") + ".css");
+      SBF.loadResource(
+        url + "/css/" + (tickets ? "tickets" : "main") + ".css"
+      );
       if (tickets) {
         $.getScript(
           url +
@@ -7117,7 +7112,7 @@
               if (CHAT_SETTINGS["dialogflow-disable-tickets"])
                 CHAT_SETTINGS["dialogflow-active"] = false;
             }
-
+            
             SBF.event("SBReady");
           }
         );
@@ -7876,6 +7871,7 @@
       });
     });
 
+
     // // CONTEXTUAL BLOCKED
     // $(document).on("contextmenu",function(e){
     //     return false;
@@ -7921,8 +7917,7 @@ let utterance = null; // Declare utterance globally to access it from the event 
 
 // Function to read text
 function readText(text) {
-  if (!isSpeechSynthesisActive) {
-    // Check if speech synthesis is not active
+  if (!isSpeechSynthesisActive) { // Check if speech synthesis is not active
     let lang = "es-US";
     let rate = 1;
     let pitch = 1.2;
@@ -7932,11 +7927,11 @@ function readText(text) {
     utterance.rate = rate;
     utterance.pitch = pitch;
 
-    utterance.onstart = function () {
+    utterance.onstart = function() {
       isSpeechSynthesisActive = true; // Set flag to true when speech synthesis starts
     };
 
-    utterance.onend = function () {
+    utterance.onend = function() {
       isSpeechSynthesisActive = false; // Set flag to false when speech synthesis ends
     };
 
@@ -7968,3 +7963,5 @@ $(document).on("click", function (event) {
   window.speechSynthesis.cancel();
   isSpeechSynthesisActive = false; // Reset flag on document click
 });
+
+

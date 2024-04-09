@@ -2779,7 +2779,7 @@
                 .attr("style", "display:block!important");
               area.find(".sb-reports-tags .sb-tags").html("");
 
-              //Status conversation
+              //tags conversation
               clientStatus.forEach((tag) => {
                 let tag_key = tag;
                 let tagData = response.data.filter(
@@ -3891,8 +3891,6 @@
 
         let order_css = `
 				position:relative;
-        border-top: 0.8px solid var(--chat-border-color);
-
 				width: -webkit-fill-available;
 				width: -moz-available;
 			  `;
@@ -4409,7 +4407,6 @@
 			<div class="sb-profile"><img loading="lazy" src="${
         conversation["profile_image"]
       }">
-    
 			<div class="client-status">
 			<i style="border-radius: 50%; padding: 4px 3.5px 0px 3.5px; line-height: 0px;" class="client-icon-status sb-icon tags-${
         conversation["label"]
@@ -4490,7 +4487,6 @@
 				  transition: all .5s ease;
           webkit-transition: all .5s ease;
 				  width:-webkit-fill-available;width:-moz-available;
-          
 				`;
 
           chat_item.attr("style", order_css);

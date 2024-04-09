@@ -582,6 +582,8 @@ a.sb-btn {
     height: 40px;
     line-height: 40px;
     border: none;
+    width: 100%;
+    
 }
 
 .sb-profile-list>ul>li,
@@ -1379,7 +1381,7 @@ a.sb-btn {
                 max-width: calc(100% - 120px);
                 overflow: hidden;
                 text-overflow: ellipsis;
-                left: 10px;
+                left: 0px;
                 padding: 0.2rem 0.6rem;
             }
 

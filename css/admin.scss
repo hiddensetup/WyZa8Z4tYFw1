@@ -3040,7 +3040,7 @@ BODY
             display: flex;
             justify-content: space-between;
             padding-left: 25px;
-            // background: var(--background-conversation);
+            background: var(--chat-wa-background);
         }
 
         .sb-scroll-bar {
@@ -3135,7 +3135,7 @@ BODY
                         letter-spacing: .3px;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        margin: 18 auto;
+                        margin: 16px auto;
                         line-height: normal;
                         color: var(--chat-text-primary);
                         //width: 180px;
@@ -3174,7 +3174,7 @@ BODY
 
                 p {
                     // color:var(--chat-tertiary-color);
-                    font-size: .88rem;
+                    font-size: 1.05rem;
                     line-height: 22px;
                     opacity: 1;
                     height: 25px;
@@ -3183,7 +3183,7 @@ BODY
                     margin: 0;
                     overflow-wrap: break-word;
                     position: absolute;
-                    top: 47px;
+                    top: 45px;
                     left: 77px;
                     font-weight: 200;
                     // display: none;
@@ -3199,7 +3199,7 @@ BODY
                     //border-left: 3px solid transparent;
                     // color: var(--chat-btn-color);
                     font-weight: 600;
-                    margin-bottom: 2px;
+                    // margin-bottom: 2px;
                     margin-top: 0px;
                     animation: fade-in 1s ease-out;
                     -webkit-animation: fade-in 1s ease-out;
@@ -3254,7 +3254,7 @@ BODY
                     }
 
                     .sb-time {
-                        font-weight: 800;
+                        font-weight: 200;
                     }
 
                     p {
@@ -3268,7 +3268,7 @@ BODY
 
                 &[data-conversation-status="-1"] {
                     .sb-name {
-                        font-weight: 600;
+                        font-weight: 200;
                     }
                 }
             }
@@ -3360,7 +3360,7 @@ BODY
         position: relative;
         display: flex;
         flex-direction: column;
-        // background-color: #1a1b23;
+        background-color: var(--chat-wa-background);
         // background-image: url(/media/catz.svg);
 
         >.sb-top {
@@ -3373,7 +3373,6 @@ BODY
             // height: 75px;
             min-height: 58.5px;
             // background: var(--chat-background);
-            border-bottom: .8px solid var(--chat-border-color);
 
             .sb-menu-mobile {
                 position: absolute;
@@ -4254,6 +4253,7 @@ BODY
         -webkit-transition: var(--transition);
         position: relative;
         border-bottom: 2px solid transparent;
+        font-weight: 400;
         // color: var(--chat-btn-color);
 
         &.sb-active,
@@ -5769,8 +5769,9 @@ BODY
     transition:
         opacity 0.4s,
         transform 0.4s;
-    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, .1), 0.3em 0.3em 1em rgba(0, 0, 0, .3);
+        border: .8px solid var(--chat-border-color);
 
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, .1), 0.3em 0.3em 1em rgba(0, 0, 0, .3);
     &.sb-active {
         display: block;
         // animation: scale-up-top 0.2s cubic-bezier(.7,.14,0,1.01);
@@ -6009,6 +6010,7 @@ BODY
 }
 
 .sb-dialog-box {
+    border: .8px solid var(--chat-border-color);
     max-width: 500px;
     height: auto;
     min-height: 75px;
@@ -6022,15 +6024,15 @@ BODY
     -webkit-backdrop-filter: blur(60px);
 
     p {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 1rem;
         line-height: 30px;
-        margin: 0 0 20px 0;
+        margin: 20px;
         color: var(--chat-text-primary);
     }
 
     a {
-        margin: 0 7px;
+        margin: 7px;
     }
 
     &[data-type="choice"] .sb-close,
@@ -7080,8 +7082,8 @@ grammarly-editor-plugin {
     }
 
     .dropdown-content {
-        animation: fade-in .2s ease-out;
-        -webkit-animation: fade-in 2s ease-in-out;
+        transition: var(--transition);
+        -webkit-transition:var(--transition);
         position: absolute !important;
         left: 70px;
         z-index: 99;
@@ -7219,7 +7221,8 @@ grammarly-editor-plugin {
 
                 &:active,
                 &:hover {
-                    scale: .9
+                    scale: .9;
+                    background: var(--chat-background-selected)
                 }
             }
 

@@ -258,6 +258,9 @@ div ul.sb-menu li:hover,
     color: var(--chat-background);
     direction: ltr;
 
+
+    
+
     .sb-scroll-area {
         min-height: 250px;
 
@@ -268,6 +271,8 @@ div ul.sb-menu li:hover,
             width: 100%;
             min-height: 200px;
             box-sizing: border-box;
+
+
 
             .sb-notify-message {
                 position: absolute;
@@ -283,6 +288,25 @@ div ul.sb-menu li:hover,
                 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
                 background: #f5f7fa;
             }
+
+            .sb-time {
+                opacity: 1;
+                font-size: .7rem;
+                letter-spacing: .5px;
+                line-height: 16px;
+                left: calc(55% + 0px);
+                top: 10px;
+                white-space: nowrap;
+                display: flex !important;
+                justify-content: flex-end;
+                
+            }
+
+            div.sb-right .sb-time {
+                right: 5px !important;
+                position: relative;
+                top: 2px;
+        }
         }
     }
 
@@ -304,7 +328,6 @@ div ul.sb-menu li:hover,
 
     .sb-shadow-conversation {
         float: right !important;
-        margin: 5px 20px 5px 10px !important;
         background-color: var(--chat-top-lightbox) !important;
         color: var(--chat-btn-not-pressed-color) !important;
         border-radius: 10px 0 10px 10px !important;
@@ -364,6 +387,8 @@ div ul.sb-menu li:hover,
             text-overflow: ellipsis;
         }
 
+       
+
         .sb-text {
             font-weight: 400;
             font-size: .85rem;
@@ -421,6 +446,9 @@ div ul.sb-menu li:hover,
                 }
             }
         }
+
+
+       
 
         .sb-brand {
             display: flex;
@@ -932,7 +960,7 @@ div ul.sb-menu li:hover,
 
     .sb-editor .sb-attachments {
         display: flex;
-        justify-content: start;
+        justify-content: end;
         flex-wrap: wrap;
         overflow: auto;
         font-size: .85rem;
@@ -968,6 +996,7 @@ div ul.sb-menu li:hover,
             & textarea {
                 color: #5d6277 !important;
                 font-size: 1rem;
+                outline: none !important;
             }
         }
 
@@ -1031,6 +1060,8 @@ div ul.sb-menu li:hover,
             &:hover,
             &:active {
                 color: #000000 !important;
+                scale: .9;
+                transition: var(--transition);
             }
         }
 

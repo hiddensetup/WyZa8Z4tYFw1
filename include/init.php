@@ -48,7 +48,7 @@ function sb_component_chat()
 ?>
     <div class="sb-main sb-chat sb-no-conversations<?php echo $css ?>" style="display: none; transition: none;">
         <div class="sb-body" style="max-height: 570px;background: white;">
-            <div class="sb-scroll-area<?php if ($texture != '') echo ' sb-texture-' . substr($texture, -5, 1) ?>">
+            <div class="sb-scroll-area" style="background: url('/media/whatsapp-bkg.png');background-color: var(--chat-input-date-picker);">
                 <div class="sb-header sb-header-main sb-header-type-<?php echo $header_type ?>" <?php if ($background) echo 'style="background-image: url(' . $background . ')"' ?>>
                     <i class="sb-icon-close <?php echo $disable_dashboard ? 'sb-responsive-close-btn' : 'sb-dashboard-btn' ?>"></i>
                     <div class="sb-content">
@@ -70,7 +70,7 @@ function sb_component_chat()
                         }
                         ?>
                     </div>
-                    <!-- <div class="sb-label-date-top"></div> -->
+                    <div class="sb-label-date-top"></div>
                 </div>
                 <div class="sb-list sb-active"></div>
                 <div class="sb-dashboard">
@@ -83,7 +83,6 @@ function sb_component_chat()
                     </div>
                     <?php if ($departments_menu) sb_departments('dashboard') ?>
                     <?php if ($agents_menu) sb_agents_menu() ?>
-                    <?php if (sb_get_setting('articles-active')) echo sb_get_rich_message('articles') ?>
                 </div>
                 <div class="sb-panel sb-panel-articles"></div>
             </div>
