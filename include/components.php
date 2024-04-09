@@ -367,7 +367,8 @@ function sb_dialog()
     <div class="sb-dialog-box sb-lightbox">
         <div class="sb-title"></div>
         <p></p>
-        <div style=" display: flex; flex-wrap: wrap;justify-content: center; ">
+        <hr  style="margin: 20px;background: var(--chat-border-color);">
+        <div style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
             <a class="sb-confirm sb-btn"><?php sb_e('Confirm') ?></a>
             <a class="sb-cancel sb-btn sb-btn-red"><?php sb_e('Cancel') ?></a>
             <a class="sb-close sb-btn"><?php sb_e('Close') ?></a>

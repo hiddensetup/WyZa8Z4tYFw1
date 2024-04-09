@@ -1,6 +1,6 @@
 /* Common variables */
 :root, [data-theme="light"] {
-  --chat-bar-color: rgb(28 26 46);
+  --chat-bar-color: rgb(24 91 85);
   --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--border-color);
   --box-shadow-menu: 0 5px 5px #16171e;
   --transition-3: all 2s;
@@ -15,7 +15,9 @@
   --bar-shadow: #31343f9c;
   --sb-list-color: #f3eee6;
   --chat-wa-background: #eef2f3;
-
+  --chat-buttons-chat: rgb(99, 110, 131);
+  --color-calendar-text:#ffffff;
+  --chat-active-left-button: rgb(255 255 255);
   --chat-outline-input: 1.5px solid rgb(66 103 132 / 37%);
   --chat-top-lightbox: rgb(28 26 46);
   --chat-image-background: transparent;
@@ -25,14 +27,14 @@
   --chat-input-select-color: whitesmoke;
   --chat-tooltip-color: whitesmoke;
   --chat-not-selected-color: #211624;
-  --chat-overlay-color: rgb(28 26 46);
+  --chat-overlay-color: rgb(24, 107, 100);
   --chat-input-search-responsive: rgb(238, 237, 244);
-  --chat-background-menu: rgb(255 255 255 / 81%);
+  --chat-background-menu: rgb(255 255 255 / 93%);
   --chat-background-right-info: rgb(239, 248, 255);
   --chat-list-background: rgb(255, 255, 255);
   --chat-background-lightbox:rgb(255 255 255 / 70%);
   --chat-btn-color: rgb(127 141 169);
-  --chat-btn-translucid-color: rgb(127 141 169 / 35%);
+  --chat-btn-translucid-color: rgb(255 255 255 / 24%);
   --chat-incoming-primary-color: #6e79ea;
   --chat-text-counter-color: #3d3d56;
   --chat-list-active-text: #ffffff;
@@ -40,7 +42,7 @@
   --chat-text-primary: rgb(61 61 86);
   --chat-tertiary-color: rgb(137 150 184);
   --chat-text-selected: rgb(127 141 169);
-  --chat-background-selected: rgb(188 195 209);
+  --chat-background-selected: rgb(160 173 197);
   --chat-border-color:rgb(66 103 132 / 26%);
   --chat-input-date-picker: whitesmoke;
   --chat-hr-color: rgb(98 94 124 / 26%);
@@ -52,7 +54,7 @@
   --chat-btn-not-pressed-color: rgb(254 254 255);
   --chat-counter-color: rgb(127 141 169);
   --chat-text-color-btn: rgb(163 175 197);
-  --chat-text-placeholder-color: rgb(226, 231, 253);
+  --chat-text-placeholder-color:rgb(237 239 247);
   --chat-background-tag-color: rgb(38 60 77);
   --chat-text-tag-color: rgb(239 241 247);
   --chat-loader-color: url('/media/steambox-background.avif');
@@ -113,14 +115,16 @@
   --chat-background-full: rgb(16 15 25 / 70%);
   --chat-input-select-color: rgb(90 97 125 / 45%);
   --chat-tooltip-color: rgb(42, 47, 66);
-
+  --color-calendar-text:#673AB7;
+  --chat-buttons-chat: rgb(244, 246, 249);
+  --chat-active-left-button: rgb(255 255 255);
   --chat-not-selected-color: #211624;
   --chat-overlay-color: rgb(28 26 46);
   --chat-input-search-responsive: rgb(28 26 46);
   --chat-background-menu: rgb(32 30 49 / 87%);
   --chat-list-background:rgb(16 11 34 / 70%);
   --chat-background-right-info: rgb(16 11 34 / 70%);
-  --chat-background-lightbox: rgb(30 28 44 / 84%);
+  --chat-background-lightbox: rgb(29 27 47 / 89%);
   --chat-btn-color: rgb(73 63 227);
   --chat-btn-translucid-color: rgb(172 184 228 / 33%);
   --chat-incoming-primary-color: rgb(73 63 227);

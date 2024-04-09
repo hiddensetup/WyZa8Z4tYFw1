@@ -1279,7 +1279,7 @@ max-width:30rem
         // left: 7px;
         // font-size: 1.5rem;
         line-height: 30px;
-        color: var(--chat-text-primary);
+        color: var(--chat-buttons-chat);
       }
 
       &.sb-btn-attachment:before {
@@ -1800,7 +1800,8 @@ a.sb-btn {
   background-color: var(--color-red);
 
   &:active {
-    background-color: var(--chat-text-primary);
+    background: var(--chat-text-color-btn);
+    color: var(--chat-btn-not-pressed-color);
   }
 }
 
@@ -2833,10 +2834,11 @@ div ul.sb-menu,
 
 .start {
   padding: 0 5px 0 5px;
+  color: var(--chat-buttons-chat);
 }
 
 .menu-plus {
-  color: var(--chat-text-primary) !important;
+  color: var(--chat-buttons-chat) !important;
   cursor: pointer;
   font-size: 1.6rem;
   border-radius: 30px;

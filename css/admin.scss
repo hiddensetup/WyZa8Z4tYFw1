@@ -2568,7 +2568,7 @@ TABLE
                     }
 
                     &.sb-active {
-                        color: var(--chat-text-selected);
+                        color: var(--chat-active-left-button);
                         opacity: 1 !important;
                     }
 
@@ -6015,7 +6015,7 @@ BODY
     height: auto;
     min-height: 75px;
     text-align: center;
-    padding: 3rem 2rem 3.5rem 2rem;
+    padding: 1rem;
     z-index: 999998;
     animation: fade-in 0.3s ease-out !important;
     -webkit-animation: fade-in 0.3s ease-out !important;
@@ -6025,10 +6025,11 @@ BODY
 
     p {
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 30px;
         margin: 20px;
         color: var(--chat-text-primary);
+        text-align: start;
     }
 
     a {
@@ -6682,7 +6683,7 @@ BODY
 .daterangepicker td.in-range {
     background-color: var(--chat-text-primary);
     border-color: transparent;
-    color: #000;
+    color: var(--color-calendar-text);
     border-radius: 0;
 }
 
