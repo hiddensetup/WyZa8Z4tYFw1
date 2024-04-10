@@ -461,7 +461,7 @@
       .setClass("sb-scroll-area", scroll)
       .css("height", scroll ? parseInt($(window).height()) - 200 + "px" : "");
     box.find(".sb-title").html(title);
-    p.html((type == "alert" ? sb_("Are you sure?") + " " : "") + sb_(text));
+    p.html((type == "alert" ? '<strong style="font-size: 1.15rem;color: var(--chat-text-primary">' + sb_("Are you sure?") + '</strong> ' : "") + sb_(text));
     box.sbActive(true).css({
       "margin-top": box.outerHeight() / -2 + "px",
       "margin-left": box.outerWidth() / -2 + "px",
@@ -3241,7 +3241,7 @@
       }
       item
         .html(
-          `<span style="vertical-align: sub;color: var(--color-green); font-weight:bold;">(${count})</span>`
+          `<span style="vertical-align: sub;color: var(--chat-text-primary); font-weight:bold;">(${count})</span>`
         )
         .attr("data-count", count); // Apply style to count within parentheses
       count = 0;
@@ -3624,9 +3624,12 @@
                   : response.get("title") +
                       ' '
               );
+
+
             $(".sb-list").prepend(
-              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;" class="sb-icon-arrow-down"></i></div>'
+              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: 1rem;" class="sb-icon-csv"></i> <div class="steambox-outer-container"> <div class="steambox-inner-container"> <small><i class="sb-icon-info" style=" vertical-align: text-top; "></i> This business uses a secure service from Meta to manage this chat. For further information on how Steamboxchat handles your data, please refer to our <a href="https://steamboxchat.com/privacy" target="_blank" style="text-decoration: none;color: #10678d;"> privacy policy.</a></small> </div> </div></div>'
             );
+            
             // Automatic translation
             SBAdmin.must_translate =
               SB_ADMIN_SETTINGS["translation"] &&
@@ -3853,7 +3856,7 @@
 
       conversations_admin_list_ul.html(code);
       conversations_admin_list_ul.css("position", "relative");
-      conversations_admin_list_ul.css("bottom", "14px");
+      conversations_admin_list_ul.css("bottom", "15px");
       SBConversations.positionList();
       this.updateMenu();
 
@@ -3891,7 +3894,7 @@
 
         let order_css = `
 				position:relative;
-        border-top: 0.8px solid var(--chat-border-color);
+        border-bottom: 0.8px solid var(--chat-border-color);
 
 				width: -webkit-fill-available;
 				width: -moz-available;
@@ -4216,7 +4219,7 @@
         .parent()
         .sbInitTooltips()
         .find("i")
-        .attr("class", unread ? "sb-icon-check-circle" : "sb-icon-close");
+        .attr("class", unread ? "sb-icon-close" : "sb-icon-check-circle");
     },
 
     // Return the conversation code of the left conversations list
@@ -4447,7 +4450,7 @@
 			</div>
 	
 	
-			<div style="margin: 0px 1px;line-height: 0;"
+			<div style="margin: 0px 1px;line-height: 1;"
 			class="${
         conversation["conversation_source"] === "wa" && cloud_active
           ? ""
@@ -6134,7 +6137,7 @@
             $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
           }
           // Change the icon to sb-icon-arrow-right
-          $(this).toggleClass("sb-icon-search sb-icon-arrow-right");
+          $(this).toggleClass("sb-icon-search sb-icon-visa");
         } else {
           scrolls["always_hidden"] = false;
           if (conversations_admin_list_ul.parent().scrollTop() < 10) {
@@ -6143,7 +6146,7 @@
               $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
             }
             // Change the icon back to sb-icon-search
-            $(this).toggleClass("sb-icon-arrow-right sb-icon-search");
+            $(this).toggleClass("sb-icon-visa sb-icon-search");
           }
         }
       });

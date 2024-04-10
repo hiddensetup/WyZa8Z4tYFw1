@@ -62,8 +62,8 @@ function sb_profile_box()
 
             </div>
             <div>
-                <div class="sb-title" style="background:var(--chat-background-selected);padding: .6rem;border-radius: .5rem;color: var(--chat-btn-not-pressed-color);font-size: 1.2rem;">
-                    <div><?php sb_e('Conversation history') ?></div>
+                <div class="sb-title" style="background:var(--chat-btn-color);padding: .8rem;border-radius: .8rem;color: var(--chat-btn-not-pressed-color);font-size: 1.2rem;">
+                    <!-- <div><?php sb_e('Conversation history') ?></div> -->
                     <p style="font-weight: normal;font-size: 14px;line-height: 19px;margin: 10px 0px;color: white;"><?php sb_e('Continue and manage ongoing conversations initiated by other agents.') ?></p>
                 </div>
                 <ul class="sb-user-conversations"></ul>
@@ -321,7 +321,9 @@ function sb_login_box()
 
         <div class="sb-text">
             <div style="margin: 1rem auto;max-width: 270px;" class="sb-info"></div>
-            <small style=" color: var(--bubble-client-sb);bottom: 1rem; position: fixed; left: 0; right: 0; margin: 0 1rem; ">&copy; <?php echo date("Y"); ?> Steamboxchat - All rights reserved.</small>
+            <small style=" color: var(--bubble-client-sb);bottom: 1rem; position: fixed; left: 0; right: 0; margin: 0 1rem; ">&copy; <?php echo date("Y"); ?> Steamboxchat - All rights reserved</small>
+            <a target="_blank" style="font-size: 0.9rem; text-decoration: none; color: var(--chat-border-color); " href="https://steamboxchat.com/privacy"> Privacy Policy</a> <br> <a style=" text-decoration: none; color: var(--chat-border-color);font-size: 0.9rem;  " target="_blank" href="https://steamboxchat.com/terms"> Terms and Condition</a>
+            
         </div>
     </form>
 
@@ -603,10 +605,10 @@ function sb_direct_message_box()
                             <option value="">Select a template</option>
                         </select>
                     </div>
-                    <div class="sb-input-setting" style="display: flex;flex-direction: row;gap: 20px;background: var(--chat-background-menu);padding: 10px 0px 20px 0px;border-top: 0.5px solid var(--chat-border-color);border-bottom: 0.5px solid var(--chat-border-color);">
+                    <div class="sb-input-setting api-cloud-bubble">
                     <div style="margin: auto;display: inline-flex;width: 80%;justify-content: center; ">
                     <img src="/media/spike.png" style="width: 20px;vertical-align: top;margin-right: -4px;height: 30px;"> 
-                    <textarea disabled="" type="text" class="BodyTemplate" name="BodyTemplate" style="background: white;font-size: 0.75rem;line-height: normal;color: black;max-width: 80%;border-radius: 0px 6px 6px 6px;"></textarea>                    </div>
+                    <textarea disabled="" type="text" class="BodyTemplate textarea-api" name="BodyTemplate"></textarea>                    </div>
                     </div>
 
                     <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
@@ -691,10 +693,10 @@ function sb_send_template_box()
 
                     <br>
 
-                    <div class="sb-input-setting" style="display: flex;flex-wrap: wrap;flex-direction: row;background: url(/media/chatbkg.png), #e6ddd5;padding: 10px;background-blend-mode: overlay;border-radius: .4rem;margin: 10px 1px 0px 1px;">
+                    <div class="sb-input-setting api-cloud-bubble">
                     <div style="margin: auto;display: inline-flex;width: 80%;justify-content: center;">
                     <img src="/media/spike.png" style="width: 20px;vertical-align: top;margin-right: -4px;height: 30px;"> 
-                    <textarea disabled="" type="text" class="BodyTemplate" name="BodyTemplate" style="background: white;font-size: 0.75rem;line-height: normal;color: black;max-width: 80%;border-radius: 0px 6px 6px 6px;"></textarea>                    </div>
+                    <textarea disabled="" type="text" class="BodyTemplate textarea-api" name="BodyTemplate"></textarea>                    </div>
                     </div>
 
                     <div style="display: flex;flex-wrap: wrap;flex-direction: column;margin-bottom: 10px;align-items: stretch;" class="sb-input-setting Variables">
@@ -732,7 +734,7 @@ function sb_send_template_box()
     const updateTheme = () => {
         const currentTheme = htmlTag.dataset.theme;
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        const newThemeColor = newTheme === 'light' ? 'rgb(28 26 46)' : 'rgb(28 26 46)';
+        const newThemeColor = newTheme === 'light' ? '#186b64' : 'rgb(20 19 41)';
 
         htmlTag.dataset.theme = newTheme;
         metaThemeColor.content = newThemeColor;
@@ -742,7 +744,7 @@ function sb_send_template_box()
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
         htmlTag.dataset.theme = storedTheme;
-        metaThemeColor.content = storedTheme === 'light' ? 'rgb(28 26 46)' : 'rgb(28 26 46)';
+        metaThemeColor.content = storedTheme === 'light' ? '#186b64' : 'rgb(20 19 41)';
     }
 
     themeToggleBtns.forEach(btn => {
@@ -934,7 +936,7 @@ function sb_component_admin()
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
         ['SB_WHATSAPP', 'whatsapp', '<i class="sb-icon-social-wa" style="vertical-align: middle;"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="sb-icon-qr" style="vertical-align: middle;"></i> WhatsApp <small style="color:var(--color-green);">[new]</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="sb-icon-qr" style="vertical-align: middle;"></i> WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_TELEGRAM', 'telegram', '<i class="sb-icon-telegram" style="vertical-align: middle;"></i> Telegram', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="sb-icon-google" style="vertical-align: middle;"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
         ['SB_TWITTER', 'twitter', '<i class="sb-icon-social-tw" style="vertical-align: middle;"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
@@ -1006,7 +1008,7 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                                 </ul>
                             </div>
                         </div>
-                        <?php echo '<div style="color:var(--chat-btn-color)" class="help-center"><i class="sb-icon-info"></i><span class="notification"></span></div>' ?>
+                        <?php echo '<div class="help-center"><i class="sb-icon-info"></i><span class="notification"></span></div>' ?>
                         <style>
                             .notification {
                                 animation: bounce 1s ease-out;
@@ -1655,7 +1657,7 @@ function sb_conversations_filter()
     $code .= '</ul></div>';
 
     // Only display sources if $sources is not empty
-    $sources = [['ww', 'WhatsApp <small style="color:var(--color-green);">[new]</small>', 'SB_WHATSMEOW'],['wa', 'WhatsApp API', 'SB_WHATSAPP'], ['tk', 'Tickets', 'SB_TICKETS'], ['tg', 'Telegram', 'SB_TELEGRAM'],   ['fb', 'Messenger', 'SB_MESSENGER'], ['ig', 'Instagram', 'SB_MESSENGER'], ['tw', 'Twitter', 'SB_TWITTER'], ['bm', 'Google', 'SB_GBM'], ['wc', 'WeChat', 'SB_WECHAT'], ['tm', 'SMS', false]];
+    $sources = [['ww', 'WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'SB_WHATSMEOW'],['wa', 'WhatsApp API', 'SB_WHATSAPP'], ['tk', 'Tickets', 'SB_TICKETS'], ['tg', 'Telegram', 'SB_TELEGRAM'],   ['fb', 'Messenger', 'SB_MESSENGER'], ['ig', 'Instagram', 'SB_MESSENGER'], ['tw', 'Twitter', 'SB_TWITTER'], ['bm', 'Google', 'SB_GBM'], ['wc', 'WeChat', 'SB_WECHAT'], ['tm', 'SMS', false]];
     $code .= '<div class="sb-select"><p>' . sb_('All channels') . '</p><ul><li data-value="">' . sb_('All channels') . '</li>';
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {

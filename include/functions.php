@@ -9443,11 +9443,7 @@ function sb_component_editor($admin = false)
         </div>
         <?php if ($admin) { ?>
             <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
-                <div class="sb-header">
-                    <div style="margin: -5px 0px;" class="sb-title">
-                        <?php sb_e("Client status"); ?>
-                    </div>
-                </div>
+       
                 <?php
                 $clientStatus = array(
                     "Contactado",       // Inbound Leads - Contacted
@@ -9476,10 +9472,8 @@ function sb_component_editor($admin = false)
             </div>
 
             <div class="sb-popup sb-replies">
-                <div class="sb-header" style="justify-content: space-between;">
-                    <div class="sb-title">
-                        <?php sb_e("Saved replies"); ?>
-                    </div>
+                <div class="sb-header" style="justify-content: space-between;margin: -7px -2px -7px auto;">
+                <div style="line-height: 30px;font-size: 1.15rem;white-space: pre;"><?php sb_e("Saved replies"); ?></div>
                     <div class="sb-search-btn">
                         <i class="sb-icon sb-icon-search"></i>
                         <input type="text" autocomplete="false" placeholder="<?php sb_e(
@@ -9488,7 +9482,7 @@ function sb_component_editor($admin = false)
                     </div>
                 </div>
                 <div class="sb-replies-list sb-scroll-area">
-                    <ul class="sb-loading"></ul>
+                    <ul style="margin: 0px auto;" class="sb-loading"></ul>
                 </div>
             </div>
 

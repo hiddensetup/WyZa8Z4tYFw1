@@ -165,6 +165,13 @@ body {
         }
     }
 
+
+    hr {
+        margin: 20px;
+        background: var(--chat-border-color);
+        width: 100%;
+    }
+
     .open-details {
         display: inline-block !important;
     }
@@ -231,10 +238,9 @@ body {
         // background: var(--chat-btn-color);
         margin: 0 0px 0px 3px !important;
 
-        &:active,
-        &:hover {
-            scale: .9;
-            transition: var(--transition)
+        &:active{
+            transition: var(--transition);
+            scale:.9
         }
 
         i {
@@ -270,7 +276,7 @@ body {
 
             >.sb-nav {
                 position: absolute;
-                top: 8px; //68px
+                top: 12px; //68px
                 left: 15px;
                 overflow: visible;
                 z-index: 5;
@@ -420,6 +426,7 @@ body {
             text-overflow: ellipsis;
             overflow: hidden;
             color: var(--chat-list-active-text);
+            font-size: 1.2rem;
         }
     }
 
@@ -513,6 +520,11 @@ div ul.sb-menu li,
     font-size: 1.1rem;
 }
 
+
+.sb-dialog-box p {
+    margin: 0px 20px !important
+}
+
 .sb-user-conversations>li>div,
 .sb-profile-list>ul>li .sb-icon,
 .sb-table td .sb-profile span,
@@ -568,7 +580,7 @@ div ul.sb-menu li,
 
 .sb-dialog-box p {
     font-size: 1.10rem;
-    line-height: 35px;
+    line-height: 24px;
 }
 
 .reminder-btn {
@@ -578,12 +590,12 @@ div ul.sb-menu li,
 
 .sb-btn,
 a.sb-btn {
-    padding: 0 30px;
+    padding: 5px 25px;
     height: 40px;
     line-height: 40px;
     border: none;
     width: 100%;
-    
+
 }
 
 .sb-profile-list>ul>li,
@@ -715,7 +727,7 @@ a.sb-btn {
     .sb-popup .sb-header {
         display: flex;
         justify-content: space-between;
-        padding: 6px 23px 20px 23px;
+        // padding: 20px 24px 0px 24px;
         line-height: 35px;
         height: 35px;
     }
@@ -884,12 +896,14 @@ a.sb-btn {
             overflow: hidden;
             // color: var(--chat-btn-not-pressed-color);
             //  background:var(--chat-background-menu);
-            color: var(--chat-text-primary);
+            // color: var(--chat-list-active-text);
 
 
             &.sb-active {
-                // color: var(--chat-text-primary);
                 color: var(--chat-text-primary);
+
+                // color: var(--chat-list-active-text);
+
 
 
                 &+div+.sb-mobile,
@@ -997,7 +1011,7 @@ a.sb-btn {
     }
 
     .sb-search-btn {
-        color: var(--chat-list-active-text);
+        color: inherit;
 
         >i {
             font-size: 1.7rem;
@@ -1165,9 +1179,9 @@ a.sb-btn {
     min-height: 100%;
     border: none;
     border-radius: 0;
-    background-color: var(--chat-background);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    // background-color: var(--chat-background);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 }
 
 .sb-lightbox {
@@ -1247,12 +1261,13 @@ a.sb-btn {
         }
     }
 
-    &.sb-replies,&.sb-status-chat,
+    &.sb-replies,
+    &.sb-status-chat,
     &.sb-woocommerce-products {
         left: 0 !important;
         right: 0;
         bottom: 70px;
-        margin: 0px;
+        margin: 5px;
         box-shadow: none;
         border: 0.5px solid rgba(0, 0, 0, 0.2);
         border-right: none;
@@ -1260,7 +1275,7 @@ a.sb-btn {
         border-radius: 10px;
         width: auto;
         transform: none;
-        height: calc(100% - 110px);
+        height: calc(100% - 400px) !important;
 
         .sb-replies-list ul li {
             height: 35px;
@@ -1299,7 +1314,7 @@ a.sb-btn {
     .sb-conversation .sb-editor {
         border: none;
         // margin: 0px 4px;
-        padding: 4px 8px 10px 8px;
+        padding: 10px 8px 10px 8px;
         margin: 0px;
         box-shadow: 1px 1px 3px black;
     }
@@ -1722,7 +1737,7 @@ a.sb-btn {
 .sb-profile-box {
     .sb-main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         // background-color: var(--chat-background);
 
         >div {

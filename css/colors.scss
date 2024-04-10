@@ -1,49 +1,56 @@
 /* Common variables */
-:root, [data-theme="light"] {
-  --chat-bar-color: rgb(24 91 85);
-  --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--border-color);
+:root,
+[data-theme="light"] {
+  --loader-color: #166c64;
+  --chat-bar-color: #166c64;
+  --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--chat-border-color);
   --box-shadow-menu: 0 5px 5px #16171e;
+  --chat-scroll-area-background: transparent;
+  --box-shadow-cloud-api: -4px 6px 3px -6px rgba(22, 23, 30, 0.275);
   --transition-3: all 2s;
   --transition-2: all 0.55s;
   --transition: all 0.25s;
-  --chat-input-not-transparent:rgb(247 255 251 / 99%);
-  --chat-image-color-background:transparent;
+  --chat-att-background: rgb(220 229 234);
+  --chat-input-not-transparent: rgb(247 255 251 / 99%);
+  --chat-image-color-background: transparent;
   --inner-shadow-button: inset 0px 0px 3px 1px var(--glassbkg);
   --ring-shadow-button: 0 0 0px 2px white, 0 0 0px 3.5px #5c6176c9;
   --ring-shadow-button-small: 0 0 0px .5px #14161dc9, 0 0 0px 1.5p #5c6176c9;
   --focus-input-ring: inset 0 0 2px 0.5px #b0b7d5;
   --bar-shadow: #31343f9c;
-  --sb-list-color: #f3eee6;
-  --chat-wa-background: #eef2f3;
-  --chat-buttons-chat: rgb(99, 110, 131);
-  --color-calendar-text:#ffffff;
+  --sb-list-color: #f0e8db;
+  --chat-wa-background: rgb(220 229 234);
+  --chat-buttons-chat: rgb(91 101 121);
+  --color-calendar-text: #ffffff;
   --chat-active-left-button: rgb(255 255 255);
-  --chat-outline-input: 1.5px solid rgb(66 103 132 / 37%);
+  --chat-outline-input: .95px solid rgb(66 103 132 / 37%);
   --chat-top-lightbox: rgb(28 26 46);
   --chat-image-background: transparent;
   --chat-background: rgb(255, 255, 255);
-  --chat-input-background:  rgb(255, 255, 255);
+  --chat-input-background: rgb(255, 255, 255);
   --chat-background-full: rgb(237 234 255 / 80%);
   --chat-input-select-color: whitesmoke;
   --chat-tooltip-color: whitesmoke;
   --chat-not-selected-color: #211624;
   --chat-overlay-color: rgb(24, 107, 100);
-  --chat-input-search-responsive: rgb(238, 237, 244);
+  --chat-input-search-responsive: rgb(248 249 251);
   --chat-background-menu: rgb(255 255 255 / 93%);
   --chat-background-right-info: rgb(239, 248, 255);
   --chat-list-background: rgb(255, 255, 255);
-  --chat-background-lightbox:rgb(255 255 255 / 70%);
-  --chat-btn-color: rgb(127 141 169);
+  --chat-background-lightbox: rgb(255 255 255 / 70%);
+  --chat-btn-color: rgb(106 117 140);
   --chat-btn-translucid-color: rgb(255 255 255 / 24%);
   --chat-incoming-primary-color: #6e79ea;
   --chat-text-counter-color: #3d3d56;
   --chat-list-active-text: #ffffff;
-  --chat-text-secondary: rgb(121 140 151);
-  --chat-text-primary: rgb(61 61 86);
-  --chat-tertiary-color: rgb(137 150 184);
+  --chat-text-secondary: rgb(118 123 141);
+  --chat-text-primary: rgb(64 66 86);
+  --chat-tertiary-color: rgb(142 159 177);
   --chat-text-selected: rgb(127 141 169);
-  --chat-background-selected: rgb(160 173 197);
-  --chat-border-color:rgb(66 103 132 / 26%);
+  --chat-background-selected: rgb(234, 239, 242);
+  --chat-border-color: rgb(66 103 132 / 26%);
+  --chat-border-text-input: transparent;
+
   --chat-input-date-picker: whitesmoke;
   --chat-hr-color: rgb(98 94 124 / 26%);
   --chat-bubble-agent: #d9fdd3;
@@ -54,8 +61,8 @@
   --chat-btn-not-pressed-color: rgb(254 254 255);
   --chat-counter-color: rgb(127 141 169);
   --chat-text-color-btn: rgb(163 175 197);
-  --chat-text-placeholder-color:rgb(237 239 247);
-  --chat-background-tag-color: rgb(38 60 77);
+  --chat-text-placeholder-color: rgb(248 248 250);
+  --chat-background-tag-color: rgb(24 91 85);
   --chat-text-tag-color: rgb(239 241 247);
   --chat-loader-color: url('/media/steambox-background.avif');
   --background-color-red: #ca34341a;
@@ -80,7 +87,7 @@
   --purple-root-color: purple;
   --purple-root-color-pastel: #d7aaff;
   --red-root-color: red;
-  --red-root-color-pastel: #ffb3ba; 
+  --red-root-color-pastel: #ffb3ba;
   --switch-off-color: #292f46d6;
   --teal-root-color: teal;
   --teal-root-color-pastel: #afeeee;
@@ -90,20 +97,25 @@
 }
 
 [data-theme="dark"] {
+  --loader-color: #1c1a2e;
   --chat-bar-color: rgb(16 15 25 / 78%);
-  --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, .368627451), 0 0 0 0.5px var(--border-color);
+  --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, .368627451), 0 0 0 0.5px var(--chat-border-color);
   --box-shadow-menu: 0 5px 5px #e9e8e1;
+  --box-shadow-cloud-api: -4px 6px 3px -6px rgba(22, 23, 30, 0.275);
+  --chat-scroll-area-background: rgb(58 56 108 / 9%);
   --transition-3: all 2s;
   --transition-2: all 0.55s;
   --transition: all 0.25s;
-  --chat-input-not-transparent:rgb(32 30 51);
+  --chat-att-background: rgb(20 19 41);
+
+  --chat-input-not-transparent: rgb(32 30 51);
   --chat-image-color-background: rgb(37 69 95 / 97%);
   --inner-shadow-button: inset 0px 0px 3px 1px var(--glassbkg);
   --ring-shadow-button: 0 0 0px 2px rgb(20 22 29 / 79%), 0 0 0px 3.5px rgb(84 98 186);
   --ring-shadow-button-small: 0 0 0px .5px #14161dc9, 0 0 0px 1.5px rgb(84 98 186);
   --focus-input-ring: inset 0 0 2px 1.5px #12141bd9;
   --bar-shadow: #767c939c;
-  --sb-list-color: transparent;
+  --sb-list-color: rgb(6 5 20 / 20%);
   --chat-wa-background: transparent;
 
 
@@ -115,27 +127,28 @@
   --chat-background-full: rgb(16 15 25 / 70%);
   --chat-input-select-color: rgb(90 97 125 / 45%);
   --chat-tooltip-color: rgb(42, 47, 66);
-  --color-calendar-text:#673AB7;
+  --color-calendar-text: #673AB7;
   --chat-buttons-chat: rgb(244, 246, 249);
   --chat-active-left-button: rgb(255 255 255);
   --chat-not-selected-color: #211624;
   --chat-overlay-color: rgb(28 26 46);
   --chat-input-search-responsive: rgb(28 26 46);
-  --chat-background-menu: rgb(32 30 49 / 87%);
-  --chat-list-background:rgb(16 11 34 / 70%);
-  --chat-background-right-info: rgb(16 11 34 / 70%);
+  --chat-background-menu: rgb(34 33 61 / 98%);
+  --chat-list-background: rgb(17 16 35 / 75%);
+  --chat-background-right-info: rgb(16 11 34 / 85%);
   --chat-background-lightbox: rgb(29 27 47 / 89%);
   --chat-btn-color: rgb(73 63 227);
   --chat-btn-translucid-color: rgb(172 184 228 / 33%);
   --chat-incoming-primary-color: rgb(73 63 227);
   --chat-text-counter-color: #ffffff;
   --chat-list-active-text: #ffffff;
-  --chat-text-secondary: rgb(155 159 182);
-  --chat-text-primary: rgb(230, 226, 253);
-  --chat-tertiary-color: #74809f;
+  --chat-text-secondary: rgb(174 179 213);
+  --chat-text-primary: rgb(228 226 243);
+  --chat-tertiary-color: #96a2c3;
   --chat-text-selected: rgb(73 63 227);
   --chat-background-selected: rgb(73 63 227);
-  --chat-border-color:rgba(78, 73, 141, 0.65);
+  --chat-border-color: rgba(78, 73, 141, 0.65);
+  --chat-border-text-input: rgba(78, 73, 141, 0.65);
   --chat-input-date-picker: rgb(90 97 125 / 45%);
   --chat-hr-color: rgb(98 94 124 / 26%);
   --chat-bubble-agent: rgb(73 63 227);
@@ -172,7 +185,7 @@
   --purple-root-color: purple;
   --purple-root-color-pastel: #d7aaff;
   --red-root-color: red;
-  --red-root-color-pastel: #ffb3ba; 
+  --red-root-color-pastel: #ffb3ba;
   --switch-off-color: #292f46d6;
   --teal-root-color: teal;
   --teal-root-color-pastel: #afeeee;

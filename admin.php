@@ -57,7 +57,7 @@ require('include/components.php');
 
   <div  id="overlay">
     <div id="loader">
-              <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : STMBX_URL . '/media/icon.svg' ?>" style="width:70px;" alt="Loading...">
+              <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : STMBX_URL . '/media/icon.svg' ?>" style="width:90px; animation:rotate-in-center 1s infinite;" alt="Loading...">
 
     </div>
   </div>

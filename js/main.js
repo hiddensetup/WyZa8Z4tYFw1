@@ -630,7 +630,7 @@
                   this.loginCookie(response[1]);
                   this.event("SBLoginForm", user);
                   if (onSuccess) onSuccess(response);
-                  readText("Hola");
+                  // readText("");
                 }
               } else {
                 area
@@ -7272,7 +7272,7 @@
         (response) => {
           $(this).sbLoading(false);
           $(this).html(
-            '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus" style="background: #2426310f;border-radius: 50%;"><path d="M12 5v14m-7-7h14"/></svg>'
+            '<i style="font-size:1.2rem" class="sb-icon-csv"></i>'
           );
           $(this).attr("id", "load-more");
           SBChat.loadUpdate(response.messages);
