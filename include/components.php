@@ -999,9 +999,9 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                             <div style="box-shadow:none;height: 143px;background: #ff000000;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);top:5px;">
                                 <ul class="sb-menu">
                                     <li data-value="status" style="padding-left: 30px;padding-top:12px" class="sb-online"> <?php sb_e('Online') ?></li>
-                                    <hr style="margin: 0px 5px;background: var(--chat-hr-color); ">
+                                    <hr style="margin: 0px 12px;background: var(--chat-hr-color);">
                                     <li href="#" class="themeToggleBtn"><i style="vertical-align:middle;" class='sb-icon-desktop'></i> <?php sb_e('Tema') ?></li>
-                                    <hr style="margin: 0px 5px;background: var(--chat-hr-color); ">
+                                    <hr style="margin: 0px 12px;background: var(--chat-hr-color);">
                                     <li data-value="logout"><i style="vertical-align:text-top;" class='sb-icon-logout'></i>
                                         <?php sb_e('Logout') ?>
                                     </li>
@@ -1043,9 +1043,9 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                     </div>
                     <div class="sb-mobile" style="right: 10px;top: -145px;animation: scale-up-br 0.2s ease-in-out">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
-                        <hr style="margin: 0px 12px;background: var(--chat-hr-color); ">
+                        <hr style="margin: 0px 12px;background: var(--chat-hr-color);width: 120px;">
                         <a href="#" class="themeToggleBtn"><i style="vertical-align:middle;" class='sb-icon-mobile'></i> <?php sb_e('Tema') ?></a>
-                        <hr style="margin: 0px 12px;background: var(--chat-hr-color); ">
+                        <hr style="margin: 0px 12px;background: var(--chat-hr-color);width: 120px;">
                         <a href="#" class="logout"><i style="vertical-align:sub;" class='sb-icon-logout'></i> <?php sb_e('Logout') ?></a>
 
                     </div>

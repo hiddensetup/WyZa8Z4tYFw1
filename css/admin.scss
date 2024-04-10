@@ -2627,7 +2627,7 @@ TABLE
                 margin: 5px !important;
 
                 &:hover {
-                    color: var(--chat-btn-not-pressed-color);
+                    // color: var(--chat-btn-not-pressed-color);
                     background: var(--chat-background-selected);
                     margin: 5px !important;
                     border-radius: .5rem;
@@ -3235,7 +3235,7 @@ BODY
                         right: 0px;
                         // bottom: 9px;
                         border-radius: 50%;
-                        line-height: 0;
+                        line-height: 1;
                         padding: 0px;
                         font-size: 1rem;
 

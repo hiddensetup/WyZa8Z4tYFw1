@@ -3810,9 +3810,8 @@ textarea::placeholder {
 
   &:active,
   &:hover {
-    scale: 1.1;
     transition: var(--transition);
-    left: 77px;
+    color: var(--color-green);
   }
 
   i {

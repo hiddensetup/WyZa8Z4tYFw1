@@ -4450,7 +4450,7 @@
 			</div>
 	
 	
-			<div style="margin: 0px 1px;line-height: 1;"
+			<div style="margin: 0px 1px;line-height: 0;"
 			class="${
         conversation["conversation_source"] === "wa" && cloud_active
           ? ""
