@@ -13,3 +13,5 @@ apps/whatsapp/download.txt
 apps/telegram/tel.txt
 config.php
 uploads
+__MACOSX
+.DS_Store
