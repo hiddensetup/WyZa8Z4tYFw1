@@ -15,3 +15,11 @@ config.php
 uploads
 __MACOSX
 .DS_Store
+js/-admin.js
+js/-main.js
+include/-functions.php
+include/-ajax.php
+include/-components.php
+
+
+
