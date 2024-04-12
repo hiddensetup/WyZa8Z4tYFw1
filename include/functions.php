@@ -2929,7 +2929,7 @@ function sb_get_conversations(
             $tag_filter .
             " GROUP BY conversation_id ORDER BY A.creation_time DESC, A.id DESC LIMIT " .
             intval(sb_db_escape($pagination, true)) * 300 .
-            ", 50",
+            ", 300",
         false
     );
 
