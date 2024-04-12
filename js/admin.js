@@ -3748,7 +3748,7 @@
                 .html(
                   `<span data-agent="${
                     busy.id
-                  }" style="box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.65); border-radius: 4px;  position: relative; bottom:30px; background: #fdffbd; color: #3f495b;  padding: 2px 10px; font-size:1rem"><b>${
+                  }" style="box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.65);border-radius: .8REM;position: absolute;bottom: 70px;background: var(--blue-root-color);color: aliceblue;padding: 3px 10px;font-size: 0.8rem;"><b>${
                     busy.first_name
                   } ${busy.last_name}</b> ${sb_(
                     "was viewing the conversation."
