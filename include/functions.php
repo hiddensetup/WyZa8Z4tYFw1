@@ -2928,7 +2928,7 @@ function sb_get_conversations(
             $exclude_visitors .
             $tag_filter .
             " GROUP BY conversation_id ORDER BY A.creation_time DESC, A.id DESC LIMIT " .
-            intval(sb_db_escape($pagination, true)) * 50 .
+            intval(sb_db_escape($pagination, true)) * 300 .
             ", 50",
         false
     );
