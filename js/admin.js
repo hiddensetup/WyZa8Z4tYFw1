@@ -3744,7 +3744,7 @@
             let busy = response.get("busy");
             if (busy) {
               conversations_area
-                .find(".sb-list > .sb-agent-label")
+                .find(".sb-editor > .sb-agent-label")
                 .html(
                   `<span data-agent="${
                     busy.id
