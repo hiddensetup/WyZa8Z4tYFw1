@@ -1267,15 +1267,20 @@ div ul.sb-menu,
   }
 
   .sb-bar-icons {
+    left: 0;
     display: flex;
-    animation: fade-in 0.3s linear;
-    margin: 0 0.6rem 0.3rem 0.6rem;
-    // padding: 0.4rem 0.4rem;
+    animation: fade-in .2s linear;
+    margin: 0 0em .1rem 0em;
     justify-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
-    border-radius: 0.6rem;
     gap: 30px;
+    position: absolute;
+    background: var(--chat-att-background);
+    bottom: 57px;
+    right: 0;
+    padding: .4rem;
+    border-top: 1px solid var(--chat-border-color);
 
     > div {
       width: 30px;
