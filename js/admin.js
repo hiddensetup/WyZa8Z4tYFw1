@@ -6489,7 +6489,7 @@
           function () {
               // Extract conversation ID and other necessary data
               const conversation_id = $(this).attr("data-conversation-id");
-              const status_code = 0; // Change to the desired new status code
+              const status_code = 6; // ORIGINALLY 0 (inbox) Change to the desired new status code
   
               // Perform an AJAX call to update the conversation status
               SBF.ajax(
