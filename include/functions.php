@@ -19,7 +19,6 @@ if (!defined("JSON_INVALID_UTF8_IGNORE")) {
 
 
 require_once SB_PATH . "/config.php";
-require_once SB_PATH . "/config.php";
 
 
 global $SB_CONNECTION;
