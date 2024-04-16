@@ -2985,21 +2985,18 @@ function sb_get_user_conversations($user_id, $exclude_id = -1, $agent = false)
         : "";
     $user_id = sb_db_escape($user_id, true);
 
-    // Remove the query part that fetches conversation IDs
-    // $query_part = $agent
-    //     ? "SELECT conversation_id FROM sb_messages WHERE user_id = " . $user_id
-    //     : "SELECT id FROM sb_conversations WHERE user_id = " . $user_id;
-
+    // Directly query for conversations based on user ID
     return sb_db_get(
         "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type, sb_conversations.status_code AS conversation_status_code, sb_conversations.department, sb_conversations.agent_id, sb_conversations.title FROM sb_messages, sb_users, sb_conversations WHERE sb_users.id = sb_messages.user_id" .
             sb_routing_and_department_db() .
-            ' AND sb_messages.conversation_id = sb_conversations.id AND sb_messages.user_id = ' . $user_id . // Directly filter by user ID
-            ' AND sb_messages.id IN (SELECT max(sb_messages.id) FROM sb_messages WHERE (sb_messages.message <> "" OR sb_messages.attachments <> "") GROUP BY conversation_id)' . // Remove reference to sb_conversations.id
+            ' AND sb_messages.conversation_id = sb_conversations.id' .
+            ' AND sb_messages.user_id = ' . $user_id . // Filter by user ID
             $exclude .
-            " GROUP BY sb_messages.conversation_id ORDER BY sb_messages.id DESC", // Update ORDER BY clause
+            ' GROUP BY sb_messages.conversation_id ORDER BY sb_messages.id DESC',
         false
     );
 }
+
 
 
 
