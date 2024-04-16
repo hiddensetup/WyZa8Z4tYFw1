@@ -2927,8 +2927,8 @@ function sb_get_conversations(
             $exclude_visitors .
             $tag_filter .
             " GROUP BY conversation_id ORDER BY A.creation_time DESC, A.id DESC LIMIT " .
-            intval(sb_db_escape($pagination, true)) * 300 .
-            ", 300",
+            intval(sb_db_escape($pagination, true)) * 40 .
+            ", 40",
         false
     );
 
@@ -2978,28 +2978,35 @@ function sb_get_new_user_conversations($user_id, $datetime)
 }
 
 
+
 function sb_get_user_conversations($user_id, $exclude_id = -1, $agent = false)
 {
-    $exclude =
-        $exclude_id != -1
-        ? " AND sb_messages.conversation_id <> " . sb_db_escape($exclude_id)
-        : "";
+    // Escape the user ID and exclude ID
     $user_id = sb_db_escape($user_id, true);
-    $query_part = $agent
-        ? "SELECT conversation_id FROM sb_messages WHERE user_id = " . $user_id
-        : "SELECT id FROM sb_conversations WHERE user_id = " . $user_id;
-    return sb_db_get(
-        "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type, sb_conversations.status_code AS conversation_status_code, sb_conversations.department, sb_conversations.agent_id, sb_conversations.title FROM sb_messages, sb_users, sb_conversations WHERE sb_users.id = sb_messages.user_id" .
-            sb_routing_and_department_db() .
-            ' AND sb_messages.conversation_id = sb_conversations.id AND sb_messages.id IN (SELECT max(sb_messages.id) FROM sb_messages, sb_conversations WHERE (sb_messages.message <> "" OR sb_messages.attachments <> "") AND sb_messages.conversation_id = sb_conversations.id' .
-            ($agent ? "" : "") .
-            $exclude .
-            " GROUP BY conversation_id) AND sb_messages.conversation_id IN (" .
-            $query_part .
-            ") GROUP BY conversation_id ORDER BY id DESC",
-        false
-    );
+    $exclude = $exclude_id != -1 ? " AND sb_messages.conversation_id <> " . sb_db_escape($exclude_id) : "";
+
+    // Determine the query part based on the agent flag
+    if ($agent) {
+        $query_part = "SELECT conversation_id FROM sb_messages WHERE user_id = " . $user_id;
+    } else {
+        $query_part = "SELECT id FROM sb_conversations WHERE user_id = " . $user_id;
+    }
+
+    // Construct the main SQL query
+    $query = "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type, "
+           . "sb_conversations.status_code AS conversation_status_code, sb_conversations.department, sb_conversations.agent_id, sb_conversations.title "
+           . "FROM sb_messages "
+           . "JOIN sb_users ON sb_users.id = sb_messages.user_id "
+           . "JOIN sb_conversations ON sb_messages.conversation_id = sb_conversations.id "
+           . "WHERE sb_messages.conversation_id IN (" . $query_part . ")"
+           . $exclude
+           . " GROUP BY sb_messages.conversation_id "
+           . "ORDER BY sb_messages.id DESC";
+
+    // Execute the query and return the results
+    return sb_db_get($query, false);
 }
+
 
 
 function sb_get_clientStatus_conversations($exclude_id = -1, $agent = false)
