@@ -2831,8 +2831,7 @@ function sb_get_conversations_users($conversations)
 
 // refactored function to search conversations
 
-function sb_search_conversations($search)
-{
+function sb_search_conversations($search) {
     $search = sb_db_escape(mb_strtolower($search));
 
     $query = "
@@ -2844,17 +2843,17 @@ function sb_search_conversations($search)
             sb_messages
             JOIN sb_users ON sb_users.id = sb_messages.user_id 
             JOIN sb_conversations ON sb_conversations.id = sb_messages.conversation_id
+            JOIN sb_users_data ON sb_users_data.user_id = sb_users.id AND sb_users_data.slug = 'phone'
         WHERE 
             (
-                LOWER(sb_messages.message) LIKE '%$search%' OR 
-                LOWER(sb_messages.attachments) LIKE '%$search%' OR 
-                LOWER(sb_users.first_name) LIKE '%$search%' OR 
-                LOWER(sb_users.last_name) LIKE '%$search%' OR 
-                LOWER(CONCAT(sb_users.first_name, ' ', sb_users.last_name)) LIKE '%$search%' OR 
-                LOWER(sb_users.email) LIKE '%$search%' OR 
-                LOWER(sb_conversations.title) LIKE '%$search%' OR
-                LOWER(sb_conversations.tags) LIKE '%$search%' OR
-                LOWER(sb_conversations.label) LIKE '%$search%'
+            LOWER(sb_users.first_name) LIKE '%$search%' OR 
+            LOWER(sb_users.last_name) LIKE '%$search%' OR 
+            LOWER(CONCAT(sb_users.first_name, ' ', sb_users.last_name)) LIKE '%$search%' OR 
+            LOWER(sb_users.email) LIKE '%$search%' OR 
+            LOWER(sb_conversations.title) LIKE '%$search%' OR
+            LOWER(sb_conversations.tags) LIKE '%$search%' OR
+            LOWER(sb_conversations.label) LIKE '%$search%' OR
+            LOWER(sb_users_data.value) LIKE '%$search%' -- Condition for phone search
             )
         GROUP BY sb_messages.conversation_id 
         ORDER BY sb_messages.creation_time DESC";
@@ -2927,8 +2926,8 @@ function sb_get_conversations(
             $exclude_visitors .
             $tag_filter .
             " GROUP BY conversation_id ORDER BY A.creation_time DESC, A.id DESC LIMIT " .
-            intval(sb_db_escape($pagination, true)) * 300 .
-            ", 300",
+            intval(sb_db_escape($pagination, true)) * 88 .
+            ", 88",
         false
     );
 
