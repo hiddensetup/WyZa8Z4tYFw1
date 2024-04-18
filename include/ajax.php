@@ -72,6 +72,8 @@ switch ($_POST['function']) {
         die(sb_json_response(sb_get_conversation(sb_post('user_id'), $_POST['conversation_id'])));
     case 'search-conversations':
         die(sb_json_response(sb_search_conversations($_POST['search'])));
+    case 'search-conversation-messages':
+        die(sb_json_response(sb_search_conversation_messages($_POST['search'])));
     case 'new-conversation':
         die(sb_json_response(sb_new_conversation($_POST['user_id'], sb_post('status_code'), sb_post('title', ''), sb_post('department', -1), sb_post('agent_id', -1), sb_post('source'), sb_post('extra'), sb_post('tags'))));
     case 'get-user-conversations':

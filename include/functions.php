@@ -2867,6 +2867,45 @@ function sb_search_conversations($search) {
     }
 }
 
+
+
+
+// will work on this later
+function sb_search_conversation_messages($search) {
+    $search = sb_db_escape(mb_strtolower($search));
+
+    // Construct the SQL query to search messages and attachments
+    $query = "
+        SELECT 
+            sb_messages.*, 
+            sb_users.first_name, 
+            sb_users.last_name, 
+            sb_users.profile_image, 
+            sb_users.user_type
+        FROM 
+            sb_messages
+            JOIN sb_users ON sb_users.id = sb_messages.user_id
+        WHERE 
+            (
+                LOWER(sb_messages.message) LIKE '%$search%' OR 
+                LOWER(sb_messages.attachments) LIKE '%$search%'
+            )
+        ORDER BY sb_messages.creation_time DESC";
+
+    // Execute the query and retrieve the results
+    $result = sb_db_get($query, false);
+
+    // Check the result and return the appropriate response
+    if (is_array($result)) {
+        return $result; // Return the list of messages that match the search criteria
+    } else {
+        return new SBError('db-error', 'sb_search_conversation_messages', $result);
+    }
+}
+
+
+
+
 function sb_get_status_code($conversation_id)
 {
     $code = "(";
