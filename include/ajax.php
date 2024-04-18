@@ -296,13 +296,195 @@ function sb_post($key, $default = false)
 function sb_security()
 {
     $security = [
-        'admin' => ['twitter-subscribe', 'telegram-synchronization', 'delete-file', 'import-settings', 'export-settings', 'automations-save', 'get-articles-categories', 'save-articles-categories', 'path', 'reports', 'app-get-key', 'app-activation'],
+        'admin' => [
+            // Actions starting with 'a'
+            'app-activation',
+            'app-get-key',
+            'automations-save',
     
-        'agent' => ['get-tags', 'save-settings', 'reports', 'get-all-settings', 'whatsapp-send-template', 'on-close', 'check-conversations-assignment', 'count-conversations', 'reports-update', 'get-agents-ids', 'send-custom-email', 'get-users-with-details', 'direct-message', 'messenger-send-message', 'wechat-send-message', 'whatsmeow-send-message', 'telegram-send-message', 'twitter-send-message', 'get-user-language', 'get-notes', 'add-note', 'delete-note', 'user-online', 'get-user-from-conversation', 'clean-data', 'save-translations', 'get-rating', 'save-articles', 'update', 'archive-slack-channels', 'add-user', 'delete-user', 'delete-users', 'get-user-conversations', 'update-user'],
+            // Actions starting with 'd'
+            'delete-file',
+            'delete-leads',
+
     
-        'user' => ['update-tags', 'google-language-detection-update-user', 'google-translate', 'get-agents-in-conversation', 'update-conversation-agent', 'update-conversation-department', 'get-label-conversations', 'get-avatar', 'search-user-conversations', 'update-login', 'update-user', 'get-user', 'get-user-extra', 'update-user-to-lead', 'new-conversation', 'get-user-conversations', 'get-new-user-conversations', 'update-message', 'delete-message', 'update-user-and-message', 'get-conversation', 'get-new-messages', 'set-rating', 'create-email', 'send-email'],
-        
-        'login' => ['transcript', 'automations-get', 'send-sms', 'pusher-trigger', 'subscribe-email', 'push-notification', 'queue', 'update-conversation-status', 'update-users-last-activity', 'is-typing', 'send-message', 'set-typing', 'user-autodata', 'saved-replies']
+            // Actions starting with 'e'
+            'export-settings',
+    
+            // Actions starting with 'g'
+            // 'get-all-settings',
+            'get-articles-categories',
+            // 'get-settings',
+    
+            // Actions starting with 'i'
+            'import-settings',
+    
+            // Actions starting with 'p'
+            'path',
+    
+            // Actions starting with 'r'
+            'reports',
+    
+            // Actions starting with 's'
+            'save-articles-categories',
+            // 'save-settings',
+            // 'system-requirements',
+    
+            // Actions starting with 't'
+            'telegram-synchronization',
+            'twitter-subscribe',
+        ],
+    
+
+
+
+        'agent' => [
+    // Actions starting with 'a'
+    'add-note',
+    'add-user',
+
+    // Actions starting with 'c'
+    'check-conversations-assignment',
+    'clean-data',
+    'close-message',
+    'count-conversations',
+    'count-users',
+    'csv-conversations',
+    'csv-users',
+
+    // Actions starting with 'd'
+    'delete-note',
+    'delete-user',
+    'delete-users',
+    'direct-message',
+
+    // Actions starting with 'g'
+    'get-agents-ids',
+    'get-all-settings',
+    'get-conversations',
+    'get-new-conversations',
+    'get-new-users',
+    'get-notes',
+    'get-online-users',
+    'get-rating',
+    'get-tags',
+    'get-user-conversations',
+    'get-user-from-conversation',
+    'get-user-language',
+    'get-users',
+    'get-users-with-details',
+
+    // Actions starting with 'i'
+    'is-agent-typing',
+
+
+    // Actions starting with 'm'
+    'messenger-send-message',
+
+    // Actions starting with 'o'
+    'on-close',
+
+    // Actions starting with 'r'
+    'reports',
+    'reports-update',
+
+    // Actions starting with 's'
+    'save-articles',
+    'save-settings',
+    'save-translations',
+    'send-custom-email',
+    // 'search-conversations',
+    // 'search-users',
+    // 'send-custom-email',
+    // 'send-test-email',
+    // 'slack-users',
+
+    // Actions starting with 't'
+    'telegram-send-message',
+    'twitter-send-message',
+
+    // Actions starting with 'u'
+    'update',
+    'update-user',
+    'user-online',
+
+    // Actions starting with 'w'
+    'wechat-send-message',
+    'whatsapp-send-message',
+    'whatsapp-send-template',
+    'whatsmeow-send-message',
+],
+
+    
+'user' => [
+    // Actions starting with 'c'
+    'create-email',
+
+    // Actions starting with 'd'
+    'delete-message',
+
+    // Actions starting with 'g'
+    'get-agents-in-conversation',
+    'get-avatar',
+    'get-conversation',
+    'get-label-conversations',
+    'get-new-messages',
+    'get-new-user-conversations',
+    'get-user',
+    'get-user-conversations',
+    'get-user-extra',
+
+    // Actions starting with 'n'
+    'new-conversation',
+
+    // Actions starting with 's'
+    'search-user-conversations',
+    'send-email',
+    'set-rating',
+
+    // Actions starting with 'u'
+    'update-conversation-agent',
+    'update-conversation-department',
+    'update-login',
+    'update-message',
+    'update-tags',
+    'update-user',
+    'update-user-and-message',
+    'update-user-to-lead',
+
+    // Other actions
+    'google-language-detection-update-user',
+    'google-translate',
+],
+
+'login' => [
+    // Actions starting with 'a'
+    'automations-get',
+
+    // Actions starting with 'i'
+    'is-typing',
+
+    // Actions starting with 'p'
+    'push-notification',
+    'pusher-trigger',
+
+    // Actions starting with 'q'
+    'queue',
+
+    // Actions starting with 's'
+    'saved-replies',
+    'send-message',
+    'send-sms',
+    'set-typing',
+    'subscribe-email',
+
+    // Actions starting with 't'
+    'transcript',
+
+    // Actions starting with 'u'
+    'update-conversation-status',
+    'update-users-last-activity',
+],
+
     ];
     $function = $_POST['function'];
     $user_id = sb_post('user_id', -1);
