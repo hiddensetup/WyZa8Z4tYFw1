@@ -11689,6 +11689,10 @@ function sb_automations_run($automation, $validate = false)
 //     }
 //     return false;
 // }
+function steambox_pusher()
+{
+    return defined("SB_CLOUD");
+}
 
 
 ?>
