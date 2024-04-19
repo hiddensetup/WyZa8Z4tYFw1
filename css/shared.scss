@@ -162,7 +162,7 @@
 
 .rotimg {
   display: block;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .webp {
@@ -1270,24 +1270,42 @@ div ul.sb-menu,
     left: 0;
     display: flex;
     animation: fade-in .2s linear;
-    margin: 0 0em .1rem 0em;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
     position: absolute;
     background: var(--chat-att-background);
-    bottom: 57px;
+    bottom: calc(100% - 2px);
     right: 0;
     font-size: 20px;
-    padding: .4rem .4rem 0.2rem 0.4rem;
+    padding: .6rem .6rem .5rem .6rem;
+    width: min-content;
+    margin: 8px 6px;
+    border-radius: 26px;
+    box-shadow: var(--box-shadow-menu);
+    border: .8px solid var(--chat-border-color);
 
     > div {
-      width: 30px;
-      height: 28px;
-      margin-right: 0px;
+      width: 21px;
+      height: 24px;
+      margin-right: 0;
       position: relative;
       cursor: pointer;
+      border-radius: 50%;
+      padding: 3px 5px;
+      box-shadow: var(--chat-button-editor);
+      background:var(--chat-tooltip-color);
+
+
+      &:active {
+        box-shadow: var(--chat-button-editor-inset);
+        transition: var(--transition);
+        scale: .9;
+
+
+      }
+  
 
       &:last-child {
         margin-right: 0px;
@@ -1298,7 +1316,7 @@ div ul.sb-menu,
         position: absolute;
         // left: 7px;
         // font-size: 1.5rem;
-        line-height: 30px;
+        line-height: 24px;
         color: var(--chat-buttons-chat);
       }
 
@@ -2479,8 +2497,8 @@ a.sb-btn {
     z-index: 4;
     // backdrop-filter: blur(40px);
     border-radius: 0.8rem;
-    z-index: 1000;
-    margin: 0px -100px;
+    z-index: 99;
+    margin: -4px -100px;
     padding: 10px 0 10px 0;
     animation: fade-in 0.3s ease-out;
     -webkit-animation: fade-in 0.3s ease-out;
@@ -2488,6 +2506,7 @@ a.sb-btn {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 0.5px solid var(--chat-border-color);
+    height: 230px;
   }
 
   .sb-header {
@@ -2755,7 +2774,7 @@ div ul.sb-menu,
     &.sb-active {
       background: var(--chat-background-selected);
       // color: var(--chat-list-active-text);
-      border-radius: 0.3rem;
+      // border-radius: 0.3rem;
     }
 
     &:active {
@@ -2846,7 +2865,7 @@ div ul.sb-menu,
   cursor: pointer;
   font-size: 1.6rem;
   border-radius: 30px;
-  padding: 2px 2px 11px 2px;
+  padding: 2px 10px 11px 10px;
   align-self: flex-end;
 
   &:active,
@@ -4086,9 +4105,9 @@ textarea::placeholder {
 }
 
 .client-icon-status {
-  line-height: 0;
+  line-height: 15px;
   border-radius: 15px;
-  padding: 4px 3px 0px 3px;
+  padding: 1.5px 2px 0px 2px;
 }
 
 ::placeholder {

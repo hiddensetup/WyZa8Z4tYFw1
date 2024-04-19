@@ -935,7 +935,7 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="sb-icon-social-wa" style="vertical-align: middle;"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_WHATSMEOW', 'whatsmeow', '<i class="sb-icon-qr" style="vertical-align: middle;"></i> WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_TELEGRAM', 'telegram', '<i class="sb-icon-telegram" style="vertical-align: middle;"></i> Telegram', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="sb-icon-google" style="vertical-align: middle;"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
@@ -967,7 +967,7 @@ $admin_icon = sb_get_setting('admin-icon', STMBX_URL . '/media/icons.svg');
 if ($admin_icon == STMBX_URL . '/media/icons.svg') {
     // Si el valor devuelto es igual al valor predeterminado, imprime el SVG directamente
     echo '
-        <a href="https://steamboxchat.com" target="_blank"><svg class="rotimg"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 138.59" style="width: 20px;position: absolute;bottom: 30px;margin: 23px;">
+        <a href="https://steamboxchat.com" target="_blank"><svg class="rotimg"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 138.59" style="width: 20px;">
             <path d="M111.26 93.48c0 24.08-17.59 45.11-53.91 45.11-25.23 0-51.81-9-57.35-35.74l35.56-11.09c.76 6.88 9.55 12 19.69 12 7.45 0 13-2.87 13-8 0-6.69-8.22-7.07-21.6-10.32C22.17 79.52 4.21 70.92 4.21 43.39 4.21 17.21 27.34 0 56.77 0c23.52 0 44.93 11.66 49.71 35.17l-35.37 8.61c-1.53-5.36-6.69-9-14-9-7.65 0-11.66 3.06-11.66 7.65 0 6.5 9.94 7.07 20.26 9.94 32.74 8.99 45.55 18.55 45.55 41.11M160 118a20.55 20.55 0 1 1-20.64-20.46A20.55 20.55 0 0 1 160 118" style="fill:var(--chat-btn-not-pressed-color);"></path>
         </svg></a>';
 } else {
@@ -996,11 +996,11 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
-                            <div style="box-shadow:none;height: 143px;background: #ff000000;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);top: -35px;width: 200px;">
+                            <div style="box-shadow:none;height: 143px;background: #3b73ff00;top: -132px;width: 50px;">
                                 <ul class="sb-menu" style="min-width:142px">
                                     <li data-value="status" style="padding-left: 30px;padding-top:12px" class="sb-online"> <?php sb_e('Online') ?></li>
                                     <li href="#" class="themeToggleBtn"><i class="bi-paint-bucket"></i> <?php sb_e('Tema') ?></li>
-                                    <hr style="margin: 0px 12px;background: var(--chat-hr-color);">
+                                    <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                                     <li data-value="logout"><i class="bi-door-open"></i>
                                         <?php sb_e('Logout') ?>
                                     </li>
@@ -1010,10 +1010,10 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                         <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-clipboard-pulse"></i></div>' ?>
                       
                     </div>
-                    <div class="sb-mobile" style="right: 10px;top: -145px;animation: scale-up-br 0.2s ease-in-out">
+                    <div class="sb-mobile" style="right: 5px;top: -140px; animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
                         <a href="#" class="themeToggleBtn"> <i class="bi bi-paint-bucket"></i> <?php sb_e('Tema') ?></a>
-                        <hr style="margin: 0px 12px;background: var(--chat-hr-color);width: 120px;">
+                        <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                         <a href="#" class="logout"><i class="bi bi-door-open"></i> <?php sb_e('Logout') ?></a>
 
                     </div>
@@ -1366,14 +1366,14 @@ echo '</div></div>';
                                     <li id="tab-various">
                                         <i class="sb-icon-paypal" style="vertical-align: middle;"></i> <?php sb_e('Miscellaneous') ?>
                                     </li>
-                                    <hr style="margin: 6px;background: #50507c2e; ">
+                                    <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                                     <?php for ($i = 0; $i < count($apps); $i++) {
                                         if (defined($apps[$i][0])) echo '<li id="tab-' . $apps[$i][1] . '">' . sb_($apps[$i][2]) . '</li>';
                                     } ?>
                                     <li class="sb-hide" id="tab-apps">
                                         <?php sb_e('Integraciones') ?>
                                     </li>
-                                    <hr style="margin: 6px;background: #50507c2e; ">
+                                    <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
 
                                     <li id="tab-chat">
                                         <i class="sb-icon-chat" style="vertical-align: middle;"></i> <?php sb_e('Chat') ?>

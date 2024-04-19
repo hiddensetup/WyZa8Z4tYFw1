@@ -639,8 +639,9 @@ a.sb-btn {
 
         >.sb-admin-nav {
             display: flex;
-            margin-left: auto;
-            margin-right: auto;
+            margin: auto;
+            padding-right: 30px;
+
 
             >img {
                 height: 30px;
@@ -685,7 +686,7 @@ a.sb-btn {
 
         .rotimg,
         .changebackground {
-            display: block;
+            display: none;
             top: -2px;
             left: 0px;
         }
@@ -795,7 +796,7 @@ a.sb-btn {
         overflow: hidden;
         overflow-y: scroll;
         z-index: 9999;
-        box-shadow: 0 5px 5px #00000063;
+        box-shadow: var(--box-shadow-menu);
         border-radius: 6px 6px 4px 4px;
     }
 
@@ -905,7 +906,7 @@ a.sb-btn {
                     -webkit-backdrop-filter: blur(30px);
                     border: .8px solid var(--chat-border-color);
                     // padding: .5rem;
-                    box-shadow: 0 -1px 2px 1px rgb(0 0 0 / 15%);
+                    box-shadow: var(--box-shadow-menu);
                     -webkit-animation: 0 -1px 2px 1px rgb(0 0 0 / 15%);
 
                     background-color: var(--chat-background-menu);
@@ -1308,7 +1309,7 @@ a.sb-btn {
         // margin: 0px 4px;
         padding: 10px 8px 10px 8px;
         margin: 0px;
-        box-shadow: 1px 1px 3px black;
+        box-shadow: var(--box-shadow-menu);
     }
 
     >.sb-admin-list {
@@ -1693,9 +1694,9 @@ a.sb-btn {
             padding: 0 15px;
 
             th {
-                color: var(--chat-btn-color);
+                color: var(--chat-btn-pressed-color);
 
-                &.sb-active {
+                &.sb-active, &:hover {
                     color: var(--chat-btn-color);
                     border-color: var(--chat-btn-color);
 

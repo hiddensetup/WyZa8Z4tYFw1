@@ -1628,7 +1628,7 @@
         const popupWidth = $(this).outerWidth();
         const windowWidth = $(window).width();
         const leftPosition =
-          $(button).offset().left + $(button).outerWidth() + windowWidth * 0.1; // 10% more to the right side of the window
+          $(button).offset().left + $(button).outerWidth() + windowWidth * 0.44; // 10% more to the right side of the window
         $(this).css("left", leftPosition);
         $(this).sbActive(true);
       }
@@ -2293,7 +2293,7 @@
           }">
 				  ${media_code}
 				 
-				  <div style="margin:0px;text-align:start;margin:0px;cursor:pointer;" class="copyTextOnClick">
+				  <div style="margin:0px;text-align:start;margin:0px;cursor:pointer;padding:0px 4px" class="copyTextOnClick">
 					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
 				  </div>
 				</div>
@@ -7388,7 +7388,7 @@
     });
 
     // Events uploader
-    $(chat_editor).on("click", ".sb-btn-attachment", function () {
+    $(chat_editor).on("click", ".bi-paperclip", function () {
       if (!SBChat.is_busy) {
         chat_editor.find(".sb-upload-files").val("").click();
         chat_editor.find(".sb-icon-send").removeClass("sb-hide");

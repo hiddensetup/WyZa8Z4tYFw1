@@ -1464,7 +1464,7 @@ TABLE
         // color: var(--chat-btn-color);
 
         input {
-            border: 1px solid var(--chat-text-primary);
+            border: 1px solid var(--chat-text-secondary);
             background: var(--chat-border-color);
 
         }
@@ -2626,6 +2626,7 @@ TABLE
             left: 0;
             position: fixed;
             text-align: center;
+            font-size: 1.1rem;
 
             >div>a {
                 font-size: 0.85rem;
@@ -2637,6 +2638,7 @@ TABLE
                 -webkit-transition: var(--transition);
                 color: var(--chat-text-primary);
                 margin: 5px !important;
+                font-weight: 400;
 
                 &:hover {
                     // color: var(--chat-btn-not-pressed-color);
@@ -2668,15 +2670,15 @@ TABLE
                 padding: 5px 10px;
                 cursor: pointer;
                 text-align: center;
-                top: 50px;
+                bottom: 40px;
                 position: fixed;
 
                 >img {
-                    width: 40px;
-                    height: 40px;
+                    width: 35px;
+                    height: 35px;
                     border-radius: 10rem;
                     display: block;
-                    margin: 0 auto;
+                    margin: 6px;
                     position: absolute;
                     bottom: 4px;
                 }
@@ -2723,20 +2725,22 @@ TABLE
 
                 .sb-menu {
                     position: relative;
-                    top: 40px;
-                    margin-bottom: 0px;
+                    top: -43px;
+                    margin-bottom: 0;
                     box-shadow: var(--box-shadow);
                     padding: 5px;
                     background-color: var(--chat-background-menu);
                     border: .8px solid var(--chat-border-color);
-                    border-radius: 0.6rem;
+                    border-radius: .6rem;
                     max-width: 130px;
+                    left: 0px;
 
 
                     li {
                         padding: 10px;
                         position: relative;
                         color: var(--chat-text-primary);
+                        font-size: .85rem;
 
                         &.sb-active {
                             color: var(--chat-tertiary-color);
@@ -3755,8 +3759,17 @@ BODY
 
         }
 
-        [data-value="read"] {
-            color: var(--color-green);
+        [data-value="read"] { 
+            color: var(--color-red);
+            //margin-right: 0px;
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+
+        [data-value="unread"] { 
+            color: var(--blue-root-color-aqua);
             //margin-right: 0px;
 
             i {
@@ -4290,8 +4303,8 @@ BODY
 
         &.sb-active,
         &:hover {
-            border-bottom: 2px solid var(--chat-text-selected);
-            color: var(--chat-text-selected);
+            border-bottom: 2px solid var(--chat-btn-color);
+            color: var(--chat-btn-color);
         }
 
         &.sb-active:after {
@@ -7726,7 +7739,7 @@ grammarly-editor-plugin {
 
                 >div {
                     padding: 1vh 0;
-                    top: 80px;
+                    top: 31%;
                     position: absolute;
                 }
             }

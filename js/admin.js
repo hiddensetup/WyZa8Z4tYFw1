@@ -2804,14 +2804,14 @@
                 tagsDetailsDiv.append(`<div>
 								<h4 class="title-tags tags-${tag_key}">
 									<div>
-										<i class="sb-icon sb-icon-tag tags-${tag_key}"></i>
+										<i class="sb-icon bi-crosshair tags-${tag_key}"></i>
 									</div>
 									<div class="white-title-elements">
 										${tag_key.toUpperCase()}(${tagData.length})
 									</div>
 									<div>
 										<div class="arrow-down-tags white-title-elements">
-											<i class="sb-icon-check-circle"></i>
+											<i class="bi-"></i>
 										</div>
 									</div>
 								</h4>
@@ -3748,11 +3748,11 @@
                 .html(
                   `<span data-agent="${
                     busy.id
-                  }" style="border-radius: 10px 10px 0px 0px;position: absolute;bottom: 62px;background: #006eff;color: #ffffff;padding: 4px 10px;font-size: .85rem;left: 4px;right: 4px;text-align: center;"><b>${
+                  }" style="border-radius: 10px 10px 0px 0px;position: absolute;bottom: calc(100% - -1px);background: #006eff;color: #ffffff;padding: 4px 10px;font-size: .85rem;left: 4px;right: 4px;text-align: center;"><b>${
                     busy.first_name
                   } ${busy.last_name}</b> ${sb_(
                     "was viewing the conversation."
-                  )} <i class="sb-icon-check-circle" style="vertical-align: middle;"></i></span>`
+                  )} <i class="bi-check-all" style="vertical-align: middle;"></i></span>`
                 );
             }
 
@@ -4219,7 +4219,7 @@
         .parent()
         .sbInitTooltips()
         .find("i")
-        .attr("class", unread ? "sb-icon-close" : "sb-icon-check-circle");
+        .attr("class", unread ? "bi-check-lg" : "bi-check-all");
     },
 
     // Return the conversation code of the left conversations list
@@ -4414,9 +4414,9 @@
       }">
     
 			<div class="client-status">
-			<i style="border-radius: 50%; padding: 4px 3.5px 0px 3.5px; line-height: 0px;" class="client-icon-status sb-icon tags-${
+			<i class="client-icon-status sb-icon tags-${
         conversation["label"]
-      } sb-icon-tag"></i>
+      } bi-crosshair"></i>
 			</div>
 			<h3 class="sb-name${is_title ? " sb-custom-name" : ""}">${
         is_title
@@ -5340,12 +5340,12 @@
         // change icon of source type
         if (e.target.value !== "Unknown") {
           const name = e.target.options[e.target.selectedIndex].text;
-          let labcolor = `sb-icon sb-icon-tag tags-${e.target.value}`;
+          let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
           $('.sb-profile-list [data-id="conversation-label"] i').attr(
             "class",
             labcolor
           );
-          $(`[data-user-id="${activeUser().id}"] .sb-icon-tag`).attr(
+          $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
             "class",
             labcolor
           );
@@ -5358,12 +5358,12 @@
       $("#CstBtn a").click(function (e) {
         const label = $(this).attr("id");
         const name = sb_(SBF.admin_set("label-names")[label] + " ");
-        let labcolor = `sb-icon sb-icon-tag tags-${label}`;
+        let labcolor = `sb-icon bi-crosshair tags-${label}`;
         $('.sb-profile-list [data-id="conversation-label"] i').attr(
           "class",
           labcolor
         );
-        $(`[data-user-id="${activeUser().id}"] .sb-icon-tag`).attr(
+        $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
           "class",
           labcolor
         );
@@ -5542,7 +5542,7 @@
           }
 
           // Determine the class based on the selected value
-          let selectedClass = `class="sb-icon sb-icon-tag tags-${bgselect}"`;
+          let selectedClass = `class="sb-icon bi-crosshair tags-${bgselect}"`;
 
           value = `<select style="width:102px;background: transparent; border-color: transparent;" id="change-conversation-labels">
 								<option value='unknown'>${sb_("Client status")}</option> ${optlist} </select>`;
@@ -6556,7 +6556,7 @@
       }
     );
 
-    $(conversations_area).on("click", ".sb-icon-zap", function () {
+    $(conversations_area).on("click", ".bi-slash-circle", function () {
       saved_replies.sbTogglePopup(this);
     });
 
@@ -6586,7 +6586,7 @@
       });
     });
 
-    $(conversations_area).on("click", ".sb-icon-tag", function () {
+    $(conversations_area).on("click", ".bi-crosshair", function () {
       chat_status.sbTogglePopup(this);
     });
 

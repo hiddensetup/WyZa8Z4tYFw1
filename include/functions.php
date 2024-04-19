@@ -9388,12 +9388,12 @@ function sb_component_editor($admin = false)
 
         <div class="sb-bar-icons sb-hide">
             <?php if ($admin || !sb_get_setting("disable-uploads")) {
-                echo '<div class="sb-btn-attachment"></div>';
+                echo '<div class="bi-paperclip"></div>';
             } ?>
-            <div class="sb-icon-tag"></div>
-            <div class="sb-icon-zap" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
+            <div class="bi-crosshair"></div>
+            <div class="bi-slash-circle" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
             <div class="sb-btn-emoji"></div>
-            <div class="sb-icon-like" id="send-rating-button"></div>
+            <div class="bi-list-stars" id="send-rating-button"></div>
         </div>
 
 
@@ -9501,7 +9501,7 @@ function sb_component_editor($admin = false)
                 foreach ($clientStatus as $label) {
                 ?>
                     <a id="<?= $label ?>" class="sb-input-setting cst-a">
-                        <i class="<?= "cst-i sb-icon-tag tags-" . $label ?>"></i>&nbsp;<?= $label ?>
+                        <i class="<?= "cst-i bi-crosshair tags-" . $label ?>"></i>&nbsp;<?= $label ?>
 
                     </a>
                 <?php } ?>
@@ -10822,7 +10822,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
                     );
                     $data[$key] = [
                         $average,
-                        '<i class="sb-icon-like"></i>' .
+                        '<i class="bi-list-stars"></i>' .
                             $positive .
                             " (" .
                             $average .
