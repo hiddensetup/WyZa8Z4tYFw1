@@ -1081,11 +1081,11 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                                             echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="sb-icon-automation"></i></a></li><li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="sb-icon-delete"></i></a></li>';
                                         }
                                         ?>
-                                        <li>
+                                        <!-- <li>
                                             <a data-value="transcript" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Transcript') ?>" data-action="<?php echo sb_get_multi_setting('transcript', 'transcript-action') ?>">
                                                 <i class="bi-arrow-down-circle"></i>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a data-value="archive" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Archive conversation') ?>">
                                                 <i class="sb-icon-archive-chat"></i>
