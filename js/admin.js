@@ -3046,7 +3046,7 @@
             extra: this.table_extra,
           },
           (response) => {
-            this.user_types = ["visitor", "lead", "user"];
+            this.user_types = ["lead"];
             this.populate(response);
             this.search_query = search;
             $(icon).sbLoading(false);
@@ -4363,7 +4363,7 @@
 
           if (docFiles.length > 0) {
             docMessage =
-              `<i class="sb-icon-file vertical-align"></i>` +
+              `<i class="bi-file-text"></i>` +
               " " +
               sb_("Doc") +
               ": " +
@@ -6137,7 +6137,7 @@
             $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
           }
           // Change the icon to sb-icon-arrow-right
-          $(this).toggleClass("sb-icon-search sb-icon-visa");
+          $(this).toggleClass("sb-icon-search bi-arrow-down-circle");
         } else {
           scrolls["always_hidden"] = false;
           if (conversations_admin_list_ul.parent().scrollTop() < 10) {
@@ -6146,7 +6146,7 @@
               $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
             }
             // Change the icon back to sb-icon-search
-            $(this).toggleClass("sb-icon-visa sb-icon-search");
+            $(this).toggleClass("bi-arrow-down-circle sb-icon-search");
           }
         }
       });

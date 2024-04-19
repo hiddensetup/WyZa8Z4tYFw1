@@ -996,57 +996,25 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
-                            <div style="box-shadow:none;height: 143px;background: #ff000000;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);top:5px;">
-                                <ul class="sb-menu">
+                            <div style="box-shadow:none;height: 143px;background: #ff000000;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);top: -35px;width: 200px;">
+                                <ul class="sb-menu" style="min-width:142px">
                                     <li data-value="status" style="padding-left: 30px;padding-top:12px" class="sb-online"> <?php sb_e('Online') ?></li>
+                                    <li href="#" class="themeToggleBtn"><i class="bi-paint-bucket"></i> <?php sb_e('Tema') ?></li>
                                     <hr style="margin: 0px 12px;background: var(--chat-hr-color);">
-                                    <li href="#" class="themeToggleBtn"><i style="vertical-align:middle;" class='sb-icon-desktop'></i> <?php sb_e('Tema') ?></li>
-                                    <hr style="margin: 0px 12px;background: var(--chat-hr-color);">
-                                    <li data-value="logout"><i style="vertical-align:text-top;" class='sb-icon-logout'></i>
+                                    <li data-value="logout"><i class="bi-door-open"></i>
                                         <?php sb_e('Logout') ?>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <?php echo '<div class="help-center"><i class="sb-icon-info"></i><span class="notification"></span></div>' ?>
-                        <style>
-                            .notification {
-                                animation: bounce 1s ease-out;
-                                position: absolute;
-                                top: 13px;
-                                right: 15px;
-                                color: #fff;
-                                border-radius: 50%;
-                                width: 17px;
-                                height: 17px;
-                                text-align: center;
-                                font-size: 12px;
-                                font-weight: 700;
-                                line-height: 20px;
-                                z-index: 10909;
-                            }
-
-                            @keyframes bounce {
-                                0% {
-                                    transform: translateY(0);
-                                }
-
-                                50% {
-                                    transform: translateY(-10px);
-                                }
-
-                                100% {
-                                    transform: translateY(0);
-                                }
-                            }
-                        </style>
+                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-clipboard-pulse"></i></div>' ?>
+                      
                     </div>
                     <div class="sb-mobile" style="right: 10px;top: -145px;animation: scale-up-br 0.2s ease-in-out">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
+                        <a href="#" class="themeToggleBtn"> <i class="bi bi-paint-bucket"></i> <?php sb_e('Tema') ?></a>
                         <hr style="margin: 0px 12px;background: var(--chat-hr-color);width: 120px;">
-                        <a href="#" class="themeToggleBtn"><i style="vertical-align:middle;" class='sb-icon-mobile'></i> <?php sb_e('Tema') ?></a>
-                        <hr style="margin: 0px 12px;background: var(--chat-hr-color);width: 120px;">
-                        <a href="#" class="logout"><i style="vertical-align:sub;" class='sb-icon-logout'></i> <?php sb_e('Logout') ?></a>
+                        <a href="#" class="logout"><i class="bi bi-door-open"></i> <?php sb_e('Logout') ?></a>
 
                     </div>
 
@@ -1069,15 +1037,15 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                                             <span></span>
                                         </li>
                                         <li data-value="6">
-                                            <i style="font-size: 14px;vertical-align: middle;" class="sb-icon-star"></i> <?php sb_e('Follow up') ?>
+                                            <i class="bi-star"></i> <?php sb_e('Follow up') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="3">
-                                            <i style="font-size: 14px;vertical-align: middle;" class="sb-icon-archive-chat"></i> <?php sb_e('Archived') ?>
+                                        <i class="bi-archive"></i> <?php sb_e('Archived') ?>
                                         </li>
                                         <?php if ($is_admin) { ?>
                                             <li data-value="4">
-                                                <i style="font-size: 14px; vertical-align: middle;" class="sb-icon-paypal"></i> <?php sb_e('Container') ?>
+                                            <i class="bi-box"></i> <?php sb_e('Container') ?>
                                             </li>
                                         <?php } ?>
                                     </ul>
@@ -1115,7 +1083,7 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                                         ?>
                                         <li>
                                             <a data-value="transcript" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Transcript') ?>" data-action="<?php echo sb_get_multi_setting('transcript', 'transcript-action') ?>">
-                                                <i class="sb-icon-visa"></i>
+                                                <i class="bi-arrow-down-circle"></i>
                                             </a>
                                         </li>
                                         <li>
@@ -1229,30 +1197,29 @@ echo '</div></div>';
                                     </div>
 
                                     <!--added-->
-                                    <ul class="dropdown-content">
+                                   <ul class="dropdown-content">
 
 
-                                        <?php if ($is_admin || sb_get_setting('admin-agents-tab') || sb_get_multi_setting('agents', 'agents-tab')) {
-                                            echo '<li  class="start-group-button"  data-type="agent">' . sb_('Team') . '</li>';
-                                        } // temp delete sb_get_setting('admin-agents-tab') 
-                                        ?>
+                                            <li class="start-group-button" data-type="lead">
+                                                <?php sb_e('Leads') ?>
+                                                <span data-count="0">(0)</span>
+                                            </li>
+                                            <li class="middle-group-button-right" data-type="visitor">
+                                                <?php sb_e('Live chat') ?>
+                                                <span data-count="0">(0)</span>
+                                            </li>
+                                            <li class="middle-group-button-left sb-hide" data-type="all">
+                                                <?php sb_e('Total') ?>
+                                                <span data-count="0">(0)</span>
+                                            </li>
 
-                                        <li class="middle-group-button-right sb-active" data-type="lead">
-                                            <?php sb_e('Leads') ?>
-                                            <span data-count="0">(0)</span>
-                                        </li>
+                                            <?php if ($is_admin || sb_get_setting('admin-agents-tab') || sb_get_multi_setting('agents', 'agents-tab')) {
+                                                echo '<li  class="end-group-button"  data-type="agent">' . sb_('Team') . '</li>';
+                                            } // temp delete sb_get_setting('admin-agents-tab')
+                                            ?>
 
-                                        <li class="middle-group-button-left sb-hide" data-type="all">
-                                            <?php sb_e('Total') ?>
-                                            <span data-count="0">(0)</span>
-                                        </li>
 
-                                        <li class="end-group-button" data-type="visitor">
-                                            <?php sb_e('Live chat') ?>
-                                            <span data-count="0">(0)</span>
-                                        </li>
-
-                                        <li class="sb-hide" data-type="all">
+                                            <!-- <li class="sb-hide" data-type="all">
                                             <?php sb_e('Total') ?>
                                             <span data-count="0">(0)</span>
                                         </li>
@@ -1263,11 +1230,12 @@ echo '</div></div>';
                                         </li>
                                         <li class="sb-hide" data-type="online">
                                             <?php sb_e('Online') ?>
-                                        </li>
+                                        </li> -->
 
+                                        </ul>
 
-                                    </ul>
                                 </div>
+                              
 
                             </div>
                             <div>
@@ -1650,9 +1618,9 @@ function sb_conversations_filter()
     if (!sb_get_setting('disable-filters')) return;
     $departments = sb_get_setting('departments');
     $count = is_array($departments) ? count($departments) : 0;
-    $code = '<div class="sb-filter-btn"><i class="sb-icon sb-icon-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p> ' . sb_('All departments') . '</p><ul><li data-value=""> ' . sb_('All departments') . '</li>';
+    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p> ' . sb_('All departments') . '</p><ul><li data-value=""> ' . sb_('All departments') . '</li>';
     for ($i = 0; $i < $count; $i++) {
-        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">' . '<i class="sb-icon-archive" style="font-size: 14px;vertical-align: middle; background: transparent;"></i> ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
 

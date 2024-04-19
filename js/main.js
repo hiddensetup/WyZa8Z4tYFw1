@@ -1139,7 +1139,7 @@
           //   chat_editor
           //     .find(".sb-attachments")
           //     .append(
-          //       `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}"><i class="sb-icon-closer"></i>${name}</div>`
+          //       `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}"><i class="bi-x-circle"></i>${name}</div>`
           //     );
           //   SBChat.activateBar();
           // }
@@ -1163,8 +1163,8 @@
           // Conditionally construct HTML
           if (isImageURL) {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                    <img style="border-radius: .6rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
-                                     ${name}<i class="sb-icon-closer"></i>
+                                    <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
+                                     ${name}<i class="bi-x-circle"></i>
                                   </div>`;
           } else if (isAudioURL) {
             attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
@@ -1178,17 +1178,17 @@
               .pop()}">
                                       Your browser does not support the audio element.
                                     </audio>
-                                    <i class="sb-icon-closer"></i>
+                                    <i class="bi-x-circle"></i>
                                   </div>`;
           } else if (isOfficeURL) {
             // For Office formats, use doc.png as a placeholder image
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                    <img style="border-radius: .6rem; width: 33px; vertical-align: middle;"  src="media/doc.svg" width="30" height="30">
-                                     <i class="sb-icon-closer"></i>
+                                    <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="media/file-text-fill.svg" width="30" height="30">
+                                     <i class="bi-x-circle"></i>
                                   </div>`;
           } else {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                     ${name}<i class="sb-icon-closer"></i>
+                                     ${name}<i class="bi-x-circle"></i>
                                   </div>`;
           }
 
@@ -2198,7 +2198,7 @@
           } else {
             media_code += `${
               url
-                ? `<a rel="noopener" style="text-decoration:none; padding:4px" target="_blank" class="sb-message" href="${url}"><i class="sb-icon-file" style="vertical-align:sub;"></i> ${attachments[i][0]}</a>`
+                ? `<a rel="noopener" style="text-decoration:none; padding:4px" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
                 : " "
             }`;
           }
@@ -5004,7 +5004,7 @@
           let attachmentElement = "";
 
           // Check if response[1] is a valid image URL
-          const isImageURL = /\.(jpg|jpeg|png|gif|bmp|)$/.test(
+          const isImageURL = /\.(jpg|jpeg|png|)$/.test(
             response[1].toLowerCase()
           );
 
@@ -5019,8 +5019,8 @@
           // Conditionally construct HTML
           if (isImageURL) {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                <img style="border-radius: .6rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
-                                <i class="sb-icon-closer"></i>
+                                <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
+                                <i class="bi-x-circle"></i>
                               </div>`;
           } else if (isAudioURL) {
             attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
@@ -5034,18 +5034,18 @@
               .pop()}">
                                   Your browser does not support the audio element.
                                 </audio>
-                                <i class="sb-icon-closer"></i>
+                                <i class="bi-x-circle"></i>
                               </div>`;
           } else if (isOfficeURL) {
             // For Office formats, use doc.png as a placeholder image
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                <img style="border-radius: .6rem; width: 33px; vertical-align: middle;"  src="media/doc.svg" width="30" height="30">
-                                 <i class="sb-icon-closer"></i>
+                                <img style="border-radius: .4rem; width: 33px; vertical-align: middle;"  src="media/file-text-fill.svg" width="30" height="30">
+                                 <i class="bi-x-circle"></i>
                               </div>`;
           } else {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-          <img style="border-radius: .6rem; width: 33px; vertical-align: middle;"  src="media/doc.png" width="30" height="30">
-           <i class="sb-icon-closer"></i>
+          <img style="border-radius: .4rem; width: 33px; vertical-align: middle;"  src="media/file-text-fill.svg" width="30" height="30">
+           <i class="bi-x-circle"></i>
         </div`;
           }
 

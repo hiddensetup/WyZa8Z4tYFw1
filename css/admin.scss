@@ -2723,7 +2723,7 @@ TABLE
 
                 .sb-menu {
                     position: relative;
-                    top: 0px;
+                    top: 40px;
                     margin-bottom: 0px;
                     box-shadow: var(--box-shadow);
                     padding: 5px;
@@ -7621,7 +7621,7 @@ grammarly-editor-plugin {
         .sb-conversation>.sb-top {
             padding-left: 35px;
             margin: 0px 1px;
-            border-radius: 10px 10px 0px 0px;
+            // border-radius: 10px 10px 0px 0px;
             // background-color: var(--background-conversation);
         }
 

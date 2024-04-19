@@ -238,10 +238,6 @@ body {
         // background: var(--chat-btn-color);
         margin: 0 0px 0px 3px !important;
 
-        &:active{
-            transition: var(--transition);
-            scale:.9
-        }
 
         i {
             text-indent: 0;
@@ -457,6 +453,7 @@ body {
             height: 45px;
             width: 45px;
             // transform: rotate(-90deg);
+            color: var(--chat-list-active-text);
 
             &:active,
             &:hover {
@@ -900,12 +897,7 @@ a.sb-btn {
 
 
             &.sb-active {
-                color: var(--chat-text-primary);
-
-                // color: var(--chat-list-active-text);
-
-
-
+          
                 &+div+.sb-mobile,
                 &+ul {
                     display: block;

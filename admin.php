@@ -44,6 +44,8 @@ require('include/components.php');
   <script src="<?php echo file_exists('js/min/main.js') ? $steambox_url . 'js/min/main.js' : $steambox_url . 'js/main.js'; ?>"></script>
   <script src="<?php echo file_exists('js/min/admin.js') ? $steambox_url . 'js/min/admin.js' : $steambox_url . 'js/admin.js'; ?>"></script>
   <script src="<?php echo file_exists('js/min/metatemplate.js') ? $steambox_url . 'js/min/metatemplate.js' : $steambox_url . 'js/metatemplate.js'; ?>"></script>
+  <link href="<?php echo $steambox_url . 'node_modules/bootstrap-icons/font/bootstrap-icons.min.css' ?>" rel="stylesheet" id="theme" media="all">
+
   <link href="<?php echo $steambox_url . 'css/admin.css' ?>" rel="stylesheet" id="theme" media="all">
   <link href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'media/icon.png') ?>" rel="shortcut icon" type="image/png">
   <link href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'resources/pwa/icons/icon-192x192.png') ?>" rel="apple-touch-icon">
@@ -51,7 +53,6 @@ require('include/components.php');
   <link rel="shortcut icon" type="image/png" href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'icon.png') ?>" />
   <link href="<?php echo $steambox_url . 'css/responsive-admin.css' ?>" rel="stylesheet" media="(max-width:554px)">
   </head>
-
 <body>
 
 

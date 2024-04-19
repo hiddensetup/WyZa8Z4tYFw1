@@ -1824,6 +1824,7 @@ function sb_search_users($search)
         $search[$i] = sb_db_escape($search[$i]);
         $query .= 'A.first_name LIKE "%' . $search[$i] . '%" OR A.last_name LIKE "%' . $search[$i] . '%" OR ';
     }
+    $query .= 'B.label LIKE "%' . $search[0] . '%" OR '; // Add condition for label search
     $result = sb_db_get('SELECT A.*, B.label FROM sb_users A,sb_conversations B,sb_messages C WHERE A.id=B.user_id AND B.id=C.conversation_id AND A.user_type <> "bot" AND (' . $query . ' A.email LIKE "%' . $search[0] . '%" OR A.id IN (SELECT user_id FROM sb_users_data WHERE value LIKE "%' . $search[0] . '%")) ' . sb_routing_and_department_db('sb_conversations', true) . ' GROUP BY A.id;', false);
     if (isset($result) && is_array($result)) {
         return $result;
@@ -1831,6 +1832,7 @@ function sb_search_users($search)
         return new SBError('db-error', 'sb_search_users', $result);
     }
 }
+
 
 function sb_count_users()
 {
