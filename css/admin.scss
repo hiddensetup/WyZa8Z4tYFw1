@@ -23,15 +23,27 @@
 
 
 body {
-    background-blend-mode: soft-light;
-    background: var(--chat-image-background), var(--chat-image-color-background);
     margin: 0;
     padding: 0;
     scroll-behavior: smooth !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
+    background: var(--chat-image-background), var(--chat-image-color-background);
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
     audio,
