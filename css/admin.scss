@@ -3139,6 +3139,7 @@ BODY
             padding-left: 25px;
             background: var(--chat-att-background);
             border-right: .5px solid var(--chat-border-color);
+            color: var(--chat-buttons-chat);
         }
 
         .sb-scroll-bar {
@@ -3182,7 +3183,7 @@ BODY
                 -webkit-transition: var(--transition);
                 margin-bottom: 0px;
                 margin-top: 0px;
-                // border-top: 1px solid rgba(121, 127, 136, .2196078431);
+                border-top: .7px dashed var(--chat-border-color);
                 color: var(--chat-text-secondary);
 
                 span {
@@ -3334,7 +3335,8 @@ BODY
 
                         &:active,
                         &:hover {
-                            scale: 1.1
+                            scale: 1.1;
+                            transition: var(--transition);
                         }
 
                     }
@@ -3410,6 +3412,7 @@ BODY
         border-radius: .5rem;
         color: var(--chat-background);
         scale: 1;
+        transition: var(--transition);
     }
 
     .steambox-sorting-bar {
@@ -7348,7 +7351,6 @@ grammarly-editor-plugin {
                 &:hover {
                     scale: .9;
                     background: var(--chat-background-selected);
-                    color:var(--chat-btn-not-pressed-color)
                 }
             }
 
@@ -7408,6 +7410,7 @@ grammarly-editor-plugin {
         font-size: 1.5rem;
         text-align: center;
         z-index: 3;
+        color: var(--chat-buttons-chat);
 
         &.bi-arrow-right-circle:not(.sb-active) {
             -webkit-transform: scaleX(-1);
@@ -7534,6 +7537,7 @@ grammarly-editor-plugin {
 
         .sb-conversation>.sb-top .sb-menu-mobile {
             right: 35px;
+            color: var(--chat-buttons-chat);
         }
     }
 
@@ -7574,7 +7578,7 @@ grammarly-editor-plugin {
             //font-size: 1rem;
             margin: 0 -16px;
             padding: 0;
-            color: var(--chat-text-primary);
+            color: var(--chat-buttons-chat);
             //background-color: var(--chat-border-color);
 
             &.sb-active {
