@@ -2287,18 +2287,22 @@ function sb_get_agents_ids($admins = true)
     }
     return $agents_ids;
 }
+// function sb_get_avatar($first_name, $last_name = '')
+// {
+//     $picture_url = STMBX_URL . '/media/user.svg';
+//     if (!empty($first_name) && substr($last_name, 0, 1) != '#') {
+//         $file_name = rand(99, 9999999) . '.png';
+//         $picture_url = sb_download_file('https://ui-avatars.com/api/?background=202234&color=FFFFFF&size=512&font-size=0.35&name=' . $first_name . '+' . $last_name, $file_name);
+//         $path = sb_upload_path(false, true) . '/' . $file_name;
+//         if (!file_exists($path) || filesize($path) < 1000) $picture_url = STMBX_URL . '/media/user.svg';
+//     }
+//     return $picture_url;
+// }
+
 function sb_get_avatar($first_name, $last_name = '')
 {
-    $picture_url = STMBX_URL . '/media/user.svg';
-    if (!empty($first_name) && substr($last_name, 0, 1) != '#') {
-        $file_name = rand(99, 9999999) . '.png';
-        $picture_url = sb_download_file('https://ui-avatars.com/api/?background=202234&color=FFFFFF&size=512&font-size=0.35&name=' . $first_name . '+' . $last_name, $file_name);
-        $path = sb_upload_path(false, true) . '/' . $file_name;
-        if (!file_exists($path) || filesize($path) < 1000) $picture_url = STMBX_URL . '/media/user.svg';
-    }
-    return $picture_url;
+    return STMBX_URL . '/media/user.svg';
 }
-
 
 // function sb_get_avatar()
 // {
