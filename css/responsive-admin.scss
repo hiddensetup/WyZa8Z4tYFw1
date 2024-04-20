@@ -216,6 +216,7 @@ body {
         -ms-user-select: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         user-select: none;
+        margin: 7px;
     }
 
     .sb-profile-edit-box .sb-btn,
@@ -340,10 +341,9 @@ body {
 .sb-lightbox .sb-top-bar,
 .sb-admin>main>div>.sb-top-bar {
     border: .8px solid var(--chat-border-color);
-    padding: 7px 7px 10px 7px;
-    margin: 0px;
-    height: 40px;
-    // overflow: hidden;
+    padding: 0 5px 5px 10px;
+    margin: 0;
+    height: 47px;
     border-radius: 0 0 14px 14px;
     background-color: var(--chat-overlay-color);
 
@@ -388,7 +388,7 @@ body {
 
     .sb-search-btn {
         >input {
-            line-height: 40px;
+            line-height: 39px;
             margin-top: 7px;
         }
 
@@ -449,11 +449,10 @@ body {
 
 
         >i {
-            // line-height: 42px;
-            height: 45px;
+            height: 23px;
             width: 45px;
-            // transform: rotate(-90deg);
             color: var(--chat-list-active-text);
+            font-size: 1.8rem;
 
             &:active,
             &:hover {
@@ -468,7 +467,7 @@ main>div .sb-top-bar .sb-menu-mobile>ul {
     // top: -15px;
     // right: 40px;
     top: 30px;
-    right: 10px;
+    right: 5px;
 }
 
 /*
@@ -884,14 +883,14 @@ a.sb-btn {
 
         >i {
             display: block;
-            line-height: 55px;
+            // line-height: 40px;
             width: 55px;
             cursor: pointer;
             text-align: center;
             font-size: 1.6rem;
-            margin: 3px 0px;
+            margin: auto;
             padding: 0;
-            overflow: hidden;
+            // overflow: hidden;
             // color: var(--chat-btn-not-pressed-color);
             //  background:var(--chat-background-menu);
             // color: var(--chat-list-active-text);
@@ -1005,17 +1004,21 @@ a.sb-btn {
 
     .sb-search-btn {
         color: inherit;
+        color: inherit;
+    width: 48px;
+    height: 35px;
+    bottom: 5px;
 
         >i {
-            font-size: 1.7rem;
             text-align: center;
             border-radius: .5rem;
             // overflow: hidden;
             position: absolute;
             // height: auto;
             width: auto;
-            padding: 4px 8px;
-            top: 8px;
+            // padding: 4px 8px;
+            top: 12px;
+            margin-right: 10px;
         }
 
         &.sb-active {
@@ -1028,7 +1031,7 @@ a.sb-btn {
 
         }
 
-        &.sb-icon-arrow-right {
+        &.bi-arrow-right-circle {
             color: none;
         }
     }
@@ -1051,9 +1054,9 @@ a.sb-btn {
             font-size: 1.7rem;
             width: 45px;
             height: 100%;
-            line-height: 48px;
+            line-height: 34px;
             text-align: center;
-            top: 5px !important;
+            top: 10px !important;
             border-radius: .5rem;
             overflow: hidden;
             right: 5px;
@@ -1218,8 +1221,8 @@ a.sb-btn {
         .sb-btn,
         .sb-btn-text {
             margin: 0 0 15px 0;
-            //display: block;
             text-align: left;
+            width: fit-content;
         }
     }
 
@@ -1268,7 +1271,7 @@ a.sb-btn {
         border-radius: 10px;
         width: auto;
         transform: none;
-        height: calc(100% - 400px) !important;
+        // height: calc(100% - 400px) !important;
 
         .sb-replies-list ul li {
             height: 35px;
@@ -1323,9 +1326,9 @@ a.sb-btn {
 
         .sb-top {
             // border-bottom: 0.5px solid var(--background-conversation)!important;
-            padding: 0;
-            // height: 51px;
-            min-height: 50px;
+            padding: 5px 0px;
+            height: 50px;
+            min-height: 5px;
             align-items: center;
             border: none;
             border-radius: 0 0 14px 14px;
@@ -1384,13 +1387,12 @@ a.sb-btn {
 
 
             >a {
-                line-height: 19px;
-                font-size: 1.15rem;
+                font-size: 1.16rem;
                 max-width: calc(100% - 120px);
                 overflow: hidden;
                 text-overflow: ellipsis;
-                left: 0px;
-                padding: 0.2rem 0.6rem;
+                left: 0;
+                padding: .2rem .6rem;
             }
 
             .sb-menu-mobile {
@@ -1448,14 +1450,11 @@ a.sb-btn {
 
             .sb-btn-back {
                 display: block !important;
-                height: 40px;
                 width: 40px;
-                line-height: 45px;
                 text-align: center;
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
-                font-size: 1.5rem;
 
                 &:hover {
                     color: var(--chat-btn-color);
@@ -1561,7 +1560,7 @@ a.sb-btn {
     bottom: 0px;
     // background: var(--background-conversation)!important;
     border: 0.5px solid var(--chat-border-color) !important;
-    height: 38px;
+    height: 39px;
 }
 
 .sb-dialogflow-intent-box .sb-intent-add i {
@@ -1961,6 +1960,7 @@ a.sb-btn {
 
 .sb-direct-message-box .sb-bottom {
     display: flex !important;
+    justify-content: flex-end;
 
     .sb-btn-text {
         margin-left: 15px !important;

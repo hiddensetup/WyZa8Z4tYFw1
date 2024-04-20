@@ -10,16 +10,16 @@ function sb_profile_box()
             </div>
             <div>
                 <a style="color: var(--chat-btn-not-pressed-color);" data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
-                    <i class="sb-icon-envelope"></i>
+                    <i class="bi-envelope-at"></i>
                 </a>
                 <a data-value="sms" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send text message') ?>">
                     <i class="sb-icon-sms"></i>
                 </a>
-                <?php if (((sb_is_agent(false, true, true) && !sb_supervisor()) || sb_get_multi_setting('agents', 'agents-edit-user')) || (sb_supervisor() && sb_get_multi_setting('supervisor', 'supervisor-edit-user'))) echo ' <a class="sb-edit sb-btn sb-icon" data-button="toggle" data-hide="sb-profile-area" data-show="sb-edit-area"><i class="sb-icon-message"></i>' . sb_('Edit user') . '</a>' ?>
+                <?php if (((sb_is_agent(false, true, true) && !sb_supervisor()) || sb_get_multi_setting('agents', 'agents-edit-user')) || (sb_supervisor() && sb_get_multi_setting('supervisor', 'supervisor-edit-user'))) echo ' <a class="sb-edit sb-btn sb-icon" data-button="toggle" data-hide="sb-profile-area" data-show="sb-edit-area"><i class="bi-pencil-square"></i>' . sb_('Edit user') . '</a>' ?>
 
 
                 <a class="sb-select sb-btn sb-icon">
-                    <i class="sb-icon-chat"></i><?php sb_e('New chat') ?>
+                    <i class="bi-plus-lg"></i><?php sb_e('New chat') ?>
                     <ul id="getSource" class="desktop-dropmod">
 
 
@@ -27,19 +27,19 @@ function sb_profile_box()
                         $cloud_active = sb_get_multi_setting('whatsapp-cloud', 'cloud-active'); ?>
                         <?php if ($cloud_active) : ?>
                             <li class="sb-start-conversation" onclick="updateSource('wa')">
-                                <?php sb_e('<i style="font-size: 14px; vertical-align: middle;" class="sb-icon-social-fb"></i> Meta® API Cloud') ?>
+                                <?php sb_e('<i class="bi-whatsapp"></i> Meta® API Cloud') ?>
                             </li>
-                            <hr style="margin: 6px;background: #50507c2e;">
+                            <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
 
                         <?php endif; ?>
                         <li class="sb-start-tk-conversation" onclick="updateSource('tk')">
-                            <?php sb_e('<i style="font-size: 14px; vertical-align: middle;" class="sb-icon-chat"></i> Live chat') ?>
+                            <?php sb_e('<i class="bi-chat-text"></i> Live chat') ?>
                         </li>
                         <?php include SB_PATH . "/apps/" . $sb_apps[4] . "/functions.php";
                         $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('ww')">
-                                <?php sb_e('<i style="font-size: 13px; vertical-align: middle;" class="sb-start-conversation sb-icon-qr"></i> WhatsApp'); ?>
+                                <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp'); ?>
                             </li>
                         <?php endif; ?>
 
@@ -47,7 +47,7 @@ function sb_profile_box()
 
                 </a>
                 <a class="sb-close sb-btn-icon" data-button="toggle" data-hide="sb-profile-area" data-show="sb-table-area">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -94,10 +94,10 @@ function sb_profile_edit_box()
             </div>
             <div>
                 <a class="sb-save sb-btn sb-icon">
-                    <i class="sb-icon-check"></i><?php sb_e('Save changes') ?>
+                    <i class="bi-check-lg"></i><?php sb_e('Save changes') ?>
                 </a>
                 <a class="sb-close sb-btn-icon" data-button="toggle" data-hide="sb-profile-area" data-show="sb-table-area">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -270,9 +270,9 @@ function sb_login_box()
                 function displayMessage()
                 {
                     $jsonString = '{
-                                  "payment": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"sb-icon-info\"></i> Payment Required! </h2><span style=\"color:var(--placeholder-color)\";>Access to the Steamboxchat app is currently restricted. Please ensure your payment is settled to continue enjoying it on your plan. If you haven\'t made the payment yet, please do so <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
-                                  "trial": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"sb-icon-info\" style=\"vertical-align:middle\"></i> Trial Ended! </h2><span style=\"color:var(--placeholder-color)\";>Your trial period for the Steamboxchat app has ended. To continue using the app, please make a payment <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
-                                  "overloaded": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"sb-icon-info\" style=\"vertical-align:middle\"></i> System Overloaded! </h2><span style=\"color:var(--placeholder-color)\";>Our servers are overloaded. <br> <br> Please wait for some hours before trying again. We apologize for any inconvenience and appreciate your patience.</span>"
+                                  "payment": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\"></i> Payment Required! </h2><span style=\"color:var(--placeholder-color)\";>Access to the Steamboxchat app is currently restricted. Please ensure your payment is settled to continue enjoying it on your plan. If you haven\'t made the payment yet, please do so <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
+                                  "trial": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> Trial Ended! </h2><span style=\"color:var(--placeholder-color)\";>Your trial period for the Steamboxchat app has ended. To continue using the app, please make a payment <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
+                                  "overloaded": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> System Overloaded! </h2><span style=\"color:var(--placeholder-color)\";>Our servers are overloaded. <br> <br> Please wait for some hours before trying again. We apologize for any inconvenience and appreciate your patience.</span>"
                                    }';
 
                     $messages = json_decode($jsonString, true);
@@ -417,7 +417,7 @@ function sb_requirements_box()
             <div><?php sb_e('System requirements') ?></div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -443,7 +443,7 @@ function sb_app_box()
             <div></div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -476,7 +476,7 @@ function sb_notes_box()
             <div><?php sb_e('Add new note') ?></div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -496,7 +496,7 @@ function sb_notes_box()
             </div>
             <div class="sb-bottom" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap: wrap;flex-direction: column-reverse;">
                 <div style="display:flex;">
-                    <a style="" class="sb-add-note sb-btn sb-icon"><i class="sb-icon-star"></i><?php sb_e('Save note') ?></a>
+                    <a style="" class="sb-add-note sb-btn sb-icon"><i class="bi-stickies"></i><?php sb_e('Save note') ?></a>
                 </div>
             </div>
         </div>
@@ -523,14 +523,14 @@ function sb_tags_box()
             <div><?php sb_e('Manage tags') ?></div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
         <div class="sb-main">
             <div class="sb-tags-cnt"></div>
             <div class="sb-bottom">
-                <a id="sb-save-tags" class="sb-btn"><i class="sb-icon-check"></i>
+                <a id="sb-save-tags" class="sb-btn"><i class="bi-check-lg"></i>
                     <?php sb_e('Save changes') ?>
                 </a>
             </div>
@@ -559,7 +559,7 @@ function sb_direct_message_box()
             </div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -606,7 +606,7 @@ function sb_direct_message_box()
                         </select>
                     </div>
                     <div class="sb-input-setting api-cloud-bubble">
-                    <div style="margin: auto;display: inline-flex;width: 80%;justify-content: center; ">
+                    <div style="margin: auto;display: inline-flex;justify-content: center;width: 100%;">
                     <img src="/media/spike.png" style="width: 20px;vertical-align: top;margin-right: -4px;height: 30px;"> 
                     <textarea disabled="" type="text" class="BodyTemplate textarea-api" name="BodyTemplate"></textarea>                    </div>
                     </div>
@@ -615,7 +615,7 @@ function sb_direct_message_box()
                         <div class='variables'>
                             <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
                         </div>
-                        <div>
+                        <div style="display: flex;justify-content: flex-start;margin: 10px;gap: 5px;">
                             <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn">- <?php sb_e('Delete') ?></a>
                             <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn">+ <?php sb_e('Add') ?></a>
                         </div>
@@ -623,8 +623,8 @@ function sb_direct_message_box()
 
 
                     <div class="sb-bottom send-meta">
-                        <button class="sb-btn sb-icon sb-send-direct-message" style="border: none;text-align: end;">
-                            <i class="sb-icon-currency"></i> <?php sb_e('Send') ?>
+                        <button class="sb-btn sb-icon sb-send-direct-message" style="width:fit-content;border: none;text-align: end;">
+                            <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
                         </button>
                         <div></div>
                     </div>
@@ -634,7 +634,7 @@ function sb_direct_message_box()
             </div>
             <div class="sb-bottom sb-direct-message-hide">
                 <a class="sb-send-direct-message sb-direct-message-hide sb-btn sb-icon">
-                    <i class="sb-icon-automation"></i> <?php sb_e('Send') ?> </a>
+                    <i class="bi-megaphone"></i> <?php sb_e('Send') ?> </a>
                 <div></div>
             </div>
 
@@ -663,11 +663,11 @@ function sb_send_template_box()
         <div class="sb-info"></div>
         <div class="sb-top-bar">
             <div>
-                <i style="line-height: 0;margin-right: 5px;font-size: 40px;" data-value="wa" class="sb-icon-social-fb"></i> <span>Meta® API Cloud </span>
+                <i data-value="wa" class="bi-whatsapp"></i> <span>Meta® API Cloud </span>
             </div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -694,7 +694,7 @@ function sb_send_template_box()
                     <br>
 
                     <div class="sb-input-setting api-cloud-bubble">
-                    <div style="margin: auto;display: inline-flex;width: 80%;justify-content: center;">
+                    <div style="margin: auto;display: inline-flex;justify-content: center;width: 100%;">
                     <img src="/media/spike.png" style="width: 20px;vertical-align: top;margin-right: -4px;height: 30px;"> 
                     <textarea disabled="" type="text" class="BodyTemplate textarea-api" name="BodyTemplate"></textarea>                    </div>
                     </div>
@@ -713,7 +713,7 @@ function sb_send_template_box()
 
                     <div class="sb-bottom send-meta">
                         <button class="sb-btn sb-icon" style="border: none;margin-top: 40px;text-align: end;" type="submit">
-                            <i class="sb-icon-currency"></i> <?php sb_e('Send') ?>
+                            <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
                         </button>
                     </div>
                     
@@ -773,7 +773,7 @@ function sb_languages_box()
             <div><?php sb_e('Choose a language') ?></div>
             <div>
                 <a class="sb-close sb-btn-icon">
-                    <i class="sb-icon-close"></i>
+                    <i class="bi-x-lg"></i>
                 </a>
             </div>
         </div>
@@ -795,7 +795,7 @@ function sb_languages_box()
 function sb_routing_select($exclude_id = false)
 {
     $agents = sb_db_get('SELECT id, first_name, last_name FROM sb_users WHERE (user_type = "agent" OR user_type = "admin")' . ($exclude_id ? (' AND id <> ' . sb_db_escape($exclude_id)) : ''), false);
-    $code = '<div class="sb-inline sb-inline-agents"><h3>' . sb_('Agent') . '</h3><div id="conversation-agent" class="sb-select"><p>' . sb_('None') . '</p><ul class="sb-responsive-absolute-position"><li data-id="" data-value="">' . sb_('None') . '</li>';
+    $code = '<div class="sb-inline sb-inline-agents"><i class="bi-person-raised-hand" style="padding: 0px 5px;"></i><h3>' . sb_('Agent') . '</h3><div id="conversation-agent" class="sb-select"><p>' . sb_('None') . '</p><ul class="sb-responsive-absolute-position"><li data-id="" data-value="">' . sb_('None') . '</li>';
     for ($i = 0; $i < count($agents); $i++) {
         $code .= '<li data-id="' . $agents[$i]['id'] . '">' . $agents[$i]['first_name'] . ' ' . $agents[$i]['last_name'] . '</li>';
     }
@@ -936,11 +936,11 @@ function sb_component_admin()
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
         ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="sb-icon-qr" style="vertical-align: middle;"></i> WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_TELEGRAM', 'telegram', '<i class="sb-icon-telegram" style="vertical-align: middle;"></i> Telegram', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
-        ['SB_GBM', 'gbm', '<i class="sb-icon-google" style="vertical-align: middle;"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
-        ['SB_TWITTER', 'twitter', '<i class="sb-icon-social-tw" style="vertical-align: middle;"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
-        ['SB_MESSENGER', 'messenger', '`<i class="sb-icon-social-me" style="vertical-align: middle;"></i>` Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Steamboxchat.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
+        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
+        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
+        ['SB_MESSENGER', 'messenger', '`<i class="bi-messenger"></i>` Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Steamboxchat.'],
         ['SB_TICKETS', 'tickets', 'Tickets', 'Provide help desk support to your customers by including a ticket area, with all chat features included, on any web page in seconds.'],
     ];
     $logged = $active_user && sb_is_agent($active_user);
@@ -992,14 +992,14 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                 </div>
 
                 <div class="sb-admin-nav-right sb-menu-mobile">
-                    <i class="sb-icon-menu"></i>
+                    <i class="bi-three-dots"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
                             <div style="box-shadow:none;height: 143px;background: #3b73ff00;top: -132px;width: 50px;">
                                 <ul class="sb-menu" style="min-width:142px">
                                     <li data-value="status" style="padding-left: 30px;padding-top:12px" class="sb-online"> <?php sb_e('Online') ?></li>
-                                    <li href="#" class="themeToggleBtn"><i class="bi-paint-bucket"></i> <?php sb_e('Tema') ?></li>
+                                    <li href="#" class="themeToggleBtn"><i class="bi-palette2"></i> <?php sb_e('Tema') ?></li>
                                     <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                                     <li data-value="logout"><i class="bi-door-open"></i>
                                         <?php sb_e('Logout') ?>
@@ -1012,7 +1012,7 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                     </div>
                     <div class="sb-mobile" style="right: 5px;top: -140px; animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
-                        <a href="#" class="themeToggleBtn"> <i class="bi bi-paint-bucket"></i> <?php sb_e('Tema') ?></a>
+                        <a href="#" class="themeToggleBtn"> <i class="bi bi-palette2"></i> <?php sb_e('Tema') ?></a>
                         <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                         <a href="#" class="logout"><i class="bi bi-door-open"></i> <?php sb_e('Logout') ?></a>
 
@@ -1029,11 +1029,11 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
 
                                 <div class="sb-select inbox">
                                     <p class="non-hover" data-value="0">
-                                        <i style="vertical-align: middle;" class="sb-icon-download"></i> <?php sb_e('Inbox') ?><span> </span>
+                                        <i class="bi-inboxes-fill"></i> <?php sb_e('Inbox') ?><span> </span>
                                     </p>
                                     <ul>
                                         <li data-value="0" class="sb-active">
-                                            <i style="font-size: 14px;vertical-align: middle;" class="sb-icon-download"></i> <?php sb_e('Inbox') ?>
+                                            <i class="bi-inboxes"></i> <?php sb_e('Inbox') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="6">
@@ -1053,7 +1053,7 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                                 <div class="sb-flex">
                                     <?php sb_conversations_filter() ?>
                                     <div class="sb-search-btn">
-                                        <i class="sb-icon sb-icon-search"></i>
+                                        <i class="sb-icon bi-search"></i>
                                         <input type="text" autocomplete="false" name="search" placeholder="<?php sb_e('Search for keywords or users...') ?>" />
                                     </div>
                                 </div>
@@ -1065,20 +1065,20 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                         </div>
                         <div class="sb-conversation">
                             <div class="sb-top">
-                                <i class="sb-btn-back sb-icon-arrow-left"></i>
+                                <i class="sb-btn-back bi-arrow-left-circle"></i>
                                 <div class="sb-labels"></div>
                                 <a class="open-profile-name"></a>
                                 <div class="sb-menu-mobile sb-menu-top extra-background-color">
-                                    <i class="sb-icon-menu bkg-color-menu"></i>
+                                    <i class="bi-three-dots bkg-color-menu"></i>
                                     <ul class="ul-nav-top-mobile">
                                         <li>
                                             <a data-value="Details" class="sb-btn-icon open-profile" data-sb-tooltip="<?php sb_e('Details') ?>">
-                                                <i class="sb-icon-info"></i>
+                                                <i class="bi-info-circle-fill"></i>
                                             </a>
                                         </li>
                                         <?php
                                         if ($is_admin || sb_get_setting('agents-delete') || sb_get_multi_setting('agents', 'agents-delete-conversation') || ($supervisor && $supervisor['supervisor-delete-conversation'])) {
-                                            echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="sb-icon-automation"></i></a></li><li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="sb-icon-delete"></i></a></li>';
+                                            echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="bi-robot"></i></a></li><li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="sb-icon-delete"></i></a></li>';
                                         }
                                         ?>
                                         <!-- <li>
@@ -1088,12 +1088,12 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                                         </li> -->
                                         <li>
                                             <a data-value="archive" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Archive conversation') ?>">
-                                                <i class="sb-icon-archive-chat"></i>
+                                                <i class="bi-archive"></i>
                                             </a>
                                         </li>
                                         <li>
                                             <a data-value="read" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Mark as read') ?>">
-                                                <i class="sb-icon-check-circle"></i>
+                                                <i class="bi-check-lg-circle"></i>
                                             </a>
                                         </li>
                                         <li>
@@ -1134,9 +1134,9 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                             </div>
 
                             <div class="sb-scroll-area">
-                                <div class="close-button-div"><i class="sb-icon-closer no-show sb-btn-collapse collapse"></i></div>
+                                <div class="close-button-div"><i class="bi-x-circle no-show sb-btn-collapse collapse"></i></div>
                                 <div class="open-profile sb-profile sb-profile-detail">
-                                <span style=" margin: 10px -15px -3px 0px; font-size: 2rem; "><i class="sb-icon-arrow-right"></i></span>
+                                <span style=" margin: 10px -15px -3px 0px; font-size: 2rem; "><i class="bi-arrow-right-circle"></i></span>
                                                                     <img class="img-profile-detail" src="<?php echo STMBX_URL ?>/media/user.svg" />
                                     <span class="sb-name span-profile-detail"></span>
                                 </div>
@@ -1145,14 +1145,14 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
 
                                 <?php
 
-echo '<div class="sb-panel-details sb-panel-tags">';
-echo '<i class="sb-icon-plus"></i><h3>' . sb_('Tags') . '</h3>';
-echo '<div id="tags-container" class="tagged">';
-echo '<span class="sb-active">';
-echo '<i class="sb-icon-circle" style="vertical-align: middle; font-size: 7px;"></i></span>';
-echo '</div></div>';
+                                echo '<div class="sb-panel-details sb-panel-tags">';
+                                echo '<i class="bi-plus-lg"></i><h3>' . sb_('Tags') . '</h3>';
+                                echo '<div id="tags-container" class="tagged">';
+                                echo '<span class="sb-active">';
+                                echo '<i class="bi-tags"></i></span>';
+                                echo '</div></div>';
                                   if (!sb_get_setting('disable-notes')) {
-                                    echo '<div class="sb-panel-details sb-panel-notes' . $collapse . '"><i class="sb-icon-star"></i><h3>' . sb_('Notes') . '</h3><div></div></div>';
+                                    echo '<div class="sb-panel-details sb-panel-notes' . $collapse . '"><i class="bi-stickies"></i><h3>' . sb_('Notes') . '</h3><div></div></div>';
                                 }
                                 if (!sb_get_setting('disable-attachments')) {
                                     echo '<div class="sb-panel-details sb-panel-attachments' . $collapse . '"></div>';
@@ -1180,8 +1180,8 @@ echo '</div></div>';
                             <div class="sb-no-conversation-message"></div>
                         </div>
                     </div>
-                    <i class="sb-btn-collapse sb-left sb-icon-arrow-left"></i>
-                    <i class="sb-btn-collapse sb-right sb-icon-arrow-right"></i>
+                    <i class="sb-btn-collapse sb-left bi-arrow-left-circle"></i>
+                    <i class="sb-btn-collapse sb-right bi-arrow-right-circle"></i>
                 </div>
                 <?php if ($active_areas['users']) { ?>
                     <div class="sb-area-users">
@@ -1241,7 +1241,7 @@ echo '</div></div>';
                             <div>
 
                                 <div class="sb-menu-mobile">
-                                    <i class="sb-icon-hamburger-menu"></i>
+                                    <i class="bi-list"></i>
                                     <ul id="hideOnSearchClick">
                                         <li>
                                             <a data-value="delete" class="sb-btn-icon sb-btn-red" data-sb-tooltip="<?php sb_e('Delete users') ?>" style="display: none;">
@@ -1250,13 +1250,13 @@ echo '</div></div>';
                                         </li>
                                         <li>
                                             <a data-value="message" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Broadcast message') ?>">
-                                                <i class="sb-icon-horn"></i>
+                                                <i class="bi-megaphone"></i>
                                             </a>
                                         </li>
                                         <?php if ($supervisor || $is_admin) { ?>
                                             <li>
                                                 <a class="sb-btn-icon sb-new-user" data-sb-tooltip="<?= sb_('Add user') ?>">
-                                                    <i class="sb-icon-drag"></i>
+                                                    <i class="bi-person-circle"></i>
                                                 </a>
                                             </li>
                                         <?php } ?>
@@ -1264,7 +1264,7 @@ echo '</div></div>';
 
                                         <li>
                                             <a data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
-                                                <i class="sb-icon-envelope"></i>
+                                                <i class="bi-envelope-at"></i>
                                             </a>
                                         </li>
                                         <li>
@@ -1272,19 +1272,19 @@ echo '</div></div>';
                                                 <input type="file" id="csvimport" name="csv" class="form-control" required>
                                             </div>
                                             <a data-value="csvimport" id="csv_contacts" class="not-show-small-screen sb-btn-icon" data-sb-tooltip="<?= sb_('Upload CSV') ?>">
-                                                <i class="sb-icon-csv"></i>
+                                                <i class="bi-arrow-up-circle"></i>
                                             </a>
                                         </li>
                                         <!-- <?php if (sb_is_agent() && $is_admin) { ?>
                                             <li>
                                                 <a data-value="csv" class="sb-btn-icon sb-btn-google" data-sb-tooltip="<?= sb_('Download CSV') ?>">
-                                                    <i class="sb-icon-google"></i>
+                                                    <i class="bi-google"></i>
                                                 </a>
                                             </li>
                                         <?php } ?> -->
                                         <li>
                                             <a style="display: none;" class="sb-btn-icon">
-                                                <i class="sb-icon-chat"></i>
+                                                <i class="bi-chat-text"></i>
                                             </a>
                                         </li>
                                         <?php if ($sms) { ?>
@@ -1299,7 +1299,7 @@ echo '</div></div>';
 
 
                                 <div class="sb-search-btn">
-                                    <i class="sb-icon sb-icon-search"></i>
+                                    <i class="sb-icon bi-search"></i>
                                     <input type="text" autocomplete="false" name="search" placeholder="<?php sb_e('Search') ?>" />
                                 </div>
 
@@ -1348,7 +1348,7 @@ echo '</div></div>';
                             </div>
                             <div>
                                 <a class="sb-btn sb-save-changes sb-icon">
-                                    <i class="sb-icon-check"></i><?php sb_e('Save changes') ?>
+                                    <i class="bi-check-lg"></i><?php sb_e('Save changes') ?>
                                 </a>
 
                             </div>
@@ -1358,13 +1358,13 @@ echo '</div></div>';
                                 <div><?php sb_e('Settings') ?></div>
                                 <ul>
                                     <li id="tab-admin" class="sb-active">
-                                        <i class="sb-icon-drag" style="vertical-align: middle;"></i> <?php sb_e('Admin') ?>
+                                        <i class="bi-person-fill-gear"></i> <?php sb_e('Admin') ?>
                                     </li>
                                     <li id="tab-notifications">
-                                        <i class="sb-icon-callbell" style="vertical-align: middle;"></i> <?php sb_e('Notifications') ?>
+                                        <i class="bi-app-indicator"></i> <?php sb_e('Notifications') ?>
                                     </li>
                                     <li id="tab-various">
-                                        <i class="sb-icon-paypal" style="vertical-align: middle;"></i> <?php sb_e('Miscellaneous') ?>
+                                        <i class="bi-box-seam"></i> <?php sb_e('Miscellaneous') ?>
                                     </li>
                                     <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                                     <?php for ($i = 0; $i < count($apps); $i++) {
@@ -1376,10 +1376,10 @@ echo '</div></div>';
                                     <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
 
                                     <li id="tab-chat">
-                                        <i class="sb-icon-chat" style="vertical-align: middle;"></i> <?php sb_e('Chat') ?>
+                                        <i class="bi-chat-text"></i> <?php sb_e('Chat') ?>
                                     </li>
                                     <li id="tab-design">
-                                        <i class="sb-icon-circle" style="vertical-align: middle;"></i> <?php sb_e('Design') ?>
+                                        <i class="bi-paint-bucket"></i> <?php sb_e('Design') ?>
                                     </li>
 
                                 </ul>
@@ -1499,7 +1499,7 @@ echo '</div></div>';
                                     <h3 class="sb-title sb-reports-title"></h3>
                                     <p class="sb-reports-text"></p>
                                     <div class="sb-tags">
-                                        <div style="transform: rotateZ(-90deg);"><i class="sb-icon-arrow-left"></i></div>
+                                        <div style="transform: rotateZ(-90deg);"><i class="bi-arrow-left-circle"></i></div>
 
                                     </div>
                                 </div>
@@ -1591,7 +1591,7 @@ echo '</div></div>';
      $code .= '<div><div class="sb-apps">';
      for ($i = 1; $i < count($apps); $i++) {
          if (($wp && !in_array($apps[$i][0], $apps_php)) || (!$wp && !in_array($apps[$i][0], ['SB_WOOCOMMERCE', 'SB_UMP', 'SB_ARMEMBER']))) {
-             $code .= '<div data-app="' . $apps[$i][1] . '">' . (defined($apps[$i][0]) ? '<i class="sb-icon-check"></i>' : '') . ' <img src="' . STMBX_URL . '/media/apps/' . $apps[$i][1] . '.svg" /><h2>' . $apps[$i][2] . '</h2><p>' . sb_s($apps[$i][3]) . '</p></div>';
+             $code .= '<div data-app="' . $apps[$i][1] . '">' . (defined($apps[$i][0]) ? '<i class="bi-check-lg"></i>' : '') . ' <img src="' . STMBX_URL . '/media/apps/' . $apps[$i][1] . '.svg" /><h2>' . $apps[$i][2] . '</h2><p>' . sb_s($apps[$i][3]) . '</p></div>';
          }
      }
      echo $code . '</div></div>';
@@ -1618,18 +1618,18 @@ function sb_conversations_filter()
     if (!sb_get_setting('disable-filters')) return;
     $departments = sb_get_setting('departments');
     $count = is_array($departments) ? count($departments) : 0;
-    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p> ' . sb_('All departments') . '</p><ul><li data-value=""> ' . sb_('All departments') . '</li>';
+    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p><i class="bi-diagram-3-fill"></i> ' . sb_('All departments') . '</p><ul><li data-value=""><i class="bi-app"></i> ' . sb_('All departments') . '</li><hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">';
     for ($i = 0; $i < $count; $i++) {
-        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<li data-value="' . $departments[$i]['department-id'] . '"><i class="bi-app"></i> ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
 
     // Only display sources if $sources is not empty
     $sources = [['ww', 'WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'SB_WHATSMEOW'],['wa', 'WhatsApp API', 'SB_WHATSAPP'], ['tk', 'Tickets', 'SB_TICKETS'], ['tg', 'Telegram', 'SB_TELEGRAM'],   ['fb', 'Messenger', 'SB_MESSENGER'], ['ig', 'Instagram', 'SB_MESSENGER'], ['tw', 'Twitter', 'SB_TWITTER'], ['bm', 'Google', 'SB_GBM'], ['wc', 'WeChat', 'SB_WECHAT'], ['tm', 'SMS', false]];
-    $code .= '<div class="sb-select"><p>' . sb_('All channels') . '</p><ul><li data-value="">' . sb_('All channels') . '</li>';
+    $code .= '<div class="sb-select"><p><i class="bi-terminal"></i> ' . sb_('All channels') . '</p><ul><li data-value=""><i class="bi-code-slash"></i> ' . sb_('All channels') . '</li><hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">';
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {
-            $code .= '<li data-value="' . $sources[$i][0] . '">' . $sources[$i][1] . '</li>';
+            $code .= '<li data-value="' . $sources[$i][0] . '"><i class="bi-code-slash"></i> ' . $sources[$i][1] . '</li>';
         }
     }
     $code .= '</ul></div>';

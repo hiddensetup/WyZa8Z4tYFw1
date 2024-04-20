@@ -317,7 +317,7 @@
       n.includes(s[c]) ||
         ((t += `<span ${i == s[c] ? 'class="sb-active" ' : ""}data-language="${
           s[c]
-        }"><i class="sb-icon-close"></i><img src="${STMBX_URL}/media/flags/${s[
+        }"><i class="bi-x-lg"></i><img src="${STMBX_URL}/media/flags/${s[
           c
         ].toLowerCase()}.png" /></span>`),
         n.push(s[c]));
@@ -327,7 +327,7 @@
         t +
           `<i data-sb-tooltip="${sb_(
             "Add translation"
-          )}" class="sb-icon-plus"></i></div>`
+          )}" class="bi-plus-lg"></i></div>`
       ),
       e.sbInitTooltips(),
       this
@@ -1514,13 +1514,13 @@
       if (action == "set") {
         var html = "";
         if (items.length > 0) {
-          $(content).find(".sb-icon-close").remove();
+          $(content).find(".bi-x-lg").remove();
           for (var i = 0; i < items.length; i++) {
             let item = $($.parseHTML(`<div>${content}</div>`));
             for (var key in items[i]) {
               this.setInput(item.find(`[data-id="${key}"]`), items[i][key]);
             }
-            html += `<div class="repeater-item">${item.html()}<i class="sb-icon-close"></i></div>`;
+            html += `<div class="repeater-item">${item.html()}<i class="bi-x-lg"></i></div>`;
           }
         }
         return html;
@@ -2200,7 +2200,7 @@
               "Title"
             )}</h2><div class="sb-input-setting sb-type-text"><div><input data-id="title" type="text"></div></div><h2>${sb_(
               "Profile image"
-            )}</h2><div data-type="upload-image" class="sb-input-setting sb-type-upload-image"><div class="input"><div data-id="profile_image" class="image"><i class="sb-icon-close"></i></div></div></div><h2>${sb_(
+            )}</h2><div data-type="upload-image" class="sb-input-setting sb-type-upload-image"><div class="input"><div data-id="profile_image" class="image"><i class="bi-x-lg"></i></div></div></div><h2>${sb_(
               "Message fallback"
             )}</h2><div class="sb-input-setting sb-type-checkbox"><div><input data-id="fallback" type="checkbox"></div></div>`;
             break;
@@ -2212,7 +2212,7 @@
               code += `<h2>${sb_(
                 (i == 1 ? "Primary" : i == 2 ? "Secondary" : "Tertiary") +
                   " color"
-              )}</h2><div data-type="color" class="sb-input-setting sb-type-color"><div class="input"><input data-id="color_${i}" type="text"><i class="sb-close sb-icon-close"></i></div></div>`;
+              )}</h2><div data-type="color" class="sb-input-setting sb-type-color"><div class="input"><input data-id="color_${i}" type="text"><i class="sb-close bi-x-lg"></i></div></div>`;
             }
             for (var i = 1; i < 4; i++) {
               code += `<h2>${sb_(
@@ -2223,7 +2223,7 @@
                   : "Chat button icon"
               )}</h2><div data-type="upload-image" class="sb-input-setting sb-type-upload-image"><div class="input"><div data-id="${
                 i == 1 ? "background" : i == 2 ? "brand" : "icon"
-              }" class="image"><i class="sb-icon-close"></i></div></div></div>`;
+              }" class="image"><i class="bi-x-lg"></i></div></div></div>`;
             }
             break;
           case "more":
@@ -3627,7 +3627,7 @@
 
 
             $(".sb-list").prepend(
-              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: 1rem;" class="sb-icon-csv"></i> <div class="steambox-outer-container"> <div class="steambox-inner-container"> <small><i class="sb-icon-info" style=" vertical-align: text-top; "></i> This business uses a secure service from Meta to manage this chat. For further information on how Steamboxchat handles your data, please refer to our <a href="https://steamboxchat.com/privacy" target="_blank" style="text-decoration: none;color: #10678d;"> privacy policy.</a></small> </div> </div></div>'
+              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: 1rem;" class="bi-arrow-up-circle"></i> </div>'
             );
             
             // Automatic translation
@@ -3894,8 +3894,6 @@
 
         let order_css = `
 				position:relative;
-        border-bottom: 0.8px solid var(--chat-border-color);
-
 				width: -webkit-fill-available;
 				width: -moz-available;
 			  `;
@@ -4171,7 +4169,7 @@
     messageMenu: function (agent) {
       let readTextOption = `<li data-value="read-text"> 🤖 ${sb_("Leer")}</li>`;
       return `
-				<i class="sb-menu-btn sb-icon-menu"></i>
+				<i class="sb-menu-btn bi-three-dots"></i>
 				<ul style="right: 0rem;" class="message-menu sb-menu">
 					${
             (admin &&
@@ -4268,7 +4266,7 @@
         '<i class="sb-icon-file"></i>'
       );
 
-      // Replace the symbols 〚 and 〛 with <i class="sb-icon-message"></i>
+      // Replace the symbols 〚 and 〛 with <i class="bi-pencil-square"></i>
       message = message.replace(/〚/g, "").replace(/〛/g, " ↪️ ");
 
       const MAX_CHARACTERS = 40;
@@ -4450,18 +4448,14 @@
 			</div>
 	
 	
-			<div style="margin: 0px 1px;line-height: 0;"
-			class="${
-        conversation["conversation_source"] === "wa" && cloud_active
-          ? ""
-          : "sb-hide"
-      }"
-			id="open-modal-button">
-
-			<span>
-				<i class="sb-icon-template" style="font-size:24px"></i>
-			</span>
-		</div>
+			<div style="margin: 0px 1px; line-height: 0;" class="${
+        (Date.now() - conversation["timestamp"]) > (1 * 60 * 1000) ? "sb-hide" : ""
+      }" id="open-modal-button">
+        <span>
+          <i class="bi-envelope-paper" style="font-size: 22px;"></i>
+        </span>
+      </div>
+      
 		</div>
 		</div>
 		</li> 
@@ -4810,7 +4804,7 @@
           let shortenedFilename = attachments[i][0].slice(0, 20);
           code += `<a href="${
             attachments[i][1]
-          }" class="bg-attachment" target="_blank"><i class="sb-icon sb-icon-download"></i>${
+          }" class="bg-attachment" target="_blank"><i class="sb-icon bi-file-earmark-arrow-down"></i>${
             shortenedFilename + "..."
           } </a>`;
         }
@@ -4900,7 +4894,7 @@
               note["name"]
             } ${
               SB_ACTIVE_AGENT["id"] == note["user_id"]
-                ? '<i class="sb-delete-note sb-icon-close"></i>'
+                ? '<i class="sb-delete-note bi-x-lg"></i>'
                 : ""
             }</span>${
               !note["alert"] && !note["time_zone"]
@@ -5116,7 +5110,7 @@
           .attr("data-user-id", user.id);
         profile_edit_box
           .find(".sb-top-bar .sb-save")
-          .html(`<i class="sb-icon-check"></i>${sb_("Save changes")}`);
+          .html(`<i class="bi-check-lg"></i>${sb_("Save changes")}`);
         profile_edit_box.find(".sb-profile").setProfile();
         profile_edit_box.find(".sb-custom-detail").remove();
         profile_edit_box.find("input,select,textara").removeClass("sb-error");
@@ -6129,28 +6123,40 @@
           scrolls["last"] = scroll;
         });
 
-      $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
-        if ($(this).parent().sbActive()) {
-          admin.addClass("sb-header-hidden");
-          scrolls["always_hidden"] = true;
-          if ($(this).parent().hasClass("sb-filter-btn")) {
-            $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
-          }
-          // Change the icon to sb-icon-arrow-right
-          $(this).toggleClass("sb-icon-search bi-arrow-down-circle");
-        } else {
-          scrolls["always_hidden"] = false;
-          if (conversations_admin_list_ul.parent().scrollTop() < 10) {
-            admin.removeClass("sb-header-hidden");
+        $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
+          if ($(this).parent().sbActive()) {
+            admin.addClass("sb-header-hidden");
+            scrolls["always_hidden"] = true;
             if ($(this).parent().hasClass("sb-filter-btn")) {
-              $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
+              $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
             }
-            // Change the icon back to sb-icon-search
-            $(this).toggleClass("bi-arrow-down-circle sb-icon-search");
+            // Change the icon to bi-arrow-right-circle
+            if ($(this).hasClass("bi-search")) {
+              $(this).removeClass("bi-search").addClass("bi-three-dots");
+            } else if ($(this).hasClass("bi-three-dots")) {
+              $(this).removeClass("bi-three-dots").addClass("bi-filter");
+            } else if ($(this).hasClass("bi-filter")) {
+              $(this).removeClass("bi-filter").addClass("bi-arrow-left-short");
+            }
+          } else {
+            scrolls["always_hidden"] = false;
+            if (conversations_admin_list_ul.parent().scrollTop() < 10) {
+              admin.removeClass("sb-header-hidden");
+              if ($(this).parent().hasClass("sb-filter-btn")) {
+                $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
+              }
+              // Change the icon back to bi-search
+              if ($(this).hasClass("bi-arrow-left-short")) {
+                $(this).removeClass("bi-arrow-left-short").addClass("bi-filter");
+              } else if ($(this).hasClass("bi-filter")) {
+                $(this).removeClass("bi-filter").addClass("bi-three-dots");
+              } else if ($(this).hasClass("bi-three-dots")) {
+                $(this).removeClass("bi-three-dots").addClass("bi-search");
+              }
+            }
           }
-        }
-      });
-
+        });
+        
       $(admin).on("click", "#open-modal-button", function () {
         console.log("open", admin.find(".sb-send-template-box"));
         admin.find(".sb-send-template-box").sbShowLightbox();
@@ -6188,14 +6194,14 @@
 
     $(conversations_area).on("click", ".sb-conversation", function () {
       $(
-        ".sb-admin-list, .sb-btn-collapse.sb-left.sb-icon-arrow-left.sb-active"
+        ".sb-admin-list, .sb-btn-collapse.sb-left.bi-arrow-left-circle.sb-active"
       ).removeClass("sb-active");
     });
 
     //hide user-details
     $(conversations_area).on("click", ".sb-list, .sb-editor", function () {
       $(
-        ".sb-admin-list, .sb-btn-collapse.sb-left.sb-icon-arrow-left.sb-active"
+        ".sb-admin-list, .sb-btn-collapse.sb-left.bi-arrow-left-circle.sb-active"
       ).removeClass("sb-active");
       $(".sb-user-details.sb-top.sb-active, .sb-top.sb-active").removeClass(
         "sb-active"
@@ -6556,7 +6562,7 @@
       }
     );
 
-    $(conversations_area).on("click", ".bi-slash-circle", function () {
+    $(conversations_area).on("click", ".bi-envelope-arrow-up", function () {
       saved_replies.sbTogglePopup(this);
     });
 
@@ -6728,18 +6734,18 @@ if (SBApps.whatsapp.check(conversation)) {
       // Check if the response indicates success
       if (response && !response.error) {
         showResponse(
-          "<i style='vertical-align: middle;' class='sb-icon-social-fb'></i> Message ent successfully"
+          "<i class='bi-qr-code'></i> Message ent successfully"
         );
       } else {
         showResponse(
-          "<i style='vertical-align: middle;' class='sb-icon-info'></i> Message could not be sent to API Cloud",
+          "<i class='bi-info-circle'></i> Message could not be sent to API Cloud",
           "warning"
         );
       }
     },
     (error) => {
       showResponse(
-        "<i style='vertical-align: middle;' class='sb-icon-info'></i> Failed to send message. Please try again later",
+        "<i style='vertical-align: middle;' class='bi-info-circle'></i> Failed to send message. Please try again later",
         "warning"
       );
       console.error("Error sending message to WhatsApp:", error);
@@ -6771,18 +6777,18 @@ if (SBApps.whatsapp.check(conversation)) {
           (response) => {
             if (response.status) {
               showResponse(
-                "<i style='vertical-align: middle;' class='sb-icon-check'></i> Message Sent to WhatsApp mobile"
+                "<i style='vertical-align: middle;' class='bi-check-lg'></i> Message Sent to WhatsApp mobile"
               );
             } else {
               showResponse(
-                "<i style='vertical-align: middle;' class='sb-icon-info'></i> Message could not be sent. Please check your connection. ",
+                "<i style='vertical-align: middle;' class='bi-info-circle'></i> Message could not be sent. Please check your connection. ",
                 "warning"
               );
             }
           },
           (error) => {
             showResponse(
-              "<i style='vertical-align: middle;' class='sb-icon-info'></i> Error with WhatsApp API. Please check your connection. ",
+              "<i style='vertical-align: middle;' class='bi-info-circle'></i> Error with WhatsApp API. Please check your connection. ",
               "error"
             );
             // console.error("Error sending message to WhatsApp:", error);
@@ -7023,7 +7029,7 @@ if (SBApps.whatsapp.check(conversation)) {
       }
     );
 
-    $(".sb-icon-search").click(function () {
+    $(".bi-search").click(function () {
       $("#hideOnSearchClick").toggleClass("sb-hide");
     });
 
@@ -7446,7 +7452,7 @@ if (SBApps.whatsapp.check(conversation)) {
       let area = box.find(".sb-tags-cnt");
       let code = "";
       let tags = SBChat.conversation.details.tags;
-      let add = '<i id="sb-add-tag" class="sb-icon-plus sb-btn-icon"></i>';
+      let add = '<i id="sb-add-tag" class="bi-plus-lg sb-btn-icon"></i>';
       for (var i = 0; i < tags.length; i++) {
         code += `<span class="sb-active">${tags[i]}</span>`;
       }
@@ -7746,7 +7752,7 @@ if (SBApps.whatsapp.check(conversation)) {
         .html(sb_("Add new user"));
       profile_edit_box
         .find(".sb-top-bar .sb-save")
-        .html(`<i class="sb-icon-check"></i>${sb_("Add user")}`);
+        .html(`<i class="bi-check-lg"></i>${sb_("Add user")}`);
       profile_edit_box.find("input,select,textara").removeClass("sb-error");
       // profile_edit_box.removeClass("sb-cloud-admin");
       if (SB_ACTIVE_AGENT["user_type"] == "admin") {

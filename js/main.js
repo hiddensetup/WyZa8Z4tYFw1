@@ -1131,7 +1131,7 @@
                 "background-image",
                 `url("${response[1]}?v=${SBF.random()}")`
               )
-              .append('<i class="sb-icon-close"></i>');
+              .append('<i class="bi-x-lg"></i>');
             upload_target = false;
           }, 500);
         } else {
@@ -1625,11 +1625,7 @@
       global.addClass("sb-popup-active");
       global.find(".sb-popup").sbActive(false);
       if (button) {
-        const popupWidth = $(this).outerWidth();
-        const windowWidth = $(window).width();
-        const leftPosition =
-          $(button).offset().left + $(button).outerWidth() + windowWidth * 0.44; // 10% more to the right side of the window
-        $(this).css("left", leftPosition);
+        $(this).css("left", "325.6px"); // Fixed left position
         $(this).sbActive(true);
       }
       if (admin) {
@@ -1641,6 +1637,7 @@
     }
     return showed;
   };
+  
 
   // Uploader
   $.fn.sbUploadFiles = function (onSuccess) {
@@ -4133,13 +4130,13 @@
             .addClass("sb-header-agent")
             .attr("data-agent-id", this.agent_id)
             .html(
-              `<div class="sb-dashboard-btn sb-icon-arrow-left"></div><div class="sb-profile"><img loading="lazy" src="${
+              `<div class="sb-dashboard-btn bi-arrow-right-left"></div><div class="sb-profile"><img loading="lazy" src="${
                 agent["profile_image"]
               }" /><div><span class="sb-name">${
                 agent["full_name"]
               }</span><span class="sb-status">${sb_(
                 "Away"
-              )}</span></div><i class="sb-icon sb-icon-close ${
+              )}</span></div><i class="sb-icon bi-x-lg ${
                 !mobile && CHAT_SETTINGS["close-chat"]
                   ? "sb-close-chat"
                   : "sb-responsive-close-btn"
@@ -4299,7 +4296,7 @@
         chat_header
           .attr("class", "sb-header sb-header-panel")
           .html(
-            `${sb_(title)}<div class="sb-dashboard-btn sb-icon-close"></div>`
+            `${sb_(title)}<div class="sb-dashboard-btn bi-x-lg"></div>`
           );
         main.addClass("sb-panel-active");
         this.dashboard = true;
@@ -4709,7 +4706,7 @@
               ("title" in content && content["title"]
                 ? `<div class="sb-top">${content["title"]}</div>`
                 : "") +
-              `<div class="sb-text">${content["message"]}</div><div class="sb-icon-close"></div></div>`
+              `<div class="sb-text">${content["message"]}</div><div class="bi-x-lg"></div></div>`
           );
           SBF.event("SBPopup", content);
         }
@@ -4996,7 +4993,7 @@
                 "background-image",
                 `url("${response[1]}?v=${SBF.random()}")`
               )
-              .append('<i class="sb-icon-close"></i>');
+              .append('<i class="bi-x-lg"></i>');
             upload_target = false;
           }, 500);
         } else {
@@ -5435,9 +5432,9 @@
       card: '<div class="sb-card">[settings]</div>',
       share: '<div class="sb-social-buttons">[settings]</div>',
       slider:
-        '<div class="sb-slider"><div>[items]</div></div><div class="sb-slider-arrow sb-icon-arrow-left[class]"></div><div class="sb-slider-arrow sb-icon-arrow-right sb-active[class]"></div>',
+        '<div class="sb-slider"><div>[items]</div></div><div class="sb-slider-arrow bi-arrow-right-left[class]"></div><div class="sb-slider-arrow bi-arrow-right-circle sb-active[class]"></div>',
       "slider-images":
-        '<div class="sb-slider sb-slider-images"><div>[items]</div></div><div class="sb-slider-arrow sb-icon-arrow-left[class]"></div><div class="sb-slider-arrow sb-icon-arrow-right sb-active[class]"></div>',
+        '<div class="sb-slider sb-slider-images"><div>[items]</div></div><div class="sb-slider-arrow bi-arrow-right-left[class]"></div><div class="sb-slider-arrow bi-arrow-right-circle sb-active[class]"></div>',
       phone: "",
     },
     cache: {},
@@ -5606,7 +5603,7 @@
               email == "" ? "" : "sb-active sb-filled"
             }">${sb_(
               SBF.null(settings.placeholder) ? "Email" : settings["placeholder"]
-            )}</span><input value="${email}" autocomplete="off" type="email" required><div class="sb-submit sb-icon-arrow-right"></div></div>`;
+            )}</span><input value="${email}" autocomplete="off" type="email" required><div class="sb-submit bi-arrow-right-circle"></div></div>`;
             break;
 
           case "image":
@@ -6357,9 +6354,9 @@
           }, 1200);
         }
         slider
-          .find(".sb-icon-arrow-right")
+          .find(".bi-arrow-right-circle")
           .sbActive(!(check > margin - 15 && check < margin + 15));
-        slider.find(".sb-icon-arrow-left").sbActive(margin < -10);
+        slider.find(".bi-arrow-right-left").sbActive(margin < -10);
       }
     },
   };
@@ -7272,7 +7269,7 @@
         (response) => {
           $(this).sbLoading(false);
           $(this).html(
-            '<i style="font-size:1.2rem" class="sb-icon-csv"></i>'
+            '<i style="font-size:1.2rem" class="bi-arrow-up-circle"></i>'
           );
           $(this).attr("id", "load-more");
           SBChat.loadUpdate(response.messages);
@@ -7615,7 +7612,7 @@
     });
 
     // Popup message
-    $(main).on("click", ".sb-popup-message .sb-icon-close", function () {
+    $(main).on("click", ".sb-popup-message .bi-x-lg", function () {
       SBChat.popup(true);
     });
 
@@ -7662,7 +7659,7 @@
     $(main).on("click", ".sb-slider-arrow", function () {
       SBRichMessages.sliderChange(
         $(this).closest("[id]").attr("id"),
-        $(this).hasClass("sb-icon-arrow-right") ? "right" : "left"
+        $(this).hasClass("bi-arrow-right-circle") ? "right" : "left"
       );
     });
 
@@ -7822,7 +7819,7 @@
 
     $(global).on(
       "click",
-      ".sb-input-image .image > .sb-icon-close",
+      ".sb-input-image .image > .bi-x-lg",
       function (e) {
         $(this).parent().removeAttr("data-value").css("background-image", "");
         e.preventDefault();

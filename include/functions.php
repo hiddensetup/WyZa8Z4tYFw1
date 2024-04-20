@@ -9023,7 +9023,7 @@ function sb_departments($type)
                 break;
             case "custom-select":
                 $code =
-                    '<div class="sb-inline sb-inline-departments"><i class="sb-icon-archive" style="padding: 0px 5px 0px 0px;"> </i><h3>' .
+                    '<div class="sb-inline sb-inline-departments"><i class="bi-diagram-3-fill" style="padding:0px 5px"></i> <h3>' .
                     sb_("Department") .
                     '</h3><div id="conversation-department" class="sb-select hover-selector sb-select-colors"><p>' .
                     sb_("None") .
@@ -9391,7 +9391,7 @@ function sb_component_editor($admin = false)
                 echo '<div class="bi-paperclip"></div>';
             } ?>
             <div class="bi-crosshair"></div>
-            <div class="bi-slash-circle" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
+            <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
             <div class="sb-btn-emoji"></div>
             <div class="bi-list-stars" id="send-rating-button"></div>
         </div>
@@ -9399,7 +9399,7 @@ function sb_component_editor($admin = false)
 
 
         <div class="sb-show-menu-bar" style="display:flex;align-items: center;">
-            <div class="menu-plus sb-icon-plus"></div>
+            <div class="menu-plus bi-plus-lg"></div>
 
 
             <div style="min-height: 25px;" class="sb-textarea">
@@ -9469,7 +9469,7 @@ function sb_component_editor($admin = false)
                     </ul>
                 </div>
                 <div class="sb-search-btn">
-                    <i class="sb-icon sb-icon-search"></i>
+                    <i class="sb-icon bi-search"></i>
                     <input type="text" placeholder="<?php sb_e(
                                                         "Search emoji..."
                                                     ); ?>" />
@@ -9514,7 +9514,7 @@ function sb_component_editor($admin = false)
                 <div class="sb-header" style="justify-content: space-between;margin: -7px -2px -7px auto;">
                 <div style="line-height: 30px;font-size: 1.15rem;white-space: pre;"><?php sb_e("Saved replies"); ?></div>
                     <div class="sb-search-btn">
-                        <i class="sb-icon sb-icon-search"></i>
+                        <i class="sb-icon bi-search"></i>
                         <input type="text" autocomplete="false" placeholder="<?php sb_e(
                                                                                     "Search replies..."
                                                                                 ); ?>" />
@@ -9542,7 +9542,7 @@ function sb_component_editor($admin = false)
             sbBarIcons.classList.toggle("sb-hide");
         }
 
-        // Add a click event listener to sb-icon-drag to toggle the visibility
+        // Add a click event listener to bi-person-circle to toggle the visibility
         sbIconDrag.addEventListener("click", toggleSbBarIcons);
 
         // Add a click event listener to sb-list and textarea to hide sb-bar-icons

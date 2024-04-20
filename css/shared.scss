@@ -1855,7 +1855,7 @@ a.sb-btn {
   }
 
   i {
-    line-height: 40px;
+    line-height: 34px;
     font-size: 1.6rem;
     width: 33px;
 
@@ -2458,7 +2458,7 @@ a.sb-btn {
 
   &.sb-active i {
     right: 10px;
-    color: var(--chat-text-primary);
+    color: var(--chat-tertiary-color);
   }
 }
 
@@ -2472,8 +2472,9 @@ a.sb-btn {
 .sb-popup {
   width: 340px;
   height: fit-content;
-  position: fixed;
+  position: absolute;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   bottom: 0;
   left: 0;
   display: none;
@@ -2487,6 +2488,7 @@ a.sb-btn {
     bottom: -11px;
     left: 20%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     margin-left: 1px;
     fill: rgb(1, 1, 1);
   }
@@ -2780,7 +2782,7 @@ div ul.sb-menu,
     &:active {
       background: var(--chat-background-selected);
       // color: var(--chat-list-active-text) !important;
-      border-radius: 0.3rem;
+      // border-radius: 0.3rem;
     }
   }
 }
@@ -3271,7 +3273,7 @@ textarea::placeholder {
   line-height: 30px;
 }
 
-.sb-rich-message .sb-slider-arrow.sb-icon-arrow-right {
+.sb-rich-message .sb-slider-arrow.bi-arrow-right-circle {
   left: auto;
   right: -10px;
 }
@@ -3758,9 +3760,9 @@ textarea::placeholder {
 .cst-i {
   position: absolute;
   left: 15px;
-  line-height: 0px;
-  padding: 2px 1px;
-  border-radius: 3px;
+  line-height: 0;
+  padding: 2px !important;
+
 }
 
 .sb-tags {
@@ -3801,7 +3803,7 @@ textarea::placeholder {
 .title-tags {
   padding: 5px 5px;
   margin: 0px;
-  border-radius: 0.6rem 8px 0 0;
+  border-radius: 0.6rem 8px 0 0!important;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 20px;
@@ -3898,188 +3900,67 @@ textarea::placeholder {
   visibility: hidden;
 }
 
-.tags-nuevos {
-  background: #039eff;
-  fill: #039eff;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
+// .tags-nuevos {
+//   background: #039eff;
+//   fill: #039eff;
+//   vertical-align: sub;
+//   color: var(--chat-background);
+//   font-size: 0.9rem;
+//   padding: 1.9px 2px;
 
-  border: none;
-}
+//   border: none;
+// }
 
-.tags-procesados {
-  background: #ff9c1b;
-  fill: #ff9c1b;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
+// .tags-procesados {
+//   background: #ff9c1b;
+//   fill: #ff9c1b;
+//   vertical-align: sub;
+//   color: var(--chat-background);
+//   font-size: 0.9rem;
+//   padding: 1.9px 2px;
 
-  border: none;
-}
+//   border: none;
+// }
 
-.tags-pendientes {
-  background: #ed0101;
-  fill: #ed0101;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
+// .tags-pendientes {
+//   background: #ed0101;
+//   fill: #ed0101;
+//   vertical-align: sub;
+//   color: var(--chat-background);
+//   font-size: 0.9rem;
+//   padding: 1.9px 2px;
 
-  border: none;
-}
+//   border: none;
+// }
 
-.tags-resueltos {
-  background: #07cd07;
-  fill: #07cd07;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
+// .tags-resueltos {
+//   background: #07cd07;
+//   fill: #07cd07;
+//   vertical-align: sub;
+//   color: var(--chat-background);
+//   font-size: 0.9rem;
+//   padding: 1.9px 2px;
 
-  border: none;
-}
+//   border: none;
+// }
 
-.tags-perdidos {
-  background: gray;
-  fill: gray;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
+// .tags-perdidos {
+//   background: gray;
+//   fill: gray;
+//   vertical-align: sub;
+//   color: var(--chat-background);
+//   font-size: 0.9rem;
+//   padding: 1.9px 2px;
 
-  border: none;
-}
-
-.tags-Contactado {
-  background: #117fdf;
-  fill: #117fdf;
-  vertical-align: sub;
-  color: var(--chat-background);
-
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Presupuesto {
-  background: #a20f64;
-  fill: #a20f64;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Visitado {
-  background: #14afa0;
-  fill: #14afa0;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Calificado {
-  background: #0ec352;
-  fill: #0ec352;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-NA {
-  background: #6c757d;
-  fill: #6c757d;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Pendiente {
-  background: #e48109;
-  fill: #e48109;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Abierto {
-  background: #bf4420;
-  fill: #bf4420;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Resuelto {
-  background: #55a610;
-  fill: #55a610;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Pagado {
-  background: #6220a8;
-  fill: #6220a8;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-VIP {
-  background: #97764f;
-  fill: #97764f;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
-
-.tags-Descartado {
-  background: #555555;
-  fill: #555555;
-  vertical-align: sub;
-  color: var(--chat-background);
-  font-size: 0.9rem;
-  padding: 1.9px 2px;
-
-  border: none;
-}
+//   border: none;
+// }
 
 .client-status {
   position: absolute;
   left: 0.5px;
   bottom: 46px;
 }
+
 
 .api-cloud-bubble {
   display: flex;
@@ -4108,6 +3989,91 @@ textarea::placeholder {
   line-height: 15px;
   border-radius: 15px;
   padding: 1.5px 2px 0px 2px;
+  color: white;
+}
+
+
+div {
+ 
+  
+  .tags-Contactado {
+  background: #117fdf;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Presupuesto {
+  background: #a20f64;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+
+}
+
+.tags-Visitado {
+  background: #14afa0;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Calificado {
+  background: #0ec352;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-NA {
+  background: #6c757d;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Pendiente {
+  background: #e48109;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Abierto {
+  background: #bf4420;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Resuelto {
+  background: #55a610;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Pagado {
+  background: #6220a8;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-VIP {
+  background: #97764f;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+}
+
+.tags-Descartado {
+  background: #555555;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5px 2px 0px 2px;
+
+}
 }
 
 ::placeholder {
