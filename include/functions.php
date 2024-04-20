@@ -2833,7 +2833,8 @@ function sb_get_conversations_users($conversations)
 
 // refactored function to search conversations
 
-function sb_search_conversations($search) {
+function sb_search_conversations($search)
+{
     $search = sb_db_escape(mb_strtolower($search));
 
     $query = "
@@ -2873,7 +2874,8 @@ function sb_search_conversations($search) {
 
 
 // will work on this later
-function sb_search_conversation_messages($search) {
+function sb_search_conversation_messages($search)
+{
     $search = sb_db_escape(mb_strtolower($search));
 
     // Construct the SQL query to search messages and attachments
@@ -9381,158 +9383,268 @@ function sb_select_phone()
 function sb_component_editor($admin = false)
 {
 ?>
-    <div class="sb-editor" id="controls">
-        <?php if ($admin) {
-            echo '<div class="sb-agent-label"></div>';
+
+<div class="sb-editor" id="controls">
+    <?php if ($admin) {
+        echo '<div class="sb-agent-label"></div>';
+    } ?>
+
+    <div class="sb-bar-icons sb-hide">
+        <?php if ($admin || !sb_get_setting("disable-uploads")) {
+            echo '<div class="bi-paperclip"></div>';
         } ?>
+        <div class="bi-crosshair"></div>
+        <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
+        <div class="sb-btn-emoji"></div>
+        <div class="bi-list-stars" id="send-rating-button"></div>
+    </div>
 
-        <div class="sb-bar-icons sb-hide">
-            <?php if ($admin || !sb_get_setting("disable-uploads")) {
-                echo '<div class="bi-paperclip"></div>';
-            } ?>
-            <div class="bi-crosshair"></div>
-            <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
-            <div class="sb-btn-emoji"></div>
-            <div class="bi-list-stars" id="send-rating-button"></div>
+    <div class="toggleMenuBar api-cloud-notif" id="floatingText">
+        <small><i class="bi-info-circle-fill"></i> Las conversaciones API Cloud duran 24 horas. Puedes esperar que te vuelvan a escribir o enviar una plantilla. pulsa la conversación para continuar.</small>
+    </div>
+
+    <div class="sb-show-menu-bar" style="display:flex;align-items: center;visibility:hidden; position:relative">
+
+        <div class="menu-plus bi-plus-lg"></div>
+
+        <div style="min-height: 25px;" class="sb-textarea">
+            <?php
+            // Placeholder values, replace these with your actual data
+            $source = "wa"; // Placeholder value for the conversation source
+            $hiddenStyle = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
+            ?>
+            <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
         </div>
 
-
-
-        <div class="sb-show-menu-bar" style="display:flex;align-items: center;">
-            <div class="menu-plus bi-plus-lg"></div>
-
-
-            <div style="min-height: 25px;" class="sb-textarea">
-                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus></textarea>
+        <div class="sb-bar sb-space-between">
+            <div id='btns'>
+                <select style="display: none;" id="encodingTypeSelect">
+                    <option selected value="mp3">.mp3</option>
+                </select>
             </div>
+            <div id='recordButton' class="sb-icon-voice start stop-time" style="animation: fade-in .3s linear; font-size:1.8rem;line-height: 0;" data-sb-tooltip=""></div>
+            <div id='stopButton' disabled class="sb-icon-stop time" style="animation: fade-in .3s linear; font-size:1.8rem; animation: 0.5s ease 0s infinite normal none running fade-in; line-height: 0;" data-sb-tooltip=""></div>
+            <div class="sb-icon-send sb-submit" style="animation: fade-in .3s linear; font-size: 1.6rem; height: 1.6rem" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
 
-            <div class="sb-bar sb-space-between">
-                <div id='btns'>
-                    <select style="display: none;" id="encodingTypeSelect">
-                        <option selected value="mp3">.mp3</option>
-                    </select>
-                    <div style="display:none" id="formats"></div>
-                    <pre style="display:none" id="log"></pre>
-                </div>
-                <div id='recordButton' class="sb-icon-voice start stop-time" style="animation: fade-in .3s linear; font-size:1.8rem;line-height: 0;" data-sb-tooltip=""></div>
-                <div id='stopButton' disabled class="sb-icon-stop time" style="animation: fade-in .3s linear; font-size:1.8rem; animation: 0.5s ease 0s infinite normal none running fade-in; line-height: 0;" data-sb-tooltip="">
-                </div>
+            <script>
+                const sendRatingButton = document.getElementById('send-rating-button');
+                sendRatingButton.addEventListener('click', function() {
+                    SBChat.sendMessage(-1, '[rating]');
+                });
+            </script>
 
-                <div class="sb-icon-send sb-submit" style="animation: fade-in .3s linear; font-size: 1.6rem; height: 1.6rem" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
+            <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
 
-                <script>
-                    const sendRatingButton = document.getElementById('send-rating-button');
-                    sendRatingButton.addEventListener('click', function() {
-                        SBChat.sendMessage(-1, '[rating]');
-                    });
-                </script>
-
-                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
-
-            </div>
         </div>
+    </div>
 
-        <div class="sb-popup sb-emoji">
-            <div class="sb-header" style="justify-content: space-between;">
-                <div class="sb-select">
-                    <p>
+    <div class="sb-popup sb-emoji">
+        <div class="sb-header" style="justify-content: space-between;">
+            <div class="sb-select">
+                <p>
+                    <?php sb_e("All"); ?>
+                </p>
+                <ul>
+                    <li data-value="all" class="sb-active">
                         <?php sb_e("All"); ?>
-                    </p>
-                    <ul>
-                        <li data-value="all" class="sb-active">
-                            <?php sb_e("All"); ?>
-                        </li>
-                        <li data-value="Smileys">
-                            <?php sb_e("Smileys & Emotions"); ?>
-                        </li>
-                        <li data-value="People">
-                            <?php sb_e("People & Body"); ?>
-                        </li>
-                        <li data-value="Animals">
-                            <?php sb_e("Animals & Nature"); ?>
-                        </li>
-                        <li data-value="Food">
-                            <?php sb_e("Food & Drink"); ?>
-                        </li>
-                        <li data-value="Travel">
-                            <?php sb_e("Travel & Places"); ?>
-                        </li>
-                        <li data-value="Activities">
-                            <?php sb_e("Activities"); ?>
-                        </li>
-                        <li data-value="Objects">
-                            <?php sb_e("Objects"); ?>
-                        </li>
-                        <li data-value="Symbols">
-                            <?php sb_e("Symbols"); ?>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                    <li data-value="Smileys">
+                        <?php sb_e("Smileys & Emotions"); ?>
+                    </li>
+                    <li data-value="People">
+                        <?php sb_e("People & Body"); ?>
+                    </li>
+                    <li data-value="Animals">
+                        <?php sb_e("Animals & Nature"); ?>
+                    </li>
+                    <li data-value="Food">
+                        <?php sb_e("Food & Drink"); ?>
+                    </li>
+                    <li data-value="Travel">
+                        <?php sb_e("Travel & Places"); ?>
+                    </li>
+                    <li data-value="Activities">
+                        <?php sb_e("Activities"); ?>
+                    </li>
+                    <li data-value="Objects">
+                        <?php sb_e("Objects"); ?>
+                    </li>
+                    <li data-value="Symbols">
+                        <?php sb_e("Symbols"); ?>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb-search-btn">
+                <i class="sb-icon bi-search"></i>
+                <input type="text" placeholder="<?php sb_e(
+                                                    "Search emoji..."
+                                                ); ?>" />
+            </div>
+        </div>
+        <div class="sb-emoji-list">
+            <ul></ul>
+        </div>
+        <div class="sb-emoji-bar"></div>
+    </div>
+    <?php if ($admin) { ?>
+        <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
+
+            <?php
+            $clientStatus = array(
+                "Contactado",       // Inbound Leads - Contacted
+                "Presupuesto",      // Inbound Leads - Budget
+                "Visitado",         // Inbound Leads - Visited (by field sales team)
+                "Calificado",       // Qualified Lead
+
+                "NA",               // Not Applicable
+                "Abierto",          // Support - Open
+                "Pendiente",        // Clients - Pending Payment
+                "Resuelto",         // Support - Resolved
+                "Pagado",           // Clients - Paid
+                "VIP",              // Very Important Person
+                "Descartado"        // Discarded
+            );
+            foreach ($clientStatus as $label) {
+            ?>
+                <a id="<?= $label ?>" class="sb-input-setting cst-a">
+                    <i class="<?= "cst-i bi-crosshair tags-" . $label ?>"></i>&nbsp;<?= $label ?>
+                </a>
+            <?php } ?>
+
+        </div>
+
+        <div class="sb-popup sb-replies">
+            <div class="sb-header" style="justify-content: space-between;margin: -7px -2px -7px auto;">
+                <div style="line-height: 30px;font-size: 1.15rem;white-space: pre;"><?php sb_e("Saved replies"); ?></div>
                 <div class="sb-search-btn">
                     <i class="sb-icon bi-search"></i>
-                    <input type="text" placeholder="<?php sb_e(
-                                                        "Search emoji..."
-                                                    ); ?>" />
+                    <input type="text" autocomplete="false" placeholder="<?php sb_e(
+                                                                                "Search replies..."
+                                                                            ); ?>" />
                 </div>
             </div>
-            <div class="sb-emoji-list">
-                <ul></ul>
+            <div class="sb-replies-list sb-scroll-area">
+                <ul style="margin: 0px auto;" class="sb-loading"></ul>
             </div>
-            <div class="sb-emoji-bar"></div>
         </div>
-        <?php if ($admin) { ?>
-            <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
-       
-                <?php
-                $clientStatus = array(
-                    "Contactado",       // Inbound Leads - Contacted
-                    "Presupuesto",      // Inbound Leads - Budget
-                    "Visitado",         // Inbound Leads - Visited (by field sales team)
-                    "Calificado",       // Qualified Lead
 
-                    "NA",               // Not Applicable
-                    "Abierto",          // Support - Open
-                    "Pendiente",        // Clients - Pending Payment
-                    "Resuelto",         // Support - Resolved
-                    "Pagado",           // Clients - Paid
-                    "VIP",              // Very Important Person
-                    "Descartado"        // Discarded
-                );
-                foreach ($clientStatus as $label) {
-                ?>
-                    <a id="<?= $label ?>" class="sb-input-setting cst-a">
-                        <i class="<?= "cst-i bi-crosshair tags-" . $label ?>"></i>&nbsp;<?= $label ?>
-
-                    </a>
-                <?php } ?>
+    <?php } ?>
+    <form class="sb-upload-form-editor" action="#" method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" class="sb-upload-files" multiple />
+    </form>
+    <div class="sb-attachments"> </div>
+</div>
+<script>
 
 
 
-            </div>
 
-            <div class="sb-popup sb-replies">
-                <div class="sb-header" style="justify-content: space-between;margin: -7px -2px -7px auto;">
-                <div style="line-height: 30px;font-size: 1.15rem;white-space: pre;"><?php sb_e("Saved replies"); ?></div>
-                    <div class="sb-search-btn">
-                        <i class="sb-icon bi-search"></i>
-                        <input type="text" autocomplete="false" placeholder="<?php sb_e(
-                                                                                    "Search replies..."
-                                                                                ); ?>" />
-                    </div>
-                </div>
-                <div class="sb-replies-list sb-scroll-area">
-                    <ul style="margin: 0px auto;" class="sb-loading"></ul>
-                </div>
-            </div>
 
-        <?php } ?>
-        <form class="sb-upload-form-editor" action="#" method="post" enctype="multipart/form-data">
-            <input type="file" name="files[]" class="sb-upload-files" multiple />
-        </form>
-        <div class="sb-attachments"> </div>
 
-    </div>
-    <script>
+
+
+
+
+    // Function to check if there are active WhatsApp conversation items and return the first one
+async function getFirstActiveWAConversationItem() {
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 second
+
+    const conversationItem = document.querySelector("li.sb-active[data-conversation-source='wa']");
+    return conversationItem;
+}
+
+// Function to simulate click on conversation item
+async function simulateClickOnConversationItem(conversationItem) {
+    await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the next tick
+
+    if (conversationItem) {
+        conversationItem.click();
+    }
+}
+
+// Execute the following code asynchronously onload
+window.onload = async () => {
+    const conversationItem = await getFirstActiveWAConversationItem();
+
+    console.log("DOM updated");
+
+    // Toggle visibility of the menu bar and floating text based on the presence of active WhatsApp conversations
+    if (conversationItem) {
+        setTimeout(() => toggleMenuBarAndFloatingText(false), 600); // Adding a slight delay after confirming WhatsApp conversations
+        await simulateClickOnConversationItem(conversationItem);
+    } else {
+        toggleMenuBarAndFloatingText(true);
+    }
+};
+
+// Function to toggle visibility of the menu bar and floating text
+async function toggleMenuBarAndFloatingText(visible) {
+    await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the next tick
+
+    const menuBar = document.querySelector(".sb-show-menu-bar");
+    menuBar.style.visibility = visible ? "visible" : "hidden";
+
+    const floatingText = document.getElementById("floatingText");
+    floatingText.style.display = visible ? "none" : "block";
+}
+
+// Add click event listener to the document to handle clicks on conversation items
+document.addEventListener("click", handleConversationClick);
+
+// Function to handle click on conversation items
+async function handleConversationClick(event) {
+    // Hide the floating text and menu bar initially
+    toggleElementsVisibility();
+
+    const conversationItem = event.target.closest("li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]");
+    if (!conversationItem) return; // Exit if clicked outside the conversation item
+
+    const source = conversationItem.dataset.conversationSource;
+    const status = conversationItem.dataset.conversationStatus;
+
+    // Toggle visibility of the menu bar and floating text based on the conversation source and status
+    if (source === "wa" && !isNaN(status)) {
+        await toggleMenuBarAndFloatingText(false);
+    }
+}
+
+// Function to toggle visibility of the menu bar and floating text
+async function toggleMenuBarAndFloatingText(visible) {
+    await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the next tick
+
+    const menuBar = document.querySelector(".sb-show-menu-bar");
+    menuBar.style.visibility = visible ? "visible" : "hidden";
+
+    const floatingText = document.getElementById("floatingText");
+    floatingText.style.display = visible ? "none" : "block";
+}
+
+// Function to toggle visibility of floating text, sb-bar, and container
+function toggleElementsVisibility() {
+    // Get references to the floatingText, sb-bar, and container elements
+    const floatingText = document.getElementById("floatingText");
+    const sbBar = document.querySelector(".sb-bar");
+    const container = document.querySelector(".sb-show-menu-bar");
+
+    // Toggle visibility of floating text
+    floatingText.style.display = "none";
+    // Make sb-bar visible
+    sbBar.style.visibility = "visible";
+    // Remove hidden style from container
+    container.style.visibility = "visible";
+}
+
+// Add click event listener to the floatingText element
+floatingText.addEventListener("click", toggleElementsVisibility);
+
+
+
+
+
+
+
+        //DONT TOUCH THIS CODE BELOW
+
         // Get references to the elements
         const sbIconDrag = document.querySelector(".menu-plus");
         const sbBarIcons = document.querySelector(".sb-bar-icons");

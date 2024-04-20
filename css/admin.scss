@@ -1171,7 +1171,7 @@ td.sb-offline {
     }
 
     li.sb-active {
-        background-color: var(--chat-background-selected);
+        background-color: var(--chat-background-selected-2);
         // border-radius: 0.3rem;
         color: var(--chat-text-primary);
     }
@@ -1534,7 +1534,7 @@ TABLE
 
     tr:hover td {
         cursor: pointer;
-        background-color: var(--chat-background-selected);
+        background-color: var(--chat-background-selected-2);
         // color: var(--chat-btn-not-pressed-color);
         // color: var(--chat-btn-color);
 
@@ -2954,6 +2954,7 @@ BODY
                             margin-left: 0px;
                             margin-top: 0px;
                             font-size: 1.7rem;
+                            color: var(--chat-buttons-chat)
 
                         }
 
@@ -3191,7 +3192,7 @@ BODY
 
 
                 &.sb-active {
-                    background: var(--chat-background-selected) !important;
+                    background: var(--chat-background-selected-2) !important;
                     // color: var(--chat-list-active-text);
 
                     // border-radius: .6rem;
@@ -3521,7 +3522,7 @@ BODY
             }
 
             a:hover i:active {
-                color: var(--chat-counter-color);
+                color: var(--chat-btn-not-pressed-color)!important;
             }
         }
 
@@ -3857,8 +3858,6 @@ BODY
             color: inherit !important;
 
             &:hover {
-                color: var(--color-green) !important;
-
                 scale: .9
             }
 
@@ -5937,7 +5936,7 @@ BODY
         display: block;
         padding: 20px;
         justify-content: space-between;
-        height: calc(100% - 145px);
+        height: calc(100% - 165px);
 
         >div {
             height: auto;
@@ -7348,7 +7347,8 @@ grammarly-editor-plugin {
                 &:active,
                 &:hover {
                     scale: .9;
-                    background: var(--chat-background-selected)
+                    background: var(--chat-background-selected);
+                    color:var(--chat-btn-not-pressed-color)
                 }
             }
 

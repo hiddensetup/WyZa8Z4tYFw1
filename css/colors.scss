@@ -22,7 +22,7 @@
   --chat-wa-background: rgb(220 229 234);
   --chat-button-editor: 0 0 3px 1px rgb(21 15 31 / 10%);
   --chat-button-editor-inset: inset 0 0 1px 1px rgb(21 15 31 / 15%);
-  --chat-buttons-chat: rgb(91 101 121);
+  --chat-buttons-chat: rgb(108 116 133);
   --color-calendar-text: #ffffff;
   --chat-active-left-button: rgb(255 255 255);
   --chat-outline-input: .95px solid rgb(66 103 132 / 37%);
@@ -49,7 +49,9 @@
   --chat-text-primary: rgb(64 66 86);
   --chat-tertiary-color: rgb(142 159 177);
   --chat-text-selected: rgb(224 229 238);
-  --chat-background-selected: rgb(234, 239, 242);
+  --chat-background-selected:rgb(212 219 227);
+  --chat-background-selected-2: rgb(234, 239, 242);
+
   --chat-border-color: rgb(66 103 132 / 26%);
   --chat-border-text-input: transparent;
 
@@ -149,6 +151,7 @@
   --chat-tertiary-color: #96a2c3;
   --chat-text-selected: rgb(73 63 227);
   --chat-background-selected: rgb(73 63 227);
+  --chat-background-selected-2: rgb(73 63 227);
   --chat-border-color: rgba(78, 73, 141, 0.65);
   --chat-border-text-input: rgba(78, 73, 141, 0.65);
   --chat-input-date-picker: rgb(90 97 125 / 45%);

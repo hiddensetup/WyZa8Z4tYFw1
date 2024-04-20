@@ -1136,7 +1136,7 @@ if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                             <div class="sb-scroll-area">
                                 <div class="close-button-div"><i class="bi-x-circle no-show sb-btn-collapse collapse"></i></div>
                                 <div class="open-profile sb-profile sb-profile-detail">
-                                <span style=" margin: 10px -15px -3px 0px; font-size: 2rem; "><i class="bi-arrow-right-circle"></i></span>
+                                <span style=" margin: 10px -15px -3px 0px; font-size: 2rem; "><i class="bi-chevron-right"></i></span>
                                                                     <img class="img-profile-detail" src="<?php echo STMBX_URL ?>/media/user.svg" />
                                     <span class="sb-name span-profile-detail"></span>
                                 </div>

@@ -2811,7 +2811,7 @@
 									</div>
 									<div>
 										<div class="arrow-down-tags white-title-elements">
-											<i class="bi-"></i>
+											<i class="bi-check-lg"></i>
 										</div>
 									</div>
 								</h4>
@@ -4448,14 +4448,18 @@
 			</div>
 	
 	
-			<div style="margin: 0px 1px; line-height: 0;" class="${
-        (Date.now() - conversation["timestamp"]) > (1 * 60 * 1000) ? "sb-hide" : ""
-      }" id="open-modal-button">
-        <span>
-          <i class="bi-envelope-paper" style="font-size: 22px;"></i>
-        </span>
-      </div>
-      
+			<div style="margin: 0px 1px;line-height: 0;"
+			class="${
+        conversation["conversation_source"] === "wa" && cloud_active
+          ? ""
+          : "sb-hide"
+      }"
+			id="open-modal-button">
+
+			<span>
+				<i class="bi-envelope-paper" style="font-size:22px"></i>
+			</span>
+		</div>
 		</div>
 		</div>
 		</li> 
@@ -6495,7 +6499,7 @@
           function () {
               // Extract conversation ID and other necessary data
               const conversation_id = $(this).attr("data-conversation-id");
-              const status_code = 6; // ORIGINALLY 0 (inbox) Change to the desired new status code
+              const status_code = 0; // ORIGINALLY 0 (inbox) Change to the desired new status code
   
               // Perform an AJAX call to update the conversation status
               SBF.ajax(

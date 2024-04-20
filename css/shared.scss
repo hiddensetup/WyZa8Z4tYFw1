@@ -4076,6 +4076,10 @@ div {
 }
 }
 
+.api-cloud-notif {
+  position: absolute;left: 50%;transform: translate(-50%, -50%);background-color: var(--chat-att-background);padding: 10px;display: block;visibility: visible;font-size: 0.6em;width: 95.8%;bottom:calc(100% - 86px);z-index: 99;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--chat-text-tertiary);
