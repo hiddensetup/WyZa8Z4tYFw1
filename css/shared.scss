@@ -945,8 +945,8 @@ div ul.sb-menu,
   height: 100%;
   padding: 8px;
   margin-bottom: 5px;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
   background-color: #00000091;
   border: none;
   border-radius: 15px;
@@ -1340,7 +1340,8 @@ div ul.sb-menu,
       }
 
       &:hover:before {
-        color: var(--chat-btn-color);
+        color: var(--chat-tertiary-color);
+        transition: var(--transition-2);
       }
 
       &.sb-btn-emoji:hover:before {
@@ -1435,6 +1436,24 @@ div ul.sb-menu,
       display: block;
     }
   }
+}
+
+.sb-hide {
+  display: none;
+}
+
+.sb-visible {
+  visibility: visible;
+}
+
+.sb-invisible {
+  visibility: hidden;
+}
+
+.flex-align-center-relative {
+  display:flex;
+  align-items: center;
+  position:relative;
 }
 
 /*
@@ -1898,13 +1917,9 @@ a.sb-btn {
     color: var(--chat-text-primary);
   }
 
-  &.sb-btn-google:hover {
-    background-color: #4285f4 !important;
-    color: var(--chat-btn-color) !important;
+  &.sb-btn-google:hover,&.sb-btn-google:hover {
+    background-color: var(--chat-btn-color)!important;
 
-    &i:active {
-      color: var(--chat-btn-color) !important;
-    }
   }
 
   &:active {
@@ -1916,9 +1931,10 @@ a.sb-btn {
       box-shadow: none;
     }
 
-    i {
-      // color: var(--chat-btn-not-pressed-color);
-    }
+    // i {
+      
+    //   // color: var(--chat-btn-not-pressed-color);
+    // }
   }
 }
 
@@ -2330,10 +2346,9 @@ a.sb-btn {
   bottom: 0;
   z-index: 9999995;
   background-color: var(--top-background-active-element);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
   display: none;
-  animation: fade-in 0.3s;
 }
 
 /*
@@ -2440,8 +2455,8 @@ a.sb-btn {
     margin: 0px 0px;
     animation: fade-in 0.1s ease-out;
     -webkit-animation: fade-in 0.1s ease-out;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 
     &:focus {
       outline: var(--chat-outline-input);
@@ -2750,8 +2765,8 @@ div ul.sb-menu,
     border-radius: 0.5rem;
     border: 0.5px solid var(--chat-border-color);
     padding: 4px !important;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
   }
 
   &.sb-scroll-area {
@@ -3456,9 +3471,9 @@ textarea::placeholder {
 }
 
 .sb-rating > span {
-  padding: 4px 8px;
+  padding: 6px 10px;
   border-radius: 0.6rem;
-  box-shadow: var(--box-shadow);
+  margin: 5px;
 }
 
 .sb-rating > div {
@@ -4077,8 +4092,31 @@ div {
 }
 
 .api-cloud-notif {
-  position: absolute;left: 50%;transform: translate(-50%, -50%);background-color: var(--chat-att-background);padding: 10px;display: block;visibility: visible;font-size: 0.6em;width: 95.8%;bottom:calc(100% - 86px);z-index: 99;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--chat-att-background);
+  padding: 10px;
+  display: block;
+  visibility: visible;
+  font-size: .6em;
+  top: 24px;
+  width: 95.8%;
+  z-index: 99;
+  overflow: scroll;
+  height: 80px;
+
+  /* For WebKit Browsers (Chrome, Safari, etc.) */
+  &::-webkit-scrollbar-track {
+    background-color: transparent; /* Change to any color you desire */
+  }
+  
+  /* For Firefox */
+  & scrollbar-track {
+    background-color: transparent; /* Change to any color you desire */
+  }
 }
+
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */

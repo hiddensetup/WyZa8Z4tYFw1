@@ -279,8 +279,8 @@ body {
                 z-index: 5;
 
                 >ul {
-                    backdrop-filter: blur(30px);
-                    -webkit-backdrop-filter: blur(30px);
+                    backdrop-filter: blur(60px);
+                    -webkit-backdrop-filter: blur(60px);
 
                     padding-left: 0;
                     border-radius: .6rem .6rem .8rem .8rem;
@@ -826,8 +826,8 @@ a.sb-btn {
         }
 
         &.sb-active>ul {
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(60px);
+            -webkit-backdrop-filter: blur(60px);
 
             display: block;
             border-radius: .6rem .6rem .8rem .8rem;
@@ -901,8 +901,8 @@ a.sb-btn {
                 &+div+.sb-mobile,
                 &+ul {
                     display: block;
-                    backdrop-filter: blur(30px);
-                    -webkit-backdrop-filter: blur(30px);
+                    backdrop-filter: blur(60px);
+                    -webkit-backdrop-filter: blur(60px);
                     border: .8px solid var(--chat-border-color);
                     // padding: .5rem;
                     box-shadow: var(--box-shadow-menu);
@@ -1938,8 +1938,8 @@ a.sb-btn {
     width: auto !important;
     border-radius: 0;
     border: none;
-    backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
     background-color: transparent;
 }
 

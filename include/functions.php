@@ -864,7 +864,8 @@ function sb_js_admin()
                 sb_get_multi_setting(
                     "agent-hide-conversations",
                     "agent-hide-conversations-active"
-                )),
+                )
+            ),
         "desktop-notifications" => sb_get_setting("desktop-notifications"),
         "push-notifications" => sb_get_multi_setting(
             "push-notifications",
@@ -1491,12 +1492,13 @@ function sb_update_user(
     if (!$user_type && !sb_is_agent($user_type)) {
         $user_type = $email
             ? "user"
-            : (intval(
-                sb_db_get(
-                    "SELECT COUNT(*) AS count FROM sb_conversations WHERE user_id = " .
-                        $user_id
-                )["count"]
-            ) > 0
+            : (
+                intval(
+                    sb_db_get(
+                        "SELECT COUNT(*) AS count FROM sb_conversations WHERE user_id = " .
+                            $user_id
+                    )["count"]
+                ) > 0
                 ? "lead"
                 : "visitor");
     }
@@ -1724,11 +1726,12 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
         }
         $query = '(' . substr($query, 0, strlen($query) - 4) . ')';
     }
-    
+
     if ($user_ids) {
         $count_user_ids = count($user_ids);
         if ($count_user_ids) {
-            if ($query) $query .= ' AND ';
+            if ($query)
+                $query .= ' AND ';
             $query .= ' id IN (' . sb_db_escape(implode(',', $user_ids)) . ')';
         }
     }
@@ -1749,8 +1752,9 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
     }
     $users = sb_db_get(SELECT_FROM_USERS . ' FROM sb_users ' . $query . sb_routing_and_department_db('sb_conversations', true) . ($main_field_sorting ? (' ORDER BY ' . sb_db_escape($sorting_field) . ' ' . sb_db_escape($sorting[1])) : '') . ' LIMIT ' . intval(sb_db_escape($pagination, true)) * 30 . ',30', false);
     $users_count = count($users);
-    
-    if (!$users_count) return [];
+
+    if (!$users_count)
+        return [];
     if (isset($users) && is_array($users)) {
         $is_array = is_array($extra);
         if ($extra && (!$is_array || count($extra))) {
@@ -1798,7 +1802,6 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
     } else {
         return new SBError('db-error', 'sb_get_users', $users);
     }
-    
 }
 
 
@@ -4587,7 +4590,8 @@ function sb_send_message(
                         sb_get_multi_setting(
                             "agent-hide-conversations",
                             "agent-hide-conversations-active"
-                        ))
+                        )
+                    )
                 ) {
                     // Routing change agent if offline
                     $last_agent = sb_get_last_agent_in_conversation(
@@ -4694,12 +4698,14 @@ function sb_send_message(
                     sb_get_multi_setting(
                         "push-notifications",
                         "push-notifications-active"
-                    )) ||
+                    )
+                ) ||
                     ($is_sender_agent &&
                         sb_get_multi_setting(
                             "push-notifications",
                             "push-notifications-users-active"
-                        )))
+                        )
+                    ))
             ) {
                 //reply format msg get
                 $message = reply_get($message);
@@ -5077,7 +5083,8 @@ function sb_get_rich_message($name, $settings = false)
                     ($registration_tickets &&
                         !sb_get_setting(
                             "tickets-registration-disable-password"
-                        ))
+                        )
+                    )
                     ? '<div id="password" data-type="text" class="sb-input sb-input-password"><span>' .
                     sb_("Password") .
                     '</span><input value="' .
@@ -5181,9 +5188,10 @@ function sb_get_rich_message($name, $settings = false)
                                     "</div><input" .
                                     $filled .
                                     ' autocomplete="false" type="tel" pattern="[0-9]+"' .
-                                    (sb_get_setting(
-                                        "registration-phone-required"
-                                    )
+                                    (
+                                        sb_get_setting(
+                                            "registration-phone-required"
+                                        )
                                         ? " required"
                                         : "") .
                                     ">";
@@ -6580,7 +6588,8 @@ function sb_get_front_settings()
                         ),
                         true
                     )
-                )),
+                )
+            ),
         "rtl" => sb_get_setting("rtl"),
         "close-chat" => sb_get_setting("close-chat"),
     ];
@@ -6894,24 +6903,24 @@ function sb_import_settings($file_url)
 
 
 /*
-  * ----------------------------------------------------------
-  * EMAIL
-  * ----------------------------------------------------------
-  *
-  * 1. Create the email contents
-  * 2. Create the email contents secondary function
-  * 3. Send an email to the given address
-  * 4. Send an email to the address of the given user ID
-  * 5. Send a test email
-  * 6. Check if the active user can send the requested email
-  * 7. Email piping function
-  * 8. Send the successfull subscription email
-  * 9. Append the email header and the signature to an email content
-  * 10. Convert the text formatting of Steambox to HTML
-  * 11. Remove the text formatting of Steambox
-  * 12. Newsletter
-  *
-  */
+ * ----------------------------------------------------------
+ * EMAIL
+ * ----------------------------------------------------------
+ *
+ * 1. Create the email contents
+ * 2. Create the email contents secondary function
+ * 3. Send an email to the given address
+ * 4. Send an email to the address of the given user ID
+ * 5. Send a test email
+ * 6. Check if the active user can send the requested email
+ * 7. Email piping function
+ * 8. Send the successfull subscription email
+ * 9. Append the email header and the signature to an email content
+ * 10. Convert the text formatting of Steambox to HTML
+ * 11. Remove the text formatting of Steambox
+ * 12. Newsletter
+ *
+ */
 
 function sb_email_create(
     $recipient_id,
@@ -7712,11 +7721,13 @@ function sb_email_piping($force = false)
                                             ($agent &&
                                                 sb_get_setting(
                                                     "notify-user-email"
-                                                )) ||
+                                                )
+                                            ) ||
                                             (!$agent &&
                                                 sb_get_setting(
                                                     "notify-agent-email"
-                                                ))
+                                                )
+                                            )
                                         ) {
                                             sb_email_create(
                                                 $recipient["id"],
@@ -7733,12 +7744,14 @@ function sb_email_piping($force = false)
                                                 sb_get_multi_setting(
                                                     "sms",
                                                     "sms-active-users"
-                                                )) ||
+                                                )
+                                            ) ||
                                             (!$agent &&
                                                 sb_get_multi_setting(
                                                     "sms",
                                                     "sms-active-agents"
-                                                ))
+                                                )
+                                            )
                                         ) {
                                             $phone = sb_get_user_extra(
                                                 $recipient["id"],
@@ -8728,7 +8741,7 @@ function sb_curl($url, $post_fields = "", $header = [], $type = "POST")
     $response = curl_exec($ch);
     if ($type == "FILE") {
         $file = fopen($path . "/" . $basename, "w");
-        fwrite($file,  $response);
+        fwrite($file, $response);
         fclose($file);
     }
     if (curl_errno($ch) > 0) {
@@ -9397,20 +9410,24 @@ function sb_component_editor($admin = false)
         } ?>
 
         <div class="sb-bar-icons sb-hide">
-            <?php if ($admin || !sb_get_setting("disable-uploads")) {
-                echo '<div class="bi-paperclip"></div>';
-            } ?>
+            <div class="bi-emoji-smile" data-sb-tooltip="<?php sb_e("Emojis"); ?>"></div>
+            <div class="bi-list-stars" id="send-rating-button" data-sb-tooltip="<?php sb_e("Feedback?"); ?>"></div>
+            <div class="bi-whatsapp" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
+
             <div class="bi-crosshair"></div>
+
+            <?php if ($admin || !sb_get_setting("disable-uploads")) {
+                echo '<div class="bi-paperclip" ></div>';
+            } ?>
             <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
-            <div class="sb-btn-emoji"></div>
-            <div class="bi-list-stars" id="send-rating-button"></div>
+
         </div>
 
-        <div class="toggleMenuBar api-cloud-notif" id="floatingText">
-            <small><i class="bi-info-circle-fill"></i> Las conversaciones API Cloud duran 24 horas. Puedes esperar que te vuelvan a escribir o enviar una plantilla. pulsa la conversación para continuar.</small>
+        <div class=" api-cloud-notif" id="floatingText">
+            <small><i class="bi-info-circle-fill"></i> WhatsApp Business API permite conversar durante 24 horas desde que te escriben o cuando un cliente responde una de tus plantillas de mensaje. Para conocer más puedes ver <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> más detalles sobre WhatsApp Business</a>.<br><br></small>
         </div>
 
-        <div class="sb-show-menu-bar" style="display:flex;align-items: center;visibility:hidden; position:relative">
+        <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
 
             <div class="menu-plus bi-plus-lg"></div>
 
@@ -9432,67 +9449,12 @@ function sb_component_editor($admin = false)
                 <div id='recordButton' class="sb-icon-voice start stop-time" style="animation: fade-in .3s linear; font-size:1.8rem;line-height: 0;" data-sb-tooltip=""></div>
                 <div id='stopButton' disabled class="sb-icon-stop time" style="animation: fade-in .3s linear; font-size:1.8rem; animation: 0.5s ease 0s infinite normal none running fade-in; line-height: 0;" data-sb-tooltip=""></div>
                 <div class="sb-icon-send sb-submit" style="animation: fade-in .3s linear; font-size: 1.6rem; height: 1.6rem" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
-
-                <script>
-                    const sendRatingButton = document.getElementById('send-rating-button');
-                    sendRatingButton.addEventListener('click', function() {
-                        SBChat.sendMessage(-1, '[rating]');
-                    });
-                </script>
-
                 <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
 
             </div>
         </div>
 
-        <div class="sb-popup sb-emoji">
-            <div class="sb-header" style="justify-content: space-between;">
-                <div class="sb-select">
-                    <p>
-                        <?php sb_e("All"); ?>
-                    </p>
-                    <ul>
-                        <li data-value="all" class="sb-active">
-                            <?php sb_e("All"); ?>
-                        </li>
-                        <li data-value="Smileys">
-                            <?php sb_e("Smileys & Emotions"); ?>
-                        </li>
-                        <li data-value="People">
-                            <?php sb_e("People & Body"); ?>
-                        </li>
-                        <li data-value="Animals">
-                            <?php sb_e("Animals & Nature"); ?>
-                        </li>
-                        <li data-value="Food">
-                            <?php sb_e("Food & Drink"); ?>
-                        </li>
-                        <li data-value="Travel">
-                            <?php sb_e("Travel & Places"); ?>
-                        </li>
-                        <li data-value="Activities">
-                            <?php sb_e("Activities"); ?>
-                        </li>
-                        <li data-value="Objects">
-                            <?php sb_e("Objects"); ?>
-                        </li>
-                        <li data-value="Symbols">
-                            <?php sb_e("Symbols"); ?>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sb-search-btn">
-                    <i class="sb-icon bi-search"></i>
-                    <input type="text" placeholder="<?php sb_e(
-                                                        "Search emoji..."
-                                                    ); ?>" />
-                </div>
-            </div>
-            <div class="sb-emoji-list">
-                <ul></ul>
-            </div>
-            <div class="sb-emoji-bar"></div>
-        </div>
+
         <?php if ($admin) { ?>
             <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
 
@@ -9534,135 +9496,61 @@ function sb_component_editor($admin = false)
                     <ul style="margin: 0px auto;" class="sb-loading"></ul>
                 </div>
             </div>
-
+            <div class="sb-popup sb-emoji">
+                <div class="sb-header" style="justify-content: space-between;">
+                    <div class="sb-select">
+                        <p>
+                            <?php sb_e("All"); ?>
+                        </p>
+                        <ul>
+                            <li data-value="all" class="sb-active">
+                                <?php sb_e("All"); ?>
+                            </li>
+                            <li data-value="Smileys">
+                                <?php sb_e("Smileys & Emotions"); ?>
+                            </li>
+                            <li data-value="People">
+                                <?php sb_e("People & Body"); ?>
+                            </li>
+                            <li data-value="Animals">
+                                <?php sb_e("Animals & Nature"); ?>
+                            </li>
+                            <li data-value="Food">
+                                <?php sb_e("Food & Drink"); ?>
+                            </li>
+                            <li data-value="Travel">
+                                <?php sb_e("Travel & Places"); ?>
+                            </li>
+                            <li data-value="Activities">
+                                <?php sb_e("Activities"); ?>
+                            </li>
+                            <li data-value="Objects">
+                                <?php sb_e("Objects"); ?>
+                            </li>
+                            <li data-value="Symbols">
+                                <?php sb_e("Symbols"); ?>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sb-search-btn">
+                        <i class="sb-icon bi-search"></i>
+                        <input type="text" placeholder="<?php sb_e(
+                                                            "Search emoji..."
+                                                        ); ?>" />
+                    </div>
+                </div>
+                <div class="sb-emoji-list">
+                    <ul></ul>
+                </div>
+                <div class="sb-emoji-bar"></div>
+            </div>
         <?php } ?>
+
         <form class="sb-upload-form-editor" action="#" method="post" enctype="multipart/form-data">
             <input type="file" name="files[]" class="sb-upload-files" multiple />
         </form>
         <div class="sb-attachments"> </div>
     </div>
-    <script>
-        // Function to check if there are active WhatsApp conversation items and return the first one
-        async function getFirstActiveWAConversationItem() {
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 second
-
-            const conversationItem = document.querySelector("li.sb-active[data-conversation-source='wa']");
-            return conversationItem;
-        }
-
-        // Function to simulate click on conversation item
-        async function simulateClickOnConversationItem(conversationItem) {
-            await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the next tick
-
-            if (conversationItem) {
-                conversationItem.click();
-            }
-        }
-
-        // Execute the following code asynchronously onload
-        window.onload = async () => {
-            const conversationItem = await getFirstActiveWAConversationItem();
-
-            // console.log("DOM updated");
-
-            // Toggle visibility of the menu bar and floating text based on the presence of active WhatsApp conversations
-            if (conversationItem) {
-                setTimeout(() => toggleMenuBarAndFloatingText(false), 600); // Adding a slight delay after confirming WhatsApp conversations
-                await simulateClickOnConversationItem(conversationItem);
-            } else {
-                toggleMenuBarAndFloatingText(true);
-            }
-        };
-
-        // Function to toggle visibility of the menu bar and floating text
-        async function toggleMenuBarAndFloatingText(visible) {
-            await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the next tick
-
-            const menuBar = document.querySelector(".sb-show-menu-bar");
-            menuBar.style.visibility = visible ? "visible" : "hidden";
-
-            const floatingText = document.getElementById("floatingText");
-            floatingText.style.display = visible ? "none" : "block";
-        }
-
-        // Add click event listener to the document to handle clicks on conversation items
-        document.addEventListener("click", handleConversationClick);
-
-        // Function to handle click on conversation items
-        async function handleConversationClick(event) {
-            // Hide the floating text and menu bar initially
-            toggleElementsVisibility();
-
-            const conversationItem = event.target.closest("li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]");
-            if (!conversationItem) return; // Exit if clicked outside the conversation item
-
-            const source = conversationItem.dataset.conversationSource;
-            const status = conversationItem.dataset.conversationStatus;
-
-            // Toggle visibility of the menu bar and floating text based on the conversation source and status
-            if (source === "wa" && !isNaN(status)) {
-                await toggleMenuBarAndFloatingText(false);
-            }
-        }
-
-        // Function to toggle visibility of the menu bar and floating text
-        async function toggleMenuBarAndFloatingText(visible) {
-            await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the next tick
-
-            const menuBar = document.querySelector(".sb-show-menu-bar");
-            menuBar.style.visibility = visible ? "visible" : "hidden";
-
-            const floatingText = document.getElementById("floatingText");
-            floatingText.style.display = visible ? "none" : "block";
-        }
-
-        // Function to toggle visibility of floating text, sb-bar, and container
-        function toggleElementsVisibility() {
-            // Get references to the floatingText, sb-bar, and container elements
-            const floatingText = document.getElementById("floatingText");
-            const sbBar = document.querySelector(".sb-bar");
-            const container = document.querySelector(".sb-show-menu-bar");
-
-            // Toggle visibility of floating text
-            floatingText.style.display = "none";
-            // Make sb-bar visible
-            sbBar.style.visibility = "visible";
-            // Remove hidden style from container
-            container.style.visibility = "visible";
-        }
-
-        // Add click event listener to the floatingText element
-        floatingText.addEventListener("click", toggleElementsVisibility);
-
-
-
-
-
-
-
-        //DONT TOUCH THIS CODE BELOW
-
-        // Get references to the elements
-        const sbIconDrag = document.querySelector(".menu-plus");
-        const sbBarIcons = document.querySelector(".sb-bar-icons");
-
-        // Function to toggle the visibility of sb-bar-icons
-        function toggleSbBarIcons() {
-            sbBarIcons.classList.toggle("sb-hide");
-        }
-
-        // Add a click event listener to bi-person-circle to toggle the visibility
-        sbIconDrag.addEventListener("click", toggleSbBarIcons);
-
-        // Add a click event listener to sb-list and textarea to hide sb-bar-icons
-        document.querySelector(".sb-list").addEventListener("click", function() {
-            sbBarIcons.classList.add("sb-hide");
-        });
-
-        document.querySelector("textarea").addEventListener("click", function() {
-            sbBarIcons.classList.add("sb-hide");
-        });
-    </script>
 
 <?php
 }
@@ -11241,17 +11129,17 @@ function sb_reports_update(
 }
 
 /*
-  * -----------------------------------------------------------
-  * AUTOMATIONS
-  * -----------------------------------------------------------
-  *
-  * 1. Get all automations
-  * 2. Save all automations
-  * 3. Run all valid automations and return the ones which need client-side validations
-  * 4. Check if an automation is valid and can be executed
-  * 5. Execute an automation
-  *
-  */
+ * -----------------------------------------------------------
+ * AUTOMATIONS
+ * -----------------------------------------------------------
+ *
+ * 1. Get all automations
+ * 2. Save all automations
+ * 3. Run all valid automations and return the ones which need client-side validations
+ * 4. Check if an automation is valid and can be executed
+ * 5. Execute an automation
+ *
+ */
 
 function sb_automations_get()
 {

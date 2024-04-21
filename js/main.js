@@ -7529,7 +7529,7 @@
     });
 
     // Events emoji
-    $(chat_editor).on("click", ".sb-btn-emoji", function () {
+    $(chat_editor).on("click", ".bi-emoji-smile", function () {
       SBChat.showEmoji(this);
     });
 
@@ -7857,23 +7857,26 @@
 
     // LOADER EXTRA
 
-    $(document).ready(function () {
-      let sbConversations = $("#sb-conversations, #theme-toggle");
-      sbConversations.click(function () {
-        $("body").append(
-          "<div id='overlay'><img style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);animation: fade-in 1s'></div>"
-        );
-        $(".overlay").fadeIn("slow");
-        $(document).ready(function () {
-          setTimeout(function () {
-            if ($(".overlay").length > 0) $(".overlay").fadeOut("slow");
-            window.location.href = "admin.php?conversation";
-          }, 100);
-        });
-      });
-    });
+    // $(document).ready(function () {
+    //   let sbConversations = $("#sb-conversations, #theme-toggle");
+    //   sbConversations.click(function () {
+    //     $("body").append(
+    //       "<div id='overlay'><img style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);animation: fade-in 9s'></div>"
+    //     );
+    //     $("#overlay").fadeIn("slow"); // Changed ".overlay" to "#overlay"
+    //     $(document).ready(function () {
+    //       setTimeout(function () {
+    //         if ($("#overlay").length > 0) $("#overlay").fadeOut("slow"); // Changed ".overlay" to "#overlay"
+    //         window.location.href = "admin.php?conversation=";
+    //       }, 100);
+    //     });
+    //   });
+    // });
 
-    // // CONTEXTUAL BLOCKED
+    
+    
+
+    // CONTEXTUAL BLOCKED
     // $(document).on("contextmenu",function(e){
     //     return false;
     // });
@@ -7965,3 +7968,5 @@ $(document).on("click", function (event) {
   window.speechSynthesis.cancel();
   isSpeechSynthesisActive = false; // Reset flag on document click
 });
+
+

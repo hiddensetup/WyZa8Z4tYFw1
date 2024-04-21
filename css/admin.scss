@@ -2807,8 +2807,8 @@ TABLE
                     background-color: var(--chat-background-menu);
                     border: .8px solid var(--chat-border-color);
                     border-radius: .6rem;
-                    backdrop-filter: blur(30px);
-                    -webkit-backdrop-filter: blur(30px);
+                    backdrop-filter: blur(60px);
+                    -webkit-backdrop-filter: blur(60px);
                     max-width: 130px;
                     left: 0px;
 
@@ -2917,7 +2917,7 @@ BODY
                 align-items: center;
                 display: flex;
                 justify-content: space-between;
-                border-bottom: 1px solid var(--chat-border-color);
+                border-bottom: .8px solid var(--chat-border-color);
                 height: 50px;
 
                 h2 {
@@ -3056,7 +3056,7 @@ BODY
     display: none;
     position: absolute;
     background-color: var(--chat-background);
-    // backdrop-filter: blur(60px);
+    // backdrop-filter: blur(80px);
     overflow: auto;
     box-shadow: var(--box-shadow);
     // background-color: #cfcfe6c4;
@@ -3128,7 +3128,7 @@ BODY
         min-width: 399px;
         // background: var(--chat-background);
         // border-right: 0.5px solid var(--chat-border-color);
-        // backdrop-filter: blur(60px);
+        // backdrop-filter: blur(80px);
         border-left: 0.5px solid transparent;
         margin-left: 0.3px;
         position: relative;
@@ -3405,15 +3405,6 @@ BODY
 
     }
 
-    #open-modal-button:hover,
-    #open-modal-button:focus,
-    #open-modal-button:active {
-        cursor: pointer !important;
-        border-radius: .5rem;
-        color: var(--chat-background);
-        scale: 1;
-        transition: var(--transition);
-    }
 
     .steambox-sorting-bar {
         border-radius: 0px 0px 7px 7px;
@@ -3919,7 +3910,7 @@ BODY
     .sb-user-details {
         min-width: 330px;
         width: 330px;
-        // backdrop-filter: blur(60px);
+        // backdrop-filter: blur(80px);
         // background-color: var(--chat-background);
         // background-color: var(--chat-background-selected);
         display: flex;
@@ -4137,8 +4128,8 @@ BODY
         padding: 15px;
         display: none;
         z-index: 2;
-        -webkit-backdrop-filter: blur(30px);
-        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(60px);
+        backdrop-filter: blur(60px);
 
         >div {
             position: absolute;
@@ -5254,8 +5245,8 @@ BODY
         line-height: 25px;
         height: 250px;
         overflow-y: scroll;
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
         border: 0.8px solid var(--chat-border-color);
 
         span {
@@ -5309,8 +5300,8 @@ BODY
             display: flex;
             flex-direction: column;
             align-items: center;
-            backdrop-filter: blur(60px);
-            -webkit-backdrop-filter: blur(60px);
+            backdrop-filter: blur(80px);
+            -webkit-backdrop-filter: blur(80px);
             gap: 0.3rem;
         }
     }
@@ -6044,7 +6035,7 @@ BODY
 .sb-profile-box {
     height: calc(100% - 50px);
     max-width: 1000px;
-    // backdrop-filter: blur(60px);
+    // backdrop-filter: blur(80px);
 
     .sb-main {
         display: flex;
@@ -6070,7 +6061,7 @@ BODY
 .sb-direct-message-box {
     height: calc(100% - 8%);
     max-width: 800px;
-    // backdrop-filter: blur(60px);
+    // backdrop-filter: blur(80px);
 
     .sb-bottom {
         div+a {
@@ -6094,8 +6085,8 @@ BODY
 .sb-requirements-box {
     .sb-input {
         justify-content: flex-start;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(80px);
 
         >span {
             max-width: 200px;
@@ -6125,8 +6116,8 @@ BODY
         display: inline-block;
         padding: 5px 10px;
         width: auto;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(80px);
     }
 
     .sb-main>p {
@@ -6145,8 +6136,8 @@ BODY
     animation: fade-in 0.3s ease-out !important;
     -webkit-animation: fade-in 0.3s ease-out !important;
 
-    backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
 
     p {
         font-weight: 400;
@@ -6215,8 +6206,8 @@ BODY
     .sb-intent-add {
         position: relative;
         margin-top: 10px;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(80px);
 
         i {
             position: absolute;
@@ -6481,8 +6472,8 @@ BODY
     max-height: 300px;
     margin-bottom: 30px;
     padding-bottom: 0;
-    backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
 
     >div {
         display: flex;
@@ -6688,8 +6679,8 @@ BODY
     display: none;
     font-size: 1rem;
     line-height: 1em;
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(80px);
 }
 
 .daterangepicker.single .daterangepicker .ranges,
@@ -7516,8 +7507,8 @@ grammarly-editor-plugin {
 
         >.sb-user-details.sb-active {
             display: block;
-            backdrop-filter: blur(60px);
-            -webkit-backdrop-filter: blur(60px);
+            backdrop-filter: blur(80px);
+            -webkit-backdrop-filter: blur(80px);
             animation: fade-in 0.1s ease-in;
             -webkit-animation: fade-in .1s ease-in;
             box-shadow: -7px -1px 9px rgb(0 0 0 / 18%);

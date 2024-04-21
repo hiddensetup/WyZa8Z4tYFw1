@@ -1280,6 +1280,9 @@
             () => {
               showResponse("Settings saved");
               $(btn).sbLoading(false);
+              setTimeout(() => {
+                location.reload(); // Reload the page
+              }, 600);
             }
           );
           break;
@@ -4461,18 +4464,7 @@
 			</div>
 	
 	
-			<div style="margin: 0px 1px;line-height: 0;"
-			class="${
-        conversation["conversation_source"] === "wa" && cloud_active
-          ? ""
-          : "sb-hide"
-      }"
-			id="open-modal-button">
-
-			<span>
-				<i class="bi-envelope-paper" style="font-size:22px"></i>
-			</span>
-		</div>
+			
 		</div>
 		</div>
 		</li> 
@@ -7023,21 +7015,38 @@
       }
     );
 
-    $(conversations_area).on(
-      "click",
-      ".sb-admin-list .sb-search-btn i",
-      function () {
-        SBF.searchClear(this, () => {
-          SBConversations.search($(this).next());
-        });
-        $(".non-hover, .sb-filter-btn").toggleClass("sb-hide");
-        $("#hideOnSearchClick").toggleClass("sb-hide");
-      }
-    );
 
-    $(".bi-search").click(function () {
-      $("#hideOnSearchClick").toggleClass("sb-hide");
+ // This code handles click events on search buttons within the admin list.
+// It triggers search functionality, toggles visibility of certain elements,
+// and adjusts styling properties when search buttons are clicked.
+
+$(conversations_area).on(
+  "click",
+  ".sb-admin-list .sb-search-btn i",
+  function () {
+    SBF.searchClear(this, () => {
+      SBConversations.search($(this).next());
     });
+    $(".non-hover, .sb-filter-btn").toggleClass("sb-hide");
+    $("#hideOnSearchClick").toggleClass("sb-hide");
+  }
+);
+
+$(".bi-search").click(function () {
+  $("#hideOnSearchClick li:first-child").toggleClass("sb-invisible").find("div").toggle();
+  $("#hideOnSearchClick li:nth-child(2)").toggleClass("sb-invisible").css("margin-right", function(index, value) {
+    return value === '80px' ? '0px' : '80px';
+  });
+});
+
+
+
+
+
+
+
+
+
 
     // Conversations filter
     $(conversations_area).on(
@@ -9132,7 +9141,7 @@
         let e = $(SBAdmin.open_popup);
         e.is(s.target) ||
           0 !== e.has(s.target).length ||
-          ["sb-btn-saved-replies", "sb-btn-emoji"].includes(
+          ["sb-btn-saved-replies", "bi-emoji-smile"].includes(
             $(s.target).attr("class")
           ) ||
           (e.hasClass("sb-popup")
@@ -9891,3 +9900,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+

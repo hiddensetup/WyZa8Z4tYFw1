@@ -128,8 +128,21 @@
 .sb-main li {
     margin: 0;
 }
-
-
+.sb-show-menu-bar {
+    visibility: visible!important;
+}
+.api-cloud-notif {
+    position: absolute;
+    display: none!important;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--chat-att-background);
+    padding: 10px;
+    font-size: .6em;
+    width: 95.8%;
+    bottom: calc(100% - 86px);
+    z-index: 99;
+}
 div ul.sb-menu li:hover,
 .sb-select ul li:hover {
     color: var(--chat-background) !important;
@@ -294,12 +307,6 @@ div ul.sb-menu li:hover,
                 font-size: .7rem;
                 letter-spacing: .5px;
                 line-height: 16px;
-                left: calc(55% + 0px);
-                top: 10px;
-                white-space: nowrap;
-                display: flex !important;
-                justify-content: flex-end;
-
             }
 
             div.sb-right .sb-time {
@@ -309,6 +316,8 @@ div ul.sb-menu li:hover,
             }
         }
     }
+
+
 
 
     b,
@@ -331,14 +340,22 @@ div ul.sb-menu li:hover,
         background-color: var(--chat-top-lightbox) !important;
         color: var(--chat-btn-not-pressed-color) !important;
         border-radius: 10px 0 10px 10px !important;
+        margin-top: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+
     }
 
 
     .sb-right {
         float: left !important;
-        margin: 5px 10px 5px 20px !important;
         background: var(--chat-btn-not-pressed-color) !important;
         border-radius: 0 10px 10px 10px !important;
+        margin-top: 30px!important;
+        margin-right: 20px!important;
+        margin-bottom: 30px!important;
+        margin-left: 30px!important;
         color: var(--chat-top-lightbox) !important;
 
     }
@@ -449,7 +466,6 @@ div ul.sb-menu li:hover,
 
 
 
-
         .sb-brand {
             display: flex;
             justify-content: center;
@@ -527,6 +543,8 @@ div ul.sb-menu li:hover,
                     line-height: 40px;
                 }
             }
+
+
 
             +div+.sb-editor {
                 display: none;
