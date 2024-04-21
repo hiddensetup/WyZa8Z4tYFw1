@@ -95,7 +95,7 @@ switch ($_POST['function']) {
     case 'queue':
         die(sb_json_response(sb_queue(sb_post('conversation_id'), sb_post('department'))));
     case 'update-users-last-activity':
-        die(sb_json_response(sb_update_users_last_activity($_POST['user_id'], sb_post('return_user_id', -1), sb_post('check_slack'))));
+        die(sb_json_response(sb_update_users_last_activity($_POST['user_id'], sb_post('return_user_id', -1))));
     case 'is-typing':
         die(sb_json_response(sb_is_typing($_POST['user_id'], $_POST['conversation_id'])));
     case 'is-agent-typing':
@@ -200,7 +200,7 @@ switch ($_POST['function']) {
         // case 'messenger-send-message':
         //     die(sb_json_response(sb_messenger_send_message($_POST['psid'], $_POST['facebook_page_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('metadata', []))));
     case 'whatsapp-send-message':
-        die(sb_json_response(sb_whatsapp_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []), sb_post('phone_id'), sb_post('payload'))));
+        die(sb_json_response(sb_whatsapp_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []), sb_post('phone_id'))));
     case 'whatsmeow-send-message':
         die(sb_json_response(sb_whatsmeow_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));
     case 'whatsapp-send-template':

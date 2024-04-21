@@ -337,13 +337,13 @@
   $.fn.sbShowLightbox = function (popup = false, action = "") {
     // Function to center the lightbox
     function centerLightbox() {
-        const $lightbox = $(this);
-        const marginTopAdjustment = 25; // Adjusted to 25px
-        const marginTop = ($lightbox.outerHeight() / -2) - marginTopAdjustment; // Center vertically and adjust upwards
-        $lightbox.css({
-            "margin-top": marginTop + "px",
-            "margin-left": $lightbox.outerWidth() / -2 + "px", // Center horizontally
-        });
+      const $lightbox = $(this);
+      const marginTopAdjustment = 25; // Adjusted to 25px
+      const marginTop = $lightbox.outerHeight() / -2 - marginTopAdjustment; // Center vertically and adjust upwards
+      $lightbox.css({
+        "margin-top": marginTop + "px",
+        "margin-left": $lightbox.outerWidth() / -2 + "px", // Center horizontally
+      });
     }
 
     // Hide any previously shown lightboxes
@@ -352,34 +352,33 @@
     overlay.sbActive(true);
     // Show the current lightbox
     $(this).sbActive(true);
-    
+
     // If it's a popup lightbox, add specific classes and attributes
     if (popup) {
-        $(this).addClass("sb-popup-lightbox").attr("data-action", action);
+      $(this).addClass("sb-popup-lightbox").attr("data-action", action);
     } else {
-        // Center the lightbox initially
+      // Center the lightbox initially
+      centerLightbox.call(this);
+      // Bind resize event listener to window to keep the lightbox centered
+      $(window).on("resize", function () {
         centerLightbox.call(this);
-        // Bind resize event listener to window to keep the lightbox centered
-        $(window).on('resize', function() {
-            centerLightbox.call(this);
-        });
+      });
     }
-    
+
     // Add a class to the body indicating that a lightbox is active
     $("body").addClass("sb-lightbox-active");
-    
+
     // Set a timeout to remember the currently opened popup after 300 milliseconds
     setTimeout(() => {
-        SBAdmin.open_popup = this;
+      SBAdmin.open_popup = this;
     }, 300);
-    
+
     // Prevent the default action (e.g., following a link)
     this.preventDefault;
-    
+
     // Return the jQuery object
     return this;
-};
-
+  };
 
   $.fn.sbHideLightbox = function () {
     $(this)
@@ -461,7 +460,13 @@
       .setClass("sb-scroll-area", scroll)
       .css("height", scroll ? parseInt($(window).height()) - 200 + "px" : "");
     box.find(".sb-title").html(title);
-    p.html((type == "alert" ? '<strong style="font-size: 1.15rem;color: var(--chat-text-primary">' + sb_("Are you sure?") + '</strong> ' : "") + sb_(text));
+    p.html(
+      (type == "alert"
+        ? '<strong style="font-size: 1.15rem;color: var(--chat-text-primary">' +
+          sb_("Are you sure?") +
+          "</strong> "
+        : "") + sb_(text)
+    );
     box.sbActive(true).css({
       "margin-top": box.outerHeight() / -2 + "px",
       "margin-left": box.outerWidth() / -2 + "px",
@@ -3018,19 +3023,23 @@
       users_pagination = 1;
       users_pagination_count = 1;
       SBF.ajax(
-        {
-          function: "get-users",
-          sorting: this.sorting,
-          user_types: this.user_types,
-          search: this.search_query,
-          extra: this.table_extra,
-        },
-        (response) => {
-          this.populate(response);
-          this.loading(false);
-        }
+          {
+              function: "get-users",
+              sorting: this.sorting,
+              user_types: this.user_types,
+              search: this.search_query,
+              extra: this.table_extra,
+          },
+          (response) => {
+              this.populate(response);
+              this.loading(false);
+              console.log("Sorting completed successfully:", response); // Add this line to log the response
+          }
       );
-    },
+  },
+  
+  
+  
 
     // Search users
     search: function (input) {
@@ -3053,6 +3062,7 @@
             users_table_menu.find("li").sbActive(false).eq(0).sbActive(true);
           }
         );
+
       });
     },
 
@@ -3385,24 +3395,25 @@
     //   }
     // },
 
-
-
-            // Set active agent status (update)
-            setActiveAgentStatus: function (online = true) {
-              let label = online ? 'online' : 'offline';
-              agent_online = online;
-              header.find('[data-value="status"]').html(sb_(SBF.slugToString(label))).attr('class', 'sb-' + label);
-              if (SBPusher.active) {
-                  if (online) {
-                      SBPusher.presence();
-                  } else {
-                      SBPusher.presenceUnsubscribe();
-                  }
-              }
-              if (!SB_ADMIN_SETTINGS.reports_disabled) {
-                  SBF.ajax({ function: 'reports-update', name: label });
-              }
-          },
+    // Set active agent status (update)
+    setActiveAgentStatus: function (online = true) {
+      let label = online ? "online" : "offline";
+      agent_online = online;
+      header
+        .find('[data-value="status"]')
+        .html(sb_(SBF.slugToString(label)))
+        .attr("class", "sb-" + label);
+      if (SBPusher.active) {
+        if (online) {
+          SBPusher.presence();
+        } else {
+          SBPusher.presenceUnsubscribe();
+        }
+      }
+      if (!SB_ADMIN_SETTINGS.reports_disabled) {
+        SBF.ajax({ function: "reports-update", name: label });
+      }
+    },
 
     // Set active user status
     setActiveUserStatus: function (online = true) {
@@ -3549,7 +3560,7 @@
         //   });
         //   SBPusher.event("new-message", () => {
         //     SBChat.update();
-            
+
         //   });
         //   SBPusher.event(
         //     "agent-active-conversation-changed",
@@ -3565,34 +3576,38 @@
         //   });
         // }
 
-          // updated
+        // updated
         if (SBPusher.active) {
-          SBPusher.event('client-typing', (response) => {
-              if (response.user_id == activeUser().id) {
-                  SBConversations.typing(true);
-                  clearTimeout(pusher_timeout);
-                  pusher_timeout = setTimeout(() => { SBConversations.typing(false) }, 1000);
-              }
+          SBPusher.event("client-typing", (response) => {
+            if (response.user_id == activeUser().id) {
+              SBConversations.typing(true);
+              clearTimeout(pusher_timeout);
+              pusher_timeout = setTimeout(() => {
+                SBConversations.typing(false);
+              }, 1000);
+            }
           });
-          SBPusher.event('new-message', () => {
-              SBChat.update();
+          SBPusher.event("new-message", () => {
+            SBChat.update();
           });
-          SBPusher.event('agent-active-conversation-changed', (response) => {
+          SBPusher.event(
+            "agent-active-conversation-changed",
+            (response) => {
               if (response.previous_conversation_id == conversation_id) {
-                  conversations_area.find('.sb-conversation-busy').remove();
+                conversations_area.find(".sb-conversation-busy").remove();
               }
-          }, 'agents');
-          SBPusher.event('init', (response) => {
-              SBConversations.updateCurrentURL(response.current_url);
+            },
+            "agents"
+          );
+          SBPusher.event("init", (response) => {
+            SBConversations.updateCurrentURL(response.current_url);
           });
-          SBPusher.event('message-status-update', (response) => {
-              if (SBChat.conversation) {
-                  SBChat.conversation.updateMessagesStatus(response.message_ids);
-              }
+          SBPusher.event("message-status-update", (response) => {
+            if (SBChat.conversation) {
+              SBChat.conversation.updateMessagesStatus(response.message_ids);
+            }
           });
-      }
-
-
+        }
 
         if (SB_ADMIN_SETTINGS["smart-reply"]) suggestions_area.html("");
 
@@ -3621,15 +3636,13 @@
               .html(
                 response.get("title").length > 24
                   ? response.get("title").slice(0, 24) + "..."
-                  : response.get("title") +
-                      ' '
+                  : response.get("title") + " "
               );
-
 
             $(".sb-list").prepend(
               '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: 1rem;" class="bi-arrow-up-circle"></i> </div>'
             );
-            
+
             // Automatic translation
             SBAdmin.must_translate =
               SB_ADMIN_SETTINGS["translation"] &&
@@ -4001,7 +4014,7 @@
                     if (status == 2) {
                       code_pending += conversation_code;
                       conversations.unshift(item);
-                    } else if (status == 0 || status == 1 ) {
+                    } else if (status == 0 || status == 1) {
                       item_not_pending = conversations_admin_list_ul
                         .find('[data-conversation-status="2"]')
                         .last();
@@ -4313,7 +4326,7 @@
       const formatSymbols = {
         "*": "strong",
         "~": "s",
-        '```': 'code'
+        "```": "code",
       };
 
       Object.keys(formatSymbols).forEach((symbol) => {
@@ -4465,7 +4478,6 @@
 		</li> 
 		`;
     },
-   
 
     newMsgTop(user = false, status) {
       const chat_list = document.querySelectorAll(
@@ -5854,7 +5866,7 @@
           "update-conversations",
           () => {
             SBConversations.update();
-           SBChat.update(); //added to update incoming message
+            SBChat.update(); //added to update incoming message
           },
           "agents"
         );
@@ -5881,7 +5893,6 @@
         return $(this).attr("data-field");
       })
       .get();
-
 
     // On Steambox close
     $(window).on("beforeunload", function () {
@@ -6127,40 +6138,40 @@
           scrolls["last"] = scroll;
         });
 
-        $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
-          if ($(this).parent().sbActive()) {
-            admin.addClass("sb-header-hidden");
-            scrolls["always_hidden"] = true;
+      $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
+        if ($(this).parent().sbActive()) {
+          admin.addClass("sb-header-hidden");
+          scrolls["always_hidden"] = true;
+          if ($(this).parent().hasClass("sb-filter-btn")) {
+            $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
+          }
+          // Change the icon to bi-arrow-right-circle
+          if ($(this).hasClass("bi-search")) {
+            $(this).removeClass("bi-search").addClass("bi-three-dots");
+          } else if ($(this).hasClass("bi-three-dots")) {
+            $(this).removeClass("bi-three-dots").addClass("bi-filter");
+          } else if ($(this).hasClass("bi-filter")) {
+            $(this).removeClass("bi-filter").addClass("bi-arrow-left-short");
+          }
+        } else {
+          scrolls["always_hidden"] = false;
+          if (conversations_admin_list_ul.parent().scrollTop() < 10) {
+            admin.removeClass("sb-header-hidden");
             if ($(this).parent().hasClass("sb-filter-btn")) {
-              $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
+              $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
             }
-            // Change the icon to bi-arrow-right-circle
-            if ($(this).hasClass("bi-search")) {
-              $(this).removeClass("bi-search").addClass("bi-three-dots");
-            } else if ($(this).hasClass("bi-three-dots")) {
-              $(this).removeClass("bi-three-dots").addClass("bi-filter");
+            // Change the icon back to bi-search
+            if ($(this).hasClass("bi-arrow-left-short")) {
+              $(this).removeClass("bi-arrow-left-short").addClass("bi-filter");
             } else if ($(this).hasClass("bi-filter")) {
-              $(this).removeClass("bi-filter").addClass("bi-arrow-left-short");
-            }
-          } else {
-            scrolls["always_hidden"] = false;
-            if (conversations_admin_list_ul.parent().scrollTop() < 10) {
-              admin.removeClass("sb-header-hidden");
-              if ($(this).parent().hasClass("sb-filter-btn")) {
-                $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
-              }
-              // Change the icon back to bi-search
-              if ($(this).hasClass("bi-arrow-left-short")) {
-                $(this).removeClass("bi-arrow-left-short").addClass("bi-filter");
-              } else if ($(this).hasClass("bi-filter")) {
-                $(this).removeClass("bi-filter").addClass("bi-three-dots");
-              } else if ($(this).hasClass("bi-three-dots")) {
-                $(this).removeClass("bi-three-dots").addClass("bi-search");
-              }
+              $(this).removeClass("bi-filter").addClass("bi-three-dots");
+            } else if ($(this).hasClass("bi-three-dots")) {
+              $(this).removeClass("bi-three-dots").addClass("bi-search");
             }
           }
-        });
-        
+        }
+      });
+
       $(admin).on("click", "#open-modal-button", function () {
         console.log("open", admin.find(".sb-send-template-box"));
         admin.find(".sb-send-template-box").sbShowLightbox();
@@ -6241,7 +6252,7 @@
           SBConversations.stopRealTime();
           if (!SBUsers.init) {
             loadingGlobal();
-            
+
             users_pagination = 1;
             users_pagination_count = 1;
             SBF.ajax(
@@ -6494,54 +6505,54 @@
     // new function added to switch on click each li read unread icon
     $(function () {
       $(conversations_area).on(
-          "click",
-          'ul.sorting-by-last-message li[data-conversation-status="2"]',
-          function () {
-              // Extract conversation ID and other necessary data
-              const conversation_id = $(this).attr("data-conversation-id");
-              const status_code = 0; // ORIGINALLY 0 (inbox) Change to the desired new status code
-  
-              // Perform an AJAX call to update the conversation status
-              SBF.ajax(
-                  {
-                      function: "update-conversation-status",
-                      conversation_id: conversation_id,
-                      status_code: status_code,
-                  },
-                  function () {
-                      // Update the UI or perform any additional actions after the status update
-                      $(this).attr("data-conversation-status", status_code);
-                      conversations_admin_list_ul
-                          .find(".sb-active")
-                          .attr("data-conversation-status", status_code);
-                      SBConversations.setReadIcon(status_code);
-                  }
-              );
-  
-              // Shorten text content in elements with class "sb-name span-profile-detail"
-              const nameElement = $(this).find(".sb-name.span-profile-detail");
-              const text = nameElement.text();
-              if (text.length > 20) {
-                  nameElement.text(text.slice(0, 17) + '...');
-              }
-          }
-      );
-  
-      $(conversations_area).on("click", ".sb-top .open-profile", function () {
-          $([conversations_area.find(".sb-user-details"), this]).toggleClass(
-              "sb-active"
+        "click",
+        'ul.sorting-by-last-message li[data-conversation-status="2"]',
+        function () {
+          // Extract conversation ID and other necessary data
+          const conversation_id = $(this).attr("data-conversation-id");
+          const status_code = 0; // ORIGINALLY 0 (inbox) Change to the desired new status code
+
+          // Perform an AJAX call to update the conversation status
+          SBF.ajax(
+            {
+              function: "update-conversation-status",
+              conversation_id: conversation_id,
+              status_code: status_code,
+            },
+            function () {
+              // Update the UI or perform any additional actions after the status update
+              $(this).attr("data-conversation-status", status_code);
+              conversations_admin_list_ul
+                .find(".sb-active")
+                .attr("data-conversation-status", status_code);
+              SBConversations.setReadIcon(status_code);
+            }
           );
-      });
-  
-      $(conversations_area).on(
-          "click",
-          ".sb-top .open-profile-name",
-          function () {
-              SBProfile.showEdit(activeUser()); //esteee
+
+          // Shorten text content in elements with class "sb-name span-profile-detail"
+          const nameElement = $(this).find(".sb-name.span-profile-detail");
+          const text = nameElement.text();
+          if (text.length > 20) {
+            nameElement.text(text.slice(0, 17) + "...");
           }
+        }
       );
-  });
-  
+
+      $(conversations_area).on("click", ".sb-top .open-profile", function () {
+        $([conversations_area.find(".sb-user-details"), this]).toggleClass(
+          "sb-active"
+        );
+      });
+
+      $(conversations_area).on(
+        "click",
+        ".sb-top .open-profile-name",
+        function () {
+          SBProfile.showEdit(activeUser()); //esteee
+        }
+      );
+    });
+
     // Saved replies
     SBF.ajax(
       {
@@ -6719,49 +6730,40 @@
         );
       }
 
-
-
-
       var ratequs = SBF.get_value(
-  SBF.admin_set("rate-and-review")["rate-review"]
-);
-if (SBApps.whatsapp.check(conversation)) {
-  SBApps.whatsapp.send(
-    SBApps.whatsapp.activeUserPhone(user),
-    response.message === "[rating]" ? ratequs : response.message,
-    response.attachments,
-    conversation.get("extra"),
-    (response) => {
-      // Log the response to the console
-      // console.log("Server response:", response);
+        SBF.admin_set("rate-and-review")["rate-review"]
+      );
+      if (SBApps.whatsapp.check(conversation)) {
+        SBApps.whatsapp.send(
+          SBApps.whatsapp.activeUserPhone(user),
+          response.message === "[rating]" ? ratequs : response.message,
+          response.attachments,
+          conversation.get("extra"),
+          (response) => {
+            // Log the response to the console
+            // console.log("Server response:", response);
 
-      // Check if the response indicates success
-      if (response && !response.error) {
-        showResponse(
-          "<i class='bi-qr-code'></i> Message ent successfully"
-        );
-      } else {
-        showResponse(
-          "<i class='bi-info-circle'></i> Message could not be sent to API Cloud",
-          "warning"
+            // Check if the response indicates success
+            if (response && !response.error) {
+              showResponse(
+                "<i class='bi-qr-code'></i> Message ent successfully"
+              );
+            } else {
+              showResponse(
+                "<i class='bi-info-circle'></i> Message could not be sent to API Cloud",
+                "warning"
+              );
+            }
+          },
+          (error) => {
+            showResponse(
+              "<i style='vertical-align: middle;' class='bi-info-circle'></i> Failed to send message. Please try again later",
+              "warning"
+            );
+            console.error("Error sending message to WhatsApp:", error);
+          }
         );
       }
-    },
-    (error) => {
-      showResponse(
-        "<i style='vertical-align: middle;' class='bi-info-circle'></i> Failed to send message. Please try again later",
-        "warning"
-      );
-      console.error("Error sending message to WhatsApp:", error);
-    }
-  );
-}
-
-
-
-
-
-
 
       var ratequs = SBF.get_value(
         SBF.admin_set("rate-and-review")["rate-review"]
@@ -8256,10 +8258,20 @@ if (SBApps.whatsapp.check(conversation)) {
           } else {
             admin.sbHideLightbox();
             // if (settings[3]) SBF.ajax({ function: 'reports-update', name: settings[3], value: message.substr(0, 28) + ' | ' + user_ids_length });
-            if (settings[3]) SBF.ajax({ function: 'reports-update', name: settings[3], value: message + ' | ' + user_ids_length });
-
+            if (settings[3])
+              SBF.ajax({
+                function: "reports-update",
+                name: settings[3],
+                value: message + " | " + user_ids_length,
+              });
           }
-          showResponse(user_ids_length == 1 ? 'Message sent' : `${SBF.slugToString(settings[1])} sent to all users${settings[2]}.`);
+          showResponse(
+            user_ids_length == 1
+              ? "Message sent"
+              : `${SBF.slugToString(settings[1])} sent to all users${
+                  settings[2]
+                }.`
+          );
         }
       });
     }
@@ -9879,5 +9891,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-

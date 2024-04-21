@@ -39,7 +39,7 @@ if (isset($_POST['AccountSid']) && isset($_POST['From'])) {
                 $extra['country'] = [$country_codes[$code], 'Country'];
             }
         }
-      
+
         $user_id = sb_add_user([], $extra);
         $user = sb_get_user($user_id);
     } else {
@@ -52,7 +52,7 @@ if (isset($_POST['AccountSid']) && isset($_POST['From'])) {
     $attachments = [];
     for ($i = 0; $i < 10; $i++) {
         $url = sb_isset($_POST, 'MediaUrl' . $i);
-    	if ($url && isset($_POST['MediaContentType' . $i])) {
+        if ($url && isset($_POST['MediaContentType' . $i])) {
             switch ($_POST['MediaContentType0']) {
                 case 'video/mp4':
                     $extension = '.mp4';
@@ -95,7 +95,7 @@ if (isset($_POST['AccountSid']) && isset($_POST['From'])) {
     sb_send_message($user_id, $conversation_id, $message, $attachments, 2);
 
     // Dialogflow and Slack
-   
+
     $GLOBALS['SB_FORCE_ADMIN'] = false;
     die();
 }
@@ -105,7 +105,8 @@ if (!isset($_POST['function'])) die(json_encode(['status' => 'error', 'response'
 define('SB_API', true);
 sb_process_api();
 
-function sb_process_api() {
+function sb_process_api()
+{
     $function_name = $_POST['function'];
     $functions = [
         'is-online' => ['user_id'],
@@ -167,7 +168,7 @@ function sb_process_api() {
         'transcript' => ['conversation_id'],
         'cron-jobs' => [],
         'is-agent-typing' => ['conversation_id'],
-        'push-notification' => ['title' , 'message', 'interests'],
+        'push-notification' => ['title', 'message', 'interests'],
         'pusher-trigger' => ['channel', 'event'],
         'chat-css' => [],
         'download-file' => ['url'],
@@ -201,7 +202,7 @@ function sb_process_api() {
     }
 
     // Check if the app required by a method is installed
-   
+
 
     // Convert JSON to array
     $json_keys = [];
@@ -288,7 +289,8 @@ function sb_process_api() {
  *
  */
 
-function sb_api_error($error) {
+function sb_api_error($error)
+{
     $response = ['status' => 'error', 'response' => $error->code()];
     if ($error->message() != '') {
         $response['message'] = $error->message();
@@ -296,7 +298,8 @@ function sb_api_error($error) {
     die(json_encode($response));
 }
 
-function sb_api_success($result) {
+function sb_api_success($result)
+{
     $response = [];
     if (sb_is_validation_error($result)) {
         $response['success'] = false;
@@ -308,7 +311,8 @@ function sb_api_success($result) {
     die(json_encode($response));
 }
 
-function sb_api_security($token) {
+function sb_api_security($token)
+{
     $admin = sb_db_get('SELECT * FROM sb_users WHERE token = "' . sb_db_escape($_POST['token']) . '" LIMIT 1');
     if (isset($admin['user_type']) && $admin['user_type'] === 'admin') {
         global $SB_LOGIN;
@@ -317,5 +321,3 @@ function sb_api_security($token) {
     }
     return false;
 }
-
-?>
