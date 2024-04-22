@@ -831,28 +831,6 @@ function sb_send_template_box()
             floatingText.style.display = visible ? "none" : "block";
         }
 
-        // // Add click event listener to the document to handle clicks on conversation items
-        // document.addEventListener("click", handleConversationClick);
-
-        // // Function to handle click on conversation items
-        // async function handleConversationClick(event) {
-        //   // Hide the floating text and menu bar initially
-        //   toggleElementsVisibility();
-
-        //   const conversationItem = event.target.closest(
-        //     "li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]",
-        //   );
-        //   if (!conversationItem) return; // Exit if clicked outside the conversation item
-
-        //   const source = conversationItem.dataset.conversationSource;
-        //   const status = conversationItem.dataset.conversationStatus;
-
-        //   // Toggle visibility of the menu bar and floating text based on the conversation source and status
-        //   if (source === "wa" && !isNaN(status)) {
-        //     await toggleMenuBarAndFloatingText(false);
-        //   }
-        // }
-
         // Add click event listener to the document to handle clicks on conversation items
         document.addEventListener("click", handleConversationClick);
 
