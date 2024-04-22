@@ -4883,6 +4883,11 @@ BODY
         margin-bottom: 15px;
     }
 
+    .sb-repeater-add {
+        width: auto;
+    }
+    
+
     .repeater-item {
         position: relative;
 
@@ -7333,7 +7338,7 @@ grammarly-editor-plugin {
     .sb-menu-mobile {
         >ul {
             display: flex;
-            gap: 5px;
+            gap: .4em;
 
             li a {
                 margin: 0 3px;
@@ -7458,7 +7463,7 @@ grammarly-editor-plugin {
                     flex-direction: row-reverse;
                     animation: fade-in .3s ease-out;
                     -webkit-animation: fade-in .3s ease-out;
-                    gap:5px;
+                    gap:.4em;
                     // background-color: var(--chat-background)!important;
                     // margin-top: 1.088rem;
                 }
@@ -7577,9 +7582,10 @@ grammarly-editor-plugin {
 
                 &+.ul-nav-top-mobile {
                     display: flex;
-                    top: 10px;
+                    top: 9px;
                     flex-direction: row-reverse;
                     animation: fade-in 1s ease-out;
+                    gap:.4em;
                     // height: 34px;
                     // background-color: var(--background-conversation)!important;
                 }

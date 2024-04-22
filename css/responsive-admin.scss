@@ -591,8 +591,13 @@ a.sb-btn {
     line-height: 40px;
     border: none;
     width: 100%;
-
 }
+
+.sb-repeater-add {
+    width: auto;
+}
+
+
 
 .sb-profile-list>ul>li,
 .sb-panel-details .sb-list-items>div,
@@ -990,7 +995,7 @@ a.sb-btn {
 
     &.sb-header-hidden {
         main>div>.sb-tab>.sb-nav {
-            bottom: 0px;
+            top: .5em;
         }
 
         .sb-menu-wide>ul,
