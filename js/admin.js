@@ -1803,7 +1803,7 @@
         nav.append(
           `<li class="sb-active" data-id="${id}">${sb_("Article")} ${
             nav.find("li").length + 1
-          }<i class="sb-icon-delete"></i></li>`
+          }<i class="bi-trash"></i></li>`
         );
         articles_area.find("input, textarea, select").val("");
         articles_area.find(".sb-content").attr("data-id", id);
@@ -1857,7 +1857,7 @@
             for (var i = 0; i < items.length; i++) {
               code += `<li data-id="${items[i]["id"]}">${
                 category ? "<span>" + items[i]["id"] + "</span>" : ""
-              }${items[i]["title"]}<i class="sb-icon-delete${
+              }${items[i]["title"]}<i class="bi-trash${
                 category ? " sb-category" : ""
               }"></i></li>`;
             }
@@ -2162,7 +2162,7 @@
         automations_area_nav.find(".sb-active").sbActive(false);
         automations_area_nav.find(".sb-no-results").remove();
         automations_area_nav.append(
-          `<li class="sb-active" data-id="${id}">${name}<i class="sb-icon-delete"></i></li>`
+          `<li class="sb-active" data-id="${id}">${name}<i class="bi-trash"></i></li>`
         );
         automations_area
           .find(".sb-automation-values")
@@ -2190,7 +2190,7 @@
         this.updateActiveItem();
         if (items.length) {
           for (var i = 0; i < items.length; i++) {
-            code += `<li data-id="${items[i]["id"]}">${items[i]["name"]}<i class="sb-icon-delete"></i></li>`;
+            code += `<li data-id="${items[i]["id"]}">${items[i]["name"]}<i class="bi-trash"></i></li>`;
           }
         } else {
           code = `<li class="sb-no-results">${sb_("No results found.")}</li>`;
@@ -4193,7 +4193,7 @@
               SB_ADMIN_SETTINGS["allow-agent-delete-message"]) ||
             (SB_ADMIN_SETTINGS["supervisor"] &&
               SB_ADMIN_SETTINGS["allow-supervisor-delete-message"])
-              ? `<li data-value="delete"><i style="font-size: 0.7rem;color: #926bff!important;padding-right:4px"  class="sb-icon-delete"></i>${sb_(
+              ? `<li data-value="delete"><i style="font-size: 0.7rem;color: #926bff!important;padding-right:4px"  class="bi-trash"></i>${sb_(
                   "Delete"
                 )}</li><hr style="margin:5px; background-color: var(--chat-border-color">`
               : ""

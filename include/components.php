@@ -113,7 +113,7 @@ function sb_profile_edit_box()
                     <div id="profile_image" data-type="image" class="sb-input sb-input-image sb-profile-image">
                         <span><?php sb_e('Profile image') ?></span>
                         <div class="image">
-                            <div class="sb-icon-close"></div>
+                            <div class="bi-x-circle"></div>
                         </div>
                     </div>
 
@@ -153,7 +153,7 @@ function sb_profile_edit_box()
 
 
                 <a class="sb-delete sb-btn-text sb-btn-red">
-                    <i class="sb-icon-delete"></i><?php sb_e('Delete user') ?>
+                    <i class="bi-trash"></i><?php sb_e('Delete user') ?>
                 </a>
             </div>
             <div class="sb-additional-details">
@@ -1271,7 +1271,7 @@ function sb_component_admin()
                                         </li>
                                         <?php
                                         if ($is_admin || sb_get_setting('agents-delete') || sb_get_multi_setting('agents', 'agents-delete-conversation') || ($supervisor && $supervisor['supervisor-delete-conversation'])) {
-                                            echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="bi-robot"></i></a></li><li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="sb-icon-delete"></i></a></li>';
+                                            echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="bi-robot"></i></a></li><li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="bi-trash"></i></a></li>';
                                         }
                                         ?>
                                         <!-- <li>
@@ -1475,7 +1475,7 @@ function sb_component_admin()
                                         </li>
                                         <li>
                                             <a data-value="delete" class="sb-btn-icon sb-btn-red" data-sb-tooltip="<?php sb_e('Delete users') ?>" style="display: none;">
-                                                <i class="sb-icon-delete"></i>
+                                                <i class="bi-trash"></i>
                                             </a>
                                         </li>
                                         <?php if ($sms) { ?>
@@ -1745,7 +1745,7 @@ function sb_component_admin()
         } ?>
         <div class="sb-lightbox sb-lightbox-media">
             <div></div>
-            <i class="sb-icon-close"></i>
+            <i class="bi-x-circle"></i>
         </div>
         <div class="sb-lightbox-overlay"></div>
         <div class="sb-loading-global sb-loading sb-lightbox"></div>

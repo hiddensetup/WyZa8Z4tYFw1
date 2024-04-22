@@ -5073,7 +5073,7 @@ function sb_get_rich_message($name, $settings = false)
                     ($user["profile_image"] &&
                         strpos($user["profile_image"], "media/user.svg") ==
                         false
-                        ? '<i class="sb-icon-close"></i>'
+                        ? '<i class="bi-x-circle"></i>'
                         : "") .
                     "</div></div>"
                     : "";
@@ -5858,7 +5858,7 @@ function sb_get_setting_code($setting)
                             break;
                         case "upload-image":
                             $content .=
-                                '<div class="image"><i class="sb-icon-close"></i></div>';
+                                '<div class="image"><i class="bi-x-circle"></i></div>';
                             break;
 
                         case "checkbox":
@@ -5955,19 +5955,19 @@ function sb_get_setting_code($setting)
                             $content .=
                                 '<div data-type="upload-image"><div data-id="' .
                                 $item["id"] .
-                                '" class="image"><i class="sb-icon-close"></i></div></div>';
+                                '" class="image"><i class="bi-x-circle"></i></div></div>';
                             break;
                     }
                     $content .= "</div>";
                 }
                 $content .=
-                    '<i class="sb-icon-close"></i></div></div><a class="sb-btn sb-repeater-add">' .
+                    '<i class="bi-x-circle"></i></div></div><a class="sb-btn sb-repeater-add">' .
                     sb_("Add new item") .
                     "</a>";
                 break;
             case "color":
                 $content .=
-                    '<input type="text"><i class="sb-close sb-icon-close"></i>';
+                    '<input type="text"><i class="sb-close bi-x-circle"></i>';
                 break;
             case "text":
                 $content .= '<input type="text" placeholder="">';
@@ -6042,7 +6042,7 @@ function sb_get_setting_code($setting)
                         $setting["background-size"] .
                         '"'
                         : "") .
-                    '><i class="sb-icon-close"></i></div>';
+                    '><i class="bi-x-circle"></i></div>';
                 break;
             case "input-button":
                 $content .=
@@ -6165,7 +6165,7 @@ function sb_get_setting_code($setting)
                     }
                     $content .= $select . "</div></div>";
                     break;
-                case "select-images":                $content .= '<div class="sb-icon-close"></div>';
+                case "select-images":                $content .= '<div class="bi-x-circle"></div>';
                 for ($i = 0; $i < count($setting["images"]); $i++) {
                     $content .=
                         '<div data-value="' .

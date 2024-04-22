@@ -1420,7 +1420,7 @@ div ul.sb-menu,
     }
   }
 
-  .sb-icon-closer:active {
+  .bi-x-circler:active {
     scale: 0.9;
     transition: var(--transition);
     color: #07cd07;
@@ -1474,7 +1474,7 @@ position: absolute;
     letter-spacing: 0.5px;
     position: relative;
 
-    .sb-icon-close {
+    .bi-x-circle {
       position: absolute;
       right: 0;
       top: 0px;
@@ -1553,7 +1553,7 @@ position: absolute;
   animation: fade-in 0.3s;
 }
 
-.sb-panel-articles .sb-title .sb-icon-close {
+.sb-panel-articles .sb-title .bi-x-circle {
   display: none;
 }
 
@@ -2179,7 +2179,7 @@ a.sb-btn {
       }
     }
 
-    > .sb-icon-close {
+    > .bi-x-circle {
       position: absolute;
       z-index: 9;
       right: 10px;
@@ -2201,7 +2201,7 @@ a.sb-btn {
         display: none;
       }
 
-      > .sb-icon-close {
+      > .bi-x-circle {
         display: block;
 
         &:hover {
@@ -2223,7 +2223,7 @@ a.sb-btn {
       height: 65px;
       padding: 0;
 
-      .sb-icon-close {
+      .bi-x-circle {
         right: -5px;
         top: -5px;
 
