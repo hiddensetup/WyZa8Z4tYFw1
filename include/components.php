@@ -1385,7 +1385,7 @@ function sb_component_admin()
                                     <?php sb_e('Users list') ?>
                                 </h2>
                                 <div class="sb-menu-wide sb-menu-users">
-                                    <div>
+                                    <div class="sb-nav sb-nav-only">
                                         <?php sb_e('Users list') ?>
                                         <span data-count="0"></span>
                                     </div>
@@ -1465,7 +1465,6 @@ function sb_component_admin()
                                         <?php if (sb_is_agent() && $is_admin) { ?>
                                             <li>
                                                 <a data-value="csv" class="sb-btn-icon bi-google" data-sb-tooltip="<?= sb_('Download CSV') ?>">
-                                                    <i class="bi-google"></i>
                                                 </a>
                                             </li>
                                         <?php } ?>

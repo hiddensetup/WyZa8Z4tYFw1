@@ -1183,6 +1183,7 @@ td.sb-offline {
 
     .sb-tab-nav-title {
         line-height: normal;
+        box-sizing: border-box;
         font-size: 1.15rem !important;
         padding: 10px 8%;
         font-size: 1rem;
@@ -2701,10 +2702,10 @@ TABLE
             left: 0;
             position: fixed;
             text-align: center;
-            font-size: 1.1rem;
+            // font-size: 1.1rem;
 
             >div>a {
-                font-size: 0.85rem;
+                // font-size: 0.85rem;
                 line-height: 20px;
                 cursor: pointer;
                 text-decoration: none;
@@ -2817,7 +2818,7 @@ TABLE
                         padding: 10px;
                         position: relative;
                         color: var(--chat-text-primary);
-                        font-size: .85rem;
+                        // font-size: .95rem;
 
                         &.sb-active {
                             color: var(--chat-tertiary-color);
@@ -3933,7 +3934,7 @@ BODY
             margin: 15px;
             font-size: 1rem;
             line-height: 25px;
-            font-weight: 600;
+            font-weight: 400;
         }
 
         >div>h3 {
@@ -4087,10 +4088,10 @@ BODY
                 >ul {
                     border-radius: 0.5rem;
                     //width: 100%;
-                    margin-top: -44px;
+                    // margin-top: -44px;
 
                     li {
-                        line-height: 24px;
+                        // line-height: 24px;
                         white-space: break-spaces;
                         margin: 1px;
                     }

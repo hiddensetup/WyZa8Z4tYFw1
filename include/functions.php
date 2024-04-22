@@ -5879,7 +5879,7 @@ function sb_get_setting_code($setting)
                             break;
                         case "button":
                             $content .=
-                                '<a class="sb-btn" target="_blank" href="' .
+                                '<a class="sb-btn sb-repeater-add" target="_blank" href="' .
                                 $values[$i]["button-url"] .
                                 '">' .
                                 sb_s($values[$i]["button-text"]) .
@@ -6046,7 +6046,7 @@ function sb_get_setting_code($setting)
                 break;
             case "input-button":
                 $content .=
-                    '<input type="text"><a class="sb-btn">' .
+                    '<input type="text"><a class="sb-btn sb-repeater-add">' .
                     sb_s($setting["button-text"]) .
                     "</a>";
                 break;
@@ -9058,7 +9058,7 @@ function sb_departments($type)
                         $id .
                         '" data-value="' .
                         sb_isset($items[$i], "department-color", $id) .
-                        '">' . '<i class="bi-arrow-bar-right"></i>' .
+                        '">' . '' .
                         ucfirst(sb_($items[$i]["department-name"])) .
                         "</li>";
                 }

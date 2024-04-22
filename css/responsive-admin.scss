@@ -782,13 +782,8 @@ a.sb-btn {
     .sb-nav>div:after {
         content: "\61";
         font-family: "steambox";
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 9px;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 35px;
+        font-family: steambox;
+        font-size: .8rem;
     }
 
     .sb-menu-wide>ul,
@@ -819,7 +814,7 @@ a.sb-btn {
             position: relative;
             // font-weight: 600;
             font-size: 1.1rem;
-            line-height: 35px;
+            line-height: 25px;
             padding-right: 20px;
             cursor: pointer;
             transition: var(--transition);
@@ -837,6 +832,7 @@ a.sb-btn {
         &.sb-active>ul {
             backdrop-filter: blur(60px);
             -webkit-backdrop-filter: blur(60px);
+            margin-top:.6rem;
 
             display: block;
             border-radius: .6rem .6rem .8rem .8rem;
@@ -922,7 +918,7 @@ a.sb-btn {
                     position: absolute;
                     animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
                     -webkit-animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
-                    
+                    padding: 10px 0px;
                     //animation: scale-in-hor-right 0.4s cubic-bezier(0.99, -0.62, 0, 0.87);
                 }
             }
@@ -999,7 +995,11 @@ a.sb-btn {
 
     &.sb-header-hidden {
         main>div>.sb-tab>.sb-nav {
-            top: .5em;
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            overflow: visible;
+            z-index: 5;
         }
 
         .sb-menu-wide>ul,
