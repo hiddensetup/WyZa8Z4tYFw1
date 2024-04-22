@@ -1420,7 +1420,7 @@ div ul.sb-menu,
     }
   }
 
-  .bi-x-circler:active {
+  .bi-x-lg:active {
     scale: 0.9;
     transition: var(--transition);
     color: #07cd07;
@@ -1474,7 +1474,7 @@ position: absolute;
     letter-spacing: 0.5px;
     position: relative;
 
-    .bi-x-circle {
+    .bi-x-lg {
       position: absolute;
       right: 0;
       top: 0px;
@@ -1553,7 +1553,7 @@ position: absolute;
   animation: fade-in 0.3s;
 }
 
-.sb-panel-articles .sb-title .bi-x-circle {
+.sb-panel-articles .sb-title .bi-x-lg {
   display: none;
 }
 
@@ -2179,7 +2179,7 @@ a.sb-btn {
       }
     }
 
-    > .bi-x-circle {
+    > .bi-x-lg {
       position: absolute;
       z-index: 9;
       right: 10px;
@@ -2201,7 +2201,7 @@ a.sb-btn {
         display: none;
       }
 
-      > .bi-x-circle {
+      > .bi-x-lg {
         display: block;
 
         &:hover {
@@ -2223,7 +2223,7 @@ a.sb-btn {
       height: 65px;
       padding: 0;
 
-      .bi-x-circle {
+      .bi-x-lg {
         right: -5px;
         top: -5px;
 

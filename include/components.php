@@ -113,7 +113,7 @@ function sb_profile_edit_box()
                     <div id="profile_image" data-type="image" class="sb-input sb-input-image sb-profile-image">
                         <span><?php sb_e('Profile image') ?></span>
                         <div class="image">
-                            <div class="bi-x-circle"></div>
+                            <div class="bi-x-lg"></div>
                         </div>
                     </div>
 
@@ -1327,7 +1327,7 @@ function sb_component_admin()
                             </div>
 
                             <div class="sb-scroll-area">
-                                <div class="close-button-div"><i class="bi-x-circle no-show sb-btn-collapse collapse"></i></div>
+                                <div class="close-button-div"><i class="bi-x-lg no-show sb-btn-collapse collapse"></i></div>
                                 <div class="open-profile sb-profile sb-profile-detail">
                                     <span style=" margin: 10px -15px -3px 0px; font-size: 2rem; "><i class="bi-chevron-right"></i></span>
                                     <img class="img-profile-detail" src="<?php echo STMBX_URL ?>/media/user.svg" />
@@ -1745,7 +1745,7 @@ function sb_component_admin()
         } ?>
         <div class="sb-lightbox sb-lightbox-media">
             <div></div>
-            <i class="bi-x-circle"></i>
+            <i class="bi-x-lg"></i>
         </div>
         <div class="sb-lightbox-overlay"></div>
         <div class="sb-loading-global sb-loading sb-lightbox"></div>

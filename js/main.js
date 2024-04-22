@@ -1139,7 +1139,7 @@
           //   chat_editor
           //     .find(".sb-attachments")
           //     .append(
-          //       `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}"><i class="bi-x-circle"></i>${name}</div>`
+          //       `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}"><i class="bi-x-lg"></i>${name}</div>`
           //     );
           //   SBChat.activateBar();
           // }
@@ -1164,7 +1164,7 @@
           if (isImageURL) {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
                                     <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
-                                     ${name}<i class="bi-x-circle"></i>
+                                     ${name}<i class="bi-x-lg"></i>
                                   </div>`;
           } else if (isAudioURL) {
             attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
@@ -1178,17 +1178,17 @@
               .pop()}">
                                       Your browser does not support the audio element.
                                     </audio>
-                                    <i class="bi-x-circle"></i>
+                                    <i class="bi-x-lg"></i>
                                   </div>`;
           } else if (isOfficeURL) {
             // For Office formats, use doc.png as a placeholder image
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
                                     <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="media/file-text-fill.svg" width="30" height="30">
-                                     <i class="bi-x-circle"></i>
+                                     <i class="bi-x-lg"></i>
                                   </div>`;
           } else {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                     ${name}<i class="bi-x-circle"></i>
+                                     ${name}<i class="bi-x-lg"></i>
                                   </div>`;
           }
 
@@ -5017,7 +5017,7 @@
           if (isImageURL) {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
                                 <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
-                                <i class="bi-x-circle"></i>
+                                <i class="bi-x-lg"></i>
                               </div>`;
           } else if (isAudioURL) {
             attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
@@ -5031,18 +5031,18 @@
               .pop()}">
                                   Your browser does not support the audio element.
                                 </audio>
-                                <i class="bi-x-circle"></i>
+                                <i class="bi-x-lg"></i>
                               </div>`;
           } else if (isOfficeURL) {
             // For Office formats, use doc.png as a placeholder image
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
                                 <img style="border-radius: .4rem; width: 33px; vertical-align: middle;"  src="media/file-text-fill.svg" width="30" height="30">
-                                 <i class="bi-x-circle"></i>
+                                 <i class="bi-x-lg"></i>
                               </div>`;
           } else {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
           <img style="border-radius: .4rem; width: 33px; vertical-align: middle;"  src="media/file-text-fill.svg" width="30" height="30">
-           <i class="bi-x-circle"></i>
+           <i class="bi-x-lg"></i>
         </div`;
           }
 
@@ -7802,6 +7802,8 @@
       if (admin) SBAdmin.open_popup = active ? false : this;
     });
 
+
+    /**inbox loader $('.sb-select li[data-value="6"]').eq(0).click();}**/
     $(global).on("click", ".sb-select li", function () {
       let select = $(this).closest(".sb-select");
       let value = $(this).data("value");

@@ -600,7 +600,7 @@ div ul.sb-menu li:hover,
             // height: 400px;
         }
 
-        &:hover>.sb-icon-close:not(:hover) {
+        &:hover>.bi-x-lg:not(:hover) {
             opacity: .5;
         }
 
@@ -1469,7 +1469,7 @@ div ul.sb-menu li:hover,
             opacity: 0.9;
         }
 
-        .sb-icon-close {
+        .bi-x-lg {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -1530,7 +1530,7 @@ div ul.sb-menu li:hover,
         }
     }
 
-    .sb-input-image .image>.sb-icon-close {
+    .sb-input-image .image>.bi-x-lg {
         color: white;
     }
 
