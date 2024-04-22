@@ -9889,7 +9889,7 @@ document.addEventListener("DOMContentLoaded", function () {
   helpCenter.addEventListener("click", function () {
     customerSupport.setAttribute(
       "src",
-      "https://steamboxchat.com/i/updates.html"
+      "https://steamboxchat.com/"
     );
     customerSupport.style.display = "block";
     customerSupport.style.opacity = 1;

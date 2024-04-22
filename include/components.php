@@ -1199,7 +1199,8 @@ function sb_component_admin()
                                 </ul>
                             </div>
                         </div>
-                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-clipboard-pulse"></i></div>' ?>
+                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-info-circle"></i></div>' ?>
+                        <!-- <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi"></i></div>' ?> -->
 
                     </div>
                     <div class="sb-mobile" style="right: 5px;top: -140px; animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;">

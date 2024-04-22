@@ -5819,7 +5819,7 @@ function sb_get_setting_code($setting)
             sb_s($setting["title"]) .
             ' <i class="sb-icon-arrow-down settings-button" style="vertical-align: middle;"></i></h2><p class="active">' .
             sb_s($setting["content"]) .
-            (isset($setting["help"]) ? '<a href="' . $setting["help"] . '" target="_blank" style=" font-size: .85rem; color: var(--pink-root-color); line-height: 0; " class="sb-icon-help"></a>' : "") .
+            (isset($setting["help"]) ? '<a href="' . $setting["help"] . '" target="_blank" style=" font-size: .85rem; color: var(--pink-root-color); line-height: 0; " class="bi-info-circle"></a>' : "") .
             '</p></div><div class="active input">';
         switch ($type) {
             case "multi-input":
@@ -9044,7 +9044,7 @@ function sb_departments($type)
                 break;
             case "custom-select":
                 $code =
-                    '<div class="sb-inline sb-inline-departments"><i class="bi-diagram-3-fill" style="padding:0px 5px"></i> <h3>' .
+                    '<div class="sb-inline sb-inline-departments"><i class="bi-building" style="padding:0px 5px"></i> <h3>' .
                     sb_("Department") .
                     '</h3><div id="conversation-department" class="sb-select hover-selector sb-select-colors"><p>' .
                     sb_("None") .
@@ -9058,7 +9058,7 @@ function sb_departments($type)
                         $id .
                         '" data-value="' .
                         sb_isset($items[$i], "department-color", $id) .
-                        '">' . '#' .
+                        '">' . '<i class="bi-arrow-bar-right"></i>' .
                         ucfirst(sb_($items[$i]["department-name"])) .
                         "</li>";
                 }
