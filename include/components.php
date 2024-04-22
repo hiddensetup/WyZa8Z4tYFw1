@@ -1247,9 +1247,10 @@ function sb_component_admin()
                                     </p>
                                     <ul>
                                         <li data-value="0" class="sb-active">
-                                            <i class="bi-inboxes"></i> <?php sb_e('Inbox') ?>
+                                            <i class="bi-arrow-clockwise"></i> <?php sb_e('Inbox') ?>
                                             <span></span>
                                         </li>
+                                        <hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">
                                         <li data-value="6">
                                             <i class="bi-star"></i> <?php sb_e('Follow up') ?>
                                             <span></span>
@@ -1831,15 +1832,15 @@ function sb_conversations_filter()
     if (!sb_get_setting('disable-filters')) return;
     $departments = sb_get_setting('departments');
     $count = is_array($departments) ? count($departments) : 0;
-    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p><i class="bi-diagram-3-fill"></i> ' . sb_('All departments') . '</p><ul><li data-value=""><i class="bi-app"></i> ' . sb_('All departments') . '</li><hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">';
+    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p><i class="bi-building"></i> ' . sb_('All departments') . '</p><ul><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All departments') . '</li><hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">';
     for ($i = 0; $i < $count; $i++) {
-        $code .= '<li data-value="' . $departments[$i]['department-id'] . '"><i class="bi-app"></i> ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<li data-value="' . $departments[$i]['department-id'] . '"><i class="bi-arrow-bar-right"></i> ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
 
     // Only display sources if $sources is not empty
     $sources = [['ww', 'WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'SB_WHATSMEOW'], ['wa', 'WhatsApp API', 'SB_WHATSAPP'], ['tk', 'Tickets', 'SB_TICKETS'], ['tg', 'Telegram', 'SB_TELEGRAM'],   ['fb', 'Messenger', 'SB_MESSENGER'], ['ig', 'Instagram', 'SB_MESSENGER'], ['tw', 'Twitter', 'SB_TWITTER'], ['bm', 'Google', 'SB_GBM'], ['wc', 'WeChat', 'SB_WECHAT'], ['tm', 'SMS', false]];
-    $code .= '<div class="sb-select"><p><i class="bi-terminal"></i> ' . sb_('All channels') . '</p><ul><li data-value=""><i class="bi-code-slash"></i> ' . sb_('All channels') . '</li><hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">';
+    $code .= '<div class="sb-select"><p><i class="bi-ui-checks"></i> ' . sb_('All channels') . '</p><ul><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All channels') . '</li><hr style="margin: 5px auto;background: var(--chat-hr-color);width: calc(100% - 15px);">';
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {
             $code .= '<li data-value="' . $sources[$i][0] . '"><i class="bi-code-slash"></i> ' . $sources[$i][1] . '</li>';

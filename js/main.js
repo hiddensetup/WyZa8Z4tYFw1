@@ -7388,7 +7388,7 @@
     $(chat_editor).on("click", ".bi-paperclip", function () {
       if (!SBChat.is_busy) {
         chat_editor.find(".sb-upload-files").val("").click();
-        chat_editor.find(".sb-icon-send").removeClass("sb-hide");
+        chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
 
         console.log("to upload file");
       }
@@ -7454,7 +7454,7 @@
     // Function to show the send icon after a timeout
     function showSendIconAfterTimeout() {
       setTimeout(() => {
-        $(".sb-icon-send").removeClass("sb-hide");
+        $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
       }, 500); // Adjust the timeout duration as needed
     }
 

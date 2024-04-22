@@ -9445,9 +9445,9 @@ function sb_component_editor($admin = false)
                         <option selected value="mp3">.mp3</option>
                     </select>
                 </div>
-                <div id='recordButton' class="sb-icon-voice start stop-time" style="animation: fade-in .3s linear; font-size:1.8rem;line-height: 0;" data-sb-tooltip=""></div>
-                <div id='stopButton' disabled class="sb-icon-stop time" style="animation: fade-in .3s linear; font-size:1.8rem; animation: 0.5s ease 0s infinite normal none running fade-in; line-height: 0;" data-sb-tooltip=""></div>
-                <div class="sb-icon-send sb-submit" style="animation: fade-in .3s linear; font-size: 1.6rem; height: 1.6rem" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
+                <div id='recordButton' class="bi-mic-fill start stop-time"  data-sb-tooltip=""></div>
+                <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
+                <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
                 <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
 
             </div>

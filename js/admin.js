@@ -4388,7 +4388,7 @@
 
           if (voiceFiles.length > 0) {
             voiceMessage =
-              `<i class="sb-icon-voice vertical-align"></i>` +
+              `<i class="bi-mic-fill vertical-align"></i>` +
               " " +
               sb_("Voice") +
               ": " +
@@ -6143,7 +6143,7 @@
           } else if ($(this).hasClass("bi-three-dots")) {
             $(this).removeClass("bi-three-dots").addClass("bi-filter");
           } else if ($(this).hasClass("bi-filter")) {
-            $(this).removeClass("bi-filter").addClass("bi-arrow-left-short");
+            $(this).removeClass("bi-filter").addClass("bi-chevron-double-right");
           }
         } else {
           scrolls["always_hidden"] = false;
@@ -6153,8 +6153,8 @@
               $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
             }
             // Change the icon back to bi-search
-            if ($(this).hasClass("bi-arrow-left-short")) {
-              $(this).removeClass("bi-arrow-left-short").addClass("bi-filter");
+            if ($(this).hasClass("bi-chevron-double-right")) {
+              $(this).removeClass("bi-chevron-double-right").addClass("bi-filter");
             } else if ($(this).hasClass("bi-filter")) {
               $(this).removeClass("bi-filter").addClass("bi-three-dots");
             } else if ($(this).hasClass("bi-three-dots")) {
@@ -8882,7 +8882,7 @@ $(".bi-search").click(function () {
 
     const recButton = document.getElementById("recordButton");
     const stopButton = document.getElementById("stopButton");
-    const sending = document.querySelector(".sb-icon-send");
+    const sending = document.querySelector(".bi-arrow-up-circle-fill");
     const textArea = document.querySelector(".sb-textarea>textarea");
 
     sending.addEventListener("click", () => {
@@ -8902,13 +8902,13 @@ $(".bi-search").click(function () {
     });
 
     recButton.addEventListener("click", () => {
-      document.querySelector(".sb-icon-voice").classList.add("sb-hide");
+      document.querySelector(".bi-mic-fill").classList.add("sb-hide");
       // Show the send icon after a timeout
       showSendIconAfterTimeout();
     });
 
     stopButton.addEventListener("click", () => {
-      document.querySelector(".sb-icon-voice").classList.remove("sb-hide");
+      document.querySelector(".bi-mic-fill").classList.remove("sb-hide");
       // Show the send icon after a timeout
       showSendIconAfterTimeout();
     });
@@ -8916,7 +8916,7 @@ $(".bi-search").click(function () {
     // Function to show the send icon after a timeout
     function showSendIconAfterTimeout() {
       setTimeout(() => {
-        document.querySelector(".sb-icon-send").classList.remove("sb-hide");
+        document.querySelector(".bi-arrow-up-circle-fill").classList.remove("sb-hide");
       }, 500); // Adjust the timeout duration as needed
     }
 

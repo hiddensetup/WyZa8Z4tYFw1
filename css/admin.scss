@@ -2614,7 +2614,7 @@ TABLE
 
         // background: var(--top-bar-mobile-color);
 
-        border: 0.5px solid var(--chat-border-color);
+        border-right: 0.5px solid var(--chat-border-color);
         // box-shadow: 0 1px 5px -1px rgb(0 0 0 / 30%);
 
         >.sb-admin-nav {
@@ -3740,14 +3740,11 @@ BODY
             }
 
             .sb-bar {
-                margin: 0px;
+                align-self: self-end;
+                margin: 0;
                 position: relative;
                 display: flex;
-                justify-content: end;
-                // background: var(--chat-background);
                 border-radius: 24px;
-                padding: 10px 0px;
-                align-self: flex-end;
 
                 .sb-btn-attachment {
                     display: block !important;
@@ -5607,7 +5604,7 @@ BODY
 #sb-date-picker {
     text-align: center;
     min-width: 295px;
-    border-radius: .8rem;
+    border-radius: .5rem;
 }
 
 .sb-report-agents-ratings,

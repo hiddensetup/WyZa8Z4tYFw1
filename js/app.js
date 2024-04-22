@@ -7,7 +7,7 @@ var URL = window.URL,
 	encodeAfterRecord = !0,
 	recordButton = "#recordButton",
 	stopButton = "#stopButton",
-	stopIcon = $(".sb-icon-stop");
+	stopIcon = $(".bi-record-fill");
 $(document).on("click", recordButton, function () {
 	stopIcon.css("display", "block"), startRecording();
 }),

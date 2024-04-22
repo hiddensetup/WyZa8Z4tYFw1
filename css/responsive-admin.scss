@@ -340,7 +340,11 @@ body {
 
 .sb-lightbox .sb-top-bar,
 .sb-admin>main>div>.sb-top-bar {
-    border: .8px solid var(--chat-border-color);
+    border-right: .8px solid var(--chat-border-color);
+    border-bottom: .8px solid var(--chat-border-color);
+    border-left: .8px solid var(--chat-border-color);
+    border-top:none;
+
     padding: 0 5px 5px 10px;
     margin: 0;
     height: 47px;
@@ -1061,7 +1065,7 @@ a.sb-btn {
             height: 100%;
             line-height: 34px;
             text-align: center;
-            top: 10px !important;
+            top: 7px !important;
             border-radius: .5rem;
             overflow: hidden;
             right: 5px;
@@ -1315,7 +1319,6 @@ a.sb-btn {
     .sb-conversation .sb-editor {
         border: none;
         // margin: 0px 4px;
-        padding: 10px 8px 10px 8px;
         margin: 0px;
         box-shadow: var(--box-shadow-menu);
     }
