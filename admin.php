@@ -12,7 +12,6 @@ if (file_exists('config.php')) {
   $steambox_url = '';
   if ($connection_success) {
     $steambox_url = STMBX_URL . '/';
-
   }
 } else {
   define('steambox_url', '');
@@ -34,7 +33,7 @@ require('include/components.php');
   <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
   <meta name="robots" content="noindex, nofollow">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#181925" />
+  <meta name="theme-color" content="#1b1a30" />
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
@@ -44,7 +43,7 @@ require('include/components.php');
   <script src="<?php echo file_exists('js/min/main.js') ? $steambox_url . 'js/min/main.js' : $steambox_url . 'js/main.js'; ?>"></script>
   <script src="<?php echo file_exists('js/min/admin.js') ? $steambox_url . 'js/min/admin.js' : $steambox_url . 'js/admin.js'; ?>"></script>
   <script src="<?php echo file_exists('js/min/metatemplate.js') ? $steambox_url . 'js/min/metatemplate.js' : $steambox_url . 'js/metatemplate.js'; ?>"></script>
-  <link href="<?php echo file_exists('node_modules/bootstrap-icons/font/bootstrap-icons.min.css') ? 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' : $steambox_url . 'node_modules/bootstrap-icons/font/bootstrap-icons.css'; ?>" rel="stylesheet" media="all">
+  <link href="<?php echo file_exists('/node_modules/bootstrap-icons/font/bootstrap-icons.min.css') ? 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' : $steambox_url . 'node_modules/bootstrap-icons/font/bootstrap-icons.css'; ?>" rel="stylesheet" media="all">
 
   <link href="<?php echo $steambox_url . 'css/admin.css' ?>" rel="stylesheet" id="theme" media="all">
   <link href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'media/icon.png') ?>" rel="shortcut icon" type="image/png">
@@ -52,12 +51,13 @@ require('include/components.php');
   <link href="<?php echo sb_get_setting('manifest-url', $steambox_url . 'resources/pwa/manifest.json') ?>" rel="manifest">
   <link rel="shortcut icon" type="image/png" href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'icon.png') ?>" />
   <link href="<?php echo $steambox_url . 'css/responsive-admin.css' ?>" rel="stylesheet" media="(max-width:554px)">
-  </head>
+</head>
+
 <body>
 
-  <div  id="overlay">
+  <div id="overlay">
     <div id="loader">
-              <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : STMBX_URL . '/media/icon.svg' ?>" style="width:90px; animation:rotate-in-center 1s infinite;" alt="Loading...">
+      <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : STMBX_URL . '/media/icon.svg' ?>" style="width:90px; animation:rotate-in-center 4s infinite;" alt="Loading...">
 
     </div>
   </div>
@@ -71,7 +71,10 @@ require('include/components.php');
 
 
 </body>
-<?php if ($connection_success){ sb_js_global(); sb_js_admin();} ?>
+<?php if ($connection_success) {
+  sb_js_global();
+  sb_js_admin();
+} ?>
 <script src="js/vue.global.prod.js"></script>
 <script src="<?php echo $steambox_url . 'js/app.js' ?>"></script>
 <script src="<?php echo $steambox_url . 'js/WebAudioRecorder.min.js' ?>"></script>

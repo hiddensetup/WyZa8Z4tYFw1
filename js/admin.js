@@ -462,7 +462,7 @@
     box.find(".sb-title").html(title);
     p.html(
       (type == "alert"
-        ? '<strong style="font-size: 1.15rem;color: var(--chat-text-primary">' +
+        ? '<strong style="font-size: var(--chat-text-size-1-1);color: var(--chat-text-primary">' +
           sb_("Are you sure?") +
           "</strong> "
         : "") + sb_(text)
@@ -1057,6 +1057,8 @@
           : false;
       },
     },
+
+    
 
     whatsapp: {
       check: function (conversation) {
@@ -3628,22 +3630,97 @@
               .find(".sb-active")
               .attr("data-value");
 
-            SBChat.setConversation(response);
-            SBChat.populate();
+              SBChat.setConversation(response);
+              SBChat.populate();
+  
+              this.setReadIcon(conversation_status_code);
+              conversations_area.find(".sb-conversation-busy").remove();
+              this.updateUserDetails();
 
-            this.setReadIcon(conversation_status_code);
-            conversations_area.find(".sb-conversation-busy").remove();
-            this.updateUserDetails();
-            conversations_area
-              .find(".sb-top > a")
-              .html(
-                response.get("title").length > 24
-                  ? response.get("title").slice(0, 24) + "..."
-                  : response.get("title") + " "
-              );
+              // let phoneNumber = activeUser().getExtra("phone").value;
+              // let firstName = response.get("first_name");
+              
+              // // Construct the HTML with the phone number
+              // conversations_area.find(".sb-top > a").html(phoneNumber);
+              
+              // // Toggle between phone number and first name when clicked
+              // conversations_area.find(".sb-top > a").on("click", function() {
+              //     if ($(this).text() === phoneNumber) {
+              //         $(this).text(firstName);
+              //     } else {
+              //         $(this).text(phoneNumber);
+              //     }
+              // });
+                        
+              // let profileImage = response.get("profile_image");
+              // let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
+              // let phoneNumber = activeUser().getExtra("phone").value;
+              // let label = response.get("label");
+              
+              // // Construct the HTML with the profile image and first name
+              // let htmlContent = `<span class="open-profile-name"><img src="${profileImage}" alt="Profile Image" style="width: 2.3rem; vertical-align: bottom; border-radius: 50%; padding-right: 5px;"></span> <span>${firstName}</span>`;
+              
+              // // Set the HTML content
+              // conversations_area.find(".sb-top > a").html(htmlContent);
+              
+              // // Define the toggle states based on data availability
+              // let toggleStates = [];
+              // if (phoneNumber) toggleStates.push(phoneNumber);
+              // if (label) toggleStates.push(label);
+              // toggleStates.push(firstName);
+              
+              // // Keep track of the current toggle state
+              // let currentStateIndex = 0;
+              
+              // // Handle clicking on the profile image
+              // conversations_area.find(".open-profile-name").on("click", function() {
+              //     SBProfile.showEdit(activeUser());
+              // });
+              
+              // // Handle clicking on the first name
+              // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+              //     if (toggleStates.length > 1) {
+              //         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
+              //         $(this).text(toggleStates[currentStateIndex]);
+              //     }
+              // });
+              
+              let profileImage = response.get("profile_image");
+let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
+let phoneNumber = activeUser().getExtra("phone").value;
+let label = response.get("label");
 
-            $(".sb-list").prepend(
-              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: 1rem;" class="bi-arrow-up-circle"></i> </div>'
+// Construct the HTML with the profile image and first name
+let htmlContent = `<span class="open-profile-name"><img src="${profileImage}" alt="Profile Image" style="width: 2.3rem; vertical-align: bottom; border-radius: 50%; padding-right: 5px;"></span> <span>${firstName}</span>`;
+
+// Set the HTML content
+conversations_area.find(".sb-top > a").html(htmlContent);
+
+// Define the toggle states based on data availability
+let toggleStates = [];
+if (phoneNumber) toggleStates.push(`<i class="bi bi-phone"></i> ${phoneNumber}`);
+if (label) toggleStates.push(`<i class="bi bi-tag"></i> ${label}`);
+toggleStates.push(firstName);
+
+// Keep track of the current toggle state
+let currentStateIndex = 0;
+
+// Handle clicking on the profile image
+conversations_area.find(".open-profile-name").on("click", function() {
+    SBProfile.showEdit(activeUser());
+});
+
+// Handle clicking on the first name
+conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+    if (toggleStates.length > 1) {
+        currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
+        $(this).html(toggleStates[currentStateIndex]);
+    }
+});
+
+    $(".sb-list").prepend(
+        '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
+    
             );
 
             // Automatic translation
@@ -3764,7 +3841,7 @@
                 .html(
                   `<span data-agent="${
                     busy.id
-                  }" style="border-radius: 10px 10px 0px 0px;position: absolute;bottom: calc(100% - -1px);background: #006eff;color: #ffffff;padding: 4px 10px;font-size: .85rem;left: 4px;right: 4px;text-align: center;"><b>${
+                  }" style="border-radius: 10px 10px 0px 0px;position: absolute;bottom: calc(100% - -1px);background: #006eff;color: #ffffff;padding: 4px 10px;font-size: var(--chat-text-size-9);left: 4px;right: 4px;text-align: center;"><b>${
                     busy.first_name
                   } ${busy.last_name}</b> ${sb_(
                     "was viewing the conversation."
@@ -3802,8 +3879,8 @@
                     conversations_area
                       .find(".sb-profile-list > ul")
                       .append(
-                        `<li data-id="rating"><i class="sb-icon sb-icon-${
-                          rich_message.result.rating == 1 ? "like" : "dislike"
+                        `<li data-id="rating"><i class="sb-icon bi-${
+                          rich_message.result.rating == 1 ? "hand-thumbs-up-fill" : "hand-thumbs-down-fill"
                         }"></i><span>${sb_("User rating")}</span></li>`
                       );
                     // <label>${sb_(rich_message.result.rating == 1 ? 'Helpful' : 'Not helpful')}</label>
@@ -4183,7 +4260,7 @@
     },
 
     messageMenu: function (agent) {
-      let readTextOption = `<li data-value="read-text"> 🤖 ${sb_("Leer")}</li>`;
+      let readTextOption = `<li data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
       return `
 				<i class="sb-menu-btn bi-three-dots"></i>
 				<ul style="right: 0rem;" class="message-menu sb-menu">
@@ -4193,9 +4270,9 @@
               SB_ADMIN_SETTINGS["allow-agent-delete-message"]) ||
             (SB_ADMIN_SETTINGS["supervisor"] &&
               SB_ADMIN_SETTINGS["allow-supervisor-delete-message"])
-              ? `<li data-value="delete"><i style="font-size: 0.7rem;color: #926bff!important;padding-right:4px"  class="bi-trash"></i>${sb_(
+              ? `<li data-value="delete"><i class="bi-trash"></i> ${sb_(
                   "Delete"
-                )}</li><hr style="margin:5px; background-color: var(--chat-border-color">`
+                )}</li><hr>`
               : ""
           }
 					${readTextOption}
@@ -4245,9 +4322,7 @@
           attachments: lastMessage.attachments,
           user_id: conversation.get("user_id"),
           conversation_id: conversation.id,
-          conversation_status_code: conversation.get(
-            "conversation_status_code"
-          ),
+          conversation_status_code: conversation.get("conversation_status_code"),
           conversation_source: conversation.get("source"),
           label: conversation.get("label"),
           profile_image: conversation.get("profile_image"),
@@ -4270,16 +4345,16 @@
       const pattern = /[{,+0-9]+@s\.whatsapp\.net/g;
       message = message.replace(pattern, "");
 
-      // Replace [buttons options="..." message="..."] with <i class="sb-icon-file"></i> preserving dynamic content
+      // Replace [buttons options="..." message="..."] with <i class="bi-file-text"></i> preserving dynamic content
       message = message.replace(
         /\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g,
-        '<i class="sb-icon-file" data-options="$1" data-message="$2"></i>'
+        '<i class="bi-file-text" data-options="$1" data-message="$2"></i>'
       );
 
-      // Replace [card image="" header="" description="" link="" link-text=" " extra="" target=""] with <i class="sb-icon-file"></i>, including '}'
+      // Replace [card image="" header="" description="" link="" link-text=" " extra="" target=""] with <i class="bi-file-text"></i>, including '}'
       message = message.replace(
         /\[card[^\]]*\]/g,
-        '<i class="sb-icon-file"></i>'
+        '<i class="bi-file-text"></i>'
       );
 
       // Replace the symbols 〚 and 〛 with <i class="bi-pencil-square"></i>
@@ -4366,7 +4441,7 @@
 
           if (mediaFiles.length > 0) {
             mediaMessage =
-              `<i class="sb-icon-clip vertical-align"></i>` +
+              `<i class="bi-box"></i>` +
               " " +
               sb_("Media") +
               ": " +
@@ -4422,7 +4497,7 @@
 			<small class="source-conversation-icon"><img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
         conversation["conversation_source"]
       }.svg">
-</small>
+      </small>
 			<div class="sb-profile"><img loading="lazy" src="${
         conversation["profile_image"]
       }">
@@ -4462,14 +4537,12 @@
 						class="check-inside" />
 				</svg>
 			</div>
-	
-	
-			
 		</div>
 		</div>
 		</li> 
 		`;
     },
+
 
     newMsgTop(user = false, status) {
       const chat_list = document.querySelectorAll(
@@ -4583,7 +4656,7 @@
           conversations_area
             .find(".sb-conversation .sb-top > .sb-labels")
             .append(
-              '<span class="sb-status-typing" style="font-size:10px;">' +
+              '<span class="sb-status-typing" style="font-size: var(--chat-text-size-7);">' +
                 sb_("Typing") +
                 "</span>"
             );
@@ -5194,185 +5267,365 @@
       }
     },
 
+    // // Populate profile
+    // populate: function (user, profile_area) {
+    //   let exclude = ["first_name", "last_name", "password", "profile_image"];
+    //   let code = "";
+    //   if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
+    //     var source = SBChat.conversation.get("source");
+    //     var label = SBChat.conversation.get("label");
+    //     code = this.profileRow(
+    //       "conversation-id",
+    //       SBChat.conversation.id,
+    //       sb_("Conversation ID")
+    //     );
+    //     if (!SBF.null(label)) {
+    //       code += this.profileRow(
+    //         "conversation-label",
+    //         label,
+    //         sb_("Client status")
+    //       );
+    //     } else {
+    //       code += this.profileRow(
+    //         "conversation-label",
+    //         "Unknown",
+    //         sb_("Label")
+    //       );
+    //     }
+    //     if (!SBF.null(source)) {
+    //       code += this.profileRow(
+    //         "conversation-source",
+    //         source == "fb"
+    //           ? "Facebook"
+    //           : source == "ww"
+    //           ? "Whatsmeow"
+    //           : source == "wa"
+    //           ? "WhatsApp"
+    //           : source == "tm"
+    //           ? "Text message"
+    //           : source == "ig"
+    //           ? "Instagram"
+    //           : source == "tg"
+    //           ? "Telegram"
+    //           : source == "tk"
+    //           ? "Tickets"
+    //           : source == "wc"
+    //           ? "WeChat"
+    //           : source == "em"
+    //           ? "Email"
+    //           : source == "tw"
+    //           ? "Twitter"
+    //           : source == "bm"
+    //           ? "Google"
+    //           : source,
+    //         sb_("Source")
+    //       );
+    //     } else {
+    //       code += this.profileRow("conversation-source", "Unknown");
+    //     }
+    //   }
+    //   if (SB_ACTIVE_AGENT["user_type"] != "admin") {
+    //     exclude.push("token");
+    //   }
+    //   for (var key in user.details) {
+    //     if (!exclude.includes(key)) {
+    //       code += this.profileRow(key, user.get(key));
+    //     }
+    //   }
+    //   if (user.isExtraEmpty()) {
+    //     SBF.ajax(
+    //       {
+    //         function: "get-user-extra",
+    //         user_id: user.id,
+    //       },
+    //       (response) => {
+    //         //added ↓
+    //         for (var i = 1; i < response.length; i++) {
+    //           let slug = response[i]["slug"];
+    //           user.setExtra(slug, response[i]);
+    //           code += this.profileRow(
+    //             slug,
+    //             response[i].value,
+    //             response[i]["name"]
+    //           );
+    //         }
+    //         profile_area.html(`<ul>${code}</ul>`);
+    //         collapse(profile_area, 56);
+    //       }
+    //     );
+    //   } else {
+    //     for (var key in user.extra) {
+    //       let info = user.getExtra(key);
+    //       code += this.profileRow(key, info.value, info["name"]);
+    //     }
+    //     profile_area.html(
+    //       `<h3 class="sb-user-details-info">${sb_(
+    //         "User information"
+    //       )}</h3><ul>${code}</ul>`
+    //     );
+    //     collapse(profile_area, 56);
+    //   }
+
+    //   // Listen for change_conversation_source
+    //   $("#change-conversation-source").change(function (e) {
+    //     // Save the selected value before updating options
+    //     const selectedValue = e.target.value;
+
+    //     // Get the selected source and construct the URL
+    //     const name = e.target.options[e.target.selectedIndex].text;
+    //     const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
+
+    //     // Update the image source with the selected source
+    //     $("#conversation-source-icon").attr("src", url);
+
+    //     // Send an AJAX request to update the conversation source on the server
+    //     SBF.ajax(
+    //       {
+    //         function: "update-conversation-source",
+    //         conversation_id: SBChat.conversation.id,
+    //         source: selectedValue, // Use the saved selected value
+    //       },
+    //       (response) => {
+    //         showResponse("Required reload");
+    //         SBChat.update();
+    //         // Set the selected value back after updating options
+    //         $("#change-conversation-source").val(selectedValue);
+    //       }
+    //     );
+    //   });
+
+    //   // $("#change-conversation-source").change(function (e) {
+    //   //     // change icon of source type
+    //   //     if (e.target.value !== "Unknown") {
+    //   //         const name = e.target.options[e.target.selectedIndex].text
+    //   //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
+    //   //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
+    //   //     }
+
+    //   //     SBF.ajax({
+    //   //         function: 'update-conversation-source',
+    //   //         conversation_id: SBChat.conversation.id,
+    //   //         source: e.target.value
+    //   //     }, (response) => {
+    //   //         showResponse('Reload to change the conversation source');
+    //   //     });
+    //   // });
+
+    //   $("#change-conversation-labels").change(function (e) {
+    //     // change icon of source type
+    //     if (e.target.value !== "Unknown") {
+    //       const name = e.target.options[e.target.selectedIndex].text;
+    //       let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
+    //       $('.sb-profile-list [data-id="conversation-label"] i').attr(
+    //         "class",
+    //         labcolor
+    //       );
+    //       $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+    //         "class",
+    //         labcolor
+    //       );
+    //       $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+    //     }
+    //     SBProfile.updateLabel(e.target.value);
+    //   });
+
+    //   //change label
+    //   $("#CstBtn a").click(function (e) {
+    //     const label = $(this).attr("id");
+    //     const name = sb_(SBF.admin_set("label-names")[label] + " ");
+    //     let labcolor = `sb-icon bi-crosshair tags-${label}`;
+    //     $('.sb-profile-list [data-id="conversation-label"] i').attr(
+    //       "class",
+    //       labcolor
+    //     );
+    //     $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+    //       "class",
+    //       labcolor
+    //     );
+    //     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+    //     SBProfile.updateLabel(label);
+    //   });
+    // },
+
     // Populate profile
-    populate: function (user, profile_area) {
-      let exclude = ["first_name", "last_name", "password", "profile_image"];
-      let code = "";
-      if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
-        var source = SBChat.conversation.get("source");
-        var label = SBChat.conversation.get("label");
-        code = this.profileRow(
-          "conversation-id",
-          SBChat.conversation.id,
-          sb_("Conversation ID")
-        );
-        if (!SBF.null(label)) {
+populate: function (user, profile_area) {
+  let exclude = ["first_name", "last_name", "password", "profile_image"];
+  let code = "";
+  if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
+    var source = SBChat.conversation.get("source");
+    var label = SBChat.conversation.get("label");
+    code = this.profileRow(
+      "conversation-id",
+      SBChat.conversation.id,
+      sb_("Conversation ID")
+    );
+    if (!SBF.null(label)) {
+      code += this.profileRow(
+        "conversation-label",
+        label,
+        sb_("Client status")
+      );
+    } else {
+      code += this.profileRow(
+        "conversation-label",
+        "Unknown",
+        sb_("Label")
+      );
+    }
+    if (!SBF.null(source)) {
+      // Mapping object for source labels
+      const sourceLabels = {
+        fb: "Facebook",
+        ww: "Whatsmeow",
+        wa: "WhatsApp",
+        tm: "Text message",
+        ig: "Instagram",
+        tg: "Telegram",
+        tk: "Tickets",
+        wc: "WeChat",
+        em: "Email",
+        tw: "Twitter",
+        bm: "Google"
+      };
+
+      // Get the label directly from the mapping object
+      const sourceLabel = sourceLabels[source] || source;
+      code += this.profileRow(
+        "conversation-source",
+        sourceLabel,
+        sb_("Source")
+      );
+    } else {
+      code += this.profileRow("conversation-source", "Unknown");
+    }
+  }
+  if (SB_ACTIVE_AGENT["user_type"] != "admin") {
+    exclude.push("token");
+  }
+  for (var key in user.details) {
+    if (!exclude.includes(key)) {
+      code += this.profileRow(key, user.get(key));
+    }
+  }
+  if (user.isExtraEmpty()) {
+    SBF.ajax(
+      {
+        function: "get-user-extra",
+        user_id: user.id,
+      },
+      (response) => {
+        //added ↓
+        for (var i = 1; i < response.length; i++) {
+          let slug = response[i]["slug"];
+          user.setExtra(slug, response[i]);
           code += this.profileRow(
-            "conversation-label",
-            label,
-            sb_("Client status")
-          );
-        } else {
-          code += this.profileRow(
-            "conversation-label",
-            "Unknown",
-            sb_("Label")
+            slug,
+            response[i].value,
+            response[i]["name"]
           );
         }
-        if (!SBF.null(source)) {
-          code += this.profileRow(
-            "conversation-source",
-            source == "fb"
-              ? "Facebook"
-              : source == "ww"
-              ? "Whatsmeow"
-              : source == "wa"
-              ? "WhatsApp"
-              : source == "tm"
-              ? "Text message"
-              : source == "ig"
-              ? "Instagram"
-              : source == "tg"
-              ? "Telegram"
-              : source == "tk"
-              ? "Tickets"
-              : source == "wc"
-              ? "WeChat"
-              : source == "em"
-              ? "Email"
-              : source == "tw"
-              ? "Twitter"
-              : source == "bm"
-              ? "Google"
-              : source,
-            sb_("Source")
-          );
-        } else {
-          code += this.profileRow("conversation-source", "Unknown");
-        }
-      }
-      if (SB_ACTIVE_AGENT["user_type"] != "admin") {
-        exclude.push("token");
-      }
-      for (var key in user.details) {
-        if (!exclude.includes(key)) {
-          code += this.profileRow(key, user.get(key));
-        }
-      }
-      if (user.isExtraEmpty()) {
-        SBF.ajax(
-          {
-            function: "get-user-extra",
-            user_id: user.id,
-          },
-          (response) => {
-            //added ↓
-            for (var i = 1; i < response.length; i++) {
-              let slug = response[i]["slug"];
-              user.setExtra(slug, response[i]);
-              code += this.profileRow(
-                slug,
-                response[i].value,
-                response[i]["name"]
-              );
-            }
-            profile_area.html(`<ul>${code}</ul>`);
-            collapse(profile_area, 56);
-          }
-        );
-      } else {
-        for (var key in user.extra) {
-          let info = user.getExtra(key);
-          code += this.profileRow(key, info.value, info["name"]);
-        }
-        profile_area.html(
-          `<h3 class="sb-user-details-info">${sb_(
-            "User information"
-          )}</h3><ul>${code}</ul>`
-        );
+        profile_area.html(`<ul>${code}</ul>`);
         collapse(profile_area, 56);
       }
+    );
+  } else {
+    for (var key in user.extra) {
+      let info = user.getExtra(key);
+      code += this.profileRow(key, info.value, info["name"]);
+    }
+    profile_area.html(
+      `<h3 class="sb-user-details-info">${sb_(
+        "User information"
+      )}</h3><ul>${code}</ul>`
+    );
+    collapse(profile_area, 56);
+  }
 
-      // Listen for change_conversation_source
-      $("#change-conversation-source").change(function (e) {
-        // Save the selected value before updating options
-        const selectedValue = e.target.value;
+  // Listen for change_conversation_source
+$("#change-conversation-source").change(function (e) {
+  // Save the selected value before updating options
+  const selectedValue = e.target.value;
 
-        // Get the selected source and construct the URL
-        const name = e.target.options[e.target.selectedIndex].text;
-        const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
+  // Construct the URL using the selected source code
+  const url = `${STMBX_URL}/media/apps/${selectedValue}.svg`;
 
-        // Update the image source with the selected source
-        $("#conversation-source-icon").attr("src", url);
+  // Update the image source with the selected source
+  $("#conversation-source-icon").attr("src", url);
 
-        // Send an AJAX request to update the conversation source on the server
-        SBF.ajax(
-          {
-            function: "update-conversation-source",
-            conversation_id: SBChat.conversation.id,
-            source: selectedValue, // Use the saved selected value
-          },
-          (response) => {
-            showResponse("Required reload");
-            SBChat.update();
-            // Set the selected value back after updating options
-            $("#change-conversation-source").val(selectedValue);
-          }
-        );
-      });
-
-      // $("#change-conversation-source").change(function (e) {
-      //     // change icon of source type
-      //     if (e.target.value !== "Unknown") {
-      //         const name = e.target.options[e.target.selectedIndex].text
-      //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
-      //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
-      //     }
-
-      //     SBF.ajax({
-      //         function: 'update-conversation-source',
-      //         conversation_id: SBChat.conversation.id,
-      //         source: e.target.value
-      //     }, (response) => {
-      //         showResponse('Reload to change the conversation source');
-      //     });
-      // });
-
-      $("#change-conversation-labels").change(function (e) {
-        // change icon of source type
-        if (e.target.value !== "Unknown") {
-          const name = e.target.options[e.target.selectedIndex].text;
-          let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
-          $('.sb-profile-list [data-id="conversation-label"] i').attr(
-            "class",
-            labcolor
-          );
-          $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
-            "class",
-            labcolor
-          );
-          $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-        }
-        SBProfile.updateLabel(e.target.value);
-      });
-
-      //change label
-      $("#CstBtn a").click(function (e) {
-        const label = $(this).attr("id");
-        const name = sb_(SBF.admin_set("label-names")[label] + " ");
-        let labcolor = `sb-icon bi-crosshair tags-${label}`;
-        $('.sb-profile-list [data-id="conversation-label"] i').attr(
-          "class",
-          labcolor
-        );
-        $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
-          "class",
-          labcolor
-        );
-        $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-        SBProfile.updateLabel(label);
-      });
+  // Send an AJAX request to update the conversation source on the server
+  SBF.ajax(
+    {
+      function: "update-conversation-source",
+      conversation_id: SBChat.conversation.id,
+      source: selectedValue, // Use the saved selected value
     },
+    (response) => {
+      showResponse("Required reload");
+      SBChat.update();
+      // Set the selected value back after updating options
+      $("#change-conversation-source").val(selectedValue);
+    }
+  );
+
+  // Update the source icon directly without reloading
+  const iconClass = `sb-icon bi-${selectedValue}`;
+  $('.sb-profile-list [data-id="conversation-source"] i').attr("class", iconClass);
+});
+
+
+  // $("#change-conversation-source").change(function (e) {
+  //     // change icon of source type
+  //     if (e.target.value !== "Unknown") {
+  //         const name = e.target.options[e.target.selectedIndex].text
+  //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
+  //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
+  //     }
+
+  //     SBF.ajax({
+  //         function: 'update-conversation-source',
+  //         conversation_id: SBChat.conversation.id,
+  //         source: e.target.value
+  //     }, (response) => {
+  //         showResponse('Reload to change the conversation source');
+  //     });
+  // });
+
+  $("#change-conversation-labels").change(function (e) {
+    // change icon of source type
+    if (e.target.value !== "Unknown") {
+      const name = e.target.options[e.target.selectedIndex].text;
+      let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
+      $('.sb-profile-list [data-id="conversation-label"] i').attr(
+        "class",
+        labcolor
+      );
+      $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+        "class",
+        labcolor
+      );
+      $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+    }
+    SBProfile.updateLabel(e.target.value);
+  });
+
+  //change label
+  $("#CstBtn a").click(function (e) {
+    const label = $(this).attr("id");
+    const name = sb_(SBF.admin_set("label-names")[label] + " ");
+    let labcolor = `sb-icon bi-crosshair tags-${label}`;
+    $('.sb-profile-list [data-id="conversation-label"] i').attr(
+      "class",
+      labcolor
+    );
+    $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+      "class",
+      labcolor
+    );
+    $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+    SBProfile.updateLabel(label);
+  });
+},
+
 
     getLabel: function (label) {
       SBF.ajax(
@@ -5407,31 +5660,33 @@
     profileRow: function (key, value, name = key) {
       if (value == "") return "";
       let icons = {
-        id: "padlock",
+        id: "person-vcard",
         "conversation-label": "tag",
         "conversation-source": "tickets",
-        "conversation-id": "padlock",
-        full_name: "user",
+        "conversation-id": "person-vcard",
+        full_name: "person-bounding-box",
         email: "envelope",
         phone: "phone",
-        user_type: "user",
+        user_type: "person-bounding-box",
         last_activity: "calendar",
         creation_time: "calendar",
         token: "shuffle",
-        currency: "currency",
-        location: "marker",
-        country: "marker",
-        address: "marker",
-        city: "marker",
-        postal_code: "marker",
-        os: "desktop",
-        current_url: "next",
+        currency: "currency-exchange",
+        location: "pin-map",
+        country: "flag",
+        address: "app",
+        city: "app",
+        postal_code: "app",
+        os: "person-workspace",
+        current_url: "radar",
         timezone: "clock",
+
+        
       };
 
       //added ↑
-      let icon = `<i class="sb-icon sb-icon-${
-        key in icons ? icons[key] : "plane"
+      let icon = `<i class="sb-icon bi-${
+        key in icons ? icons[key] : "app"
       }"></i>`;
       let lowercase;
       let image = false;
@@ -6130,39 +6385,41 @@
           scrolls["last"] = scroll;
         });
 
-      $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
-        if ($(this).parent().sbActive()) {
-          admin.addClass("sb-header-hidden");
-          scrolls["always_hidden"] = true;
-          if ($(this).parent().hasClass("sb-filter-btn")) {
-            $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
+        $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
+          if ($(this).parent().sbActive()) {
+              // If the search or filter button is active
+              $(".sb-top").css("top", "+=0px"); // Add 75px to top position
+              if ($(this).parent().hasClass("sb-filter-btn")) {
+                  $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
+              }
+              // Change the icon to bi-arrow-right-circle
+              if ($(this).hasClass("bi-search")) {
+                  $(this).removeClass("bi-search").addClass("bi-three-dots");
+              } else if ($(this).hasClass("bi-three-dots")) {
+                  $(this).removeClass("bi-three-dots").addClass("bi-filter");
+              } else if ($(this).hasClass("bi-filter")) {
+                  $(this).removeClass("bi-filter").addClass("bi-arrow-right-short");
+              }
+          } else {
+              // If the search or filter button is not active
+              scrolls["always_hidden"] = false;
+              if (conversations_admin_list_ul.parent().scrollTop() < 10) {
+                  admin.removeClass("sb-header-hidden");
+                  if ($(this).parent().hasClass("sb-filter-btn")) {
+                      $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
+                  }
+                  // Change the icon back to bi-search
+                  if ($(this).hasClass("bi-arrow-right-short")) {
+                      $(this).removeClass("bi-arrow-right-short").addClass("bi-filter");
+                  } else if ($(this).hasClass("bi-filter")) {
+                      $(this).removeClass("bi-filter").addClass("bi-three-dots");
+                  } else if ($(this).hasClass("bi-three-dots")) {
+                      $(this).removeClass("bi-three-dots").addClass("bi-search");
+                  }
+              }
           }
-          // Change the icon to bi-arrow-right-circle
-          if ($(this).hasClass("bi-search")) {
-            $(this).removeClass("bi-search").addClass("bi-three-dots");
-          } else if ($(this).hasClass("bi-three-dots")) {
-            $(this).removeClass("bi-three-dots").addClass("bi-filter");
-          } else if ($(this).hasClass("bi-filter")) {
-            $(this).removeClass("bi-filter").addClass("bi-chevron-double-right");
-          }
-        } else {
-          scrolls["always_hidden"] = false;
-          if (conversations_admin_list_ul.parent().scrollTop() < 10) {
-            admin.removeClass("sb-header-hidden");
-            if ($(this).parent().hasClass("sb-filter-btn")) {
-              $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
-            }
-            // Change the icon back to bi-search
-            if ($(this).hasClass("bi-chevron-double-right")) {
-              $(this).removeClass("bi-chevron-double-right").addClass("bi-filter");
-            } else if ($(this).hasClass("bi-filter")) {
-              $(this).removeClass("bi-filter").addClass("bi-three-dots");
-            } else if ($(this).hasClass("bi-three-dots")) {
-              $(this).removeClass("bi-three-dots").addClass("bi-search");
-            }
-          }
-        }
       });
+      
 
       $(admin).on("click", "#open-modal-button", function () {
         console.log("open", admin.find(".sb-send-template-box"));
@@ -6201,14 +6458,14 @@
 
     $(conversations_area).on("click", ".sb-conversation", function () {
       $(
-        ".sb-admin-list, .sb-btn-collapse.sb-left.bi-arrow-left-circle.sb-active"
+        ".sb-admin-list, .sb-btn-collapse.sb-left.bi-arrow-left-short.sb-active"
       ).removeClass("sb-active");
     });
 
     //hide user-details
     $(conversations_area).on("click", ".sb-list, .sb-editor", function () {
       $(
-        ".sb-admin-list, .sb-btn-collapse.sb-left.bi-arrow-left-circle.sb-active"
+        ".sb-admin-list, .sb-btn-collapse.sb-left.bi-arrow-left-short.sb-active"
       ).removeClass("sb-active");
       $(".sb-user-details.sb-top.sb-active, .sb-top.sb-active").removeClass(
         "sb-active"
@@ -6535,14 +6792,6 @@
           "sb-active"
         );
       });
-
-      $(conversations_area).on(
-        "click",
-        ".sb-top .open-profile-name",
-        function () {
-          SBProfile.showEdit(activeUser()); //esteee
-        }
-      );
     });
 
     // Saved replies
@@ -6738,18 +6987,18 @@
             // Check if the response indicates success
             if (response && !response.error) {
               showResponse(
-                "<i class='bi-qr-code'></i> Message ent successfully"
+                "<i class='bi-whatsapp'></i> Message ent successfully"
               );
             } else {
               showResponse(
-                "<i class='bi-info-circle'></i> Message could not be sent to API Cloud",
+                "<i class='bi-send-exclamation'></i> Message could not be sent to API Cloud",
                 "warning"
               );
             }
           },
           (error) => {
             showResponse(
-              "<i style='vertical-align: middle;' class='bi-info-circle'></i> Failed to send message. Please try again later",
+              "<i class='bi-info-circle'></i> Failed to send message. Please try again later",
               "warning"
             );
             console.error("Error sending message to WhatsApp:", error);
@@ -6775,18 +7024,18 @@
           (response) => {
             if (response.status) {
               showResponse(
-                "<i style='vertical-align: middle;' class='bi-check-lg'></i> Message Sent to WhatsApp mobile"
+                "<i class='bi-whatsapp'></i> Message Sent to WhatsApp mobile"
               );
             } else {
               showResponse(
-                "<i style='vertical-align: middle;' class='bi-info-circle'></i> Message could not be sent. Please check your connection. ",
+                "<i class='bi-send-exclamation'></i> Message could not be sent. Please check your connection. ",
                 "warning"
               );
             }
           },
           (error) => {
             showResponse(
-              "<i style='vertical-align: middle;' class='bi-info-circle'></i> Error with WhatsApp API. Please check your connection. ",
+              "<i class='bi-info-circle'></i> Error with WhatsApp API. Please check your connection. ",
               "error"
             );
             // console.error("Error sending message to WhatsApp:", error);
@@ -8071,7 +8320,7 @@ $(".bi-search").click(function () {
         );
       }
       if (type == "template") {
-        console.log("Sending direct message...");
+        console.log("Sending messages...");
 
         SBF.ajax(
           {
@@ -8674,7 +8923,7 @@ $(".bi-search").click(function () {
                 `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
               );
               $("#whatsmeow-go .sb-setting-content").append(
-                '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: 10px;"></div></div>'
+                '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
               );
             }
           })
@@ -8874,51 +9123,52 @@ $(".bi-search").click(function () {
       });
     });
 
-    /*
+  /*
      * ----------------------------------------------------------
      * Recording MP3 for chat
      * ----------------------------------------------------------
      */
 
-    const recButton = document.getElementById("recordButton");
-    const stopButton = document.getElementById("stopButton");
-    const sending = document.querySelector(".bi-arrow-up-circle-fill");
-    const textArea = document.querySelector(".sb-textarea>textarea");
+  const recButton = document.getElementById("recordButton");
+  const stopButton = document.getElementById("stopButton");
+  const sending = document.querySelector(".bi-arrow-up-circle-fill");
+  const textArea = document.querySelector(".sb-textarea>textarea");
 
-    sending.addEventListener("click", () => {
+  sending.addEventListener("click", () => {
+    recButton.classList.remove("sb-hide");
+    setTimeout(() => {
+      sending.classList.add("sb-hide");
+    }, 10);
+  });
+
+  textArea.addEventListener("input", () => {
+    if (textArea.value.trim() === "") {
+      sending.classList.add("sb-hide");
+    } else {
+      sending.classList.remove("sb-hide");
       recButton.classList.remove("sb-hide");
-      setTimeout(() => {
-        sending.classList.add("sb-hide");
-      }, 10);
-    });
-
-    textArea.addEventListener("input", () => {
-      if (textArea.value.trim() === "") {
-        sending.classList.add("sb-hide");
-      } else {
-        sending.classList.remove("sb-hide");
-        recButton.classList.remove("sb-hide");
-      }
-    });
-
-    recButton.addEventListener("click", () => {
-      document.querySelector(".bi-mic-fill").classList.add("sb-hide");
-      // Show the send icon after a timeout
-      showSendIconAfterTimeout();
-    });
-
-    stopButton.addEventListener("click", () => {
-      document.querySelector(".bi-mic-fill").classList.remove("sb-hide");
-      // Show the send icon after a timeout
-      showSendIconAfterTimeout();
-    });
-
-    // Function to show the send icon after a timeout
-    function showSendIconAfterTimeout() {
-      setTimeout(() => {
-        document.querySelector(".bi-arrow-up-circle-fill").classList.remove("sb-hide");
-      }, 500); // Adjust the timeout duration as needed
     }
+  });
+
+  recButton.addEventListener("click", () => {
+    document.querySelector(".bi-mic-fill").classList.add("sb-hide");
+    // Show the send icon after a timeout
+    showSendIconAfterTimeout();
+  });
+
+  stopButton.addEventListener("click", () => {
+    document.querySelector(".bi-mic-fill").classList.remove("sb-hide");
+    // Show the send icon after a timeout
+    showSendIconAfterTimeout();
+  });
+
+  // Function to show the send icon after a timeout
+  function showSendIconAfterTimeout() {
+    setTimeout(() => {
+      document.querySelector(".bi-arrow-up-circle-fill").classList.remove("sb-hide");
+    }, 500); // Adjust the timeout duration as needed
+  }
+
 
     /*
      * ----------------------------------------------------------
@@ -9745,7 +9995,7 @@ $(".bi-search").click(function () {
       F =
         '<div class="cp-color-picker"><div class="cp-z-slider"><div class="cp-z-cursor"></div></div><div class="cp-xy-slider"><div class="cp-white"></div><div class="cp-xy-cursor"></div></div><div class="cp-alpha"><div class="cp-alpha-cursor"></div></div></div>',
       H =
-        ".cp-color-picker{position:absolute;overflow:hidden;padding:6px 6px 0;background-color:#444;color:#bbb;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;cursor:default;border-radius:5px}.cp-color-picker>div{position:relative;overflow:hidden}.cp-xy-slider{float:left;height:128px;width:128px;margin-bottom:6px;background:linear-gradient(to right,#FFF,rgba(255,255,255,0))}.cp-white{height:100%;width:100%;background:linear-gradient(rgba(0,0,0,0),#000)}.cp-xy-cursor{position:absolute;top:0;width:10px;height:10px;margin:-5px;border:1px solid #fff;border-radius:100%;box-sizing:border-box}.cp-z-slider{float:right;margin-left:6px;height:128px;width:20px;background:linear-gradient(red 0,#f0f 17%,#00f 33%,#0ff 50%,#0f0 67%,#ff0 83%,red 100%)}.cp-z-cursor{position:absolute;margin-top:-4px;width:100%;border:4px solid #fff;border-color:transparent #fff;box-sizing:border-box}.cp-alpha{clear:both;width:100%;height:16px;margin:6px 0;background:linear-gradient(to right,#444,rgba(0,0,0,0))}.cp-alpha-cursor{position:absolute;margin-left:-4px;height:100%;border:4px solid #fff;border-color:#fff transparent;box-sizing:border-box}",
+        ".cp-color-picker{position:absolute;overflow:hidden;padding:6px 6px 0;background-color:#444;color:#bbb;font-family:Arial,Helvetica,sans-serif;font-size: var(--chat-text-size-8);font-weight:400;cursor:default;border-radius:5px}.cp-color-picker>div{position:relative;overflow:hidden}.cp-xy-slider{float:left;height:128px;width:128px;margin-bottom:6px;background:linear-gradient(to right,#FFF,rgba(255,255,255,0))}.cp-white{height:100%;width:100%;background:linear-gradient(rgba(0,0,0,0),#000)}.cp-xy-cursor{position:absolute;top:0;width:10px;height:10px;margin:-5px;border:1px solid #fff;border-radius:100%;box-sizing:border-box}.cp-z-slider{float:right;margin-left:6px;height:128px;width:20px;background:linear-gradient(red 0,#f0f 17%,#00f 33%,#0ff 50%,#0f0 67%,#ff0 83%,red 100%)}.cp-z-cursor{position:absolute;margin-top:-4px;width:100%;border:4px solid #fff;border-color:transparent #fff;box-sizing:border-box}.cp-alpha{clear:both;width:100%;height:16px;margin:6px 0;background:linear-gradient(to right,#444,rgba(0,0,0,0))}.cp-alpha-cursor{position:absolute;margin-left:-4px;height:100%;border:4px solid #fff;border-color:#fff transparent;box-sizing:border-box}",
       D = function (r) {
         (b = (f = this.color = new o(r)).options), ($ = this);
       };
@@ -9825,11 +10075,11 @@ $(".bi-search").click(function () {
 window.addEventListener("load", function () {
   const n = document.getElementById("overlay"),
     e = document.documentElement;
-  (n.style.animation = "load 1s reverse"),
+  (n.style.animation = "load 1.6s reverse"),
     n.addEventListener("animationend", function () {
       (n.style.display = "none"),
         e.addEventListener("animationend", function () {
-          e.style.animation = "fade-in .5s ease-out";
+          e.style.animation = "fade-in .8s ease-out";
         });
     });
 });

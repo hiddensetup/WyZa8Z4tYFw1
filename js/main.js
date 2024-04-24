@@ -1170,7 +1170,7 @@
             attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
               response[1]
             }" data-id="${response[2]}">
-                                    <audio controls style="max-width: 100%; max-height: 33px; border-radius: .6rem;">
+                                    <audio controls style="max-width: 100%; max-height: 33px; border-radius: var(--chat-rounded-size-6);">
                                       <source src="${
                                         response[1]
                                       }" type="audio/${response[1]
@@ -2191,11 +2191,11 @@
           } else if (
             attachments.toString().substr(attachments.length - 4) === "mp4"
           ) {
-            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:8px;"><source src="${url}"  type="video/mp4"></video></a>`;
+            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
           } else {
             media_code += `${
               url
-                ? `<a rel="noopener" style="text-decoration:none; padding:4px" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
+                ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
                 : " "
             }`;
           }
@@ -2275,14 +2275,16 @@
                                     this.details["creation_time"],
                                     true
                                   )}
-                                  </div><small id="server-response"></small></div>
+                                  </div></div>
                           </div>${admin_menu}</div>`;
       } else {
         // MESSAGE CREATION CHAT
         code = `<div data-id="${
           this.details["id"]
         }" ${type}  class="sb-shadow-conversation ${css}"  style="transition: 0.3s all">${thumb}
+        <div class="server-response"> <i class="bi-check2-all"></i></div>
 				  <div class="sb-cnt" style="width:fit-content;margin:6px;">
+                 
 				  <div class="sb-message" data-value="${
             this.linksData
               ? encodeURIComponent(this.linksData.message)
@@ -2290,14 +2292,14 @@
           }">
 				  ${media_code}
 				 
-				  <div style="margin:0px;text-align:start;margin:0px;cursor:pointer;padding:0px 4px" class="copyTextOnClick">
+				  <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" class="copyTextOnClick">
 					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
 				  </div>
 				</div>
 				${attachments_code}<div class="menu-bubble"><div class="sb-time">${SBF.beautifyTime(
           this.details["creation_time"],
           true
-        )}</div><small id="server-response"></small></div>
+        )}</div></div>
 				  </div>
 				  ${admin_menu}
 				</div>
@@ -2401,7 +2403,7 @@
       message = message.replace(
         regex,
         (match) =>
-          `<i class="sb-icon-marker" style="vertical-align:middle;padding-left:10px;"></i> <span style="color: #2196F3;">${sb_(
+          `<i class="bi-send" style="vertical-align:middle;padding-left:10px;"></i> <span style="color: #2196F3;">${sb_(
             "Location"
           )}</span>`
       );
@@ -4867,7 +4869,9 @@
             break;
           case "info":
             chat.prepend(
-              `<div class="sb-notify-message sb-rich-cnt"><div class="sb-cnt"><div class="sb-message">${
+              `<div class="sb-notify-message sb-rich-cnt">
+              <div class="server-response"> <i class="bi-check2-all"></i></div>
+              <div class="sb-cnt"><div class="sb-message">${
                 message[0] ? `<strong>${message[0]}</strong> ` : ""
               }${message[1]}</div></div></div>`
             );
@@ -5023,7 +5027,7 @@
             attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
               response[1]
             }" data-id="${response[2]}">
-                                <audio controls style="max-width: 100%; max-height: 33px; border-radius: .6rem;">
+                                <audio controls style="max-width: 100%; max-height: 33px; border-radius: var(--chat-rounded-size-6);">
                                   <source src="${
                                     response[1]
                                   }" type="audio/${response[1]
@@ -7384,103 +7388,103 @@
         .removeClass("sb-conversations-hidden");
     });
 
-    // Events uploader
-    $(chat_editor).on("click", ".bi-paperclip", function () {
-      if (!SBChat.is_busy) {
-        chat_editor.find(".sb-upload-files").val("").click();
-        chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+  // Events uploader
+  $(chat_editor).on("click", ".bi-paperclip", function () {
+    if (!SBChat.is_busy) {
+      chat_editor.find(".sb-upload-files").val("").click();
+      chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
 
-        console.log("to upload file");
-      }
+      console.log("to upload file");
+    }
+  });
+
+  $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
+    $(this).parent().remove();
+    if (
+      chat_textarea.val() == "" &&
+      chat_editor.find(".sb-attachments > div").length == 0
+    ) {
+      SBChat.activateBar(false);
+    }
+    e.preventDefault();
+    return false;
+  });
+
+  $(chat_editor).on("change", ".sb-upload-files", function (data) {
+    SBChat.busy(true);
+    $(this).sbUploadFiles(function (response) {
+      SBChat.uploadResponse(response);
     });
 
-    $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
-      $(this).parent().remove();
-      if (
-        chat_textarea.val() == "" &&
-        chat_editor.find(".sb-attachments > div").length == 0
-      ) {
-        SBChat.activateBar(false);
-      }
-      e.preventDefault();
-      return false;
-    });
+    SBF.event("SBAttachments");
+  });
 
-    $(chat_editor).on("change", ".sb-upload-files", function (data) {
-      SBChat.busy(true);
-      $(this).sbUploadFiles(function (response) {
-        SBChat.uploadResponse(response);
-      });
+  $(chat_editor).on("dragover", function (e) {
+    $(this).addClass("sb-drag");
+    clearTimeout(timeout);
+    e.preventDefault();
+    e.stopPropagation();
+    // Show the send icon after a timeout
+    showSendIconAfterTimeout();
+  });
 
-      SBF.event("SBAttachments");
-    });
-
-    $(chat_editor).on("dragover", function (e) {
-      $(this).addClass("sb-drag");
-      clearTimeout(timeout);
-      e.preventDefault();
-      e.stopPropagation();
+  $(chat_editor).on("dragleave", function (e) {
+    timeout = setTimeout(() => {
+      $(this).removeClass("sb-drag");
       // Show the send icon after a timeout
       showSendIconAfterTimeout();
-    });
+    }, 200);
+    e.preventDefault();
+    e.stopPropagation();
+  });
 
-    $(chat_editor).on("dragleave", function (e) {
-      timeout = setTimeout(() => {
-        $(this).removeClass("sb-drag");
-        // Show the send icon after a timeout
-        showSendIconAfterTimeout();
-      }, 200);
-      e.preventDefault();
-      e.stopPropagation();
-    });
-
-    $(chat_editor).on("drop", function (e) {
-      let files = e.originalEvent.dataTransfer.files;
-      e.preventDefault();
-      e.stopPropagation();
-      if (files.length > 0) {
-        for (var i = 0; i < files.length; ++i) {
-          let form = new FormData();
-          form.append("file", files[i]);
-          SBF.upload(form, function (response) {
-            SBChat.uploadResponse(response);
-          });
-        }
+  $(chat_editor).on("drop", function (e) {
+    let files = e.originalEvent.dataTransfer.files;
+    e.preventDefault();
+    e.stopPropagation();
+    if (files.length > 0) {
+      for (var i = 0; i < files.length; ++i) {
+        let form = new FormData();
+        form.append("file", files[i]);
+        SBF.upload(form, function (response) {
+          SBChat.uploadResponse(response);
+        });
       }
-      $(this).removeClass("sb-drag");
-      return false;
-    });
-
-    // Function to show the send icon after a timeout
-    function showSendIconAfterTimeout() {
-      setTimeout(() => {
-        $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
-      }, 500); // Adjust the timeout duration as needed
     }
+    $(this).removeClass("sb-drag");
+    return false;
+  });
 
-    // Articles
-    $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
-      SBChat.showArticles();
-    });
+  // Function to show the send icon after a timeout
+  function showSendIconAfterTimeout() {
+    setTimeout(() => {
+      $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+    }, 500); // Adjust the timeout duration as needed
+  }
 
-    $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
-      SBChat.showArticles($(this).attr("data-id"));
-    });
+  // Articles
+  $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
+    SBChat.showArticles();
+  });
 
-    $(main).on(
-      "click",
-      ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
-      function () {
-        SBChat.searchArticles(
-          $(this).parent().find("input").val(),
-          this,
-          $(this).parent().next()
-        );
-      }
-    );
+  $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
+    SBChat.showArticles($(this).attr("data-id"));
+  });
 
-    $(global).on("click", ".sb-article [data-rating]", function () {
-      SBChat.articleRatingOnClick(this);
+  $(main).on(
+    "click",
+    ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
+    function () {
+      SBChat.searchArticles(
+        $(this).parent().find("input").val(),
+        this,
+        $(this).parent().next()
+      );
+    }
+  );
+
+  $(global).on("click", ".sb-article [data-rating]", function () {
+    SBChat.articleRatingOnClick(this);
     });
 
     $(chat).on("click", ".sb-rich-button a", function (e) {

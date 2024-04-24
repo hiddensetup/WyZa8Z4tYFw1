@@ -4041,7 +4041,7 @@ function sb_send_agents_notifications(
                 $user["profile_image"],
                 (isset($extra["email"]) ? $extra["email"] : $message) .
                     ($bottom_message
-                        ? '<br><br><span style="color:#a8a8a8;font-size:12px;">' .
+                        ? '<br><br><span style="color:#a8a8a8;font-size: var(--chat-text-size-8);">' .
                         $bottom_message .
                         "</span>"
                         : ""),
@@ -5819,7 +5819,7 @@ function sb_get_setting_code($setting)
             sb_s($setting["title"]) .
             ' <i class="sb-icon-arrow-down settings-button" style="vertical-align: middle;"></i></h2><p class="active">' .
             sb_s($setting["content"]) .
-            (isset($setting["help"]) ? '<a href="' . $setting["help"] . '" target="_blank" style=" font-size: .85rem; color: var(--pink-root-color); line-height: 0; " class="bi-info-circle"></a>' : "") .
+            (isset($setting["help"]) ? '<a href="' . $setting["help"] . '" target="_blank" style=" font-size: var(--chat-text-size-9); color: var(--pink-root-color); line-height: 0; " class="bi-info-circle"></a>' : "") .
             '</p></div><div class="active input">';
         switch ($type) {
             case "multi-input":
@@ -5987,7 +5987,7 @@ function sb_get_setting_code($setting)
                 break;
             case "cta":
                 $content .=
-                    '<div class="active input" style="max-width: 100%;margin: 10px auto;border-radius: 10px;padding: 10px 20px;text-align: center;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);display: flex;flex-direction: column;justify-content: center;align-items: center;height: 200px;"> <p style=" font-size: 1.1em; color: white; ">Multiple Business in your hands ⚡️  <strong>Stemboxchat</strong>! </p> <ul style=" list-style-type: none; padding: 0; margin: 0; "> <!-- Add your list items here if needed --> </ul> </div>';
+                    '<div class="active input" style="max-width: 100%;margin: 10px auto;border-radius:  var(--chat-rounded-size-7);padding: 10px 20px;text-align: center;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);display: flex;flex-direction: column;justify-content: center;align-items: center;height: 200px;"> <p style=" font-size: 1.1em; color: white; ">Multiple Business in your hands ⚡️  <strong>Stemboxchat</strong>! </p> <ul style=" list-style-type: none; padding: 0; margin: 0; "> <!-- Add your list items here if needed --> </ul> </div>';
                 break;
             case "select":
                 $values = $setting["value"];
@@ -9428,30 +9428,30 @@ function sb_component_editor($admin = false)
 
         <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
 
-            <div class="menu-plus bi-plus-lg"></div>
+<div class="menu-plus bi-plus-lg"></div>
 
-            <div style="min-height: 25px;" class="sb-textarea">
-                <?php
-                // Placeholder values, replace these with your actual data
-                $source = "wa"; // Placeholder value for the conversation source
-                $hiddenStyle = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
-                ?>
-                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
-            </div>
+<div style="min-height: 25px;" class="sb-textarea">
+    <?php
+    // Placeholder values, replace these with your actual data
+    $source = "wa"; // Placeholder value for the conversation source
+    $hiddenStyle = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
+    ?>
+    <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+</div>
 
-            <div class="sb-bar sb-space-between">
-                <div id='btns'>
-                    <select style="display: none;" id="encodingTypeSelect">
-                        <option selected value="mp3">.mp3</option>
-                    </select>
-                </div>
-                <div id='recordButton' class="bi-mic-fill start stop-time"  data-sb-tooltip=""></div>
-                <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
-                <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
-                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+<div class="sb-bar sb-space-between">
+    <div id='btns'>
+        <select style="display: none;" id="encodingTypeSelect">
+            <option selected value="mp3">.mp3</option>
+        </select>
+    </div>
+    <div id='recordButton' class="bi-mic-fill start stop-time"  data-sb-tooltip=""></div>
+    <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
+    <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
+    <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
 
-            </div>
-        </div>
+</div>
+</div>
 
 
         <?php if ($admin) { ?>
@@ -9483,7 +9483,7 @@ function sb_component_editor($admin = false)
 
             <div class="sb-popup sb-replies">
                 <div class="sb-header" style="justify-content: space-between;margin: -7px -2px -7px auto;">
-                    <div style="line-height: 30px;font-size: 1.15rem;white-space: pre;"><?php sb_e("Saved replies"); ?></div>
+                    <div style="line-height: 30px;font-size: var(--chat-text-size-1-1);white-space: pre;"><?php sb_e("Saved replies"); ?></div>
                     <div class="sb-search-btn">
                         <i class="sb-icon bi-search"></i>
                         <input type="text" autocomplete="false" placeholder="<?php sb_e(

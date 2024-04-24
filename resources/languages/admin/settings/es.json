@@ -693,7 +693,7 @@
     "When response is #": "<i style='color:var(--color-calendar-text)' class='bi-chat-square-text-fill'></i> Si la respuesta es #",
     "<p>show this message</p>": "<i style='color:var(--blue-root-color);' class='bi-robot'></i> Responde automáticamente",
     "<p>and assign to department ID</p>": "<i style='color:var(--color-green);' class='bi-shuffle'></i> Derivar al departamento # (opcional)",
-    "Fallback message": "<i style='color:var(--pink-root-color);' class='bi-close-lg'></i> Mensaje de error",
+    "Fallback message": "<i style='color:var(--pink-root-color);' class='bi-x-lg'></i> Mensaje de error",
     "Welcome message": "<i style='olor:var(--blue-root-color);'class='bi-menu-button-wide-fill'></i> Menú de bienvenida",
     "Whmcs admin URL": "URL de administrador de Whmcs",
     "Whmcs admin URL. Ex. https://example.com/whmcs/admin/": "URL de administrador de Whmcs. Ex. https://example.com/whmcs/admin/",
