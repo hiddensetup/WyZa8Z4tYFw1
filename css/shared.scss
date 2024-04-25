@@ -2041,6 +2041,7 @@ a.sb-btn {
     >div {
       background-color: var(--chat-border-color);
       color: var(--chat-app-background);
+      line-height: 18px;
       height: 42px;
       line-height: 47px;
       margin-left: -3px;
@@ -2624,7 +2625,7 @@ a.sb-btn {
     cursor: pointer;
     font-weight: lighter;
     letter-spacing: 0.3px;
-    font-size: var(--chat-text-size-1-1) !important;
+    font-size: var(--chat-text-size-1-2) !important;
     line-height: 30px !important;
     white-space: nowrap;
     overflow: hidden;
@@ -2724,6 +2725,7 @@ div ul.sb-menu,
   box-shadow: var(--box-shadow-menu);
 
   &.sb-active {
+    line-height: 34px;
     display: block;
     margin-bottom: 15px;
     background-color: var(--chat-background-menu);
@@ -2741,7 +2743,7 @@ div ul.sb-menu,
   li {
     cursor: pointer;
     padding: 4px;
-    font-size: var(--chat-text-size-9);
+    font-size: var(--chat-text-size-1-0);
     letter-spacing: .3px;
     white-space: nowrap;
     list-style: none;
@@ -3951,15 +3953,16 @@ textarea::placeholder {
 }
 
 .textarea-api {
-  background: var(--chat-bubble-agent) !important;
-  font-size: 0.8rem !important;
-  padding: var(--chat-spacing-size-8) !important;
-  line-height: normal !important;
-  color: var(--chat-text-primary) !important;
-  max-width: 80%;
-  border-radius: var(--chat-rounded-bubble-agent-6);
-  border: none !important;
-  box-shadow: var(--box-shadow-bubble-chat);
+  background: var(--chat-bubble-info-background) !important;
+    font-size: .8rem !important;
+    padding: var(--chat-spacing-size-8) !important;
+    line-height: normal !important;
+    color: var(--chat-text-bubble-info) !important;
+    max-width: 80%;
+    border-radius: var(--chat-rounded-bubble-agent-6);
+    border: none !important;
+    box-shadow: var(--box-shadow-bubble-chat);
+    font-size: small !important;
 }
 
 .profile-bubble-message {

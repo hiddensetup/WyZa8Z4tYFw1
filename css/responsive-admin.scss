@@ -1779,6 +1779,7 @@ a.sb-btn {
     background: url(/media/whatsapp-bkg.png), var(--chat-conversation-background);
     padding: var(--chat-spacing-size-8);
     border-radius: var(--chat-rounded-size-8);
+    background-size: contain;
 }
 
 .sb-profile-edit-box,
