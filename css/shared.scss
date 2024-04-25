@@ -958,11 +958,12 @@ div ul.sb-menu,
 
   &.sb-active {
     opacity: 1;
-    font-size: 0.75rem;
+    font-size: .75rem;
     text-align: center;
     background-color: var(--color-green);
     color: var(--chat-app-background);
     padding: 5px;
+    font-weight: 500;
   }
 
   &:empty {
