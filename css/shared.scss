@@ -148,9 +148,10 @@ sb-hidden {
 }
 
 .profile-top-circle:active {
-box-shadow: var(--box-shadow-bubble-chat);
-scale: .95;
+  box-shadow: var(--box-shadow-bubble-chat);
+  scale: .95;
 }
+
 .rotate-in-center {
   -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -382,7 +383,7 @@ div ul.sb-menu,
     border-bottom: 0.5px solid var(--color-green);
     border-right: 0.5px solid var(--color-green);
     border-left: 4px solid var(--color-green);
-    background: var(--chat-app-background)!important;
+    background: var(--chat-app-background) !important;
     max-width: 380px;
     margin: 0px 0px 5px auto !important;
 
@@ -407,29 +408,29 @@ div ul.sb-menu,
         display: flex;
         justify-content: space-between;
         opacity: 0.85;
-      
-        > span {
+
+        >span {
           white-space: nowrap;
           font-size: var(--chat-text-size-9);
         }
-      
-        > span:first-child {
+
+        >span:first-child {
           overflow: hidden;
           margin-right: 15px;
           font-weight: 500;
         }
-      
-        > span.sb-time {
+
+        >span.sb-time {
           display: inline-block;
-       
+
           font-size: var(--chat-text-size-7);
           line-height: 26px;
           letter-spacing: .3px;
-     
+
           font-weight: 400;
         }
       }
-      
+
 
       .sb-message {
         font-weight: 400;
@@ -491,7 +492,7 @@ div ul.sb-menu,
   flex-direction: column;
   margin-top: 10px;
   padding: 10px;
-  border-radius:  var(--chat-rounded-size-7);
+  border-radius: var(--chat-rounded-size-7);
   width: calc(100% - 20px);
   border: 0.5px solid var(--chat-border-color);
   // background: var(--glassbkg);
@@ -582,7 +583,7 @@ div ul.sb-menu,
       float: right;
       margin: 30px 20px 20px 30px;
       background: var(--chat-bubble-agent);
-      color: var(--chat-text-primary);
+      color: var(--chat-text-bubble-agent);
       border-radius: 0.7rem 0rem 0.7rem 0.7rem;
 
       .sb-thumb {
@@ -693,7 +694,7 @@ div ul.sb-menu,
   /* Add closing bracket for .sb-message */
 
   a {
-    color: var(--blue-root-color);
+    color: var(--chat-text-url);
     text-decoration: none;
   }
 
@@ -1121,7 +1122,7 @@ div ul.sb-menu,
     resize: none !important;
     border: none !important;
     color: var(--chat-text-primary) !important;
-    background: var(--chat-app-background) !important;
+    background: var(--chat-input-background) !important;
     transition: var(--transition);
     -webkit-transition: var(--transition-2);
     display: block;
@@ -1182,7 +1183,7 @@ div ul.sb-menu,
     flex-direction: row;
     gap: 25px;
     position: absolute;
-    background: var(--chat-top-bar-color);
+    background: var(--chat-background-menu);
     bottom: calc(100% - 2px);
     right: 0;
     font-size: var(--chat-text-size-1-2);
@@ -1191,18 +1192,17 @@ div ul.sb-menu,
     margin: 8px 3px;
     border-radius: .6rem .0rem .0rem .6rem;
     box-shadow: var(--box-shadow-bubble-chat);
-    border: .8px solid var(--chat-border-color);
 
     >div {
-width: 21px;
-    height: 24px;
-    margin-right: 0;
-    position: relative;
-    cursor: pointer;
-    border-radius: var(--chat-rounded-size-3);
-    padding: 3px 5px;
-    box-shadow: var(--box-shadow-bubble-chat);
-    border: 0.8px solid var(--chat-border-color);
+      width: 21px;
+      height: 24px;
+      margin-right: 0;
+      position: relative;
+      cursor: pointer;
+      border-radius: var(--chat-rounded-size-3);
+      padding: 3px 5px;
+      box-shadow: var(--box-shadow-bubble-chat);
+      border: 0.8px solid var(--chat-border-color);
 
 
       &:active {
@@ -1540,10 +1540,9 @@ width: 21px;
   position: absolute;
   bottom: 0;
   right: 3px;
-  z-index: 0;
+  z-index: 1;
   font-size: var(--chat-text-size-9);
   color: var(--chat-text-secondary);
-  transition: var(--transition-2);
   background: inherit;
   border-radius: .6rem;
   padding: .2rem;
@@ -1674,7 +1673,7 @@ width: 21px;
   line-height: 41px;
   letter-spacing: 0.3px;
   font-weight: 500;
-  border-radius:  12px 0px 0px 12px;
+  border-radius: 12px 0px 0px 12px;
   min-width: 0;
   text-decoration: none;
   height: 35px;
@@ -1695,7 +1694,7 @@ width: 21px;
 
 .sb-btn,
 a.sb-btn {
-  border-radius:  var(--chat-rounded-size-8);
+  border-radius: var(--chat-rounded-size-8);
   font-size: var(--chat-text-size-9);
   line-height: 34px;
   letter-spacing: 0.3px;
@@ -1854,7 +1853,7 @@ a.sb-btn {
 
   &:active {
     scale: .8;
-    background: var(--chat-app-theme-color)!important;
+    background: var(--chat-app-theme-color) !important;
     color: var(--chat-text-white-or-black);
 
     .sb-close {
@@ -2312,19 +2311,19 @@ a.sb-btn {
 
 .top-image-profile {
 
-    width: 2.3rem;
-    height: 2.3rem;
-    vertical-align: bottom;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow-bubble-chat);
+  width: 2.3rem;
+  height: 2.3rem;
+  vertical-align: bottom;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow-bubble-chat);
 
-    &:active {
-      scale:.95;
-      background: var(--chat-app-theme-color);
-      transition: var(--transition);
-      -webkit-transition: var(--transition);
+  &:active {
+    scale: .95;
+    background: var(--chat-app-theme-color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
 
-    }
+  }
 }
 
 /*
@@ -3794,10 +3793,10 @@ textarea::placeholder {
 
 .phone-number {
   position: absolute;
-  top: 12px;
-  left: 75px;
+  bottom: 3px;
+  right: 13px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: .6rem;
   color: var(--chat-text-tertiary);
   letter-spacing: 1px;
   font-weight: 400;
@@ -3928,8 +3927,8 @@ textarea::placeholder {
 
 .client-status {
   position: absolute;
-  left: 0.5px;
-  bottom: 46px;
+  right: 0.5px;
+  bottom: 1px;
 }
 
 
@@ -3940,7 +3939,7 @@ textarea::placeholder {
   background: url(/media/whatsapp-bkg.png), var(--chat-conversation-background);
   padding: 21px 0px 21px 0px !important;
   border: 0.5px solid var(--chat-border-color);
-  border-radius:  var(--chat-rounded-size-8);
+  border-radius: var(--chat-rounded-size-8);
   margin: 5px;
 }
 
@@ -3957,11 +3956,11 @@ textarea::placeholder {
 }
 
 .profile-bubble-message {
-  background: var(--chat-bubble-agent) !important;
+  background: var(--chat-bubble-info-background) !important;
   padding: var(--chat-spacing-size-8) !important;
   margin: 10px 0px 10px auto !important;
   line-height: normal !important;
-  color: var(--chat-text-primary) !important;
+  color: var(--chat-text-bubble-info) !important;
   max-width: 80%;
   border-radius: var(--chat-rounded-bubble-agent-6);
   border: none !important;
@@ -4061,33 +4060,16 @@ div {
   }
 }
 
-.styling-caller  {
-font-size:1rem;
-border-radius: 50%;
-padding: 2px 3px;
-
-&:active {
-  transition: var(--transition);
-  -webkit-transition: var(--transition);
-
-    color: var(--chat-text-white-or-black);
-    background: var(--chat-app-theme-color);
-    border-radius: 50%;
-    padding: 2px 3px;
-  }
-}
-
 .api-cloud-notif {
   position: absolute;
   left: 50%;
-  transform: translate(-50%,-75%);
+  transform: translate(-50%, -75%);
   transition: var(--transition);
-
-  background-color: var(--yellow-root-color-pastel);
+  background-color: white;
   padding: 10px;
   display: block;
   visibility: visible;
-  font-size: .6em;
+  font-size: .8em;
   top: 24px;
   width: 92.8%;
   z-index: 99;
@@ -4095,8 +4077,10 @@ padding: 2px 3px;
   height: 80px;
   box-shadow: var(--box-shadow);
   border-radius: var(--chat-rounded-size-6);
+  color: var(--chat-text-bubble-info);
 
-  &:active, &:hover {
+  &:active,
+  &:hover {
     transform: translate(-50%, -85%);
     transition: var(--transition);
 

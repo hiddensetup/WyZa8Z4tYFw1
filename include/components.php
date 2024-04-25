@@ -302,30 +302,33 @@ function sb_login_box()
                 ?>
 
             </div>
-            <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/icon.svg' ?>" />
+            <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
         </div>
         <div class="sb-main" id="email">
             <div class="sb-input">
-                <label style="color: var(--chat-text-white-or-black);" for="text"><?php sb_e('Email') ?></label>
-                <input type="text" />
+                <label style="color: var(--chat-text-primary);" for="text"><?php sb_e('Email') ?></label>
+                <input style="    width: calc(100% - 30px);
+" type="text" />
             </div>
             <div class="sb-block-space"></div>
             <div class="sb-input" id="password">
-                <label style="color:var(--chat-text-white-or-black);" for="password"><?php sb_e('Password') ?></label>
-                <input type="password" />
+                <label style="color:var(--chat-text-primary);" for="password"><?php sb_e('Password') ?></label>
+                <input style="    width: calc(100% - 30px);
+" type="password" />
             </div>
             <div class="sb-bottom">
-                <div style="padding: 5px 100px;margin-top: 0px!important;" class="sb-btn sb-submit-login"><?php sb_e('Login') ?></div>
+                <div style="padding: 5px 90px;margin-top: 0px!important;width: fit-content!important;"" class="sb-btn sb-submit-login"><?php sb_e('Login') ?></div>
 
             </div>
 
 
         </div>
 
-        <div class="sb-text">
+        <div style="display: flex;flex-wrap: wrap;justify-content: center;" class="sb-text">
             <div style="margin: 1rem auto;max-width: 270px;" class="sb-info"></div>
-            <small style=" color: var(--bubble-client-sb);bottom: 1rem; position: fixed; left: 0; right: 0; margin: 0 1rem; ">&copy; <?php echo date("Y"); ?> Steamboxchat - All rights reserved</small>
-            <a target="_blank" style="font-size: var(--chat-text-size-9); text-decoration: none; color: var(--chat-border-color); " href="https://steamboxchat.com/privacy"> Privacy Policy</a> <br> <a style=" text-decoration: none; color: var(--chat-border-color);font-size: var(--chat-text-size-9);  " target="_blank" href="https://steamboxchat.com/terms"> Terms and Condition</a>
+           
+            <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
+            <small>&copy; <?php echo date("Y"); ?> Steamboxchat - All rights reserved</small>
 
         </div>
     </form>
@@ -744,16 +747,20 @@ const updateTheme = () => {
     switch (currentTheme) {
         case 'dark':
             newTheme = 'light';
-            newThemeColor = '#186b64'; // Light theme color
+            newThemeColor = 'white'; // Light theme color
             break;
         case 'light':
-            newTheme = 'whatsapp';
-            newThemeColor = '#fafafb'; // WhatsApp theme color
+            newTheme = 'app';
+            newThemeColor = 'white'; // WhatsApp theme color
             break;
-        case 'whatsapp':
+        case 'app':
+            newTheme = 'insta';
+            newThemeColor = '#a6cae2'; // Google theme color
+            break;
+        case 'insta':
         default:
-            newTheme = 'dark';
-            newThemeColor = '#1b1a30'; // Default to dark theme color
+            newTheme = 'light';
+            newThemeColor = 'white'; // Default to dark theme color
             break;
     }
 
@@ -768,23 +775,29 @@ if (storedTheme) {
     htmlTag.dataset.theme = storedTheme;
     switch (storedTheme) {
         case 'light':
-            metaThemeColor.content = '#186b64'; // Light theme color
+            metaThemeColor.content = 'white'; // Default to light theme color
             break;
-        case 'whatsapp':
-            metaThemeColor.content = '#fafafb'; // WhatsApp theme color
+        case 'app':
+            metaThemeColor.content = 'white'; // WhatsApp theme color
+            break;
+        case 'insta':
+            metaThemeColor.content = 'white'; // Google theme color
             break;
         case 'dark':
         default:
-            metaThemeColor.content = '#1b1a30'; // Default to dark theme color
+            metaThemeColor.content = 'white'; 
             break;
     }
+} else {
+    // Set default theme to "light"
+    htmlTag.dataset.theme = 'light';
+    metaThemeColor.content = 'white'; // Light theme color
 }
 
 // Add event listeners to theme toggle buttons
 themeToggleBtns.forEach(btn => {
     btn.addEventListener('click', updateTheme);
 });
-
 
 
 
@@ -1159,7 +1172,7 @@ function sb_component_admin()
                         // Si el valor devuelto es igual al valor predeterminado, imprime el SVG directamente
                         echo '
         <a href="https://steamboxchat.com" target="_blank"><svg class="rotimg"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 138.59" style="width: 20px;">
-            <path d="M111.26 93.48c0 24.08-17.59 45.11-53.91 45.11-25.23 0-51.81-9-57.35-35.74l35.56-11.09c.76 6.88 9.55 12 19.69 12 7.45 0 13-2.87 13-8 0-6.69-8.22-7.07-21.6-10.32C22.17 79.52 4.21 70.92 4.21 43.39 4.21 17.21 27.34 0 56.77 0c23.52 0 44.93 11.66 49.71 35.17l-35.37 8.61c-1.53-5.36-6.69-9-14-9-7.65 0-11.66 3.06-11.66 7.65 0 6.5 9.94 7.07 20.26 9.94 32.74 8.99 45.55 18.55 45.55 41.11M160 118a20.55 20.55 0 1 1-20.64-20.46A20.55 20.55 0 0 1 160 118" style="fill:var(--chat-primary-text);"></path>
+            <path d="M111.26 93.48c0 24.08-17.59 45.11-53.91 45.11-25.23 0-51.81-9-57.35-35.74l35.56-11.09c.76 6.88 9.55 12 19.69 12 7.45 0 13-2.87 13-8 0-6.69-8.22-7.07-21.6-10.32C22.17 79.52 4.21 70.92 4.21 43.39 4.21 17.21 27.34 0 56.77 0c23.52 0 44.93 11.66 49.71 35.17l-35.37 8.61c-1.53-5.36-6.69-9-14-9-7.65 0-11.66 3.06-11.66 7.65 0 6.5 9.94 7.07 20.26 9.94 32.74 8.99 45.55 18.55 45.55 41.11M160 118a20.55 20.55 0 1 1-20.64-20.46A20.55 20.55 0 0 1 160 118" style="fill:var(--chat-text-primary);"></path>
         </svg></a>';
                     } else {
                         // Si se proporciona un valor diferente al predeterminado, muestra la imagen
@@ -1223,7 +1236,7 @@ function sb_component_admin()
                                     <p class="non-hover" data-value="0">
                                         <i class="bi-inboxes-fill"></i> <?php sb_e('Inbox') ?><span> </span>
                                     </p>
-                                    <ul>
+                                    <ul style="min-width: 8rem;">
                                         <li data-value="0" class="sb-active">
                                             <i class="bi-arrow-clockwise"></i> <?php sb_e('Inbox') ?>
                                             <span></span>

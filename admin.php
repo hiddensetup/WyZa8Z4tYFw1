@@ -25,7 +25,7 @@ require('include/components.php');
 
 <!DOCTYPE html>
 
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="insta">
 
 <head>
   <meta charset="UTF-8">
@@ -33,7 +33,7 @@ require('include/components.php');
   <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
   <meta name="robots" content="noindex, nofollow">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#1b1a30" />
+  <meta name="theme-color" content="white" />
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">

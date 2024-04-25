@@ -58,7 +58,7 @@ body {
 }
 
 .sb-label-date-top {
-    top: 63px;
+    top: 55px;
 }
 
 .sb-admin-box {
@@ -76,7 +76,7 @@ body {
         max-width: 270px;
         animation: fade-in 2s ease-in;
         background: var(--chat-app-background);
-        border-radius:  var(--chat-rounded-size-8);
+        border-radius: var(--chat-rounded-size-8);
     }
 
     .sb-input {
@@ -466,7 +466,7 @@ div ul.sb-menu li,
 
 .sb-select p,
 .sb-board>.sb-admin-list .sb-scroll-area li p {
-    padding: 0 20px 0 15px;
+    padding: 5px 20px 0 15px;
 
 }
 
@@ -496,7 +496,7 @@ div ul.sb-menu li,
 .sb-board>.sb-admin-list .sb-scroll-area li .sb-profile .sb-name,
 .sb-dialog-box p {
     font-size: var(--chat-text-size-1-1);
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 
@@ -620,8 +620,8 @@ a.sb-btn {
         padding: 5px;
         display: flex;
         z-index: 999;
-        box-shadow: var(--box-shadow-menu);
-        -webkit-box-shadow: var(--box-shadow-menu);
+        box-shadow: var(--box-shadow-bubble-chat);
+        -webkit-box-shadow: var(--box-shadow-bubble-chat);
 
 
 
@@ -646,11 +646,11 @@ a.sb-btn {
                     border-radius: var(--chat-rounded-size-5);
                     overflow: hidden;
                     color: var(--chat-btn-translucid-color);
-                    padding: 0px 15px;
+                    padding: 0px 14px;
                     width: 20px;
+                    height: 48px;
 
-                    &:active
-                    {
+                    &:active {
                         scale: .95;
                         transition: var(--transition);
                         -webkit-transition: var(--transition);
@@ -664,7 +664,7 @@ a.sb-btn {
                         opacity: 1 !important;
                         background: var(--chat-app-theme-color);
                         color: var(--chat-text-white-or-black);
-                        border-radius: 20%;
+                        border-radius: 60%;
                     }
 
 
@@ -770,6 +770,7 @@ a.sb-btn {
         content: "\f282";
         font-family: "bootstrap-icons";
         font-size: var(--chat-text-size-8);
+        padding: 0px 5px;
     }
 
     .sb-menu-wide>ul,
@@ -798,7 +799,7 @@ a.sb-btn {
         >div {
             display: block;
             position: relative;
-            // font-weight: 600;
+            font-weight: 600;
             font-size: var(--chat-text-size-1-1);
             line-height: 25px;
             padding-right: 20px;
@@ -882,7 +883,7 @@ a.sb-btn {
             margin: auto;
             margin: auto;
             padding: 0px 0px;
-        
+
             // padding: 17px;
             // overflow: hidden;
             // color: var(--chat-text-white-or-black);
@@ -895,7 +896,7 @@ a.sb-btn {
                 &+div+.sb-mobile,
                 &+ul {
                     display: block;
-                 
+
                     border: .8px solid var(--chat-border-color);
                     // padding: .5rem;
                     box-shadow: var(--box-shadow-menu);
@@ -917,7 +918,7 @@ a.sb-btn {
             position: fixed;
             padding: 0px 0;
             right: 10px;
-            top: 16px;
+            top: 20px;
 
             a {
                 white-space: nowrap;
@@ -1011,7 +1012,7 @@ a.sb-btn {
             // height: auto;
             width: auto;
             // padding: 4px 8px;
-            top: 12px!important;
+            top: 12px !important;
             margin-right: 10px;
         }
 
@@ -1096,7 +1097,7 @@ a.sb-btn {
         &:hover,
         :active {
             background-color: var(--new-message-chat);
-            border-radius:  var(--chat-rounded-size-7);
+            border-radius: var(--chat-rounded-size-7);
         }
     }
 
@@ -1344,7 +1345,7 @@ a.sb-btn {
 
         .sb-scroll-area {
             li {
-                border-radius: 2px;
+                box-shadow: none !important;
 
                 >div {
                     // padding-left: 65px;
@@ -1375,7 +1376,7 @@ a.sb-btn {
         height: 100%;
 
         .sb-top {
-            min-height: 64px;
+            min-height: 56px;
             padding: 0px 00px 0px 0px;
             // background-color: var(--top-bar-mobile-color);
             border-bottom: .8px solid var(--chat-border-color);
@@ -1391,7 +1392,7 @@ a.sb-btn {
                 >i {
                     //height: 51px;
                     // background: var(--chat-app-background);
-                    border-radius:  var(--chat-rounded-size-7) 0px 0px 10px;
+                    border-radius: var(--chat-rounded-size-7) 0px 0px 10px;
                     width: 55px;
                 }
 
@@ -1404,7 +1405,7 @@ a.sb-btn {
 
                     &:active {
                         animation: fade-in 0.4s infinite;
-                        
+
                     }
                 }
             }
@@ -1413,7 +1414,7 @@ a.sb-btn {
                 padding-left: 0;
 
                 .sb-status-online {
-                    margin: auto 5px auto auto ;
+                    margin: auto 5px auto auto;
                     overflow: hidden;
                     text-indent: -99995px;
                     width: 10px;
@@ -1658,23 +1659,28 @@ a.sb-btn {
         tr.sb-active th {
             display: block;
             padding: 0px;
-&[data-field] {
-    background: var(--chat-background-menu-selected);
-    border-radius: var(--chat-rounded-size-6);
-    padding: 5px 20px;
-    max-width: max-content;
-    border-bottom: none;
-    margin: .3em;
-    display: inline-grid;
-    &:active {
-        scale: .98;
-        background: var(--chat-app-theme-color);
-        color: var(--chat-text-white-or-black);
-    }
-}
-&[data-field="email"],&[data-field="first_name"],&[data-field="user_type"] {
-    display: none;
-}
+
+            &[data-field] {
+                background: var(--chat-background-menu-selected);
+                border-radius: var(--chat-rounded-size-6);
+                padding: 5px 20px;
+                max-width: max-content;
+                border-bottom: none;
+                margin: .3em;
+                display: inline-grid;
+
+                &:active {
+                    scale: .98;
+                    background: var(--chat-app-theme-color);
+                    color: var(--chat-text-white-or-black);
+                }
+            }
+
+            &[data-field="email"],
+            &[data-field="first_name"],
+            &[data-field="user_type"] {
+                display: none;
+            }
         }
 
         th {
@@ -1687,7 +1693,8 @@ a.sb-btn {
             clear: both;
             //border-bottom: 0.5px solid var(--chat-border-color);
 
-            &:hover,&:active {
+            &:hover,
+            &:active {
                 background-color: var(--chat-background-menu-selected);
             }
         }
@@ -1703,9 +1710,10 @@ a.sb-btn {
         }
 
         thead {
-            padding:0 15px 15px 15px;
+            padding: 0 15px 15px 15px;
 
             th {
+
                 &.sb-active,
                 &:hover {
                     color: var(--chat-btn-background);
@@ -1741,10 +1749,10 @@ a.sb-btn {
 }
 
 .profile-log-background {
-    background: url(/media/whatsapp-bkg.png),var(--chat-conversation-background);
+    background: url(/media/whatsapp-bkg.png), var(--chat-conversation-background);
     padding: var(--chat-spacing-size-8);
     border-radius: var(--chat-rounded-size-8);
-  }
+}
 
 .sb-profile-edit-box,
 .sb-profile-box {

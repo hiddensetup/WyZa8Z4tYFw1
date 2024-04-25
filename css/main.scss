@@ -116,7 +116,7 @@
     height: 2px;
     margin-top: 2px;
     margin-bottom: 7px;
-    border-radius:  var(--chat-rounded-size-8);
+    border-radius: var(--chat-rounded-size-8);
     background: rgba(144, 154, 165, 0.35);
 
     >div {
@@ -128,14 +128,16 @@
 .sb-main li {
     margin: 0;
 }
+
 .sb-show-menu-bar {
-    visibility: visible!important;
+    visibility: visible !important;
 }
+
 .api-cloud-notif {
     position: absolute;
-    display: none!important;
+    display: none !important;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: var(--chat-att-background);
     padding: 10px;
     font-size: .6em;
@@ -143,6 +145,7 @@
     bottom: calc(100% - 86px);
     z-index: 99;
 }
+
 div ul.sb-menu li:hover,
 .sb-select ul li:hover {
     color: var(--chat-app-background) !important;
@@ -486,7 +489,7 @@ div ul.sb-menu li:hover,
             height: 40px;
             line-height: 45px;
             text-align: center;
-            border-radius:  var(--chat-rounded-size-7);
+            border-radius: var(--chat-rounded-size-7);
             cursor: pointer;
             left: -60px;
             opacity: .6;
@@ -1795,7 +1798,7 @@ div ul.sb-menu li:hover,
     position: absolute;
     right: -16px;
     bottom: -20px;
-    border-radius:  var(--chat-rounded-size-7);
+    border-radius: var(--chat-rounded-size-7);
     color: var(--chat-bubble-text);
     padding: 0 20px 0 0;
     margin: 0;

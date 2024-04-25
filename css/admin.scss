@@ -150,7 +150,7 @@ body::-webkit-scrollbar-thumb:hover {
     align-items: center;
     z-index: 9999;
     opacity: 1;
-    background-color: var(--chat-app-loader-color);
+    background: var(--chat-app-loader-color);
     background-blend-mode: soft-light;
 
 }
@@ -583,7 +583,7 @@ MOBILE MENU
 
 .sb-menu-mobile {
     >ul {
-        display: flex;
+        display: none;
         flex-direction: row-reverse;
         color: var(--chat-text-primary);
 
@@ -681,10 +681,9 @@ TABLE
     list-style: none;
     font-size: var(--chat-text-size-7);
     padding: 0;
-    border: 0.2px solid transparent;
+    border: .2px solid transparent;
     border-radius: var(--chat-rounded-size-5);
     position: absolute;
-    top: 50px;
 }
 
 .sb-table {
@@ -810,8 +809,8 @@ TABLE
     img {
         cursor: pointer;
         object-fit: cover;
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
         border-radius: 50%;
         visibility: visible;
         border: .031rem solid transparent !important;
@@ -1902,9 +1901,9 @@ TABLE
                     }
 
                     &.sb-active {
-                        color: var(--chat-text-white-or-black);
+                        color: var(--chat-text-theme-button);
                         opacity: 1 !important;
-                        background: var(--chat-app-theme-color);
+                        background: var(--chat-text-theme-background);
                     }
 
                     &:hover span {
@@ -1912,8 +1911,8 @@ TABLE
                         visibility: visible;
                         opacity: 1;
                         left: 66px;
-                        background-color: var(--chat-btn-background);
-                        color: var(--chat-text-white-or-black);
+                        background-color: var(--chat-tooltip-background);
+                        color: var(--chat-text-tooltip);
                         margin: 10px 0;
                         box-shadow: var(--box-shadow-menu);
                         -webkit-box-shadow: var(--box-shadow-menu);
@@ -2420,7 +2419,7 @@ BODY
                 position: relative;
                 // border-bottom: 1px solid var(--chat-border-color);
 
-                padding: 10px 10px 10px 5px;
+                padding: 10px 14px 10px 14px;
                 max-height: 105px;
                 overflow: hidden;
                 cursor: pointer;
@@ -2436,14 +2435,20 @@ BODY
 
                 }
 
-
-                &.sb-active,
                 &:hover {
+                    opacity: .9;
+                    background: var(--chat-background-menu-selected) !important;
+
+                }
+
+                &.sb-active {
                     background: var(--chat-background-menu-selected) !important;
                     // color: var(--chat-list-active-text);
 
                     // border-radius: var(--chat-rounded-size-6);
                 }
+
+
 
 
 
@@ -2482,7 +2487,7 @@ BODY
                         letter-spacing: .3px;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        margin: 20px auto 20px 0px;
+                        margin: 11px auto 0px 0;
                         line-height: normal;
                         color: var(--chat-text-primary);
                         font-size: var(--chat-text-size-1-0);
@@ -2515,9 +2520,9 @@ BODY
                     align-items: center;
                     z-index: 3;
                     position: absolute;
-                    top: 38px;
-                    right: .6rem;
-                    gap: .3rem
+                    top: 31px;
+                    right: 0.7rem;
+                    gap: .3rem;
                 }
 
                 p {
@@ -2527,12 +2532,11 @@ BODY
                     opacity: 1;
                     height: 25px;
                     overflow: hidden;
-                    letter-spacing: .3px;
                     margin: 0;
                     overflow-wrap: break-word;
                     position: absolute;
-                    top: 49px;
-                    left: 76px;
+                    top: 38px;
+                    left: 78px;
                     font-weight: 200;
                     // display: none;
                     // width: 170px;
@@ -2575,7 +2579,7 @@ BODY
                         right: 0px;
                         // bottom: 9px;
                         border-radius: 50%;
-                        line-height: 1;
+                        line-height: 2;
                         padding: 0px;
                         font-size: var(--chat-text-size-1-0);
 
@@ -2718,7 +2722,8 @@ BODY
             .sb-menu-mobile {
                 // position: absolute;
                 // right: 15px;
-                    width: 30px;
+                width: 30px;
+
                 .sb-icon-menu {
 
                     &:active,
@@ -3204,9 +3209,9 @@ BODY
 
             &:active,
             &:hover {
-                background-color: var(--chat-btn-background);
+                background-color: var(--chat-text-theme-background);
                 transition: var(--transition);
-                color: var(--chat-text-white-or-black);
+                color: var(--chat-text-theme-button);
 
             }
         }
@@ -5130,6 +5135,7 @@ BODY
     margin-top: 150px;
     display: none;
     box-shadow: var(--box-shadow-bordered);
+    -webkit-box-shadow: var(--box-shadow-bordered);
 
     &.sb-active {
         display: block;
@@ -5596,8 +5602,8 @@ BODY
     -webkit-animation: fade-in 2s ease-in;
     background: var(--chat-app-background);
     border-radius: var(--chat-rounded-size-8);
-    -webkit-box-shadow: var(--box-shadow);
-    box-shadow: var(--box-shadow);
+    -webkit-box-shadow: var(--box-shadow-inner);
+    box-shadow: var(--box-shadow-inner);
 
     .sb-forgot {
         font-size: var(--chat-text-size-8);
@@ -5675,7 +5681,7 @@ BODY
         &:hover {
             padding-left: 15px;
             transition-delay: 1s;
-            
+
 
             i {
                 opacity: 1;
@@ -6193,8 +6199,8 @@ BODY
 }
 
 .daterangepicker .ranges li:hover {
-    background-color: var(--chat-btn-background);
-    color: var(--chat-text-white-or-black);
+    background-color: var(--chat-daterangepicker-background);
+    color: var(--chat-text-daterangepicker);
 }
 
 .daterangepicker .ranges li.active {
@@ -6301,7 +6307,7 @@ grammarly-editor-plugin {
     [id="email"],
     .sb-delete {
         display: none !important;
-        
+
     }
 }
 
@@ -6514,6 +6520,7 @@ grammarly-editor-plugin {
             padding-top: 2px !important;
             color: var(--chat-text-secondary);
             background: var(--chat-app-background);
+
             &.sb-active,
             &:active {
                 background: var(--chat-background-menu-selected) !important;
@@ -6526,6 +6533,12 @@ grammarly-editor-plugin {
 
 
 
+
+    }
+
+
+    .styling-caller {
+        visibility: hidden;
 
     }
 
@@ -6557,6 +6570,26 @@ grammarly-editor-plugin {
         animation: scale-in-hor-right 0.2s ease-out;
         // color: var(--chat-text-primary) !important;
     }
+
+
+    .styling-caller {
+        visibility: visible;
+        font-size: 1rem;
+        border-radius: 50%;
+        padding: 2px 3px;
+
+        &:active {
+            transition: var(--transition);
+            -webkit-transition: var(--transition);
+
+            color: var(--chat-text-white-or-black);
+            background: var(--chat-app-theme-color);
+            border-radius: 50%;
+            padding: 4px 5px;
+        }
+    }
+
+
 
     .sb-menu-mobile {
         >ul {
@@ -6699,7 +6732,7 @@ grammarly-editor-plugin {
                 &+div+.sb-mobile,
                 &+ul {
                     display: block;
-                 
+
                     border: .8px solid var(--chat-border-color);
                     // padding: .5rem;
                     box-shadow: var(--box-shadow-menu);
@@ -6746,7 +6779,7 @@ grammarly-editor-plugin {
     .sb-board {
         >.sb-user-details {
             position: fixed;
-            z-index: 3;
+            z-index: 5;
             top: 0;
             bottom: 0;
             max-width: 330px;
@@ -6785,6 +6818,7 @@ grammarly-editor-plugin {
             // min-width: 153px;
             width: 320px;
             z-index: 1;
+            background: var(--chat-app-background) !important
         }
 
         .sb-filter-btn.sb-active>div {

@@ -1,6 +1,6 @@
 /* Common variables */
 :root,
-[data-theme="whatsapp"] {
+[data-theme="app"] {
     /* Basic colors */
     --background-color-red: #ca34341a;
     --background-color-yellow: #f2e37c;
@@ -35,16 +35,28 @@
     /* Text Colors */
     --chat-text-secondary: rgb(116, 123, 134);
     --chat-text-primary: rgb(68, 78, 95);
-    --chat-text-tertiary: rgb(148, 160, 172);
-    --chat-text-white-or-black: #fafafb;
+    --chat-text-tertiary: rgb(131, 150, 168);
+    --chat-text-white-or-black: white;
+    --chat-text-theme-button: white;
+    --chat-text-theme-background: #23c35f;
+    --chat-text-tooltip: white;
+    --chat-tooltip-background: rgb(68, 78, 95);
+
     --chat-text-dark-or-white: #050504;
+    --chat-text-url: rgb(32, 32, 248);
+    --chat-text-input: rgb(74, 85, 103);
 
     /* Conversation Chat */
-    --chat-bubble-client: #fafafb;
+    --chat-bubble-client: white;
     --chat-bubble-agent: #d9fdd3;
-    --chat-conversation-background: #dff1eb;
-    --chat-top-bar-color: #fafafb;
-    --chat-bottom-bar-color: #dff1eb;
+    --chat-bubble-info-background: #d9fdd3;
+    --chat-text-bubble-info: rgb(68, 78, 95);
+    --chat-text-bubble-agent: rgb(68, 78, 95);
+
+    --chat-conversation-background: #f1ece5;
+    --chat-bottom-bar-color: #f1ece5;
+    --chat-top-bar-color: white;
+
 
     /* Chat App */
     --chat-left-bar-color: var(--chat-app-theme-color);
@@ -52,7 +64,7 @@
     --chat-app-tooltip-color: var(--chat-app-background);
     --chat-notif-background: var(--chat-app-theme-color);
     --chat-app-hr-color: rgb(66 103 132 / 20%);
-    --chat-app-background: #fafafb;
+    --chat-app-background: white;
     --chat-app-theme-color: #23c35f;
     --chat-app-background-2: var(--chat-btn-background-active);
     --chat-app-logo-color: var(--chat-text-white-or-black);
@@ -61,6 +73,8 @@
     --chat-border-color: rgba(66, 103, 132, 0.26);
     --chat-list-background-selected: #eaeff2;
     --chat-scroll-area-background: transparent;
+    --chat-toggle-selector: white;
+
 
     /* Chat Notes */
     --chat-app-notes-color: #cce6d6;
@@ -139,11 +153,91 @@
     --box-shadow-left-side: -1px -1px 10px var(--chat-border-color);
     --box-shadow-right-side: 1px 1px 10px var(--chat-border-color);
     --box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
-    --box-shadow-bordered: 0 0 1px .6px var(--chat-border-color),0 0px 10px 0px var(--chat-border-color);
+    --box-shadow-bordered: 0 0 1px .6px var(--chat-border-color), 0 0px 10px 0px var(--chat-border-color);
     --box-shadow-menu: 0px -1px 5px -1px rgb(0 0 0 / 20%);
-    --box-shadow-bubble-chat: 0px 1px 2px -1px rgba(0, 0, 0, .57);
+    --box-shadow-bubble-chat: 0px 1px 4px -2.5px rgba(0, 0, 0, .57);
     --box-shadow-inner: inset 0 0 4px -1px rgb(48 50 65 / 38%);
     --transition-3: all 2s;
     --transition-2: all 0.55s;
     --transition: all 0.25s;
+}
+
+/* Light theme */
+[data-theme="light"] {
+    --chat-app-theme-color: linear-gradient(332deg, #3503ff, #7c17b8), linear-gradient(#25008c, transparent);
+    --chat-conversation-background: #fbfbfb;
+    --chat-bottom-bar-color: #fbfbfb;
+    --chat-bubble-agent: #5220f1;
+    --chat-text-bubble-agent: #ffffff;
+    --chat-text-url: rgb(214, 232, 255);
+    --chat-text-theme-button: white;
+    --chat-text-theme-background: var(--chat-app-theme-color);
+
+}
+
+/* Insta theme */
+[data-theme="insta"] {
+    --chat-app-theme-color:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    --chat-conversation-background: #fbfbfb;
+    --chat-bottom-bar-color:#fbfbfb;
+    --chat-bubble-agent: rgb(9, 8, 10);
+    --chat-text-bubble-agent: #ffffff;
+    --chat-text-url: #ffebeb;
+    --chat-text-theme-button: white;
+    --chat-text-theme-background: var(--chat-app-theme-color);
+
+}
+/* Dark theme */
+[data-theme="dark"] {
+    --chat-app-background: rgba(16, 16, 37, 0.544);
+    --chat-app-theme-color: #5f4aff;
+    --chat-conversation-background: #fbfbfb03;
+    --chat-bottom-bar-color: transparent;
+    --chat-bubble-agent: #5f4aff;
+    --chat-text-bubble-agent: #ffffff;
+    --chat-text-url: rgb(248, 248, 248);
+    --chat-text-primary: white;
+    --chat-image-background: radial-gradient(at 60% 48%, hsla(227, 24%, 4%, 0.19) 0px, transparent 50%), radial-gradient(at 44% 4%, hsla(289, 53%, 28%, 0.65) 0px, transparent 50%), radial-gradient(at 45% 91%, hsla(289, 47%, 18%, 1) 0px, transparent 50%), radial-gradient(at 3% 65%, hsla(238, 63%, 19%, 1) 0px, transparent 50%), radial-gradient(at 11% 100%, hsla(236, 68%, 18%, 1) 0px, transparent 50%), radial-gradient(at 30% 0%, hsla(236, 68%, 18%, 1) 0px, transparent 50%), radial-gradient(at 85% 0%, hsla(224, 81%, 18%, 1) 0px, transparent 50%), radial-gradient(at 63% 97%, hsla(286, 61%, 18%, 1) 0px, transparent 50%), radial-gradient(at 0% 8%, hsla(238, 63%, 19%, 1) 0px, transparent 50%), radial-gradient(at 100% 0%, hsla(224, 82%, 24%, 1) 0px, transparent 50%), radial-gradient(at 73% 45%, hsla(324, 77%, 66%, 1) 0px, transparent 50%), radial-gradient(at 48% 32%, hsla(194, 79%, 74%, 1) 0px, transparent 50%), radial-gradient(at 94% 76%, hsla(276, 17%, 19%, 1) 0px, transparent 50%), radial-gradient(at 0% 67%, hsla(227, 58%, 23%, 1) 0px, transparent 50%), radial-gradient(at 0% 98%, hsla(238, 68%, 20%, 1) 0px, transparent 50%), radial-gradient(at 87% 26%, hsla(181, 89%, 51%, 1) 0px, transparent 50%);
+    --chat-image-color-background: hsla(272, 0%, 0%, 1);
+    --chat-text-secondary: rgb(194 205 223);
+    --chat-background-menu-selected: #5f4aff;
+    --chat-background-menu: rgb(25 25 54);
+    --chat-top-bar-color: transparent;
+    --chat-border-color: rgb(128 169 202 / 26%);
+    --chat-lightbox-background: rgb(16 16 37 / 70%);
+    --chat-input-background: rgb(20 18 47);
+    --chat-text-white-or-black: rgb(255, 255, 255);
+    --chat-btn-background: white;
+    --chat-btn-background-active: #bac4db;
+    --chat-input-focus-ring: inset 0 0 2px 1px #000000;
+    --chat-text-theme-button: white;
+    --chat-text-theme-background: #5f4aff;
+    --chat-text-daterangepicker: white;
+    --chat-daterangepicker-background: #5f4aff;
+    --chat-btn-text: rgb(68, 78, 95);
+    --chat-btn-background: white;
+    --chat-btn-text-active: white;
+    --chat-btn-background-active: #363c57;
+    --chat-text-tertiary: rgb(120 119 154);
+    --chat-input-search-responsive: rgb(20 18 47);
+    --chat-text-input: #e7e5f7;
+    --chat-toggle-selector: white;
+    --chat-text-tooltip: white;
+    --chat-tooltip-background: #2e2e45;
+    --chat-bottom-bar-color: #fbfbfb03;
+
+
+
+
+
+
+    --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--chat-border-color);
+    --box-shadow-left-side: -1px -1px 10px var(--chat-border-color);
+    --box-shadow-right-side: 1px 1px 10px var(--chat-border-color);
+    --box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
+    --box-shadow-bordered: 0 0 1px .6px var(--chat-border-color), 0 0px 10px 0px var(--chat-border-color);
+    --box-shadow-menu: 0px -1px 5px -1px var(--chat-border-color);
+    --box-shadow-bubble-chat: 0px 1px 4px -2.5px var(--chat-border-color);
+    --box-shadow-inner: inset 0 0 4px -1px var(--chat-border-color);
+
 }

@@ -3777,8 +3777,6 @@
 //     }
 // });
 
-
-
 let profileImage = response.get("profile_image");
 let originalTitle = response.get("first_name");
 let screenWidth = $(window).width();
@@ -3799,35 +3797,30 @@ let htmlContent = `
         <img src="${profileImage}" class="top-image-profile">
     </span> 
     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
-    <span class="additional-info">${phoneNumber ? `<a style="position:fixed;right:15%;color: var(--chat-text-primary);" href="tel:${phoneNumber}"><i style="font-size:1rem;" class="styling-caller bi bi-telephone-fill"></i></a>` : ''}</span>
+    <span class="additional-info">${phoneNumber ? `<a style="position:fixed;right: 55px;color: var(--chat-text-primary);z-index: 4;top: 8px;" href="tel:${phoneNumber}"><i style="font-size:1rem;" class="styling-caller bi bi-telephone-fill"></i></a>` : ''}</span>
 `;
 
 // Set the HTML content
 conversations_area.find(".sb-top > a").html(htmlContent);
 
 // Keep track of whether additional information is currently shown
-let isAdditionalInfoShown = phoneNumber ? true : false;
+let isAdditionalInfoShown = false;
+
+// Handle clicking on the profile image or the first name
+conversations_area.find(".sb-top > a > span").on("click", function() {
+    // Toggle additional info
+    let currentSpan = $(this).next(".additional-info");
+    if (!isAdditionalInfoShown) {
+        currentSpan.show();
+    } else {
+        currentSpan.hide();
+    }
+    isAdditionalInfoShown = !isAdditionalInfoShown;
+});
 
 // Handle clicking on the profile image
 conversations_area.find(".open-profile-name").on("click", function() {
     SBProfile.showEdit(activeUser());
-});
-
-// Handle clicking on the first name
-conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-    let currentSpan = $(this).next(".additional-info");
-    if (!isAdditionalInfoShown) {
-        if (currentSpan.length === 0) {
-            currentSpan = $(`<span class="additional-info">${phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:15%" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : ''}</span>`);
-            $(this).after(currentSpan);
-        } else {
-            currentSpan.html(phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:15%" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : '');
-        }
-        isAdditionalInfoShown = true;
-    } else {
-        currentSpan.remove();
-        isAdditionalInfoShown = false;
-    }
 });
 
     $(".sb-list").prepend(
@@ -4588,6 +4581,8 @@ conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click"
         }
       }
 
+      
+
       let order_css = `
 			 `;
       return `<li style="${order_css}" data-user-id="${
@@ -4605,30 +4600,23 @@ conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click"
         conversation["conversation_source"]
       }.svg">
       </small>
-			<div class="sb-profile"><img loading="lazy" src="${
+			<div class="sb-profile client-status"><img class="client-icon-status sb-icon tags-${
+        conversation["label"]
+      } bi-crosshair loading="lazy" src="${
         conversation["profile_image"]
       }">
     
-			<div class="client-status">
-			<i class="client-icon-status sb-icon tags-${
-        conversation["label"]
-      } bi-crosshair"></i>
-			</div>
 			<h3 class="sb-name${is_title ? " sb-custom-name" : ""}">${
         is_title
           ? conversation.title
           : conversation["first_name"] + " " + conversation["last_name"]
       } </h3>
-			<div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;">${SBF.beautifyTime(
+			<div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">${SBF.beautifyTime(
         conversation["creation_time"]
       )}</div>
 			</div>
 			<div>
-			<a href="${
-        window.innerWidth < 400
-          ? "tel:" + conversation.phone
-          : "javascript:void(0)"
-      }" class="phone-number">${conversation.phone}</a>
+			<a class="phone-number" style="color:inherit">${conversation.phone}</a>
 			</div>
 			<p style="max-width:calc(100% - 130px);">${strip
         .strip(message)
@@ -4648,6 +4636,9 @@ conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click"
 		</div>
 		</li> 
 		`;
+
+
+
     },
 
 
@@ -10239,22 +10230,21 @@ window.onclick = function (t) {
  * ----------------------------------------------------------
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-  const helpCenter = document.querySelector(".help-center");
-  const customerSupport = document.getElementById("customer-support");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const helpCenter = document.querySelector(".help-center");
+//   const customerSupport = document.getElementById("customer-support");
 
-  helpCenter.addEventListener("click", function () {
-    customerSupport.setAttribute(
-      "src",
-      "https://steamboxchat.com/"
-    );
-    customerSupport.style.display = "block";
-    customerSupport.style.opacity = 1;
+//   helpCenter.addEventListener("click", function () {
+//     customerSupport.setAttribute(
+//       "src",
+//       "https://steamboxchat.com/"
+//     );
+//     customerSupport.style.display = "block";
+//     customerSupport.style.opacity = 1;
 
-    const sbUpdatesHide = document.querySelectorAll(".sb-updates-hide");
-    sbUpdatesHide.forEach(function (el) {
-      el.style.display = "none";
-    });
-  });
-});
-
+//     const sbUpdatesHide = document.querySelectorAll(".sb-updates-hide");
+//     sbUpdatesHide.forEach(function (el) {
+//       el.style.display = "none";
+//     });
+//   });
+// });
