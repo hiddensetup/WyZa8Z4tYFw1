@@ -5132,6 +5132,10 @@ BODY
     max-width: 700px;
     max-height: 700px;
     background-color: var(--chat-lightbox-background);
+    left: 50%;
+    top: 50%;
+    margin-left: 150px;
+    margin-top: 150px;
     display: none;
     box-shadow: var(--box-shadow-bordered);
     -webkit-box-shadow: var(--box-shadow-bordered);
