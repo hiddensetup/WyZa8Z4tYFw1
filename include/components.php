@@ -27,7 +27,7 @@ function sb_profile_box()
                         $cloud_active = sb_get_multi_setting('whatsapp-cloud', 'cloud-active'); ?>
                         <?php if ($cloud_active) : ?>
                             <li class="sb-start-conversation" onclick="updateSource('wa')">
-                                <?php sb_e('<i class="bi-whatsapp"></i> Meta® API Cloud') ?>
+                                <?php sb_e('<i class="bi-whatsapp"></i> Meta® Cloud API') ?>
                             </li>
                             <hr>
 
@@ -64,7 +64,10 @@ function sb_profile_box()
             <div class="profile-log-background">
                 <div class="sb-title">
                     <!-- <div><?php sb_e('Conversation history') ?></div> -->
-                    <p class="profile-bubble-message"><?php sb_e('Continue and manage ongoing conversations initiated by other agents.') ?></p>
+                    <p class="profile-bubble-message">Desde aquí puedes <strong>continuar conversaciones existentes 🧑&zwj;💻</strong>. Pulsa sobre la conversación que deseas continuar (recomendado) o crea una conversación nueva pulsando <strong> + Nuevo </strong>.</p>
+
+                    <p class="profile-bubble-message"> *Ten en cuenta que en Steambox tienes la opción de generar conversaciones separadas por agente (como tickets) o continuar conversaciones existentes. El cliente siempre verá la misma conversación de WhatsApp.</p>
+                
                 </div>
                 <ul class="sb-user-conversations"></ul>
             </div>
@@ -664,7 +667,7 @@ function sb_send_template_box()
         <div class="sb-info"></div>
         <div class="sb-top-bar">
             <div>
-                <i data-value="wa" class="bi-whatsapp"></i> <span>Meta® API Cloud </span>
+                <i data-value="wa" class="bi-whatsapp"></i> <span style="margin-left:5px">Meta® Cloud API </span>
             </div>
             <div>
                 <a class="sb-close sb-btn-icon">
@@ -874,9 +877,10 @@ themeToggleBtns.forEach(btn => {
         function toggleWhatsAppButton(visible) {
             const whatsAppButton = document.querySelector(".bi-whatsapp");
             if (whatsAppButton) {
-                whatsAppButton.style.display = visible ? "block" : "none";
+                whatsAppButton.style.visibility = visible ? "visible" : "hidden"; // Fix: Use the 'visible' argument to set visibility
             }
         }
+
 
         // Function to check if there are active WhatsApp conversation items and toggle the WhatsApp button accordingly
         function checkActiveWAConversation() {
@@ -1163,23 +1167,23 @@ function sb_component_admin()
                     }
                     ?>
                     <div>
-                        <a id="sb-conversations" class="sb-active">
+                        <a id="sb-conversations" class="sb-active bi-chat-left-dots">
                             <span>
                                 <?php sb_e('Conversations') ?>
                             </span>
                         </a>
                         <?php
-                        if ($active_areas['users']) echo '<a id="sb-users"><span>' . sb_('Users') . '</span></a>';
-                        if ($active_areas['reports']) echo '<a id="sb-reports"><span>' . sb_('Reports') . '</span></a>';
-                        if ($active_areas['settings']) echo '<a id="sb-settings"><span>' . sb_('Settings') . '</span></a>';
+                        if ($active_areas['users']) echo '<a id="sb-users" class="bi-people" ><span>' . sb_('Users') . '</span></a>';
+                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-bar-chart"><span>' . sb_('Reports') . '</span></a>';
+                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear"><span>' . sb_('Settings') . '</span></a>';
 
                         ?>
                     </div>
 
                 </div>
 
-                <div style="color:var(--chat-buttons-chat)" class="sb-admin-nav-right sb-menu-mobile">
-                    <i class="bi-three-dots"></i>
+                <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
+                    <i style="padding: 20px 0px;" class="bi-three-dots-vertical"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
@@ -1254,11 +1258,11 @@ function sb_component_admin()
                         </div>
                         <div class="sb-conversation">
                             <div class="sb-top">
-                                <i class="sb-btn-back bi-arrow-left-short"></i>
+                                <i class="sb-btn-back bi-chevron-left"></i>
                                 <div class="sb-labels"></div>
                                 <a></a>
                                 <div class="sb-menu-mobile sb-menu-top extra-background-color">
-                                    <i class="bi-three-dots bkg-color-menu"></i>
+                                    <i class="bi-three-dots-vertical bkg-color-menu"></i>
                                     <ul class="ul-nav-top-mobile">
                                         <li>
                                             <a data-value="Details" class="sb-btn-icon open-profile" data-sb-tooltip="<?php sb_e('Details') ?>">
@@ -1372,8 +1376,8 @@ function sb_component_admin()
                             <div class="sb-no-conversation-message"></div>
                         </div>
                     </div>
-                    <i class="sb-btn-collapse sb-left bi-arrow-left-short"></i>
-                    <i class="sb-btn-collapse sb-right bi-arrow-right-short"></i>
+                    <i class="sb-btn-collapse sb-left bi-chevron-left"></i>
+                    <i class="sb-btn-collapse sb-right bi-chevron-right"></i>
                 </div>
                 <?php if ($active_areas['users']) { ?>
                     <div class="sb-area-users">
@@ -1689,7 +1693,7 @@ function sb_component_admin()
                                     <h3 class="sb-title sb-reports-title"></h3>
                                     <p class="sb-reports-text"></p>
                                     <div class="sb-tags">
-                                        <div style="transform: rotateZ(-90deg);"><i class="bi-arrow-left-short"></i></div>
+                                        <div style="transform: rotateZ(-90deg);"><i class="bi-chevron-left"></i></div>
 
                                     </div>
                                 </div>

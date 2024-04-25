@@ -5817,7 +5817,7 @@ function sb_get_setting_code($setting)
             $type .
             '"><div class="sb-setting-content"><h2 class="settings-button" style="cursor: pointer;">' .
             sb_s($setting["title"]) .
-            ' <i class="sb-icon-arrow-down settings-button" style="vertical-align: middle;"></i></h2><p class="active">' .
+            ' <i class="bi-chevron-down settings-button" style="vertical-align: middle;"></i></h2><p class="active">' .
             sb_s($setting["content"]) .
             (isset($setting["help"]) ? '<a href="' . $setting["help"] . '" target="_blank" style=" font-size: var(--chat-text-size-9); color: var(--pink-root-color); line-height: 0; " class="bi-info-circle"></a>' : "") .
             '</p></div><div class="active input">';

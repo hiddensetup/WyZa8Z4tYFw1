@@ -122,6 +122,10 @@
 
 /* Default effects & shadows */
 --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--chat-border-color);
+--box-shadow-left-side: -1px -1px 10px var(--chat-border-color);
+--box-shadow-right-side: 1px 1px 10px var(--chat-border-color);
+--box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
+--box-shadow-bordered: 0 0 1px .6px var(--chat-border-color),0 0px 10px 0px var(--chat-border-color);
 --box-shadow-menu: 0px -1px 5px -1px rgb(0 0 0 / 20%);
 --box-shadow-bubble-chat: 0px 1px 2px -1px rgba(0, 0, 0, .57);
 --box-shadow-inner: inset 0 0 4px -1px rgb(48 50 65 / 38%);

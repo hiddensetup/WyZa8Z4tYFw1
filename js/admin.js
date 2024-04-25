@@ -117,7 +117,7 @@
         fadeOut: 200,
         aHide: !0,
         maxW: "250px",
-        offset: 5,
+        offset: 4,
         stemOff: 0,
         doHide: !1,
       },
@@ -127,7 +127,7 @@
       admin.append('<div id="miniTip" class="sb-tooltip"><div></div></div>');
     var n = admin.find("#miniTip"),
       o = n.find("div");
-    n.css("box-shadow", "0px 0px 5px rgba(0, 0, 0, 0.3)");
+    n.css("box-shadow", "var(--box-shadow-menu)");
     n.css("border-radius", "8px");
     return e.doHide
       ? (n.stop(!0, !0).fadeOut(e.fadeOut), !1)
@@ -392,21 +392,25 @@
     return this;
   };
 
-  //Tooltip init
   $.fn.sbInitTooltips = function () {
-    return (
-      $(this)
-        .find("[data-sb-tooltip]")
-        .each(function () {
-          $(this).miniTip({
-            content: $(this).attr("data-sb-tooltip"),
-            anchor: "s",
-            delay: 100,
-          });
-        }),
-      this
-    );
+    return $(this).find("[data-sb-tooltip]").each(function () {
+      // Get the position of the element relative to the viewport
+      var rect = this.getBoundingClientRect();
+      // Check if the element is closer to the top or bottom of the viewport
+      var closerToTop = rect.top < window.innerHeight / 2;
+  
+      // Determine the anchor position based on the element's position
+      var anchor = closerToTop ? "e" : "w";
+  
+      // Initialize the tooltip with the determined anchor position
+      $(this).miniTip({
+        content: $(this).attr("data-sb-tooltip"),
+        anchor: anchor, // Use the determined anchor position
+        delay: 100,
+      });
+    });
   };
+  
 
   // Display the bottom card information box
   function showResponse(text, type = false) {
@@ -524,9 +528,9 @@
       $(content).prop("scrollHeight") > max_height
     ) {
       target.sbActive(true).attr("data-height", max_height);
-      target.find(".sb-collapse-btn").remove();
+      target.find(".bi-chevron-down").remove();
       target.append(
-        `<a class="sb-btn-text sb-collapse-btn">${sb_("View more")}</a>`
+        `<a class="sb-btn-text bi-chevron-down">${sb_("View more")}</a>`
       );
       content.css({
         height: max_height + "px",
@@ -2849,7 +2853,7 @@
             }
             reports_area.find(".sb-reports-title").html(response["title"]);
             reports_area.find(".sb-reports-text").html(response["description"]);
-            reports_area.find(".sb-collapse-btn").remove();
+            reports_area.find(".bi-chevron-down").remove();
             if (!responsive)
               collapse(
                 reports_area.find(".sb-collapse"),
@@ -3685,25 +3689,124 @@
               //     }
               // });
               
-              let profileImage = response.get("profile_image");
-let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
+//               let profileImage = response.get("profile_image");
+// let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
+// let phoneNumber = activeUser().getExtra("phone").value;
+// let label = response.get("label");
+
+// // Construct the HTML with the profile image and first name
+// let htmlContent = `<span style="padding-right:5px;" class="open-profile-name"><img src="${profileImage}" class="top-image-profile"></span> <span>${firstName}</span>`;
+
+// // Set the HTML content
+// conversations_area.find(".sb-top > a").html(htmlContent);
+
+// // Define the toggle states based on data availability
+// let toggleStates = [];
+// if (phoneNumber) toggleStates.push(`<i style="font-size:1rem" class="bi bi-telephone-fill"></i> ${phoneNumber}`);
+// if (label) toggleStates.push(`<i style="font-size:1rem" class="bi bi-chevron-compact-right"></i> ${label}`);
+// toggleStates.push(firstName);
+
+// // Keep track of the current toggle state
+// let currentStateIndex = 0;
+
+// // Handle clicking on the profile image
+// conversations_area.find(".open-profile-name").on("click", function() {
+//     SBProfile.showEdit(activeUser());
+
+// });
+
+// // Handle clicking on the first name
+// conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+//     if (toggleStates.length > 1) {
+//         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
+//         $(this).html(toggleStates[currentStateIndex]);
+//     }
+// });
+
+
+// let profileImage = response.get("profile_image");
+// let originalTitle = response.get("first_name");
+// let screenWidth = $(window).width();
+// let firstName;
+
+// // Determine the character limit based on screen width
+// if (screenWidth < 555) {
+//     firstName = originalTitle.length > 20 ? originalTitle.slice(0, 20) + "..." : originalTitle;
+// } else {
+//     firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
+// }
+
+// let phoneNumber = activeUser().getExtra("phone").value;
+
+// // Construct the HTML with the profile image and first name
+// let htmlContent = `
+//     <span style="padding-right:5px;" class="open-profile-name">
+//         <img src="${profileImage}" class="top-image-profile">
+//     </span> 
+//     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
+// `;
+
+// // Set the HTML content
+// conversations_area.find(".sb-top > a").html(htmlContent);
+
+// // Define the toggle state for phone number
+// let toggleState = phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:60px" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : '';
+
+// // Keep track of whether additional information is currently shown
+// let isAdditionalInfoShown = false;
+
+// // Handle clicking on the profile image
+// conversations_area.find(".open-profile-name").on("click", function() {
+//     SBProfile.showEdit(activeUser());
+// });
+
+// // Handle clicking on the first name
+// conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+//     let currentSpan = $(this).next(".additional-info");
+//     if (!isAdditionalInfoShown) {
+//         if (currentSpan.length === 0) {
+//             currentSpan = $(`<span class="additional-info">${toggleState}</span>`);
+//             $(this).after(currentSpan);
+//         } else {
+//             currentSpan.html(toggleState);
+//         }
+//         isAdditionalInfoShown = true;
+//     } else {
+//         currentSpan.remove();
+//         isAdditionalInfoShown = false;
+//     }
+// });
+
+
+
+let profileImage = response.get("profile_image");
+let originalTitle = response.get("first_name");
+let screenWidth = $(window).width();
+let firstName;
+
+// Determine the character limit based on screen width
+if (screenWidth < 555) {
+    firstName = originalTitle.length > 20 ? originalTitle.slice(0, 20) + "..." : originalTitle;
+} else {
+    firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
+}
+
 let phoneNumber = activeUser().getExtra("phone").value;
-let label = response.get("label");
 
 // Construct the HTML with the profile image and first name
-let htmlContent = `<span class="open-profile-name"><img src="${profileImage}" alt="Profile Image" style="width: 2.3rem; vertical-align: bottom; border-radius: 50%; padding-right: 5px;"></span> <span>${firstName}</span>`;
+let htmlContent = `
+    <span style="padding-right:5px;" class="open-profile-name">
+        <img src="${profileImage}" class="top-image-profile">
+    </span> 
+    <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
+    <span class="additional-info">${phoneNumber ? `<a style="position:fixed;right:15%;color: var(--chat-text-primary);" href="tel:${phoneNumber}"><i style="font-size:1rem;" class="styling-caller bi bi-telephone-fill"></i></a>` : ''}</span>
+`;
 
 // Set the HTML content
 conversations_area.find(".sb-top > a").html(htmlContent);
 
-// Define the toggle states based on data availability
-let toggleStates = [];
-if (phoneNumber) toggleStates.push(`<i class="bi bi-phone"></i> ${phoneNumber}`);
-if (label) toggleStates.push(`<i class="bi bi-tag"></i> ${label}`);
-toggleStates.push(firstName);
-
-// Keep track of the current toggle state
-let currentStateIndex = 0;
+// Keep track of whether additional information is currently shown
+let isAdditionalInfoShown = phoneNumber ? true : false;
 
 // Handle clicking on the profile image
 conversations_area.find(".open-profile-name").on("click", function() {
@@ -3712,9 +3815,18 @@ conversations_area.find(".open-profile-name").on("click", function() {
 
 // Handle clicking on the first name
 conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-    if (toggleStates.length > 1) {
-        currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
-        $(this).html(toggleStates[currentStateIndex]);
+    let currentSpan = $(this).next(".additional-info");
+    if (!isAdditionalInfoShown) {
+        if (currentSpan.length === 0) {
+            currentSpan = $(`<span class="additional-info">${phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:15%" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : ''}</span>`);
+            $(this).after(currentSpan);
+        } else {
+            currentSpan.html(phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:15%" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : '');
+        }
+        isAdditionalInfoShown = true;
+    } else {
+        currentSpan.remove();
+        isAdditionalInfoShown = false;
     }
 });
 
@@ -4282,20 +4394,15 @@ conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click"
     // Update the users details of the conversations area
     updateUserDetails() {
       if (!activeUser()) return;
-      conversations_area
-        .find(
-          `[data-user-id="${
-            activeUser().id
-          }"] .sb-name:not(.sb-custom-name),.sb-top > a`
-        )
-        .html(activeUser().name);
+      var $anchorTag = $('.sb-top > a');
+      var originalTitle = activeUser().name;
+      var firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
+      var $secondSpan = $anchorTag.find('span').eq(1); // Select the second <span> element
+      $secondSpan.html(firstName); // Update its content
       conversations_area.find(".sb-user-details .sb-profile").setProfile();
-      SBProfile.populate(
-        activeUser(),
-        conversations_area.find(".sb-profile-list")
-      );
-    },
-
+      SBProfile.populate(activeUser(), conversations_area.find(".sb-profile-list"));
+  },
+  
     // Set the read status icon
     setReadIcon(conversation_status_code) {
       let unread = conversation_status_code == 2;
@@ -4512,7 +4619,7 @@ conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click"
           ? conversation.title
           : conversation["first_name"] + " " + conversation["last_name"]
       } </h3>
-			<div class="sb-info-conversations" style="min-width: 70px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;">${SBF.beautifyTime(
+			<div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;">${SBF.beautifyTime(
         conversation["creation_time"]
       )}</div>
 			</div>
@@ -4997,7 +5104,7 @@ conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click"
             div.html(code);
           }
           div.attr("style", "display: flex; flex-direction: column-reverse;");
-          notes_panel.find(".sb-collapse-btn").remove();
+          notes_panel.find(".bi-chevron-down").remove();
           collapse(notes_panel, 155);
           this.busy = false;
         }
@@ -6298,7 +6405,7 @@ $("#change-conversation-source").change(function (e) {
     }
 
     // Collapse button
-    $(admin).on("click", ".sb-collapse-btn", function () {
+    $(admin).on("click", ".bi-chevron-down", function () {
       let active = $(this).sbActive();
       let height = active ? $(this).parent().data("height") + "px" : "";
       $(this).html(sb_(active ? "View more" : "Close"));

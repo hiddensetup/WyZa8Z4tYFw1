@@ -449,6 +449,7 @@ body {
 main>div .sb-top-bar .sb-menu-mobile>ul {
     right: 10px;
     top: 16px;
+    width: 50px;
 }
 
 /*
@@ -495,6 +496,7 @@ div ul.sb-menu li,
 .sb-board>.sb-admin-list .sb-scroll-area li .sb-profile .sb-name,
 .sb-dialog-box p {
     font-size: var(--chat-text-size-1-1);
+    font-weight: 500;
 }
 
 
@@ -618,7 +620,8 @@ a.sb-btn {
         padding: 5px;
         display: flex;
         z-index: 999;
-        box-shadow: none;
+        box-shadow: var(--box-shadow-menu);
+        -webkit-box-shadow: var(--box-shadow-menu);
 
 
 
@@ -643,6 +646,8 @@ a.sb-btn {
                     border-radius: var(--chat-rounded-size-5);
                     overflow: hidden;
                     color: var(--chat-btn-translucid-color);
+                    padding: 0px 15px;
+                    width: 20px;
 
                     &:active
                     {
@@ -659,12 +664,12 @@ a.sb-btn {
                         opacity: 1 !important;
                         background: var(--chat-app-theme-color);
                         color: var(--chat-text-white-or-black);
-                        border-radius: 50%;
+                        border-radius: 20%;
                     }
 
 
                     &:before {
-                        left: 18px;
+                        left: 13px;
                     }
 
                     span {
@@ -762,9 +767,8 @@ a.sb-btn {
     .sb-menu-wide>div:after,
     .sb-table-users th:first-child:after,
     .sb-nav>div:after {
-        content: "\61";
-        font-family: "steambox";
-        font-family: steambox;
+        content: "\f282";
+        font-family: "bootstrap-icons";
         font-size: var(--chat-text-size-8);
     }
 
@@ -860,13 +864,14 @@ a.sb-btn {
         position: absolute;
         bottom: auto !important;
         left: auto !important;
-        right: 0 !important;
+        right: 10px !important;
         padding: 0 !important;
         height: 56px;
         display: flex;
         justify-content: flex-end;
         z-index: 95;
         color: var(--chat-top-text-color);
+        width: 30px !important;
 
         >i {
             display: block;
@@ -875,6 +880,9 @@ a.sb-btn {
             text-align: center;
             font-size: var(--chat-text-size-1-4);
             margin: auto;
+            margin: auto;
+            padding: 0px 0px;
+        
             // padding: 17px;
             // overflow: hidden;
             // color: var(--chat-text-white-or-black);
@@ -1003,7 +1011,7 @@ a.sb-btn {
             // height: auto;
             width: auto;
             // padding: 4px 8px;
-            top: 12px;
+            top: 12px!important;
             margin-right: 10px;
         }
 
@@ -1017,7 +1025,7 @@ a.sb-btn {
 
         }
 
-        &.bi-arrow-right-short {
+        &.bi-chevron-right {
             color: none;
         }
     }
@@ -1368,15 +1376,15 @@ a.sb-btn {
 
         .sb-top {
             min-height: 64px;
-            padding: 0px 50px 0px 0px;
+            padding: 0px 00px 0px 0px;
             // background-color: var(--top-bar-mobile-color);
             border-bottom: .8px solid var(--chat-border-color);
 
 
             >a {
                 font-size: var(--chat-text-size-1-1);
-                left: 0;
-                padding: .2rem .6rem;
+                left: 1px;
+                padding: 0px;
             }
 
             .sb-menu-mobile {
@@ -1396,6 +1404,7 @@ a.sb-btn {
 
                     &:active {
                         animation: fade-in 0.4s infinite;
+                        
                     }
                 }
             }
@@ -1404,7 +1413,7 @@ a.sb-btn {
                 padding-left: 0;
 
                 .sb-status-online {
-                    margin: 0px;
+                    margin: auto 5px auto auto ;
                     overflow: hidden;
                     text-indent: -99995px;
                     width: 10px;
@@ -1434,7 +1443,7 @@ a.sb-btn {
 
             .sb-btn-back {
                 display: block !important;
-                width: 40px;
+                width: 9%;
                 text-align: center;
                 cursor: pointer;
                 position: relative;
@@ -1741,7 +1750,7 @@ a.sb-btn {
 .sb-profile-box {
     .sb-main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         >div {
             width: auto;
