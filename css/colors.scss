@@ -1,170 +1,149 @@
 /* Common variables */
 :root,
-
 [data-theme="whatsapp"] {
+    /* Basic colors */
+    --background-color-red: #ca34341a;
+    --background-color-yellow: #f2e37c;
+    --background-conversation: red;
+    --blue-root-color: rgb(32, 32, 248);
+    --blue-root-color-aqua: #40c1d5;
+    --blue-root-color-pastel: #cbf2ee;
+    --brown-root-color: rgb(165, 73, 42);
+    --brown-root-color-pastel: #d2b48c;
+    --color-green: #23c35f;
+    --color-red: #eb1010;
+    --color-yellow: #f6ac00;
+    --google-color: #a6cae2;
+    --green-basic: #13c1af;
+    --green-root-color: green;
+    --green-root-color-pastel: #b7e1cd;
+    --orange-root-color: orange;
+    --orange-root-color-pastel: #ffd8b1;
+    --pink-root-color: #ff497f;
+    --pink-root-color-pastel: #ffb6c1;
+    --purple-root-color: purple;
+    --purple-root-color-pastel: #d7aaff;
+    --red-root-color: red;
+    --red-root-color-pastel: #ffb3ba;
+    --switch-off-color: #292f46d6;
+    --teal-root-color: teal;
+    --teal-root-color-pastel: #afeeee;
+    --top-bar-mobile-color: linear-gradient(332deg, #3503ff, #7c17b8), linear-gradient(#25008c, transparent);
+    --yellow-root-color: rgb(255, 243, 18);
+    --yellow-root-color-pastel: #fff9c8;
 
-/* Text Colors */
---chat-text-secondary: rgb(116, 123, 134);
---chat-text-primary: rgb(68, 78, 95);
---chat-text-tertiary: rgb(148, 160, 172);
---chat-text-white-or-black: #fafafb;
---chat-text-dark-or-white: #050504;
+    /* Text Colors */
+    --chat-text-secondary: rgb(116, 123, 134);
+    --chat-text-primary: rgb(68, 78, 95);
+    --chat-text-tertiary: rgb(148, 160, 172);
+    --chat-text-white-or-black: #fafafb;
+    --chat-text-dark-or-white: #050504;
 
+    /* Conversation Chat */
+    --chat-bubble-client: #fafafb;
+    --chat-bubble-agent: #d9fdd3;
+    --chat-conversation-background: #dff1eb;
+    --chat-top-bar-color: #fafafb;
+    --chat-bottom-bar-color: #dff1eb;
 
-/* Conversation Chat */
---chat-bubble-client: #fafafb;
---chat-bubble-agent: #d9fdd3;
---chat-conversation-background: #dff1eb;
---chat-top-bar-color: #fafafb;
---chat-bottom-bar-color: #dff1eb;
+    /* Chat App */
+    --chat-left-bar-color: var(--chat-app-theme-color);
+    --chat-app-loader-color: var(--chat-app-theme-color);
+    --chat-app-tooltip-color: var(--chat-app-background);
+    --chat-notif-background: var(--chat-app-theme-color);
+    --chat-app-hr-color: rgb(66 103 132 / 20%);
+    --chat-app-background: #fafafb;
+    --chat-app-theme-color: #23c35f;
+    --chat-app-background-2: var(--chat-btn-background-active);
+    --chat-app-logo-color: var(--chat-text-white-or-black);
+    --chat-background-menu-selected: var(--chat-list-background-selected);
+    --chat-background-menu: var(--chat-app-background);
+    --chat-border-color: rgba(66, 103, 132, 0.26);
+    --chat-list-background-selected: #eaeff2;
+    --chat-scroll-area-background: transparent;
 
-/* Chat App */
---chat-left-bar-color: var(--chat-app-theme-color);
---chat-app-loader-color: var(--chat-app-theme-color);
---chat-app-tooltip-color: var(--chat-app-background);
---chat-notif-background: var(--chat-app-theme-color);
---chat-app-hr-color:rgb(66 103 132 / 20%);
---chat-app-background: #fafafb;
---chat-app-theme-color: #23c35f;
---chat-app-background-2: var(--chat-btn-background-active);
---chat-app-logo-color: var(--chat-text-white-or-black);
---chat-background-menu-selected: var(--chat-list-background-selected);
+    /* Chat Notes */
+    --chat-app-notes-color: #cce6d6;
+    --chat-tag-text-color: var(--chat-text-white-or-black);
 
---chat-background-menu: var(--chat-app-background);
---chat-border-color: rgba(66, 103, 132, 0.26);
---chat-list-background-selected: #eaeff2;
---chat-scroll-area-background: transparent;
+    /* Chat Tags */
+    --chat-tag-text-color-active: var(--chat-text-white-or-black);
+    --chat-tag-background-color: var(--chat-btn-background);
+    --chat-tag-background-color-active: var(--chat-btn-background-active);
 
-/* Chat Notes */
---chat-app-notes-color:#cce6d6;
---chat-tag-text-color: var(--chat-text-white-or-black);
+    /* Chat Inputs */
+    --chat-input-focus-ring: inset 0 0 2px 0.5px #b0b7d5;
+    --chat-input-background: rgb(255, 255, 255);
+    --chat-input-search-responsive: var(--chat-list-background-selected);
+    --chat-input-toggle-color: var(--chat-app-background);
 
-/* Chat Tags */
---chat-tag-text-color-active: var(--chat-text-white-or-black);
---chat-tag-background-color: var(--chat-btn-background);
---chat-tag-background-color-active: var(--chat-btn-background-active);
+    /* Chat Buttons */
+    --chat-btn-background: #444e5f;
+    --chat-btn-background-active: #6a758cc2;
+    --chat-btn-text: var(--chat-text-white-or-black);
+    --chat-btn-text-active: var(--chat-text-white-or-black);
+    --chat-btn-translucid-color: rgb(68 78 96 / 60%);
+    --chat-btn-ring-shadow: 0 0 0px 2px white, 0 0 0px 3.5px #5c6176c9;
+    --chat-btn-ring-shadow-small: 0 0 0px .5px #14161dc9, 0 0 0px 1.5px #5c6176c9;
 
-/* Chat Inputs */
---chat-input-focus-ring: inset 0 0 2px 0.5px #b0b7d5;
---chat-input-background: rgb(255, 255, 255);
---chat-input-search-responsive:var(--chat-list-background-selected);
---chat-input-toggle-color: var(--chat-app-background);
+    /* Chat Lightbox */
+    --chat-lightbox-top: rgb(28 26 46 / 9%);
+    --chat-lightbox-background: var(--chat-app-background);
 
-/* Chat Buttons */
---chat-btn-background: #444e5f;
---chat-btn-background-active: #6a758cc2;
---chat-btn-text: var(--chat-text-white-or-black);
---chat-btn-text-active: var(--chat-text-white-or-black);
---chat-btn-translucid-color: rgb(68 78 96 / 60%);
---chat-btn-ring-shadow: 0 0 0px 2px white, 0 0 0px 3.5px #5c6176c9;
---chat-btn-ring-shadow-small: 0 0 0px .5px #14161dc9, 0 0 0px 1.5p #5c6176c9;
+    /* Default Font Sizes */
+    --chat-text-size-1-4: 1.4rem;
+    --chat-text-size-1-3: 1.3rem;
+    --chat-text-size-1-2: 1.2rem;
+    --chat-text-size-1-1: 1.1rem;
+    --chat-text-size-1-0: 1rem;
+    --chat-text-size-9: 0.9rem;
+    --chat-text-size-8: 0.8rem;
+    --chat-text-size-7: 0.7rem;
+    --chat-text-size-6: 0.6rem;
+    --chat-text-size-5: 0.5rem;
 
-/* Chat Lightbox */
---chat-lightbox-top: rgb(28 26 46 / 9%);
---chat-lightbox-background: var(--chat-app-background);
+    /* Default Rounded Sizes */
+    --chat-rounded-size-1-4: 1.4rem;
+    --chat-rounded-size-1-3: 1.3rem;
+    --chat-rounded-size-1-2: 1.2rem;
+    --chat-rounded-size-1-1: 1.1rem;
+    --chat-rounded-size-1-0: 1rem;
+    --chat-rounded-size-9: 0.9rem;
+    --chat-rounded-size-8: 0.8rem;
+    --chat-rounded-size-7: 0.7rem;
+    --chat-rounded-size-6: 0.6rem;
+    --chat-rounded-size-5: 0.5rem;
+    --chat-rounded-size-3: 0.3rem;
+    --chat-rounded-top-1-0: 1rem 1rem 0 0;
+    --chat-rounded-bubble-agent-6: .6rem 0 .6rem .6rem;
+    --chat-rounded-bubble-client-6: 0 .6rem .6rem .6rem;
 
+    /* Default Spacing Sizes */
+    --chat-y-6-auto: 0.6rem auto;
+    --chat-y-1-auto: 1rem auto;
+    --chat-x-6-auto: auto 0.6rem;
+    --chat-x-1-auto: auto 1rem;
+    --chat-spacing-size-1-4: 1.4rem;
+    --chat-spacing-size-1-3: 1.3rem;
+    --chat-spacing-size-1-2: 1.2rem;
+    --chat-spacing-size-1-1: 1.1rem;
+    --chat-spacing-size-1-0: 1rem;
+    --chat-spacing-size-9: 0.9rem;
+    --chat-spacing-size-8: 0.8rem;
+    --chat-spacing-size-7: 0.7rem;
+    --chat-spacing-size-6: 0.6rem;
+    --chat-spacing-size-5: 0.5rem;
 
-/* Default Font Sizes */
---chat-text-size-1-4: 1.4rem;
---chat-text-size-1-3: 1.3rem;
---chat-text-size-1-2: 1.2rem;
---chat-text-size-1-1: 1.1rem;
---chat-text-size-1-0: 1rem;
---chat-text-size-9: 0.9rem;
---chat-text-size-8: 0.8rem;
---chat-text-size-7: 0.7rem;
---chat-text-size-6: 0.6rem;
---chat-text-size-5: 0.5rem;
-
-
-/* Default Rounded Sizes */
---chat-rounded-size-1-4: 1.4rem;
---chat-rounded-size-1-3: 1.3rem;
---chat-rounded-size-1-2: 1.2rem;
---chat-rounded-size-1-1: 1.1rem;
---chat-rounded-size-1-0: 1rem;
---chat-rounded-size-9: 0.9rem;
---chat-rounded-size-8: 0.8rem;
---chat-rounded-size-7: 0.7rem;
---chat-rounded-size-6: 0.6rem;
---chat-rounded-size-5: 0.5rem;
---chat-rounded-size-3: 0.3rem;
---chat-rounded-top-1-0: 1rem 1rem 0 0;
---chat-rounded-bubble-agent-6:.6rem 0 .6rem .6rem;
---chat-rounded-bubble-client-6: 0 .6rem .6rem .6rem;
-
-
-
-/* Default Spacing Sizes */
-
---chat-y-6-auto: 0.6rem auto;
---chat-y-1-auto: 1rem auto;
---chat-x-6-auto: auto 0.6rem;
---chat-x-1-auto: auto 1rem;
-
-
-
---chat-spacing-size-1-4: 1.4rem;
---chat-spacing-size-1-3: 1.3rem;
---chat-spacing-size-1-2: 1.2rem;
---chat-spacing-size-1-1: 1.1rem;
---chat-spacing-size-1-0: 1rem;
---chat-spacing-size-9: 0.9rem;
---chat-spacing-size-8: 0.8rem;
---chat-spacing-size-7: 0.7rem;
---chat-spacing-size-6: 0.6rem;
---chat-spacing-size-5: 0.5rem;
-
-
-
-
-
-
-/* Default effects & shadows */
---box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--chat-border-color);
---box-shadow-left-side: -1px -1px 10px var(--chat-border-color);
---box-shadow-right-side: 1px 1px 10px var(--chat-border-color);
---box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
---box-shadow-bordered: 0 0 1px .6px var(--chat-border-color),0 0px 10px 0px var(--chat-border-color);
---box-shadow-menu: 0px -1px 5px -1px rgb(0 0 0 / 20%);
---box-shadow-bubble-chat: 0px 1px 2px -1px rgba(0, 0, 0, .57);
---box-shadow-inner: inset 0 0 4px -1px rgb(48 50 65 / 38%);
---transition-3: all 2s;
---transition-2: all 0.55s;
---transition: all 0.25s;
-
-/* Basic colors */
-
---background-color-red: #ca34341a;
---background-color-yellow: #f2e37c;
---background-conversation: red;
---blue-root-color: rgb(32, 32, 248);
---blue-root-color-aqua: #40c1d5;
---blue-root-color-pastel: #cbf2ee;
---brown-root-color: rgb(165, 73, 42);
---brown-root-color-pastel: #d2b48c;
---color-green: #23c35f;
---color-red: #eb1010;
---color-yellow: #f6ac00;
---google-color: #a6cae2;
---green-basic: #13c1af;
---green-root-color: green;
---green-root-color-pastel: #b7e1cd;
---orange-root-color: orange;
---orange-root-color-pastel: #ffd8b1;
---pink-root-color: #ff497f;
---pink-root-color-pastel: #ffb6c1;
---purple-root-color: purple;
---purple-root-color-pastel: #d7aaff;
---red-root-color: red;
---red-root-color-pastel: #ffb3ba;
---switch-off-color: #292f46d6;
---teal-root-color: teal;
---teal-root-color-pastel: #afeeee;
---top-bar-mobile-color: linear-gradient(332deg, #3503ff, #7c17b8), linear-gradient(#25008c, transparent);
---yellow-root-color: rgb(255, 243, 18);
---yellow-root-color-pastel: #fff9c8;
- 
+    /* Default effects & shadows */
+    --box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px var(--chat-border-color);
+    --box-shadow-left-side: -1px -1px 10px var(--chat-border-color);
+    --box-shadow-right-side: 1px 1px 10px var(--chat-border-color);
+    --box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
+    --box-shadow-bordered: 0 0 1px .6px var(--chat-border-color),0 0px 10px 0px var(--chat-border-color);
+    --box-shadow-menu: 0px -1px 5px -1px rgb(0 0 0 / 20%);
+    --box-shadow-bubble-chat: 0px 1px 2px -1px rgba(0, 0, 0, .57);
+    --box-shadow-inner: inset 0 0 4px -1px rgb(48 50 65 / 38%);
+    --transition-3: all 2s;
+    --transition-2: all 0.55s;
+    --transition: all 0.25s;
 }
-
-
