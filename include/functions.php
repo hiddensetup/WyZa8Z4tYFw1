@@ -10817,11 +10817,11 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
                     );
                     $data[$key] = [
                         $average,
-                        '<i class="bi-list-stars"></i>' .
+                        '<i class="bi-hand-thumbs-up-fill"></i>' .
                             $positive .
                             " (" .
                             $average .
-                            '%) <i class="sb-icon-dislike"></i>' .
+                            '%) <i class="bi-hand-thumbs-down-fill"></i>' .
                             $negative,
                     ];
                 }

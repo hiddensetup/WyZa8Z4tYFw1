@@ -1191,7 +1191,8 @@ div ul.sb-menu,
     width: min-content;
     margin: 8px 3px;
     border-radius: .6rem .0rem .0rem .6rem;
-    box-shadow: var(--box-shadow-bubble-chat);
+    box-shadow: var(--box-shadow-menu);
+    -webkit-box-shadow: var(--box-shadow-menu);
 
     >div {
       width: 21px;
@@ -2530,7 +2531,9 @@ a.sb-btn {
   border-radius: var(--chat-rounded-size-3);
   width: auto;
   transform: none;
-  box-shadow: var(--box-shadow-bubble-chat);
+  box-shadow: var(--box-shadow-menu);
+  -webkit-box-shadow: var(--box-shadow-menu);
+
 
   .sb-emoji-list {
     height: calc(100% - 80px);
@@ -2608,6 +2611,7 @@ a.sb-btn {
   font-size: var(--chat-text-size-9);
   height: 35px;
   line-height: 45px;
+  font-weight: 800;
   //display: inline-block;
 
   p {

@@ -2084,7 +2084,7 @@ TABLE
     }
 
     #sb-conversations:before {
-        content: "\f24d";
+        content: "\f249";
     }
 
     #sb-users:before {
@@ -2096,7 +2096,7 @@ TABLE
     }
 
     #sb-settings:before {
-        content: "\f3e5";
+        content: "\f3e2";
     }
 
     #sb-automations:before {
@@ -2104,7 +2104,7 @@ TABLE
     }
 
     #sb-reports:before {
-        content: "\f17e";
+        content: "\F17B";
     }
 }
 
@@ -2174,7 +2174,7 @@ BODY
                     margin: 0;
                     font-size: var(--chat-text-size-1-3);
                     line-height: 35px;
-                    font-weight: 400;
+                    font-weight: bolder;
                 }
 
                 >div {
@@ -2562,7 +2562,7 @@ BODY
                     &:not(.sb-active) {
                         // background-color: var(--incoming-conversation-active);
                         //border-left: 2px solid transparent;
-                        color: var(--chat-text-primary);
+                        color: var(--chat-text-secondary);
 
                         border-radius: 0px;
                         font-weight: 600;
@@ -2579,7 +2579,7 @@ BODY
                         right: 0px;
                         // bottom: 9px;
                         border-radius: 50%;
-                        line-height: 2;
+                        // line-height: 2;
                         padding: 0px;
                         font-size: var(--chat-text-size-1-0);
 
@@ -2593,7 +2593,7 @@ BODY
 
                     .sb-info-conversations {
                         // color: var(--color-green);
-                        font-weight: 800;
+                        font-weight: 400;
                         text-align: right;
                         // position: absolute;
                         // right: 0px;
@@ -3204,13 +3204,15 @@ BODY
             padding: 11px 0 21px 0;
             border-bottom: .8px solid var(--chat-border-color);
             border-top: .8px solid var(--chat-border-color);
+            transition: var(--transition);
+            -webkit-transition: var(--transition);
             cursor: pointer;
 
 
-            &:active,
-            &:hover {
-                background-color: var(--chat-text-theme-background);
+            &:active {
+                background: var(--chat-text-theme-background);
                 transition: var(--transition);
+                -webkit-transition: var(--transition);
                 color: var(--chat-text-theme-button);
 
             }
@@ -5126,16 +5128,14 @@ BODY
     width: calc(100% - 50px);
     height: auto;
     padding: 0;
+    animation: fade-in .5s ease-in;
     max-width: 700px;
     max-height: 700px;
     background-color: var(--chat-lightbox-background);
-    left: 50%;
-    top: 50%;
-    margin-left: 150px;
-    margin-top: 150px;
     display: none;
     box-shadow: var(--box-shadow-bordered);
     -webkit-box-shadow: var(--box-shadow-bordered);
+    animation: fade-in .5s ease-in;
 
     &.sb-active {
         display: block;

@@ -466,7 +466,7 @@ div ul.sb-menu li,
 
 .sb-select p,
 .sb-board>.sb-admin-list .sb-scroll-area li p {
-    padding: 5px 20px 0 15px;
+    padding: 0px 20px 0 15px;
 
 }
 
@@ -497,6 +497,7 @@ div ul.sb-menu li,
 .sb-dialog-box p {
     font-size: var(--chat-text-size-1-1);
     font-weight: 500 !important;
+    margin: 8px auto;
 }
 
 
@@ -612,6 +613,12 @@ a.sb-btn {
 
     >.sb-header {
         background: var(--chat-app-background);
+        backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
+        box-shadow: var(--box-shadow-menu);
+        -webkit-box-shadow: var(--box-shadow-menu);
+
+
         border-bottom: none;
         width: 100%;
         height: 60px;
@@ -706,12 +713,13 @@ a.sb-btn {
             }
 
             [data-value="status"] {
-                padding-left: 40px;
+                padding-left: 28px;
                 padding-top: 9px;
+            
 
                 &:before {
                     right: auto;
-                    left: 15px;
+                    left: 6px;
                 }
             }
         }
@@ -747,7 +755,7 @@ a.sb-btn {
         }
 
         .sb-mobile {
-            display: block !important;
+            display: none;
         }
     }
 }
@@ -1113,7 +1121,7 @@ a.sb-btn {
 
     .sb-filter-btn {
         >div {
-            padding: 3px 15px 0 15px;
+            padding: 10px 15px 0 15px;
             height: auto;
             left: 0px;
             top: 0px;
@@ -1335,13 +1343,11 @@ a.sb-btn {
         // background: url('/media/bkg.avif');
 
         .sb-top {
-            // border-bottom: 0.5px solid var(--background-conversation)!important;
             padding: 5px 0;
             height: 50px;
             min-height: 5px;
             align-items: center;
             border: none;
-            // border-radius: 0 0 14px 14px;
             background-color: var(--chat-app-background);
             border-bottom: .6px solid var(--chat-border-color);
             position: fixed;
@@ -1381,10 +1387,11 @@ a.sb-btn {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     margin: 0 !important;
-                    height: 23px !important;
-                    left: 63px !important;
+                    height: 24px !important;
+                    left: 66px !important;
                 }
             }
+     
         }
     }
 
@@ -1612,6 +1619,8 @@ a.sb-btn {
 
         p {
             padding-left: 0;
+            bottom: 3px;
+    
         }
     }
 }

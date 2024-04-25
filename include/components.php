@@ -748,19 +748,23 @@ const updateTheme = () => {
         case 'dark':
             newTheme = 'light';
             newThemeColor = 'white'; // Light theme color
+            htmlTag.classList.remove('dark'); // Remove dark class
             break;
         case 'light':
             newTheme = 'app';
             newThemeColor = 'white'; // WhatsApp theme color
+            htmlTag.classList.remove('dark'); // Remove dark class
             break;
         case 'app':
             newTheme = 'insta';
             newThemeColor = '#a6cae2'; // Google theme color
+            htmlTag.classList.remove('dark'); // Remove dark class
             break;
         case 'insta':
         default:
-            newTheme = 'light';
-            newThemeColor = 'white'; // Default to dark theme color
+            newTheme = 'dark';
+            newThemeColor = 'black'; // Default to dark theme color
+            htmlTag.classList.add('dark'); // Add dark class
             break;
     }
 
@@ -785,7 +789,8 @@ if (storedTheme) {
             break;
         case 'dark':
         default:
-            metaThemeColor.content = 'white'; 
+            metaThemeColor.content = 'black';
+            htmlTag.classList.add('dark'); // Add dark class for the dark theme
             break;
     }
 } else {
@@ -1187,8 +1192,8 @@ function sb_component_admin()
                         </a>
                         <?php
                         if ($active_areas['users']) echo '<a id="sb-users" class="bi-people" ><span>' . sb_('Users') . '</span></a>';
-                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-bar-chart"><span>' . sb_('Reports') . '</span></a>';
-                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear"><span>' . sb_('Settings') . '</span></a>';
+                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-chart"><span>' . sb_('Reports') . '</span></a>';
+                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear-fill"><span>' . sb_('Settings') . '</span></a>';
 
                         ?>
                     </div>
@@ -1196,7 +1201,7 @@ function sb_component_admin()
                 </div>
 
                 <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
-                    <i style="padding: 20px 0px;" class="bi-three-dots-vertical"></i>
+                    <i style="padding: 20px 10px;" class="bi-three-dots-vertical"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
