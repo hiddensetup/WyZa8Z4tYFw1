@@ -528,6 +528,7 @@ div ul.sb-menu,
     border-radius: 0rem 0.7rem 0.7rem 0.7rem;
     padding: 0px;
     max-width: 30rem;
+    z-index: 0;
     color: var(--chat-text-bubble-client);
     // color: var(--chat-btn-background);
     //max-width: calc(90% - 110px);
