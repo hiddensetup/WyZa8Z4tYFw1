@@ -919,10 +919,11 @@ div ul.sb-menu,
     border-radius: var(--chat-rounded-size-5);
     font-size: var(--chat-text-size-7);
     line-height: 26px;
-    letter-spacing: 0.3px;
-    background-color: var(--chat-background-menu);
+    letter-spacing: .3px;
+    background-color: var(--chat-app-background);
     font-weight: 400;
-    box-shadow: var(--box-shadow-bubble-chat)
+    box-shadow: var(--box-shadow-bubble-chat);
+    color: var(--chat-text-tooltip);
   }
 }
 
