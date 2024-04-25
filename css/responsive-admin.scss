@@ -613,8 +613,8 @@ a.sb-btn {
 
     >.sb-header {
         background: var(--chat-app-background);
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
         box-shadow: var(--box-shadow-menu);
         -webkit-box-shadow: var(--box-shadow-menu);
 
@@ -1352,6 +1352,8 @@ a.sb-btn {
             border-bottom: .6px solid var(--chat-border-color);
             position: fixed;
             width: 100%;
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
             z-index: 10;
 
             .sb-flex {
