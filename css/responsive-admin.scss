@@ -787,7 +787,7 @@ a.sb-btn {
         overflow-y: scroll;
         z-index: 9999;
         box-shadow: var(--box-shadow-menu);
-        border-radius: 6px 6px 4px 4px;
+        border-radius: .6rem;
     }
 
     .sb-nav>.sb-btn:after {
@@ -1116,7 +1116,7 @@ a.sb-btn {
             padding: 3px 15px 0 15px;
             height: auto;
             left: 0px;
-            top: 5px;
+            top: 0px;
         }
     }
 
@@ -1238,6 +1238,22 @@ a.sb-btn {
             right: 30px;
             top: 30px;
         }
+    }
+}
+
+.styling-caller {
+    visibility: visible;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 2px 3px;
+
+    &:active {
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+
+        color: var(--chat-text-white-or-black);
+        background: var(--chat-app-theme-color);
+        border-radius: 50%;
     }
 }
 
@@ -1365,7 +1381,7 @@ a.sb-btn {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     margin: 0 !important;
-                    height: 20px !important;
+                    height: 23px !important;
                     left: 63px !important;
                 }
             }

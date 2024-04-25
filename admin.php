@@ -25,7 +25,7 @@ require('include/components.php');
 
 <!DOCTYPE html>
 
-<html lang="en" data-theme="insta">
+<html lang="en" data-theme="">
 
 <head>
   <meta charset="UTF-8">

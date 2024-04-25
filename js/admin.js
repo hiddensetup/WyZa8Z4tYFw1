@@ -3797,7 +3797,8 @@ let htmlContent = `
         <img src="${profileImage}" class="top-image-profile">
     </span> 
     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
-    <span class="additional-info">${phoneNumber ? `<a style="position:fixed;right: 55px;color: var(--chat-text-primary);z-index: 4;top: 8px;" href="tel:${phoneNumber}"><i style="font-size:1rem;" class="styling-caller bi bi-telephone-fill"></i></a>` : ''}</span>
+    <span class="additional-info">${phoneNumber ? `<a style="position:fixed;right: 55px;color: var(--chat-text-primary);z-index: 4;top: 6px;
+    padding: 4px 5px;" href="tel:${phoneNumber}"><i style="font-size:1rem;" class="styling-caller bi bi-telephone-fill"></i></a>` : ''}</span>
 `;
 
 // Set the HTML content
