@@ -2280,8 +2280,9 @@ a.sb-btn {
   left: 0;
   bottom: 0;
   z-index: 9999995;
-  backdrop-filter: blur(60px);
-  -webkit-backdrop-filter: blur(60px);
+  background: var(--chat-app-background);
+  animation: var(--fade-in);
+  -webkit-animation: var(--fade-in);
   display: none;
 }
 
@@ -2609,18 +2610,18 @@ a.sb-btn {
 ==========================================================
 
 */
-
 .sb-select {
   position: relative;
   font-size: var(--chat-text-size-9);
   height: 35px;
   line-height: 45px;
   font-weight: 800;
-  //display: inline-block;
+  max-width: 180px;
+  
 
-  p {
+  > p {
     position: relative;
-    padding: 0px 16px 0 0;
+    padding-right: 20px;
     margin: 1.8px 0px;
     cursor: pointer;
     font-weight: lighter;
@@ -2634,17 +2635,16 @@ a.sb-btn {
     -webkit-transition: var(--transition-2);
     -webkit-animation: fade-in 0.4s ease-in-out;
     animation: fade-in 0.4s ease-in-out;
-    // color: var(--chat-list-active-text);
 
     span {
       font-weight: 400;
     }
 
     &:after {
-      content: "\F282";
+      content: "▼";
       font-family: "bootstrap-icons";
       position: absolute;
-      top: 0;
+      top: -4px;
       right: 1px;
       font-size: var(--chat-text-size-6);
       font-style: normal;
@@ -2672,7 +2672,7 @@ a.sb-btn {
   }
 
   &.sb-select-colors {
-    >p {
+    > p {
       padding: 0 40px 0 15px;
       transition: none;
 
@@ -2687,17 +2687,16 @@ a.sb-btn {
       }
 
       &:active {
-        // background-color: var(--chat-app-background);
         color: var(--chat-btn-background);
       }
     }
 
-    >ul {
+    > ul {
       padding: 4px !important;
     }
 
     &.sb-loading {
-      >ul {
+      > ul {
         display: none;
       }
 
@@ -2711,10 +2710,19 @@ a.sb-btn {
     }
   }
 
-  &:not(.sb-hide)+.sb-select {
-    margin-left: 15px;
+  &:not(.sb-hide) + .sb-select {
+    margin-left: 10px;
+  }
+
+  // &:nth-of-type(1) > p {
+  //   max-width: 180px; /* Apply max-width of 180px for the first p */
+  // }
+
+  &:nth-of-type(2) > p {
+    padding-left: 0!important;
   }
 }
+
 
 div ul.sb-menu,
 .sb-select ul {
@@ -2764,6 +2772,7 @@ div ul.sb-menu,
       // border-radius: 0.3rem;
     }
   }
+
 }
 
 .desktop-dropmod {

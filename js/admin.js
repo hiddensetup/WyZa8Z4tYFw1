@@ -10171,17 +10171,37 @@ $(".bi-search").click(function () {
  * ----------------------------------------------------------
  */
 
+
+ // Function to hide the overlay and fade in the content
+function showContent() {
+  const overlay = document.getElementById("overlay");
+  const html = document.documentElement;
+
+  overlay.style.display = "none";
+  html.style.animation = "fade-in .8s ease-out";
+}
+
+// Function to initialize the loading animation
+function initLoadingAnimation() {
+  const overlay = document.getElementById("overlay");
+  const loader = document.getElementById("loader");
+
+  // Trigger the loading animation
+  overlay.style.animation = "load 1.6s reverse";
+
+  // Listen for the end of the loading animation
+  overlay.addEventListener("animationend", function () {
+    // Hide the overlay and fade in the content
+    showContent();
+  });
+}
+
+// Event listener for when all resources have loaded
 window.addEventListener("load", function () {
-  const n = document.getElementById("overlay"),
-    e = document.documentElement;
-  (n.style.animation = "load 1.6s reverse"),
-    n.addEventListener("animationend", function () {
-      (n.style.display = "none"),
-        e.addEventListener("animationend", function () {
-          e.style.animation = "fade-in .8s ease-out";
-        });
-    });
+  // Initialize the loading animation
+  initLoadingAnimation();
 });
+
 
 /*
  * ----------------------------------------------------------

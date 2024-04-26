@@ -2050,7 +2050,7 @@ TABLE
                     -webkit-animation: fade-in .8s cubic-bezier(0, 1.45, 1, 1);
                     margin-bottom: 0;
                     box-shadow: var(--box-shadow-menu);
-                    padding: 5px;
+                    padding: 8px;
                     background-color: var(--chat-background-menu);
                     border: .8px solid var(--chat-border-color);
                     border-radius: var(--chat-rounded-size-6);
@@ -2370,8 +2370,8 @@ BODY
         // backdrop-filter: blur(15px);
         // position: relative;
 
-        max-width: 400px;
-        min-width: 399px;
+        max-width: 410px;
+        min-width: 409px;
         // background: var(--chat-app-background);
         // border-right: 0.5px solid var(--chat-border-color);
         // backdrop-filter: blur(80px);
@@ -5132,7 +5132,7 @@ BODY
     padding: 0;
     max-width: 700px;
     max-height: 700px;
-    background-color: var(--chat-lightbox-background);
+    background: var(--chat-app-background);
     left: 50%;
     top: 50%;
     margin-left: 150px;
@@ -6827,7 +6827,7 @@ grammarly-editor-plugin {
             // min-width: 153px;
             width: 320px;
             z-index: 1;
-            background: var(--chat-app-background) !important
+            background: var(--chat-input-background) !important
         }
 
         .sb-filter-btn.sb-active>div {
@@ -6959,8 +6959,8 @@ grammarly-editor-plugin {
             z-index: 3;
             top: 0;
             bottom: 0;
-            max-width: 400px;
-            min-width: 400px;
+            max-width: 430px;
+            min-width: 429px;
             display: none;
             box-shadow: var(--box-shadow-right-side);
             -webkit-box-shadow: var(--box-shadow-right-side);

@@ -25,7 +25,7 @@ require('include/components.php');
 
 <!DOCTYPE html>
 
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="steambox">
 
 <head>
   <meta charset="UTF-8">
@@ -54,8 +54,7 @@ require('include/components.php');
 </head>
 
 <body>
-
-  <div id="overlay">
+<div id="overlay">
     <div id="loader">
       <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : STMBX_URL . '/media/icon.svg' ?>" style="width:90px; animation:rotate-in-center 4s infinite;" alt="Loading...">
 

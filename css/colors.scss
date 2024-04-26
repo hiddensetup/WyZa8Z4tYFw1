@@ -34,7 +34,7 @@
 
     /* Text Colors */
     --chat-text-secondary: rgb(100 107 117);
-    --chat-text-primary: rgb(29 33 40);
+    --chat-text-primary: rgb(26, 29, 34);
     --chat-text-tertiary: rgb(131, 150, 168);
     --chat-text-white-or-black: white;
     --chat-text-theme-button: white;
@@ -161,6 +161,7 @@
     --transition-3: all 2s;
     --transition-2: all 0.55s;
     --transition: all 0.25s;
+    --fade-in: fade-in .3s cubic-bezier(1, -0.32, 0, 1.7);
 }
 
 /* Light theme */
@@ -188,9 +189,26 @@
     --chat-text-theme-background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);;
 
 }
+
+
+/* Insta theme */
+[data-theme="steambox"] {
+    --chat-app-theme-color: rgb(26, 29, 34);
+    --chat-conversation-background: #fbfbfb;
+    --chat-bottom-bar-color:#fbfbfb;
+    --chat-bubble-agent: rgb(26, 29, 34);;
+    --chat-text-bubble-agent: #ffffff;
+    --chat-text-url: #ffebeb;
+    --chat-text-theme-button: white;
+    --chat-text-theme-background:  rgb(26, 29, 34);
+
+}
+
+
 /* Dark theme */
 [data-theme="dark"] {
-    --chat-app-background: rgba(16, 16, 37, 0.544);
+    // --chat-app-background: rgba(16, 16, 37, 0.544);
+    --chat-app-background: linear-gradient(24deg, rgb(9 16 41) -16.9%, rgb(34 9 63 / 89%) 119.9%), rgb(2 62 58) -16.9%;
     --chat-app-theme-color: #5f4aff;
     --chat-conversation-background: #fbfbfb03;
     --chat-bottom-bar-color: transparent;
@@ -198,15 +216,14 @@
     --chat-text-bubble-agent: #ffffff;
     --chat-text-url: rgb(62 200 220);;
     --chat-text-primary: white;
-    --chat-image-background: radial-gradient(at 60% 48%, hsla(227, 24%, 4%, 0.19) 0px, transparent 50%), radial-gradient(at 44% 4%, hsla(289, 53%, 28%, 0.65) 0px, transparent 50%), radial-gradient(at 45% 91%, hsla(289, 47%, 18%, 1) 0px, transparent 50%), radial-gradient(at 3% 65%, hsla(238, 63%, 19%, 1) 0px, transparent 50%), radial-gradient(at 11% 100%, hsla(236, 68%, 18%, 1) 0px, transparent 50%), radial-gradient(at 30% 0%, hsla(236, 68%, 18%, 1) 0px, transparent 50%), radial-gradient(at 85% 0%, hsla(224, 81%, 18%, 1) 0px, transparent 50%), radial-gradient(at 63% 97%, hsla(286, 61%, 18%, 1) 0px, transparent 50%), radial-gradient(at 0% 8%, hsla(238, 63%, 19%, 1) 0px, transparent 50%), radial-gradient(at 100% 0%, hsla(224, 82%, 24%, 1) 0px, transparent 50%), radial-gradient(at 73% 45%, hsla(324, 77%, 66%, 1) 0px, transparent 50%), radial-gradient(at 48% 32%, hsla(194, 79%, 74%, 1) 0px, transparent 50%), radial-gradient(at 94% 76%, hsla(276, 17%, 19%, 1) 0px, transparent 50%), radial-gradient(at 0% 67%, hsla(227, 58%, 23%, 1) 0px, transparent 50%), radial-gradient(at 0% 98%, hsla(238, 68%, 20%, 1) 0px, transparent 50%), radial-gradient(at 87% 26%, hsla(181, 89%, 51%, 1) 0px, transparent 50%);
+    // --chat-image-background: radial-gradient(at 60% 48%, hsla(227, 24%, 4%, 0.19) 0px, transparent 50%), radial-gradient(at 44% 4%, hsla(289, 53%, 28%, 0.65) 0px, transparent 50%), radial-gradient(at 45% 91%, hsla(289, 47%, 18%, 1) 0px, transparent 50%), radial-gradient(at 3% 65%, hsla(238, 63%, 19%, 1) 0px, transparent 50%), radial-gradient(at 11% 100%, hsla(236, 68%, 18%, 1) 0px, transparent 50%), radial-gradient(at 30% 0%, hsla(236, 68%, 18%, 1) 0px, transparent 50%), radial-gradient(at 85% 0%, hsla(224, 81%, 18%, 1) 0px, transparent 50%), radial-gradient(at 63% 97%, hsla(286, 61%, 18%, 1) 0px, transparent 50%), radial-gradient(at 0% 8%, hsla(238, 63%, 19%, 1) 0px, transparent 50%), radial-gradient(at 100% 0%, hsla(224, 82%, 24%, 1) 0px, transparent 50%), radial-gradient(at 73% 45%, hsla(324, 77%, 66%, 1) 0px, transparent 50%), radial-gradient(at 48% 32%, hsla(194, 79%, 74%, 1) 0px, transparent 50%), radial-gradient(at 94% 76%, hsla(276, 17%, 19%, 1) 0px, transparent 50%), radial-gradient(at 0% 67%, hsla(227, 58%, 23%, 1) 0px, transparent 50%), radial-gradient(at 0% 98%, hsla(238, 68%, 20%, 1) 0px, transparent 50%), radial-gradient(at 87% 26%, hsla(181, 89%, 51%, 1) 0px, transparent 50%);
     --chat-image-color-background: hsla(272, 0%, 0%, 1);
     --chat-text-secondary: rgb(194 205 223);
     --chat-background-menu-selected: #5f4aff;
-    --chat-background-menu: rgb(25 25 54);
+    --chat-background-menu: rgb(27 19 57);
     --chat-top-bar-color: transparent;
     --chat-border-color: rgb(128 169 202 / 26%);
     --chat-lightbox-background: rgb(16 16 37 / 83%);
-    --chat-input-background: rgb(20 18 47);
     --chat-text-white-or-black: rgb(255, 255, 255);
     --chat-btn-background: white;
     --chat-btn-background-active: #bac4db;
@@ -220,15 +237,17 @@
     --chat-btn-text-active: white;
     --chat-btn-background-active: #363c57;
     --chat-text-tertiary: rgb(120 119 154);
-    --chat-input-search-responsive: rgb(20 18 47);
+    --chat-input-search-responsive: rgb(42 37 83 / 45%);
     --chat-text-input: #e7e5f7;
     --chat-toggle-selector: white;
     --chat-text-tooltip: white;
-    --chat-tooltip-background: #2e2e45;
+    --chat-tooltip-background: #212154;
     --chat-bottom-bar-color: #fbfbfb03;
     --chat-btn-translucid-color: #ffffffde;
     --chat-input-toggle-color: white;
     --chat-text-bubble-client: rgb(29 33 40);
+    --chat-input-background: rgb(42 37 83 / 45%);
+    
 
 
 

@@ -757,19 +757,26 @@ const updateTheme = () => {
             break;
         case 'app':
             newTheme = 'insta';
-            newThemeColor = '#a6cae2'; // Google theme color
+            newThemeColor = 'white'; // Google theme color
             htmlTag.classList.remove('dark'); // Remove dark class
             break;
         case 'insta':
+            newTheme = 'steambox';
+            newThemeColor = ''; // Leave the color unchanged
+            htmlTag.classList.remove('dark'); // Remove dark class
+            break;
+        case 'steambox':
         default:
             newTheme = 'dark';
-            newThemeColor = 'black'; // Default to dark theme color
+            newThemeColor = ''; // Leave the color unchanged
             htmlTag.classList.add('dark'); // Add dark class
             break;
     }
 
     htmlTag.dataset.theme = newTheme;
-    metaThemeColor.content = newThemeColor;
+    if (newThemeColor) {
+        metaThemeColor.content = newThemeColor;
+    }
     localStorage.setItem('theme', newTheme);
 };
 
@@ -785,11 +792,14 @@ if (storedTheme) {
             metaThemeColor.content = 'white'; // WhatsApp theme color
             break;
         case 'insta':
-            metaThemeColor.content = 'white'; // Google theme color
+            // Leave the color unchanged
+            break;
+        case 'steambox':
+            // Leave the color unchanged
             break;
         case 'dark':
         default:
-            metaThemeColor.content = 'black';
+            metaThemeColor.content = '#23153e';
             htmlTag.classList.add('dark'); // Add dark class for the dark theme
             break;
     }
@@ -803,6 +813,7 @@ if (storedTheme) {
 themeToggleBtns.forEach(btn => {
     btn.addEventListener('click', updateTheme);
 });
+
 
 
 
@@ -893,7 +904,7 @@ themeToggleBtns.forEach(btn => {
 
         // Function to toggle visibility of the WhatsApp button
         function toggleWhatsAppButton(visible) {
-            const whatsAppButton = document.querySelector(".bi-whatsapp");
+            const whatsAppButton = document.querySelector(".api-whatsapp-button");
             if (whatsAppButton) {
                 whatsAppButton.style.visibility = visible ? "visible" : "hidden"; // Fix: Use the 'visible' argument to set visibility
             }
@@ -1144,9 +1155,9 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
         ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
         ['SB_MESSENGER', 'messenger', '`<i class="bi-messenger"></i>` Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Steamboxchat.'],
@@ -1220,7 +1231,7 @@ function sb_component_admin()
                         <!-- <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi"></i></div>' ?> -->
 
                     </div>
-                    <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;padding:10px;font-size: 1.1rem;font-weight: 500;">
+                    <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;padding:8px;font-size: 1.1rem;font-weight: 500;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
                         <a href="#" class="themeToggleBtn"> <i class="bi bi-palette2"></i> <?php sb_e('Tema') ?></a>
                         <hr>
@@ -1832,19 +1843,38 @@ function sb_conversations_filter()
     $count = is_array($departments) ? count($departments) : 0;
     $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p><i class="bi-building"></i> ' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;"><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All departments') . '</li><hr>';
     for ($i = 0; $i < $count; $i++) {
-        $code .= '<li data-value="' . $departments[$i]['department-id'] . '"><i class="bi-arrow-bar-right"></i> ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">▶︎ ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
 
-    // Only display sources if $sources is not empty
-    $sources = [['ww', 'WhatsApp <small style="color:var(--pink-root-color);">[new]</small>', 'SB_WHATSMEOW'], ['wa', 'WhatsApp API', 'SB_WHATSAPP'], ['tk', 'Tickets', 'SB_TICKETS'], ['tg', 'Telegram', 'SB_TELEGRAM'],   ['fb', 'Messenger', 'SB_MESSENGER'], ['ig', 'Instagram', 'SB_MESSENGER'], ['tw', 'Twitter', 'SB_TWITTER'], ['bm', 'Google', 'SB_GBM'], ['wc', 'WeChat', 'SB_WECHAT'], ['tm', 'SMS', false]];
-    $code .= '<div class="sb-select"><p><i class="bi-ui-checks"></i> ' . sb_('All channels') . '</p><ul style="min-width: 8rem;max-height: none;" ><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All channels') . '</li><hr>';
+    $sources = [
+        ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
+        ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-whatsapp'], // WhatsApp
+        ['tk', 'Live Chat', true, 'bi-chat-dots'], // Tickets
+        ['tg', 'Telegram Bot', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
+        ['fb', 'Messenger', 'SB_MESSENGER', 'bi-messenger'], // Messenger
+        ['ig', 'Instagram', 'SB_MESSENGER', 'bi-instagram'], // Instagram
+        ['tw', 'Twitter', 'SB_TWITTER', 'bi-twitter'], // Twitter
+        ['bm', 'Google', 'SB_GBM', 'bi-google'], // Google
+        ['wc', 'WeChat', false, ''], // WeChat (no icon provided)
+        ['tm', 'SMS', false, ''] // SMS (no icon provided)
+    ];
+    
+    $code .= '<div class="sb-select"><p><i class="bi-collection"></i> ' . '<span>' . sb_('All channels') . '</span>' . '</p><ul style="min-width: 8rem;max-height: none;" ><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All channels') . '</li><hr>';
+    
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {
-            $code .= '<li data-value="' . $sources[$i][0] . '"><i class="bi-code-slash"></i> ' . $sources[$i][1] . '</li>';
+            $icon_class = $sources[$i][3]; // Get the icon class
+            $icon_html = $icon_class ? '<i class="bi ' . $icon_class . '"></i> ' : ''; // Generate icon HTML if icon class is provided
+            $channel_name = '<span>' . $sources[$i][1] . '</span>'; // Wrap channel name in <span> tags
+            $style = $sources[$i][1] === 'WhatsApp' ? 'style="visibility: visible;"' : ''; // Add inline style to override visibility property for WhatsApp channel
+            $code .= '<li data-value="' . $sources[$i][0] . '"' . $style . '>' . $icon_html . $channel_name . '</li>';
         }
     }
+    
     $code .= '</ul></div>';
+    
+    
 
 
     echo $code . '</div></div>';

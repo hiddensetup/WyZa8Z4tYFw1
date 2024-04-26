@@ -1363,6 +1363,25 @@ a.sb-btn {
             }
         }
 
+        .sb-select {
+            position: relative;
+            font-size: var(--chat-text-size-9);
+            height: 35px;
+            line-height: 45px;
+            font-weight: 800;
+            max-width: 195px!important;
+
+
+
+            &:nth-of-type(2) > p {
+                padding-left: 0!important;
+
+                span {
+                    display: none;
+                }
+              }
+        }
+
         .source-buttons {
             border-radius: 30px;
             // background: var(--main-c);
@@ -1970,13 +1989,13 @@ a.sb-btn {
     }
 
     #sb-date-picker {
-        min-width: 176px;
+        min-width: 100px;
         font-size: 0.8rem;
         // margin-right: 5px;
         border: 0.5px solid var(--chat-border-color);
         z-index: 2;
         position: relative;
-        background: var(--chat-input-date-picker);
+        background: var(--chat-input-search-responsive);
     }
 
     .sb-no-results {
