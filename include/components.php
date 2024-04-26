@@ -1201,7 +1201,7 @@ function sb_component_admin()
                 </div>
 
                 <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
-                    <i style="padding: 20px 10px;" class="bi-three-dots-vertical"></i>
+                    <i style="padding: 20px 18px;" class="bi-three-dots-vertical"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
@@ -1220,7 +1220,7 @@ function sb_component_admin()
                         <!-- <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi"></i></div>' ?> -->
 
                     </div>
-                    <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;padding:10px;">
+                    <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;padding:10px;font-size: 1.1rem;font-weight: 500;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
                         <a href="#" class="themeToggleBtn"> <i class="bi bi-palette2"></i> <?php sb_e('Tema') ?></a>
                         <hr>
