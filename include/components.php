@@ -260,48 +260,48 @@ function sb_profile_edit_box()
  *
  */
 
-function sb_login_box()
-{ ?>
-
-
-    <form class="sb sb-rich-login sb-admin-box sb-form-container">
-
-        <div></div>
-        <div class="sb-top-bar">
-            <div id="announcement">
-                <?php
-                function displayMessage()
-                {
-                    $jsonString = '{
-                                  "payment": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\"></i> Payment Required! </h2><span style=\"color:var(--placeholder-color)\";>Access to the Steamboxchat app is currently restricted. Please ensure your payment is settled to continue enjoying it on your plan. If you haven\'t made the payment yet, please do so <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
-                                  "trial": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> Trial Ended! </h2><span style=\"color:var(--placeholder-color)\";>Your trial period for the Steamboxchat app has ended. To continue using the app, please make a payment <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
-                                  "overloaded": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> System Overloaded! </h2><span style=\"color:var(--placeholder-color)\";>Our servers are overloaded. <br> <br> Please wait for some hours before trying again. We apologize for any inconvenience and appreciate your patience.</span>"
-                                   }';
-
-                    $messages = json_decode($jsonString, true);
-
-                    $message_type = defined('MESSAGE_TYPE') ? MESSAGE_TYPE : '';
-
-                    if (array_key_exists($message_type, $messages)) {
-                        $message = $messages[$message_type];
-
-                        echo '<div id="login-message" style="padding-top:40px">';
-                        echo '<div class="alert-special">';
-                        // echo '<span class="closebtn-special" onclick="this.parentElement.style.display=\'none\';">&times;</span>';
-                        echo $message;
-                        echo '</div>';
-                        echo '</div>';
-                    } else {
-                        echo '<div id="login-message" style="padding-top:40px">';
-                        echo '';
-                        echo '</div>';
-                    }
-                }
-
-                displayMessage();
-                ?>
-
-            </div>
+ function displayMessage()
+ {
+     $jsonString = '{
+         "payment": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\"></i> Payment Required! </h2><span style=\"color:var(--placeholder-color)\";>Access to the Steamboxchat app is currently restricted. Please ensure your payment is settled to continue enjoying it on your plan. If you haven\'t made the payment yet, please do so <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
+         "trial": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> Trial Ended! </h2><span style=\"color:var(--placeholder-color)\";>Your trial period for the Steamboxchat app has ended. To continue using the app, please make a payment <a style=\"color:var(--placeholder-color);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
+         "overloaded": "<h2 style=\"color:var(--placeholder-color)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> System Overloaded! </h2><span style=\"color:var(--placeholder-color)\";>Our servers are overloaded. <br> <br> Please wait for some hours before trying again. We apologize for any inconvenience and appreciate your patience.</span>"
+     }';
+ 
+     $messages = json_decode($jsonString, true);
+ 
+     $message_type = defined('MESSAGE_TYPE') ? MESSAGE_TYPE : '';
+ 
+     if (array_key_exists($message_type, $messages)) {
+         $message = $messages[$message_type];
+ 
+         echo '<div id="login-message" style="padding-top:40px">';
+         echo '<div class="alert-special">';
+         // echo '<span class="closebtn-special" onclick="this.parentElement.style.display=\'none\';">&times;</span>';
+         echo $message;
+         echo '</div>';
+         echo '</div>';
+     } else {
+         echo '<div id="login-message" style="padding-top:40px">';
+         echo '';
+         echo '</div>';
+     }
+ }
+ 
+ function sb_login_box()
+ { ?>
+  <div id="announcement">
+                 <?php
+                 // Call the displayMessage function here
+                 displayMessage();
+                 ?>
+ 
+             </div>
+             <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo (defined('MESSAGE_TYPE') ? 'style="display:none;"' : ''); ?>>
+ 
+         <div></div>
+         <div class="sb-top-bar">
+            
             <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
         </div>
         <div class="sb-main" id="email">

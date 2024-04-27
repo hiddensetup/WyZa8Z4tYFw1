@@ -248,20 +248,15 @@ div.sb-list.sb-hide-fast {
 }
 
 .alert-special {
-  padding: 15px 15px 35px 15px;
-  font-size: 0.85rem;
-  border-radius: var(--chat-rounded-size-6);
-  background-color: var(--chat-app-background);
-  color: var(--chat-btn-background);
   border: 25px solid var(--chat-app-background);
   position: absolute;
   left: 0;
   right: 0;
-  max-width: 210px;
+  max-width: 500px;
   margin: 70px auto;
   z-index: 99;
+  transform: translatey(50%);
 }
-
 .closebtn-special {
   margin-left: 15px;
   color: var(--chat-btn-background);
