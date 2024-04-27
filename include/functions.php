@@ -9051,17 +9051,22 @@ function sb_departments($type)
                     '</p><ul class="sb-responsive-absolute-position"><li data-id="" data-value="">' .
                     sb_("None") .
                     "</li>";
-                for ($i = 0; $i < $count; $i++) {
-                    $id = $items[$i]["department-id"];
-                    $code .=
-                        '<li data-id="' .
-                        $id .
-                        '" data-value="' .
-                        sb_isset($items[$i], "department-color", $id) .
-                        '">' . '' .
-                        ucfirst(sb_($items[$i]["department-name"])) .
-                        "</li>";
-                }
+                    for ($i = 0; $i < $count; $i++) {
+                        $id = $items[$i]["department-id"];
+                        $department_name = mb_substr(ucfirst(sb_($items[$i]["department-name"])), 0, 10);
+                        if (mb_strlen($items[$i]["department-name"]) > 10) {
+                            $department_name .= '...';
+                        }
+                        $code .= '<li data-id="' .
+                            $id .
+                            '" data-value="' .
+                            sb_isset($items[$i], "department-color", $id) .
+                            '">' . '' .
+                            $department_name .
+                            "</li>";
+                    }
+                    
+                    
                 echo $code . "</ul></div></div>";
                 break;
             case "dashboard":

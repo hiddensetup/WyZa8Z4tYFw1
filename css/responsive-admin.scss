@@ -1397,7 +1397,7 @@ a.sb-btn {
             height: 35px;
             line-height: 45px;
             font-weight: 800;
-            max-width: 195px!important;
+            max-width: 190px!important;
 
 
 
@@ -1736,13 +1736,14 @@ a.sb-btn {
             padding: 0px;
 
             &[data-field] {
-                background: var(--chat-background-menu-selected);
+                background: var(--chat-text-tertiary);
                 border-radius: var(--chat-rounded-size-6);
                 padding: 5px 20px;
                 max-width: max-content;
                 border-bottom: none;
                 margin: .3em;
                 display: inline-grid;
+                color: var(--chat-text-white-or-black);
 
                 &:active {
                     scale: .98;

@@ -2673,7 +2673,7 @@ a.sb-btn {
   }
 
   ul {
-    padding: 8px !important;
+    padding: var(--chat-spacing-size-6)!important;
     display: none;
     overflow: hidden;
   }
@@ -2744,13 +2744,14 @@ div ul.sb-menu,
   box-shadow: var(--box-shadow-menu);
 
   &.sb-active {
-    line-height: 20px;
+    line-height: 35px;
     display: block;
     margin-bottom: 15px;
     background-color: var(--chat-background-menu);
     border-radius: var(--chat-rounded-size-5);
     border: 0.5px solid var(--chat-border-color);
-    // padding: 4px !important;
+    padding: var(--chat-spacing-size-6);
+  
   }
 
   &.sb-scroll-area {
@@ -2761,7 +2762,7 @@ div ul.sb-menu,
 
   li {
     cursor: pointer;
-    padding: 4px;
+    padding: 4px 8px;
     font-size: var(--chat-text-size-1-0);
     letter-spacing: .3px;
     white-space: nowrap;

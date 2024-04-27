@@ -1504,9 +1504,9 @@ TABLE
         }
 
         &.sb-active {
-            border-color: var(--chat-text-white-or-black);
-            background-color: var(--chat-text-white-or-black);
-            color: var(--chat-list-active-text);
+            color: var(--chat-text-notification);
+            background: var(--chat-background-notification);
+        
         }
     }
 
@@ -1959,7 +1959,7 @@ TABLE
                 -webkit-transition: var(--transition);
                 color: var(--chat-text-primary);
                 margin: 1px auto !important;
-                font-weight: 400;
+                font-weight: 500;
 
                 &:active {
                     // color: var(--chat-text-white-or-black);
@@ -2050,7 +2050,7 @@ TABLE
                     -webkit-animation: fade-in .8s cubic-bezier(0, 1.45, 1, 1);
                     margin-bottom: 0;
                     box-shadow: var(--box-shadow-menu);
-                    padding: 8px;
+                    padding: var(--chat-spacing-size-6)!important;
                     background-color: var(--chat-background-menu);
                     border: .8px solid var(--chat-border-color);
                     border-radius: var(--chat-rounded-size-6);
@@ -2817,7 +2817,7 @@ BODY
                         margin: 0;
                         width: 100%;
                         box-sizing: border-box;
-                        padding: 11px 20px;
+                        padding: 4px 8px;
                     }
 
                     select {
@@ -3311,6 +3311,7 @@ BODY
             h3 {
                 margin-right: 15px;
                 line-height: 45px;
+                font-weight: 500;
             }
 
             >* {
@@ -3343,6 +3344,7 @@ BODY
                     //width: 100%;
                     min-width: 80%;
                     // margin-top: -44px;
+                    padding: var(--chat-spacing-size-6)!important;
 
                     li {
                         // line-height: 24px;
@@ -3380,8 +3382,9 @@ BODY
         padding: 15px;
         display: none;
         z-index: 2;
-        // -webkit-backdrop-filter: blur(60px);
-        // backdrop-filter: blur(60px);
+        background: var(--chat-app-backdrop-a);
+        background-image: var(--chat-app-backdrop-b);
+        opacity: .95;
 
         >div {
             position: absolute;
@@ -6782,7 +6785,7 @@ grammarly-editor-plugin {
         position: fixed;
         right: 50px;
         color: var(--chat-text-primary);
-        z-index: 4;
+        z-index: 2;
         top: 10.5px;
         
     

@@ -4418,7 +4418,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
     
 
     messageMenu: function (agent) {
-      let readTextOption = `<li style="padding: 6px 20px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
+      let readTextOption = `<li style="padding: 6px 15px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
       return `
 				<i class="sb-menu-btn bi-three-dots"></i>
 				<ul style="right: 0rem;padding: .4rem;" class="message-menu sb-menu">
@@ -4428,7 +4428,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
               SB_ADMIN_SETTINGS["allow-agent-delete-message"]) ||
             (SB_ADMIN_SETTINGS["supervisor"] &&
               SB_ADMIN_SETTINGS["allow-supervisor-delete-message"])
-              ? `<li style="padding: 6px 20px; line-height:20px" data-value="delete"><i class="bi-trash"></i> ${sb_(
+              ? `<li style="padding: 6px 15px; line-height:20px" data-value="delete"><i class="bi-trash"></i> ${sb_(
                   "Delete"
                 )}</li><hr>`
               : ""
