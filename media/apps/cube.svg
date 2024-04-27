@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 403.8 403.8" style="enable-background:new 0 0 403.8 403.8;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#252a31;}
+	.st0{fill:var(--chat-text-primary);}
 </style>
 <path class="st0" d="M202,47L202,47c-85.5,0-155.5,70-155.5,155.5l0,0C46.5,288,116.5,358,202,358l0,0c85.5,0,155.5-70,155.5-155.5
 	l0,0C357.5,117,287.5,47,202,47z M202,122.7c8.4,0,15.3,6.8,15.3,15.3s-6.8,15.3-15.3,15.3s-15.3-6.9-15.3-15.3

@@ -3776,7 +3776,6 @@
 //         isAdditionalInfoShown = false;
 //     }
 // });
-
 let profileImage = response.get("profile_image");
 let originalTitle = response.get("first_name");
 let screenWidth = $(window).width();
@@ -3784,21 +3783,23 @@ let firstName;
 
 // Determine the character limit based on screen width
 if (screenWidth < 555) {
-    firstName = originalTitle.length > 20 ? originalTitle.slice(0, 20) + "..." : originalTitle;
+    firstName = originalTitle.length > 18 ? originalTitle.slice(0, 18) + "..." : originalTitle;
 } else {
     firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
 }
 
 let phoneNumber = activeUser().getExtra("phone").value;
 
-// Construct the HTML with the profile image and first name
+// Determine which icon to use based on screen width
+let iconClass = screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
+
+// Construct the HTML with the profile image, first name, and icon
 let htmlContent = `
     <span style="padding-right:5px;" class="open-profile-name">
         <img src="${profileImage}" class="top-image-profile">
     </span> 
     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
-    <span class="additional-info">${phoneNumber ? `<a style="position:fixed;right: 55px;color: var(--chat-text-primary);z-index: 4;top: 6px;
-    padding: 4px 5px;" href="tel:${phoneNumber}"><i style="font-size:1rem;" class="styling-caller bi bi-telephone-fill"></i></a>` : ''}</span>
+    <span class="additional-info">${phoneNumber ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>` : ''}</span>
 `;
 
 // Set the HTML content
@@ -3823,6 +3824,7 @@ conversations_area.find(".sb-top > a > span").on("click", function() {
 conversations_area.find(".open-profile-name").on("click", function() {
     SBProfile.showEdit(activeUser());
 });
+
 
     $(".sb-list").prepend(
         '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
@@ -4341,13 +4343,38 @@ conversations_area.find(".open-profile-name").on("click", function() {
       }
     },
 
-    // Update the top left filter and inbox counter
+    // // Update the top left filter and inbox counter
+    // updateMenu: function () {
+    //   let count = conversations_admin_list_ul.find(
+    //     '[data-conversation-status="2"]'
+    //   ).length;
+    //   let item = conversations_filters.eq(0);
+    //   let span = item.find(" > p span");
+    //   if (count == 100 || this.menu_count_ajax) {
+    //     let status_code = item.find("li.sb-active").data("value");
+    //     this.menu_count_ajax = true;
+    //     SBF.ajax(
+    //       {
+    //         function: "count-conversations",
+    //         status_code: status_code == 0 ? 2 : status_code,
+    //       },
+    //       (response) => {
+    //         span.html(`(${response})`);
+    //       }
+    //     );
+    //   } else {
+    //     span.html(`<small class="notif">${count}</small>`);
+    //   }
+    // },
+
     updateMenu: function () {
-      let count = conversations_admin_list_ul.find(
-        '[data-conversation-status="2"]'
-      ).length;
+      let count = conversations_admin_list_ul.find('[data-conversation-status="2"]').length;
       let item = conversations_filters.eq(0);
-      let span = item.find(" > p span");
+      let anchorTag = item.find(" > a");
+      let span = anchorTag.find(" > p span");
+      
+      let existingFloatingElement = document.getElementById('floatingElement');
+      
       if (count == 100 || this.menu_count_ajax) {
         let status_code = item.find("li.sb-active").data("value");
         this.menu_count_ajax = true;
@@ -4361,22 +4388,47 @@ conversations_area.find(".open-profile-name").on("click", function() {
           }
         );
       } else {
-        span.html(` <small class="notif">${count}</small>`);
+        if (!existingFloatingElement) {
+          let floatingElement = document.createElement('div');
+          floatingElement.id = 'floatingElement';
+          floatingElement.style.cssText = 'position: relative; top: 10px; margin: auto; display: flex; justify-content: center; z-index: 33;';
+          
+          let notifElement = document.createElement('small');
+          notifElement.className = 'notif';
+          notifElement.style.cssText = 'font-size: medium; padding: 6px 10px; border-radius: 30px;';
+          notifElement.textContent = count;
+          
+          floatingElement.appendChild(notifElement);
+          
+          document.getElementById('sb-conversations').appendChild(floatingElement);
+        } else {
+          let notifElement = existingFloatingElement.querySelector('.notif');
+          notifElement.textContent = count;
+        }
+        
+        // Modificar la visibilidad del div que contiene el elemento notif
+        let divInsideAnchor = document.getElementById('sb-conversations').querySelector('div');
+        if (count === 0) {
+          divInsideAnchor.style.visibility = 'hidden';
+        } else {
+          divInsideAnchor.style.visibility = 'visible';
+        }
       }
     },
+    
 
     messageMenu: function (agent) {
-      let readTextOption = `<li data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
+      let readTextOption = `<li style="padding: 6px 20px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
       return `
 				<i class="sb-menu-btn bi-three-dots"></i>
-				<ul style="right: 0rem;" class="message-menu sb-menu">
+				<ul style="right: 0rem;padding: .4rem;" class="message-menu sb-menu">
 					${
             (admin &&
               !SB_ADMIN_SETTINGS["supervisor"] &&
               SB_ADMIN_SETTINGS["allow-agent-delete-message"]) ||
             (SB_ADMIN_SETTINGS["supervisor"] &&
               SB_ADMIN_SETTINGS["allow-supervisor-delete-message"])
-              ? `<li data-value="delete"><i class="bi-trash"></i> ${sb_(
+              ? `<li style="padding: 6px 20px; line-height:20px" data-value="delete"><i class="bi-trash"></i> ${sb_(
                   "Delete"
                 )}</li><hr>`
               : ""
@@ -4390,7 +4442,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
       if (!activeUser()) return;
       var $anchorTag = $('.sb-top > a');
       var originalTitle = activeUser().name;
-      var firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
+      var firstName = originalTitle.length > 15 ? originalTitle.slice(0, 15) + "..." : originalTitle;
       var $secondSpan = $anchorTag.find('span').eq(1); // Select the second <span> element
       $secondSpan.html(firstName); // Update its content
       conversations_area.find(".sb-user-details .sb-profile").setProfile();
@@ -4619,7 +4671,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
 			<div>
 			<a class="phone-number" style="color:inherit">${conversation.phone}</a>
 			</div>
-			<p style="max-width:calc(100% - 130px);">${strip
+			<p style="max-width:calc(100% - 145px);">${strip
         .strip(message)
         .replace(/_/g, " ")}</p>
 			<div class="conversation-bar">
@@ -10178,7 +10230,7 @@ function showContent() {
   const html = document.documentElement;
 
   overlay.style.display = "none";
-  html.style.animation = "fade-in .8s ease-out";
+  html.style.animation = "fade-in .2s ease-out";
 }
 
 // Function to initialize the loading animation
@@ -10187,7 +10239,7 @@ function initLoadingAnimation() {
   const loader = document.getElementById("loader");
 
   // Trigger the loading animation
-  overlay.style.animation = "load 1.6s reverse";
+  overlay.style.animation = "load 1.6s ease-out";
 
   // Listen for the end of the loading animation
   overlay.addEventListener("animationend", function () {

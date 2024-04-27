@@ -163,11 +163,11 @@ sb-hidden {
 }
 
 .notif {
-  color: var(--chat-text-white-or-black);
-  font-size: medium;
-  background: var(--chat-app-theme-color);
-  padding: 2px 8px;
-  border-radius: 30px;
+animation: var(--fade-in);
+-webkit-animation: var(--fade-in);
+color: var(--chat-text-notification);
+background-color: var(--chat-background-notification);
+;
 }
 
 div.sb-list {
@@ -917,14 +917,14 @@ div ul.sb-menu,
   span {
     display: inline-block;
     padding: 0 8px;
+    font-weight: 400;
     border-radius: var(--chat-rounded-size-5);
     font-size: var(--chat-text-size-7);
     line-height: 26px;
     letter-spacing: .3px;
-    background-color: var(--chat-tooltip-background);
-    font-weight: 400;
+    color: var(--chat-text-date);
+    background-color: var(--chat-background-date);
     box-shadow: var(--box-shadow-bubble-chat);
-    color: var(--chat-text-tooltip);
   }
 }
 
@@ -1131,7 +1131,7 @@ div ul.sb-menu,
     display: block;
 
     &:focus {
-      box-shadow: var(--chat-input-focus-ring);
+      box-shadow:transparent;
     }
   }
 
@@ -1540,13 +1540,20 @@ div ul.sb-menu,
   }
 }
 
+.bi-hand-thumbs-up-fill::before, .bi-hand-thumbs-down-fill:before {
+margin:auto 5px;
+}
+.bi-chevron-left::before, .bi-chevron-right::before, .bi-search::before, .bi-filter::before, .bi-plus-lg::before {
+  font-weight: 800!important;
+}
+
 .server-response {
   position: absolute;
   bottom: 0;
   right: 3px;
   z-index: 1;
   font-size: var(--chat-text-size-9);
-  color: var(--chat-text-secondary);
+  color: var(--chat-check2-all);
   background: inherit;
   border-radius: .6rem;
   padding: .2rem;
@@ -1776,6 +1783,8 @@ a.sb-btn {
 
 .sb-btn.sb-btn-red {
   background-color: var(--color-red);
+  color: white;
+
 
   &:active {
     transition: var(--transition);
@@ -2280,7 +2289,9 @@ a.sb-btn {
   left: 0;
   bottom: 0;
   z-index: 9999995;
-  background: var(--chat-app-background);
+  background-color: var(--chat-app-backdrop-a);
+  background-image: var(--chat-app-backdrop-b);
+  opacity: .95;
   animation: var(--fade-in);
   -webkit-animation: var(--fade-in);
   display: none;
@@ -2637,7 +2648,7 @@ a.sb-btn {
     animation: fade-in 0.4s ease-in-out;
 
     span {
-      font-weight: 400;
+      font-weight: 500;
     }
 
     &:after {
@@ -2662,7 +2673,7 @@ a.sb-btn {
   }
 
   ul {
-    padding: 6px !important;
+    padding: 8px !important;
     display: none;
     overflow: hidden;
   }
@@ -2733,7 +2744,7 @@ div ul.sb-menu,
   box-shadow: var(--box-shadow-menu);
 
   &.sb-active {
-    line-height: 34px;
+    line-height: 20px;
     display: block;
     margin-bottom: 15px;
     background-color: var(--chat-background-menu);
@@ -2758,6 +2769,7 @@ div ul.sb-menu,
     transition: all .1s;
     margin: 1px auto;
     border-radius: .3rem;
+    font-weight: 500;
     color: var(--chat-text-primary);
 
     &.sb-active {

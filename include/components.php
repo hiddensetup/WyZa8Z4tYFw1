@@ -9,7 +9,7 @@ function sb_profile_box()
                 <span class="sb-name"></span>
             </div>
             <div>
-                <a style="color: var(----chat-app-logo-color);" data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
+                <a style="color: var(--chat-app-logo-color);" data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
                     <i class="bi-envelope-at"></i>
                 </a>
                 <a data-value="sms" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send text message') ?>">
@@ -799,7 +799,7 @@ if (storedTheme) {
             break;
         case 'dark':
         default:
-            metaThemeColor.content = '#23153e';
+            metaThemeColor.content = 'color(srgb 0.1091 0.0607 0.2083)';
             htmlTag.classList.add('dark'); // Add dark class for the dark theme
             break;
     }
@@ -1212,7 +1212,7 @@ function sb_component_admin()
                 </div>
 
                 <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
-                    <i style="padding: 20px 18px;" class="bi-three-dots-vertical"></i>
+                    <i style="padding:17px 11px;" class="bi-three-dots-vertical"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
@@ -1227,7 +1227,7 @@ function sb_component_admin()
                                 </ul>
                             </div>
                         </div>
-                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-info-circle"></i></div>' ?>
+                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-server"></i></div>' ?>
                         <!-- <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi"></i></div>' ?> -->
 
                     </div>
@@ -1250,24 +1250,24 @@ function sb_component_admin()
 
                                 <div class="sb-select inbox">
                                     <p class="non-hover" data-value="0">
-                                        <i class="bi-inboxes-fill"></i> <?php sb_e('Inbox') ?><span> </span>
+                                    &nbsp; <i class="bi-inboxes-fill"></i>&nbsp; <?php sb_e('Inbox') ?><span> </span>
                                     </p>
                                     <ul style="min-width: 8rem;max-height: none;">
                                         <li data-value="0" class="sb-active">
-                                            <i class="bi-arrow-clockwise"></i> <?php sb_e('Inbox') ?>
+                                        &nbsp; <i class="bi-arrow-clockwise"></i>&nbsp; <?php sb_e('Inbox') ?>
                                             <span></span>
                                         </li>
                                         <hr>
                                         <li data-value="6">
-                                            <i class="bi-star"></i> <?php sb_e('Follow up') ?>
+                                        &nbsp; <i class="bi-star"></i>&nbsp; <?php sb_e('Follow up') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="3">
-                                            <i class="bi-archive"></i> <?php sb_e('Archived') ?>
+                                        &nbsp; <i class="bi-archive"></i>&nbsp; <?php sb_e('Archived') ?>
                                         </li>
                                         <?php if ($is_admin) { ?>
                                             <li data-value="4">
-                                                <i class="bi-box"></i> <?php sb_e('Container') ?>
+                                            &nbsp; <i class="bi-box"></i>&nbsp; <?php sb_e('Container') ?>
                                             </li>
                                         <?php } ?>
                                     </ul>
@@ -1295,7 +1295,7 @@ function sb_component_admin()
                                     <ul class="ul-nav-top-mobile">
                                         <li>
                                             <a data-value="Details" class="sb-btn-icon open-profile" data-sb-tooltip="<?php sb_e('Details') ?>">
-                                                <i class="bi-info-circle"></i>
+                                                <i class="bi-info-square"></i>
                                             </a>
                                         </li>
                                         <?php
@@ -1466,7 +1466,7 @@ function sb_component_admin()
                             <div>
 
                                 <div class="sb-menu-mobile">
-                                    <i class="bi-list"></i>
+                                    <i class="bi-three-dots-vertical"></i>
                                     <ul id="hideOnSearchClick">
                                         <?php if ($supervisor || $is_admin) { ?>
                                             <li>
@@ -1480,7 +1480,7 @@ function sb_component_admin()
                                                 <input type="file" id="csvimport" name="csv" class="form-control" required>
                                             </div>
                                             <a data-value="csvimport" id="csv_contacts" class="not-show-small-screen sb-btn-icon" data-sb-tooltip="<?= sb_('Upload CSV') ?>">
-                                                <i class="bi-arrow-up-circle"></i>
+                                                <i class="bi-filetype-csv"></i>
                                             </a>
                                         </li>
                                         <li>
@@ -1841,9 +1841,10 @@ function sb_conversations_filter()
     if (!sb_get_setting('disable-filters')) return;
     $departments = sb_get_setting('departments');
     $count = is_array($departments) ? count($departments) : 0;
-    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p><i class="bi-building"></i> ' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;"><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All departments') . '</li><hr>';
+    $code = '<div class="sb-filter-btn"> <i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p>&nbsp; <i class="bi-building"></i>' .'&nbsp; ' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;"><li data-value="">&nbsp; <i class="bi-arrow-clockwise"></i>' . '&nbsp; ' . sb_('All departments') . '</li><hr>';
     for ($i = 0; $i < $count; $i++) {
-        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">▶︎ ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">&nbsp; <i class="bi bi-diagram-3-fill"></i> 
+        ' .'&nbsp; ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
 
@@ -1851,7 +1852,7 @@ function sb_conversations_filter()
         ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
         ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-whatsapp'], // WhatsApp
         ['tk', 'Live Chat', true, 'bi-chat-dots'], // Tickets
-        ['tg', 'Telegram Bot', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
+        ['tg', 'Telegram', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
         ['fb', 'Messenger', 'SB_MESSENGER', 'bi-messenger'], // Messenger
         ['ig', 'Instagram', 'SB_MESSENGER', 'bi-instagram'], // Instagram
         ['tw', 'Twitter', 'SB_TWITTER', 'bi-twitter'], // Twitter
@@ -1860,7 +1861,7 @@ function sb_conversations_filter()
         ['tm', 'SMS', false, ''] // SMS (no icon provided)
     ];
     
-    $code .= '<div class="sb-select"><p><i class="bi-collection"></i> ' . '<span>' . sb_('All channels') . '</span>' . '</p><ul style="min-width: 8rem;max-height: none;" ><li data-value=""><i class="bi-arrow-clockwise"></i> ' . sb_('All channels') . '</li><hr>';
+    $code .= '<div class="sb-select"><p>&nbsp; <i class="bi-collection"></i> ' . '&nbsp; ' . '<span>' . sb_('All channels') . '</span>' . '</p><ul style="min-width: 8rem;max-height: none;" ><li data-value="">&nbsp; <i class="bi-arrow-clockwise"></i> ' .'&nbsp; '. sb_('All channels') . '</li><hr>';
     
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {
@@ -1868,7 +1869,7 @@ function sb_conversations_filter()
             $icon_html = $icon_class ? '<i class="bi ' . $icon_class . '"></i> ' : ''; // Generate icon HTML if icon class is provided
             $channel_name = '<span>' . $sources[$i][1] . '</span>'; // Wrap channel name in <span> tags
             $style = $sources[$i][1] === 'WhatsApp' ? 'style="visibility: visible;"' : ''; // Add inline style to override visibility property for WhatsApp channel
-            $code .= '<li data-value="' . $sources[$i][0] . '"' . $style . '>' . $icon_html . $channel_name . '</li>';
+            $code .= '<li data-value="' . $sources[$i][0] . '"' . $style . '>' . '&nbsp; ' . $icon_html . '&nbsp; ' . $channel_name . '</li>';
         }
     }
     

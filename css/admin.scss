@@ -31,7 +31,7 @@ body {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-    background: var(--chat-image-background), var(--chat-image-color-background);
+    background: var(--chat-app-background);
 
 
 
@@ -233,7 +233,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .sb-title {
     font-size: var(--chat-text-size-1-0);
-    font-weight: 400;
+    font-weight: 500;
 
     &.sb-title-search {
         position: relative;
@@ -403,6 +403,7 @@ td.sb-offline {
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 0px 5%;
+        font-weight: 500;
 
         span {
 
@@ -1914,8 +1915,7 @@ TABLE
                         background-color: var(--chat-tooltip-background);
                         color: var(--chat-text-tooltip);
                         margin: 10px 0;
-                        box-shadow: var(--box-shadow-menu);
-                        -webkit-box-shadow: var(--box-shadow-menu);
+
 
                     }
                 }
@@ -2054,8 +2054,8 @@ TABLE
                     background-color: var(--chat-background-menu);
                     border: .8px solid var(--chat-border-color);
                     border-radius: var(--chat-rounded-size-6);
-                    backdrop-filter: blur(60px);
-                    -webkit-backdrop-filter: blur(60px);
+                    // backdrop-filter: blur(60px);
+                    // -webkit-backdrop-filter: blur(60px);
                     max-width: 130px;
                     left: 0px;
 
@@ -2967,7 +2967,8 @@ BODY
             padding: 6px 8px 10px 8px;
             background-color: var(--chat-bottom-bar-color);
             font-size: var(--chat-text-size-1-4);
-            // border-top: 0.8px solid var(--chat-border-color);
+           
+           
 
 
 
@@ -2977,8 +2978,10 @@ BODY
                 border-radius: var(--chat-rounded-size-6);
                 width: 100%;
                 margin: 0 5px;
-                border: .8px solid var(--chat-border-text-input)
+
+      
             }
+
 
             .sb-space-between {
                 display: flex;
@@ -3050,10 +3053,7 @@ BODY
                 transition: var(--transition);
                 -webkit-transition: var(--transition);
 
-                &:hover {
-                    color: var(--chat-btn-background);
-                    background-color: var(--chat-border-color);
-                }
+
             }
         }
 
@@ -3380,8 +3380,8 @@ BODY
         padding: 15px;
         display: none;
         z-index: 2;
-        -webkit-backdrop-filter: blur(60px);
-        backdrop-filter: blur(60px);
+        // -webkit-backdrop-filter: blur(60px);
+        // backdrop-filter: blur(60px);
 
         >div {
             position: absolute;
@@ -4510,8 +4510,8 @@ BODY
         line-height: 25px;
         height: 250px;
         overflow-y: scroll;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+        // backdrop-filter: blur(60px);
+        // -webkit-backdrop-filter: blur(60px);
         border: 0.8px solid var(--chat-border-color);
 
         span {
@@ -4565,8 +4565,8 @@ BODY
             display: flex;
             flex-direction: column;
             align-items: center;
-            backdrop-filter: blur(80px);
-            -webkit-backdrop-filter: blur(80px);
+            // backdrop-filter: blur(80px);
+            // -webkit-backdrop-filter: blur(80px);
             gap: 0.3rem;
         }
     }
@@ -5133,6 +5133,7 @@ BODY
     max-width: 700px;
     max-height: 700px;
     background: var(--chat-app-background);
+    border-radius: var(--chat-rounded-size-1-0);
     left: 50%;
     top: 50%;
     margin-left: 150px;
@@ -5156,7 +5157,7 @@ BODY
 
     .sb-top-bar {
         background: var(--chat-lightbox-top);
-        border-radius: var(--chat-rounded-top-6);
+        border-radius: var(--chat-rounded-top-1-0);
         padding: 20px;
         display: flex;
         justify-content: space-between;
@@ -5275,7 +5276,9 @@ BODY
 }
 
 .sb-lightbox-media.sb-active+.sb-lightbox-overlay {
-    background-color: var(--top-background-active-element) !important;
+    background-color: var(--chat-app-backdrop-a);
+    background-image: var(--chat-app-backdrop-b);
+    opacity: .95;
 }
 
 .whatsapp_var_buttons_1,
@@ -5342,8 +5345,8 @@ BODY
 .sb-requirements-box {
     .sb-input {
         justify-content: flex-start;
-        backdrop-filter: blur(80px);
-        -webkit-backdrop-filter: blur(80px);
+        // backdrop-filter: blur(80px);
+        // -webkit-backdrop-filter: blur(80px);
 
         >span {
             max-width: 200px;
@@ -5373,8 +5376,8 @@ BODY
         display: inline-block;
         padding: 5px 10px;
         width: auto;
-        backdrop-filter: blur(80px);
-        -webkit-backdrop-filter: blur(80px);
+        // backdrop-filter: blur(80px);
+        // -webkit-backdrop-filter: blur(80px);
     }
 
     .sb-main>p {
@@ -5460,8 +5463,8 @@ BODY
     .sb-intent-add {
         position: relative;
         margin-top: 10px;
-        backdrop-filter: blur(80px);
-        -webkit-backdrop-filter: blur(80px);
+        // backdrop-filter: blur(80px);
+        // -webkit-backdrop-filter: blur(80px);
 
         i {
             position: absolute;
@@ -5727,8 +5730,8 @@ BODY
     max-height: 300px;
     margin-bottom: 30px;
     padding-bottom: 0;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
+    // backdrop-filter: blur(80px);
+    // -webkit-backdrop-filter: blur(80px);
 
     >div {
         display: flex;
@@ -5934,8 +5937,8 @@ BODY
     display: none;
     font-size: var(--chat-text-size-1-0);
     line-height: 1em;
-    backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(80px);
+    // backdrop-filter: blur(60px);
+    // -webkit-backdrop-filter: blur(80px);
 }
 
 .daterangepicker.single .daterangepicker .ranges,
@@ -6578,25 +6581,7 @@ grammarly-editor-plugin {
         // color: var(--chat-text-primary) !important;
     }
 
-
-    .styling-caller {
-        visibility: visible;
-        font-size: 1rem;
-        border-radius: 50%;
-        padding: 2px 3px;
-
-        &:active {
-            transition: var(--transition);
-            -webkit-transition: var(--transition);
-
-            color: var(--chat-text-white-or-black);
-            background: var(--chat-app-theme-color);
-            border-radius: 50%;
-            padding: 4px 5px;
-        }
-    }
-
-
+ 
 
     .sb-menu-mobile {
         >ul {
@@ -6695,6 +6680,13 @@ grammarly-editor-plugin {
 }
 
 @media (min-width: 555px) and (max-width: 1360px) {
+
+
+
+
+
+
+
     .sb-menu-top {
         //background-color: #0e151e!important;
         position: absolute;
@@ -6748,12 +6740,12 @@ grammarly-editor-plugin {
                     position: absolute;
                     animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
                     -webkit-animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
-                    padding: 4px;
+                    padding: var(--chat-spacing-size-8);
                 }
             }
         }
 
-       
+
 
         .open-profile {
             display: block;
@@ -6770,9 +6762,9 @@ grammarly-editor-plugin {
             display: none;
             position: fixed;
             padding: 0 0;
-            right: -20px;
-            top: 41px;
-
+            right: -9px;
+            top: 48px;
+            
             a {
                 white-space: nowrap;
                 font-weight: 500;
@@ -6783,6 +6775,35 @@ grammarly-editor-plugin {
             }
         }
 
+    }
+
+
+    .additional-info {
+        position: fixed;
+        right: 50px;
+        color: var(--chat-text-primary);
+        z-index: 4;
+        top: 10.5px;
+        
+    
+        .styling-caller {
+            visibility: visible;
+            font-size: var(--chat-text-size-1-0);
+            color: var(--chat-text-primary);
+            border-radius: 50%;
+            padding: 7px 9px;
+    
+            &:active {
+                transition: var(--transition);
+                -webkit-transition: var(--transition);
+                color: var(--chat-text-white-or-black);
+                background: var(--blue-root-color-pastel);
+                border-radius: 50%;
+                padding: 7px 9px;
+                box-shadow: var(--box-shadow-inner);
+            }
+        }
+    
     }
 
     .sb-board {
@@ -6813,7 +6834,7 @@ grammarly-editor-plugin {
         .sb-conversation>.sb-top a {
             // padding: 0 15px;
             margin-left: 0px;
-            border-radius: var(--chat-rounded-size-3);
+            border-radius: var(--chat-rounded-size-4);
         }
 
         .sb-conversation>.sb-top .sb-menu-mobile {
@@ -6892,6 +6913,8 @@ grammarly-editor-plugin {
             }
         }
     }
+
+ 
 
     .sb-board .sb-conversation .sb-list {
         margin: 0 1px 0 1px;
@@ -7057,6 +7080,8 @@ grammarly-editor-plugin {
 
 @media (min-width: 555px) {
 
+
+    
 
     .ul-nav-top-mobile {
         // background: none !important;

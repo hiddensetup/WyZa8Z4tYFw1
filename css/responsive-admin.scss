@@ -414,6 +414,34 @@ body {
     }
 }
 
+.additional-info {
+    position: fixed;
+    right: 45px;
+    color: var(--chat-text-primary);
+    z-index: 4;
+    top: 10.5px;
+    
+
+    .styling-caller {
+        visibility: visible;
+        font-size: var(--chat-text-size-1-0)!important;
+        color: var(--chat-text-primary);
+        border-radius: 50%;
+        padding: 7px 9px;
+
+        &:active {
+            transition: var(--transition);
+            -webkit-transition: var(--transition);
+            color: var(--chat-text-white-or-black);
+            background: var(--color-green);
+            border-radius: 50%;
+            padding: 7px 9px;
+            box-shadow: var(--box-shadow-inner);
+        }
+    }
+
+}
+
 [data-value="email"] {
     padding: 1px 6px;
     // color: var(--chat-list-active-text);
@@ -888,7 +916,7 @@ a.sb-btn {
             width: 55px;
             cursor: pointer;
             text-align: center;
-            font-size: var(--chat-text-size-1-4);
+            font-size: 1.8rem;
             margin: auto;
             margin: auto;
             padding: 0px 0px;
@@ -914,7 +942,7 @@ a.sb-btn {
                     position: absolute;
                     animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
                     -webkit-animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
-                    padding: 4px;
+                    padding: var(--chat-spacing-size-8);
                 }
             }
         }
@@ -927,7 +955,7 @@ a.sb-btn {
             position: fixed;
             padding: 0px 0;
             right: 10px;
-            top: 20px;
+            top: 30px;
 
             a {
                 white-space: nowrap;
@@ -1428,7 +1456,7 @@ a.sb-btn {
 
 
             >a {
-                font-size: var(--chat-text-size-1-1);
+                font-size: var(--chat-text-size-1-0);
                 left: 1px;
                 padding: 0px;
             }
