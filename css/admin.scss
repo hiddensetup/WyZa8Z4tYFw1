@@ -1505,7 +1505,7 @@ TABLE
         &.sb-active {
             color: var(--chat-text-notification);
             background: var(--chat-background-notification);
-        
+
         }
     }
 
@@ -2049,7 +2049,7 @@ TABLE
                     -webkit-animation: fade-in .8s cubic-bezier(0, 1.45, 1, 1);
                     margin-bottom: 0;
                     box-shadow: var(--box-shadow-menu);
-                    padding: var(--chat-spacing-size-6)!important;
+                    padding: var(--chat-spacing-size-6) !important;
                     background-color: var(--chat-background-menu);
                     border: .8px solid var(--chat-border-color);
                     border-radius: var(--chat-rounded-size-6);
@@ -2966,8 +2966,8 @@ BODY
             padding: 6px 8px 10px 8px;
             background-color: var(--chat-bottom-bar-color);
             font-size: var(--chat-text-size-1-4);
-           
-           
+
+
 
 
 
@@ -2978,7 +2978,7 @@ BODY
                 width: 100%;
                 margin: 0 5px;
 
-      
+
             }
 
 
@@ -3343,7 +3343,7 @@ BODY
                     //width: 100%;
                     min-width: 80%;
                     // margin-top: -44px;
-                    padding: var(--chat-spacing-size-6)!important;
+                    padding: var(--chat-spacing-size-6) !important;
 
                     li {
                         // line-height: 24px;
@@ -6585,7 +6585,7 @@ grammarly-editor-plugin {
         // color: var(--chat-text-primary) !important;
     }
 
- 
+
 
     .sb-menu-mobile {
         >ul {
@@ -6768,7 +6768,7 @@ grammarly-editor-plugin {
             padding: 0 0;
             right: -9px;
             top: 48px;
-            
+
             a {
                 white-space: nowrap;
                 font-weight: 500;
@@ -6788,15 +6788,15 @@ grammarly-editor-plugin {
         color: var(--chat-text-primary);
         z-index: 2;
         top: 10.5px;
-        
-    
+
+
         .styling-caller {
             visibility: visible;
             font-size: var(--chat-text-size-1-0);
             color: var(--chat-text-primary);
             border-radius: 50%;
             padding: 7px 9px;
-    
+
             &:active {
                 transition: var(--transition);
                 -webkit-transition: var(--transition);
@@ -6807,7 +6807,7 @@ grammarly-editor-plugin {
                 box-shadow: var(--box-shadow-inner);
             }
         }
-    
+
     }
 
     .sb-board {
@@ -6918,7 +6918,7 @@ grammarly-editor-plugin {
         }
     }
 
- 
+
 
     .sb-board .sb-conversation .sb-list {
         margin: 0 1px 0 1px;
@@ -7085,7 +7085,7 @@ grammarly-editor-plugin {
 @media (min-width: 555px) {
 
 
-    
+
 
     .ul-nav-top-mobile {
         // background: none !important;

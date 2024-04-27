@@ -419,11 +419,11 @@ body {
     color: var(--chat-text-primary);
     z-index: 4;
     top: 10.5px;
-    
+
 
     .styling-caller {
         visibility: visible;
-        font-size: var(--chat-text-size-1-0)!important;
+        font-size: var(--chat-text-size-1-0) !important;
         color: var(--chat-text-primary);
         border-radius: 50%;
         padding: 7px 9px;
@@ -742,7 +742,7 @@ a.sb-btn {
             [data-value="status"] {
                 padding-left: 28px;
                 padding-top: 9px;
-            
+
 
                 &:before {
                     right: auto;
@@ -1208,7 +1208,7 @@ a.sb-btn {
     border-radius: 0;
     background: var(--chat-app-backdrop-b);
     background-image: var(--chat-app-backdrop-b);
-    
+
 }
 
 .sb-lightbox {
@@ -1396,17 +1396,17 @@ a.sb-btn {
             height: 35px;
             line-height: 45px;
             font-weight: 800;
-            max-width: 190px!important;
+            max-width: 190px !important;
 
 
 
-            &:nth-of-type(2) > p {
-                padding-left: 0!important;
+            &:nth-of-type(2)>p {
+                padding-left: 0 !important;
 
                 span {
                     display: none;
                 }
-              }
+            }
         }
 
         .source-buttons {
@@ -1440,7 +1440,7 @@ a.sb-btn {
                     left: 66px !important;
                 }
             }
-     
+
         }
     }
 
@@ -1669,7 +1669,7 @@ a.sb-btn {
         p {
             padding-left: 0;
             bottom: 3px;
-    
+
         }
     }
 }
