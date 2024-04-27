@@ -151,7 +151,6 @@ body::-webkit-scrollbar-thumb:hover {
     z-index: 9999;
     opacity: 1;
     background: var(--chat-app-loader-color);
-    background-blend-mode: soft-light;
 
 }
 
@@ -3811,8 +3810,8 @@ BODY
     .switch-toggle:before {
         content: "";
         position: absolute !important;
-        width: 20px !important;
-        height: 20px !important;
+        width: 19.5px !important;
+        height: 19.5px !important;
         background: var(--chat-input-toggle-color) !important;
         border-radius: 24px !important;
         top: 0px !important;
@@ -3895,6 +3894,7 @@ BODY
         border-radius: var(--chat-rounded-size-6);
         border: 0.5px solid var(--chat-border-color);
         outline: none;
+        color: var(--chat-text-primary);
         font-size: var(--chat-text-size-1-0);
         line-height: 35px;
         height: 40px;
@@ -4053,6 +4053,8 @@ BODY
                 color: var(--chat-app-background);
                 border-radius: 50%;
                 display: none;
+                color: var(--chat-text-primary);
+                font-size: var(--chat-spacing-size-1-0);
             }
 
             &[data-value] {

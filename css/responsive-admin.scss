@@ -248,8 +248,7 @@ body {
                 z-index: 5;
 
                 >ul {
-                    backdrop-filter: blur(60px);
-                    -webkit-backdrop-filter: blur(60px);
+                    background: var(--chat-app-background);
 
                     padding-left: 0;
                     border-radius: .6rem .6rem .8rem .8rem;
@@ -641,10 +640,10 @@ a.sb-btn {
 
     >.sb-header {
         background: var(--chat-app-background);
-        backdrop-filter: blur(100px);
-        -webkit-backdrop-filter: blur(100px);
-        box-shadow: var(--box-shadow-menu);
-        -webkit-box-shadow: var(--box-shadow-menu);
+        // backdrop-filter: blur(100px);
+        // -webkit-backdrop-filter: blur(100px);
+        box-shadow: var(--box-shadow-inner);
+        -webkit-box-shadow: var(--box-shadow-inner);
 
 
         border-bottom: none;
@@ -1207,9 +1206,9 @@ a.sb-btn {
     min-height: 100%;
     border: none;
     border-radius: 0;
-    // background-color: var(--chat-app-background);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    background: var(--chat-app-backdrop-b);
+    background-image: var(--chat-app-backdrop-b);
+    
 }
 
 .sb-lightbox {
@@ -1381,8 +1380,8 @@ a.sb-btn {
             border-bottom: .6px solid var(--chat-border-color);
             position: fixed;
             width: 100%;
-            backdrop-filter: blur(100px);
-            -webkit-backdrop-filter: blur(100px);
+            // backdrop-filter: blur(100px);
+            // -webkit-backdrop-filter: blur(100px);
             z-index: 10;
 
             .sb-flex {
@@ -1601,8 +1600,8 @@ a.sb-btn {
         top: 0px;
         height: calc(100% + 5px);
         border: none;
-        backdrop-filter: blur(100px);
-        -webkit-backdrop-filter: blur(100px);
+        // backdrop-filter: blur(100px);
+        // -webkit-backdrop-filter: blur(100px);
 
         //border-top: 0.5px solid #d4d4d4;
         min-width: 0;
@@ -1617,7 +1616,7 @@ a.sb-btn {
 
         &.sb-active {
             display: block;
-            background-color: var(--chat-top-bar-color);
+            background: var(--chat-app-background);
             -webkit-animation: fade-in 0.6s cubic-bezier(0.99, -0.62, 0, 0.87) !important;
             animation: fade-in 0.6s cubic-bezier(0.99, -0.62, 0, 0.87) !important;
         }
@@ -1900,6 +1899,7 @@ a.sb-btn {
     font-size: var(--chat-text-size-1-0);
     line-height: 26px;
     height: 40px;
+    color: var(--chat-text-primary);
 }
 
 .sb-language-switcher-cnt {
@@ -2042,9 +2042,7 @@ a.sb-btn {
     width: auto !important;
     border-radius: 0;
     border: none;
-    backdrop-filter: blur(80px);
-    -webkit-backdrop-filter: blur(80px);
-    background-color: transparent;
+    background-color: var(--chat-background-menu);
 }
 
 .daterangepicker .drp-calendar {

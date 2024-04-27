@@ -48,9 +48,9 @@ function sb_component_chat()
 ?>
     <div class="sb-main sb-chat sb-no-conversations<?php echo $css ?>" style="display: none; transition: none;">
         <div class="sb-body" style="max-height: 570px;background: white;">
-            <div class="sb-scroll-area" style="background: url('/media/whatsapp-bkg.png');background-color: var(--chat-input-date-picker);">
+            <div class="sb-scroll-area" style="background: url('/media/whatsapp-bkg.png');background-color:#f6f8f9;">
                 <div class="sb-header sb-header-main sb-header-type-<?php echo $header_type ?>" <?php if ($background) echo 'style="background-image: url(' . $background . ')"' ?>>
-                    <i class="sb-icon-close <?php echo $disable_dashboard ? 'sb-responsive-close-btn' : 'sb-dashboard-btn' ?>"></i>
+                    <i class="bi-x-lg <?php echo $disable_dashboard ? 'sb-responsive-close-btn' : 'sb-dashboard-btn' ?>"></i>
                     <div class="sb-content">
                         <?php if ($header_type == 'brand') echo '<div class="sb-brand"><img src="' . sb_get_setting('brand-img') . '" alt="" /></div>' ?>
                         <div class="sb-title">
@@ -93,11 +93,11 @@ function sb_component_chat()
             <img class="sb-icon" alt="" src="<?php echo $icon ? $icon : STMBX_URL . '/media/button-chat.svg' ?>" />
             <img class="sb-close" alt="" src="<?php echo STMBX_URL ?>/media/button-close.svg" />
         </div>
-        <i class="sb-icon sb-icon-close sb-responsive-close-btn"></i>
+        <i class="sb-icon bi-x-lg sb-responsive-close-btn"></i>
         <?php if (sb_get_setting('chat-sound', 'n') != 'n') echo '<audio id="sb-audio" preload="auto"><source src="' . STMBX_URL . '/media/sound.mp3" type="audio/mpeg"></audio><audio id="sb-audio-out" preload="auto"><source src="' . STMBX_URL . '/media/sound-out.mp3" type="audio/mpeg"></audio>' ?>
         <div class="sb-lightbox-media">
             <div></div>
-            <i class="sb-icon-close"></i>
+            <i class="bi-x-lg"></i>
         </div>
         <div class="sb-lightbox-overlay"></div>
     </div>
