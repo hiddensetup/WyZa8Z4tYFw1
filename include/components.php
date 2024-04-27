@@ -264,8 +264,8 @@ function sb_profile_edit_box()
  {
      $jsonString = '{
          "payment": "<h2 style=\"color:var(--chat-text-primary)\";><i class=\"bi-info-circle-fill\"></i> Payment Required! </h2><span style=\"color:var(--chat-text-primary)\";>Access to the Steamboxchat app is currently restricted. Please ensure your payment is settled to continue enjoying it on your plan. If you haven\'t made the payment yet, please do so <a style=\"color:var(--chat-text-url);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
-         "trial": "<h2 style=\"color:var(--chat-text-primary)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> Trial Ended! </h2><span style=\"color:var(--chat-text-primary)\";>Your trial period for the Steamboxchat app has ended. To continue using the app, please make a payment <a style=\"color:var(--chat-text-url);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
-         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\";><i class=\"bi-info-circle-fill\" style=\"vertical-align:middle\"></i> System Overloaded! </h2><span style=\"color:var(--chat-text-primary)\";>Our servers are overloaded. <br> <br> Please wait for some hours before trying again. We apologize for any inconvenience and appreciate your patience.</span>"
+         "trial": "<h2 style=\"color:var(--chat-text-primary)\";><i class=\"bi-info-circle-fill\"  ></i> Trial Ended! </h2><span style=\"color:var(--chat-text-primary)\";>Your trial period for the Steamboxchat app has ended. To continue using the app, please make a payment <a style=\"color:var(--chat-text-url);\" href=\"' . PAYMENT_LINK . '\">here<\/a>.</span>",
+         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\";><i class=\"bi-info-circle-fill\"  ></i> System Overloaded! </h2><span style=\"color:var(--chat-text-primary)\";>Our servers are overloaded. <br> <br> Please wait for some hours before trying again. We apologize for any inconvenience and appreciate your patience.</span>"
      }';
  
      $messages = json_decode($jsonString, true);
