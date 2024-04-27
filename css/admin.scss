@@ -427,13 +427,14 @@ td.sb-offline {
     .sb-tab-nav-title {
         line-height: normal;
         box-sizing: border-box;
-        font-size: var(--chat-text-size-1-1) !important;
+        font-size: var(--chat-text-size-1-2) !important;
         padding: 10px 8%;
         cursor: default;
         border-bottom: 1px dotted var(--chat-border-color);
         color: var(--chat-text-secondary);
         border-radius: 0px;
         width: 93%;
+        font-weight: 800;
     }
 
     li+li.sb-tab-nav-title {
