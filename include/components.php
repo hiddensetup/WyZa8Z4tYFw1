@@ -269,7 +269,7 @@ function sb_profile_edit_box()
      }';
  
      $messages = json_decode($jsonString, true);
- 
+
      $message_type = defined('MESSAGE_TYPE') ? MESSAGE_TYPE : '';
  
      if (array_key_exists($message_type, $messages)) {
@@ -281,29 +281,33 @@ function sb_profile_edit_box()
          echo $message;
          echo '</div>';
          echo '</div>';
+ 
+         // Return true if a message is to be displayed
+         return true;
      } else {
-         echo '<div id="login-message" style="padding-top:40px">';
-         echo '';
-         echo '</div>';
+         // Return false if no message is to be displayed
+         return false;
      }
  }
  
  function sb_login_box()
- { ?>
-  <div id="announcement">
-                 <?php
-                 // Call the displayMessage function here
-                 displayMessage();
-                 ?>
- 
-             </div>
-             <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo (defined('MESSAGE_TYPE') ? 'style="display:none;"' : ''); ?>>
- 
-         <div></div>
-         <div class="sb-top-bar">
-            
-            <img src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
-        </div>
+ { 
+     // Check if a message is to be displayed
+     $messageDisplayed = displayMessage();
+ ?>
+     <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo ($messageDisplayed ? 'style="display:none;"' : ''); ?>>
+     <div></div>
+        <div class="sb-top-bar">
+            <div id="announcement">
+                <?php
+                // If no message is to be displayed, show the login form
+                if (!$messageDisplayed) {
+                ?>
+                    <!-- Your login form HTML goes here -->
+                    <img style="margin: 70px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
+                <?php } ?>
+            </div>
+        </div> 
         <div class="sb-main" id="email">
             <div class="sb-input">
                 <label style="color: var(--chat-text-primary);" for="text"><?php sb_e('Email') ?></label>
