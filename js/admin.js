@@ -6545,9 +6545,9 @@ $("#change-conversation-source").change(function (e) {
               }
               // Change the icon to bi-arrow-right-circle
               if ($(this).hasClass("bi-search")) {
-                  $(this).removeClass("bi-search").addClass("bi-three-dots");
-              } else if ($(this).hasClass("bi-three-dots")) {
-                  $(this).removeClass("bi-three-dots").addClass("bi-filter");
+                  $(this).removeClass("bi-search").addClass("bi-x-lg");
+              } else if ($(this).hasClass("bi-x-lg")) {
+                  $(this).removeClass("bi-x-lg").addClass("bi-filter");
               } else if ($(this).hasClass("bi-filter")) {
                   $(this).removeClass("bi-filter").addClass("bi-arrow-right-short");
               }
@@ -6563,9 +6563,9 @@ $("#change-conversation-source").change(function (e) {
                   if ($(this).hasClass("bi-arrow-right-short")) {
                       $(this).removeClass("bi-arrow-right-short").addClass("bi-filter");
                   } else if ($(this).hasClass("bi-filter")) {
-                      $(this).removeClass("bi-filter").addClass("bi-three-dots");
-                  } else if ($(this).hasClass("bi-three-dots")) {
-                      $(this).removeClass("bi-three-dots").addClass("bi-search");
+                      $(this).removeClass("bi-filter").addClass("bi-x-lg");
+                  } else if ($(this).hasClass("bi-x-lg")) {
+                      $(this).removeClass("bi-x-lg").addClass("bi-search");
                   }
               }
           }

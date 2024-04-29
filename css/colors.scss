@@ -191,38 +191,34 @@
   --chat-app-loader-color: white;
   --chat-bubble-agent: #5220f1;
   --chat-text-bubble-agent: #ffffff;
-  --chat-text-url:rgb(17 219 73);
+  --chat-text-url: rgb(17 219 73);
   --chat-text-theme-button: white;
   --steambox-color: rgba(0, 0, 0, 0.737);
   --chat-text-theme-background: linear-gradient(332deg, #3503ff, #7c17b8),
     linear-gradient(#25008c, transparent);
-    
+
 }
 
 /* Insta theme */
 [data-theme="insta"] {
-  --chat-app-theme-color: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  --chat-app-theme-color: linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
   --chat-conversation-background: white;
   --chat-bottom-bar-color: white;
   --chat-bubble-agent: rgb(9, 8, 10);
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #ff5151;
   --chat-text-theme-button: white;
-  --chat-text-theme-background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  --chat-text-theme-background: linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
 }
 
 /* Insta theme */
@@ -242,11 +238,9 @@
 /* Dark theme */
 [data-theme="dark"] {
   // --chat-app-background: rgba(16, 16, 37, 0.544);
-  --chat-app-background: linear-gradient(
-      48deg,
+  --chat-app-background: linear-gradient(48deg,
       rgb(14 15 44 / 89%) -12.9%,
-      #251038 149.9%
-    ),
+      #251038 149.9%),
     rgb(7 15 82) -16.9%;
   --chat-app-theme-color: #5f4aff;
   --chat-conversation-background: #fbfbfb03;
@@ -270,7 +264,7 @@
   --chat-btn-background-active: #bac4db;
   --chat-input-focus-ring: inset 0 0 2px 1px #000000;
   --chat-text-theme-button: white;
-  --chat-text-theme-background:var(--chat-app-theme-color);
+  --chat-text-theme-background: var(--chat-app-theme-color);
   --chat-text-daterangepicker: white;
   --chat-daterangepicker-background: var(--chat-app-theme-color);
   --chat-btn-text: rgb(68, 78, 95);
@@ -299,11 +293,9 @@
   --chat-app-backdrop-b: radial-gradient(at 40% 20%, #19072a87 0, #0400147a 50%),
     radial-gradient(at 0 100%, #06020d96 0, #1e14456b 50%),
     radial-gradient(at 80% 100%, #0b0a152e 0, #00000045 50%),
-    radial-gradient(
-      at 80% 0,
+    radial-gradient(at 80% 0,
       hsl(195.86deg 40.34% 2.87% / 42%) 0,
-      #27223554 50%
-    ),
+      #27223554 50%),
     radial-gradient(at 0 0, hsl(38deg 0% 21.01% / 52%) 0, #5822db85 50%);
   //background-image
 

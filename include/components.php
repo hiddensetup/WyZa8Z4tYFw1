@@ -1263,7 +1263,7 @@ function sb_component_admin()
                                         </li>
                                         <hr>
                                         <li data-value="6">
-                                         <i class="bi-star"></i>&nbsp; <?php sb_e('Follow up') ?>
+                                         <i class="bi-pin-fill"></i>&nbsp; <?php sb_e('Follow up') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="3">

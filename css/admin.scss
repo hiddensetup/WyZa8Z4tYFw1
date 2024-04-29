@@ -6573,7 +6573,7 @@ grammarly-editor-plugin {
     }
 }
 
-@media (min-width: 555px) and (max-width: 1360px) {
+@media (min-width: 555px) and (max-width: 1440px) {
     .open-details {
         display: inline-block;
     }
@@ -6684,11 +6684,32 @@ grammarly-editor-plugin {
     }
 }
 
-@media (min-width: 555px) and (max-width: 1360px) {
+
+@media (min-width: 1440px) {
+    .sb-board>.sb-admin-list {
+        max-width: 550px;
+        min-width: 549px;
+    }
 
 
+    .sb-admin-list .sb-search-btn>input {
+        min-width: 470px;
+    }
 
+    .sb-menu-top>div, .sb-menu-top>ul {
+        display: none;
+        position: absolute;
+        padding: 0 0;
+        right: 11px;
+        top: 10px;
+    }
+    .sb-menu-mobile>ul {
+        display: flex;
+        gap: .4em;
+    }
 
+}
+@media (min-width: 555px) and (max-width: 1440px) {
 
 
 

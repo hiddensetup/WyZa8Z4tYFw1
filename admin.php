@@ -43,7 +43,7 @@ require('include/components.php');
   <script src="<?php echo file_exists('js/min/main.js') ? $steambox_url . 'js/min/main.js' : $steambox_url . 'js/main.js'; ?>"></script>
   <script src="<?php echo file_exists('js/min/admin.js') ? $steambox_url . 'js/min/admin.js' : $steambox_url . 'js/admin.js'; ?>"></script>
   <script src="<?php echo file_exists('js/min/metatemplate.js') ? $steambox_url . 'js/min/metatemplate.js' : $steambox_url . 'js/metatemplate.js'; ?>"></script>
-  <link href="<?php echo file_exists('/node_modules/bootstrap-icons/font/bootstrap-icons.min.css') ? 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' : $steambox_url . 'node_modules/bootstrap-icons/font/bootstrap-icons.css'; ?>" rel="stylesheet" media="all">
+  <!-- <link href="<?php echo file_exists('/node_modules/bootstrap-icons/font/bootstrap-icons.min.css') ? 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' : $steambox_url . 'node_modules/bootstrap-icons/font/bootstrap-icons.css'; ?>" rel="stylesheet" media="all"> -->
 
   <link href="<?php echo $steambox_url . 'css/admin.css' ?>" rel="stylesheet" id="theme" media="all">
   <link href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'media/icon.png') ?>" rel="shortcut icon" type="image/png">
