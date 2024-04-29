@@ -2169,78 +2169,78 @@
       } else message = this.render(message);
 
       // Attachments
-      // if (attachments.length) {
-      //   attachments_code =
-      //     '<div style="padding-top: 0px" class="sb-message-attachments">';
-      //   for (var i = 0; i < attachments.length; i++) {
-      //     let url = attachments[i][1];
-      //     if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
-      //       let imgStyle = url.includes(".webp")
-      //         ? "box-shadow:none;width: 100px;"
-      //         : "width: auto; height: auto;";
-      //       media_code += `<div style="display:flex;margin-bottom: 6px;flex-wrap: wrap;flex-direction: column;" class="sb-image${
-      //         url.includes(".png") ? " sb-image-png" : ""
-      //       }"><img style="object-fit: cover; border-radius: 8px; ${imgStyle}" loading="lazy" src="${url}" /></div>`;
-      //     } else if (
-      //       attachments.toString().substr(attachments.length - 4) === "oga" ||
-      //       attachments.toString().substr(attachments.length - 4) === "mp3" ||
-      //       attachments.toString().substr(attachments.length - 4) === "ogg" ||
-      //       attachments.toString().substr(attachments.length - 4) === "amr"
-      //     ) {
-      //       media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
-      //     } else if (
-      //       attachments.toString().substr(attachments.length - 4) === "mp4"
-      //     ) {
-      //       media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
-      //     } else {
-      //       media_code += `${
-      //         url
-      //           ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
-      //           : " "
-      //       }`;
-      //     }
-      //   }
-      //   attachments_code += "</div>";
-      // }
-
-
-
-
-
-
       if (attachments.length) {
-        attachments_code = '<div style="padding-top: 0px" class="sb-message-attachments">';
+        attachments_code =
+          '<div style="padding-top: 0px" class="sb-message-attachments">';
         for (var i = 0; i < attachments.length; i++) {
-            let url = attachments[i][1];
-            if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
-                // Code for image attachments
-            } else if (attachments[i][1].endsWith(".pdf") && window.innerWidth > 555) {
-                // Code for PDF attachments and screen width greater than 555 pixels
-                media_code += `<embed src="${url}" type="application/pdf" style="width:100%;height:500px;" />`;
-            } else if (
-                attachments.toString().substr(attachments.length - 4) === "oga" ||
-                attachments.toString().substr(attachments.length - 4) === "mp3" ||
-                attachments.toString().substr(attachments.length - 4) === "ogg" ||
-                attachments.toString().substr(attachments.length - 4) === "amr"
-            ) {
-                // Code for audio attachments
-                media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
-            } else if (
-                attachments.toString().substr(attachments.length - 4) === "mp4"
-            ) {
-                // Code for video attachments
-                media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
-            } else {
-                // Code for other file types
-                media_code += `${
-                  url
-                    ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
-                    : " "
-                }`;
-            }
+          let url = attachments[i][1];
+          if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
+            let imgStyle = url.includes(".webp")
+              ? "box-shadow:none;width: 100px;"
+              : "width: auto; height: auto;";
+            media_code += `<div style="display:flex;margin-bottom: 6px;flex-wrap: wrap;flex-direction: column;" class="sb-image${
+              url.includes(".png") ? " sb-image-png" : ""
+            }"><img style="object-fit: cover; border-radius: 8px; ${imgStyle}" loading="lazy" src="${url}" /></div>`;
+          } else if (
+            attachments.toString().substr(attachments.length - 4) === "oga" ||
+            attachments.toString().substr(attachments.length - 4) === "mp3" ||
+            attachments.toString().substr(attachments.length - 4) === "ogg" ||
+            attachments.toString().substr(attachments.length - 4) === "amr"
+          ) {
+            media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
+          } else if (
+            attachments.toString().substr(attachments.length - 4) === "mp4"
+          ) {
+            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+          } else {
+            media_code += `${
+              url
+                ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
+                : " "
+            }`;
+          }
         }
         attachments_code += "</div>";
-    }
+      }
+
+
+
+
+
+
+    //   if (attachments.length) {
+    //     attachments_code = '<div style="padding-top: 0px" class="sb-message-attachments">';
+    //     for (var i = 0; i < attachments.length; i++) {
+    //         let url = attachments[i][1];
+    //         if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
+    //             // Code for image attachments
+    //         } else if (attachments[i][1].endsWith(".pdf") && window.innerWidth > 555) {
+    //             // Code for PDF attachments and screen width greater than 555 pixels
+    //             media_code += `<embed src="${url}" type="application/pdf" style="width:100%;height:500px;" />`;
+    //         } else if (
+    //             attachments.toString().substr(attachments.length - 4) === "oga" ||
+    //             attachments.toString().substr(attachments.length - 4) === "mp3" ||
+    //             attachments.toString().substr(attachments.length - 4) === "ogg" ||
+    //             attachments.toString().substr(attachments.length - 4) === "amr"
+    //         ) {
+    //             // Code for audio attachments
+    //             media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
+    //         } else if (
+    //             attachments.toString().substr(attachments.length - 4) === "mp4"
+    //         ) {
+    //             // Code for video attachments
+    //             media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+    //         } else {
+    //             // Code for other file types
+    //             media_code += `${
+    //               url
+    //                 ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
+    //                 : " "
+    //             }`;
+    //         }
+    //     }
+    //     attachments_code += "</div>";
+    // }
     
 
 
@@ -7460,7 +7460,7 @@
     SBF.event("SBAttachments");
   });
 
-  $(global).on("dragover", function (e) {
+  $(chat_editor).on("dragover", function (e) {
     $(this).addClass("sb-drag");
     clearTimeout(timeout);
     e.preventDefault();
@@ -7469,7 +7469,7 @@
     showSendIconAfterTimeout();
   });
 
-  $(global).on("dragleave", function (e) {
+  $(chat_editor).on("dragleave", function (e) {
     timeout = setTimeout(() => {
       $(this).removeClass("sb-drag");
       // Show the send icon after a timeout
@@ -7479,7 +7479,7 @@
     e.stopPropagation();
   });
 
-  $(global).on("drop", function (e) {
+  $(chat_editor).on("drop", function (e) {
     let files = e.originalEvent.dataTransfer.files;
     e.preventDefault();
     e.stopPropagation();

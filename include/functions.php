@@ -9439,7 +9439,7 @@ function sb_component_editor($admin = false)
     <?php
     // Placeholder values, replace these with your actual data
     $source = "wa"; // Placeholder value for the conversation source
-    $hiddenStyle = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
+    $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
     ?>
     <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
 </div>
