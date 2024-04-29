@@ -9414,9 +9414,8 @@ function sb_component_editor($admin = false)
         } ?>
 
         <div class="sb-bar-icons sb-hide">
-            <div class="bi-emoji-smile" data-sb-tooltip="<?php sb_e("Emojis"); ?>"></div>
+            <div class="bi-emoji-grin" data-sb-tooltip="<?php sb_e("Emojis"); ?>"></div>
             <div class="bi-list-stars" id="send-rating-button" data-sb-tooltip="<?php sb_e("Feedback?"); ?>"></div>
-            <div class="bi-whatsapp api-whatsapp-button" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
 
             <div class="bi-crosshair"></div>
 
@@ -9424,6 +9423,7 @@ function sb_component_editor($admin = false)
                 echo '<div class="bi-paperclip" ></div>';
             } ?>
             <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
+            <div class="bi-whatsapp api-whatsapp-button" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
 
         </div>
 

@@ -9542,7 +9542,7 @@ $(".bi-search").click(function () {
         let e = $(SBAdmin.open_popup);
         e.is(s.target) ||
           0 !== e.has(s.target).length ||
-          ["sb-btn-saved-replies", "bi-emoji-smile"].includes(
+          ["sb-btn-saved-replies", "bi-emoji-grin"].includes(
             $(s.target).attr("class")
           ) ||
           (e.hasClass("sb-popup")

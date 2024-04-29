@@ -1501,7 +1501,7 @@ div ul.sb-menu,
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 25px;
+    gap: 1.63rem;
     position: absolute;
     background: var(--chat-background-menu);
     bottom: calc(100% - 2px);
@@ -1510,12 +1510,12 @@ div ul.sb-menu,
     padding: .6rem .6rem .5rem .6rem;
     width: min-content;
     margin: 8px 3px;
-    border-radius: .6rem .0rem .0rem .6rem;
+    border-radius: var(--chat-rounded-size-3);;
     box-shadow: var(--box-shadow-menu);
     -webkit-box-shadow: var(--box-shadow-menu);
 
     >div {
-      width: 21px;
+      width: 23px;
       height: 24px;
       margin-right: 0;
       position: relative;
@@ -1523,8 +1523,7 @@ div ul.sb-menu,
       border-radius: var(--chat-rounded-size-3);
       padding: 3px 5px;
       box-shadow: var(--box-shadow-bubble-chat);
-      border: 0.8px solid var(--chat-border-color);
-
+      font-size: var(--chat-text-size-1-4);
 
       &:active {
         box-shadow: var(--chat-button-editor-inset);
@@ -1607,7 +1606,7 @@ div ul.sb-menu,
   }
 
   .sb-attachments {
-    width: calc(100% - 60px);
+    width: calc(100% - 58px);
     display: inline-flex;
     overflow: auto;
     font-size: 0.85rem;
@@ -1623,17 +1622,15 @@ div ul.sb-menu,
     bottom: 5px;
 
     >div {
-      margin: 0.15rem;
-      padding: .4rem 1rem;
+      margin: .25rem .15rem;
+      padding: .43rem 1rem;
       position: relative;
       cursor: default;
       border-radius: var(--chat-rounded-size-6);
-      animation: fade-in 0.5s linear;
-
-      border: 0.8px solid var(--chat-border-color);
-      background-color: var(--chat-btn-background);
+      animation: fade-in .5s linear;
+      background-color: var(--chat-app-tooltip-color);
       font-weight: 200;
-      box-shadow: 0 1px 2px -1px #434343;
+      box-shadow: var(--box-shadow);
 
       >i {
         font-size: var(--chat-text-size-1-2);
