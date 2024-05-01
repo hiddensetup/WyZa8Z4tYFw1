@@ -40,7 +40,7 @@
 			<div>
 			<a class="phone-number" style="color:inherit">${t.phone}</a>
 			</div>
-			<p style="max-width:calc(100% - 145px);">${i.strip(s).replace(/_/g," ")}</p>
+			<p class="message-received" style="max-width:calc(100% - 145px);">${i.strip(s).replace(/_/g," ")}</p>
 			<div class="conversation-bar">
 
 			<div class="no-read-icon sb-hide" style="margin: 0px 1px;">
