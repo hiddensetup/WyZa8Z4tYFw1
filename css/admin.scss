@@ -2319,7 +2319,9 @@ BODY
     padding: 10px 10px;
     text-decoration: none;
     display: block;
-    margin: 0px 10px;
+    margin: 0 5px;
+    line-height: 20px;
+    transition: var(--transition);
 
 
     &:hover {
@@ -2331,7 +2333,7 @@ BODY
     }
 
     &:active {
-        scale: 1;
+        opacity: .6;
         transition: var(--transition);
     }
 }
@@ -5545,7 +5547,7 @@ BODY
 
 .sb-admin-box {
     max-width: 500px;
-    margin: 100px auto auto auto;
+    margin: 8% auto 8% auto;
     padding: 0 30px 30px;
     position: relative;
     animation: fade-in 1s ease-in;
