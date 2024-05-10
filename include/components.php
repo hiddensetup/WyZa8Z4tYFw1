@@ -310,12 +310,12 @@ function sb_profile_edit_box()
         </div> 
         <div class="sb-main" id="email">
             <div class="sb-input">
-                <label style="color: var(--chat-text-secondary); font-size:14px; position: relative; top: 18px; right: 50px; background: var(--chat-app-background); padding: 1px 5px;" for="text"><?php sb_e('Email') ?></label>
+                <label style="color: var(--chat-text-secondary); font-size:14px; position: relative; top: 18px; left: 0px; background: var(--chat-app-background); padding: 1px 5px;" for="text"><?php sb_e('Email') ?></label>
                 <input style="width: calc(100% - 30px);height: 45px;" type="text" />
             </div>
             <div class="sb-block-space"></div>
             <div class="sb-input" id="password">
-                <label style=" color: var(--chat-text-secondary); font-size:14px; position: relative; top: 18px; right: 72px; background: var(--chat-app-background); padding: 1px 5px; " for="password"><?php sb_e('Password') ?></label>
+                <label style=" color: var(--chat-text-secondary); font-size:14px; position: relative; top: 18px; left: 0px; background: var(--chat-app-background); padding: 1px 5px; " for="password"><?php sb_e('Password') ?></label>
                 <input style="width: calc(100% - 30px);height: 45px;" type="password" />
             </div>
             <div class="sb-bottom">
