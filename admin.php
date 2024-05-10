@@ -26,7 +26,7 @@ require('include/components.php');
 <!DOCTYPE html>
 
 <html lang="en" data-theme="steambox">
- 
+
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
