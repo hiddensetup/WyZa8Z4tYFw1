@@ -2804,8 +2804,10 @@ a.sb-btn {
     animation: fade-in .3s ease-out;
     -webkit-animation: fade-in .3s ease-out;
     background-color: var(--chat-background-menu);
-    box-shadow: var(--box-shadow-menu);
-    -webkit-box-shadow: var(--box-shadow-menu);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: .5px solid var(--chat-border-color);
+    box-shadow: var(--box-shadow-bubble-chat);
     bottom: 69px !important;
     left: 317px !important;
   }
@@ -2856,9 +2858,10 @@ a.sb-btn {
 .sb-popup.sb-emoji {
   left: 50px !important;
   right: 0;
-  bottom: 58px !important;
+  bottom: 59px !important;
   margin: 5px;
   box-shadow: none;
+  border: .5px solid rgba(0, 0, 0, .2);
   border-right: none;
   border-left: none;
   border-radius: var(--chat-rounded-size-3);
@@ -2875,22 +2878,19 @@ a.sb-btn {
 
     >ul {
       list-style: none;
-      padding: 0px;
-      margin: 0px 20px 0 0;
-      display: flex;
-      grid-gap: 15px;
-      scroll-behavior: smooth;
-      transition: var(--transition-2);
-      justify-content: center;
-      flex-wrap: wrap;
+      padding: 0;
+      margin: 0 15px 0 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 3px;
 
       >li {
         overflow: hidden;
         min-width: 0;
         text-align: center;
         cursor: pointer;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 23px;
+        line-height: 28px;
         margin: 0;
         padding: 0;
         transition: var(--transition);
@@ -4328,7 +4328,10 @@ textarea::placeholder {
   color: white;
 }
 
+
 div {
+
+
   .tags-Contactado {
     background: #117fdf;
     border-radius: 15px;
@@ -4341,13 +4344,7 @@ div {
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
-  }
 
-  .tags-Consulta {
-    background: #c6167d; /* Mismo color que Presupuesto */
-    border-radius: 15px;
-    color: white;
-    padding: 1.5px 2px 0px 2px;
   }
 
   .tags-Visitado {
@@ -4358,28 +4355,14 @@ div {
   }
 
   .tags-Calificado {
-    background: #0a9a41;
-    border-radius: 15px;
-    color: white;
-    padding: 1.5px 2px 0px 2px;
-  }
-
-  .tags-Confirmado {
-    background: #0ec352; /* Mismo color que Calificado */
+    background: #0ec352;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
   }
 
   .tags-NA {
-    background: #8c9caa;
-    border-radius: 15px;
-    color: white;
-    padding: 1.5px 2px 0px 2px;
-  }
-
-  .tags-Abierto {
-    background: #bf4420;
+    background: #6c757d;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
@@ -4387,6 +4370,13 @@ div {
 
   .tags-Pendiente {
     background: #e48109;
+    border-radius: 15px;
+    color: white;
+    padding: 1.5px 2px 0px 2px;
+  }
+
+  .tags-Abierto {
+    background: #bf4420;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
@@ -4414,13 +4404,13 @@ div {
   }
 
   .tags-Descartado {
-    background: #717171;
+    background: #555555;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
+
   }
 }
-
 
 .api-cloud-notif {
   position: absolute;

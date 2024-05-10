@@ -84,20 +84,19 @@
   var editor_js_saving = false;
   var editor_js_loading = false;
   var clientStatus = [
-    "Abierto",
-    "Presupuesto",
-    "Consulta",
-    "Contactado",
-    "Visitado",
-    "Calificado",
-    "Confirmado",
-    "Pendiente",
-    "Resuelto",
-    "Pagado",
-    "VIP",
-    "Descartado",
-    "NA",
-];
+    "Contactado", // Inbound Leads - Contacted
+    "Presupuesto", // Inbound Leads - Budget
+    "Visitado", // Inbound Leads - Visited (by field sales team)
+    "Calificado", // Qualified Lead
+
+    "NA", // Not Applicable
+    "Abierto", // Support - Open
+    "Pendiente", // Clients - Pending Payment
+    "Resuelto", // Support - Resolved
+    "Pagado", // Clients - Paid
+    "VIP", // Very Important Person
+    "Descartado", // Discarded
+  ];
 
   /*
    * ----------------------------------------------------------
