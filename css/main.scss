@@ -999,7 +999,6 @@ div ul.sb-menu li:hover,
             // padding: 0.3rem 0.4rem;
             position: relative;
             font-weight: 500;
-            box-shadow: var(--box-shadow-bubble-chat);
         }
     }
 
@@ -1324,7 +1323,7 @@ div ul.sb-menu li:hover,
             letter-spacing: 0.3px;
             line-height: 25px;
             margin: 15px 0 20px 0;
-            color: var(--chat-text-primary);
+            color: var(--chat-btn-pressed-color);
         }
 
         .sb-btn {
@@ -1809,15 +1808,15 @@ div ul.sb-menu li:hover,
     width: auto;
     display: block;
     border-radius: .6rem;
-    background:var(--chat-btn-background);
-    color: var(--chat-btn-text);
+    background: var(--chat-btn-color);
+    color: var(--chat-btn-not-pressed-color);
     font-weight: 400;
     font-size: var(--chat-text-size-9);
     box-shadow: var(--box-shadow);
 
     &:active,
     &:hover {
-        background: var(--chat-btn-background-active);
+        background: var(--chat-btn-pressed-color);
 
     }
 }
