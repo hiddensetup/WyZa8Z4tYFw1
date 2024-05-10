@@ -81,7 +81,7 @@
   --chat-app-theme-color: #23c35f;
   --chat-app-background-2: var(--chat-btn-background-active);
   --chat-app-logo-color: var(--chat-text-white-or-black);
-  --chat-background-menu-selected: transparent;
+  --chat-background-menu-selected: #eaeff2;
   --chat-background-menu: var(--chat-app-background);
   --chat-border-color: rgba(66, 103, 132, 0.26);
   --chat-list-background-selected: #eaeff2;
@@ -102,6 +102,8 @@
   /* Chat Inputs */
   --chat-input-focus-ring: inset 0 0 2px 0.5px #b0b7d5;
   --chat-input-background: rgb(255, 255, 255);
+  --chat-input-background-search: rgb(234 239 242);
+
   --chat-input-search-responsive: var(--chat-list-background-selected);
   --chat-input-toggle-color: var(--chat-app-background);
 
@@ -211,7 +213,7 @@
   --chat-bottom-bar-color: white;
   --chat-bubble-agent: rgb(9, 8, 10);
   --chat-text-bubble-agent: #ffffff;
-  --chat-text-url: #ff5151;
+  --chat-text-url: #ff7a7a;
   --chat-text-theme-button: white;
   --chat-text-theme-background: linear-gradient(45deg,
       #f09433 0%,
@@ -224,8 +226,8 @@
 /* Insta theme */
 [data-theme="steambox"] {
   --chat-app-theme-color: rgb(26, 29, 34);
-  --chat-conversation-background: #eaeff27d;
-  --chat-bottom-bar-color: #eaeff27d;
+  --chat-conversation-background:#f5f7f8;
+  --chat-bottom-bar-color: #f5f7f8;
   --chat-bubble-agent: rgb(26, 29, 34);
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #a88bed;
@@ -243,8 +245,8 @@
       #251038 149.9%),
     rgb(7 15 82) -16.9%;
   --chat-app-theme-color: #5f4aff;
-  --chat-conversation-background: #fbfbfb03;
-  --chat-bottom-bar-color: transparent;
+  --chat-conversation-background: #181335;
+  --chat-bottom-bar-color: #181335;
   --chat-bubble-agent: var(--chat-app-theme-color);
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #0cc691;
@@ -283,6 +285,8 @@
   --chat-input-toggle-color: white;
   --chat-text-bubble-client: rgb(29 33 40);
   --chat-input-background: rgb(42 37 83 / 45%);
+  --chat-input-background-search: rgba(47, 42, 90, 0.45);
+
   --chat-text-date: #8989a8;
   --chat-background-date: #221b41;
   --steambox-color: white;

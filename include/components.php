@@ -304,21 +304,19 @@ function sb_profile_edit_box()
                 if (!$messageDisplayed) {
                 ?>
                     <!-- Your login form HTML goes here -->
-                    <img style="margin: 70px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
+                    <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
                 <?php } ?>
             </div>
         </div> 
         <div class="sb-main" id="email">
             <div class="sb-input">
-                <label style="color: var(--chat-text-primary);" for="text"><?php sb_e('Email') ?></label>
-                <input style="    width: calc(100% - 30px);
-" type="text" />
+                <label style="color: var(--chat-text-secondary); font-size:14px; position: relative; top: 18px; right: 50px; background: var(--chat-app-background); padding: 1px 5px;" for="text"><?php sb_e('Email') ?></label>
+                <input style="width: calc(100% - 30px);height: 45px;" type="text" />
             </div>
             <div class="sb-block-space"></div>
             <div class="sb-input" id="password">
-                <label style="color:var(--chat-text-primary);" for="password"><?php sb_e('Password') ?></label>
-                <input style="    width: calc(100% - 30px);
-" type="password" />
+                <label style=" color: var(--chat-text-secondary); font-size:14px; position: relative; top: 18px; right: 72px; background: var(--chat-app-background); padding: 1px 5px; " for="password"><?php sb_e('Password') ?></label>
+                <input style="width: calc(100% - 30px);height: 45px;" type="password" />
             </div>
             <div class="sb-bottom">
                 <div style="padding: 5px 90px;margin-top: 0px!important;width: fit-content!important;"" class="sb-btn sb-submit-login"><?php sb_e('Login') ?></div>
@@ -328,11 +326,11 @@ function sb_profile_edit_box()
 
         </div>
 
-        <div style="display: flex;flex-wrap: wrap;justify-content: center;" class="sb-text">
-            <div style="margin: 1rem auto;max-width: 270px;" class="sb-info"></div>
+        <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly" class="sb-text">
+            <div style="margin: 0.2rem auto 1rem auto;max-width: 270px;" class="sb-info"></div>
            
             <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
-            <small>&copy; <?php echo date("Y"); ?> Steamboxchat - All rights reserved</small>
+            <small>&copy; <?php echo date("Y"); ?> Steamboxchat</small>
 
         </div>
     </form>
@@ -1235,7 +1233,7 @@ function sb_component_admin()
                         <!-- <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi"></i></div>' ?> -->
 
                     </div>
-                    <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s ease-in-out;-webkit-animation:scale-up-br 0.2s ease-in-out;padding:8px;font-size: 1.1rem;font-weight: 500;">
+                    <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);-webkit-animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);padding:8px;font-size: 1.1rem;font-weight: 500;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
                         <a href="#" class="themeToggleBtn"> <i class="bi bi-palette2"></i> <?php sb_e('Tema') ?></a>
                         <hr>

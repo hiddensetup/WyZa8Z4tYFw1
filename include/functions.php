@@ -3059,18 +3059,19 @@ function sb_get_clientStatus_conversations($exclude_id = -1, $agent = false)
     $exclude = ($exclude_id != -1) ? " AND sb_messages.conversation_id <> " . sb_db_escape($exclude_id) : "";
 
     $clientStatus = array(
-        "Contactado",       // Inbound Leads - Contacted
-        "Presupuesto",      // Inbound Leads - Budget
-        "Visitado",         // Inbound Leads - Visited (by field sales team)
-        "Calificado",       // Qualified Lead
-
-        "NA",               // Not Applicable
-        "Abierto",          // Support - Open
-        "Pendiente",        // Clients - Pending Payment
-        "Resuelto",         // Support - Resolved
-        "Pagado",           // Clients - Paid
-        "VIP",              // Very Important Person
-        "Descartado"        // Discarded
+        "Abierto",
+        "Presupuesto",
+        "Consulta",
+        "Contactado",
+        "Visitado",
+        "Calificado",
+        "Confirmado",
+        "Pendiente",
+        "Resuelto",
+        "Pagado",
+        "VIP",
+        "Descartado",
+        "NA",
     );
 
     $labels_condition = implode("', '", $clientStatus);
@@ -9439,7 +9440,7 @@ function sb_component_editor($admin = false)
     <?php
     // Placeholder values, replace these with your actual data
     $source = "wa"; // Placeholder value for the conversation source
-    $hiddenStyle = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
+    $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
     ?>
     <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
 </div>
@@ -9464,18 +9465,19 @@ function sb_component_editor($admin = false)
 
                 <?php
                 $clientStatus = array(
-                    "Contactado",       // Inbound Leads - Contacted
-                    "Presupuesto",      // Inbound Leads - Budget
-                    "Visitado",         // Inbound Leads - Visited (by field sales team)
-                    "Calificado",       // Qualified Lead
-
-                    "NA",               // Not Applicable
-                    "Abierto",          // Support - Open
-                    "Pendiente",        // Clients - Pending Payment
-                    "Resuelto",         // Support - Resolved
-                    "Pagado",           // Clients - Paid
-                    "VIP",              // Very Important Person
-                    "Descartado"        // Discarded
+                    "Abierto",
+                    "Presupuesto",
+                    "Consulta",
+                    "Contactado",
+                    "Visitado",
+                    "Calificado",
+                    "Confirmado",
+                    "Pendiente",
+                    "Resuelto",
+                    "Pagado",
+                    "VIP",
+                    "Descartado",
+                    "NA",
                 );
                 foreach ($clientStatus as $label) {
                 ?>
@@ -10353,17 +10355,19 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             break;
         case "status-client":
             $clientStatus = array(
-                "Contactado",       // Inbound Leads - Contacted
-                "Presupuesto",      // Inbound Leads - Budget
-                "Visitado",         // Inbound Leads - Visited (by field sales team)
-                "Calificado",       // Qualified Lead
-                "NA",               // Not Applicable
-                "Abierto",          // Support - Open
-                "Pendiente",        // Clients - Pending Payment
-                "Resuelto",         // Support - Resolved
-                "Pagado",           // Clients - Paid
-                "VIP",              // Very Important Person
-                "Descartado"        // Discarded
+                "Abierto",
+                "Presupuesto",
+                "Consulta",
+                "Contactado",
+                "Visitado",
+                "Calificado",
+                "Confirmado",
+                "Pendiente",
+                "Resuelto",
+                "Pagado",
+                "VIP",
+                "Descartado",
+                "NA",
             );
 
             $query = 'SELECT * FROM sb_conversations A, sb_users B WHERE B.id = A.user_id AND label IN ("' . implode('", "', $clientStatus) . '")';

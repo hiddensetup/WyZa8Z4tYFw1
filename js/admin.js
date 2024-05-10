@@ -84,19 +84,20 @@
   var editor_js_saving = false;
   var editor_js_loading = false;
   var clientStatus = [
-    "Contactado", // Inbound Leads - Contacted
-    "Presupuesto", // Inbound Leads - Budget
-    "Visitado", // Inbound Leads - Visited (by field sales team)
-    "Calificado", // Qualified Lead
-
-    "NA", // Not Applicable
-    "Abierto", // Support - Open
-    "Pendiente", // Clients - Pending Payment
-    "Resuelto", // Support - Resolved
-    "Pagado", // Clients - Paid
-    "VIP", // Very Important Person
-    "Descartado", // Discarded
-  ];
+    "Abierto",
+    "Presupuesto",
+    "Consulta",
+    "Contactado",
+    "Visitado",
+    "Calificado",
+    "Confirmado",
+    "Pendiente",
+    "Resuelto",
+    "Pagado",
+    "VIP",
+    "Descartado",
+    "NA",
+];
 
   /*
    * ----------------------------------------------------------
@@ -110,11 +111,11 @@
       {
         title: "",
         content: !1,
-        delay: 200,
+        delay: 100,
         anchor: "n",
         event: "hover",
-        fadeIn: 200,
-        fadeOut: 200,
+        fadeIn: 100,
+        fadeOut: 300,
         aHide: !0,
         maxW: "250px",
         offset: 4,
@@ -127,8 +128,6 @@
       admin.append('<div id="miniTip" class="sb-tooltip"><div></div></div>');
     var n = admin.find("#miniTip"),
       o = n.find("div");
-    n.css("box-shadow", "var(--box-shadow-menu)");
-    n.css("border-radius", "8px");
     return e.doHide
       ? (n.stop(!0, !0).fadeOut(e.fadeOut), !1)
       : this.each(function () {
@@ -400,7 +399,7 @@
       var closerToTop = rect.top < window.innerHeight / 2;
   
       // Determine the anchor position based on the element's position
-      var anchor = closerToTop ? "e" : "w";
+      var anchor = closerToTop ? "s" : "w";
   
       // Initialize the tooltip with the determined anchor position
       $(this).miniTip({
@@ -4671,7 +4670,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
 			<div>
 			<a class="phone-number" style="color:inherit">${conversation.phone}</a>
 			</div>
-			<p style="max-width:calc(100% - 145px);">${strip
+			<p class="message-received" style="max-width:calc(100% - 145px);">${strip
         .strip(message)
         .replace(/_/g, " ")}</p>
 			<div class="conversation-bar">

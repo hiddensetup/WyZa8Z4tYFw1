@@ -89,8 +89,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sb-form-container .sb-top-bar img {
-    width: 65px;
+    width: 90px;
     margin-bottom: 20px;
+
 }
 
 .sb-form-container .sb-main {
@@ -270,13 +271,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sb-tooltip>div {
-    background-color: var(--chat-app-tooltip-color);
-    color: var(--chat-text-primary) !important;
-    border-radius: var(--chat-rounded-size-6);
-    padding: 10px 0;
+    background-color: var(--chat-tooltip-background);
+    color: var(--chat-text-tooltip)!important;
+    // margin: 6px 0;
+    border-radius: var(--chat-rounded-size-8);
     list-style: none;
     font-weight: normal !important;
     font-size: small !important;
+
+
+
 
     & .sb-user-details-info {
         display: none;
@@ -1814,8 +1818,8 @@ TABLE
         // z-index: 9999;
         padding: 0px 15px;
         height: 40px;
-        -webkit-animation: fade-in 0.2s ease-in;
-        animation: fade-in 0.2s ease-in;
+        -webkit-transition: var(--transition);
+        transition: var(--transition);
     }
 
     &.sb-active {
@@ -1857,7 +1861,7 @@ TABLE
 
         // background: var(--top-bar-mobile-color);
 
-        border-right: 0.5px solid var(--chat-border-color);
+        // border-right: 0.5px solid var(--chat-border-color);
         // box-shadow: 0 1px 5px -1px rgb(0 0 0 / 30%);
 
         >.sb-admin-nav {
@@ -1874,8 +1878,6 @@ TABLE
                     display: block;
                     cursor: pointer;
                     position: relative;
-                    transition: var(--transition);
-                    -webkit-transition: var(--transition);
                     width: 20px;
                     padding: 5px 20px;
                     // color: var(--chat-btn-translucid-color);
@@ -1908,13 +1910,14 @@ TABLE
                     }
 
                     &:hover span {
-                        transition-delay: .4s;
+                        transition-delay: .1s;
                         visibility: visible;
                         opacity: 1;
                         left: 66px;
                         background-color: var(--chat-tooltip-background);
                         color: var(--chat-text-tooltip);
-                        margin: 10px 0;
+                        margin: 6px 0;
+                        border-radius: var(--chat-rounded-size-8);
 
 
                     }
@@ -2169,6 +2172,7 @@ BODY
                 display: flex;
                 justify-content: space-between;
                 border-bottom: .8px solid var(--chat-border-color);
+                border-left: .8px solid var(--chat-border-color);
                 height: 50px;
 
                 h2 {
@@ -2309,8 +2313,9 @@ BODY
     bottom: 70px;
     border-radius: var(--chat-rounded-size-6);
     padding: 6px;
-    -webkit-animation: fade-in 0.2s ease-in;
-    animation: fade-in 0.2s ease-in;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+
     margin-left: -100px;
 }
 
@@ -2319,20 +2324,23 @@ BODY
     padding: 10px 10px;
     text-decoration: none;
     display: block;
-    margin: 0px 10px;
+    margin: 0 6px;
+    line-height: 20px;
 
 
     &:hover {
         background-color: var(--chat-background-menu-selected) !important;
-        // color: var(--chat-text-white-or-black);
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
         border-radius: var(--chat-rounded-size-5);
 
 
     }
 
     &:active {
-        scale: 1;
+        opacity: .7;
         transition: var(--transition);
+        -webkit-transition: var(--transition);
     }
 }
 
@@ -2376,7 +2384,7 @@ BODY
         // border-right: 0.5px solid var(--chat-border-color);
         // backdrop-filter: blur(80px);
         border-left: 0.5px solid transparent;
-        margin-left: 0.3px;
+        margin-left: -0.5px;
         position: relative;
 
         .sb-top {
@@ -2384,7 +2392,8 @@ BODY
             justify-content: space-between;
             padding-left: 25px;
             background: var(--chat-top-bar-color);
-            border-right: .5px solid var(--chat-border-color);
+            border-right: .6px solid var(--chat-border-color);
+            border-left: .6px solid var(--chat-border-color);
             color: var(--chat-text-primary);
         }
 
@@ -2412,6 +2421,8 @@ BODY
             height: calc(100% - 55px);
             z-index: 9999;
             background-color: var(--chat-scroll-area-background);
+            border: .6px solid var(--chat-border-color);
+            
             // border-radius: 11px;
             // border-right: 0.8px solid var(--chat-border-color);
             // margin: 0px 9px;
@@ -3574,10 +3585,12 @@ BODY
     .sb-scroll-area {
         overflow: hidden;
         overflow-y: scroll;
-        margin: 0 8px;
+        /* margin: 0 8px; */
         padding-right: 15px;
         height: calc(100% - 60px);
         overflow-x: scroll;
+        border-left: .8px solid var(--chat-border-color);
+        padding-left: 15px;
 
 
 
@@ -3718,7 +3731,7 @@ BODY
         border-right: 0.5px solid var(--chat-border-color);
         animation: fade-in 1s ease-in-out;
         -webkit-animation: fade-in 1s ease-in-out;
-
+        border-left: .8px solid var(--chat-border-color)
     }
 }
 
@@ -4789,6 +4802,7 @@ BODY
     >.sb-tab>.sb-nav {
         margin-right: 0;
         padding-bottom: 15px;
+        border-left: .8px solid var(--chat-border-color)
         // border-right: 0.5px solid var(--chat-border-color);
     }
 
@@ -5544,12 +5558,21 @@ BODY
 }
 
 .sb-admin-box {
-    max-width: 500px;
-    margin: 100px auto auto auto;
-    padding: 0 30px 30px;
-    position: relative;
+    // max-width: 500px;
+    // margin: 80px auto auto auto;
+    // padding: 0 30px 30px;
+    // position: relative;
+    // animation: fade-in 1s ease-in;
+    // -webkit-animation: fade-in 1s ease-in;
+
+    padding: 0 50px 55px;
+    position: static;
     animation: fade-in 1s ease-in;
     -webkit-animation: fade-in 1s ease-in;
+    top: 15%;
+    margin: 80px auto;
+    box-shadow: var(--box-shadow-menu);
+    border-radius: var(--chat-rounded-size-6);
 
     .sb-top-bar {
         padding-bottom: 10px;
@@ -5589,7 +5612,7 @@ BODY
         left: 0;
         top: 0;
         margin: 0 0 0px 0;
-        padding: 15px 20px;
+        padding: 10px 20px;
         border-radius: var(--chat-rounded-size-5);
         display: none;
 
@@ -5612,13 +5635,18 @@ BODY
 }
 
 .sb-rich-login {
-    max-width: 270px;
+    // max-width: 270px;
+    // animation: fade-in 2s ease-in;
+    // -webkit-animation: fade-in 2s ease-in;
+    // background: var(--chat-app-background);
+    // border-radius: var(--chat-rounded-size-8);
+    // -webkit-box-shadow: var(--box-shadow-inner);
+    // box-shadow: var(--box-shadow-inner);
+    max-width: 280px;
     animation: fade-in 2s ease-in;
     -webkit-animation: fade-in 2s ease-in;
     background: var(--chat-app-background);
-    border-radius: var(--chat-rounded-size-8);
-    -webkit-box-shadow: var(--box-shadow-inner);
-    box-shadow: var(--box-shadow-inner);
+    min-width: 250px;
 
     .sb-forgot {
         font-size: var(--chat-text-size-8);
@@ -6872,9 +6900,10 @@ grammarly-editor-plugin {
     .sb-admin-list {
         .sb-search-btn>input {
             // min-width: 153px;
-            width: 320px;
+            width: 335px;
             z-index: 1;
-            background: var(--chat-input-background) !important
+            background: var(--chat-input-background-search) !important;
+            
         }
 
         .sb-filter-btn.sb-active>div {
@@ -6995,6 +7024,12 @@ grammarly-editor-plugin {
 }
 
 @media (min-width: 555px) and (max-width: 1024px) {
+
+    .sb-admin>.sb-header {
+        border-right: .5px solid var(--chat-border-color);
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+    }
     .sb-board>.sb-board .sb-user-details {
         max-width: 330px;
         min-width: 330px;
@@ -7002,6 +7037,13 @@ grammarly-editor-plugin {
 }
 
 @media (min-width: 555px) and (max-width: 870px) {
+
+
+    .sb-admin>.sb-header {
+        border-right: 1px solid var(--chat-border-color);
+
+    }
+
     .sb-board {
         >.sb-admin-list {
             position: fixed;
@@ -7060,8 +7102,10 @@ grammarly-editor-plugin {
 
     .sb-area-conversations>.sb-btn-collapse {
         display: block;
-        background: transparent;
+        background: 0 0;
         border-radius: 50%;
+        animation: fade-in .5s ease-in;
+        -webkit-animation: fade-in .5s ease-in;
 
         &.bi-chevron-left:not(.sb-active) {
             -webkit-transform: scaleX(-1);
@@ -7089,7 +7133,7 @@ grammarly-editor-plugin {
 
     .sb-admin-list .sb-search-btn>input {
         min-width: 295px;
-        max-width: 295px;
+        max-width: 395px;
         z-index: 1;
     }
 }
