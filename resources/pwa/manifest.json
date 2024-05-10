@@ -10,8 +10,8 @@
       "type": "image\/png"
     }
   ],
-  "background_color": "whitw",
-  "theme_color": "whitw",
+  "background_color": "white",
+  "theme_color": "white",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "../../admin.php",

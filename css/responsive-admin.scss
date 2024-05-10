@@ -72,10 +72,17 @@ body {
     }
 
     &.sb-rich-login {
-        max-width: 270px;
-        animation: fade-in 2s ease-in;
-        background: var(--chat-app-background);
-        border-radius: var(--chat-rounded-size-8);
+        // max-width: 270px;
+        // animation: fade-in 2s ease-in;
+        // background: var(--chat-app-background);
+        // border-radius: var(--chat-rounded-size-8);
+        margin-top: 80px;
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 0;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
     }
 
     .sb-input {
@@ -91,11 +98,17 @@ body {
 
 
 .sb-admin-box {
-    max-width: 500px;
-    margin: 70px auto auto auto;
-    padding: 0 30px 80px;
+    // max-width: 500px;
+    // margin: 70px auto auto auto;
+    // padding: 0 30px 80px;
+    // position: relative;
+    // animation: fade-in 1s ease-in;
+    max-width: 240px;
+    padding: 0 50px 70px;
     position: relative;
-    animation: fade-in 1s ease-in;
+    margin: auto;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
 }
 
 .source-conversation-icon {
@@ -2103,8 +2116,8 @@ grammarly-editor-plugin {
 @media (max-width: 360px) {
     .sb-admin-box {
         max-width: 500px;
+        padding: 0 0px 80px;
         margin: 70px 10px;
-        padding: 0 30px 80px;
         position: relative;
         animation: fade-in 1s ease-in;
     }

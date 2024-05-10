@@ -304,7 +304,7 @@ function sb_profile_edit_box()
                 if (!$messageDisplayed) {
                 ?>
                     <!-- Your login form HTML goes here -->
-                    <img style="margin: 70px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
+                    <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
                 <?php } ?>
             </div>
         </div> 
@@ -332,7 +332,7 @@ function sb_profile_edit_box()
             <div style="margin: 1rem auto;max-width: 270px;" class="sb-info"></div>
            
             <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
-            <small>&copy; <?php echo date("Y"); ?> Steamboxchat - All rights reserved</small>
+            <small>&copy; <?php echo date("Y"); ?> Steamboxchat</small>
 
         </div>
     </form>

@@ -1163,7 +1163,7 @@
           // Conditionally construct HTML
           if (isImageURL) {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                    <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
+                                    <img style="border-radius: .4rem; width: 33px; vertical-align: middle;object-fit:cover;" src="${response[1]}" width="30" height="30">
                                      ${name}<i class="bi-x-lg"></i>
                                   </div>`;
           } else if (isAudioURL) {
@@ -5061,7 +5061,7 @@
           // Conditionally construct HTML
           if (isImageURL) {
             attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
-                                <img style="border-radius: .4rem; width: 33px; vertical-align: middle;" src="${response[1]}" width="30" height="30">
+                                <img style="border-radius: .4rem; width: 33px; vertical-align: middle;object-fit:cover;" src="${response[1]}" width="30" height="30">
                                 <i class="bi-x-lg"></i>
                               </div>`;
           } else if (isAudioURL) {

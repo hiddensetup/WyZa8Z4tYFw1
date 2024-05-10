@@ -568,6 +568,7 @@ div.sb-list.sb-hide-fast {
   }
 }
 
+
 .alert-special {
   border: 25px solid transparent;
   position: absolute;
@@ -880,8 +881,9 @@ div ul.sb-menu,
     }
 
     &:hover .sb-time .conversation-menu .sb-info-conversation {
-      animation: fade-in 0.2s forwards;
-      animation-delay: 1s;
+      transition: var(--transition);
+      -webkit-transition: var(--transition);
+
     }
 
     &:first-child>span {
@@ -1497,7 +1499,6 @@ div ul.sb-menu,
   .sb-bar-icons {
     left: 0;
     display: flex;
-    animation: fade-in .2s linear;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1527,7 +1528,6 @@ div ul.sb-menu,
 
       &:active {
         box-shadow: var(--chat-button-editor-inset);
-        transition: var(--transition);
         scale: .9;
 
 
@@ -1616,8 +1616,7 @@ div ul.sb-menu,
     justify-content: flex-end;
     flex-wrap: wrap;
     z-index: 2;
-    animation: fade-in 0.3s linear;
-    background: var(--chat-top-bar-color);
+    background: var(--chat-bottom-bar-color);
     left: 4px;
     bottom: 5px;
 
@@ -1627,10 +1626,10 @@ div ul.sb-menu,
       position: relative;
       cursor: default;
       border-radius: var(--chat-rounded-size-6);
-      animation: fade-in .5s linear;
       background-color: var(--chat-app-tooltip-color);
       font-weight: 200;
-      box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow-bubble-chat);
+      -webkit-box-shadow: var(--box-shadow-bubble-chat);
 
       >i {
         font-size: var(--chat-text-size-1-2);
@@ -2023,12 +2022,14 @@ div ul.sb-menu,
   }
 }
 
+
+
 .sb-btn,
 a.sb-btn {
   border-radius: var(--chat-rounded-size-8);
   font-size: var(--chat-text-size-9);
   line-height: 34px;
-  letter-spacing: 0.3px;
+  letter-spacing: .3px;
   font-weight: 500;
   min-width: 0;
   background: var(--chat-btn-background);
@@ -2040,9 +2041,11 @@ a.sb-btn {
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  outline: none;
+  outline: 0;
   box-shadow: none;
   border: 1px solid var(--chat-border-color);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
 
   &.sb-icon {
     padding-left: 40px;
@@ -2741,7 +2744,7 @@ a.sb-btn {
     -webkit-backdrop-filter: blur(40px);
 
     &:focus {
-      box-shadow: var(--chat-input-focus-ring);
+      // box-shadow: var(--chat-input-focus-ring);
       transition: var(--transition);
       -webkit-transition: var(--transition);
 
@@ -2777,6 +2780,8 @@ a.sb-btn {
   bottom: 0;
   left: 0;
   display: none;
+  transition: var(--transition);
+  -webkit-transiton: var(--transition);
 
   &:after {
     content: "";
@@ -2801,13 +2806,13 @@ a.sb-btn {
     z-index: 99;
     margin: -5px -100px;
     padding: 10px 0 10px 0;
-    animation: fade-in .3s ease-out;
-    -webkit-animation: fade-in .3s ease-out;
+    transition: var(--transition);
+    -webkit-transiton: var(--transition);
     background-color: var(--chat-background-menu);
     box-shadow: var(--box-shadow-menu);
-    -webkit-box-shadow: var(--box-shadow-menu);
     bottom: 69px !important;
     left: 317px !important;
+    box-shadow: var(--box-shadow-menu);
   }
 
   .sb-header {
@@ -2856,7 +2861,7 @@ a.sb-btn {
 .sb-popup.sb-emoji {
   left: 50px !important;
   right: 0;
-  bottom: 58px !important;
+  bottom: 59px !important;
   margin: 5px;
   box-shadow: none;
   border-right: none;
@@ -2866,6 +2871,8 @@ a.sb-btn {
   transform: none;
   box-shadow: var(--box-shadow-menu);
   -webkit-box-shadow: var(--box-shadow-menu);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
 
 
   .sb-emoji-list {
@@ -2875,29 +2882,26 @@ a.sb-btn {
 
     >ul {
       list-style: none;
-      padding: 0px;
-      margin: 0px 20px 0 0;
+      padding: 0;
+      margin: 0 15px 0 0;
       display: flex;
-      grid-gap: 15px;
-      scroll-behavior: smooth;
-      transition: var(--transition-2);
-      justify-content: center;
       flex-wrap: wrap;
+      gap: 5px;
 
       >li {
         overflow: hidden;
         min-width: 0;
         text-align: center;
         cursor: pointer;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 35px;
         margin: 0;
         padding: 0;
         transition: var(--transition);
         -webkit-transition: var(--transition-2);
 
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.1);
         }
 
         &.sb-emoji-title {
@@ -4328,7 +4332,10 @@ textarea::placeholder {
   color: white;
 }
 
+
 div {
+
+
   .tags-Contactado {
     background: #117fdf;
     border-radius: 15px;
@@ -4341,13 +4348,7 @@ div {
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
-  }
 
-  .tags-Consulta {
-    background: #c6167d; /* Mismo color que Presupuesto */
-    border-radius: 15px;
-    color: white;
-    padding: 1.5px 2px 0px 2px;
   }
 
   .tags-Visitado {
@@ -4358,28 +4359,14 @@ div {
   }
 
   .tags-Calificado {
-    background: #0a9a41;
-    border-radius: 15px;
-    color: white;
-    padding: 1.5px 2px 0px 2px;
-  }
-
-  .tags-Confirmado {
-    background: #0ec352; /* Mismo color que Calificado */
+    background: #0ec352;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
   }
 
   .tags-NA {
-    background: #8c9caa;
-    border-radius: 15px;
-    color: white;
-    padding: 1.5px 2px 0px 2px;
-  }
-
-  .tags-Abierto {
-    background: #bf4420;
+    background: #6c757d;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
@@ -4387,6 +4374,13 @@ div {
 
   .tags-Pendiente {
     background: #e48109;
+    border-radius: 15px;
+    color: white;
+    padding: 1.5px 2px 0px 2px;
+  }
+
+  .tags-Abierto {
+    background: #bf4420;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
@@ -4414,13 +4408,13 @@ div {
   }
 
   .tags-Descartado {
-    background: #717171;
+    background: #555555;
     border-radius: 15px;
     color: white;
     padding: 1.5px 2px 0px 2px;
+
   }
 }
-
 
 .api-cloud-notif {
   position: absolute;
@@ -4438,12 +4432,11 @@ div {
   overflow: scroll;
   height: 80px;
   box-shadow: var(--box-shadow);
-  border-radius: var(--chat-rounded-size-6);
   color: var(--chat-text-bubble-info);
 
   &:active,
   &:hover {
-    transform: translate(-50%, -85%);
+    transform: translate(-50%, -74%);
     transition: var(--transition);
 
   }
