@@ -4671,7 +4671,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
 			<div>
 			<a class="phone-number" style="color:inherit">${conversation.phone}</a>
 			</div>
-			<p class="message-received" style="max-width:calc(100% - 145px);">${strip
+			<p style="max-width:calc(100% - 145px);">${strip
         .strip(message)
         .replace(/_/g, " ")}</p>
 			<div class="conversation-bar">
