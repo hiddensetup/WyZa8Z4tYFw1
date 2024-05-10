@@ -3183,9 +3183,7 @@
           user.type
         }"><td><input type="checkbox" /></td><td class="sb-td-profile"><a class="sb-profile"><img loading="lazy" src="${
           user.image
-        }" class="sb-tags tags-${
-          user.details.label
-        }" style="max-width: 27px;max-height: 27px;padding: 2px;border:none;" /><span style="margin:0px 1px">${
+        }" class="sb-tags tags-${user.details.label}" style="max-width: 27px;max-height: 27px;padding: 2px;border:none;" /><span style="margin:0px 1px">${
           user.name.length > 25 ? user.name.slice(0, 25) + "..." : user.name
         }</span></a></td>${code}<td style="overflow: hidden;max-width: 80px;text-overflow: ellipsis;overflow-wrap: break-word;" class="sb-td-email"class="sb-td-email">${user.get(
           "email"
@@ -3202,6 +3200,8 @@
         SBF.error("User not of type SBUser", "SBUsers.getRow");
         return false;
       }
+      // this.update();
+
     },
 
     updateRow: function (user) {
