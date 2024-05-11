@@ -576,9 +576,10 @@ div.sb-list.sb-hide-fast {
   left: 0;
   right: 0;
   max-width: 500px;
-  margin: 70px auto;
+  margin: 0px auto;
+  text-align: center;
   z-index: 99;
-  transform: translatey(50%);
+  transform: translateY(7%);
 }
 
 .closebtn-special {
