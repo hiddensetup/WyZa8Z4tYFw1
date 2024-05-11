@@ -1657,9 +1657,9 @@ function sb_component_admin()
                                     <li id="missed-conversations">
                                         <?php sb_e('Missed') ?>
                                     </li>
-                                    <!-- <li id="conversations-time">
+                                    <li id="conversations-time">
                                         <?php sb_e('Total time') ?>
-                                    </li> -->
+                                    </li>
                                     <li id="status-client">
                                         <?php sb_e('Tagged') ?>
                                     </li>
@@ -1721,11 +1721,8 @@ function sb_component_admin()
                             </div>
                             <div class="sb-content sb-scroll-area">
                                 <div class="sb-reports-tags" id="status-client">
-                                    <h3 class="sb-title sb-reports-title"></h3>
                                     <p class="sb-reports-text"></p>
                                     <div class="sb-tags">
-                                        <div style="transform: rotateZ(-90deg);"><i class="bi-chevron-left"></i></div>
-
                                     </div>
                                 </div>
 

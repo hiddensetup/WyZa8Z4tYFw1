@@ -255,10 +255,11 @@ body {
 
             >.sb-nav {
                 position: absolute;
-                top: 12px; //68px
+                top: 12px;
                 left: 15px;
                 overflow: visible;
                 z-index: 5;
+                border-left: none;
 
                 >ul {
                     background: var(--chat-app-background);
@@ -717,6 +718,7 @@ a.sb-btn {
 
                     &:before {
                         left: 13px;
+                        font-size: var(--chat-text-size-1-4);
                     }
 
                     span {
@@ -883,6 +885,8 @@ a.sb-btn {
                 font-size: var(--chat-text-size-1-0);
                 line-height: 25px;
                 border: none;
+                width: calc(100% - 45px);
+                border-radius: var(--chat-rounded-size-4);
 
                 // span {
                 //     display: inline;
@@ -1191,9 +1195,10 @@ a.sb-btn {
     }
 
     .sb-admin-box {
-        margin: 0;
-        padding: 0;
+        // margin: 0;
+        // padding: 0;
         border: none;
+        box-shadow:none;
     }
 
     #departments .repeater-item>div:not(:first-child) {

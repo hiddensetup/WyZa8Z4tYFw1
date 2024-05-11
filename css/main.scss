@@ -1172,7 +1172,7 @@ div ul.sb-menu li:hover,
         color: var(--chat-btn-pressed-color);
         background: var(--chat-app-background);
         margin: 15px;
-        box-shadow: 0 4px 14px 0 rgba(22, 23, 30, 0.275), 0 0 0 0.5px #0000002e;
+        box-shadow: var(--box-shadow-menu);
         border-radius: .6rem;
 
         >.sb-title,
@@ -1180,7 +1180,7 @@ div ul.sb-menu li:hover,
         >div>.sb-title,
         >div>.sb-top {
             font-weight: 500;
-            font-size: var(--chat-text-size-1);
+            color: var(--chat-text-primary);
             letter-spacing: .3px;
             line-height: 20px;
             text-align: center;
@@ -1202,7 +1202,7 @@ div ul.sb-menu li:hover,
 
         >div {
             .sb-user-conversations {
-                padding: 10px 0;
+                padding: 15px;
 
                 li {
                     border: none;
@@ -1212,7 +1212,7 @@ div ul.sb-menu li:hover,
                     text-align: left;
                     list-style: none;
                     background: #dcdddf;
-                    border: .5px solid;
+                    border: .8px dotted;
 
                     .sb-time {
                         font-size: var(--chat-text-size-8);
@@ -1232,17 +1232,16 @@ div ul.sb-menu li:hover,
             >.sb-btn {
                 width: auto;
                 margin: 13px auto;
-                font-weight: 300;
-                color: var(--color-btn);
+                font-weight: 500;
+                color: var(--chat-btn-text);
                 border-radius: .6rem;
                 padding: 0 15px;
-                background-color: transparent;
                 font-size: var(--chat-text-size-9);
 
                 &:hover {
-                    background-color: #333941;
-                    border-color: var(--chat-border-color);
-                    color: var(--chat-app-background);
+                    box-shadow: var(--chat-btn-ring-shadow);
+                    background: var(--chat-btn-background-active);
+                    color: var(--chat-btn-text-active);
                 }
             }
 

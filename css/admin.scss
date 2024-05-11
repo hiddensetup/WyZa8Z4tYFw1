@@ -421,6 +421,7 @@ td.sb-offline {
         background-color: var(--chat-background-menu-selected);
         // border-radius: 0.3rem;
         color: var(--chat-text-primary);
+        border-radius: var(--chat-rounded-size-4);
     }
 
     li.sb-active {
@@ -1892,7 +1893,7 @@ TABLE
                     &:before {
                         content: "";
                         position: absolute;
-                        font-size: var(--chat-text-size-1-4);
+                        font-size: var(--chat-text-size-1-2);
                         line-height: 50px;
                         background-size: contain;
                         background-repeat: no-repeat;
@@ -1943,14 +1944,20 @@ TABLE
         }
 
         >.sb-admin-nav-right {
-            align-items: center;
-            padding: 15px 0;
-            width: 65px;
+            // align-items: center;
+            // padding: 15px 0;
+            // width: 65px;
+            // bottom: 3px;
+            // left: 0;
+            // position: fixed;
+            // text-align: center;
+            // font-size: var(--chat-text-size-1-1);
+
+            padding: 10px 0;
+            width: inherit;
             bottom: 3px;
-            left: 0;
             position: fixed;
             text-align: center;
-            // font-size: var(--chat-text-size-1-1);
 
             >div>a {
                 // font-size: 0.85rem;
@@ -1999,11 +2006,11 @@ TABLE
                 position: fixed;
 
                 >img {
-                    width: 35px;
-                    height: 35px;
+                    width: 30px;
+                    height: 30px;
                     border-radius: 10rem;
                     display: block;
-                    margin: 6px;
+                    margin: 5px;
                     position: absolute;
                     bottom: 4px;
                 }
@@ -5587,12 +5594,14 @@ BODY
             line-height: 20px;
             font-weight: 600;
             margin: 30px 0px 15px 0px;
+            padding-top: 50px;
         }
     }
 
     .sb-text {
         font-size: var(--chat-text-size-1-0);
         line-height: 25px;
+        margin: 2rem auto;
         color: var(--chat-text-primary);
     }
 

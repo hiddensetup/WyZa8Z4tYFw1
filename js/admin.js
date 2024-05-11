@@ -2864,15 +2864,6 @@
       );
     },
 
-    // getTagData: function (name, onSuccess) {
-    // 	SBF.ajax({
-    // 		function: 'reports',
-    // 		name: name,
-    // 	}, (response) => {
-    // 		onSuccess(response);
-    // 	});
-    // },
-
     getData: function (name, date_start = false, date_end = false, onSuccess) {
       SBF.ajax(
         {
@@ -3204,28 +3195,37 @@
 
     },
 
-    updateRow: function (user) {
-      let row = users_table.find(`[data-user-id="${user.id}"]`);
-      if (row.length) {
-        let menu_active = users_table_menu.find(".sb-active").data("type");
-        if (
-          menu_active !== user.type &&
-          !(user.type === "admin" && menu_active === "agent") &&
-          menu_active !== "all"
-        ) {
-          let counter = admin.find(
-            `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
-          );
-          let count = parseInt(counter.attr("data-count"));
-          counter.html(count + 1).attr("data-count", count + 1);
-          row.remove();
-        } else {
-          row.replaceWith(this.getRow(user));
-        }
-      } else {
-        users_table.find("tbody").append(this.getRow(user));
-      }
-    },
+  updateRow: function (user) {
+  let row = users_table.find(`[data-user-id="${user.id}"]`);
+  if (row.length) {
+    let menu_active = users_table_menu.find(".sb-active").data("type");
+    if (
+      menu_active !== user.type &&
+      !(user.type === "admin" && menu_active === "agent") &&
+      menu_active !== "all"
+    ) {
+      let counter = admin.find(
+        `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
+      );
+      let count = parseInt(counter.attr("data-count"));
+      counter.html(count + 1).attr("data-count", count + 1);
+      row.remove();
+    } else {
+      let newRow = this.getRow(user); // Get updated row HTML
+      row.replaceWith(newRow); // Replace row in table
+      this.updateTagsLabel(user); // Update tags label
+    }
+  } else {
+    users_table.find("tbody").append(this.getRow(user));
+  }
+},
+
+// Update tags label
+updateTagsLabel: function(user) {
+  // Update tags label class with user's label
+  $(`[data-user-id="${user.id}"] .sb-tags`).removeClass().addClass(`sb-tags tags-${user.details.label}`);
+},
+
 
     // Update users table menu
     updateMenu: function (action = "all", type = false) {
@@ -5759,53 +5759,108 @@ $("#change-conversation-source").change(function (e) {
   });
 
   //change label
-  $("#CstBtn a").click(function (e) {
-    const label = $(this).attr("id");
-    const name = sb_(SBF.admin_set("label-names")[label] + " ");
-    let labcolor = `sb-icon bi-crosshair tags-${label}`;
-    $('.sb-profile-list [data-id="conversation-label"] i').attr(
-      "class",
-      labcolor
-    );
-    $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
-      "class",
-      labcolor
-    );
-    $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-    SBProfile.updateLabel(label);
-  });
+//   $("#CstBtn a").click(function (e) {
+//     const label = $(this).attr("id");
+//     const name = sb_(SBF.admin_set("label-names")[label] + " ");
+//     let labcolor = `sb-icon bi-crosshair tags-${label}`;
+//     $('.sb-profile-list [data-id="conversation-label"] i').attr(
+//       "class",
+//       labcolor
+//     );
+//     $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+//       "class",
+//       labcolor
+//     );
+//     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+//     SBProfile.updateLabel(label);
+//   });
+// },
+
+
+//     getLabel: function (label) {
+//       SBF.ajax(
+//         {
+//           function: "get-clientStatus-conversations",
+//           conversation_id: SBChat.conversation.id,
+//           label: label,
+//         },
+//         (response) => {
+//           if (SBReports.active_report == "status-client") {
+//             SBReports.initReport("status-client");
+//           }
+//         }
+//       );
+//     },
+
+//     updateLabel: function (label) {
+//       SBF.ajax(
+//         {
+//           function: "update-clientStatus-conversations",
+//           conversation_id: SBChat.conversation.id,
+//           label: label,
+//         },
+//         (response) => {
+//           if (SBReports.active_report == "status-client") {
+//             SBReports.initReport("status-client");
+//           }
+         
+//         }
+//       );
+//     },
+
+
+// Change label
+$("#CstBtn a").click(function (e) {
+  const label = $(this).attr("id");
+  const name = sb_(SBF.admin_set("label-names")[label] + " ");
+  let labcolor = `sb-icon bi-crosshair tags-${label}`;
+  $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
+  $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr("class", labcolor);
+  $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+  SBProfile.updateLabelUI(label, name, labcolor); // Update UI
+  SBProfile.updateLabel(label);
+});
+},
+// Update label UI
+updateLabelUI: function(label, name, labcolor) {
+  // Update label name and color in UI
+  $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr("class", labcolor);
+  $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
 },
 
-
-    getLabel: function (label) {
-      SBF.ajax(
-        {
-          function: "get-clientStatus-conversations",
-          conversation_id: SBChat.conversation.id,
-          label: label,
-        },
-        (response) => {
-          if (SBReports.active_report == "status-client") {
-            SBReports.initReport("status-client");
-          }
-        }
-      );
+// Get label
+getLabel: function (label) {
+  SBF.ajax(
+    {
+      function: "get-clientStatus-conversations",
+      conversation_id: SBChat.conversation.id,
+      label: label,
     },
+    (response) => {
+      if (SBReports.active_report == "status-client") {
+        SBReports.initReport("status-client");
+      }
+    }
+  );
+},
 
-    updateLabel: function (label) {
-      SBF.ajax(
-        {
-          function: "update-clientStatus-conversations",
-          conversation_id: SBChat.conversation.id,
-          label: label,
-        },
-        (response) => {
-          if (SBReports.active_report == "status-client") {
-            SBReports.initReport("status-client");
-          }
-        }
-      );
+// Update label
+updateLabel: function (label) {
+  SBF.ajax(
+    {
+      function: "update-clientStatus-conversations",
+      conversation_id: SBChat.conversation.id,
+      label: label,
     },
+    (response) => {
+      if (SBReports.active_report == "status-client") {
+        SBReports.initReport("status-client");
+      }
+
+    }
+  );
+},
+
 
     profileRow: function (key, value, name = key) {
       if (value == "") return "";
@@ -9347,23 +9402,7 @@ $(".bi-search").click(function () {
       }, 500);
     }
 
-    // Settings
-    // $(settings_area).on('click', '#wc-dialogflow-synch a, #wc-dialogflow-create-intents a', function (e) {
-    // 	if (SBApps.is('dialogflow')) {
-    // 		if (loading(this)) return;
-    // 		let id = $(this).parent().attr('id');
-    // 		SBF.ajax({
-    // 			function: 'woocommerce-dialogflow-' + (id == 'wc-dialogflow-synch' ? 'entities' : 'intents')
-    // 		}, (response) => {
-    // 			$(this).sbLoading(false);
-    // 			dialog(response ? 'Synchronization completed.' : 'Error. Something went wrong.', 'info');
-    // 		});
-    // 	} else {
-    // 		dialog('This feature requires the Dialogflow App. Get it from the apps area.', 'info');
-    // 	}
-    // 	e.preventDefault();
-    // 	return false;
-    // });
+   
 
     /*
      * ----------------------------------------------------------
@@ -10302,21 +10341,35 @@ window.onclick = function (t) {
  * ----------------------------------------------------------
  */
 
-// document.addEventListener("DOMContentLoaded", function () {
+//  document.addEventListener("DOMContentLoaded", function () {
 //   const helpCenter = document.querySelector(".help-center");
-//   const customerSupport = document.getElementById("customer-support");
+//   const customerSupportFrame = document.getElementById("customer-support");
 
 //   helpCenter.addEventListener("click", function () {
-//     customerSupport.setAttribute(
-//       "src",
-//       "https://steamboxchat.com/"
-//     );
-//     customerSupport.style.display = "block";
-//     customerSupport.style.opacity = 1;
+//     // Verificamos que el iframe exista
+//     if (customerSupportFrame) {
+//       // Actualizamos el contenido del iframe con el estado de la conexión
+//       const iframeContent = `
+//         <html>
+//           <head>
+//             <title>Estado de la conexión</title>
+//           </head>
+//           <body>
+//             <h1>Estado de la conexión</h1>
+//             <p>¡Aquí va el estado de la conexión!</p>
+//             <!-- Puedes agregar más contenido dinámico aquí -->
+//           </body>
+//         </html>
+//       `;
+//       const iframeDoc = customerSupportFrame.contentDocument;
+//       iframeDoc.open();
+//       iframeDoc.write(iframeContent);
+//       iframeDoc.close();
 
-//     const sbUpdatesHide = document.querySelectorAll(".sb-updates-hide");
-//     sbUpdatesHide.forEach(function (el) {
-//       el.style.display = "none";
-//     });
+//       // Mostramos el iframe
+//       customerSupportFrame.style.display = "block";
+//     } else {
+//       console.error("No se encontró el elemento iframe con el id 'customer-support'");
+//     }
 //   });
 // });

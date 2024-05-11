@@ -1713,13 +1713,112 @@ function sb_get_user($user_id, $extra = false)
     return false;
 }
 
+// function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $search = '', $pagination = 0, $extra = false, $user_ids = false)
+// {
+//     $query = '';
+//     $query_search = '';
+//     $count = count($user_types);
+//     $sorting_field = $sorting[0];
+//     $main_field_sorting = in_array($sorting_field, ['id', 'first_name', 'last_name', 'email', 'profile_image', 'user_type', 'creation_time', 'last_activity', 'department']);
+//     if ($count) {
+//         for ($i = 0; $i < $count; $i++) {
+//             $query .= 'user_type = "' . sb_db_escape($user_types[$i]) . '" OR ';
+//         }
+//         $query = '(' . substr($query, 0, strlen($query) - 4) . ')';
+//     }
+
+//     if ($user_ids) {
+//         $count_user_ids = count($user_ids);
+//         if ($count_user_ids) {
+//             if ($query)
+//                 $query .= ' AND ';
+//             $query .= ' id IN (' . sb_db_escape(implode(',', $user_ids)) . ')';
+//         }
+//     }
+//     if ($search) {
+//         $searched_users = sb_search_users($search);
+//         $count_search = count($searched_users);
+//         if ($count_search > 0) {
+//             for ($i = 0; $i < $count_search; $i++) {
+//                 $query_search .= $searched_users[$i]['id'] . ',';
+//             }
+//             $query .= ($query ? ' AND ' : '') . 'id IN (' . substr($query_search, 0, -1) . ')';
+//         }
+//     }
+//     if ($query) {
+//         $query = ' WHERE user_type <> "bot" AND ' . $query;
+//     } else {
+//         $query = ' WHERE user_type <> "bot"';
+//     }
+//     $users = sb_db_get(SELECT_FROM_USERS . ' FROM sb_users ' . $query . sb_routing_and_department_db('sb_conversations', true) . ($main_field_sorting ? (' ORDER BY ' . sb_db_escape($sorting_field) . ' ' . sb_db_escape($sorting[1])) : '') . ' LIMIT ' . intval(sb_db_escape($pagination, true)) * 30 . ',30', false);
+//     $users_count = count($users);
+
+//     if (!$users_count)
+//         return [];
+//     if (isset($users) && is_array($users)) {
+//         $is_array = is_array($extra);
+//         if ($extra && (!$is_array || count($extra))) {
+//             $query = '';
+//             $query_extra = '';
+//             for ($i = 0; $i < $users_count; $i++) {
+//                 $query .= $users[$i]['id'] . ',';
+//                 $conversation = sb_db_get('SELECT * FROM sb_conversations A,sb_messages B WHERE A.id=B.conversation_id AND A.user_id=' . $users[$i]['id'], false);
+//                 $users[$i]['label'] = $conversation[0]['label'];
+//                 $users[$i]['extra'] = [];
+//             }
+//             if ($is_array) {
+//                 for ($i = 0; $i < count($extra); $i++) {
+//                     $query_extra .= 'slug = "' . $extra[$i] . '" OR ';
+//                 }
+//                 if ($query_extra) {
+//                     $query_extra = ' AND (' . substr($query_extra, 0, -4) . ')';
+//                 }
+//             }
+//             $users_extra = sb_db_get('SELECT user_id, slug, value FROM sb_users_data WHERE user_id IN (' . substr($query, 0, -1) . ')' . $query_extra . ' ORDER BY user_id', false);
+//             for ($i = 0; $i < count($users_extra); $i++) {
+//                 $user_id = $users_extra[$i]['user_id'];
+//                 $slug = $users_extra[$i]['slug'];
+//                 $value = $users_extra[$i]['value'];
+//                 for ($j = 0; $j < $users_count; $j++) {
+//                     if ($users[$j]['id'] == $user_id) {
+//                         $users[$j]['extra'][$slug] = $value;
+//                         break;
+//                     }
+//                 }
+//             }
+//         }
+//         if (!$main_field_sorting) {
+//             if ($sorting[1] == 'ASC') {
+//                 usort($users, function ($a, $b) use ($sorting_field) {
+//                     return isset($a['extra'][$sorting_field]) ? $a['extra'][$sorting_field] <=> (isset($b['extra'][$sorting_field]) ? $b['extra'][$sorting_field] : '') : -1;
+//                 });
+//             } else {
+//                 usort($users, function ($a, $b) use ($sorting_field) {
+//                     return isset($b['extra'][$sorting_field]) ? $b['extra'][$sorting_field] <=> (isset($a['extra'][$sorting_field]) ? $a['extra'][$sorting_field] : '') : -1;
+//                 });
+//             }
+//         }
+//         return $users;
+//     } else {
+//         return new SBError('db-error', 'sb_get_users', $users);
+//     }
+// }
+
+
 function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $search = '', $pagination = 0, $extra = false, $user_ids = false)
 {
+    // Initialize query parts
     $query = '';
     $query_search = '';
-    $count = count($user_types);
+    
+    // Extract sorting field and check if it's a main field
     $sorting_field = $sorting[0];
     $main_field_sorting = in_array($sorting_field, ['id', 'first_name', 'last_name', 'email', 'profile_image', 'user_type', 'creation_time', 'last_activity', 'department']);
+    
+    // Count user types
+    $count = count($user_types);
+    
+    // Construct user type query
     if ($count) {
         for ($i = 0; $i < $count; $i++) {
             $query .= 'user_type = "' . sb_db_escape($user_types[$i]) . '" OR ';
@@ -1727,6 +1826,7 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
         $query = '(' . substr($query, 0, strlen($query) - 4) . ')';
     }
 
+    // Add user IDs condition to query
     if ($user_ids) {
         $count_user_ids = count($user_ids);
         if ($count_user_ids) {
@@ -1735,6 +1835,8 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
             $query .= ' id IN (' . sb_db_escape(implode(',', $user_ids)) . ')';
         }
     }
+    
+    // Search for users
     if ($search) {
         $searched_users = sb_search_users($search);
         $count_search = count($searched_users);
@@ -1745,48 +1847,36 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
             $query .= ($query ? ' AND ' : '') . 'id IN (' . substr($query_search, 0, -1) . ')';
         }
     }
+    
+    // Append conditions to the main query
     if ($query) {
         $query = ' WHERE user_type <> "bot" AND ' . $query;
     } else {
         $query = ' WHERE user_type <> "bot"';
     }
+    
+    // Retrieve users data with additional fields
     $users = sb_db_get(SELECT_FROM_USERS . ' FROM sb_users ' . $query . sb_routing_and_department_db('sb_conversations', true) . ($main_field_sorting ? (' ORDER BY ' . sb_db_escape($sorting_field) . ' ' . sb_db_escape($sorting[1])) : '') . ' LIMIT ' . intval(sb_db_escape($pagination, true)) * 30 . ',30', false);
     $users_count = count($users);
 
+    // Handle empty result
     if (!$users_count)
         return [];
+    
+    // Process retrieved users data
     if (isset($users) && is_array($users)) {
-        $is_array = is_array($extra);
-        if ($extra && (!$is_array || count($extra))) {
-            $query = '';
-            $query_extra = '';
-            for ($i = 0; $i < $users_count; $i++) {
-                $query .= $users[$i]['id'] . ',';
-                $conversation = sb_db_get('SELECT * FROM sb_conversations A,sb_messages B WHERE A.id=B.conversation_id AND A.user_id=' . $users[$i]['id'], false);
-                $users[$i]['label'] = $conversation[0]['label'];
-                $users[$i]['extra'] = [];
-            }
-            if ($is_array) {
-                for ($i = 0; $i < count($extra); $i++) {
-                    $query_extra .= 'slug = "' . $extra[$i] . '" OR ';
-                }
-                if ($query_extra) {
-                    $query_extra = ' AND (' . substr($query_extra, 0, -4) . ')';
-                }
-            }
-            $users_extra = sb_db_get('SELECT user_id, slug, value FROM sb_users_data WHERE user_id IN (' . substr($query, 0, -1) . ')' . $query_extra . ' ORDER BY user_id', false);
-            for ($i = 0; $i < count($users_extra); $i++) {
-                $user_id = $users_extra[$i]['user_id'];
-                $slug = $users_extra[$i]['slug'];
-                $value = $users_extra[$i]['value'];
-                for ($j = 0; $j < $users_count; $j++) {
-                    if ($users[$j]['id'] == $user_id) {
-                        $users[$j]['extra'][$slug] = $value;
-                        break;
-                    }
-                }
+        // Process additional data
+        foreach ($users as &$user) {
+            // Retrieve conversation data for each user
+            $conversation = sb_db_get('SELECT * FROM sb_conversations WHERE user_id=' . $user['id'], false);
+            // If conversation data exists, add it to the user data
+            if (!empty($conversation)) {
+                $user['label'] = $conversation[0]['label'];
+                $user['conversation_source'] = $conversation[0]['source'];
             }
         }
+        
+        // Sort users if necessary
         if (!$main_field_sorting) {
             if ($sorting[1] == 'ASC') {
                 usort($users, function ($a, $b) use ($sorting_field) {
@@ -1798,12 +1888,12 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
                 });
             }
         }
+        
         return $users;
     } else {
         return new SBError('db-error', 'sb_get_users', $users);
     }
 }
-
 
 function sb_get_new_users($datetime)
 {
@@ -9196,18 +9286,14 @@ function sb_css(
             : ["", ""]);
     if ($color_1) {
         $css .=
-            '.sb-chat-btn, .sb-chat>div>.sb-header,.sb-chat .sb-dashboard>div>.sb-btn:hover,.sb-chat .sb-scroll-area .sb-header,.sb-input.sb-input-btn>div,div ul.sb-menu li:hover,
+            '.sb-chat-btn, .sb-chat>div>.sb-header,.sb-chat ,.sb-btn:hover,.sb-chat .sb-scroll-area .sb-header,.sb-input.sb-input-btn>div,div ul.sb-menu li:hover,
                   .sb-select ul li:hover,.sb-popup.sb-emoji .sb-emoji-bar>div.sb-active, .sb-popup.sb-emoji .sb-emoji-bar>div:hover,.sb-btn,a.sb-btn,.sb-rich-message[disabled] .sb-buttons .sb-btn,
                   .sb-ul>span:before,.sb-article-category-links>span+span:before { background-color: ' .
             $color_1 .
             "; }";
+       
         $css .=
-            '.sb-chat .sb-dashboard>div>.sb-btn,.sb-search-btn>input,.sb-input>select:focus, .sb-input>textarea:focus,
-                  .sb-input.sb-input-image .image:active { border-color: ' .
-            $color_1 .
-            "; }";
-        $css .=
-            '.sb-top, .sb-chat .sb-dashboard>div>.sb-btn,.sb-editor .sb-bar-icons>div:hover:before,.sb-articles>div:hover>div,.sb-main .sb-btn-text:hover,.sb-editor,.sb-table input[type="checkbox"]:checked:before,
+            '.sb-top, .sb-chat ,.sb-btn,.sb-editor .sb-bar-icons>div:hover:before,.sb-articles>div:hover>div,.sb-main .sb-btn-text:hover,.sb-editor,.sb-table input[type="checkbox"]:checked:before,
                   .sb-select p:hover,div ul.sb-menu li.sb-active, .sb-select ul li.sb-active,.sb-search-btn>i:hover,.sb-search-btn.sb-active i,.sb-rich-message .sb-input>span.sb-active:not(.sb-filled),
                   .sb-input.sb-input-image .image:hover:before,.sb-rich-message .sb-card .sb-card-btn,.sb-slider-arrow:hover,.sb-loading:not(.sb-btn):before,.sb-articles>div.sb-title,.sb-article-categories>div:hover, .sb-article-categories>div.sb-active,
                   .sb-article-categories>div span:hover,.sb-article-categories>div span.sb-active,.sb-btn-text:hover { color: ' .
@@ -9218,16 +9304,7 @@ function sb_css(
         $css .=
             ".sb-list>div.sb-rich-cnt";
     }
-    if ($color_2) {
-        $css .=
-            ".sb-chat-btn:hover,.sb-input.sb-input-btn>div:hover,a.sb-btn:hover,.sb-rich-message .sb-card .sb-card-btn:hover { background-color: " .
-            $color_2 .
-            "; }";
-        $css .=
-            ".sb-list>.sb-right .sb-list>.sb-right .sb-message a,.sb-editor { color: " .
-            $color_2 .
-            "; }";
-    }
+    
     if ($color_3) {
         $css .=
             ".sb-list>.sb-right,.sb-user-conversations>li:hover { background-color: " .
@@ -9486,6 +9563,7 @@ function sb_component_editor($admin = false)
                     </a>
                 <?php } ?>
 
+                
             </div>
 
             <div class="sb-popup sb-replies">
@@ -10353,30 +10431,6 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $title = "Conversations count";
             $description = "Count of new conversations started by users.";
             break;
-        case "status-client":
-            $clientStatus = array(
-                "Abierto",
-                "Presupuesto",
-                "Consulta",
-                "Contactado",
-                "Visitado",
-                "Calificado",
-                "Confirmado",
-                "Pendiente",
-                "Resuelto",
-                "Pagado",
-                "VIP",
-                "Descartado",
-                "NA",
-            );
-
-            $query = 'SELECT * FROM sb_conversations A, sb_users B WHERE B.id = A.user_id AND label IN ("' . implode('", "', $clientStatus) . '")';
-            $extra = sb_get_clientStatus_conversations();
-
-            $title = "Tagged conversations";
-            $description = "Count of all tagged conversations by team members.";
-            break;
-
         case "missed-conversations":
             $query =
                 'SELECT creation_time FROM sb_conversations A WHERE id NOT IN (SELECT conversation_id FROM sb_messages A, sb_users B WHERE A.user_id = B.id AND (B.user_type = "agent" OR B.user_type = "admin"))';
@@ -10386,10 +10440,6 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             break;
         case "conversations-time":
             $query = "SELECT creation_time, conversation_id FROM sb_messages A WHERE creation_time >= DATE_SUB(NOW(), INTERVAL 8 DAY)";
-
-            // $query = "SELECT creation_time, conversation_id FROM sb_messages A";
-
-
             $title = "Average conversations duration";
             $description =
                 "Average conversations duration. Messages sent more than 7 days after the previous message are counted as part of a new conversation.";
@@ -10436,10 +10486,6 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             break;
         case "agents-conversations-time":
             $query = "SELECT creation_time, conversation_id FROM sb_messages A WHERE creation_time >= DATE_SUB(NOW(), INTERVAL 8 DAY)";
-
-            // $query = "SELECT creation_time, conversation_id FROM sb_messages A";
-
-
             $title = "Average agent conversations duration";
             $description =
                 "Average conversations duration of each agent. Messages sent more than 7 days after the previous message are counted as part of a new conversation.";
@@ -10464,14 +10510,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $chart_type = "pie";
             $label_type = 4;
             break;
-            // case "languages":
-            //     $title = "User languages";
-            //     $description = "Languages of users who started at least one chat.";
-            //     $table = [sb_("Language"), sb_("Count")];
-            //     $time_range = false;
-            //     $chart_type = "pie";
-            //     $label_type = 4;
-            //     break;
+       
         case "browsers":
             $title = "User browsers";
             $description =
@@ -10490,13 +10529,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $chart_type = "pie";
             $label_type = 4;
             break;
-        case "subscribe":
-            $query =
-                'SELECT creation_time, value FROM sb_reports A WHERE name = "subscribe"';
-            $title = "Subscribe emails count";
-            $description =
-                "Number of users who registered their email via subscribe message.";
-            break;
+       
 
         case "registrations":
             $query =
@@ -10534,8 +10567,24 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
                 "Direct messages sent to users. The details column shows the first part of the message and the number of users to which it has been sent to.";
             $table = [sb_("Date"), sb_("Sent message | Qty")];
             break;
+
+        case "status-client":
+            $clientStatus = array("Abierto", "Presupuesto", "Consulta", "Contactado", "Visitado", "Calificado", "Confirmado", "Pendiente", "Resuelto", "Pagado", "VIP", "Descartado", "NA");
+            $query = 'SELECT * FROM sb_conversations A, sb_users B WHERE B.id = A.user_id AND label IN ("' . implode('", "', $clientStatus) . '")';                $extra = sb_get_clientStatus_conversations();
+            $description = "Count of all tagged conversations by team members.";
+            break;
     }
+    
     switch ($report_name) {
+        case "status-client":
+            $rows = sb_db_get($query, false);
+            $data = $rows;
+            return [
+                "title" => sb_($title),
+                "description" => sb_($description),
+                "data" => $data,
+                "extra" => $extra,
+            ];
         case "sms-automations":
         case "email-automations":
         case "message-automations":
@@ -10573,15 +10622,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             }
             break;
 
-        case "status-client":
-            $rows = sb_db_get($query, false);
-            $data = $rows;
-            return [
-                "title" => sb_($title),
-                "description" => sb_($description),
-                "data" => $data,
-                "extra" => $extra,
-            ];
+       
 
         case "agents-conversations-time":
         case "conversations-time":

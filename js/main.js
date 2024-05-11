@@ -4173,7 +4173,7 @@
             .addClass("sb-header-agent")
             .attr("data-agent-id", this.agent_id)
             .html(
-              `<div class="sb-dashboard-btn bi-arrow-right-left"></div><div class="sb-profile"><img loading="lazy" src="${
+              `<div class="sb-dashboard-btn bi-chevron-left"></div><div class="sb-profile"><img loading="lazy" src="${
                 agent["profile_image"]
               }" /><div><span class="sb-name">${
                 agent["full_name"]
@@ -5477,9 +5477,9 @@
       card: '<div class="sb-card">[settings]</div>',
       share: '<div class="sb-social-buttons">[settings]</div>',
       slider:
-        '<div class="sb-slider"><div>[items]</div></div><div class="sb-slider-arrow bi-arrow-right-left[class]"></div><div class="sb-slider-arrow bi-arrow-right-circle sb-active[class]"></div>',
+        '<div class="sb-slider"><div>[items]</div></div><div class="sb-slider-arrow bi-chevron-left[class]"></div><div class="sb-slider-arrow bi-chevron-right sb-active[class]"></div>',
       "slider-images":
-        '<div class="sb-slider sb-slider-images"><div>[items]</div></div><div class="sb-slider-arrow bi-arrow-right-left[class]"></div><div class="sb-slider-arrow bi-arrow-right-circle sb-active[class]"></div>',
+        '<div class="sb-slider sb-slider-images"><div>[items]</div></div><div class="sb-slider-arrow bi-chevron-left[class]"></div><div class="sb-slider-arrow bi-chevron-right sb-active[class]"></div>',
       phone: "",
     },
     cache: {},
@@ -5648,7 +5648,7 @@
               email == "" ? "" : "sb-active sb-filled"
             }">${sb_(
               SBF.null(settings.placeholder) ? "Email" : settings["placeholder"]
-            )}</span><input value="${email}" autocomplete="off" type="email" required><div class="sb-submit bi-arrow-right-circle"></div></div>`;
+            )}</span><input value="${email}" autocomplete="off" type="email" required><div class="sb-submit bi-chevron-right"></div></div>`;
             break;
 
           case "image":
@@ -6399,9 +6399,9 @@
           }, 1200);
         }
         slider
-          .find(".bi-arrow-right-circle")
+          .find(".bi-chevron-right")
           .sbActive(!(check > margin - 15 && check < margin + 15));
-        slider.find(".bi-arrow-right-left").sbActive(margin < -10);
+        slider.find(".bi-chevron-left").sbActive(margin < -10);
       }
     },
   };
@@ -7704,7 +7704,7 @@
     $(main).on("click", ".sb-slider-arrow", function () {
       SBRichMessages.sliderChange(
         $(this).closest("[id]").attr("id"),
-        $(this).hasClass("bi-arrow-right-circle") ? "right" : "left"
+        $(this).hasClass("bi-chevron-right") ? "right" : "left"
       );
     });
 
