@@ -3,7 +3,7 @@
     "type": "multi-input",
     "id": "telegram",
     "title": "API Telegram",
-    "content": "Discover our Telegram BotFather service now.<br><br> With Telegram's BotFather, you can easily and freely create and manage your own Telegram bots. Customize your bots to interact uniquely with your users.<br><br> To obtain a BotFather token for Steamboxchat, follow these steps:<br> 1. Open Telegram and search for 'BotFather'.<br> 2. Start a chat with BotFather.<br> 3. Type '/newbot' to create a new bot.<br> 4. Follow the instructions to set up your bot and obtain the API token.<br><br> Steamboxchat Support: Starting from $49/month, prepaid for 6 months.",
+    "content": "Discover our Telegram BotFather service now.<br><br> With Telegram's BotFather, you can easily and freely create and manage your own Telegram bots. Customize your bots to interact uniquely with your users.<br><br> To obtain a BotFather token for Steamboxchat, follow these steps:<br> 1. Open Telegram and search for 'BotFather'.<br> 2. Start a chat with BotFather.<br> 3. Type '/newbot' to create a new bot.<br> 4. Follow the instructions to set up your bot and obtain the API token.<br><br> Steamboxchat Support: Starting from $39/month, prepaid for 6 months.",
     "help": "https://telegram.me/BotFather",
     "value": [
       {
