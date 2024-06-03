@@ -627,7 +627,7 @@ function sb_direct_message_box()
                         <div class='variables'>
                             <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
                         </div>
-                        <div style="display: flex;justify-content: flex-start;margin: 10px;gap: 5px;">
+                        <div style="display: flex;justify-content: flex-start;margin: 10px;gap: 5px;align-items: center;">
                             <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn">- <?php sb_e('Delete') ?></a>
                             <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn">+ <?php sb_e('Add') ?></a>
                         </div>
@@ -1217,14 +1217,14 @@ function sb_component_admin()
                 </div>
 
                 <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
-                    <i style="padding:17px 11px;" class="bi-three-dots-vertical"></i>
+                    <i style="padding:17px 0px;" class="bi-three-dots-vertical"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
                             <div style="box-shadow:none;height: 143px;background: #3b73ff00;top: -132px;width: 50px;">
                                 <ul class="sb-menu" style="min-width:142px">
                                     <li data-value="status" style="padding-left: 30px;padding-top:12px" class="sb-online"> <?php sb_e('Online') ?></li>
-                                    <li href="#" class="themeToggleBtn"><i class="bi-palette2"></i> <?php sb_e('Tema') ?></li>
+                                    <li href="#" class="themeToggleBtn"><i class="bi-circle" style=" background: var(--chat-app-theme-color); border-radius: 24px; color: white; padding:0.8px 1px 0px 1px"></i> <?php sb_e('Tema') ?></li>
                                     <hr>
                                     <li data-value="logout"><i class="bi-power"></i>
                                         <?php sb_e('Logout') ?>
@@ -1584,7 +1584,7 @@ function sb_component_admin()
                         <div class="sb-tab">
                             <div class="sb-nav">
                                 <div><?php sb_e('Settings') ?></div>
-                                <ul>
+                                <ul style="padding-left: 0;">
                                     <li id="tab-admin" class="sb-active">
                                         <i class="bi-person-fill-gear"></i> <?php sb_e('Admin') ?>
                                     </li>

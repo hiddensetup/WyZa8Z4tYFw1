@@ -396,7 +396,7 @@ td.sb-offline {
     li {
         // font-weight: 500;
         color: var(--chat-text-primary);
-        font-size: var(--chat-text-size-9);
+        font-size: var(--chat-text-size-1-0);
         line-height: 30px;
         transition: var(--transition);
         -webkit-transition: var(--transition);
@@ -417,6 +417,10 @@ td.sb-offline {
         }
     }
 
+
+    #tab-admin,#tab-notifications,#tab-various,#tab-whatsapp,#tab-whatsmeow,#tab-telegram,#tab-chat,#tab-design {
+        border-radius: 0;
+    }
     li.sb-active {
         background-color: var(--chat-background-menu-selected);
         // border-radius: 0.3rem;
@@ -438,7 +442,7 @@ td.sb-offline {
         border-bottom: 1px dotted var(--chat-border-color);
         color: var(--chat-text-secondary);
         border-radius: 0px;
-        width: 93%;
+        width: 98%;
         font-weight: 800;
     }
 
@@ -2801,7 +2805,7 @@ BODY
             overflow-y: scroll;
             padding: 0px 0px 40px 0px;
             // transition: var(--transition-3);
-
+            background: var(--chat-background-image);
             background-color: var(--chat-conversation-background) !important;
 
 
@@ -4129,13 +4133,13 @@ BODY
             &:after {
                 content: "";
                 position: absolute;
-                background: var(--background-conversation);
-                right: 1px;
-                top: 0px;
+                background: var(--chat-list-background-selected);
+                right: 0px;
+                top: 0;
                 width: 40px;
                 height: 40px;
-                border-top-right-radius: 11px;
-                border-bottom-right-radius: 11px;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
                 z-index: 0;
             }
         }

@@ -59,6 +59,7 @@
   --chat-text-bubble-client: rgb(29 33 40);
 
   --chat-conversation-background: #f1ece5;
+  --chat-background-image: url(../media/whatsapp-bkg.png);
   --chat-bottom-bar-color: #f1ece5;
   --chat-top-bar-color: white;
   --steambox-color: white;
@@ -126,7 +127,7 @@
   --chat-text-size-1-2: 1.2rem;
   --chat-text-size-1-1: 1.1rem;
   --chat-text-size-1-0: 1rem;
-  --chat-text-size-9: 0.9rem;
+  --chat-text-size-9: 0.94rem;
   --chat-text-size-8: 0.8rem;
   --chat-text-size-7: 0.7rem;
   --chat-text-size-6: 0.6rem;
@@ -196,6 +197,7 @@
   --chat-text-url: rgb(17 219 73);
   --chat-text-theme-button: white;
   --steambox-color: rgba(0, 0, 0, 0.737);
+  --chat-background-image: none;
   --chat-text-theme-background: linear-gradient(332deg, #3503ff, #7c17b8),
     linear-gradient(#25008c, transparent);
 
@@ -214,6 +216,7 @@
   --chat-bubble-agent: rgb(9, 8, 10);
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #ff7a7a;
+  --chat-background-image: none;
   --chat-text-theme-button: white;
   --chat-text-theme-background: linear-gradient(45deg,
       #f09433 0%,
@@ -232,6 +235,7 @@
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #a88bed;
   --chat-text-theme-button: white;
+  --chat-background-image: none;
   --chat-text-theme-background: rgb(26, 29, 34);
   --chat-app-loader-color: white;
   --steambox-color: black;
@@ -250,6 +254,7 @@
   --chat-bubble-agent: var(--chat-app-theme-color);
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #0cc691;
+  --chat-background-image: none;
   --chat-lightbox-top: rgb(18 16 23 / 17%);
   --chat-text-primary: white;
   --chat-app-loader-color: var(--chat-app-background);

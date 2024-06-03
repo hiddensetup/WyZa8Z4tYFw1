@@ -386,13 +386,13 @@ div ul.sb-menu li:hover,
     }
 
     .sb-scroll-area .sb-header {
-        color: var(--color-btn) !important;
+        // color: var(--color-btn) !important;
         box-shadow: var(--box-shadow);
         font-size: var(--chat-text-size-9);
         line-height: 26px;
         font-weight: 500;
         text-align: center;
-        background-color: var(--chat-top-lightbox);
+        background-color: var(--chat-btn-background);
         background-size: cover;
         border-bottom: .8px solid var(--chat-border-color);
 
@@ -1605,7 +1605,7 @@ div ul.sb-menu li:hover,
     transition: var(--transition);
     -webkit-transition: var(--transition);
 
-    background-color: #333941;
+    background-color: var(--chat-btn-background);
     z-index: 999995;
 
     &:hover {

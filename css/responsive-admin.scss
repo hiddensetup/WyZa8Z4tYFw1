@@ -252,6 +252,7 @@ body {
             max-height: 100%;
             margin: 0px 8px;
             padding: 0px;
+            border-top: .8px solid var(--chat-border-color);
 
             >.sb-nav {
                 position: absolute;
@@ -328,10 +329,10 @@ body {
 .sb-admin>main>div>.sb-top-bar {
     border-radius: 0;
     border-right: .8px solid var(--chat-border-color);
-    border-bottom: .8px solid var(--chat-border-color);
+    border-bottom: none;
     border-left: .8px solid var(--chat-border-color);
     border-top: none;
-    padding: 0 5px 8px 10px;
+    padding: 1px 8px 1px 8px;
     margin: 0;
     height: 47px;
     background-color: var(--chat-app-background);
@@ -340,7 +341,7 @@ body {
 
     >div {
         font-size: var(--chat-text-size-1-0);
-        padding-right: 4px;
+        // padding-right: 4px;
 
         &:first-child {
             margin: 0px !important;
@@ -375,7 +376,7 @@ body {
 
     .sb-search-btn {
         >input {
-            line-height: 39px;
+            line-height: 40px;
             margin-top: 7px;
 
             &:focus {
@@ -394,7 +395,7 @@ body {
     }
 
     .sb-close {
-        margin-right: 2px;
+        margin-right: 0px;
         // color: var(--chat-list-active-text);
         box-shadow: none;
 
@@ -473,10 +474,10 @@ body {
 
 
         >i {
-            height: 23px;
+            height: 20px;
             width: 45px;
             color: var(--chat-text-primary);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
 
             &:active,
             &:hover {
@@ -656,10 +657,6 @@ a.sb-btn {
         background: var(--chat-app-background);
         // backdrop-filter: blur(100px);
         // -webkit-backdrop-filter: blur(100px);
-        box-shadow: var(--box-shadow-inner);
-        -webkit-box-shadow: var(--box-shadow-inner);
-
-
         border-bottom: none;
         width: 100%;
         height: 60px;
@@ -668,8 +665,8 @@ a.sb-btn {
         padding: 5px;
         display: flex;
         z-index: 999;
-        box-shadow: var(--box-shadow-bubble-chat);
-        -webkit-box-shadow: var(--box-shadow-bubble-chat);
+        box-shadow: 0px 1px 4px -1.5px rgba(0, 0, 0, 0.57);
+        -webkit-box-shadow: 0px 1px 4px -1.5px rgba(0, 0, 0, 0.57);
 
 
 
@@ -687,7 +684,7 @@ a.sb-btn {
 
             >div {
                 display: flex;
-                gap: 4px;
+                gap: 8px;
                 padding: 0px;
 
                 >a {
@@ -918,11 +915,11 @@ a.sb-btn {
         position: absolute;
         bottom: auto !important;
         left: auto !important;
-        right: 10px !important;
+        right: 5px !important;
         padding: 0 !important;
         height: 56px;
         display: flex;
-        justify-content: flex-end;
+       justify-content: flex-end;
         z-index: 95;
         color: var(--chat-top-text-color);
         width: 30px !important;
@@ -1375,7 +1372,7 @@ a.sb-btn {
 
     .sb-conversation .sb-editor {
         border: none;
-        background-color: var(--chat-app-background);
+        background-color: var(--chat-conversation-background) !important;
         margin: 0px;
     }
 
@@ -1718,7 +1715,7 @@ a.sb-btn {
     .sb-top-bar>div:last-child .sb-search-btn {
         margin-right: 30px !important;
         margin-left: 1px !important;
-        margin-top: -5px !important;
+        margin-top: -9px !important;
         color: var(--chat-list-active-text);
     }
 
@@ -1755,12 +1752,13 @@ a.sb-btn {
             &[data-field] {
                 background: var(--chat-text-tertiary);
                 border-radius: var(--chat-rounded-size-6);
-                padding: 5px 20px;
+                padding: 5px 10px;
                 max-width: max-content;
                 border-bottom: none;
                 margin: .3em;
                 display: inline-grid;
                 color: var(--chat-text-white-or-black);
+                font-size: var(--chat-text-size-8);
 
                 &:active {
                     scale: .98;
@@ -1803,7 +1801,7 @@ a.sb-btn {
         }
 
         thead {
-            padding: 0 15px 15px 15px;
+            padding: 0 10px 15px 10px;
 
             th {
 
@@ -1942,6 +1940,7 @@ a.sb-btn {
 .sb-setting,
 .sb-input-setting {
     display: block;
+    padding-top: 0px;
 
     p {
         margin: 5px 0 10px 0;
@@ -2036,7 +2035,7 @@ a.sb-btn {
     }
 
     #sb-date-picker {
-        min-width: 100px;
+        min-width: 150px;
         font-size: 0.8rem;
         // margin-right: 5px;
         border: 0.5px solid var(--chat-border-color);
