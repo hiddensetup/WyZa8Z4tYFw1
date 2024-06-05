@@ -6,7 +6,7 @@ $data = json_decode(openssl_decrypt(base64_decode(isset($_POST['cloud']) ? $_POS
 //     header('Access-Control-Allow-Origin: *');
 // }
 
-$allowed_extensions = array('jpg', 'jpeg', 'png', 'pdf', 'mp4', 'mp3', 'ogg', 'amr', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt');
+$allowed_extensions = array('jpg', 'jpeg', 'png', 'pdf', 'mp4', 'mp3', 'ogg', 'amr', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'txt', 'rtf');
 
 $format = array('audio' => ['amr', 'mp3', 'ogg', 'mpeg'], 'video' => ['mp4', 'avi']);
 if (isset($_FILES['file'])) {

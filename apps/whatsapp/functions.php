@@ -96,7 +96,6 @@ function sb_whatsapp_cloud_curl($url_part, $post_fields = false, $phone_number_i
     return is_string($response) ? json_decode($response, true) : $response;
 }
 
-
 function sb_whatsapp_cloud_get_token($phone_number_id = false, $return_department = false)
 {
     if ($phone_number_id) {

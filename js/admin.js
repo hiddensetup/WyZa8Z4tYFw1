@@ -9180,13 +9180,29 @@ $(".bi-search").click(function () {
       }
     );
 
+    $(document).ready(function(){
+      $(document).on("click", '#get-templates-api .sb-btn', function(event){
+          event.preventDefault();
+          $.ajax({
+              type: "GET",
+              url: STMBX_URL + '/uploads/templates.php',
+              success: function(data){
+                  dialog("Meta's WhatsApp Business API Cloud templates loaded successfully.","info");
+              },
+              error: function(xhr, status, error){
+                  dialog("Meta Business Manager configuration incomplete. Please provide the Business Manager User ID, save, and retry.", "info");
+              }
+          });
+      });
+  });
+  
     $(settings_area).on(
       "click",
       "#whatsapp-twilio-btn .sb-btn, #sms-btn .sb-btn, #wechat-btn .sb-btn, #twitter-callback .sb-btn, #gbm-webhook .sb-btn",
       function (e) {
         let id = $(this).closest("[id]").attr("id");
         dialog(
-          `<pre>${
+          `<code style=" margin: auto; word-break: break-word; text-align: center; font-size: .9rem; ">${
             STMBX_URL +
             (id == "sms-btn"
               ? "/include/api.php"
@@ -9200,7 +9216,7 @@ $(".bi-search").click(function () {
                   : "whatsapp") +
                 "/post.php") +
             cloudURL().replace("&", "?")
-          }</pre>`,
+          }</code>`,
           "info"
         );
         return false;

@@ -7,26 +7,31 @@
     <title>Live Chat Setup Guide</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-funky.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
+            background-color: #fff;
+            color: #333;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .container {
-            background-color: #282a36;
+            background-color: #efeff5;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
             padding: 20px;
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
         }
 
         h2 {
-            color: #ff79c6 !important;
+            color: black !important;
             text-align: center;
         }
 
@@ -40,11 +45,8 @@
             padding-left: 20px;
         }
 
-
-
         a {
             color: #bd93f9 !important;
-
         }
     </style>
 </head>
@@ -52,32 +54,32 @@
 <body>
     <div class="container">
         <h2 class="title">Live Chat Setup Guide</h2>
-        <ol>
-            <li>Descarga el archivo ZIP:
+        <ul>
+            <li>Download the ZIP file:
                 <ul>
-                    <li>Haz clic en el siguiente enlace:
-                        <a href="ef59c86d2fc11514f162bc00504408d46e61d3.zip">Descargar</a>
+                    <li>Click the following link:
+                        <a href="ef59c86d2fc11514f162bc00504408d46e61d3.zip">Download</a>
                     </li>
                 </ul>
             </li>
-            <li>Descomprime el archivo descargado:
+            <li>Extract the downloaded file:
                 <ul>
-                    <li>Una vez que se complete la descarga, descomprime el archivo js.zip en la carpeta raíz de tu
-                        sitio web donde planeas integrar el Live Chat.</li>
+                    <li>Once the download is complete, extract the js.zip file into the root folder of your website
+                        where you plan to integrate the Live Chat.</li>
                 </ul>
             </li>
-            <li>Agrega la etiqueta de enlace al CSS:
+            <li>Add the CSS link tag:
                 <pre><code>&lt;link id="steambox" rel="stylesheet" type="text/css" href="https://mysteamboxpath.steamboxchat.com/css/main.css" media="all"&gt;</code></pre>
             </li>
-            <li>Agrega los scripts JavaScript al final del archivo HTML:
+            <li>Add the JavaScript scripts at the end of the HTML file:
                 <pre><code>&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
 &lt;script id="steambox" src="/js/main.js"&gt;&lt;/script&gt;</code></pre>
             </li>
-            <li>Opcional: Agrega soporte para voz:
+            <li>Optional: Add voice support:
                 <pre><code>&lt;script src="js/WebAudioRecorder.min.js"&gt;&lt;/script&gt;
 &lt;script src="js/app.js"&gt;&lt;/script&gt;</code></pre>
             </li>
-        </ol>
+        </ul>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>

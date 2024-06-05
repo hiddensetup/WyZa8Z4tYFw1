@@ -1,4 +1,5 @@
 [
+  
   {
     "type": "multi-input",
     "id": "whatsapp-cloud",
@@ -6,15 +7,26 @@
     "content": "Start using WhatsApp Business API Cloud for free only at Steamboxchat. <br><br>You can send messages, multimedia, alerts, and massive text templates without any charge or surprise fees. <br><br>Steamboxchat Support: starting from $59/month prepaid for 6 months.",
     "help": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#pricing---payment-methods",
     "value": [
+
+      {
+        "type": "text",
+        "id": "meta-user-id",
+        "title": "Meta Business User ID"
+      },
+      {
+        "type": "button",
+        "id": "get-templates-api",
+        "button-text": "Get Templates"
+      },
       {
         "type": "text",
         "id": "whatsapp-cloud-key",
-        "title": "Verify token"
+        "title": "Verify token (Custom Token)"
       },
       {
         "type": "text",
         "id": "whatsapp-cloud-token",
-        "title": "Access token"
+        "title": "Access token (Auth Token)"
       },
       {
         "type": "text",
@@ -32,6 +44,7 @@
         "title": "Configuration URL",
         "button-text": "Get configuration URL"
       }
+      
     ]
   },
   {
@@ -48,7 +61,7 @@
       {
         "type": "text",
         "id": "whatsapp-cloud-numbers-token",
-        "name": "Access token"
+        "name": "Access token (Auth Token)"
       },
       {
         "type": "number",
