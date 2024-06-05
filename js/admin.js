@@ -9273,7 +9273,7 @@ $(".bi-search").click(function () {
             } else {
               console.log("Creating new QR image element.");
               $("#waQR-go .sb-setting-content").append(
-                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
+                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
               );
               $("#waQR-go .sb-setting-content").append(
                 '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
