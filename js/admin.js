@@ -563,6 +563,11 @@
     window.history.pushState("", "", url_parameters);
   }
 
+      // Cloud
+      function cloudURL() {
+        return SB_ADMIN_SETTINGS.cloud ? ('&cloud=' + SB_ADMIN_SETTINGS.cloud.token) : '';
+    }
+
   // Strip URL
   function urlStrip(url) {
     return url
