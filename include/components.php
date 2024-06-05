@@ -1160,7 +1160,7 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
