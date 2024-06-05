@@ -9185,7 +9185,7 @@ $(".bi-search").click(function () {
           event.preventDefault();
           $.ajax({
               type: "GET",
-              url: STMBX_URL + '/uploads/templates.php',
+              url: STMBX_URL + '/include/templates.php',
               success: function(data){
                   dialog("Meta's WhatsApp Business API Cloud templates loaded successfully.","info");
               },
