@@ -1066,6 +1066,41 @@
       },
     },
 
+
+    waQR: {
+      check: function (conversation) {
+        return conversation.get("source") == "ww";
+      },
+
+      send: function (
+        to,
+        message = "",
+        attachments = [],
+        phone_id = false,
+        onSuccess = false,
+        onError = false
+      ) {
+        SBF.ajax(
+          {
+            function: "waQR-send-message",
+            to: to,
+            message: message,
+            attachments: attachments,
+            phone_id: phone_id,
+          },
+          (response) => {
+            if (onSuccess) onSuccess(response);
+          }
+        );
+      },
+
+      activeUserPhone: function (user = activeUser()) {
+        return user.getExtra("phone")
+          ? user.getExtra("phone").value.replace("+", "")
+          : false;
+      },
+    },
+
     
 
     whatsapp: {
@@ -1188,7 +1223,8 @@
         case "telegram":
         case "messenger":
         case "whatsapp":
-        case "whatsmeow": //added
+        case "waQR":
+        case "whatsmeow":
         case "dialogflow":
         case "sb":
           return true;
@@ -5632,6 +5668,7 @@ populate: function (user, profile_area) {
       const sourceLabels = {
         fb: "Facebook",
         ww: "Whatsmeow",
+        wx: "Whatsmeow",        
         wa: "WhatsApp",
         tm: "Text message",
         ig: "Instagram",
@@ -5958,6 +5995,9 @@ updateLabel: function (label) {
                                 <option value="ww" ${
                                   value == "Whatsmeow" ? "selected" : ""
                                 } value>Whatsmeow</option>
+                                <option value="wx" ${
+                                  value == "waQR" ? "selected" : ""
+                                } value>waQR</option>                                
                                 <option value="wa" ${
                                   value == "WhatsApp" ? "selected" : ""
                                 } value>WhatsApp</option>
@@ -7197,7 +7237,7 @@ updateLabel: function (label) {
             // Check if the response indicates success
             if (response && !response.error) {
               showResponse(
-                "<i class='bi-whatsapp'></i> Message ent successfully"
+                "<i class='bi-wind'></i> Message ent successfully"
               );
             } else {
               showResponse(
@@ -7252,6 +7292,43 @@ updateLabel: function (label) {
           }
         );
       }
+
+      var ratequs = SBF.get_value(
+        SBF.admin_set("rate-and-review")["rate-review"]
+      );
+      if (SBApps.waQR.check(conversation)) {
+        const messageId = response.message_id;
+
+        if (response.message == "[rating]") {
+          response.message = ratequs;
+        }
+
+        SBApps.waQR.send(
+          SBApps.whatsapp.activeUserPhone(user),
+          response.message,
+          response.attachments,
+          conversation.get("extra"),
+          (response) => {
+            if (response.status) {
+              showResponse(
+                "<i class='bi-whatsapp'></i> Message Sent to WhatsApp mobile"
+              );
+            } else {
+              showResponse(
+                "<i class='bi-send-exclamation'></i> Message could not be sent. Please check your connection. ",
+                "warning"
+              );
+            }
+          },
+          (error) => {
+            showResponse(
+              "<i class='bi-info-circle'></i> Error with WhatsApp API. Please check your connection. ",
+              "error"
+            );
+            // console.error("Error sending message to WhatsApp:", error);
+          }
+        );
+      }      
 
       if (SBApps.telegram.check(conversation)) {
         if (response.message == "[rating]") {
@@ -7665,7 +7742,7 @@ $(".bi-search").click(function () {
         let source = $(this).find("option:selected").html().toLowerCase();
 
         if (
-          (source == "whatsapp" || source == "whatsmeow") &&
+          (source == "whatsapp" || source == "whatsmeow" || source == "waQR") &&
           activeUser().getExtra("phone")
         ) {
           // window.open('https://wa.me/' + SBApps.whatsapp.activeUserPhone());
@@ -8655,6 +8732,7 @@ $(".bi-search").click(function () {
           : type == "sms"
           ? [
               "whatsmeow-send-message",
+              "waQR-send-message",
               "messages",
               " with a phone number",
               "direct-sms",
@@ -9162,6 +9240,71 @@ $(".bi-search").click(function () {
       return false;
     }
 
+    function handleWaQRButtonClick(event, action) {
+      event.preventDefault();
+
+      console.log(`Handling ${action} button click.`);
+
+      let inputSelector =
+        action === "start"
+          ? "#waQR-go-qr input"
+          : "#waQR-go-qr input";
+      let qrInput = settings_area.find(inputSelector).val();
+      let url = action === "start" ? "/get_wx.php?qrurl=" : "/reset_wx.php";
+
+      console.log(`QR Input: ${qrInput}`);
+      console.log(`URL: ${url}`);
+
+      if (action === "start") {
+        fetch(STMBX_URL + url + qrInput)
+          .then((response) => response.blob())
+          .then((imageBlob) => {
+            console.log("Fetch successful. Processing image blob.");
+
+            let imageUrl = URL.createObjectURL(imageBlob);
+            console.log(`Image URL: ${imageUrl}`);
+
+            let qrImage = $("#qr_image2");
+
+            if (qrImage.length) {
+              qrImage.fadeOut(500, function () {
+                $(this).attr("src", imageUrl).fadeIn(500);
+              });
+            } else {
+              console.log("Creating new QR image element.");
+              $("#waQR-go .sb-setting-content").append(
+                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
+              );
+              $("#waQR-go .sb-setting-content").append(
+                '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Error during fetch:", error);
+          });
+      } else if (action === "restart") {
+        console.log("Restarting...");
+
+        $.ajax({
+          url: url,
+          method: "GET",
+          data: { qrurl: qrInput },
+          dataType: "json",
+          success: function (response) {
+            console.log("Restart successful. Response:", response);
+            SBChat.showResponse("Desconectando WhatsApp...");
+          },
+          error: function (xhr) {
+            console.error("Restart error. Response:", xhr.responseText);
+            SBChat.showResponse("Error...", "error");
+          },
+        });
+      }
+
+      return false;
+    }
+
     // Event handler for the start button
     $(settings_area).on(
       "click",
@@ -9177,6 +9320,24 @@ $(".bi-search").click(function () {
       "#whatsmeow-go-restart .sb-btn",
       function (event) {
         handleWhatsmeowButtonClick(event, "restart");
+      }
+    );
+
+
+    $(settings_area).on(
+      "click",
+      "#waQR-go-start .sb-btn",
+      function (event) {
+        handleWaQRButtonClick(event, "start");
+      }
+    );
+
+    // Event handler for the restart button
+    $(settings_area).on(
+      "click",
+      "#waQR-go-restart .sb-btn",
+      function (event) {
+        handleWaQRButtonClick(event, "restart");
       }
     );
 

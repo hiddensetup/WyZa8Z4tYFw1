@@ -1,0 +1,7128 @@
+Array
+(
+    [ID] => 3EB0C939B20D14DFF2F43D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:38@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:44:20 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => qe
+)
+Array
+(
+    [ID] => 3EB0FAE9669FE871BA8195
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:44:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => we
+)
+Array
+(
+    [ID] => 3EB0948760CC33B5F89502
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:53:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => KK
+)
+Array
+(
+    [ID] => 3EB0AA02A55FF6C8540826
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:54:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ASF
+)
+Array
+(
+    [ID] => A56F3E0E5DBAFDE2447AC122F85449F6
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:56:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Sgsf
+)
+Array
+(
+    [ID] => 3EB0155849DC7DBC1447D1
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:38@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:57:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => WE
+)
+Array
+(
+    [ID] => 3EB04C45117DF9EA6E5BC7
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:38@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:57:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => WE
+)
+Array
+(
+    [ID] => 3EB05E4DDA566D89B9D573
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:38@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:58:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => GF
+)
+Array
+(
+    [ID] => 3EB09720F1745251040F7B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:38@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:58:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => REQUEST
+)
+Array
+(
+    [ID] => 3EB0E4851E3900C07F2115
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:38@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 22:59:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => NO?
+)
+Array
+(
+    [ID] => 674FB3E44B4FE3121207D9E0E4A51077
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:16:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Welxome
+)
+Array
+(
+    [ID] => 79DA18C952B84C1E89B3163BB81A7230
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:16:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Welcome
+)
+Array
+(
+    [ID] => 2CA790C5D09754771951E9434DE262E7
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:16:37 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB07D10A6EF5C464DE7FC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:39@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:16:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bien!
+)
+Array
+(
+    [ID] => 6720749DB6D1BC1B03C50D1D37794319
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:20:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Zkkx
+)
+Array
+(
+    [ID] => 3EB03D995712E60308143A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:27:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => gwy
+)
+Array
+(
+    [ID] => 3EB0E6197FD9954B9B4A3A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:28:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+)
+Array
+(
+    [ID] => 3EB055B08003FE518CB62C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-06 23:49:10 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => elelel
+elele
+elele
+elele
+)
+Array
+(
+    [ID] => 3EB0C9664F438E030022F1
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 04:21:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32
+
+El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.
+)
+Array
+(
+    [ID] => 3EB0DB663A01899B0F8EBD
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 04:26:26 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => https://uncoolcoffee.com/es/post/bleached-white-vs-unbleached-brown-filters/https://uncoolcoffee.com/es/post/bleached-white-vs-unbleached-brown-filters/https://uncoolcoffee.com/es/post/bleached-white-vs-unbleached-brown-filters/
+)
+Array
+(
+    [ID] => 3EB0235AC23C8B0B8F988E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:40@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 05:39:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => we
+)
+Array
+(
+    [ID] => 7C096DD2E6034155D75423E58A4D2C3D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 05:39:34 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hj
+)
+Array
+(
+    [ID] => 3EB010B4237E455D43FCD6
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:40@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 05:39:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+)
+Array
+(
+    [ID] => 10EC36CC9C720A805C97E0FBF50C83B3
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 05:40:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => 3EB07FEDFB04372E4FC699
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:40@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 05:40:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => 3EB03DD103D05B9F8119B5
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:40@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:19:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => 3EB0818A640465DF9A8FB9
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:19:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => >
+)
+Array
+(
+    [ID] => 3EB08DD46940322FDA9C3D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:40@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:19:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => df
+)
+Array
+(
+    [ID] => 3EB08CF57B686E502AEF6D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:19:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => g
+)
+Array
+(
+    [ID] => F0F09D7B622D279F1FB3CCFD35CC1542
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:25:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gj
+)
+Array
+(
+    [ID] => D4B43603FF9508018DE03AE4496662D9
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:25:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gh
+)
+Array
+(
+    [ID] => E6B31BA2F2FC1A7EBD084ECA46662E18
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 06:26:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+)
+Array
+(
+    [ID] => 3EB0712AFBE0CD13F4991A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 07:14:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => 3EB08CC1549AB757FCE55C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 07:14:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => numero
+)
+Array
+(
+    [ID] => 6E0BB20C10536DAAC8155E1E6959BCF1
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 34615057051@s.whatsapp.net
+    [SenderName] => boom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 09:39:42 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 6E0BB20C10536DAAC8155E1E6959BCF1
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 34615057051@s.whatsapp.net
+    [SenderName] => boom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 09:39:42 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Enséñale a tus hijos a usar chatgpt: La inteligencia artificial hace productivos a todos y enseñarles es nuestro compromiso. La mejor hoja de trucos para kIDS!
+
+https://www.linkedin.com/posts/directorio-de-herramientas-de-inteligencia-artificial-mayor-directorio_chatgpt-para-kids-activity-7160963157576835072-lnaO?utm_source=share&utm_medium=member_desktop
+)
+Array
+(
+    [ID] => F113B8FFE37AD7590B6252BED3B98056
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301@s.whatsapp.net
+    [SenderName] => Somos?👀✈️
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 09:40:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => F113B8FFE37AD7590B6252BED3B98056
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301@s.whatsapp.net
+    [SenderName] => Somos?👀✈️
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 09:40:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => EC09D034E8BF2734A059DD27AFE4BBC0
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51987200978@s.whatsapp.net
+    [SenderName] => Willy Jáuregui Vera
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 09:47:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => EC09D034E8BF2734A059DD27AFE4BBC0
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51987200978@s.whatsapp.net
+    [SenderName] => Willy Jáuregui Vera
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 09:47:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 42669B7C93B0179EE670FDBEC687CF06
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 59174627445@s.whatsapp.net
+    [SenderName] => Lorena
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 10:38:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 42669B7C93B0179EE670FDBEC687CF06
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 59174627445@s.whatsapp.net
+    [SenderName] => Lorena
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 10:38:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => EC09D034E8BF2734A059DD27AFE4BBC0
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51987200978@s.whatsapp.net
+    [SenderName] => Willy Jáuregui Vera
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 11:05:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => F113B8FFE37AD7590B6252BED3B98056
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301@s.whatsapp.net
+    [SenderName] => Somos?👀✈️
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 11:05:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB00B53D5D2BB6A4C3676
+    [Chat] => 51994126568@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51994126568:37@s.whatsapp.net
+    [SenderName] => GEDCO
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 14:00:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => *ADELÁNTATE YA A LAS PRÓXIMAS SUBAS DE INTERESES Y APROVECHA PARA CANCELAR O REFINANCIAR AHORA MISMO!!*
+
+*Frank Jonathan Agurto Huaringa*            DNI:  *95745285* 
+
+Me comunico de la agencia GEDCO por encargo de *UALÁ.*
+
+Comunícate urgente para poder acceder a *GRANDES BENEFICIOS.*
+Accede a un acuerdo en *CUOTAS FIJAS* abonando a su propia cuenta de UALÁ.
+Trámite su carta de *Libre Deuda* una vez que regularice a holauala.com.ar
+
+*AHORA ES EL MOMENTO DE CONGELAR TU DEUDA REFINANCIANDO*
+
+¿Querés conocer más sobre tus beneficios?
+
+Responde este mensaje a la brevedad para evitar que el caso pase a una instancia posiblemente LEGAL de cobro.
+
+Encargado Edison Gomez
+011-40113599 Interno 2115.
+Lun-Viernes 9hrs-20hrs.
+)
+Array
+(
+    [ID] => 3EB0B5672799026610E35E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:33:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => qwe
+)
+Array
+(
+    [ID] => 020F337238033F697F8DEBA5C4B884B5
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:34:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jj
+)
+Array
+(
+    [ID] => 256E420B4774B56406398983B4F3DB74
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:34:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jk
+)
+Array
+(
+    [ID] => 5D4057D3F9D5375BA6843DB244808B25
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 94D6988293A8CB6E6C859B7383DA4E13
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 6F664FEC80ED9A8F4BA90DE61038A1A5
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 85F66F4DE54C0739A06E3B5F25CABE7D
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3285477F3EAE56FA573B1E574780B60A
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => A0A463429481965473842582AA965A98
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 6C10940FE36D8E273F4060FFDE8CE8ED
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => E5C709CA98E66E9EBD44EAE50B4A4A05
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB005E5F495EF066DCB3F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:35:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => 053D0279689FB032BD1E7AD5B5C6469E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:36:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jj
+)
+Array
+(
+    [ID] => B5F4AB65DA79A97FAAAA0FA486E4B195
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:37:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Khh
+)
+Array
+(
+    [ID] => 30CD37D3BE2F35B9E680F73626E9B046
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:37:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Que
+)
+Array
+(
+    [ID] => E2F0D8517E0CD2B4B95DD2AD2928DFEC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:38:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bj
+)
+Array
+(
+    [ID] => 75AC16D27690BBFC3DB56AD2CB27EBFB
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:38:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hvh
+)
+Array
+(
+    [ID] => FD5AD10D35EAFDFCA2471E9DF558C4DC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:39:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hh
+)
+Array
+(
+    [ID] => 4A1EC64E8D2406A5C57E9D8F4EDB9D88
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:39:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bb gu
+)
+Array
+(
+    [ID] => BB82C39F7BF4F8E06CCC8A4B6862A5D2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:39:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gh
+)
+Array
+(
+    [ID] => ABBFC736BA0BFE3DF87B968891E19505
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:39:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hh
+)
+Array
+(
+    [ID] => 2D36B6D9D53C846EC8F22FC5C778B796
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:39:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hg
+)
+Array
+(
+    [ID] => 4DABC04EE763E4A281D12A556A04AD8F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:40:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cvg
+)
+Array
+(
+    [ID] => 24A096A6A45A29433D4BE3652BC48C36
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:41:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hhh
+)
+Array
+(
+    [ID] => 747786C438CD651606C2ABFFAA644522
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:41:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Frry
+)
+Array
+(
+    [ID] => D65124D69301A83ADF7CF06CFA3993B7
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:45:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bbbv
+)
+Array
+(
+    [ID] => 3EB022548ACE29E4E14279
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:46:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => dfdf
+)
+Array
+(
+    [ID] => 476C160F58F389F571DC259D6B10052E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:49:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cmckck
+)
+Array
+(
+    [ID] => A53D4A505872D21192216889BFD78D9A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:57:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Xkn
+)
+Array
+(
+    [ID] => 897C47C68EBE7D38DFD1A8632133DA3E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 17:57:45 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jkxxi
+)
+Array
+(
+    [ID] => 30276E05CDD0788B2A81CA0164BEEFEC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:02:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Iji
+)
+Array
+(
+    [ID] => 0FE275FE25607F6A146F09728AF8121E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:17:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo hh
+)
+Array
+(
+    [ID] => 2BF44E0F077B45484FAAB85BE92BCCB3
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vhh
+)
+Array
+(
+    [ID] => 6F34B3AC6F9D135EE6D8AFF256C550D2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Wdf
+)
+Array
+(
+    [ID] => 6581CDC6352CA2286B4F182287A6850E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gh
+)
+Array
+(
+    [ID] => DAABCA69663B58F010EDBA27D8DD52F9
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gg
+)
+Array
+(
+    [ID] => 1DF7EE0594773995C91C538095DA89B3
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bg
+)
+Array
+(
+    [ID] => 188A98DD63142D2895AD20DFD3C360F4
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vhb
+)
+Array
+(
+    [ID] => A0061C9DE18610C47FCE6457AFC7F906
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:22:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bgv
+)
+Array
+(
+    [ID] => 6C3EB1EA5C6E1F5A93B75DA5916F629D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:23:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Njgh
+)
+Array
+(
+    [ID] => 08F80F87FAC0BECD18696E7627236B76
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:23:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hhh
+)
+Array
+(
+    [ID] => 0B0863BE379291065867B5699509CB9A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:58:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Xfx
+)
+Array
+(
+    [ID] => F1436B7A80613206C80E74E2F3BF6829
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:59:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vehdh
+)
+Array
+(
+    [ID] => EB35130E7A308DC2F1859475C99706BD
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 18:59:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Eudu
+)
+Array
+(
+    [ID] => 0401507D5F11AAB70B52C8BA3E5F8E3A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:01:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bhh
+)
+Array
+(
+    [ID] => 2A034B14BDFDD2A30DC5EADD49FF6140
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¡Hola! Quiero contratar un servicio.
+)
+Array
+(
+    [ID] => EFCBD009418CD45DEF
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¡Hola *WhatzApp*! 👋 Te damos la bienvenida al canal exclusivo de ventas de Personal Flow.
+)
+Array
+(
+    [ID] => F9A266C38C3B5EDC7E
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:17 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Elegí la opción de lo que quieras comprar 👇
+
+A) Línea Personal móvil
+B) Internet y TV para mi hogar
+C) Quiero un celu nuevo
+D) Smarthome
+E) Otras consultas
+
+Porfa 🙏, respondé la opción
+)
+Array
+(
+    [ID] => 768DD29766EA94A51B4A2BC2513AD3B7
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => B
+)
+Array
+(
+    [ID] => F95771FE6863150184
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¡Con Personal y Flow en tu casa podes navegar
+con la mejor conexión y acceder a los contenidos más buscados! 😉 
+
+Contanos un poco más y seleccioná la opción 👇
+
+A. Internet Personal en mi casa
+B. Contratar Flow
+C. Cambiar mi plan de internet Personal
+D. Suscripciones y Packs
+
+E. Volver al menú
+)
+Array
+(
+    [ID] => 93B9D24155A2AFB1F9360B990DB6F901
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => A
+)
+Array
+(
+    [ID] => 8FC42F99A3C42F8838
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¡Perfecto! Te estamos derivando con una 
+persona especializada para que te ayude con tu gestión 🧑‍💻, pero antes te pido que me compartas tu dirección para validar la disponibilidad del servicio  ✔️
+
+✅Provincia
+✅ Partido
+✅ Localidad
+✅Calle
+✅Altura de tu domicilio
+
+Y Necesito por favor, que especifiques si es casa/edificio/piso/depto. 🏡
+
+¿Actualmente ya tenés un servicio de televisión & streaming o línea móvil con nosotros?
+)
+Array
+(
+    [ID] => 4B5585161E3E0B8195
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:12:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Buenas, mi nombre es Juan, aguardo los datos del domicilio.
+)
+Array
+(
+    [ID] => F2BED5E2D7F0EA41F2
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:13:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 😊
+)
+Array
+(
+    [ID] => D24CD869E7FD13850B7C7A0440057FB9
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:13:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Sihola
+)
+Array
+(
+    [ID] => 6D629FB92037E372D9F3F8550F7F130B
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:13:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola que tal
+)
+Array
+(
+    [ID] => 4127FC979FB24DFE28620818EC4504DC
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:13:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Sorry mi bot
+)
+Array
+(
+    [ID] => 9CCE966017AF7D84B5D819B5CF34762D
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:13:44 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491126222222@s.whatsapp.net}
+  〚Buenas, mi nombre es Juan, aguardo los datos del domicilio.〛Estoy en capital en almagro
+)
+Array
+(
+    [ID] => CE4877662801B2DFEA79B89F517B98D3
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:13:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Quiero el plan de 1000 mb
+)
+Array
+(
+    [ID] => 121A55F40C16E247D4F2C3A751FE72A4
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:14:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => De 17 mil pesos
+)
+Array
+(
+    [ID] => A572CC4423865553DC
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:14:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => calle y altura cual seria ?
+)
+Array
+(
+    [ID] => B9A21B731BC44DBB15E06466DDF202E8
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:14:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 3960 diaz velez
+)
+Array
+(
+    [ID] => 70D7BBF32A577D2A23
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:15:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Genial, Tenemos cobertura de fibra óptica para su domicilio, le brindo las mejores promos: 
+
+  
+
+◼️  PROMO 1: Internet 50MB + Decodificador Flow Full HD (Desc. 68 % x 6 Meses) por un valor final de $17098
+
+  
+
+◼️ PROMO 2: Internet 100MB + Decodificador Flow Full HD (Desc. 63% x 6 Meses) por un valor final de $18811  
+
+  
+
+¿Qué es Flow Full? Con Flow Full disfrutá de TV en vivo, pelis, series, radio, música y gaming desde tu TV con el decodificador (+ 150 canales en HD). Podés contratar packs premium y acceder a tus apps preferidas: YouTube, Disney+, Star+, Netflix y Prime Video. 
+
+  
+
+Sin costo de instalación! 
+
+
+Proporcionales desde el momento que se le instala TOTALMENTE GRATIS! 
+
+  
+
+Único requisito: adhesión al débito automático (CBU/ Tarjeta de crédito/ Billetera virtual) 💳. 
+
+ 
+
+SI PASAS UNA LÍNEA DE ALGUN FAMILIAR O TU LINEA A PERSONAL TE OFRECEMOS $1500 en el hogar y un plan con PERSONAL de 16GB por $ 4832 si sos de Claro o $ 8456 si sos de Movistar/Tuenti 
+
+  
+
+¿Qué promo te gustaría aprovechar? 😊
+)
+Array
+(
+    [ID] => 703690B32DE908029E75703F4273B29F
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:17:13 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => CDEC833FEA0FF164E4BF883F2DF88A1B
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:17:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Esa de la web
+)
+Array
+(
+    [ID] => FEA54D6C60BCCD0D5A1E4355FE74E51C
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:17:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Solo uso internet, no veo tv ni necesito telefono. 😁
+)
+Array
+(
+    [ID] => B0705EA08C697610E362B51AD13358F3
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:18:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ya tengo el celular
+)
+Array
+(
+    [ID] => 0281583282F45B2C9D
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:18:17 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => contas con Personal abono ?
+)
+Array
+(
+    [ID] => 642F0235EAC37F3128175ECB36C999CE
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:18:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si
+)
+Array
+(
+    [ID] => 8649F8A23E4758B715
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:21:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Genial, para que corresponda el descuento el servicio hogar tiene que estar bajo el mismo DNI que el servicio hogar.
+
+serian 1000Mb + Flow Flex Gratis durante 3 meses a un valor de $17205
+
+
+Para Realizar el alta del servicio necesito que me brindes lo siguiente:
+
+* DNI
+* Fecha de Nacimiento
+* Teléfono y Mail de Contacto
+* Para el debito automático (REQUISITO OBLIGATORIO) en el caso que quieras usar Crédito, usamos los 16 Dígitos de la Tarjeta y Fecha de vencimiento, en el caso de querer usar Debito, usamos solo los 22 Números del CBU.
+* Si Corresponde Piso y Depto del domicilio.
+)
+Array
+(
+    [ID] => 8C909CF41FE94CC9035DB5FDBA4D23DD
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:26:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ya lo contrato mi amigo
+)
+Array
+(
+    [ID] => D71E0E6FB48C04657F414D5C55F076BC
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:26:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Disculpa
+)
+Array
+(
+    [ID] => 968DF4CD59B1986FA5B0272FC392B9C6
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:26:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Se adelanto
+)
+Array
+(
+    [ID] => 6BB3359816497E467A92888720F8DC47
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:27:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jxjxx
+)
+Array
+(
+    [ID] => 75306317B0F4BDE4F5
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 19:28:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => entiendo, no te preocupes.
+)
+Array
+(
+    [ID] => 64307D7119410E8F2DE80161AE323740
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:38:44 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Xnxn
+)
+Array
+(
+    [ID] => 57B58A7B564B5770328E15A862BE1C0A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:39:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jxjx
+)
+Array
+(
+    [ID] => E43A53B14D012CFD861B19A6D561304D
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:40:34 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hell
+)
+Array
+(
+    [ID] => 2C1A99A4BACEC985816477C36E0D37AB
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:40:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => O
+)
+Array
+(
+    [ID] => CFC681CF341B7CE2CF234FC0E5EFD3F5
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:40:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => There
+)
+Array
+(
+    [ID] => A582A554BB29E81033
+    [Chat] => 5491126222222@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491126222222@s.whatsapp.net
+    [SenderName] => 5491126222222
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:28:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¿Seguis, ahi? tenemos una super promo para vos! 😉no te la pierdas!
+)
+Array
+(
+    [ID] => 0486AE877CE13222F5E271A129B24D03
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:46:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Dkekqlwod
+)
+Array
+(
+    [ID] => 3504180E4A5936F58BF2D0B8524B6538
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:46:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Qertyuiop
+)
+Array
+(
+    [ID] => C9BA2DC0A1FF6456A7536BA285D94ABF
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:46:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => No
+)
+Array
+(
+    [ID] => 180694557C0026CAE5B536EE111A69AF
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:46:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si
+)
+Array
+(
+    [ID] => AF775800673BE3654A85AB4AE4C10FBF
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:47:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gm
+)
+Array
+(
+    [ID] => 8B5D3D7CA3D194DF2E205985330E4F7D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:47:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Que
+)
+Array
+(
+    [ID] => 9C104DA00D8ED4D1FD6CF959E2215C8D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:47:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+)
+Array
+(
+    [ID] => 21EA6773FF0D78F90CA37A5A3F53345F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:48:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+)
+Array
+(
+    [ID] => 81D5BFB87CDB7A1AD3475F494FD17E12
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:48:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vgh
+)
+Array
+(
+    [ID] => 855C92691B12BF82502AC527190343C5
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:48:37 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ii
+)
+Array
+(
+    [ID] => 2712475F6BC423030D5A99F4BA4F7165
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:48:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ju
+)
+Array
+(
+    [ID] => 80AAC889E11331B44ED1F1A5920C819C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:48:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vvhhjjjjjjjhjj
+)
+Array
+(
+    [ID] => 6AD7800E67D957842D6E2771F26DF83E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Uu
+)
+Array
+(
+    [ID] => BDF06EE44EBD5A4DC1A5FE57929C800B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hhu
+)
+Array
+(
+    [ID] => 7F1C7C7C69F71ABA4E4C8D064BBEEC3D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Kk
+)
+Array
+(
+    [ID] => E44C86D3FBD5A5E9955145B52247D4A0
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => J
+)
+Array
+(
+    [ID] => 6EBE8A31D306954310541CB4B349CECC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => I
+)
+Array
+(
+    [ID] => 79B53BBC4FA3B688AB4F984AE073112D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => U
+)
+Array
+(
+    [ID] => 9863B1531F3505CC7B0A7299934508AC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => J
+)
+Array
+(
+    [ID] => 316EA97F3DCA4AEA826B1B6BDE18BC85
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hyh
+)
+Array
+(
+    [ID] => 22B82A6FF83B751794D5BF47456582C7
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Pok
+)
+Array
+(
+    [ID] => 1C64AB742F8A141684A57047ABE059A4
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:45 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+)
+Array
+(
+    [ID] => A9813F7DCC0B0A4D61BC5AC5182AE62C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:49:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+)
+Array
+(
+    [ID] => 5F439BD932B14BDFBDA6C3EE2517A9D5
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:50:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => I
+)
+Array
+(
+    [ID] => 0EDF4CD298D196FF311519FD8DE9B808
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:50:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jui
+)
+Array
+(
+    [ID] => A3326E1BD4B28CAEFD1509977327A126
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:50:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Kui
+)
+Array
+(
+    [ID] => 7CE0A2484202E0F77D4A095CA58D8D7D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:50:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Iii
+)
+Array
+(
+    [ID] => 281FE794548DC8EC39813AA79C663FD9
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:50:45 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jujkk
+)
+Array
+(
+    [ID] => DBAA825CCB406238491C3F135CA70EAA
+    [Chat] => 120363156402490724@g.us
+    [Caption] => Hola a todos, tenemos una base de 45 eventos, convocatorias y conferencias de interés para el ecosistema a realizarse en las próximas semanas. En el siguiente link pueden consultar toda la información de los eventos.
+
+*bit.ly/eventosyconvocatorias*
+
+La construimos pensando en la información que como emprendedores quisiéramos tener y así no desgastarnos de página en página, de link en link, buscando información. 
+
+Con el pasar de los días la base será más nutrida.
+
+Si le encuentrasn valor compártanla con sus colegas, compañeros de trabajo, amigos y todo aquel interesado en aprovechar las oportunidades que el ecosistema nos ofrece.
+
+by La Punta del Iceberg
+    [Sender] => 573204945669@s.whatsapp.net
+    [SenderName] => Frank Prieto Pinto - LPDI
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:03 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 1653D7ED156F8BE6FEC410A5522DC087
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jjj
+)
+Array
+(
+    [ID] => 63E3329630526557DCE263BAC17ED9EE
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:17 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+)
+Array
+(
+    [ID] => D35F47EFFA2EAAF8FE58B986869925F7
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Nop
+)
+Array
+(
+    [ID] => 0A798D4AC0C7A8CA8F6F77F6A24F13D2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => BB0A3D18CDC3CF0AC1288585E6D8A9E0
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Y
+)
+Array
+(
+    [ID] => 82E0B7A83A2F8A252A32BC814EEF1AE2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:51:37 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => 54510112A2CC21C0C0F2B8018C79A6B0
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Iok
+)
+Array
+(
+    [ID] => 66122AB9FF25D335469FA3E258DC5483
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5215578101293@s.whatsapp.net
+    [SenderName] => Elida✨
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 66122AB9FF25D335469FA3E258DC5483
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5215578101293@s.whatsapp.net
+    [SenderName] => Elida✨
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => EA3F5C9EEE3BAA2C69F4807B68358960
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:34 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => K
+)
+Array
+(
+    [ID] => 3EB06CB1D4649EDBCA32A9
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️Nos fuimos
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB06CB1D4649EDBCA32A9
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️Nos fuimos
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 76F0A924BD08DC128B4196D4553CFBAC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ohkb
+)
+Array
+(
+    [ID] => 3EB0B729CCB6E2011DC8B4
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️Nos fuimos
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:52:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Oh vaya!
+)
+Array
+(
+    [ID] => 80DEA09EE607807F0514CAD8B3841879
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51965067688@s.whatsapp.net
+    [SenderName] => </Dr.Who>
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:54:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 80DEA09EE607807F0514CAD8B3841879
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51965067688@s.whatsapp.net
+    [SenderName] => </Dr.Who>
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 21:54:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3A59A251F386547B3059F3ACCBA1EE31
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 13052837554@s.whatsapp.net
+    [SenderName] => Nando Caralt
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 22:01:34 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3A59A251F386547B3059F3ACCBA1EE31
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 13052837554@s.whatsapp.net
+    [SenderName] => Nando Caralt
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 22:01:34 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3A7F031C94A881DA7462
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 593999470243@s.whatsapp.net
+    [SenderName] => Edinson
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 23:11:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3A7F031C94A881DA7462
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 593999470243@s.whatsapp.net
+    [SenderName] => Edinson
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-07 23:11:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 320FC2F257674BC982E857D01016217F
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 01:25:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hey
+)
+Array
+(
+    [ID] => 171E604AC0C807FEF1
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491156165558@s.whatsapp.net
+    [SenderName] => 5491156165558
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 01:25:37 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => bien
+)
+Array
+(
+    [ID] => A84689745D9012605C
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491156165558@s.whatsapp.net
+    [SenderName] => 5491156165558
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 01:26:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => 876A8A4073D650581D
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491156165558@s.whatsapp.net
+    [SenderName] => 5491156165558
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 01:26:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => kuromi
+)
+Array
+(
+    [ID] => AB693C0F8694D6B3D3
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491156165558@s.whatsapp.net
+    [SenderName] => 5491156165558
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 01:26:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => kuromi
+)
+Array
+(
+    [ID] => E6DD3D5637CF322D19
+    [Chat] => 5491156165558@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491156165558@s.whatsapp.net
+    [SenderName] => 5491156165558
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:17:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+)
+Array
+(
+    [ID] => 06971B23150078934099DEB02BC857E9
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:17:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+)
+Array
+(
+    [ID] => 39BCB9367A225BC17597784F9971CD1C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:18:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => 3F1C88108FD5539CCEBE61414D210E53
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:19:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Holaa
+)
+Array
+(
+    [ID] => 8935928090E49068B25FC56107A8115D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:19:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hoala
+)
+Array
+(
+    [ID] => 5C227FCF6061E179E472F5C08BE24533
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:19:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => 2C3454845498CAAB77844B90E305369C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:19:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => 3EB0FCCD89F9B2BE2DB277
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:19:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => A0E2506964F8741AAE30789AEA3D0C9D
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 5160AA0F972FC2A4157BD8BEF9D53CE4
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 518573EF6215E5743015E396F4A2D93E
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 2FD3A24F4550BB75141CC2B4694B48A6
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 9D97CFC2A881EECACC5CF6773BF0DACE
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 78A5BEA199A1ABFEFACD54D11D2CDCF9
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 32004FB19905289A75A2E646B4579517
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 7E312379DEB2C2EB9BFB48838CEBB63D
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 33EE37CE4E248A82EF811645F9ADC99B
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB00D3D698E314B36B5B6
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:24:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => colombia
+)
+Array
+(
+    [ID] => 1179FE8BF914AC104A65E52384429638
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:30:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gkc
+)
+Array
+(
+    [ID] => BD6C300F8F6ACDA3CB570B3EB9CB3110
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:32:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hg
+)
+Array
+(
+    [ID] => 49D3E4156C9140CB86C9914CFE00A405
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:33:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Dg
+)
+Array
+(
+    [ID] => 23F974404AA8CBDAFA71C9054CFD6F2E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:33:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Y
+)
+Array
+(
+    [ID] => 214E157F5ADC7A671062556AA1CC9DBE
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:33:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => H
+)
+Array
+(
+    [ID] => A7C1708B766E54FFCDDC25F2FD3E7E10
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:34:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jk
+)
+Array
+(
+    [ID] => ED0C3E4967F8C5D091A3A19575E9F891
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:35:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hh
+)
+Array
+(
+    [ID] => 25E23645CAA56FB4382EA6291E714818
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:36:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Fr g
+)
+Array
+(
+    [ID] => CB467B3ED2ED17D2A7532ED151970F34
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:36:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Tyy
+)
+Array
+(
+    [ID] => 19C683589F8C9E9B5AE96BF0A0F2249E
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:36:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Tt
+)
+Array
+(
+    [ID] => C14AE49D57E088993EC67B6BC5587F4B
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:36:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Oi
+)
+Array
+(
+    [ID] => 2F6C5F5B9D7EA81B2D68E96B9ED0514F
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:37:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gg g
+)
+Array
+(
+    [ID] => AB78A394D6F5E9E5FD6560347A4A9970
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:37:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Kk
+)
+Array
+(
+    [ID] => 7C788EC3DC2B21575EDAFDF6C9FDE89E
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:37:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Demo
+)
+Array
+(
+    [ID] => D66A4E0CD7A7CD099D385698AE6349D4
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:37:34 -0300 -03
+    [MediaType] => gif
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => EEDF5D283631D22DF9D9D846C2BFA417
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:38:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Kk
+)
+Array
+(
+    [ID] => BC3D11CE5F8EC6E2CB0001686336C7B2
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:38:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hgzh
+)
+Array
+(
+    [ID] => EFFE5393ABE4DE8DF1E01C7051BD4CC0
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130@s.whatsapp.net
+    [SenderName] => Tsubuan
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 02:38:37 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0804C657C34641A042D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-08 14:09:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => w
+)
+Array
+(
+    [ID] => 298CBDD864FC55C97D44D65C4AF422D5
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 01:03:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Adc
+    [Reaction] => 
+)
+Array
+(
+    [ID] => B8072E7EAB5B6C4527889EEDC96BD180
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 01:03:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB082770F012CB387F7B8
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573006681857:32@s.whatsapp.net
+    [SenderName] => MB
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 11:36:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Buenos días, cambiaré de numero por favor podrían agregarme con este nuevo numero por favor. +573215335248
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A47067B51AD2AD00D8F
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573208341803@s.whatsapp.net
+    [SenderName] => David Salinas R
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 11:58:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A47067B51AD2AD00D8F
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573208341803@s.whatsapp.net
+    [SenderName] => David Salinas R
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 11:58:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 922EB1F6D7E47E924A6F218FB53EA0E8
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:28:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola no
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 00955DA98DA631C55331295D9451E436
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:29:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Estoy en tratamiento soquiatri o
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3E537CBD0F4BCC001CA8B68BD361F204
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:29:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Estoy muy cagado
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 4F9691C169E1D1E1034259510791E818
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:29:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Que buemo qu este bien
+    [Reaction] => 
+)
+Array
+(
+    [ID] => F3090980DE357A604F0E0B55FD1FB940
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:29:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Yo no puedo hablar con ls gente
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 70D7A5E167E1277909616520B94BE532
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:29:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hasta recuperarme
+    [Reaction] => 
+)
+Array
+(
+    [ID] => DBC661D4BD38ADA68F3090C76CD9DA0E
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:29:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Abrazos
+    [Reaction] => 
+)
+Array
+(
+    [ID] => A8460169BDF047126AFD42E95091ABD7
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51977761996@s.whatsapp.net
+    [SenderName] => MB EMPRENDE DIGITAL
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:31:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Dale Frank esta bien
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 2026FAB46196013F690D6AEA9DB0253B
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51977761996@s.whatsapp.net
+    [SenderName] => MB EMPRENDE DIGITAL
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:31:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cuídate y tranquilo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => CED2E7FE1A959E816A51F67EE18FF289
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5491133884534@s.whatsapp.net
+    [SenderName] => Lautaro
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:34:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => CED2E7FE1A959E816A51F67EE18FF289
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5491133884534@s.whatsapp.net
+    [SenderName] => Lautaro
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:34:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => BC1C352623ED1588DAD4B66E4396C36C
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5491133884534@s.whatsapp.net
+    [SenderName] => Lautaro
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 12:34:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB062F821EA0A85AF1AF1
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:28:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ??
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB08F241D6E50C99B00B6
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:28:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB072B12520DF37E6C92D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:28:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0ADF92A593EBCD842BB
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:28:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1111
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB06C474D428D620B690D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:29:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 2222
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB072A98A5F636C1C4210
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:29:34 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 333
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0056A30ABD7EB32A9A2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:29:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0BAFC517ADAD496781F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 18:30:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 222
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 040B467E8D208FFAB942CC0E8D71CF67
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51977761996@s.whatsapp.net
+    [SenderName] => MB EMPRENDE DIGITAL
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => true
+    [Timestamp] => 2024-02-10 18:58:01 -0300 -03
+    [MediaType] => video
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 1C2721302300905A7F1705C8FD8BD349
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:02:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bob
+    [Reaction] => 
+)
+Array
+(
+    [ID] => F24276D8FCC000F9CCCC1DEB28797A4B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:02:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vj
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3B5577DA20528E43549EEF58EF707761
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:02:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Fdff
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 379EA134F232F372380066575061F611
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:10:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gvvn
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 962327BEF3C3DD817B245CC8E8AD6A50
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:10:30 -0300 -03
+    [MediaType] => gif
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => E4C819622488FE397107B42DCAD22FD1
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:14:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Vv
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 86F996CAB11F3EA5EEE18D1BF2F2A6CC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-10 21:14:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cbj
+    [Reaction] => 
+)
+Array
+(
+    [ID] => F07EA12CBD0EC74490CF110218245B5F
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51977761996@s.whatsapp.net
+    [SenderName] => MB EMPRENDE DIGITAL
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 13:19:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jajjajaa
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 46F29918A2D959F93887F3C00D066F1B
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51977761996@s.whatsapp.net
+    [SenderName] => MB EMPRENDE DIGITAL
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 13:19:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Yo toy bien drogado pero a lo natural
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 7719B179ACDBED9ACE2DA30D2A8AC5C4
+    [Chat] => 51977761996@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51977761996@s.whatsapp.net
+    [SenderName] => MB EMPRENDE DIGITAL
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 13:19:33 -0300 -03
+    [MediaType] => gif
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 40BB9D1C56BEE5F3FB5D441141999F18
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 15:24:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola Pedro que tal. Queria consultarte si pueden depositar hoy para tener la web andando mañana. 
+
+Si no se puede no hay problema solo que se borra de google si dejamos que pase mucho tiempo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => F4F8A9982BC738936E592E86833C9C34
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491140908465@s.whatsapp.net
+    [SenderName] => Petertransport
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 15:31:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola como estas
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 5DC38BD9D2A6D2F104F3B0326F8B17D9
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 15:32:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Todo bien gracias 😁
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C9DFD3B8DDB1AD6A36975931E453AF8C
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491140908465@s.whatsapp.net
+    [SenderName] => Petertransport
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 15:32:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Saludos para ti Frank, ahora mi esposa debe pasar el dinero, ya le avise ayer
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 4BCFA0EC52F5ADC7425579B99C28A6A1
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 15:32:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bueno
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 5EAAD4B0CA497575F25546147691773B
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491140908465@s.whatsapp.net
+    [SenderName] => Petertransport
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 15:32:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Seguro te pasa en un rato
+    [Reaction] => 
+)
+Array
+(
+    [ID] => E9670B39E85BBB9DC9BFC48C6E6CB45A
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-11 19:04:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola primo, como te estás ?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C58A1F5E59AA00653642CEB3181EBCA0
+    [Chat] => 120363156402490724@g.us
+    [Caption] => Hola a todos, 
+
+¡Nuestra base sigue creciendo! 
+
+*Ya tenemos más de 90 eventos, convocatorias y conferencias de interés* para el ecosistema a realizarse en las próximas semanas. En el siguiente link pueden consultar toda la información de los eventos. 
+
+*bit.ly/eventosyconvocatorias*
+
+La construimos pensando en la información que como emprendedores quisiéramos tener y así no desgastarnos de página en página, de link en link, buscando información. 
+
+Con el pasar de los días la base será más nutrida.
+
+Si le encuentran valor compártanla con sus colegas, compañeros de trabajo, amigos y todo aquel interesado en aprovechar las oportunidades que el ecosistema nos ofrece.
+
+by La Punta del Iceberg
+    [Sender] => 573204945669@s.whatsapp.net
+    [SenderName] => Frank Prieto Pinto - LPDI
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 11:19:40 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 34C17A7A4196BFD85F62A2504F51282E
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573007544261@s.whatsapp.net
+    [SenderName] => Germán Rachek
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 11:20:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 34C17A7A4196BFD85F62A2504F51282E
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573007544261@s.whatsapp.net
+    [SenderName] => Germán Rachek
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 11:20:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 6FB6F63355FCE1E3ECA4C4D357B559D4
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 13:11:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 0227141CC84AA6689FD5A8F375BA7512
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 13:11:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Mal
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 78EDFAAADDB1490B6DAF199DD533A0D6
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 13:11:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Estoy en tratamiento siquiatrico jaja;
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A3C6EABC235797FE091
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573166250595@s.whatsapp.net
+    [SenderName] => Julio
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 14:52:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A3C6EABC235797FE091
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573166250595@s.whatsapp.net
+    [SenderName] => Julio
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 14:52:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Para todos aquellos interesados en la inclusión laboral de personas con Autismo 👍🏻
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3AF67F31D9EA48A9580B
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573166250595@s.whatsapp.net
+    [SenderName] => Julio
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 14:52:54 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => https://www.instagram.com/p/C3QCmQOM_9S/?igsh=ZXk0N29nc3o1cDU2
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3AF4E8A6D1DF5E62C83D
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573015311191@s.whatsapp.net
+    [SenderName] => Javi Dunami
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 15:01:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3AF4E8A6D1DF5E62C83D
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573015311191@s.whatsapp.net
+    [SenderName] => Javi Dunami
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 15:01:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 8AFD3947E9B66D3A943F5DF8944DD4CA
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 15:15:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Que fue jhon ?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C9CCCCAD04F781229C768DA9C8C8F77F
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-12 15:15:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cómo así ?.
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 9351F32561446F798BD871E1E2350616
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 12:17:14 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => A37C3FBC36ABE5ED0D67619BAC1CAEEE
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491140908465@s.whatsapp.net
+    [SenderName] => Petertransport
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 12:19:26 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3E352B17D08039B85325ECF4A85D7130
+    [Chat] => 5491140908465@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 12:25:11 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 0B946FE8E9AD0596EB4556775651CCFC
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:24:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Y conseguiste trabajo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 57F7CEE9F7D9821166C28A64E5CF4DCD
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:28:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => No todavia
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C2CCC775B09F7DB9005FB49086463EB8
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:29:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Estaba buscando pero no llaman
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 0D1444C78D47BF533D3338FD6C4EC313
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:30:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Sigues con Steambox?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => A78E29B290C8A86340EF10AEA39EA55B
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:37:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ta cagado en todo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => E6E6A477E20CD8A71B4D9831A811B4AA
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:37:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo pare
+    [Reaction] => 
+)
+Array
+(
+    [ID] => E8F0416FA37F658F227128DE5A8A0A63
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:37:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Me puse a hacer otras huevadas
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 342CE94E4817F5C802C292BE5EF454A5
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:38:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ah ya
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C959CA23F76EF2FBC719820CAA8DE8F5
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:39:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si pues
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 112C9CD336E3D372FD15F897CDBB486C
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:39:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Pronto mejore
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 377382CE21545939F120F6A7BB8752AD
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:40:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => A mi mamá ya la operaron
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 2E03DDFB312E108160F88385AD7423F8
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:40:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Del prolaxo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 87E7C808CF833BC95D8F1DF52D9123DA
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:41:05 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Prolapso
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 8786358A58C71556EA871A15164CC62E
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:44:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ah que bueno
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C625BC78B68760F1E1101470B8F1D9EE
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:44:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Le jodia andar creo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => D70D76889DA359AEF3A8C5CBC87F92D0
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:44:27 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Https://franka.store
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 8A6DBAFE30EDA2ED74B19CD661F75C46
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:44:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Un servicio
+    [Reaction] => 
+)
+Array
+(
+    [ID] => DBA9240306840108F904C444EE72AF7F
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:45:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491167461999@s.whatsapp.net}
+  〚Le jodia andar creo〛Si, ya esta bien
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 72E4C355A790D20950E8E0D7DDEA391C
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:45:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491167461999@s.whatsapp.net}
+  〚Un servicio〛Interesante
+    [Reaction] => 
+)
+Array
+(
+    [ID] => AB2CE895950C861276F4245664505913
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:46:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Es como un tecnico algo asi de la paginas web?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 06A2E8B58C582FA01C68925D90F099E7
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:46:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Es lo que entiendo
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 75840403B93E4A29114CE99AE4C5249A
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:52:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 75840403B93E4A29114CE99AE4C5249A
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:52:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 21BD7BF3FEA462EDA6DE65C426DEABF0
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:52:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Y estoy agregando huevadas graruitas
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 33FE4895E5C4EC7E84FC4143C30BE6FA
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:54:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ah ya
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 5CA480CEEDFAE2796219375A0B250083
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 20:54:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Como cuales
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 468A091685C81B04988F6BDD815755BF
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 22:40:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Jhon
+    [Reaction] => 
+)
+Array
+(
+    [ID] => CC1ACEC93B66DD43EB6BE780BA454B42
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 22:40:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Que fueeee
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 7A1056AEA252238E52F716E4A02FBE20
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 22:40:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Coméntame ?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 7F902AFAF615094E71917846A947312C
+    [Chat] => 51925159619@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51925159619@s.whatsapp.net
+    [SenderName] => Mell Javier 😶‍🌫🤘👽
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-13 22:40:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Estás bien primo ???
+    [Reaction] => 
+)
+Array
+(
+    [ID] => CDCF69BFC1D94F6E479A65331A77BBEC
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 01:58:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Me llego un mendaje a linkedin
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 85CBC373D685AC11F9626DB6B9EA4D91
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 01:59:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hi Cesar, Your sales background caught my eye. I have a remote US SDR role that fits your skills. If interested in learning more about this opportunity, I'd welcome a quick call to discuss details. Let me know if you're open to connecting on this opening. Look forward to your reply!
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0D8E068A3A52E337A30
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 05:39:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => +5491164169037
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB099E01444AFA9C958B0
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:19:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ememe
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0D7A30215B7333BE968
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:42@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:19:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => eme
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB02C83E72E1CD3E5D086
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:42@s.whatsapp.net
+    [SenderName] => 5491165900208
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:19:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0AAD3B077993CEE8889
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:19:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => we
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB07E01E6A97C57E9FA1F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:20:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => we
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0BC1FE5588A6CE15D61
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:20:17 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => xxxxx
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0F128C6AD5288024081
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:21:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => s
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB000E700B0A03084ECEF
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:21:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => asassa
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB06EAEB61247AD360826
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:22:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => s
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0BBD76CFB5D45D2ABAE
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 09:22:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => asaas
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB05C4D7353DCF311418B
+    [Chat] => 5491135717860@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491135717860:41@s.whatsapp.net
+    [SenderName] => Recupero Integral.
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 11:19:24 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB034AD48DB10B18FD66A
+    [Chat] => 5491135717860@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491135717860:41@s.whatsapp.net
+    [SenderName] => Recupero Integral.
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 11:19:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => AGURTO HUARINGA FRANK JONATHAN
+95745285
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 76038502BDE77222CE9B410C45003122
+    [Chat] => 51934992750@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51934992750@s.whatsapp.net
+    [SenderName] => César
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 13:01:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo que pasa es que no entiendo de que trata xD
+    [Reaction] => 
+)
+Array
+(
+    [ID] => B8F704BC1B50B7F2649CFDF21FD13238
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 17:18:36 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Follow the Franka channel on WhatsApp: https://whatsapp.com/channel/0029VaOx9J1BA1etL2ILH53D
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 0A9AA21AA8C2520BDB4081760344B1FB
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-14 17:18:36 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Follow the Franka channel on WhatsApp: https://whatsapp.com/channel/0029VaOx9J1BA1etL2ILH53D
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 4301F8F8A36D270B5DF585F6FB36EE3E
+    [Chat] => 5491136378315@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 04:51:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola como andas. Tengo 40 juntado. Como hago. Estare despierto hasta las 9 luego duermo y trabajo de noche
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 57A577432B68FA8C3090577460D7992C
+    [Chat] => 5491136378315@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491136378315@s.whatsapp.net
+    [SenderName] => Recupero Integral
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 04:51:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gracias por comunicarte con Recupero Integral. ¿Cómo podemos ayudarte?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB049DE3A293A5447B634
+    [Chat] => 51902027639@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51902027639:31@s.whatsapp.net
+    [SenderName] => Estudio GEDCO.
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 13:51:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => *ÚLTIMA OPCIÓN PARA CONCILIAR SU DEUDA DE UALA*
+*Frank Jonathan Agurto Huaringa*
+                                                                                                                                                                                                                                        Me comunico del estudio conciliatorio Gedco por encargo de Ualá.
+Evite que su caso pase a  otra instancia legal de cobro o instancias superiores, Evitando ser llevado al VERAZ.
+               
+*Mantiene el beneficio de contar con un PLAN DE PAGO o un DESCUENTO DE INTERESES*
+
+COMUNIQUESE URGENTE!!! Para darle solución a su deuda y poder ayudarlo (a)
+Encargado de llevar su caso Jimena Sotelo
+Área Conciliatoria UALÁ
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB08CE8B602C028EC988F
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573006681857:33@s.whatsapp.net
+    [SenderName] => MeBlock
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:02:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB08CE8B602C028EC988F
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573006681857:33@s.whatsapp.net
+    [SenderName] => MeBlock
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:02:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Buenas tardes, en este grupo hay o conocen algun director/a comercial que quiera cocrear una proptech?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A642875F1437297CAC6
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573108260088@s.whatsapp.net
+    [SenderName] => Mari
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:04:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A642875F1437297CAC6
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573108260088@s.whatsapp.net
+    [SenderName] => Mari
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:04:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0D1772936D46232326C
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️Nos fuimos
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:17:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0D1772936D46232326C
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️Nos fuimos
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:17:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3ACFE42B4180615C308E
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 593999470243@s.whatsapp.net
+    [SenderName] => Edinson
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:21:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3ACFE42B4180615C308E
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 593999470243@s.whatsapp.net
+    [SenderName] => Edinson
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:21:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0DEA75F03FD5345CB6D
+    [Chat] => 5491136378315@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491136378315:59@s.whatsapp.net
+    [SenderName] => Recupero Integral
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:21:34 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB011047C4889C1FC659D
+    [Chat] => 5491136378315@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491136378315:59@s.whatsapp.net
+    [SenderName] => Recupero Integral
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:22:06 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3A1FB696AFC50B54AECC
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 593999470243@s.whatsapp.net
+    [SenderName] => Edinson
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 17:25:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+573006681857@s.whatsapp.net}
+  〚Buenas tardes, en este grupo hay o conocen algun director/a comercial que quiera cocrear una proptech?〛Hablemos al interno ✔️
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 01E025801B631A9B379BA3A14D25BBD8
+    [Chat] => 51902027639@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 19:26:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+    [Reaction] => 
+)
+Array
+(
+    [ID] => D4F241282D979AD15CDB92DFF652878D
+    [Chat] => 51902027639@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-15 19:30:30 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0C416EBCDB4B3B5F864
+    [Chat] => 51902027639@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51902027639:62@s.whatsapp.net
+    [SenderName] => Estudio GEDCO.
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 10:22:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => *Frank Jonathan Agurto Huaringa*
+buen dia, el dia 27 estas cancelando la totalidad de la deuda?
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 6CD24E426BC2EF68CC97A2037D7C5CC0
+    [Chat] => 5493512434655@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5493512434655@s.whatsapp.net
+    [SenderName] => NaranjaX
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 12:22:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ⛔⛔**AVISO DEUDA NARANJA X **⛔⛔
+
+*FRANK AGURTO*
+Mi nombre es Marisa, soy encargada de su cuenta con NARANJA X.
+Su cuenta ingresó a COBRANZAS.
+Se encuentran tres resúmenes acumulados:   DICIEMBRE ENERO Y  generado FEBRERO.
+La tarjeta se encuentra inhabilitada, generando intereses diarios, con próxima afectación de firma 
+ante Banco Central.
+Cuenta con esta opción para regularizar: (La estrega del plan debe ser EXACTA)
+*Entrega de $ 197.000,00 mas 23 cuotas de $105.469,30*
+(Debe comunicarse previamente para brindarle las condiciones del plan)
+*FECHA LIMITE DE PAGO VIERNES 16/2*
+Esperamos tu contacto, de 9:00hs a 16:00hs.
+¡Gracias!
+(Espero tu respuesta por si tenes dudas o consultas al respecto?..)
+    [Reaction] => 
+)
+Array
+(
+    [ID] => D79A977DC4C659A98BB84368E05F7F28
+    [Chat] => 5493512434655@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 13:31:39 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 89E55E8C64C122BBB209DC2D59DC23CD
+    [Chat] => 51902027639@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => WhatzApp
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 13:36:38 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0224966B4948E4D594D
+    [Chat] => 51902027639@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 51902027639:62@s.whatsapp.net
+    [SenderName] => Estudio GEDCO.
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 13:41:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Tendriamos que comunicarnos ese dia, ya que ahorita le daria beneficios pero solo tienen una duracion maxima de 48 hrs.
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 9EC13944E325A303F5DE4253D6B74EC6
+    [Chat] => 5493512434655@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5493512434655@s.whatsapp.net
+    [SenderName] => NaranjaX
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 14:04:19 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 5247C6AF7EF5A45FB6D11CF03056FFFF
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 20:09:23 -0300 -03
+    [MediaType] => document
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 89D0A93A157C909A9F9FCF2EC00C638D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 20:09:23 -0300 -03
+    [MediaType] => document
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB06456C2B03C5CE91463
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 20:27:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => CalVxePV1!
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 3EB0369FDF5D2344FD7588
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:37@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 20:27:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 6BB5430052CA49DFE53526E4D6D57D0D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 21:14:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ok
+    [Reaction] => 
+)
+Array
+(
+    [ID] => C38092978D8F4526138AC88D36900784
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 21:15:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => G
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 8450384DDBB3C34D6C898C34239CEA6D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-02-16 21:15:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Fg
+    [Reaction] => 
+)
+Array
+(
+    [ID] => 64B27CFD7FE61BAC96C2246640BA97E5
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 21:35:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hi
+)
+Array
+(
+    [ID] => AA656291B44B61555DA4A61DF2645859
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 21:35:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 6A1532BB813C43E421AC7D5B90C7CA8B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 21:36:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => FC90BF448D2B1C5682E20ACDB8FA9482
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 21:36:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hi
+)
+Array
+(
+    [ID] => 51EA0C48AAE6538C1435E90F9696A6B8
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 329BE27806BB4E93D462826D10853E45
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => BE65CA4176D736A0A79724C77BB539BC
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 2B4D0580EEFAEAE2FA9EF10BEA9D06DF
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 36DD455ADED6987A56B521E1777B9E9A
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => B59C3FDBC936118038718A86C522CF8F
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 733827C5FD94B7AAE7616995BDEE541B
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => D9F2A8B0F2F909F45915CB8B03C56702
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-23 22:20:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 17B476A4CA379976FA0590154AAD3A9E
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 15073208B39E36A7FCC9BEEF11EB1D6F
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:10 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 858C80566B5623E98573AEF2EB0B6433
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 95F670B3A079D5FBEADA373E1489929C
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => F7E0C2AA29C49A8CBC28672C1B015C7F
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 8A73FCACC400B627F07FD9DC93EC63BC
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 29C33FB0434315C3E5BF060DF1EB37E0
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:31:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 2330AA802038294BFE1BDD4D5D3E3F1E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 11:33:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Demo
+)
+Array
+(
+    [ID] => 3AD9E90D7DF2E63960D4
+    [Chat] => 573185948618@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 573185948618@s.whatsapp.net
+    [SenderName] => Astromelia Co.
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 13:14:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola, Bienvenid@ a ASTROMELIA💓 y muchísimas gracias por comunicarte con nosotros✨
+Cuéntanos en qué podemos servirte hoy ? Mientras esperas nuestra respuesta puedes ver nuestro catálogo en el perfil de WhatsApp 📱 https://wa.me/c/573185948618 
+
+O si deseas comprar de manera inmediata ingresa a nuestra página web✨www.astromelia.co 💻
+)
+Array
+(
+    [ID] => A259160C29C828EB0F38AFDD54471F5D
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 4602BB85C8FBA5FB35B19E4293DB33B3
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:05 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 6B92985ED0C23EC8C9F97DEED7286F3F
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:05 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => F5425CE1244AA827D651F19C01DF4150
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => E0E35B8070C3188CB445CE2505BB8C8A
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => C879A24BFFF25FA399CBB307DAC56123
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => F60FC8925280FF25AC6E7E9BE68495F6
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 36AB5D663FAF514F2781E15571F62F2C
+    [Chat] => 5491167461999@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 2F72FA0BA4F45B9BB7C42A2EDE1E37AC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:30:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hoal rodirgoo
+)
+Array
+(
+    [ID] => 3D8092274C7AAAF99B9FFFE940B3182B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:31:39 -0300 -03
+    [MediaType] => gif
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => BE28D2D8F2561C73C93E2AC56BE47935
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:31:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491165900208@s.whatsapp.net}
+  〚Hoal rodirgoo〛Hola
+)
+Array
+(
+    [ID] => D59EAFF94ED1D0D8ACA7F1638A08FE83
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 18:32:45 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491165900208@s.whatsapp.net}
+  〚Hoal rodirgoo〛Ok
+)
+Array
+(
+    [ID] => 3A25EB82BB7DB4B687F5
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573013864686:57@s.whatsapp.net
+    [SenderName] => Samantha Upegui
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:18:58 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3A25EB82BB7DB4B687F5
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573013864686:57@s.whatsapp.net
+    [SenderName] => Samantha Upegui
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:18:58 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3AE6777C4CEDF150B9E7
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573013864686:57@s.whatsapp.net
+    [SenderName] => Samantha Upegui
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:18:58 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3A19AE07C889B224EE71
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573013864686:57@s.whatsapp.net
+    [SenderName] => Samantha Upegui
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:18:59 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3AD3A329B8554651C0CD
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573013864686:57@s.whatsapp.net
+    [SenderName] => Samantha Upegui
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:19:29 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Hola Comunidad queremos invitarlo para la próxima semana, donde tendremos dos eventos virtuales con la Fintech Dapp de México y Pluxee (antes Sodexo) de Colombia.
+La colaboración de estos líderes ha dado forma a una agenda repleta de momentos inolvidables.
+
+Con líderes como
+Antonio Pelaez Diaz de dapp
+Edwin Lota de Pluxee
+
+Tecnología y Eficiencia: ¿Cómo optimizar los recursos de las empresas a través de la tecnología? 
+02/03/2024 5:00pm COL 
+Reserva tu lugar https://www.linkedin.com/events/7171992844050632704/comments/ 
+ 
+FinTech 360: Oportunidades de innovación con Dapp 
+03/03/2024 6:00pm COL 
+Reserva tu lugar 	https://www.linkedin.com/events/7175462081599541248/comments/
+)
+Array
+(
+    [ID] => 3EB0864A3432B4794A1414
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5492914276445:40@s.whatsapp.net
+    [SenderName] => Natalí Perez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:20:13 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0864A3432B4794A1414
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 🇺🇸 Nos complace anunciar a los speakers de lujo que estarán disertando en el Miami Startups Week by Startups Latam, Platzi & Phylo Scale ⚡️
+- Edrizio De La Cruz, Ex partner Finance YCombinator
+- Daniel Bilbao, Co-founder & CEO de Truora Inc.
+- Santiago Gomez, Co-founder & COO de Simetrik
+
+📍 Nos vemos este 11 de abril en Wynwood Studio, Miami desde las 15:00 hrs.
+
+👉 Inscripciones: https://lu.ma/697813i8
+    [Sender] => 5492914276445:40@s.whatsapp.net
+    [SenderName] => Natalí Perez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:20:13 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB064DB38088265A3F793
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5492914276445:40@s.whatsapp.net
+    [SenderName] => Natalí Perez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:20:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3AAE9CEDA01AEFD27602
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5215574804524:48@s.whatsapp.net
+    [SenderName] => Alejandra Cruz
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:21:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3AAE9CEDA01AEFD27602
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5215574804524:48@s.whatsapp.net
+    [SenderName] => Alejandra Cruz
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 19:21:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => B67B0468EF9220BDB40FE79B05AD528F
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573148628615@s.whatsapp.net
+    [SenderName] => M
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 20:34:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => B67B0468EF9220BDB40FE79B05AD528F
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 573148628615@s.whatsapp.net
+    [SenderName] => M
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-26 20:34:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 088645FC97033A2AC7
+    [Chat] => 5493512023960@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5493512023960@s.whatsapp.net
+    [SenderName] => 5493512023960
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-27 09:01:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 088645FC97033A2AC7
+    [Chat] => 5493512023960@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5493512023960@s.whatsapp.net
+    [SenderName] => 5493512023960
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-27 09:01:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 44D6EB7A217B0C400823B9C9BD1BCD14
+    [Chat] => 5493512023960@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491167461999@s.whatsapp.net
+    [SenderName] => Implementation Manager
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-27 11:26:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Numero equivocado
+)
+Array
+(
+    [ID] => 8C87E46D48DD02B535792A909F6A5B9E
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-27 14:29:08 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 1166514FB46AADA5305CB85998C9DECC
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-27 14:29:38 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 393210ED97412CAEF9
+    [Chat] => 5491163809500@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491163809500@s.whatsapp.net
+    [SenderName] => 5491163809500
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-28 10:44:45 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0AE92F418E69C0EDB1B
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 59167200811:53@s.whatsapp.net
+    [SenderName] => Aldo Villegas Cedeneg Tuticket Bolivia
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-28 12:41:20 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0AE92F418E69C0EDB1B
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 59167200811:53@s.whatsapp.net
+    [SenderName] => Aldo Villegas Cedeneg Tuticket Bolivia
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-28 12:41:20 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Accede a esta Invitación. 
+📬📂 *GUÍA DE NEGOCIOS - Marzo 2024*
+Evento ► https://calendar.app.google/Kw4mT6tUshtYpvwd8
+📲  Accede con tu correo electrónico.
+)
+Array
+(
+    [ID] => DC2D33A535F860DE70EEF787BB5C2CF2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:34:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Demo
+)
+Array
+(
+    [ID] => 495ACF0D46F20E8554BD68BD3A6AADA2
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:35:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+
+ Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.
+
+ Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam. Praesent non urna non mauris laoreet ultricies eget at enim.
+
+ Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam. Praesent non urna non mauris laoreet ultricies eget at enim. Phasellus lacus odio, ullamcorper ac ipsum in, tincidunt tincidunt massa.
+)
+Array
+(
+    [ID] => E79F5B218F924A86296B620F4C8E39C7
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:35:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491165900208@s.whatsapp.net}
+  〚Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+
+ Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.
+
+ Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam. Praesent non urna non mauris laoreet ultricies eget at enim.
+
+ Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam. Praesent non urna non mauris laoreet ultricies eget at enim. Phasellus lacus odio, ullamcorper ac ipsum in, tincidunt tincidunt massa.〛Ok
+)
+Array
+(
+    [ID] => DBF9DEEA44518D4A8EEAD0490217973A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:35:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+5491167461999@s.whatsapp.net}
+  〚Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+
+Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.
+
+Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam. Praesent non urna non mauris laoreet ultricies eget at enim.
+
+Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam. Praesent non urna non mauris laoreet ultricies eget at enim. Phasellus lacus odio, ullamcorper ac ipsum in, tincidunt tincidunt massa.〛Okok
+)
+Array
+(
+    [ID] => 1557E0237A1B380729DFBB9471AE1BB4
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:36:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+)
+Array
+(
+    [ID] => 641F1ABF7F266E5A1D38CCC6ABA6B881
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:37:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+)
+Array
+(
+    [ID] => 768EE89DF9ADDAB601DA87C50D1958B8
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 17:40:44 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => B
+)
+Array
+(
+    [ID] => 3EB0C1C1F34C9046BF63D4
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:43@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-29 20:00:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+)
+Array
+(
+    [ID] => 3EB06BAC360D6D59978794
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:43@s.whatsapp.net
+    [SenderName] => ~
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-03-31 18:53:24 -0300 -03
+    [MediaType] => video
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB071AE11F2097F3A73F9
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51951551236:51@s.whatsapp.net
+    [SenderName] => Alex Zapata
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:31:44 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB071AE11F2097F3A73F9
+    [Chat] => 120363156402490724@g.us
+    [Caption] => *[Atención Latinoamérica 🌎]* ¡Descubre las claves para el éxito de tu emprendimiento con "Startup Tactics: Estrategias para un negocio exitoso"! Únete a este webinar exclusivo, dirigido por Paul Cheek, Director Ejecutivo del Martin Trust Center for MIT Entrepreneurship y autor del próximo libro "𝗗𝗶𝘀𝗰𝗶𝗽𝗹𝗶𝗻𝗲𝗱 𝗘𝗻𝘁𝗿𝗲𝗽𝗿𝗲𝗻𝗲𝘂𝗿𝘀𝗵𝗶𝗽 𝗦𝘁𝗮𝗿𝘁𝘂𝗽 𝗧𝗮𝗰𝘁𝗶𝗰𝘀: 𝟭𝟱 𝗧𝗮𝗰𝘁𝗶𝗰𝘀 𝘁𝗼 𝗧𝘂𝗿𝗻 𝗬𝗼𝘂𝗿 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀 𝗣𝗹𝗮𝗻 𝗶𝗻𝘁𝗼 𝗮 𝗕𝘂𝘀𝗶𝗻𝗲𝘀𝘀"🚀
+
+📌 Confirma tu asistencia aquí: https://lu.ma/sev0o0ny 
+📆 Día: Miércoles 03 de abril | 🕜 Hora PER/COL: 06:00 p.m. | 📍 Via Zoom
+    [Sender] => 51951551236:51@s.whatsapp.net
+    [SenderName] => Alex Zapata
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:31:44 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0CEED21BC3A9184B230
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51951551236:51@s.whatsapp.net
+    [SenderName] => Alex Zapata
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:32:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0CEED21BC3A9184B230
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51951551236:51@s.whatsapp.net
+    [SenderName] => Alex Zapata
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:32:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Buen día! para todos los apasionados por las startups y la enseñanza al emprendimiento, les invitamos a este webinar con el director del centro de emprendimiento del MIT, este miércoles 03/04 🚀🙌
+)
+Array
+(
+    [ID] => 3EB0F28B994A6C971D9D82
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:33:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0F28B994A6C971D9D82
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:33:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3EB0458585C070E1723967
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 51943816301:30@s.whatsapp.net
+    [SenderName] => Vamos?👀✈️
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:33:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3AE0DAC777A1F40C9EF6
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5215564794868@s.whatsapp.net
+    [SenderName] => Leonardo Díaz
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:41:10 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => 
+)
+Array
+(
+    [ID] => 3AE0DAC777A1F40C9EF6
+    [Chat] => 120363156402490724@g.us
+    [Caption] => 
+    [Sender] => 5215564794868@s.whatsapp.net
+    [SenderName] => Leonardo Díaz
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-04-01 14:41:10 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => Hola, buen día 
+Mi nombre es Leonardo Diaz fundador de Lienzo.
+Lienzo es el primer interiorista digital de Latam. Creamos una plataforma en la que nuestros usuarios pueden recibir una propuesta de interiores en segundos y visualizar su espacio amueblado mucho antes de comprar el mobiliario.
+
+Estamos buscando a nuestro próximo CTO, si hay alguien interesado y quiere conocer mas de Lienzo por favor mándenme mensaje.
+
+Les comparto el video demo para que puedan ver como funciona: https://drive.google.com/file/d/1r1Bw8uV-TDOhn0Gf3naSy1LCJtM4LmXK/view?usp=sharing
+)

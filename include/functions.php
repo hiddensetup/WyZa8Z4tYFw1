@@ -88,6 +88,7 @@ $sb_apps = [
     // "messenger",
     "whatsapp",
     "whatsmeow",
+    "waQR",
     "telegram",
     "twitter",
     "gbm",
@@ -990,6 +991,7 @@ function sb_js_admin()
         messenger: "' . (defined("SB_MESSENGER") ? SB_MESSENGER : -1) . '",
         whatsapp: "' . (defined("SB_WHATSAPP") ? SB_WHATSAPP : -1) . '",
         whatsmeow: "' . (defined("SB_WHATSMEOW") ? SB_WHATSMEOW : -1) . '",
+        waQR: "' . (defined("SB_WAQR") ? SB_WAQR : -1) . '",
         telegram: "' . (defined("SB_TELEGRAM") ? SB_TELEGRAM : -1) . '",
         gbm: "' . (defined("SB_GBM") ? SB_GBM : -1) . '"
     };';
@@ -2397,7 +2399,8 @@ function sb_get_agents_ids($admins = true)
 
 function sb_get_avatar($first_name, $last_name = '')
 {
-    return STMBX_URL . '/media/user.svg';
+    // return STMBX_URL . '/media/user.svg';
+    return 'https://subzero.sirv.com/Images/user.svg';
 }
 
 // function sb_get_avatar()
@@ -9484,7 +9487,7 @@ function sb_component_editor($admin = false)
                 echo '<div class="bi-paperclip" ></div>';
             } ?>
             <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
-            <div class="bi-whatsapp api-whatsapp-button" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
+            <div class="bi-wind api-whatsapp-button" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
 
         </div>
 
@@ -10004,7 +10007,15 @@ function sb_messaging_platforms_send_message(
                     : sb_get_user_extra($user_id, "phone"),
                 $message,
                 $attachments,
-            ); // Added semicolon here
+            ); 
+            case "wx":
+                return sb_waQR_send_message(
+                    $platform_value
+                        ? $platform_value
+                        : sb_get_user_extra($user_id, "phone"),
+                    $message,
+                    $attachments,
+                );             
         case "tg":
             return sb_telegram_send_message(
                 $platform_value

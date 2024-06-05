@@ -14,6 +14,9 @@
 define('WW_URL_GO', 'http://195.35.11.3');
 define('WW_TOKEN', 'TESTING');
 
+define('WX_URL_GO', 'http://195.35.11.3');
+define('WX_TOKEN', 'TESTING2');
+
 /* Access token */
 define('PAYMENT_LINK', 'https://wa.me/13028035360');
 define('MESSAGE_TYPE', ''); // we can define trial or payment

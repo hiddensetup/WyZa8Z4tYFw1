@@ -42,6 +42,13 @@ function sb_profile_box()
                                 <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp'); ?>
                             </li>
                         <?php endif; ?>
+                        <?php include SB_PATH . "/apps/" . $sb_apps[4] . "/functions.php";
+                        $goproxy = !empty(sb_get_multi_setting('waQR-go', 'waQR-go-active')); ?>
+                        <?php if ($goproxy) : ?>
+                            <li class="sb-start-qr-conversation" onclick="updateSource('wx')">
+                                <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp Web'); ?>
+                            </li>
+                        <?php endif; ?>
 
                     </ul>
 
@@ -586,11 +593,16 @@ function sb_direct_message_box()
                     include '/apps/whatsmeow/functions.php';
                     $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active'));
                     ?>
+                    <?php
+                    include '/apps/waQR/functions.php';
+                    $goproxy = !empty(sb_get_multi_setting('waQR-go', 'waQR-go-active'));
+                    ?>
                     <select class="sb-select" name="broadcast_type">
                         <option value="message"> <?php sb_e('Broadcast on existing chat') ?> </option>
                         <option value="template" class="active-bulk-sender"> <?php sb_e('Broadcast without existing chat') ?> </option>
                         <!-- <?php if ($goproxy) : ?><option value="sms"> <?php sb_e('Broadcast Whatsmeow') ?> </option> <?php endif; ?> -->
-                    </select>
+                        <!-- <?php if ($goproxy) : ?><option value="sms"> <?php sb_e('Broadcast WhatsApp Web') ?> </option> <?php endif; ?> -->
+                            </select>
                 </div>
             </div>
             <div class="sb-title sb-direct-message-subject"> <?php sb_e('Subject') ?> </div>
@@ -1160,8 +1172,9 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-whatsapp"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WAQR', 'waQR', '<i class="bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
         ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
@@ -1849,7 +1862,8 @@ function sb_conversations_filter()
 
     $sources = [
         ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
-        ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-whatsapp'], // WhatsApp
+        ['wx', 'WhatsApp', 'SB_WAQR', 'bi-whatsapp'], // WhatsApp QR
+        ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
         ['tk', 'Live Chat', true, 'bi-chat-dots'], // Tickets
         ['tg', 'Telegram', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
         ['fb', 'Messenger', 'SB_MESSENGER', 'bi-messenger'], // Messenger
