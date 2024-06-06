@@ -1359,7 +1359,8 @@ TABLE
     }
 
     &.sb-info-card-info {
-        background: var(--chat-text-primary);
+        background: var(--chat-background-notification);
+        color: var(--chat-text-notification);
     }
 }
 

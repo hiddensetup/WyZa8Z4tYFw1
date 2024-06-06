@@ -1067,9 +1067,9 @@
     },
 
 
-    waQR: {
+    waqr: {
       check: function (conversation) {
-        return conversation.get("source") == "ww";
+        return conversation.get("source") == "wx";
       },
 
       send: function (
@@ -1223,7 +1223,7 @@
         case "telegram":
         case "messenger":
         case "whatsapp":
-        case "waQR":
+        case "waqr":
         case "whatsmeow":
         case "dialogflow":
         case "sb":
@@ -5458,185 +5458,6 @@ conversations_area.find(".open-profile-name").on("click", function() {
       }
     },
 
-    // // Populate profile
-    // populate: function (user, profile_area) {
-    //   let exclude = ["first_name", "last_name", "password", "profile_image"];
-    //   let code = "";
-    //   if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
-    //     var source = SBChat.conversation.get("source");
-    //     var label = SBChat.conversation.get("label");
-    //     code = this.profileRow(
-    //       "conversation-id",
-    //       SBChat.conversation.id,
-    //       sb_("Conversation ID")
-    //     );
-    //     if (!SBF.null(label)) {
-    //       code += this.profileRow(
-    //         "conversation-label",
-    //         label,
-    //         sb_("Client status")
-    //       );
-    //     } else {
-    //       code += this.profileRow(
-    //         "conversation-label",
-    //         "Unknown",
-    //         sb_("Label")
-    //       );
-    //     }
-    //     if (!SBF.null(source)) {
-    //       code += this.profileRow(
-    //         "conversation-source",
-    //         source == "fb"
-    //           ? "Facebook"
-    //           : source == "ww"
-    //           ? "Whatsmeow"
-    //           : source == "wa"
-    //           ? "WhatsApp"
-    //           : source == "tm"
-    //           ? "Text message"
-    //           : source == "ig"
-    //           ? "Instagram"
-    //           : source == "tg"
-    //           ? "Telegram"
-    //           : source == "tk"
-    //           ? "Tickets"
-    //           : source == "wc"
-    //           ? "WeChat"
-    //           : source == "em"
-    //           ? "Email"
-    //           : source == "tw"
-    //           ? "Twitter"
-    //           : source == "bm"
-    //           ? "Google"
-    //           : source,
-    //         sb_("Source")
-    //       );
-    //     } else {
-    //       code += this.profileRow("conversation-source", "Unknown");
-    //     }
-    //   }
-    //   if (SB_ACTIVE_AGENT["user_type"] != "admin") {
-    //     exclude.push("token");
-    //   }
-    //   for (var key in user.details) {
-    //     if (!exclude.includes(key)) {
-    //       code += this.profileRow(key, user.get(key));
-    //     }
-    //   }
-    //   if (user.isExtraEmpty()) {
-    //     SBF.ajax(
-    //       {
-    //         function: "get-user-extra",
-    //         user_id: user.id,
-    //       },
-    //       (response) => {
-    //         //added ↓
-    //         for (var i = 1; i < response.length; i++) {
-    //           let slug = response[i]["slug"];
-    //           user.setExtra(slug, response[i]);
-    //           code += this.profileRow(
-    //             slug,
-    //             response[i].value,
-    //             response[i]["name"]
-    //           );
-    //         }
-    //         profile_area.html(`<ul>${code}</ul>`);
-    //         collapse(profile_area, 56);
-    //       }
-    //     );
-    //   } else {
-    //     for (var key in user.extra) {
-    //       let info = user.getExtra(key);
-    //       code += this.profileRow(key, info.value, info["name"]);
-    //     }
-    //     profile_area.html(
-    //       `<h3 class="sb-user-details-info">${sb_(
-    //         "User information"
-    //       )}</h3><ul>${code}</ul>`
-    //     );
-    //     collapse(profile_area, 56);
-    //   }
-
-    //   // Listen for change_conversation_source
-    //   $("#change-conversation-source").change(function (e) {
-    //     // Save the selected value before updating options
-    //     const selectedValue = e.target.value;
-
-    //     // Get the selected source and construct the URL
-    //     const name = e.target.options[e.target.selectedIndex].text;
-    //     const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
-
-    //     // Update the image source with the selected source
-    //     $("#conversation-source-icon").attr("src", url);
-
-    //     // Send an AJAX request to update the conversation source on the server
-    //     SBF.ajax(
-    //       {
-    //         function: "update-conversation-source",
-    //         conversation_id: SBChat.conversation.id,
-    //         source: selectedValue, // Use the saved selected value
-    //       },
-    //       (response) => {
-    //         showResponse("Required reload");
-    //         SBChat.update();
-    //         // Set the selected value back after updating options
-    //         $("#change-conversation-source").val(selectedValue);
-    //       }
-    //     );
-    //   });
-
-    //   // $("#change-conversation-source").change(function (e) {
-    //   //     // change icon of source type
-    //   //     if (e.target.value !== "Unknown") {
-    //   //         const name = e.target.options[e.target.selectedIndex].text
-    //   //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
-    //   //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
-    //   //     }
-
-    //   //     SBF.ajax({
-    //   //         function: 'update-conversation-source',
-    //   //         conversation_id: SBChat.conversation.id,
-    //   //         source: e.target.value
-    //   //     }, (response) => {
-    //   //         showResponse('Reload to change the conversation source');
-    //   //     });
-    //   // });
-
-    //   $("#change-conversation-labels").change(function (e) {
-    //     // change icon of source type
-    //     if (e.target.value !== "Unknown") {
-    //       const name = e.target.options[e.target.selectedIndex].text;
-    //       let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
-    //       $('.sb-profile-list [data-id="conversation-label"] i').attr(
-    //         "class",
-    //         labcolor
-    //       );
-    //       $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
-    //         "class",
-    //         labcolor
-    //       );
-    //       $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-    //     }
-    //     SBProfile.updateLabel(e.target.value);
-    //   });
-
-    //   //change label
-    //   $("#CstBtn a").click(function (e) {
-    //     const label = $(this).attr("id");
-    //     const name = sb_(SBF.admin_set("label-names")[label] + " ");
-    //     let labcolor = `sb-icon bi-crosshair tags-${label}`;
-    //     $('.sb-profile-list [data-id="conversation-label"] i').attr(
-    //       "class",
-    //       labcolor
-    //     );
-    //     $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
-    //       "class",
-    //       labcolor
-    //     );
-    //     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-    //     SBProfile.updateLabel(label);
-    //   });
-    // },
 
     // Populate profile
 populate: function (user, profile_area) {
@@ -5668,7 +5489,7 @@ populate: function (user, profile_area) {
       const sourceLabels = {
         fb: "Facebook",
         ww: "Whatsmeow",
-        wx: "Whatsmeow",        
+        wx: "WhatApp Web",        
         wa: "WhatsApp",
         tm: "Text message",
         ig: "Instagram",
@@ -5994,10 +5815,10 @@ updateLabel: function (label) {
                                 } value>Live Chat</option>
                                 <option value="ww" ${
                                   value == "Whatsmeow" ? "selected" : ""
-                                } value>Whatsmeow</option>
+                                } value>WhatsApp QR</option>
                                 <option value="wx" ${
                                   value == "waQR" ? "selected" : ""
-                                } value>waQR</option>                                
+                                } value>WhatsApp Web</option>                                
                                 <option value="wa" ${
                                   value == "WhatsApp" ? "selected" : ""
                                 } value>WhatsApp</option>
@@ -7296,14 +7117,14 @@ updateLabel: function (label) {
       var ratequs = SBF.get_value(
         SBF.admin_set("rate-and-review")["rate-review"]
       );
-      if (SBApps.waQR.check(conversation)) {
+      if (SBApps.waqr.check(conversation)) {
         const messageId = response.message_id;
 
         if (response.message == "[rating]") {
           response.message = ratequs;
         }
 
-        SBApps.waQR.send(
+        SBApps.waqr.send(
           SBApps.whatsapp.activeUserPhone(user),
           response.message,
           response.attachments,
@@ -7742,7 +7563,7 @@ $(".bi-search").click(function () {
         let source = $(this).find("option:selected").html().toLowerCase();
 
         if (
-          (source == "whatsapp" || source == "whatsmeow" || source == "waQR") &&
+          (source == "whatsapp" || source == "whatsmeow" || source == "waqr") &&
           activeUser().getExtra("phone")
         ) {
           // window.open('https://wa.me/' + SBApps.whatsapp.activeUserPhone());
@@ -9174,7 +8995,10 @@ $(".bi-search").click(function () {
     // 	return false;
     // });
 
-    // Reusable function for both start and restart buttons
+
+
+
+    // WHATSMEOW
     function handleWhatsmeowButtonClick(event, action) {
       event.preventDefault();
 
@@ -9240,6 +9064,10 @@ $(".bi-search").click(function () {
       return false;
     }
 
+
+
+
+    //WAQR
     function handleWaQRButtonClick(event, action) {
       event.preventDefault();
 
@@ -9273,10 +9101,10 @@ $(".bi-search").click(function () {
             } else {
               console.log("Creating new QR image element.");
               $("#waQR-go .sb-setting-content").append(
-                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
+                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading2').show();" />`
               );
               $("#waQR-go .sb-setting-content").append(
-                '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
+                '<div id="qr_loading2" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
               );
             }
           })

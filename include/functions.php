@@ -4831,7 +4831,7 @@ function sb_send_message(
                         sb_get_multi_setting("sms", "sms-active-agents")) ||
                     ($user_check &&
                         sb_get_multi_setting("sms", "sms-active-users") &&
-                        !in_array($conversation["source"], ["wa", "ww", "tg"]))
+                        !in_array($conversation["source"], ["wa", "ww", "wx", "tg"]))
                 ) {
                     $response_notification = sb_send_sms(
                         $message,

@@ -10,6 +10,7 @@ apps/whatsapp/response_log.txt
 apps/whatsapp/message_debug.txt
 apps/whatsapp/img_data.txt
 apps/whatsapp/download.txt
+apps/waQR/api.txt
 apps/telegram/tel.txt
 config.php
 uploads

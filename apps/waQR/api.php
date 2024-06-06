@@ -61,7 +61,7 @@ try {
         $GLOBALS['SB_LOGIN'] = $user;
 
         if (!$conversation_id) {
-            $conversation_id = sb_isset(sb_new_conversation($user_id, 2, '', $department, -1, 'ww'), 'details', [])['id'];
+            $conversation_id = sb_isset(sb_new_conversation($user_id, 2, '', $department, -1, 'wx'), 'details', [])['id'];
         }
 
 
@@ -92,7 +92,7 @@ try {
 
         if (!$isAdminAnswer) {
             // Dialogflow, Notifications, Bot messages
-            $response_external = sb_messaging_platforms_functions($conversation_id, $message, $attachments, $user, ['source' => 'ww', 'platform_value' => $phone]);
+            $response_external = sb_messaging_platforms_functions($conversation_id, $message, $attachments, $user, ['source' => 'wx', 'platform_value' => $phone]);
 
             // Queue
             if (sb_get_multi_setting('queue', 'queue-active')) {
@@ -113,7 +113,7 @@ try {
 
 function sb_waQR_get_conversation_id($user_id)
 {
-    return sb_isset(sb_db_get('SELECT id FROM sb_conversations WHERE source = "ww" AND user_id = ' . $user_id . ' ORDER BY id DESC LIMIT 1'), 'id');
+    return sb_isset(sb_db_get('SELECT id FROM sb_conversations WHERE source = "wx" AND user_id = ' . $user_id . ' ORDER BY id DESC LIMIT 1'), 'id');
 }
 
 

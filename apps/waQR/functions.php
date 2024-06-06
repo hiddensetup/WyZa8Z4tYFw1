@@ -47,7 +47,7 @@ function sb_waQR_send_message($to, $message = '', $attachments = [])
     }
     if ($goproxy) {
         $waQRGoUrl = sb_get_multi_setting('waQR-go', 'waQR-go-url');
-        $goUrl = WW_URL_GO; // Use the base URL constant
+        $goUrl = WX_URL_GO; // Use the base URL constant
         $port = sb_get_multi_setting('waQR-go', 'waQR-go-qr');
         $url = $goUrl . ':' . $port . "/api/message/send?auth=" . $waQRGoUrl;
         $header = ['Content-Type: application/json'];
