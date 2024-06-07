@@ -5809,7 +5809,7 @@ updateLabel: function (label) {
         case "os":
         case "conversation-source":
           image = value.toLowerCase();
-          value = `<select disabled style="width:102px;background: transparent;border-color: transparent;" id="change-conversation-source">
+          value = `<select disabled style="background: transparent;border-color: transparent;" id="change-conversation-source">
                                 <option  value="tk" ${
                                   value == "Tickets" ? "selected" : ""
                                 } value>Live Chat</option>
@@ -5872,7 +5872,7 @@ updateLabel: function (label) {
           // Determine the class based on the selected value
           let selectedClass = `class="sb-icon bi-crosshair tags-${bgselect}"`;
 
-          value = `<select style="width:102px;background: transparent; border-color: transparent;" id="change-conversation-labels">
+          value = `<select style="background: transparent; border-color: transparent;" id="change-conversation-labels">
 								<option value='unknown'>${sb_("Client status")}</option> ${optlist} </select>`;
           icon = `<i ${selectedClass}></i>`;
       }
