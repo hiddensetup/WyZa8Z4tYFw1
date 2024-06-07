@@ -1,0 +1,19 @@
+{
+  "name": "steamboxchat",
+  "short_name": "steambox",
+  "description": "Multiagent for WhatsApp Business",
+  "icons": [
+   
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image\/png"
+    }
+  ],
+  "background_color": "white",
+  "theme_color": "white",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "../../admin.php",
+  "scope": "../../"
+}

@@ -991,7 +991,7 @@ function sb_js_admin()
         messenger: "' . (defined("SB_MESSENGER") ? SB_MESSENGER : -1) . '",
         whatsapp: "' . (defined("SB_WHATSAPP") ? SB_WHATSAPP : -1) . '",
         whatsmeow: "' . (defined("SB_WHATSMEOW") ? SB_WHATSMEOW : -1) . '",
-        waweb: "' . (defined("SB_WAWEB") ? SB_WAwEB : -1) . '",
+        waweb: "' . (defined("SB_WAWEB") ? SB_WAWEB : -1) . '",
         telegram: "' . (defined("SB_TELEGRAM") ? SB_TELEGRAM : -1) . '",
         gbm: "' . (defined("SB_GBM") ? SB_GBM : -1) . '"
     };';
