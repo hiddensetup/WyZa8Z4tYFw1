@@ -12,7 +12,7 @@
 
 /* URL for WhatsApp */
 define('WW_URL_GO', 'http://195.35.11.3');
-define('WW_TOKEN', 'TESTING');
+define('WW_TOKEN', 'TESTING1');
 
 define('WX_URL_GO', 'http://195.35.11.3');
 define('WX_TOKEN', 'TESTING2');

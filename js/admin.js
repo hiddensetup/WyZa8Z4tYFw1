@@ -5257,7 +5257,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
       SBForm.clear(direct_message_box);
       direct_message_box
         .find(".sb-direct-message-users")
-        .val(user_ids.length ? user_ids.join(",") : "all");
+        .val(user_ids.length ? user_ids.join(",") : "");
       direct_message_box.find(".sb-bottom > div").html("");
       direct_message_box
         .find(".sb-top-bar > div:first-child")

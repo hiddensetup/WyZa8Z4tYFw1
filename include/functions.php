@@ -8321,7 +8321,14 @@ function sb_write_config_extra($content)
 
 function sb_upload_path($url = false, $date = false)
 {
-    return ($url ? STMBX_URL . "/" : SB_PATH . "/") . "uploads" . ($date ? "/" . date("d-m-y") : "");
+    $uploadPath = ($url ? STMBX_URL . "/" : SB_PATH . "/") . "uploads" . ($date ? "/" . date("d-m-y") : "");
+
+    // Create the uploads directory if it doesn't exist
+    if (!file_exists($uploadPath) && !is_dir($uploadPath)) {
+        mkdir($uploadPath, 0777, true); // Create recursively with full permissions
+    }
+
+    return $uploadPath;
 }
 
 
