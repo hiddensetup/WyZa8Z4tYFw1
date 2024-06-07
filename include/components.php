@@ -584,7 +584,7 @@ function sb_direct_message_box()
 
 
         <div class="sb-main sb-scroll-area">
-            <p style="margin: 10px;"> <?php sb_e('Enter user IDs separated by commas.') ?> </p>
+            <p style="margin: 5px 0px;"> <?php sb_e('Enter user IDs separated by commas.') ?> </p>
             <div class="sb-input-setting sb-type-text sb-first" style="display: flex;flex-direction: column;">
                 <input class="sb-direct-message-users" type="text" name="user_ids" placeholder="<?php sb_e('User IDs separated by commas') ?>">
                 <div class="sb-selector">
@@ -613,7 +613,7 @@ function sb_direct_message_box()
             <div class="sb-input-setting sb-type-textarea sb-direct-message-hide">
                 <textarea style="height:200px" name="message" placeholder="<?php sb_e('Write your message here...') ?>" required></textarea>
             </div>
-            <div id="form-container" style="display: flex;flex-direction: column;padding:5px 10px 20px 10px;width: calc(100% - 21px);" class="sb-bulk-sender sb-additional-details sb-hide">
+            <div id="form-container" style="display: flex;flex-direction: column;padding:5px 10px 10px 10px;width: calc(100% - 21px);" class="sb-bulk-sender sb-additional-details sb-hide">
                 <form id="user-template-form">
                     <div class="sb-input-setting" style="gap:10px;display:flex;">
                         <select class="Language" name="Language" required>
@@ -639,13 +639,11 @@ function sb_direct_message_box()
                         <div class='variables'>
                             <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
                         </div>
-                        <div style="display: flex;justify-content: flex-start;margin: 10px;gap: 5px;align-items: center;">
-                            <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn">- <?php sb_e('Delete') ?></a>
-                            <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn">+ <?php sb_e('Add') ?></a>
+                        <div style="display: flex;justify-content: flex-start;margin: 1px;gap: 5px;align-items: center;">
+                            <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn"><i class="bi bi-dash-lg"></i></a>
+                            <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn"><i class="bi bi-plus-lg"></i></a>
                         </div>
                     </div>
-
-
                     <div class="sb-bottom send-meta">
                         <button class="sb-btn sb-icon sb-send-direct-message" style="width:fit-content;border: none;text-align: end;">
                             <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>

@@ -5216,7 +5216,7 @@ BODY
 
     .sb-main {
         display: block;
-        padding:10px 20px 40px 20px;
+        padding: 20px 20px 40px 20px;
         justify-content: space-between;
         height: calc(100% - 165px);
 
@@ -5228,7 +5228,7 @@ BODY
         >.sb-title+*,
         >div>.sb-title+*,
         p+.sb-title {
-            margin-top: 15px;
+            margin-top: 10px;
 
             *:first-child {
                 margin-top: 0;
@@ -5237,11 +5237,11 @@ BODY
 
         >.sb-input-setting+.sb-title,
         >div>.sb-input-setting+.sb-title {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         p {
-            font-size: var(--chat-text-size-8);
+            font-size: var(--chat-text-size-9);
             line-height: 24px;
             letter-spacing: 0.3px;
             margin: 0;
