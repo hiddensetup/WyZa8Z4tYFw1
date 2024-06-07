@@ -46,7 +46,7 @@ function sb_profile_box()
                         $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('wx')">
-                                <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp Web'); ?>
+                                <?php sb_e('<i class="sb-start-conversation bi-whatsapp"></i> WhatsApp Web'); ?>
                             </li>
                         <?php endif; ?>
 
