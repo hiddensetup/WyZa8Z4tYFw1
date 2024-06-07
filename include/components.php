@@ -23,7 +23,7 @@ function sb_profile_box()
                     <ul id="getSource" class="desktop-dropmod">
 
 
-                        <?php include SB_PATH . "/apps/" . $sb_apps[3] . "/functions.php";
+                        <?php include SB_PATH . "/apps/" . $sb_apps[0] . "/functions.php";
                         $cloud_active = sb_get_multi_setting('whatsapp-cloud', 'cloud-active'); ?>
                         <?php if ($cloud_active) : ?>
                             <li class="sb-start-conversation" onclick="updateSource('wa')">
@@ -35,14 +35,14 @@ function sb_profile_box()
                         <li class="sb-start-tk-conversation" onclick="updateSource('tk')">
                             <?php sb_e('<i class="bi-chat-text"></i> Live chat') ?>
                         </li>
-                        <?php include SB_PATH . "/apps/" . $sb_apps[4] . "/functions.php";
+                        <?php include SB_PATH . "/apps/" . $sb_apps[1] . "/functions.php";
                         $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('ww')">
-                                <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp'); ?>
+                                <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp QR'); ?>
                             </li>
                         <?php endif; ?>
-                        <?php include SB_PATH . "/apps/" . $sb_apps[4] . "/functions.php";
+                        <?php include SB_PATH . "/apps/" . $sb_apps[2] . "/functions.php";
                         $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('wx')">
@@ -1172,13 +1172,13 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WAWEB', 'waweb', '<i class="bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
         ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
-        ['SB_MESSENGER', 'messenger', '`<i class="bi-messenger"></i>` Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Steamboxchat.'],
+        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Steamboxchat.'],
         ['SB_TICKETS', 'tickets', 'Tickets', 'Provide help desk support to your customers by including a ticket area, with all chat features included, on any web page in seconds.'],
     ];
     $logged = $active_user && sb_is_agent($active_user);
@@ -1848,23 +1848,33 @@ function sb_users_table_extra_fields()
         }
         echo $code;
     }
-}
-function sb_conversations_filter()
+}function sb_conversations_filter()
 {
+    // Verificar si los filtros están deshabilitados
     if (!sb_get_setting('disable-filters')) return;
+    
+    // Obtener los departamentos y contar cuántos hay
     $departments = sb_get_setting('departments');
     $count = is_array($departments) ? count($departments) : 0;
-    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '"><p><i class="bi-building"></i>' . ' &nbsp;' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;"><li data-value=""><i class="bi-arrow-clockwise"></i>' . '&nbsp;' . sb_('All departments') . '</li><hr>';
+    
+    // Generar el botón de filtro y la lista de departamentos
+    $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '">';
+    $code .= '<p><i class="bi-building"></i> &nbsp;' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;">';
+    $code .= '<li data-value=""><i class="bi-arrow-clockwise"></i> &nbsp;' . sb_('All departments') . '</li><hr>';
+    
+    // Añadir cada departamento a la lista
     for ($i = 0; $i < $count; $i++) {
-        $code .= '<li data-value="' . $departments[$i]['department-id'] . '"><i class="bi bi-diagram-3-fill"></i>' . '&nbsp; ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<li data-value="' . $departments[$i]['department-id'] . '">';
+        $code .= '<i class="bi bi-diagram-3-fill"></i> &nbsp; ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
-
+    
+    // Definir los canales de comunicación
     $sources = [
-        ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
-        ['wx', 'WhatsApp', 'SB_WAWEB', 'bi-whatsapp'], // WhatsApp QR
         ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
-        ['tk', 'Live Chat', true, 'bi-chat-dots'], // Tickets
+        ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
+        ['wx', 'WhatsApp', 'SB_WAWEB', 'bi-whatsapp'], // WhatsApp Web
+        ['tk', 'Live Chat', true, 'bi-chat-dots'], // Live Chat
         ['tg', 'Telegram', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
         ['fb', 'Messenger', 'SB_MESSENGER', 'bi-messenger'], // Messenger
         ['ig', 'Instagram', 'SB_MESSENGER', 'bi-instagram'], // Instagram
@@ -1874,23 +1884,24 @@ function sb_conversations_filter()
         ['tm', 'SMS', false, ''] // SMS (no icon provided)
     ];
     
-    $code .= '<div class="sb-select"><p><i class="bi-collection"></i><span>' . '&nbsp; ' . sb_('All channels') . '</span></p><ul style="min-width: 8rem;max-height: none;"><li data-value=""><i class="bi-arrow-clockwise"></i>' . '&nbsp;' . sb_('All channels') . '</li><hr>';
+    // Generar la lista de canales de comunicación
+    $code .= '<div class="sb-select"><p><i class="bi-collection"></i><span> &nbsp; ' . sb_('All channels') . '</span></p><ul style="min-width: 8rem;max-height: none;">';
+    $code .= '<li data-value=""><i class="bi-arrow-clockwise"></i> &nbsp;' . sb_('All channels') . '</li><hr>';
     
+    // Añadir cada canal a la lista
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {
-            $icon_class = $sources[$i][3]; // Get the icon class
-            $icon_html = $icon_class ? '<i class="bi ' . $icon_class . '"></i>' : ''; // Generate icon HTML if icon class is provided
-            $channel_name = '<span>' . $sources[$i][1] . '</span>'; // Wrap channel name in <span> tags
-            $style = $sources[$i][1] === 'WhatsApp' ? 'style="visibility: visible;"' : ''; // Add inline style to override visibility property for WhatsApp channel
-            $code .= '<li data-value="' . $sources[$i][0] . '"' . $style . '>' . $icon_html .' &nbsp;'. $channel_name . '</li>';
+            $icon_class = $sources[$i][3]; // Obtener la clase del icono
+            $icon_html = $icon_class ? '<i class="bi ' . $icon_class . '"></i>' : ''; // Generar HTML del icono si se proporciona la clase del icono
+            $channel_name = '<span>' . $sources[$i][1] . '</span>'; // Envolver el nombre del canal en etiquetas <span>
+            $style = $sources[$i][1] === 'WhatsApp' ? 'style="visibility: visible;"' : ''; // Agregar estilo en línea para anular la propiedad de visibilidad para el canal de WhatsApp
+            $code .= '<li data-value="' . $sources[$i][0] . '"' . $style . '>' . $icon_html . ' &nbsp;' . $channel_name . '</li>';
         }
     }
     
     $code .= '</ul></div>';
+    $code .= '</div></div>';
     
-    echo $code . '</div></div>';
+    echo $code;
 }
-
-
-
 ?>
