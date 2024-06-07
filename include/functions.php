@@ -88,7 +88,7 @@ $sb_apps = [
     // "messenger",
     "whatsapp",
     "whatsmeow",
-    "waQR",
+    "waweb",
     "telegram",
     "twitter",
     "gbm",
@@ -991,7 +991,7 @@ function sb_js_admin()
         messenger: "' . (defined("SB_MESSENGER") ? SB_MESSENGER : -1) . '",
         whatsapp: "' . (defined("SB_WHATSAPP") ? SB_WHATSAPP : -1) . '",
         whatsmeow: "' . (defined("SB_WHATSMEOW") ? SB_WHATSMEOW : -1) . '",
-        waQR: "' . (defined("SB_WAQR") ? SB_WAQR : -1) . '",
+        waweb: "' . (defined("SB_WAWEB") ? SB_WAwEB : -1) . '",
         telegram: "' . (defined("SB_TELEGRAM") ? SB_TELEGRAM : -1) . '",
         gbm: "' . (defined("SB_GBM") ? SB_GBM : -1) . '"
     };';
@@ -10009,7 +10009,7 @@ function sb_messaging_platforms_send_message(
                 $attachments,
             ); 
             case "wx":
-                return sb_waQR_send_message(
+                return sb_waweb_send_message(
                     $platform_value
                         ? $platform_value
                         : sb_get_user_extra($user_id, "phone"),

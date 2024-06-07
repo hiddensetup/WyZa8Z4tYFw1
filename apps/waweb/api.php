@@ -11,7 +11,7 @@ if (function_exists('fastcgi_finish_request')) {
 try {
     if (!empty($_POST['Chat'])) {
         require('../../include/functions.php');
-        if (empty(sb_get_multi_setting('waQR-go', 'waQR-go-active'))) {
+        if (empty(sb_get_multi_setting('waweb-go', 'waweb-go-active'))) {
             die();
         }
 
@@ -24,19 +24,19 @@ try {
 
         $GLOBALS['SB_FORCE_ADMIN'] = true;
 
-        $adminPhone      = sb_get_multi_setting('waQR-go', 'waQR-go-phone');
-        $phone           = '+' . api_waQR_parse_phone($response['Chat']);
-        $senderPhone = '+' . api_waQR_parse_phone($response['Sender']);
+        $adminPhone      = sb_get_multi_setting('waweb-go', 'waweb-go-phone');
+        $phone           = '+' . api_waweb_parse_phone($response['Chat']);
+        $senderPhone = '+' . api_waweb_parse_phone($response['Sender']);
         $isAdmnAnswer =  false;
         $user_id         = false;
         $conversation_id = false;
         if ($senderPhone == $adminPhone) {
             $isAdminAnswer = true;
-            $phone         = '+' . api_waQR_parse_phone($response['Chat']);
+            $phone         = '+' . api_waweb_parse_phone($response['Chat']);
         }
 
         $user            = sb_get_user_by('phone', $phone);
-        $department      = sb_get_setting('waQR-department');
+        $department      = sb_get_setting('waweb-department');
         $payload = array('isGroup' => !empty($_POST['isGroup']) ? true : false,);
         $message         = $response['Conversation'] != '' ? $response['Conversation'] : $response['Caption'];
 
@@ -55,7 +55,7 @@ try {
             $user          = sb_get_user($user_id);
         } else {
             $user_id         = $user['id'];
-            $conversation_id = sb_waQR_get_conversation_id($user_id);
+            $conversation_id = sb_waweb_get_conversation_id($user_id);
         }
 
         $GLOBALS['SB_LOGIN'] = $user;
@@ -105,20 +105,20 @@ try {
 
         $GLOBALS['SB_FORCE_ADMIN'] = false;
     }
-    echo "api waQR";
+    echo "api waweb";
 } catch (Throwable $e) {
     var_dump($e);
 }
 
 
-function sb_waQR_get_conversation_id($user_id)
+function sb_waweb_get_conversation_id($user_id)
 {
     return sb_isset(sb_db_get('SELECT id FROM sb_conversations WHERE source = "wx" AND user_id = ' . $user_id . ' ORDER BY id DESC LIMIT 1'), 'id');
 }
 
 
 
-function api_waQR_parse_phone($jid)
+function api_waweb_parse_phone($jid)
 {
     // Split the string using either ':' or '@' as delimiters
     $phone_parts = preg_split('/[:@]/', $jid);

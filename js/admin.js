@@ -1067,7 +1067,7 @@
     },
 
 
-    waqr: {
+    waweb: {
       check: function (conversation) {
         return conversation.get("source") == "wx";
       },
@@ -1082,7 +1082,7 @@
       ) {
         SBF.ajax(
           {
-            function: "waQR-send-message",
+            function: "waweb-send-message",
             to: to,
             message: message,
             attachments: attachments,
@@ -1223,7 +1223,7 @@
         case "telegram":
         case "messenger":
         case "whatsapp":
-        case "waqr":
+        case "waweb":
         case "whatsmeow":
         case "dialogflow":
         case "sb":
@@ -5489,7 +5489,7 @@ populate: function (user, profile_area) {
       const sourceLabels = {
         fb: "Facebook",
         ww: "Whatsmeow",
-        wx: "WhatApp Web",        
+        wx: "waweb",        
         wa: "WhatsApp",
         tm: "Text message",
         ig: "Instagram",
@@ -5809,7 +5809,7 @@ updateLabel: function (label) {
         case "os":
         case "conversation-source":
           image = value.toLowerCase();
-          value = `<select style="width:102px;background: transparent;border-color: transparent;" id="change-conversation-source">
+          value = `<select disabled style="width:102px;background: transparent;border-color: transparent;" id="change-conversation-source">
                                 <option  value="tk" ${
                                   value == "Tickets" ? "selected" : ""
                                 } value>Live Chat</option>
@@ -5817,11 +5817,11 @@ updateLabel: function (label) {
                                   value == "Whatsmeow" ? "selected" : ""
                                 } value>WhatsApp QR</option>
                                 <option value="wx" ${
-                                  value == "waQR" ? "selected" : ""
+                                  value == "waweb" ? "selected" : ""
                                 } value>WhatsApp Web</option>                                
                                 <option value="wa" ${
                                   value == "WhatsApp" ? "selected" : ""
-                                } value>WhatsApp</option>
+                                } value>WhatsApp API</option>
                                 <option   hidden value="tg" ${
                                   value == "Telegram" ? "selected" : ""
                                 } value>Telegram</option>
@@ -7117,14 +7117,14 @@ updateLabel: function (label) {
       var ratequs = SBF.get_value(
         SBF.admin_set("rate-and-review")["rate-review"]
       );
-      if (SBApps.waqr.check(conversation)) {
+      if (SBApps.waweb.check(conversation)) {
         const messageId = response.message_id;
 
         if (response.message == "[rating]") {
           response.message = ratequs;
         }
 
-        SBApps.waqr.send(
+        SBApps.waweb.send(
           SBApps.whatsapp.activeUserPhone(user),
           response.message,
           response.attachments,
@@ -7563,7 +7563,7 @@ $(".bi-search").click(function () {
         let source = $(this).find("option:selected").html().toLowerCase();
 
         if (
-          (source == "whatsapp" || source == "whatsmeow" || source == "waqr") &&
+          (source == "whatsapp" || source == "whatsmeow" || source == "waweb") &&
           activeUser().getExtra("phone")
         ) {
           // window.open('https://wa.me/' + SBApps.whatsapp.activeUserPhone());
@@ -8553,7 +8553,7 @@ $(".bi-search").click(function () {
           : type == "sms"
           ? [
               "whatsmeow-send-message",
-              "waQR-send-message",
+              "waweb-send-message",
               "messages",
               " with a phone number",
               "direct-sms",
@@ -9139,13 +9139,13 @@ function handleWhatsmeowButtonClick(event, action) {
 
 
 
-//WAQR
-function handleWaQRButtonClick(event, action) {
+//WAWEB
+function handlewawebButtonClick(event, action) {
 	event.preventDefault();
 
 	// console.log(`Handling ${action} button click.`);
 
-	let inputSelector = "#waQR-go-qr input";
+	let inputSelector = "#waweb-go-qr input";
 	let qrInput = settings_area.find(inputSelector).val();
 	let url = action === "start" ? "/get_wx.php?qrurl=" : "/reset_wx.php";
 
@@ -9198,10 +9198,10 @@ function handleWaQRButtonClick(event, action) {
 										$(this).attr("src", imageUrl).fadeIn(500);
 									});
 								} else {
-									$("#waQR-go .sb-setting-content").append(
+									$("#waweb-go .sb-setting-content").append(
 										`<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading2').show();" />`
 									);
-									$("#waQR-go .sb-setting-content").append(
+									$("#waweb-go .sb-setting-content").append(
 										'<div id="qr_loading2" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
 									);
 								}
@@ -9272,18 +9272,18 @@ function handleWaQRButtonClick(event, action) {
     // Event handler for the start button
     $(settings_area).on(
       "click",
-      "#waQR-go-start .sb-btn",
+      "#waweb-go-start .sb-btn",
       function (event) {
-        handleWaQRButtonClick(event, "start");
+        handlewawebButtonClick(event, "start");
       }
     );
 
     // Event handler for the restart button
     $(settings_area).on(
       "click",
-      "#waQR-go-restart .sb-btn",
+      "#waweb-go-restart .sb-btn",
       function (event) {
-        handleWaQRButtonClick(event, "restart");
+        handlewawebButtonClick(event, "restart");
       }
     );
 

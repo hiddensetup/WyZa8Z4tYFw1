@@ -1,7 +1,7 @@
 <?php
-define('SB_WAQR', 'Go');
+define('SB_WAWEB', 'Go');
 
-function sb_waQR_send_message($to, $message = '', $attachments = [])
+function sb_waweb_send_message($to, $message = '', $attachments = [])
 {
 
     // Check if the message contains "~Registro de contacto"
@@ -17,18 +17,18 @@ function sb_waQR_send_message($to, $message = '', $attachments = [])
     $merge_field = false;
 
     // Custom Messaging
-    $goproxy = !empty(sb_get_multi_setting('waQR-go', 'waQR-go-active')) && !empty(sb_get_multi_setting('waQR-go', 'waQR-go-url'));
+    $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active')) && !empty(sb_get_multi_setting('waweb-go', 'waweb-go-url'));
 
     // Security
     if (!sb_is_agent() && !sb_is_agent($user) && sb_get_active_user_ID() != sb_isset($user, 'id') && empty($GLOBALS['SB_FORCE_ADMIN'])) {
-        return new SBError('security-error', 'sb_waQR_send_message');
+        return new SBError('security-error', 'sb_waweb_send_message');
     }
 
 
     // Send the message
     if (is_string($message)) {
         $message = sb_merge_fields($message, [$user]);
-        $message = sb_waQR_rich_messages($message, ['user_id' => $user['id']]);
+        $message = sb_waweb_rich_messages($message, ['user_id' => $user['id']]);
         if ($message[1]) $attachments = $message[1];
         $message = $message[0];
     }
@@ -46,10 +46,10 @@ function sb_waQR_send_message($to, $message = '', $attachments = [])
         }
     }
     if ($goproxy) {
-        $waQRGoUrl = sb_get_multi_setting('waQR-go', 'waQR-go-url');
+        $wawebGoUrl = sb_get_multi_setting('waweb-go', 'waweb-go-url');
         $goUrl = WX_URL_GO; // Use the base URL constant
-        $port = sb_get_multi_setting('waQR-go', 'waQR-go-qr');
-        $url = $goUrl . ':' . $port . "/api/message/send?auth=" . $waQRGoUrl;
+        $port = sb_get_multi_setting('waweb-go', 'waweb-go-qr');
+        $url = $goUrl . ':' . $port . "/api/message/send?auth=" . $wawebGoUrl;
         $header = ['Content-Type: application/json'];
         $query = [
             "receiver" => $to,
@@ -73,14 +73,14 @@ function sb_waQR_send_message($to, $message = '', $attachments = [])
         return $response;
     } else {
         if ($message) {
-            $query = ['messaging_product' => 'waQR', 'recipient_type' => 'individual', 'to' => $to];
+            $query = ['messaging_product' => 'waweb', 'recipient_type' => 'individual', 'to' => $to];
         }
         return $response;
     }
 }
 
 
-function sb_waQR_rich_messages($message, $extra = false)
+function sb_waweb_rich_messages($message, $extra = false)
 {
     $shortcode = sb_get_shortcode($message);
     $attachments = false;

@@ -27,7 +27,7 @@ function sb_profile_box()
                         $cloud_active = sb_get_multi_setting('whatsapp-cloud', 'cloud-active'); ?>
                         <?php if ($cloud_active) : ?>
                             <li class="sb-start-conversation" onclick="updateSource('wa')">
-                                <?php sb_e('<i class="bi-whatsapp"></i> Meta® Cloud API') ?>
+                                <?php sb_e('<i class="bi-whatsapp"></i> WhatsApp API') ?>
                             </li>
                             <hr>
 
@@ -43,7 +43,7 @@ function sb_profile_box()
                             </li>
                         <?php endif; ?>
                         <?php include SB_PATH . "/apps/" . $sb_apps[4] . "/functions.php";
-                        $goproxy = !empty(sb_get_multi_setting('waQR-go', 'waQR-go-active')); ?>
+                        $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('wx')">
                                 <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp Web'); ?>
@@ -594,8 +594,8 @@ function sb_direct_message_box()
                     $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active'));
                     ?>
                     <?php
-                    include '/apps/waQR/functions.php';
-                    $goproxy = !empty(sb_get_multi_setting('waQR-go', 'waQR-go-active'));
+                    include '/apps/waweb/functions.php';
+                    $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active'));
                     ?>
                     <select class="sb-select" name="broadcast_type">
                         <option value="message"> <?php sb_e('Broadcast on existing chat') ?> </option>
@@ -687,7 +687,7 @@ function sb_send_template_box()
         <div class="sb-info"></div>
         <div class="sb-top-bar">
             <div>
-                <i data-value="wa" class="bi-whatsapp"></i> <span style="margin-left:5px">Meta® Cloud API </span>
+                <i data-value="wa" class="bi-whatsapp"></i> <span style="margin-left:5px">WhatsApp API </span>
             </div>
             <div>
                 <a class="sb-close sb-btn-icon">
@@ -1174,7 +1174,7 @@ function sb_component_admin()
     $apps = [
         ['SB_WHATSAPP', 'whatsapp', '<i class="bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WAQR', 'waQR', '<i class="bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
+        ['SB_WAWEB', 'waweb', '<i class="bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
         ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
         ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
         ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
@@ -1862,7 +1862,7 @@ function sb_conversations_filter()
 
     $sources = [
         ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
-        ['wx', 'WhatsApp', 'SB_WAQR', 'bi-whatsapp'], // WhatsApp QR
+        ['wx', 'WhatsApp', 'SB_WAWEB', 'bi-whatsapp'], // WhatsApp QR
         ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
         ['tk', 'Live Chat', true, 'bi-chat-dots'], // Tickets
         ['tg', 'Telegram', 'SB_TELEGRAM', 'bi-telegram'], // Telegram

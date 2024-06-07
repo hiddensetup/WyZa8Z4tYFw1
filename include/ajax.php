@@ -201,8 +201,8 @@ switch ($_POST['function']) {
         //     die(sb_json_response(sb_messenger_send_message($_POST['psid'], $_POST['facebook_page_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('metadata', []))));
     case 'whatsapp-send-message':
         die(sb_json_response(sb_whatsapp_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []), sb_post('phone_id'))));
-    case 'waQR-send-message':
-        die(sb_json_response(sb_waQR_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));
+    case 'waweb-send-message':
+        die(sb_json_response(sb_waweb_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));
     case 'whatsmeow-send-message':
             die(sb_json_response(sb_whatsmeow_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));    
     case 'whatsapp-send-template':
@@ -414,7 +414,7 @@ function sb_security()
     'whatsapp-send-message',
     'whatsapp-send-template',
     'whatsmeow-send-message',
-    'waQR-send-message',
+    'waweb-send-message',
 ],
 
     
