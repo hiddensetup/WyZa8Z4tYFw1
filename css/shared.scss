@@ -4295,7 +4295,7 @@ textarea::placeholder {
   flex-direction: row;
   gap: 20px;
   background: url(/media/whatsapp-bkg.png), var(--chat-conversation-background);
-  padding: 21px 0px 21px 0px !important;
+  padding: 10px 0 10px 0!important;
   border: 0.5px solid var(--chat-border-color);
   border-radius: var(--chat-rounded-size-8);
   margin: 5px;

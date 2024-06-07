@@ -613,7 +613,7 @@ function sb_direct_message_box()
             <div class="sb-input-setting sb-type-textarea sb-direct-message-hide">
                 <textarea style="height:200px" name="message" placeholder="<?php sb_e('Write your message here...') ?>" required></textarea>
             </div>
-            <div id="form-container" style="display: flex;flex-direction: column;padding: 10px;width: calc(100% - 21px);" class="sb-bulk-sender sb-additional-details sb-hide">
+            <div id="form-container" style="display: flex;flex-direction: column;padding:5px 10px 20px 10px;width: calc(100% - 21px);" class="sb-bulk-sender sb-additional-details sb-hide">
                 <form id="user-template-form">
                     <div class="sb-input-setting" style="gap:10px;display:flex;">
                         <select class="Language" name="Language" required>

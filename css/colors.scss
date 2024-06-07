@@ -188,7 +188,7 @@
 [data-theme="light"] {
   --chat-app-theme-color: linear-gradient(332deg, #3503ff, #7c17b8),
     linear-gradient(#25008c, transparent);
-  --chat-conversation-background: white;
+  --chat-conversation-background: #f5f7f8;
   --chat-bottom-bar-color: white;
   --chat-text-theme-background: rgb(26, 29, 34);
   --chat-app-loader-color: white;
@@ -211,7 +211,7 @@
       #dc2743 50%,
       #cc2366 75%,
       #bc1888 100%);
-  --chat-conversation-background: white;
+  --chat-conversation-background: #f5f7f8;
   --chat-bottom-bar-color: white;
   --chat-bubble-agent: rgb(9, 8, 10);
   --chat-text-bubble-agent: #ffffff;
@@ -249,7 +249,7 @@
       #251038 149.9%),
     rgb(7 15 82) -16.9%;
   --chat-app-theme-color: #5f4aff;
-  --chat-conversation-background: #181335;
+  --chat-conversation-background: #412eaf;
   --chat-bottom-bar-color: #181335;
   --chat-bubble-agent: var(--chat-app-theme-color);
   --chat-text-bubble-agent: #ffffff;
