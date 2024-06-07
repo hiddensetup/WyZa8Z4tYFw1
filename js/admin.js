@@ -8997,141 +8997,126 @@ $(".bi-search").click(function () {
 
 
 
+// WHATSMEOW
+function handleWhatsmeowButtonClick(event, action) {
+	event.preventDefault();
 
-    // WHATSMEOW
-    function handleWhatsmeowButtonClick(event, action) {
-      event.preventDefault();
+	// console.log(`Handling ${action} button click.`);
 
-      console.log(`Handling ${action} button click.`);
+	let inputSelector = "#whatsmeow-go-qr input";
+	let qrInput = settings_area.find(inputSelector).val();
+	let url = action === "start" ? "/get_ww.php?qrurl=" : "/reset_ww.php";
 
-      let inputSelector =
-        action === "start"
-          ? "#whatsmeow-go-qr input"
-          : "#whatsmeow-go-qr input";
-      let qrInput = settings_area.find(inputSelector).val();
-      let url = action === "start" ? "/get_ww.php?qrurl=" : "/reset_ww.php";
+	// console.log(`QR Input: ${qrInput}`);
+	// console.log(`URL: ${url}`);
 
-      console.log(`QR Input: ${qrInput}`);
-      console.log(`URL: ${url}`);
+	if (action === "start") {
+		fetch(STMBX_URL + url + qrInput)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Network response was not ok");
+				}
+				return response.text();
+			})
+			.then((responseText) => {
+				try {
+					let jsonResponse = JSON.parse(responseText);
+					console.log("Received JSON response:", jsonResponse);
+					if (jsonResponse.error) {
+						// console.error("Error in JSON response:", jsonResponse.error);
+						SBChat.showResponse(
+							'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+							"warning"
+						);
+					} else {
+						SBChat.showResponse(
+							'<i class="bi bi-telephone"></i> WhatsApp connected'
+						);
+					}
+				} catch (e) {
+					if (e instanceof SyntaxError) {
+						// console.log("Response is not JSON, assuming it's an image blob.");
 
-      if (action === "start") {
-        fetch(STMBX_URL + url + qrInput)
-          .then((response) => response.blob())
-          .then((imageBlob) => {
-            console.log("Fetch successful. Processing image blob.");
+						fetch(STMBX_URL + url + qrInput)
+							.then((response) => {
+								if (!response.ok) {
+									throw new Error("Network response was not ok");
+								}
+								return response.blob();
+							})
+							.then((imageBlob) => {
+								let imageUrl = URL.createObjectURL(imageBlob);
+								let qrImage = $("#qr_image1");
 
-            let imageUrl = URL.createObjectURL(imageBlob);
-            console.log(`Image URL: ${imageUrl}`);
+								if (qrImage.length) {
+									qrImage.fadeOut(500, function () {
+										$(this).attr("src", imageUrl).fadeIn(500);
+									});
+								} else {
+									$("#whatsmeow-go .sb-setting-content").append(
+										`<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
+									);
+									$("#whatsmeow-go .sb-setting-content").append(
+										'<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
+									);
+								}
+							})
+							.catch((error) => {
+								// console.error("Error during fetch:", error);
+								SBChat.showResponse(
+									'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+									"error"
+								);
+							});
 
-            let qrImage = $("#qr_image1");
+						return;
+					} else {
+						throw e;
+					}
+				}
+			})
+			.catch((error) => {
+				// console.error("Error during fetch:", error);
+				SBChat.showResponse(
+					'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+					"error"
+				);
+			});
+	} else if (action === "restart") {
+		console.log("Restarting...");
 
-            if (qrImage.length) {
-              qrImage.fadeOut(500, function () {
-                $(this).attr("src", imageUrl).fadeIn(500);
-              });
-            } else {
-              console.log("Creating new QR image element.");
-              $("#whatsmeow-go .sb-setting-content").append(
-                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
-              );
-              $("#whatsmeow-go .sb-setting-content").append(
-                '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
-              );
-            }
-          })
-          .catch((error) => {
-            console.error("Error during fetch:", error);
-          });
-      } else if (action === "restart") {
-        console.log("Restarting...");
+		$.ajax({
+			url: url,
+			method: "GET",
+			data: { qrurl: qrInput },
+			dataType: "json",
+			success: function (response) {
+				console.log("Restart successful. Response:", response);
+				SBChat.showResponse(
+					'<i style="var(--color-red)" class="bi bi-telephone-x"></i> Disconnecting from WhatsApp...'
+				);
 
-        $.ajax({
-          url: url,
-          method: "GET",
-          data: { qrurl: qrInput },
-          dataType: "json",
-          success: function (response) {
-            console.log("Restart successful. Response:", response);
-            SBChat.showResponse("Desconectando WhatsApp...");
-          },
-          error: function (xhr) {
-            console.error("Restart error. Response:", xhr.responseText);
-            SBChat.showResponse("Error...", "error");
-          },
-        });
-      }
+				// Remove the QR image if it exists
+				let qrImage = $("#qr_image1");
+				if (qrImage.length) {
+					qrImage.fadeOut(500, function () {
+						$(this).remove(); // Remove the image element
+					});
+				}
+			},
+			error: function (xhr) {
+				// console.error("Restart error. Response:", xhr.responseText);
+				SBChat.showResponse(
+					'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+					"error"
+				);
+			},
+		});
+	}
 
-      return false;
-    }
+	return false;
+}
 
-
-
-
-    //WAQR
-    function handleWaQRButtonClick(event, action) {
-      event.preventDefault();
-
-      console.log(`Handling ${action} button click.`);
-
-      let inputSelector =
-        action === "start"
-          ? "#waQR-go-qr input"
-          : "#waQR-go-qr input";
-      let qrInput = settings_area.find(inputSelector).val();
-      let url = action === "start" ? "/get_wx.php?qrurl=" : "/reset_wx.php";
-
-      console.log(`QR Input: ${qrInput}`);
-      console.log(`URL: ${url}`);
-
-      if (action === "start") {
-        fetch(STMBX_URL + url + qrInput)
-          .then((response) => response.blob())
-          .then((imageBlob) => {
-            console.log("Fetch successful. Processing image blob.");
-
-            let imageUrl = URL.createObjectURL(imageBlob);
-            console.log(`Image URL: ${imageUrl}`);
-
-            let qrImage = $("#qr_image2");
-
-            if (qrImage.length) {
-              qrImage.fadeOut(500, function () {
-                $(this).attr("src", imageUrl).fadeIn(500);
-              });
-            } else {
-              console.log("Creating new QR image element.");
-              $("#waQR-go .sb-setting-content").append(
-                `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading2').show();" />`
-              );
-              $("#waQR-go .sb-setting-content").append(
-                '<div id="qr_loading2" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);"></div></div>'
-              );
-            }
-          })
-          .catch((error) => {
-            console.error("Error during fetch:", error);
-          });
-      } else if (action === "restart") {
-        console.log("Restarting...");
-
-        $.ajax({
-          url: url,
-          method: "GET",
-          data: { qrurl: qrInput },
-          dataType: "json",
-          success: function (response) {
-            console.log("Restart successful. Response:", response);
-            SBChat.showResponse("Desconectando WhatsApp...");
-          },
-          error: function (xhr) {
-            console.error("Restart error. Response:", xhr.responseText);
-            SBChat.showResponse("Error...", "error");
-          },
-        });
-      }
-
-      return false;
-    }
 
     // Event handler for the start button
     $(settings_area).on(
@@ -9152,6 +9137,139 @@ $(".bi-search").click(function () {
     );
 
 
+
+
+//WAQR
+function handleWaQRButtonClick(event, action) {
+	event.preventDefault();
+
+	// console.log(`Handling ${action} button click.`);
+
+	let inputSelector = "#waQR-go-qr input";
+	let qrInput = settings_area.find(inputSelector).val();
+	let url = action === "start" ? "/get_wx.php?qrurl=" : "/reset_wx.php";
+
+	// console.log(`QR Input: ${qrInput}`);
+	// console.log(`URL: ${url}`);
+
+	if (action === "start") {
+		// Show loading indicator before fetch starts
+		$("#qr_loading2").show();
+
+		fetch(STMBX_URL + url + qrInput)
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Network response was not ok");
+				}
+				return response.text();
+			})
+			.then((responseText) => {
+				try {
+					let jsonResponse = JSON.parse(responseText);
+					// console.log("Received JSON response:", jsonResponse);
+					if (jsonResponse.error) {
+						// console.error("Error in JSON response:", jsonResponse.error);
+						SBChat.showResponse(
+							'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+							"warning"
+						);
+					} else {
+						SBChat.showResponse(
+							'<i class="bi bi-telephone"></i> WhatsApp connected'
+						);
+					}
+				} catch (e) {
+					if (e instanceof SyntaxError) {
+						// console.log("Response is not JSON, assuming it's an image blob.");
+
+						fetch(STMBX_URL + url + qrInput)
+							.then((response) => {
+								if (!response.ok) {
+									throw new Error("Network response was not ok");
+								}
+								return response.blob();
+							})
+							.then((imageBlob) => {
+								let imageUrl = URL.createObjectURL(imageBlob);
+								let qrImage = $("#qr_image2");
+
+								if (qrImage.length) {
+									qrImage.fadeOut(500, function () {
+										$(this).attr("src", imageUrl).fadeIn(500);
+									});
+								} else {
+									$("#waQR-go .sb-setting-content").append(
+										`<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading2').show();" />`
+									);
+									$("#waQR-go .sb-setting-content").append(
+										'<div id="qr_loading2" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
+									);
+								}
+
+								// Hide loading indicator after image load
+								$("#qr_loading2").hide();
+							})
+							.catch((error) => {
+								// console.error("Error during fetch:", error);
+								SBChat.showResponse(
+									'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+									"error"
+								);
+							});
+
+						return;
+					} else {
+						throw e;
+					}
+				}
+			})
+			.catch((error) => {
+				// console.error("Error during fetch:", error);
+				SBChat.showResponse(
+					'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+					"error"
+				);
+			})
+			.finally(() => {
+				// Ensure loading indicator is hidden on fetch completion
+				$("#qr_loading2").hide();
+			});
+	} else if (action === "restart") {
+		console.log("Restarting...");
+
+		$.ajax({
+			url: url,
+			method: "GET",
+			data: { qrurl: qrInput },
+			dataType: "json",
+			success: function (response) {
+				console.log("Restart successful. Response:", response);
+				SBChat.showResponse(
+					'<i style="var(--color-red)" class="bi bi-telephone-x"></i> Disconnecting from WhatsApp...'
+				);
+
+				// Remove the QR image if it exists
+				let qrImage = $("#qr_image2");
+				if (qrImage.length) {
+					qrImage.fadeOut(500, function () {
+						$(this).remove(); // Remove the image element
+					});
+				}
+			},
+			error: function (xhr) {
+				// console.error("Restart error. Response:", xhr.responseText);
+				SBChat.showResponse(
+					'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+					"error"
+				);
+			},
+		});
+	}
+
+	return false;
+}
+
+    // Event handler for the start button
     $(settings_area).on(
       "click",
       "#waQR-go-start .sb-btn",

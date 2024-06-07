@@ -145,7 +145,7 @@ function Metatemplate() {
 
     loadedTemplateSelect.addEventListener("change", function (event) {
       const selectedTemplate = event.target.value;
-      console.log("load template");
+      // console.log("load template");
       if (selectedTemplate in loadedTemplates) {
         const templateBody = loadedTemplates[selectedTemplate];
         const templateText = templateBody.template;
