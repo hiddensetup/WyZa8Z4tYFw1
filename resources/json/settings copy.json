@@ -1,58 +1,48 @@
 {
-  "messages": [
-    {}
-  ],
-  "automatik": [
-    {
-      "type": "repeater",
-      "id": "saved-replies",
-      "title": "Saved replies",
-      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
-      "items": [
-        {
-          "type": "text",
-          "name": "Name",
-          "id": "reply-name"
-        },
-        {
-          "type": "textarea",
-          "name": "Saved reply",
-          "id": "reply-text"
-        }
-      ]
-    },
+  "messages": [{}],
+  
+  "admin": [
     {
       "type": "multi-input",
-      "id": "welcome-message",
-      "title": "Smart routing",
-      "content": "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.",
+      "id": "chat-timetable",
+      "title": "Offline message",
+      "content": "Send a message to the user when their first message is sent outside of scheduled office hours or all agents are offline. Text formatting and merge fields are supported.",
       "value": [
         {
           "type": "checkbox",
-          "id": "welcome-active",
+          "id": "chat-timetable-active",
           "title": "Active"
         },
         {
           "type": "checkbox",
-          "id": "welcome-disable-office-hours",
-          "title": "Disable outside of office hours"
+          "id": "chat-timetable-agents",
+          "title": "Disable agents check"
+        },
+        {
+          "type": "select",
+          "id": "chat-timetable-type",
+          "title": "Message type",
+          "value": [["", "Chat message"]]
         },
         {
           "type": "textarea",
-          "id": "welcome-msg",
-          "title": "Welcome message"
-        },
-        {
-          "type": "textarea",
-          "id": "json-flow",
-          "title": "Main Flow"
-        },
-        {
-          "type": "textarea",
-          "id": "fallback-msg",
-          "title": "Fallback message"
+          "id": "chat-timetable-msg",
+          "title": "Message"
         }
       ]
+    },
+    {
+      "type": "timetable",
+      "id": "timetable",
+      "title": "Scheduled office hours",
+      "content": "Set the service hours. Messages received outside of these hours will trigger the unavailable message.",
+      "help": "#"
+    },
+    {
+      "type": "number",
+      "id": "timetable-utc",
+      "title": "UTC Offset",
+      "content": "Set the UTC offset of the office hours timetable. The correct value can be negative, and it's generated automatically once you click this input field, if it's empty."
     },
     {
       "type": "repeater",
@@ -80,61 +70,40 @@
         }
       ]
     },
+
     {
       "type": "multi-input",
-      "id": "chat-timetable",
-      "title": "Offline message",
-      "content": "Send a message to the user when their first message is sent outside of scheduled office hours or all agents are offline. Text formatting and merge fields are supported.",
+      "id": "welcome-message",
+      "title": "Smart routing",
+      "content": "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.",
       "value": [
         {
           "type": "checkbox",
-          "id": "chat-timetable-active",
+          "id": "welcome-active",
           "title": "Active"
         },
         {
           "type": "checkbox",
-          "id": "chat-timetable-agents",
-          "title": "Disable agents check"
-        },
-        {
-          "type": "select",
-          "id": "chat-timetable-type",
-          "title": "Message type",
-          "value": [
-            [
-              "",
-              "Chat message"
-            ]
-          ]
+          "id": "welcome-disable-office-hours",
+          "title": "Disable outside of office hours"
         },
         {
           "type": "textarea",
-          "id": "chat-timetable-msg",
-          "title": "Message"
+          "id": "welcome-msg",
+          "title": "Welcome message"
+        },
+        {
+          "type": "textarea",
+          "id": "fallback-msg",
+          "title": "Fallback message"
+        },
+        {
+          "type": "textarea",
+          "id": "chat-flow",
+          "title": "Additional Flows JSON"
         }
       ]
     },
-    {
-      "type": "timetable",
-      "id": "timetable",
-      "title": "Scheduled office hours",
-      "content": "Set the service hours. Messages received outside of these hours will trigger the unavailable message.",
-      "help": "#"
-    },
-    {
-      "type": "number",
-      "id": "timetable-utc",
-      "title": "UTC Offset",
-      "content": "Set the UTC offset of the office hours timetable. The correct value can be negative, and it's generated automatically once you click this input field, if it's empty."
-    },
-    {
-      "type": "",
-      "id": "",
-      "title": "",
-      "content": ""
-    }
-  ],
-  "admin": [
     {
       "type": "multi-input",
       "id": "supervisor",
@@ -184,6 +153,8 @@
         }
       ]
     },
+
+
     {
       "type": "multi-input",
       "id": "agents",
@@ -215,7 +186,43 @@
         }
       ]
     },
-    
+    {
+      "type": "repeater",
+      "id": "user-additional-fields",
+      "title": "Custom fields",
+      "content": "Add custom fields to your contacts' profile. Enter the field name and then the identifier (ID) without spaces and accents. <br><br> <em>Example of name: <br><br> Tracking number | Referral Code | Record | etc... <br><br> Example of identifiers: <br><br> tracking-number | referral-code | record </em>",
+      "items": [
+        {
+          "type": "text",
+          "name": "Name",
+          "id": "extra-field-name"
+        },
+        {
+          "type": "text",
+          "name": "Slug",
+          "id": "extra-field-slug"
+        },
+        {
+          "type": "checkbox",
+          "name": "Required",
+          "id": "extra-field-required"
+        }
+      ]
+    },
+    {
+      "type": "repeater",
+      "id": "user-table-extra-columns",
+      "title": "Users table additional columns",
+      "content": "Copy and paste the identifier you created following the previous example to create an additional column for contact data.",
+      "help": "#",
+      "items": [
+        {
+          "type": "text",
+          "name": "Name",
+          "id": "user-table-extra-slug"
+        }
+      ]
+    },
     {
       "type": "multi-input",
       "id": "close-message",
@@ -266,7 +273,6 @@
       "button-url": "#"
     }
   ],
- 
   "notifications": [
     {
       "type": "multi-input",
@@ -308,80 +314,15 @@
       "title": "Sounds for Steambox",
       "content": "Play a sound when a agent receives an incoming message or sends an outgoing message.",
       "value": [
-        [
-          "n",
-          "None"
-        ],
-        [
-          "a",
-          "All messages"
-        ],
-        [
-          "i",
-          "Incoming messages only"
-        ],
-        [
-          "c",
-          "Incoming conversations only"
-        ],
-        [
-          "ic",
-          "Incoming conversations and messages"
-        ],
-        [
-          "ag",
-          "Solo agentes"
-        ]
+        ["n", "None"],
+        ["a", "All messages"],
+        ["i", "Incoming messages only"],
+        ["c", "Incoming conversations only"],
+        ["ic", "Incoming conversations and messages"],
+        ["ag", "Solo agentes"]
       ]
     },
-    {
-      "type": "select",
-      "id": "desktop-notifications",
-      "title": "Desktop notifications",
-      "content": "Show a desktop notification when a new message is received.",
-      "value": [
-        [
-          "",
-          "Disabled"
-        ],
-        [
-          "all",
-          "Users and agents"
-        ],
-        [
-          "users",
-          "Users only"
-        ],
-        [
-          "agents",
-          "Agents only"
-        ]
-      ]
-    },
-    {
-      "type": "select",
-      "id": "flash-notifications",
-      "title": "Flash notifications",
-      "content": "Show a browser tab notification when a new message is received.",
-      "value": [
-        [
-          "",
-          "Disabled"
-        ],
-        [
-          "all",
-          "Users and agents"
-        ],
-        [
-          "users",
-          "Users only"
-        ],
-        [
-          "agents",
-          "Agents only"
-        ]
-      ]
-    },
+
     {
       "type": "multi-input",
       "id": "sms",
@@ -432,7 +373,30 @@
         }
       ]
     },
-    
+    {
+      "type": "select",
+      "id": "desktop-notifications",
+      "title": "Desktop notifications",
+      "content": "Show a desktop notification when a new message is received.",
+      "value": [
+        ["", "Disabled"],
+        ["all", "Users and agents"],
+        ["users", "Users only"],
+        ["agents", "Agents only"]
+      ]
+    },
+    {
+      "type": "select",
+      "id": "flash-notifications",
+      "title": "Flash notifications",
+      "content": "Show a browser tab notification when a new message is received.",
+      "value": [
+        ["", "Disabled"],
+        ["all", "Users and agents"],
+        ["users", "Users only"],
+        ["agents", "Agents only"]
+      ]
+    },
     {
       "type": "upload-image",
       "id": "notifications-icon",
@@ -472,22 +436,10 @@
           "id": "email-piping-port",
           "title": "Port",
           "value": [
-            [
-              110,
-              110
-            ],
-            [
-              143,
-              143
-            ],
-            [
-              993,
-              993
-            ],
-            [
-              995,
-              995
-            ]
+            [ 110, 110 ],
+            [ 143, 143 ],
+            [ 993, 993 ],
+            [ 995, 995 ]
           ]
         },
         {
@@ -623,7 +575,24 @@
     }
   ],
   "miscellaneous": [
-    
+    {
+      "type": "repeater",
+      "id": "saved-replies",
+      "title": "Saved replies",
+      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
+      "items": [
+        {
+          "type": "text",
+          "name": "Name",
+          "id": "reply-name"
+        },
+        {
+          "type": "textarea",
+          "name": "Saved reply",
+          "id": "reply-text"
+        }
+      ]
+    },
     {
       "type": "multi-input",
       "id": "pusher",
@@ -688,43 +657,6 @@
       ]
     },
     {
-      "type": "repeater",
-      "id": "user-additional-fields",
-      "title": "Custom fields",
-      "content": "Add custom fields to your contacts' profile. Enter the field name and then the identifier (ID) without spaces and accents. <br><br> <em>Example of name: <br><br> Tracking number | Referral Code | Record | etc... <br><br> Example of identifiers: <br><br> tracking-number | referral-code | record </em>",
-      "items": [
-        {
-          "type": "text",
-          "name": "Name",
-          "id": "extra-field-name"
-        },
-        {
-          "type": "text",
-          "name": "Slug",
-          "id": "extra-field-slug"
-        },
-        {
-          "type": "checkbox",
-          "name": "Required",
-          "id": "extra-field-required"
-        }
-      ]
-    },
-    {
-      "type": "repeater",
-      "id": "user-table-extra-columns",
-      "title": "Users table additional columns",
-      "content": "Copy and paste the identifier you created following the previous example to create an additional column for contact data.",
-      "help": "#",
-      "items": [
-        {
-          "type": "text",
-          "name": "Name",
-          "id": "user-table-extra-slug"
-        }
-      ]
-    },
-    {
       "type": "text",
       "id": "admin-title",
       "title": "Admin title",
@@ -744,6 +676,7 @@
       "content": "Replace the top-left brand icon on the admin area and the browser favicon.",
       "background-size": "auto 64px"
     },
+
     {
       "type": "checkbox",
       "id": "collapse",
@@ -802,14 +735,8 @@
           "id": "transcript-type",
           "title": "Type",
           "value": [
-            [
-              "csv",
-              "CSV"
-            ],
-            [
-              "txt",
-              "Text"
-            ]
+            ["csv", "CSV"],
+            ["txt", "Text"]
           ]
         },
         {
@@ -817,14 +744,8 @@
           "id": "transcript-action",
           "title": "Button action",
           "value": [
-            [
-              "download",
-              "Download"
-            ],
-            [
-              "email",
-              "Send to user's email"
-            ]
+            ["download", "Download"],
+            ["email", "Send to user's email"]
           ]
         },
         {
@@ -836,6 +757,8 @@
     }
   ],
   "chat": [
+
+
     {
       "type": "checkbox",
       "id": "front-auto-translations",
@@ -848,26 +771,11 @@
       "title": "Sounds for live chat",
       "content": "Play a sound when a user receives an incoming message or sends an outgoing message.",
       "value": [
-        [
-          "n",
-          "None"
-        ],
-        [
-          "a",
-          "All messages"
-        ],
-        [
-          "aa",
-          "Always all messages"
-        ],
-        [
-          "i",
-          "Incoming messages only"
-        ],
-        [
-          "ia",
-          "Always incoming messages only"
-        ]
+        ["n", "None"],
+        ["a", "All messages"],
+        ["aa", "Always all messages"],
+        ["i", "Incoming messages only"],
+        ["ia", "Always incoming messages only"]
       ]
     },
     {
@@ -975,6 +883,7 @@
       "title": "Dashboard display",
       "content": "Display the dashboard instead of the chat area on initialization."
     },
+
     {
       "type": "checkbox",
       "id": "disable-dashboard",
@@ -1005,6 +914,7 @@
       "title": "Hide chat if no agents online",
       "content": "Disable and hide the chat widget if all agents are offline."
     },
+
     {
       "type": "text",
       "id": "bot-name",
@@ -1036,24 +946,16 @@
       "title": "Full visitor details",
       "content": "Save useful information like user country and language also for visitors."
     },
+
     {
       "type": "select",
       "id": "registration-required",
       "title": "Require registration",
       "content": "Require the user registration or login before start a chat. To enable the login area the password field must be included.",
       "value": [
-        [
-          "",
-          "Disabled"
-        ],
-        [
-          "registration",
-          "Registration and login form"
-        ],
-        [
-          "login",
-          "Login form"
-        ]
+        ["", "Disabled"],
+        ["registration", "Registration and login form"],
+        ["login", "Login form"]
       ]
     },
     {
@@ -1062,6 +964,8 @@
       "title": "Register all visitors",
       "content": "Register all visitors automatically. When this option is not active, only the visitors that start a chat will be registered."
     },
+   
+
     {
       "type": "checkbox",
       "id": "registration-timetable",
@@ -1080,12 +984,14 @@
       "title": "Disable registration if agents online",
       "content": "Enable the registration only if all agents are offline."
     },
+
     {
       "type": "text",
       "id": "registration-link",
       "title": "Registration link",
       "content": "Redirect the user to the registration link instead of showing the registration form."
     },
+
     {
       "type": "multi-input",
       "id": "registration",
@@ -1236,934 +1142,238 @@
       "title": "Single phone country code",
       "content": "Force users to use only one phone country code.",
       "value": [
-        [
-          "",
-          ""
-        ],
-        [
-          "+1",
-          "+1"
-        ],
-        [
-          "+7",
-          "+7"
-        ],
-        [
-          "+20",
-          "+20"
-        ],
-        [
-          "+27",
-          "+27"
-        ],
-        [
-          "+30",
-          "+30"
-        ],
-        [
-          "+31",
-          "+31"
-        ],
-        [
-          "+32",
-          "+32"
-        ],
-        [
-          "+33",
-          "+33"
-        ],
-        [
-          "+34",
-          "+34"
-        ],
-        [
-          "+36",
-          "+36"
-        ],
-        [
-          "+39",
-          "+39"
-        ],
-        [
-          "+40",
-          "+40"
-        ],
-        [
-          "+41",
-          "+41"
-        ],
-        [
-          "+43",
-          "+43"
-        ],
-        [
-          "+44",
-          "+44"
-        ],
-        [
-          "+45",
-          "+45"
-        ],
-        [
-          "+46",
-          "+46"
-        ],
-        [
-          "+47",
-          "+47"
-        ],
-        [
-          "+48",
-          "+48"
-        ],
-        [
-          "+49",
-          "+49"
-        ],
-        [
-          "+51",
-          "+51"
-        ],
-        [
-          "+52",
-          "+52"
-        ],
-        [
-          "+53",
-          "+53"
-        ],
-        [
-          "+54",
-          "+54"
-        ],
-        [
-          "+55",
-          "+55"
-        ],
-        [
-          "+56",
-          "+56"
-        ],
-        [
-          "+57",
-          "+57"
-        ],
-        [
-          "+58",
-          "+58"
-        ],
-        [
-          "+60",
-          "+60"
-        ],
-        [
-          "+61",
-          "+61"
-        ],
-        [
-          "+62",
-          "+62"
-        ],
-        [
-          "+63",
-          "+63"
-        ],
-        [
-          "+64",
-          "+64"
-        ],
-        [
-          "+65",
-          "+65"
-        ],
-        [
-          "+66",
-          "+66"
-        ],
-        [
-          "+81",
-          "+81"
-        ],
-        [
-          "+82",
-          "+82"
-        ],
-        [
-          "+84",
-          "+84"
-        ],
-        [
-          "+86",
-          "+86"
-        ],
-        [
-          "+90",
-          "+90"
-        ],
-        [
-          "+91",
-          "+91"
-        ],
-        [
-          "+92",
-          "+92"
-        ],
-        [
-          "+93",
-          "+93"
-        ],
-        [
-          "+94",
-          "+94"
-        ],
-        [
-          "+95",
-          "+95"
-        ],
-        [
-          "+98",
-          "+98"
-        ],
-        [
-          "+211",
-          "+211"
-        ],
-        [
-          "+212",
-          "+212"
-        ],
-        [
-          "+213",
-          "+213"
-        ],
-        [
-          "+216",
-          "+216"
-        ],
-        [
-          "+218",
-          "+218"
-        ],
-        [
-          "+220",
-          "+220"
-        ],
-        [
-          "+221",
-          "+221"
-        ],
-        [
-          "+222",
-          "+222"
-        ],
-        [
-          "+223",
-          "+223"
-        ],
-        [
-          "+224",
-          "+224"
-        ],
-        [
-          "+225",
-          "+225"
-        ],
-        [
-          "+226",
-          "+226"
-        ],
-        [
-          "+227",
-          "+227"
-        ],
-        [
-          "+228",
-          "+228"
-        ],
-        [
-          "+229",
-          "+229"
-        ],
-        [
-          "+230",
-          "+230"
-        ],
-        [
-          "+231",
-          "+231"
-        ],
-        [
-          "+232",
-          "+232"
-        ],
-        [
-          "+233",
-          "+233"
-        ],
-        [
-          "+234",
-          "+234"
-        ],
-        [
-          "+235",
-          "+235"
-        ],
-        [
-          "+236",
-          "+236"
-        ],
-        [
-          "+237",
-          "+237"
-        ],
-        [
-          "+238",
-          "+238"
-        ],
-        [
-          "+239",
-          "+239"
-        ],
-        [
-          "+240",
-          "+240"
-        ],
-        [
-          "+241",
-          "+241"
-        ],
-        [
-          "+242",
-          "+242"
-        ],
-        [
-          "+243",
-          "+243"
-        ],
-        [
-          "+244",
-          "+244"
-        ],
-        [
-          "+245",
-          "+245"
-        ],
-        [
-          "+246",
-          "+246"
-        ],
-        [
-          "+248",
-          "+248"
-        ],
-        [
-          "+249",
-          "+249"
-        ],
-        [
-          "+250",
-          "+250"
-        ],
-        [
-          "+251",
-          "+251"
-        ],
-        [
-          "+252",
-          "+252"
-        ],
-        [
-          "+253",
-          "+253"
-        ],
-        [
-          "+254",
-          "+254"
-        ],
-        [
-          "+255",
-          "+255"
-        ],
-        [
-          "+256",
-          "+256"
-        ],
-        [
-          "+257",
-          "+257"
-        ],
-        [
-          "+258",
-          "+258"
-        ],
-        [
-          "+260",
-          "+260"
-        ],
-        [
-          "+261",
-          "+261"
-        ],
-        [
-          "+262",
-          "+262"
-        ],
-        [
-          "+263",
-          "+263"
-        ],
-        [
-          "+264",
-          "+264"
-        ],
-        [
-          "+265",
-          "+265"
-        ],
-        [
-          "+266",
-          "+266"
-        ],
-        [
-          "+267",
-          "+267"
-        ],
-        [
-          "+268",
-          "+268"
-        ],
-        [
-          "+269",
-          "+269"
-        ],
-        [
-          "+290",
-          "+290"
-        ],
-        [
-          "+291",
-          "+291"
-        ],
-        [
-          "+297",
-          "+297"
-        ],
-        [
-          "+298",
-          "+298"
-        ],
-        [
-          "+299",
-          "+299"
-        ],
-        [
-          "+350",
-          "+350"
-        ],
-        [
-          "+351",
-          "+351"
-        ],
-        [
-          "+352",
-          "+352"
-        ],
-        [
-          "+353",
-          "+353"
-        ],
-        [
-          "+354",
-          "+354"
-        ],
-        [
-          "+355",
-          "+355"
-        ],
-        [
-          "+356",
-          "+356"
-        ],
-        [
-          "+357",
-          "+357"
-        ],
-        [
-          "+358",
-          "+358"
-        ],
-        [
-          "+359",
-          "+359"
-        ],
-        [
-          "+370",
-          "+370"
-        ],
-        [
-          "+371",
-          "+371"
-        ],
-        [
-          "+372",
-          "+372"
-        ],
-        [
-          "+373",
-          "+373"
-        ],
-        [
-          "+374",
-          "+374"
-        ],
-        [
-          "+375",
-          "+375"
-        ],
-        [
-          "+376",
-          "+376"
-        ],
-        [
-          "+377",
-          "+377"
-        ],
-        [
-          "+378",
-          "+378"
-        ],
-        [
-          "+379",
-          "+379"
-        ],
-        [
-          "+380",
-          "+380"
-        ],
-        [
-          "+381",
-          "+381"
-        ],
-        [
-          "+382",
-          "+382"
-        ],
-        [
-          "+385",
-          "+385"
-        ],
-        [
-          "+386",
-          "+386"
-        ],
-        [
-          "+387",
-          "+387"
-        ],
-        [
-          "+389",
-          "+389"
-        ],
-        [
-          "+420",
-          "+420"
-        ],
-        [
-          "+421",
-          "+421"
-        ],
-        [
-          "+423",
-          "+423"
-        ],
-        [
-          "+500",
-          "+500"
-        ],
-        [
-          "+501",
-          "+501"
-        ],
-        [
-          "+502",
-          "+502"
-        ],
-        [
-          "+503",
-          "+503"
-        ],
-        [
-          "+504",
-          "+504"
-        ],
-        [
-          "+505",
-          "+505"
-        ],
-        [
-          "+506",
-          "+506"
-        ],
-        [
-          "+507",
-          "+507"
-        ],
-        [
-          "+508",
-          "+508"
-        ],
-        [
-          "+509",
-          "+509"
-        ],
-        [
-          "+590",
-          "+590"
-        ],
-        [
-          "+591",
-          "+591"
-        ],
-        [
-          "+592",
-          "+592"
-        ],
-        [
-          "+593",
-          "+593"
-        ],
-        [
-          "+594",
-          "+594"
-        ],
-        [
-          "+595",
-          "+595"
-        ],
-        [
-          "+596",
-          "+596"
-        ],
-        [
-          "+597",
-          "+597"
-        ],
-        [
-          "+598",
-          "+598"
-        ],
-        [
-          "+599",
-          "+599"
-        ],
-        [
-          "+670",
-          "+670"
-        ],
-        [
-          "+672",
-          "+672"
-        ],
-        [
-          "+673",
-          "+673"
-        ],
-        [
-          "+674",
-          "+674"
-        ],
-        [
-          "+675",
-          "+675"
-        ],
-        [
-          "+676",
-          "+676"
-        ],
-        [
-          "+677",
-          "+677"
-        ],
-        [
-          "+678",
-          "+678"
-        ],
-        [
-          "+679",
-          "+679"
-        ],
-        [
-          "+680",
-          "+680"
-        ],
-        [
-          "+681",
-          "+681"
-        ],
-        [
-          "+682",
-          "+682"
-        ],
-        [
-          "+683",
-          "+683"
-        ],
-        [
-          "+685",
-          "+685"
-        ],
-        [
-          "+686",
-          "+686"
-        ],
-        [
-          "+687",
-          "+687"
-        ],
-        [
-          "+688",
-          "+688"
-        ],
-        [
-          "+689",
-          "+689"
-        ],
-        [
-          "+690",
-          "+690"
-        ],
-        [
-          "+691",
-          "+691"
-        ],
-        [
-          "+692",
-          "+692"
-        ],
-        [
-          "+850",
-          "+850"
-        ],
-        [
-          "+852",
-          "+852"
-        ],
-        [
-          "+853",
-          "+853"
-        ],
-        [
-          "+855",
-          "+855"
-        ],
-        [
-          "+856",
-          "+856"
-        ],
-        [
-          "+870",
-          "+870"
-        ],
-        [
-          "+880",
-          "+880"
-        ],
-        [
-          "+886",
-          "+886"
-        ],
-        [
-          "+960",
-          "+960"
-        ],
-        [
-          "+961",
-          "+961"
-        ],
-        [
-          "+962",
-          "+962"
-        ],
-        [
-          "+963",
-          "+963"
-        ],
-        [
-          "+964",
-          "+964"
-        ],
-        [
-          "+965",
-          "+965"
-        ],
-        [
-          "+966",
-          "+966"
-        ],
-        [
-          "+967",
-          "+967"
-        ],
-        [
-          "+968",
-          "+968"
-        ],
-        [
-          "+970",
-          "+970"
-        ],
-        [
-          "+971",
-          "+971"
-        ],
-        [
-          "+972",
-          "+972"
-        ],
-        [
-          "+973",
-          "+973"
-        ],
-        [
-          "+974",
-          "+974"
-        ],
-        [
-          "+975",
-          "+975"
-        ],
-        [
-          "+976",
-          "+976"
-        ],
-        [
-          "+977",
-          "+977"
-        ],
-        [
-          "+992",
-          "+992"
-        ],
-        [
-          "+993",
-          "+993"
-        ],
-        [
-          "+994",
-          "+994"
-        ],
-        [
-          "+995",
-          "+995"
-        ],
-        [
-          "+996",
-          "+996"
-        ],
-        [
-          "+998",
-          "+998"
-        ],
-        [
-          "+1-242",
-          "+1-242"
-        ],
-        [
-          "+1-246",
-          "+1-246"
-        ],
-        [
-          "+1-264",
-          "+1-264"
-        ],
-        [
-          "+1-268",
-          "+1-268"
-        ],
-        [
-          "+1-284",
-          "+1-284"
-        ],
-        [
-          "+1-340",
-          "+1-340"
-        ],
-        [
-          "+1-345",
-          "+1-345"
-        ],
-        [
-          "+1-441",
-          "+1-441"
-        ],
-        [
-          "+1-473",
-          "+1-473"
-        ],
-        [
-          "+1-649",
-          "+1-649"
-        ],
-        [
-          "+1-664",
-          "+1-664"
-        ],
-        [
-          "+1-670",
-          "+1-670"
-        ],
-        [
-          "+1-671",
-          "+1-671"
-        ],
-        [
-          "+1-684",
-          "+1-684"
-        ],
-        [
-          "+1-758",
-          "+1-758"
-        ],
-        [
-          "+1-767",
-          "+1-767"
-        ],
-        [
-          "+1-784",
-          "+1-784"
-        ],
-        [
-          "+1-809",
-          "+1-809"
-        ],
-        [
-          "+1-868",
-          "+1-868"
-        ],
-        [
-          "+1-869",
-          "+1-869"
-        ],
-        [
-          "+1-876",
-          "+1-876"
-        ],
-        [
-          "+44-1481",
-          "+44-1481"
-        ],
-        [
-          "+44-1534",
-          "+44-1534"
-        ],
-        [
-          "+44-1624",
-          "+44-1624"
-        ],
-        [
-          "+358-18",
-          "+358-18"
-        ]
+        ["", ""],
+        ["+1", "+1"],
+        ["+7", "+7"],
+        ["+20", "+20"],
+        ["+27", "+27"],
+        ["+30", "+30"],
+        ["+31", "+31"],
+        ["+32", "+32"],
+        ["+33", "+33"],
+        ["+34", "+34"],
+        ["+36", "+36"],
+        ["+39", "+39"],
+        ["+40", "+40"],
+        ["+41", "+41"],
+        ["+43", "+43"],
+        ["+44", "+44"],
+        ["+45", "+45"],
+        ["+46", "+46"],
+        ["+47", "+47"],
+        ["+48", "+48"],
+        ["+49", "+49"],
+        ["+51", "+51"],
+        ["+52", "+52"],
+        ["+53", "+53"],
+        ["+54", "+54"],
+        ["+55", "+55"],
+        ["+56", "+56"],
+        ["+57", "+57"],
+        ["+58", "+58"],
+        ["+60", "+60"],
+        ["+61", "+61"],
+        ["+62", "+62"],
+        ["+63", "+63"],
+        ["+64", "+64"],
+        ["+65", "+65"],
+        ["+66", "+66"],
+        ["+81", "+81"],
+        ["+82", "+82"],
+        ["+84", "+84"],
+        ["+86", "+86"],
+        ["+90", "+90"],
+        ["+91", "+91"],
+        ["+92", "+92"],
+        ["+93", "+93"],
+        ["+94", "+94"],
+        ["+95", "+95"],
+        ["+98", "+98"],
+        ["+211", "+211"],
+        ["+212", "+212"],
+        ["+213", "+213"],
+        ["+216", "+216"],
+        ["+218", "+218"],
+        ["+220", "+220"],
+        ["+221", "+221"],
+        ["+222", "+222"],
+        ["+223", "+223"],
+        ["+224", "+224"],
+        ["+225", "+225"],
+        ["+226", "+226"],
+        ["+227", "+227"],
+        ["+228", "+228"],
+        ["+229", "+229"],
+        ["+230", "+230"],
+        ["+231", "+231"],
+        ["+232", "+232"],
+        ["+233", "+233"],
+        ["+234", "+234"],
+        ["+235", "+235"],
+        ["+236", "+236"],
+        ["+237", "+237"],
+        ["+238", "+238"],
+        ["+239", "+239"],
+        ["+240", "+240"],
+        ["+241", "+241"],
+        ["+242", "+242"],
+        ["+243", "+243"],
+        ["+244", "+244"],
+        ["+245", "+245"],
+        ["+246", "+246"],
+        ["+248", "+248"],
+        ["+249", "+249"],
+        ["+250", "+250"],
+        ["+251", "+251"],
+        ["+252", "+252"],
+        ["+253", "+253"],
+        ["+254", "+254"],
+        ["+255", "+255"],
+        ["+256", "+256"],
+        ["+257", "+257"],
+        ["+258", "+258"],
+        ["+260", "+260"],
+        ["+261", "+261"],
+        ["+262", "+262"],
+        ["+263", "+263"],
+        ["+264", "+264"],
+        ["+265", "+265"],
+        ["+266", "+266"],
+        ["+267", "+267"],
+        ["+268", "+268"],
+        ["+269", "+269"],
+        ["+290", "+290"],
+        ["+291", "+291"],
+        ["+297", "+297"],
+        ["+298", "+298"],
+        ["+299", "+299"],
+        ["+350", "+350"],
+        ["+351", "+351"],
+        ["+352", "+352"],
+        ["+353", "+353"],
+        ["+354", "+354"],
+        ["+355", "+355"],
+        ["+356", "+356"],
+        ["+357", "+357"],
+        ["+358", "+358"],
+        ["+359", "+359"],
+        ["+370", "+370"],
+        ["+371", "+371"],
+        ["+372", "+372"],
+        ["+373", "+373"],
+        ["+374", "+374"],
+        ["+375", "+375"],
+        ["+376", "+376"],
+        ["+377", "+377"],
+        ["+378", "+378"],
+        ["+379", "+379"],
+        ["+380", "+380"],
+        ["+381", "+381"],
+        ["+382", "+382"],
+        ["+385", "+385"],
+        ["+386", "+386"],
+        ["+387", "+387"],
+        ["+389", "+389"],
+        ["+420", "+420"],
+        ["+421", "+421"],
+        ["+423", "+423"],
+        ["+500", "+500"],
+        ["+501", "+501"],
+        ["+502", "+502"],
+        ["+503", "+503"],
+        ["+504", "+504"],
+        ["+505", "+505"],
+        ["+506", "+506"],
+        ["+507", "+507"],
+        ["+508", "+508"],
+        ["+509", "+509"],
+        ["+590", "+590"],
+        ["+591", "+591"],
+        ["+592", "+592"],
+        ["+593", "+593"],
+        ["+594", "+594"],
+        ["+595", "+595"],
+        ["+596", "+596"],
+        ["+597", "+597"],
+        ["+598", "+598"],
+        ["+599", "+599"],
+        ["+670", "+670"],
+        ["+672", "+672"],
+        ["+673", "+673"],
+        ["+674", "+674"],
+        ["+675", "+675"],
+        ["+676", "+676"],
+        ["+677", "+677"],
+        ["+678", "+678"],
+        ["+679", "+679"],
+        ["+680", "+680"],
+        ["+681", "+681"],
+        ["+682", "+682"],
+        ["+683", "+683"],
+        ["+685", "+685"],
+        ["+686", "+686"],
+        ["+687", "+687"],
+        ["+688", "+688"],
+        ["+689", "+689"],
+        ["+690", "+690"],
+        ["+691", "+691"],
+        ["+692", "+692"],
+        ["+850", "+850"],
+        ["+852", "+852"],
+        ["+853", "+853"],
+        ["+855", "+855"],
+        ["+856", "+856"],
+        ["+870", "+870"],
+        ["+880", "+880"],
+        ["+886", "+886"],
+        ["+960", "+960"],
+        ["+961", "+961"],
+        ["+962", "+962"],
+        ["+963", "+963"],
+        ["+964", "+964"],
+        ["+965", "+965"],
+        ["+966", "+966"],
+        ["+967", "+967"],
+        ["+968", "+968"],
+        ["+970", "+970"],
+        ["+971", "+971"],
+        ["+972", "+972"],
+        ["+973", "+973"],
+        ["+974", "+974"],
+        ["+975", "+975"],
+        ["+976", "+976"],
+        ["+977", "+977"],
+        ["+992", "+992"],
+        ["+993", "+993"],
+        ["+994", "+994"],
+        ["+995", "+995"],
+        ["+996", "+996"],
+        ["+998", "+998"],
+        ["+1-242", "+1-242"],
+        ["+1-246", "+1-246"],
+        ["+1-264", "+1-264"],
+        ["+1-268", "+1-268"],
+        ["+1-284", "+1-284"],
+        ["+1-340", "+1-340"],
+        ["+1-345", "+1-345"],
+        ["+1-441", "+1-441"],
+        ["+1-473", "+1-473"],
+        ["+1-649", "+1-649"],
+        ["+1-664", "+1-664"],
+        ["+1-670", "+1-670"],
+        ["+1-671", "+1-671"],
+        ["+1-684", "+1-684"],
+        ["+1-758", "+1-758"],
+        ["+1-767", "+1-767"],
+        ["+1-784", "+1-784"],
+        ["+1-809", "+1-809"],
+        ["+1-868", "+1-868"],
+        ["+1-869", "+1-869"],
+        ["+1-876", "+1-876"],
+        ["+44-1481", "+44-1481"],
+        ["+44-1534", "+44-1534"],
+        ["+44-1624", "+44-1624"],
+        ["+358-18", "+358-18"]
       ]
     },
     {
@@ -2228,14 +1438,8 @@
       "title": "Header type",
       "content": "Set the header appearance.",
       "value": [
-        [
-          "minimal",
-          "Minimal"
-        ],
-        [
-          "brand",
-          "Brand"
-        ]
+        ["minimal", "Minimal"],
+        ["brand", "Brand"]
       ]
     },
     {
@@ -2301,18 +1505,9 @@
           "id": "chat-button-offset-mobile",
           "title": "Apply to",
           "value": [
-            [
-              "all",
-              "All"
-            ],
-            [
-              "desktop",
-              "Only desktop"
-            ],
-            [
-              "mobile",
-              "Only mobile devices"
-            ]
+            ["all", "All"],
+            ["desktop", "Only desktop"],
+            ["mobile", "Only mobile devices"]
           ]
         }
       ]
@@ -2323,14 +1518,8 @@
       "title": "Chat position",
       "content": "Set the position of the chat widget.",
       "value": [
-        [
-          "right",
-          "Right"
-        ],
-        [
-          "left",
-          "Left"
-        ]
+        ["right", "Right"],
+        ["left", "Left"]
       ]
     }
   ]

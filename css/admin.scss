@@ -1315,8 +1315,8 @@ TABLE
 
     &.sb-active {
         display: block;
-        animation: fade-bottom 0.3s;
-        -webkit-animation: fade-bottom 0.3s;
+        animation: fade-bottom ease-in 0.3s;
+        -webkit-animation: fade-bottom ease-in 0.3s;
     }
 
     h3 {
@@ -2562,7 +2562,7 @@ BODY
                     position: absolute;
                     top: 38px;
                     left: 78px;
-                    font-weight: 200;
+                    font-weight: 300;
                     // display: none;
                     // width: 170px;
                 }
@@ -2632,7 +2632,7 @@ BODY
                     }
 
                     .sb-time {
-                        font-weight: 200;
+                        font-weight: 300;
                     }
 
                     p {
@@ -3491,8 +3491,8 @@ BODY
         z-index: 2;
 
         >span {
-            animation: fade-bottom 0.3s;
-            -webkit-animation: fade-bottom 0.3s;
+            animation: fade-bottom ease-in 0.3s;
+            -webkit-animation: fade-bottom ease-in 0.3s;
 
         }
     }
@@ -3514,8 +3514,8 @@ BODY
                     &:hover .sb-tooltip {
                         display: block;
                         opacity: 0;
-                        animation: fade-bottom 0.3s;
-                        -webkit-animation: fade-bottom 0.3s;
+                        animation: fade-bottom ease-in 0.3s;
+                        -webkit-animation: fade-bottom ease-in 0.3s;
                         animation-fill-mode: forwards;
                         animation-delay: 0.4s;
                     }
@@ -3987,7 +3987,7 @@ BODY
         font-weight: 600;
         font-size: var(--chat-text-size-9);
         line-height: 23px;
-        margin: 0 30px 15px 0;
+        margin: 0 30px 10px 0;
         display: block;
         min-width: 200px;
         letter-spacing: 0.3px;
@@ -5317,7 +5317,7 @@ BODY
     text-align: end;
     background: none !important;
     color: var(--chat-btn-background) !important;
-    font-weight: 200;
+    font-weight: 300;
     padding: 0px 10px !important;
 }
 

@@ -1421,7 +1421,7 @@ div ul.sb-menu li:hover,
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 250px;
+        min-width: 80px;
         box-shadow: 18px 16px 15px rgba(0, 0, 0, 0.06), 0 3px 15px rgba(0, 0, 0, 0.16);
         border-radius: 20px;
         letter-spacing: 0.3px;

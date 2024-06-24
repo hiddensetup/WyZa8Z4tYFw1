@@ -89,6 +89,9 @@ function sb_waweb_rich_messages($message, $extra = false)
         $shortcode_name = $shortcode['shortcode_name'];
         $message = trim(str_replace($shortcode['shortcode'], '', $message) . (isset($shortcode['title']) ? ' *' . sb_($shortcode['title']) . '*' : '') . PHP_EOL . sb_(sb_isset($shortcode, 'message', '')));
         switch ($shortcode_name) {
+            case 'image':
+                $attachments = [[$shortcode['url'], $shortcode['url']]];
+                break;
             case 'rating':
                 $message = ['type' => 'interactive', 'interactive' => [
                     'type' => 'button',

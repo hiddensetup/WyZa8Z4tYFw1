@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: application/json");
+header("Cache-Control: no-cache, must-revalidate");
 require_once('config.php');
 
 $qrurl = $_GET['qrurl'];

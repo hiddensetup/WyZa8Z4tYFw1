@@ -1599,6 +1599,9 @@ function sb_component_admin()
                                     <li id="tab-admin" class="sb-active">
                                         <i class="bi-person-fill-gear"></i> <?php sb_e('Admin') ?>
                                     </li>
+                                    <li id="tab-automatik">
+                                        <i class="bi-robot"></i> <?php sb_e('Automatik') ?>
+                                    </li>
                                     <li id="tab-notifications">
                                         <i class="bi-app-indicator"></i> <?php sb_e('Notifications') ?>
                                     </li>
@@ -1626,6 +1629,9 @@ function sb_component_admin()
                             <div class="sb-content sb-scroll-area">
                                 <div class="sb-active">
                                     <?php sb_populate_settings('admin', $sb_settings) ?>
+                                </div>
+                                <div>
+                                    <?php sb_populate_settings('automatik', $sb_settings) ?>
                                 </div>
                                 <div>
                                     <?php sb_populate_settings('notifications', $sb_settings) ?>

@@ -6553,7 +6553,7 @@ function sb_get_front_settings()
         "welcome-delay" => sb_get_multi_setting(
             "welcome-message",
             "welcome-delay",
-            2000
+            2500
         ),
         "welcome-disable-office-hours" => sb_get_multi_setting(
             "welcome-message",
@@ -9680,92 +9680,70 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
     ];
 }
 
+
 function sb_option_assign_reply($option, $conversation_id)
 {
     $opt = "option";
     $wel = "welcome";
     $reply = [];
-    foreach (sb_get_setting("welcome-message") as $replyid => $item) {
-        if ($item == $option && preg_match('/^[0-9]{2}$/', $replyid)) {
-            $reply["option"] = $item;
-            $reply["reply"] = sb_get_multi_setting(
-                "welcome-message",
-                "reply_" . $replyid
-            );
-            $reply["assign"] = sb_get_multi_setting(
-                "welcome-message",
-                "assign_" . $replyid
-            );
+
+    // Convert the input option to lowercase
+    $option = strtolower($option);
+
+    // Get the JSON flow data and decode it
+    $jsonFlow = sb_get_multi_setting("welcome-message", "json-flow");
+    $flowData = json_decode($jsonFlow, true);
+
+    if (json_last_error() === JSON_ERROR_NONE && isset($flowData['main_flow'])) {
+        foreach ($flowData['main_flow'] as $flow) {
+            foreach ($flow as $response) {
+                // Check if the provided option matches any of the responses in the JSON flow
+                if (isset($response['response']) && is_array($response['response'])) {
+                    foreach ($response['response'] as $res) {
+                        if ($option === strtolower($res)) {
+                            $reply["option"] = $res;
+                            // Handle replies as an array
+                            $replies = isset($response['replies']) ? $response['replies'] : [];
+                            $reply["reply"] = is_array($replies) ? $replies : [$replies]; // Ensure $reply["reply"] is always an array
+                            $reply["assign"] = isset($response['assign']) ? $response['assign'] : '';
+                            break 3; // Exit all loops once a match is found
+                        }
+                    }
+                }
+            }
         }
     }
 
-    //this assigned option reply
-    if (
-        sb_db_get(
-            'SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' .
-                $opt .
-                '_assigned%" AND creation_time > "' .
-                gmdate("Y-m-d H:i:s", time() - 864000) .
-                '" AND conversation_id = ' .
-                sb_db_escape($conversation_id, true)
-        )["count"] == 0
-    ) {
-        if (!empty($reply)) {
-            $message = $reply["reply"];
-            if (!empty($reply["assign"])) {
-                sb_update_conversation_department(
-                    $conversation_id,
-                    $reply["assign"],
-                    false
-                );
-                return $bot_message = [
-                    "id" => sb_send_message(
-                        sb_get_bot_id(),
-                        $conversation_id,
-                        $message,
-                        [],
-                        -1,
-                        ["option_assigned" => $option]
-                    )["id"],
-                    "message" => $message,
-                ];
-            } else {
-                sb_db_query(
-                    'UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' .
-                        $wel .
-                        '_option%" AND creation_time > "' .
-                        gmdate("Y-m-d H:i:s", time() - 864000) .
-                        '" AND conversation_id = ' .
-                        sb_db_escape($conversation_id, true)
-                );
-                return $bot_message = [
-                    "id" => sb_send_message(
-                        sb_get_bot_id(),
-                        $conversation_id,
-                        $message
-                    )["id"],
-                    "message" => $message,
-                ];
-            }
+    // Proceed with sending the appropriate reply based on matched option
+    if (!empty($reply)) {
+        // Choose a random reply from the array of replies
+        $randomIndex = array_rand($reply["reply"]);
+        $message = $reply["reply"][$randomIndex];
+
+        if (!empty($reply["assign"])) {
+            sb_update_conversation_department($conversation_id, $reply["assign"], false);
+            return [
+                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"],
+                "message" => $message,
+            ];
         } else {
-            $message = sb_get_multi_setting("welcome-message", "00");
-            return $bot_message = [
-                "id" => sb_send_message(
-                    sb_get_bot_id(),
-                    $conversation_id,
-                    $message
-                )["id"],
+            sb_db_query('UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' . $wel . '_option%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true));
+            return [
+                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
                 "message" => $message,
             ];
         }
-        $reply = [];
+    } else {
+        // If no matching option is found, send a fallback message
+        $message = sb_get_multi_setting("welcome-message", "fallback-msg");
+        return [
+            "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
+            "message" => $message,
+        ];
     }
+
     return false;
 }
-
-
-
-
 
 
 function sb_get_user_detail($conversation_id)

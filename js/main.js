@@ -129,7 +129,7 @@
             var longitude = matches[2];
             // Generate an iframe for embedding the map
             return (
-              "<iframe width='270' height='270' frameborder='0' style='border-radius:4px; border: 0; width: auto;' src='https://maps.google.com/maps?q=" +
+              "<iframe width='270' height='270' frameborder='0'  style='margin:0px -21px -4px -7px; border-radius:4px; border: 0; width: auto;' src='https://maps.google.com/maps?q=" +
               latitude +
               "," +
               longitude +
@@ -2203,54 +2203,47 @@
         attachments_code += "</div>";
       }
 
+      //   if (attachments.length) {
+      //     attachments_code = '<div style="padding-top: 0px" class="sb-message-attachments">';
+      //     for (var i = 0; i < attachments.length; i++) {
+      //         let url = attachments[i][1];
+      //         if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
+      //             // Code for image attachments
+      //         } else if (attachments[i][1].endsWith(".pdf") && window.innerWidth > 555) {
+      //             // Code for PDF attachments and screen width greater than 555 pixels
+      //             media_code += `<embed src="${url}" type="application/pdf" style="width:100%;height:500px;" />`;
+      //         } else if (
+      //             attachments.toString().substr(attachments.length - 4) === "oga" ||
+      //             attachments.toString().substr(attachments.length - 4) === "mp3" ||
+      //             attachments.toString().substr(attachments.length - 4) === "ogg" ||
+      //             attachments.toString().substr(attachments.length - 4) === "amr"
+      //         ) {
+      //             // Code for audio attachments
+      //             media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
+      //         } else if (
+      //             attachments.toString().substr(attachments.length - 4) === "mp4"
+      //         ) {
+      //             // Code for video attachments
+      //             media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+      //         } else {
+      //             // Code for other file types
+      //             media_code += `${
+      //               url
+      //                 ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
+      //                 : " "
+      //             }`;
+      //         }
+      //     }
+      //     attachments_code += "</div>";
+      // }
 
-
-
-
-
-    //   if (attachments.length) {
-    //     attachments_code = '<div style="padding-top: 0px" class="sb-message-attachments">';
-    //     for (var i = 0; i < attachments.length; i++) {
-    //         let url = attachments[i][1];
-    //         if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
-    //             // Code for image attachments
-    //         } else if (attachments[i][1].endsWith(".pdf") && window.innerWidth > 555) {
-    //             // Code for PDF attachments and screen width greater than 555 pixels
-    //             media_code += `<embed src="${url}" type="application/pdf" style="width:100%;height:500px;" />`;
-    //         } else if (
-    //             attachments.toString().substr(attachments.length - 4) === "oga" ||
-    //             attachments.toString().substr(attachments.length - 4) === "mp3" ||
-    //             attachments.toString().substr(attachments.length - 4) === "ogg" ||
-    //             attachments.toString().substr(attachments.length - 4) === "amr"
-    //         ) {
-    //             // Code for audio attachments
-    //             media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
-    //         } else if (
-    //             attachments.toString().substr(attachments.length - 4) === "mp4"
-    //         ) {
-    //             // Code for video attachments
-    //             media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
-    //         } else {
-    //             // Code for other file types
-    //             media_code += `${
-    //               url
-    //                 ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
-    //                 : " "
-    //             }`;
-    //         }
-    //     }
-    //     attachments_code += "</div>";
-    // }
-    
-
-
-      // replies whatsmeow web qr code
       var code = "";
       if (message.includes("〚")) {
         var name = activeUser().name;
         var telf = activeUser().getExtra("phone").value;
         var tel = Number(telf);
         var alt = "";
+
         if (tel > 0) {
           if (message.includes(telf)) {
             message = message.replace(telf, name);
@@ -2258,11 +2251,10 @@
             var ind = message.indexOf("}");
             message = message.substring(ind + 1);
             alt = "alt";
-            message =
-              "<bold id='sb-reply-top-name-alt'> ~Tú  </bold>" + message;
+            message = message;
           }
         } else {
-          var telf = $(document).find(
+          telf = $(document).find(
             "body > div > main > div.sb-active.sb-area-conversations > div > div.sb-user-details.sb-top > div.sb-scroll-area > div.sb-profile-list.sb-profile-list-conversation > ul > li:nth-child(8) > label"
           ).innerText;
           if (message.includes(telf)) {
@@ -2271,53 +2263,63 @@
             var ind = message.indexOf("}");
             message = message.substring(ind + 1);
             alt = "alt";
-            message =
-              "<bold id='sb-reply-top-name-alt'> ~Tú  </bold>" + message;
+            message = message;
           }
         }
+
+        // Replace the placeholder with the proper div and ID
+        message = message.replace(/<br\s*\/?>/, "");
 
         message = message.replace(
           "〚",
           alt == "alt"
-            ? `<div id='sb-reply-to-alt'>`
-            : `<div id='sb-reply-to' >`
+            ? `<div id='sb-reply-to-alt'><strong id='sb-reply-top-name-alt'>Tú</strong><br>`
+            : `<div id='sb-reply-to'><strong id='sb-reply-top-name'>${name}</strong><br>`
         );
         message = message.replace(
           "〛",
-          `</div><p class="copyTextOnClick" style='padding: 0px 4px;margin:0px;cursor:pointer;'>`
+          `</div><p style='padding: 0px 4px; margin:0px; cursor:pointer;'>`
         );
         message = message.replace(/\|(?=\n)/, `</div>`);
-        // message = message.replace(/<br\s*\/?>/g, "");
         message = message.replace(/<p\s*\/?>\s*<p\s*\/?>/g, "");
-        message = message.replace("{", "<b id='sb-reply-top-name'> ~");
-        message = message.replace("@s.whatsapp.net}", "</b>");
+        message = message.replace("{", "");
+        message = message.replace("@s.whatsapp.net}", "");
+
+        // Ensure the name is not displayed at the top of the message
+        if (message.startsWith(name)) {
+          message = message.substring(name.length).trim();
+        }
+
+        // Convert dashes with space to bullets
+
         code = `<div data-id="${
           this.details["id"]
         }" ${type} class="sb-shadow-conversation ${css}">${thumb}
-                          <div class="sb-cnt" style="min-width:80px;max-width:100%;padding:4px 4px;">
-                          <div class="sb-message" data-value="${
-                            this.linksData
-                              ? encodeURI(this.linksData.message)
-                              : encodeURI(message)
-                          }">
-            ${media_code}
-            <div style="max-width:30rem;margin:0px;text-align:start;margin:0px;cursor:pointer;" class="readThis copyTextOnClick">
-                                  ${
-                                    this.linksData
-                                      ? this.linksData.message
-                                      : message.replace(/\|/g, " ")
-                                  }
-                                  </div>
-                              </div>
-                             ${attachments_code}
-                              <div class="menu-bubble">
-                                  <div class="events"></div><div class="sb-time">
-                                  ${SBF.beautifyTime(
-                                    this.details["creation_time"],
-                                    true
-                                  )}
-                                  </div></div>
-                          </div>${admin_menu}</div>`;
+              <div class="sb-cnt" style="min-width:80px; max-width:100%; padding:4px 4px;">
+                <div class="sb-message" data-value="${
+                  this.linksData
+                    ? encodeURI(this.linksData.message)
+                    : encodeURI(message)
+                }">
+                  ${media_code}
+                  <div style="max-width:30rem; margin:0px; text-align:start; cursor:pointer;" class="readThis">
+                    ${
+                      this.linksData
+                        ? this.linksData.message
+                        : message.replace(/\|/g, " ")
+                    }
+                  </div>
+                </div>
+                ${attachments_code}
+                <div class="menu-bubble">
+                  <div class="events"></div>
+                  <div class="sb-time">
+                    ${SBF.beautifyTime(this.details["creation_time"], true)}
+                  </div>
+                </div>
+              </div>
+              ${admin_menu}
+            </div>`;
       } else {
         // MESSAGE CREATION CHAT
         code = `<div data-id="${
@@ -2333,7 +2335,7 @@
           }">
 				  ${media_code}
 				 
-				  <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" class="copyTextOnClick">
+				  <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
 					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
 				  </div>
 				</div>
@@ -2344,9 +2346,7 @@
 				  </div>
 				  ${admin_menu}
 				</div>
-				<script>
-        function copyTextToClipboard(t){navigator.clipboard.writeText(t).then((()=>{})).catch((t=>{}))}function attachCopyEventListeners(){document.querySelectorAll(".copyTextOnClick").forEach((t=>{t.addEventListener("click",(()=>{copyTextToClipboard(""+t.innerText.trim().replace(/_\s+_/g,"")+"\\n")}))}))}attachCopyEventListeners();
-				</script>
+			
 			  `;
       }
       return code;
@@ -2358,7 +2358,14 @@
       if (message === false) message = "" + this.details["message"];
       let len = message.length;
 
+      message =
+        message.replace(
+          /- /g,
+          '<li style="margin-left:5px;margin-right:0px">'
+        ) + "</li>";
+
       // Breakline
+
       message = message.replace(/(?:\r\n|\r|\n)/g, "<br>");
 
       // Code block
@@ -2384,21 +2391,27 @@
       // Italic (requires spaces around underscores)
       message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
 
-      // Strikethrough (requires spaces around tildes)
+      // Strikethrough (handles cases with or without spaces around tildes)
       message = message.replace(
-        /(^|\s)\~([^\s\~]+)\~(?=\s|$)/g,
-        "$1<del>$2</del>"
+        /(<li>\s*)?~([^~]+)~/g,
+        function (match, liPrefix, content) {
+          if (liPrefix) {
+            return `<li>${liPrefix}<del>${content}</del>`;
+          } else {
+            return `<del>${content}</del>`;
+          }
+        }
       );
 
-      // Unicode
-      let false_positives = ["cede", "ubbed", "udada", "ucced"];
-      for (var i = 0; i < false_positives.length; i++) {
-        message = message.replaceAll(false_positives[i], `SBR${i}`);
-      }
-      message = message.replace(/u([0-9a-f]{4,5})/im, "&#x$1;");
-      for (var i = 0; i < false_positives.length; i++) {
-        message = message.replaceAll(`SBR${i}`, false_positives[i]);
-      }
+      // // Unicode
+      // let false_positives = ["cede", "ubbed", "U4BEae", "UEDC72", "EAuEACd", "udada", "ucced"];
+      // for (var i = 0; i < false_positives.length; i++) {
+      //   message = message.replaceAll(false_positives[i], `SBR${i}`);
+      // }
+      // message = message.replace(/u([0-9a-f]{4,5})/im, "&#x$1;");
+      // for (var i = 0; i < false_positives.length; i++) {
+      //   message = message.replaceAll(`SBR${i}`, false_positives[i]);
+      // }
 
       // Single emoji
       if (
@@ -2421,7 +2434,10 @@
         let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
         message = message.replace(
           codePlaceholder,
-          `<pre>${inlineCodes[i].substring(1, inlineCodes[i].length - 1)}</pre>`
+          `<p style="font-family: monospace;">${inlineCodes[i].substring(
+            1,
+            inlineCodes[i].length - 1
+          )}</p>`
         );
       }
 
@@ -2449,8 +2465,11 @@
           )}</span>`
       );
 
-      return message;
-    }
+  // // Encode the message to handle special characters and ensure URL integrity
+  // message = encodeURIComponent(message);
+
+  return message;
+}
   }
 
   window.SBMessage = SBMessage;

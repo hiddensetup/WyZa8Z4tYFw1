@@ -1,0 +1,476 @@
+Array
+(
+    [ID] => 3EB0EF5942EB2829B84540
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 05:43:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0F245E98BD227EF6134
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 05:43:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0E98BB1AA2842FCA623
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 05:43:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB01DA800B586CD918242
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 05:44:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0D8FAA89C4FDB611287
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:01:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB08C7513BA43D0AEBE1F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:22:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0C066A6D832CADFB70F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:22:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0AA42DF163656AB8B63
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:24:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0702316E3840E61A751
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:24:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 2
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0F203CC8FA04DD9395E
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:24:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB032597FF58A48B44613
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:24:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 3
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB00776971AF750C27DB6
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:26:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => fffk
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0C1840E262D116E1C06
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:26:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hy
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0A38E53DCCC93D077AD
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:26:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0902DD35995C200C48A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:27:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hey
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB03898F36BA6F7FD1438
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:27:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 3
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB03D1794845170EAE908
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:31:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => sf
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0229529E8E21D3E1E0F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:31:20 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB02A5CDCA70E23B4A6DE
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:31:37 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0CFEA587A89CD2B7EF5
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:32:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB00E6C966447848CCCA2
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:32:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => rr
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB06776DD5CEEB7C44E50
+    [Chat] => 120363310593474153@g.us
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:32:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB069E65712D76050AD80
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:32:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => si
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB048F96A235ECED333A6
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:33:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0F11E17FA84169EF060
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:33:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 2
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0B31658208878729721
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:36:11 -0300 -03
+    [MediaType] => url
+    [Multicast] => false
+    [Conversation] => [image url="https://steamboxchat.com/steambox.png"]
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0FFE5390D22CB5C358B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:56:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0D8F8B6909EECFF33AB
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:63@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-06-24 06:56:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)

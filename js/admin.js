@@ -4194,6 +4194,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
 
                   // Truncate the message to prevent displaying long messages
                   let message = item["message"];
+                  
                   const MAX_CHARACTERS = 40; // Set the maximum number of characters for the message
                   if (message.length > MAX_CHARACTERS) {
                     const truncatedMessage =
@@ -4530,6 +4531,8 @@ conversations_area.find(".open-profile-name").on("click", function() {
 
       let message = conversation.message;
       let truncatedWords = [];
+
+      message = message.replace(/- /g, "• ");
 
       // Remove specified symbols from the message, including '}'
       message = message.replace(/[\[\]"\,}]/g, "");
@@ -9149,8 +9152,8 @@ function handlewawebButtonClick(event, action) {
 	let qrInput = settings_area.find(inputSelector).val();
 	let url = action === "start" ? "/get_wx.php?qrurl=" : "/reset_wx.php";
 
-	// console.log(`QR Input: ${qrInput}`);
-	// console.log(`URL: ${url}`);
+	console.log(`QR Input: ${qrInput}`);
+	console.log(`URL: ${url}`);
 
 	if (action === "start") {
 		// Show loading indicator before fetch starts
@@ -9166,9 +9169,9 @@ function handlewawebButtonClick(event, action) {
 			.then((responseText) => {
 				try {
 					let jsonResponse = JSON.parse(responseText);
-					// console.log("Received JSON response:", jsonResponse);
+					console.log("Received JSON response:", jsonResponse);
 					if (jsonResponse.error) {
-						// console.error("Error in JSON response:", jsonResponse.error);
+						console.error("Error in JSON response:", jsonResponse.error);
 						SBChat.showResponse(
 							'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
 							"warning"
@@ -9180,7 +9183,7 @@ function handlewawebButtonClick(event, action) {
 					}
 				} catch (e) {
 					if (e instanceof SyntaxError) {
-						// console.log("Response is not JSON, assuming it's an image blob.");
+						console.log("Response is not JSON, assuming it's an image blob.");
 
 						fetch(STMBX_URL + url + qrInput)
 							.then((response) => {
@@ -9210,7 +9213,7 @@ function handlewawebButtonClick(event, action) {
 								$("#qr_loading2").hide();
 							})
 							.catch((error) => {
-								// console.error("Error during fetch:", error);
+								console.error("Error during fetch:", error);
 								SBChat.showResponse(
 									'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
 									"error"
@@ -9224,7 +9227,7 @@ function handlewawebButtonClick(event, action) {
 				}
 			})
 			.catch((error) => {
-				// console.error("Error during fetch:", error);
+				console.error("Error during fetch:", error);
 				SBChat.showResponse(
 					'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
 					"error"
@@ -9257,7 +9260,7 @@ function handlewawebButtonClick(event, action) {
 				}
 			},
 			error: function (xhr) {
-				// console.error("Restart error. Response:", xhr.responseText);
+				console.error("Restart error. Response:", xhr.responseText);
 				SBChat.showResponse(
 					'<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
 					"error"

@@ -427,32 +427,40 @@
 
 #sb-reply-top-name {
   color: var(--pink-root-color);
+  font-weight: bolder;
 }
 
 #sb-reply-top-name-alt {
   color: var(--color-yellow);
+  font-weight: bolder;
 }
 
 #sb-reply-to {
   padding: 5px 10px;
   border-left: 3px solid var(--pink-root-color);
   margin-bottom: 5px;
-  font-size: var(--chat-text-size-9);
+  font-size: var(--chat-text-size-8);
   overflow: hidden;
-  max-height: 56px;
-  line-height: 28px;
-  font-style: italic;
+  max-height: 5rem;
+  border-radius: var(--chat-rounded-size-4);
+  box-shadow: var(--box-shadow-inner);
+  line-height: 20px;
+  // line-height: 28px;
+  // font-style: italic;
 }
 
 #sb-reply-to-alt {
   padding: 5px 10px;
   border-left: 3px solid var(--orange-root-color);
   margin-bottom: 5px;
-  font-size: var(--chat-text-size-9);
+  font-size: var(--chat-text-size-8);
   overflow: hidden;
-  max-height: 56px;
-  line-height: 28px;
-  font-style: italic;
+  max-height: 5rem;
+  border-radius: var(--chat-rounded-size-4);
+  box-shadow: var(--box-shadow-inner);
+  line-height: 20px;
+  // line-height: 28px;
+  // font-style: italic;
 }
 
 .sb-results-active>div {
@@ -835,6 +843,7 @@ div ul.sb-menu,
 
 .sb-list>.sb-shadow-conversation {
   box-shadow: var(--box-shadow-bubble-chat);
+  
 }
 
 .sb-list {
@@ -846,7 +855,7 @@ div ul.sb-menu,
     box-shadow: none;
     background-color: var(--chat-bubble-client);
     fill: var(--chat-bubble-client);
-    border-radius: 0rem 0.7rem 0.7rem 0.7rem;
+    border-radius: 0rem 0.6rem 0.6rem 0.6rem;
     padding: 0px;
     max-width: 30rem;
     z-index: 0;
@@ -856,7 +865,7 @@ div ul.sb-menu,
     // max-width: calc(100% - 80px);
 
     &.sb-thumb-active {
-      margin: 20px 20px 20px 50px;
+      margin: 30px 20px 40px 50px;
       //border: 0.5px solid var(--chat-btn-background);
 
       .sb-thumb {
@@ -899,15 +908,16 @@ div ul.sb-menu,
 
     &:not(.sb-right):last-child,
     >[data-id="sending"] {
-      animation: fade-bottom 0.3s;
+      animation: fade-bottom ease-in 0.3s;
     }
+
 
     &.sb-right {
       float: right;
       margin: 30px 20px 20px 30px;
       background: var(--chat-bubble-agent);
       color: var(--chat-text-bubble-agent);
-      border-radius: 0.7rem 0rem 0.7rem 0.7rem;
+      border-radius: 0.6rem 0rem 0.6rem 0.6rem;
 
       .sb-thumb {
         right: -35px;
@@ -930,9 +940,15 @@ div ul.sb-menu,
       }
 
       &.sb-thumb-active {
-        margin: 20px 50px 20px 20px;
+        margin: 20px 50px 40px 20px;
         text-align: end !important;
       }
+    }
+
+    li {
+      &::marker {
+        content: "• ";
+    }
     }
 
     .sb-info-conversation {
@@ -1630,7 +1646,7 @@ div ul.sb-menu,
       cursor: default;
       border-radius: var(--chat-rounded-size-6);
       background-color: var(--chat-app-tooltip-color);
-      font-weight: 200;
+      font-weight: 300;
       box-shadow: var(--box-shadow-bubble-chat);
       -webkit-box-shadow: var(--box-shadow-bubble-chat);
 

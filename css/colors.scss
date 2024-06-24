@@ -177,7 +177,7 @@
     0 0px 10px 0px var(--chat-border-color);
   --box-shadow-menu: 0px -1px 5px -1px rgb(0 0 0 / 20%);
   --box-shadow-bubble-chat: 0px 1px 4px -2.5px rgba(0, 0, 0, 0.57);
-  --box-shadow-inner: inset 0 0 4px -1px rgb(48 50 65 / 38%);
+  --box-shadow-inner: inset 0 0 4px 0px rgb(48 50 65 / 38%);
   --transition-3: all 2s;
   --transition-2: all 0.55s;
   --transition: all 0.25s;
@@ -205,12 +205,7 @@
 
 /* Insta theme #ffc127 */
 [data-theme="insta"] {
-  --chat-app-theme-color: linear-gradient(45deg,
-      #f09433 0%,
-      #e6683c 25%,
-      #dc2743 50%,
-      #cc2366 75%,
-      #bc1888 100%);
+  --chat-app-theme-color: linear-gradient(37deg, #ffc500 0%, #ff6b37 25%, #fe2f88 50%, #d812ab 75%, #771c7d 100%);
   --chat-conversation-background: white;
   --chat-bottom-bar-color: white;
   --chat-bubble-agent: rgb(9, 8, 10);
@@ -218,12 +213,7 @@
   --chat-text-url: #ff7a7a;
   --chat-background-image: none;
   --chat-text-theme-button: white;
-  --chat-text-theme-background: linear-gradient(45deg,
-      #f09433 0%,
-      #e6683c 25%,
-      #dc2743 50%,
-      #cc2366 75%,
-      #bc1888 100%);
+  --chat-text-theme-background: linear-gradient(37deg, #ffc500 0%, #ff6b37 25%, #fe2f88 50%, #d812ab 75%, #771c7d 100%);
 }
 
 /* steambox theme */
@@ -317,5 +307,5 @@
     0 0px 10px 0px var(--chat-border-color);
   --box-shadow-menu: 0px -1px 5px -1px var(--chat-border-color);
   --box-shadow-bubble-chat: 0px 1px 4px -2.5px var(--chat-border-color);
-  --box-shadow-inner: inset 0 0 4px -1px var(--chat-border-color);
+  --box-shadow-inner: inset 0 0 4px 0px var(--chat-border-color);
 }
