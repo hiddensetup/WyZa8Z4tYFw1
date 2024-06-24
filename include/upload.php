@@ -11,7 +11,7 @@ $allowed_extensions = array('jpg', 'jpeg', 'png', 'pdf', 'mp4', 'mp3', 'ogg', 'a
 $format = array('audio' => ['amr', 'mp3', 'ogg', 'mpeg'], 'video' => ['mp4', 'avi']);
 if (isset($_FILES['file'])) {
     if (0 < $_FILES['file']['error']) {
-        die(json_encode(['error', 'Steambox error: Error into upload.php file.']));
+        die(json_encode(['error', 'Routin.bot error: Error into upload.php file.']));
     } else {
         $file_name = htmlspecialchars(str_replace(['javascript:', 'onclick=', 'onerror=', '<script', '</script'], '', basename($_FILES['file']['name'])), ENT_NOQUOTES | ENT_SUBSTITUTE, 'utf-8');
         $infos = pathinfo($file_name);

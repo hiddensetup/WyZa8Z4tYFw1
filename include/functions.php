@@ -4,7 +4,7 @@
  * ==========================================================
  * FUNCTIONS.PHP
  * ==========================================================
- * Main PHP functions file. © 2017-2022 steambox.dev. All rights reserved.
+ * Main PHP functions file. © 2017-2022 
  */
 
 define("SB_VERSION", "2.28");
@@ -2926,7 +2926,7 @@ function sb_get_conversations_users($conversations)
                 // Include the phone number in the conversation data
                 $conversation["phone"] = ($matchingResult["source"] == 'bm' || $matchingResult["source"] == 'tg' || $matchingResult["source"] == 'tw')
                     ? ucfirst($matchingResult["phone"])
-                    : ($matchingResult["phone"] !== null ? $matchingResult["phone"] : 'Steambox');
+                    : ($matchingResult["phone"] !== null ? $matchingResult["phone"] : 'Routin');
             }
         }
     }
@@ -5912,9 +5912,9 @@ function sb_get_setting_code($setting)
             $type .
             '"><div class="sb-setting-content"><h2 class="settings-button" style="cursor: pointer;">' .
             sb_s($setting["title"]) .
-            ' <i class="bi-chevron-down settings-button" style="vertical-align: middle;"></i></h2><p class="active">' .
+            ' </h2><p class="active">' .
             sb_s($setting["content"]) .
-            (isset($setting["help"]) ? '<a href="' . $setting["help"] . '" target="_blank" style=" font-size: var(--chat-text-size-9); color: var(--pink-root-color); line-height: 0; " class="bi-info-circle"></a>' : "") .
+            (isset($setting["help"]) ? ' <a href="' . $setting["help"] . '" target="_blank" style=" font-size: var(--chat-text-size-1-0); color: var(--pink-root-color); line-height: 0; " class="bi bi-play-circle"></a>' : "") .
             '</p></div><div class="active input">';
         switch ($type) {
             case "multi-input":
@@ -7010,8 +7010,8 @@ function sb_import_settings($file_url)
  * 7. Email piping function
  * 8. Send the successfull subscription email
  * 9. Append the email header and the signature to an email content
- * 10. Convert the text formatting of Steambox to HTML
- * 11. Remove the text formatting of Steambox
+ * 10. Convert the text formatting of Routin to HTML
+ * 11. Remove the text formatting of Routin
  * 12. Newsletter
  *
  */
@@ -9077,7 +9077,7 @@ function sb_json_array($json, $default = [])
  * 10. Chat editor
  * 11. Return the position of the least occurence on left searching from right to left
  * 12. Verification cookie
- * 13. On Steambox close
+ * 13. On Routin.bot close
  * 14. Auto messages server-side execution
  * 15. Messaging platforms function
  * 16. Send a messaging platform message

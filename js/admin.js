@@ -3,7 +3,7 @@
  * ADMINISTRATION SCRIPT
  * ==========================================================
  *
- * Main Javascript admin file. © 2017-2022 Steambox. All rights reserved.
+ * Main Javascript admin file. © 2017-2022 Routin.bot. All rights reserved.
  *
  */
 "use strict";
@@ -494,7 +494,7 @@
     return false;
   }
 
-  // Steambox js translations
+  // Routin.bot js translations
   function sb_(text) {
     return SB_TRANSLATIONS && text in SB_TRANSLATIONS
       ? SB_TRANSLATIONS[text]
@@ -6120,7 +6120,7 @@ updateLabel: function (label) {
                   switch (response) {
                     case "connection-error":
                       message =
-                        "Steambox cannot connect to the database. Please check the database information and try again.";
+                        "Routin.bot cannot connect to the database. Please check the database information and try again.";
                       break;
                     case "missing-details":
                       message =
@@ -6215,7 +6215,7 @@ updateLabel: function (label) {
       })
       .get();
 
-    // On Steambox close
+    // On Routin.bot close
     $(window).on("beforeunload", function () {
       if (activeUser())
         SBF.ajax({

@@ -3182,8 +3182,8 @@ BODY
     }
 
     .sb-user-details {
-        min-width: 330px;
-        width: 330px;
+        min-width: 310px;
+        width: 310px;
         // backdrop-filter: blur(80px);
         // background-color: var(--chat-app-background);
         // background-color: var(--chat-background-menu-selected);
@@ -3225,13 +3225,15 @@ BODY
 
         .open-profile {
             display: flex;
-            flex-direction: column;
-            padding: 11px 0 21px 0;
+            flex-direction: row;
+            padding: 20px;
             border-bottom: .8px solid var(--chat-border-color);
             border-top: .8px solid var(--chat-border-color);
             transition: var(--transition);
             -webkit-transition: var(--transition);
             cursor: pointer;
+            justify-content: center;
+            align-items: center;
 
 
             &:active {
@@ -3859,7 +3861,7 @@ BODY
 .sb-input-setting {
     display: flex;
     justify-content: flex-start;
-    padding-top: 5px;
+    padding-top: 4px;
 
     >.sb-setting-content {
         max-width: 320px;
@@ -3879,7 +3881,7 @@ BODY
         font-size: var(--chat-text-size-1-0);
         margin: 0;
         color: var(--chat-text-primary);
-        padding: 5px 10px;
+        padding: 5px 0px;
         // transition:  .3s;
 
         // &:hover,
@@ -5656,7 +5658,7 @@ BODY
     // border-radius: var(--chat-rounded-size-8);
     // -webkit-box-shadow: var(--box-shadow-inner);
     // box-shadow: var(--box-shadow-inner);
-    max-width: 280px;
+    max-width: 380px;
     animation: fade-in 2s ease-in;
     -webkit-animation: fade-in 2s ease-in;
     background: var(--chat-app-background);
@@ -6880,8 +6882,8 @@ grammarly-editor-plugin {
             z-index: 5;
             top: 0;
             bottom: 0;
-            max-width: 330px;
-            min-width: 330px;
+            max-width: 310px;
+            min-width: 310px;
             display: none;
         }
 

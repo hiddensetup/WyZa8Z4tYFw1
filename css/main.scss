@@ -1427,7 +1427,7 @@ div ul.sb-menu li:hover,
         letter-spacing: 0.3px;
         padding: 15px 20px 0 20px;
         background-color: white;
-        animation: sb-popup-animation 0.5s;
+        animation: fade-in 0.5s;
 
         &:before {
             content: "";

@@ -73,7 +73,7 @@ function sb_profile_box()
                     <!-- <div><?php sb_e('Conversation history') ?></div> -->
                     <p class="profile-bubble-message">Desde aquí puedes <strong>continuar conversaciones existentes 🧑&zwj;💻</strong>. Pulsa sobre la conversación que deseas continuar (recomendado) o crea una conversación nueva pulsando <strong> + Nuevo </strong>.</p>
 
-                    <p class="profile-bubble-message"> *Ten en cuenta que en Steambox tienes la opción de generar conversaciones separadas por agente (como tickets) o continuar conversaciones existentes. El cliente siempre verá la misma conversación de WhatsApp.</p>
+                    <p class="profile-bubble-message"> *Ten en cuenta que en Routin.bot tienes la opción de generar conversaciones separadas por agente (como tickets) o continuar conversaciones existentes. El cliente siempre verá la misma conversación de WhatsApp.</p>
                 
                 </div>
                 <ul class="sb-user-conversations"></ul>
@@ -270,8 +270,8 @@ function sb_profile_edit_box()
  function displayMessage()
  {
     $jsonString = '{
-        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Steamboxchat, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
-        "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Steambox mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Steambox también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
+        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin.botchat, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
+        "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Routin.bot mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Routin.bot también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Sistema Sobrecargado! </h2><span style=\"color:var(--chat-text-primary)\">Estamos experimentando una alta demanda en nuestros servidores en este momento. Por favor, sé paciente y vuelve a intentarlo más tarde. Agradecemos tu comprensión.</span><br><br><span style=\"color:var(--chat-text-primary)\">Mientras tanto, ¿por qué no exploras otras funciones de Steambox? ¡Hay mucho por descubrir!</span>"
     }
     ';
@@ -340,7 +340,7 @@ function sb_profile_edit_box()
             <div style="margin: 0.2rem auto 1rem auto;max-width: 270px;" class="sb-info"></div>
            
             <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
-            <small>&copy; <?php echo date("Y"); ?> Steamboxchat</small>
+            <small>&copy; <?php echo date("Y"); ?> Routin.botchat</small>
 
         </div>
     </form>
@@ -357,7 +357,7 @@ function sb_profile_edit_box()
                     });
                 });
                 $('#sb-error-check').one('error', function() {
-                    // $('.sb-info').html('It looks like the chat URL has changed. Edit the config.php file(it\'s in the Steambox folder) and update the STMBX_URL constant with the new URL.').addClass('sb-active');
+                    // $('.sb-info').html('It looks like the chat URL has changed. Edit the config.php file(it\'s in the Routin.bot folder) and update the STMBX_URL constant with the new URL.').addClass('sb-active');
                 });
                 SBPusher.initServiceWorker();
             });
@@ -771,11 +771,11 @@ const updateTheme = () => {
             htmlTag.classList.remove('dark'); // Remove dark class
             break;
         case 'app':
-            newTheme = 'insta';
+            newTheme = 'routin';
             newThemeColor = 'white'; // Google theme color
             htmlTag.classList.remove('dark'); // Remove dark class
             break;
-        case 'insta':
+        case 'routin':
             newTheme = 'steambox';
             newThemeColor = ''; // Leave the color unchanged
             htmlTag.classList.remove('dark'); // Remove dark class
@@ -806,7 +806,7 @@ if (storedTheme) {
         case 'app':
             metaThemeColor.content = 'white'; // WhatsApp theme color
             break;
-        case 'insta':
+        case 'routin':
             // Leave the color unchanged
             break;
         case 'steambox':
@@ -1046,7 +1046,7 @@ function sb_routing_select($exclude_id = false)
  * INSTALLATION BOX
  * ----------------------------------------------------------
  *
- * Display the form to install Steambox
+ * Display the form to install Routin.bot
  *
  */
 
@@ -1170,13 +1170,13 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Steamboxchat.'],
-        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Steamboxchat to read and reply to all messages sent to your Telegram bot directly in Steamboxchat.'],
-        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Steamboxchat.'],
-        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Steamboxchat.'],
-        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Steamboxchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
+        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
+        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Routin.botchat to read and reply to all messages sent to your Telegram bot directly in Routin.botchat.'],
+        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Routin.botchat.'],
+        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin.botchat.'],
+        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Routin.botchat.'],
         ['SB_TICKETS', 'tickets', 'Tickets', 'Provide help desk support to your customers by including a ticket area, with all chat features included, on any web page in seconds.'],
     ];
     $logged = $active_user && sb_is_agent($active_user);
@@ -1203,9 +1203,7 @@ function sb_component_admin()
                     if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                         // Si el valor devuelto es igual al valor predeterminado, imprime el SVG directamente
                         echo '
-        <a href="https://steamboxchat.com" target="_blank"><svg class="rotimg"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 138.59" style="width: 20px;">
-            <path d="M111.26 93.48c0 24.08-17.59 45.11-53.91 45.11-25.23 0-51.81-9-57.35-35.74l35.56-11.09c.76 6.88 9.55 12 19.69 12 7.45 0 13-2.87 13-8 0-6.69-8.22-7.07-21.6-10.32C22.17 79.52 4.21 70.92 4.21 43.39 4.21 17.21 27.34 0 56.77 0c23.52 0 44.93 11.66 49.71 35.17l-35.37 8.61c-1.53-5.36-6.69-9-14-9-7.65 0-11.66 3.06-11.66 7.65 0 6.5 9.94 7.07 20.26 9.94 32.74 8.99 45.55 18.55 45.55 41.11M160 118a20.55 20.55 0 1 1-20.64-20.46A20.55 20.55 0 0 1 160 118" style="fill:var(--chat-text-primary);"></path>
-        </svg></a>';
+        <a href="#"><svg class="rotimg" version="1.1" style="width:30px;" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 387.3 339.6" xml:space="preserve"><style>.st0{fill:var(--chat-text-primary);}</style><path class="st0" d="M192.8 318.2h85.5v16.6l64.2-36.5-64.2-36.5v16.6h-85.9c-30.7 0-59.5-11.9-81.3-33.5-21.9-21.7-34-50.6-34.1-81.5-.1-26.4 8.7-51.5 24.9-72H54.6c-11.5 22-17.5 46.7-17.4 71.5 0 85.7 69.8 155.3 155.6 155.3m0-310.5H59.1l26.1 19.9-26.1 19.9h134.1c63.4 0 115.1 51.5 115.3 115 .1 26.7-9.3 53-26.2 73.6h47.8c12-22.4 18.4-47.6 18.3-73.1.1-85.7-69.8-155.3-155.6-155.3m-149.1 45"/><path class="st0" d="M231.2 180.4c6-3.4 11-8.1 14.8-14.2 4.9-7.7 7.4-16.6 7.4-26.4v-.2c0-9.9-2.2-18.6-6.5-25.7-4.3-7.3-10.6-12.9-18.7-16.8-7.8-3.8-17.3-5.7-28.1-5.7h-60.6V236h38.7v-48.4h17.5l24.9 48.4H261zm-53-56.3h18.5c5.5 0 9.7 1.4 12.8 4.2 3 2.7 4.4 6.5 4.4 11.4v.2c0 5.1-1.4 8.8-4.2 11.5-3 2.8-7.1 4.1-12.7 4.1h-18.9v-31.4z"/></svg></a>';
                     } else {
                         // Si se proporciona un valor diferente al predeterminado, muestra la imagen
                         echo '<img class="rotimg" style="position: fixed;bottom: 30px;height:30px;" src="' . $admin_icon . '" />';
@@ -1270,7 +1268,7 @@ function sb_component_admin()
                                     </p>
                                     <ul style="min-width: 8rem;max-height: none;">
                                         <li data-value="0" class="sb-active">
-                                         <i class="bi-arrow-clockwise"></i>&nbsp; <?php sb_e('Inbox') ?>
+                                         <i class="bi bi-clock-history"></i>&nbsp; <?php sb_e('Inbox') ?>
                                             <span></span>
                                         </li>
                                         <hr>
@@ -1379,6 +1377,7 @@ function sb_component_admin()
                             <div class="sb-scroll-area">
                                 <div class="close-button-div"><i class="bi-x-lg no-show sb-btn-collapse collapse"></i></div>
                                 <div class="open-profile sb-profile sb-profile-detail">
+                                <i style="font-size: var(--chat-text-size-1-3);" class="bi-pencil-square"></i>
                                     <span class="sb-name span-profile-detail"></span>
                                 </div>
                                 <?php sb_departments('custom-select'); ?>
@@ -1599,8 +1598,8 @@ function sb_component_admin()
                                     <li id="tab-admin" class="sb-active">
                                         <i class="bi-person-fill-gear"></i> <?php sb_e('Admin') ?>
                                     </li>
-                                    <li id="tab-automatik">
-                                        <i class="bi-robot"></i> <?php sb_e('Automatik') ?>
+                                    <li id="tab-automatica">
+                                        <i class="bi-robot"></i> <?php sb_e('Automatica') ?>
                                     </li>
                                     <li id="tab-notifications">
                                         <i class="bi-app-indicator"></i> <?php sb_e('Notifications') ?>
@@ -1631,7 +1630,7 @@ function sb_component_admin()
                                     <?php sb_populate_settings('admin', $sb_settings) ?>
                                 </div>
                                 <div>
-                                    <?php sb_populate_settings('automatik', $sb_settings) ?>
+                                    <?php sb_populate_settings('automatica', $sb_settings) ?>
                                 </div>
                                 <div>
                                     <?php sb_populate_settings('notifications', $sb_settings) ?>
@@ -1864,7 +1863,7 @@ function sb_users_table_extra_fields()
     // Generar el botón de filtro y la lista de departamentos
     $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '">';
     $code .= '<p><i class="bi-building"></i> &nbsp;' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;">';
-    $code .= '<li data-value=""><i class="bi-arrow-clockwise"></i> &nbsp;' . sb_('All departments') . '</li><hr>';
+    $code .= '<li data-value=""><i class="bi-clock-history"></i> &nbsp;' . sb_('All departments') . '</li><hr>';
     
     // Añadir cada departamento a la lista
     for ($i = 0; $i < $count; $i++) {
@@ -1890,7 +1889,7 @@ function sb_users_table_extra_fields()
     
     // Generar la lista de canales de comunicación
     $code .= '<div class="sb-select"><p><i class="bi-collection"></i><span> &nbsp; ' . sb_('All channels') . '</span></p><ul style="min-width: 8rem;max-height: none;">';
-    $code .= '<li data-value=""><i class="bi-arrow-clockwise"></i> &nbsp;' . sb_('All channels') . '</li><hr>';
+    $code .= '<li data-value=""><i class="bi bi-clock-history"></i> &nbsp;' . sb_('All channels') . '</li><hr>';
     
     // Añadir cada canal a la lista
     for ($i = 0; $i < count($sources); $i++) {

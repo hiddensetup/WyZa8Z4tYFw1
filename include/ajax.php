@@ -5,7 +5,7 @@
  * AJAX.PHP
  * ==========================================================
  *
- * AJAX functions. This file must be executed only via AJAX. © 2017-2022 steambox.dev. All rights reserved.
+ * AJAX functions. This file must be executed only via AJAX. © 2017-2022 Routin.bot.dev. All rights reserved.
  *
  */
 if (file_exists('../config.php')) require_once('../config.php');
@@ -278,7 +278,7 @@ switch ($_POST['function']) {
     case 'get-tags':
         die(sb_json_response(sb_tags_get()));
     default:
-        die('["error", "Steambox error [ajax.php]: No functions found with name: ' . $_POST['function'] . '."]');
+        die('["error", "Routin.bot error [ajax.php]: No functions found with name: ' . $_POST['function'] . '."]');
 }
 
 function sb_json_response($result)

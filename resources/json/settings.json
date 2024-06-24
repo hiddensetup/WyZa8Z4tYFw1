@@ -2,29 +2,11 @@
   "messages": [
     {}
   ],
-  "automatik": [
-    {
-      "type": "repeater",
-      "id": "saved-replies",
-      "title": "Saved replies",
-      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
-      "items": [
-        {
-          "type": "text",
-          "name": "Name",
-          "id": "reply-name"
-        },
-        {
-          "type": "textarea",
-          "name": "Saved reply",
-          "id": "reply-text"
-        }
-      ]
-    },
+  "automatica": [
     {
       "type": "multi-input",
       "id": "welcome-message",
-      "title": "Smart routing",
+      "title": "Routin'",
       "content": "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.",
       "value": [
         {
@@ -51,6 +33,24 @@
           "type": "textarea",
           "id": "fallback-msg",
           "title": "Fallback message"
+        }
+      ]
+    },
+    {
+      "type": "repeater",
+      "id": "saved-replies",
+      "title": "Saved replies",
+      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
+      "items": [
+        {
+          "type": "text",
+          "name": "Name",
+          "id": "reply-name"
+        },
+        {
+          "type": "textarea",
+          "name": "Saved reply",
+          "id": "reply-text"
         }
       ]
     },
@@ -136,6 +136,13 @@
   ],
   "admin": [
     {
+      "type": "upload-image",
+      "id": "admin-icon",
+      "title": "Admin icon",
+      "content": "Replace the top-left brand icon on the admin area and the browser favicon.",
+      "background-size": "auto 64px"
+    },
+    {
       "type": "multi-input",
       "id": "supervisor",
       "title": "Supervisor",
@@ -184,6 +191,33 @@
         }
       ]
     },
+    {
+      "type": "checkbox",
+      "id": "admin-auto-archive",
+      "title": "Automatically archive conversations",
+      "content": "Archive automatically the conversations marked as read every 24h."
+    },
+    {
+      "type": "checkbox",
+      "id": "disable-notes",
+      "title": "Disable notes & reminders",
+      "content": "Disable the internal notes."
+    },
+    {
+      "type": "checkbox",
+      "id": "disable-filters",
+      "title": "Enable filters",
+      "content": "Enable the conversation filters."
+    },
+    {
+      "type": "button",
+      "id": "delete-leads",
+      "title": "Delete leads",
+      "content": "Delete all leads and all messages and conversations linked to them.",
+      "button-text": "Delete leads",
+      "button-url": "#"
+    },
+   
     {
       "type": "multi-input",
       "id": "agents",
@@ -238,33 +272,8 @@
           "title": "Message"
         }
       ]
-    },
-    {
-      "type": "checkbox",
-      "id": "admin-auto-archive",
-      "title": "Automatically archive conversations",
-      "content": "Archive automatically the conversations marked as read every 24h."
-    },
-    {
-      "type": "checkbox",
-      "id": "disable-notes",
-      "title": "Disable notes & reminders",
-      "content": "Disable the internal notes."
-    },
-    {
-      "type": "checkbox",
-      "id": "disable-filters",
-      "title": "Enable filters",
-      "content": "Enable the conversation filters."
-    },
-    {
-      "type": "button",
-      "id": "delete-leads",
-      "title": "Delete leads",
-      "content": "Delete all leads and all messages and conversations linked to them.",
-      "button-text": "Delete leads",
-      "button-url": "#"
     }
+   
   ],
  
   "notifications": [
@@ -305,7 +314,7 @@
     {
       "type": "select",
       "id": "chat-sound-admin",
-      "title": "Sounds for Steambox",
+      "title": "Sounds for Routin.bot",
       "content": "Play a sound when a agent receives an incoming message or sends an outgoing message.",
       "value": [
         [
@@ -728,20 +737,13 @@
       "type": "text",
       "id": "admin-title",
       "title": "Admin title",
-      "content": "Replace the steambox brand title (browser tab name)."
+      "content": "Replace the Routin.bot brand title (browser tab name)."
     },
     {
       "type": "upload-image",
       "id": "login-icon",
       "title": "Admin login logo",
       "content": "Replace the brand logo on the admin login page.",
-      "background-size": "auto 64px"
-    },
-    {
-      "type": "upload-image",
-      "id": "admin-icon",
-      "title": "Admin icon",
-      "content": "Replace the top-left brand icon on the admin area and the browser favicon.",
       "background-size": "auto 64px"
     },
     {

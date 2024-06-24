@@ -560,13 +560,13 @@
       }
     },
 
-    // Steambox error js reporting
+    // Routin.bot error js reporting
     error: function (message, function_name) {
       if (admin && SBAdmin.is_logout) return;
       if (message instanceof Error) message = message.message;
       if (message[message.length - 1] == ".") message = message.slice(0, -1);
-      if (message.includes("Steambox error"))
-        message = message.replace("Steambox error ", "").replace("]:", "]");
+      if (message.includes("Routin.bot error"))
+        message = message.replace("Routin.bot error ", "").replace("]:", "]");
       if (
         admin &&
         message &&
@@ -582,7 +582,7 @@
         message: message,
         function_name: function_name,
       });
-      throw new Error(`Steambox error [${function_name}]: ${message}.`);
+      throw new Error(`Routin.bot error [${function_name}]: ${message}.`);
     },
 
     errorValidation: function (response, code = true) {
@@ -763,7 +763,7 @@
                   storage("double-login-alert", true);
                   alert(message);
                 }
-                console.warn("Steambox: " + message);
+                console.warn("Routin.bot: " + message);
                 SBF.event("SBDoubleLoginError");
               } else {
                 activeUser(
@@ -798,7 +798,7 @@
         this.cookie(cookies[i], "", 0, false);
       }
       try {
-        localStorage.removeItem("steambox-storage");
+        localStorage.removeItem("routin-storage");
       } catch (e) {}
       this.logout();
     },
@@ -817,7 +817,7 @@
       } catch (e) {
         return false;
       }
-      let settings = localStorage.getItem("steambox-storage");
+      let settings = localStorage.getItem("routin-storage");
       if (settings === null) {
         settings = {};
       } else {
@@ -831,7 +831,7 @@
         } else {
           settings[key] = value;
         }
-        localStorage.setItem("steambox-storage", JSON.stringify(settings));
+        localStorage.setItem("routin-storage", JSON.stringify(settings));
       }
     },
 
@@ -1101,7 +1101,7 @@
       if (script) {
         resource.src = url + "?v=" + version;
       } else {
-        resource.id = "steambox";
+        resource.id = "routin";
         resource.rel = "stylesheet";
         resource.type = "text/css";
         resource.href = url + "?v=" + version;
@@ -1703,7 +1703,7 @@
     return SBF.storage(key, value);
   }
 
-  // Steambox js translations
+  // Routin.bot js translations
   function sb_(string) {
     return SBF.translate(string);
   }
@@ -7021,7 +7021,7 @@
       for (var i = 0; i < scripts.length; i++) {
         let source = scripts[i].src;
 
-        if (scripts[i].id == "steambox") {
+        if (scripts[i].id == "routin") {
           url_full = source;
           init = init ? init : url_full.includes("init.");
           break;
@@ -7115,7 +7115,7 @@
       SBF.cookie("sb-check", "ok", 1, "set");
       if (SBF.cookie("sb-check") != "ok") {
         cookies_supported = false;
-        console.warn("Steambox: cookies not available.");
+        console.warn("Routin.bot: cookies not available.");
       } else {
         SBF.cookie("sb-check", false, false, false);
       }

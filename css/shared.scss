@@ -2285,7 +2285,7 @@ a.sb-btn {
     font-weight: 400;
     max-width: 20ch;
     letter-spacing: 0.3px;
-    margin: 18px 0px 5px 0px;
+    // margin: 18px 0px 5px 0px;
     text-align: start;
   }
 }
@@ -2892,6 +2892,9 @@ a.sb-btn {
   -webkit-box-shadow: var(--box-shadow-menu);
   transition: var(--transition);
   -webkit-transition: var(--transition);
+  animation: slideAnimation .2s ease-in;
+  -webkit-animation: slideAnimation .2s ease-in;
+  
 
 
   .sb-emoji-list {
@@ -2981,7 +2984,7 @@ a.sb-btn {
     font-weight: lighter;
     letter-spacing: 0.3px;
     font-size: var(--chat-text-size-1-2) !important;
-    line-height: 30px !important;
+    line-height: 32px !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3116,6 +3119,9 @@ div ul.sb-menu,
     font-weight: 500;
     color: var(--chat-text-primary);
 
+    i {
+      font-size:var(--chat-text-size-1-1);
+    }
     &.sb-active {
       background: var(--chat-background-menu-selected);
       // color: var(--chat-list-active-text);

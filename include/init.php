@@ -54,7 +54,7 @@ function sb_component_chat()
                     <div class="sb-content">
                         <?php if ($header_type == 'brand') echo '<div class="sb-brand"><img src="' . sb_get_setting('brand-img') . '" alt="" /></div>' ?>
                         <div class="sb-title">
-                            <?php echo sb_($header_headline ? $header_headline : 'Steambox®') ?>
+                            <?php echo sb_($header_headline ? $header_headline : 'Routin.bot®') ?>
                         </div>
                         <div class="sb-text">
                             <?php echo sb_($header_message ? $header_message : 'Atención personalizada por expertos 24/7!') ?>
