@@ -22,3 +22,4 @@ include/-functions.php
 include/-ajax.php
 include/-components.php
 git_pull_log.txt
+apps/waweb/api.txt

@@ -36,14 +36,16 @@ function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_
             $link = $attachment[1];
             $media_type = determine_media_type($link);
             $query = ['messaging_product' => 'whatsapp', 'recipient_type' => 'individual', 'to' => $to, 'type' => $media_type,];
-            if (in_array($media_type, ['audio', 'video', 'image'])) {
+            if (in_array($media_type, ['audio', 'video'])) {
                 $query[$media_type] = ['id' => $attachment[2]];
-            }
-            if ($media_type == 'document') {
+            } elseif ($media_type == 'image') {
+                $query['image'] = ['link' => $link];
+            } elseif ($media_type == 'document') {
                 $query['document'] = ['link' => $link, 'caption' => $attachment[0]];
             }
             $response = $cloud_phone_id ? sb_whatsapp_cloud_curl("$cloud_phone_id/messages", $query) : sb_whatsapp_cloud_curl('messages', $query);
         }
+        
         if ($message_without_buttons = remove_interactive_buttons($message)) {
             $query = ['messaging_product' => 'whatsapp', 'recipient_type' => 'individual', 'to' => $to, 'type' => 'text', 'text' => ['preview_url' => has_preview_url($message_without_buttons), 'body' => $message_without_buttons,],];
             $response = $cloud_phone_id ? sb_whatsapp_cloud_curl("$cloud_phone_id/messages", $query, $phone_number_id) : sb_whatsapp_cloud_curl('messages', $query);
@@ -197,11 +199,43 @@ function sb_whatsapp_rich_messages($message, $extra = false)
 {
     $shortcode = sb_get_shortcode($message);
     $attachments = false;
-    if ($shortcode && $shortcode['shortcode_name'] === 'rating') {
-        $message = ['type' => 'interactive', 'interactive' => ['type' => 'button', 'body' => ['text' => $shortcode['message']], 'action' => ['buttons' => [['type' => 'reply', 'reply' => ['id' => 'rating-positive', 'title' => sb_($shortcode['label-positive'])]], ['type' => 'reply', 'reply' => ['id' => 'rating-negative', 'title' => sb_($shortcode['label-negative'])]]]]]];
-        if (!empty($shortcode['title'])) {
-            $message['interactive']['header'] = ['type' => 'text', 'text' => $shortcode['title']];
+
+    if ($shortcode) {
+        switch ($shortcode['shortcode_name']) {
+            case 'rating':
+                $message = [
+                    'type' => 'interactive',
+                    'interactive' => [
+                        'type' => 'button',
+                        'body' => ['text' => $shortcode['message']],
+                        'action' => [
+                            'buttons' => [
+                                [
+                                    'type' => 'reply',
+                                    'reply' => ['id' => 'rating-positive', 'title' => sb_($shortcode['label-positive'])]
+                                ],
+                                [
+                                    'type' => 'reply',
+                                    'reply' => ['id' => 'rating-negative', 'title' => sb_($shortcode['label-negative'])]
+                                ]
+                            ]
+                        ]
+                    ]
+                ];
+                
+                if (!empty($shortcode['title'])) {
+                    $message['interactive']['header'] = ['type' => 'text', 'text' => $shortcode['title']];
+                }
+                break;
+
+            case 'image':
+                $attachments = [[$shortcode['url'], $shortcode['url']]];
+                $message = ''; // Clear the message as we're sending an image
+                break;
+
+            // Add other cases here if needed
         }
     }
+
     return [$message, $attachments];
 }
