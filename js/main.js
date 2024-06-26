@@ -7368,51 +7368,55 @@
       storage("open-conversation", 0);
       force_action = false;
     });
+// Send whatsapp template
+$("#template-form").on("submit", function (e) {
+  e.preventDefault();
+  const template = new Metatemplate().payload("#template-form");
 
-    // Send whatsapp template
-    $("#template-form").on("submit", function (e) {
-      e.preventDefault();
-      const template = new Metatemplate().payload("#template-form");
-      // console.log(template);
-      const payload = {
-        type: template.type,
-        to: activeUser().getExtra("phone").value,
-        template_name: template.template_name,
-        language: template.language,
-        variables: template.variables,
-      };
-      const submit = $("#send-meta-template");
+  const payload = {
+      type: template.type,
+      to: activeUser().getExtra("phone").value,
+      template_name: template.template_name,
+      language: template.language,
+      variables: template.variables,
+      image_url: template.image_url,
+  };
+  console.log("Payload:", payload);
 
-      submit.sbLoading(true);
-      SBF.ajax(
-        {
+  const submit = $("#send-meta-template");
+
+  submit.sbLoading(true);
+  SBF.ajax(
+      {
           function: "whatsapp-send-meta-template",
           payload: payload,
-        },
-        (response) => {
+      },
+      (response) => {
           submit.sbLoading(false);
           if (response?.error && response.error.message) {
-            SBForm.showErrorMessage(
-              $(".sb-admin").find(".sb-send-template-box"),
-              response.error.message
-            );
+              SBForm.showErrorMessage(
+                  $(".sb-admin").find(".sb-send-template-box"),
+                  response.error.message
+              );
           } else if (response) {
-            SBChat.sendMessage(
-              -1,
-              `*~Registro de contacto*, {agent_name} \n\n ${template.BodyTemplate}`,
-              false
-            );
-            SBChat.showResponse(`${template.BodyTemplate}`);
-            $(admin ? global : main)
-              .find(
-                ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
-              )
-              .sbActive(false);
+              SBChat.sendMessage(
+                  -1,
+                  `*~Registro de contacto*, {agent_name} \n\n ${template.BodyTemplate}`,
+                  false
+              );
+              SBChat.showResponse(`${template.BodyTemplate}`);
+              $(admin ? global : main)
+                  .find(
+                      ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
+                  )
+                  .sbActive(false);
           }
-          // console.log("temp", response);
-        }
-      );
-    });
+          console.log("temp", response);
+      }
+  );
+});
+
+
 
     //rate and review
     SBF.get_select_setting();

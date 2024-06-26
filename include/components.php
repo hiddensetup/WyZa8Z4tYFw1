@@ -74,7 +74,7 @@ function sb_profile_box()
                     <p class="profile-bubble-message">Desde aquí puedes <strong>continuar conversaciones existentes 🧑&zwj;💻</strong>. Pulsa sobre la conversación que deseas continuar (recomendado) o crea una conversación nueva pulsando <strong> + Nuevo </strong>.</p>
 
                     <p class="profile-bubble-message"> *Ten en cuenta que en Routin.bot tienes la opción de generar conversaciones separadas por agente (como tickets) o continuar conversaciones existentes. El cliente siempre verá la misma conversación de WhatsApp.</p>
-                
+
                 </div>
                 <ul class="sb-user-conversations"></ul>
             </div>
@@ -267,46 +267,46 @@ function sb_profile_edit_box()
  *
  */
 
- function displayMessage()
- {
+function displayMessage()
+{
     $jsonString = '{
         "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin.botchat, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
         "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Routin.bot mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Routin.bot también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Sistema Sobrecargado! </h2><span style=\"color:var(--chat-text-primary)\">Estamos experimentando una alta demanda en nuestros servidores en este momento. Por favor, sé paciente y vuelve a intentarlo más tarde. Agradecemos tu comprensión.</span><br><br><span style=\"color:var(--chat-text-primary)\">Mientras tanto, ¿por qué no exploras otras funciones de Steambox? ¡Hay mucho por descubrir!</span>"
     }
     ';
-    
-            
- 
-     $messages = json_decode($jsonString, true);
 
-     $message_type = defined('MESSAGE_TYPE') ? MESSAGE_TYPE : '';
- 
-     if (array_key_exists($message_type, $messages)) {
-         $message = $messages[$message_type];
- 
-         echo '<div id="login-message" style="padding-top:40px">';
-         echo '<div class="alert-special">';
-         // echo '<span class="closebtn-special" onclick="this.parentElement.style.display=\'none\';">&times;</span>';
-         echo $message;
-         echo '</div>';
-         echo '</div>';
- 
-         // Return true if a message is to be displayed
-         return true;
-     } else {
-         // Return false if no message is to be displayed
-         return false;
-     }
- }
- 
- function sb_login_box()
- { 
-     // Check if a message is to be displayed
-     $messageDisplayed = displayMessage();
- ?>
-     <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo ($messageDisplayed ? 'style="display:none;"' : ''); ?>>
-     <div></div>
+
+
+    $messages = json_decode($jsonString, true);
+
+    $message_type = defined('MESSAGE_TYPE') ? MESSAGE_TYPE : '';
+
+    if (array_key_exists($message_type, $messages)) {
+        $message = $messages[$message_type];
+
+        echo '<div id="login-message" style="padding-top:40px">';
+        echo '<div class="alert-special">';
+        // echo '<span class="closebtn-special" onclick="this.parentElement.style.display=\'none\';">&times;</span>';
+        echo $message;
+        echo '</div>';
+        echo '</div>';
+
+        // Return true if a message is to be displayed
+        return true;
+    } else {
+        // Return false if no message is to be displayed
+        return false;
+    }
+}
+
+function sb_login_box()
+{
+    // Check if a message is to be displayed
+    $messageDisplayed = displayMessage();
+?>
+    <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo ($messageDisplayed ? 'style="display:none;"' : ''); ?>>
+        <div></div>
         <div class="sb-top-bar">
             <div id="announcement">
                 <?php
@@ -317,7 +317,7 @@ function sb_profile_edit_box()
                     <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
                 <?php } ?>
             </div>
-        </div> 
+        </div>
         <div class="sb-main" id="email">
             <div class="sb-input">
                 <label style="color: var(--chat-text-secondary); font-size:14px; position: relative; top: 19px; left: 0px; background: var(--chat-app-background); padding: 1px 5px;" for="text"><?php sb_e('Email') ?></label>
@@ -329,7 +329,7 @@ function sb_profile_edit_box()
                 <input style="width: calc(100% - 30px);height: 45px;" type="password" />
             </div>
             <div class="sb-bottom">
-                <div style="padding: 5px 90px;margin-top: 0px!important;width: fit-content!important;"" class="sb-btn sb-submit-login"><?php sb_e('Login') ?></div>
+                <div style="padding: 5px 90px;margin-top: 0px!important;width: fit-content!important;"" class=" sb-btn sb-submit-login"><?php sb_e('Login') ?></div>
 
             </div>
 
@@ -338,7 +338,7 @@ function sb_profile_edit_box()
 
         <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly" class="sb-text">
             <div style="margin: 0.2rem auto 1rem auto;max-width: 270px;" class="sb-info"></div>
-           
+
             <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
             <small>&copy; <?php echo date("Y"); ?> Routin.botchat</small>
 
@@ -585,10 +585,8 @@ function sb_direct_message_box()
 
         <div class="sb-main sb-scroll-area">
             <p style="margin: 5px 0px;"> <?php sb_e('Enter user IDs separated by commas.') ?> </p>
-            <div class="sb-input-setting sb-type-text sb-first" style="display: flex;flex-direction: column;">
-                <input class="sb-direct-message-users" type="text" name="user_ids" placeholder="<?php sb_e('User IDs separated by commas') ?>">
+            <div class="sb-input-setting sb-type-text sb-first" style="gap:10px;display: flex;width: 100%;justify-content: space-between;align-items: center;">
                 <div class="sb-selector">
-                    <br>
                     <?php
                     include '/apps/whatsmeow/functions.php';
                     $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active'));
@@ -602,8 +600,10 @@ function sb_direct_message_box()
                         <option value="template" class="active-bulk-sender"> <?php sb_e('Broadcast without existing chat') ?> </option>
                         <!-- <?php if ($goproxy) : ?><option value="sms"> <?php sb_e('Broadcast Whatsmeow') ?> </option> <?php endif; ?> -->
                         <!-- <?php if ($goproxy) : ?><option value="sms"> <?php sb_e('Broadcast WhatsApp Web') ?> </option> <?php endif; ?> -->
-                            </select>
+                    </select>
                 </div>
+                <input class="sb-direct-message-users" type="text" name="user_ids" placeholder="<?php sb_e('User IDs separated by commas') ?>">
+
             </div>
             <div class="sb-title sb-direct-message-subject"> <?php sb_e('Subject') ?> </div>
             <div class="sb-input-setting sb-type-text sb-direct-message-subject">
@@ -613,43 +613,53 @@ function sb_direct_message_box()
             <div class="sb-input-setting sb-type-textarea sb-direct-message-hide">
                 <textarea style="height:160px" name="message" placeholder="<?php sb_e('Write your message here...') ?>" required></textarea>
             </div>
-            <div id="form-container" style="display: flex;flex-direction: column;padding:5px 10px 10px 10px;width: calc(100% - 21px);" class="sb-bulk-sender sb-additional-details sb-hide">
-                <form id="user-template-form">
-                    <div class="sb-input-setting" style="gap:10px;display:flex;">
-                        <select class="Language" name="Language" required>
-                            <option value="es"> <?php sb_e('Español (es)') ?> </option>
-                            <option value="es_AR"> <?php sb_e('Español (es_AR)') ?> </option>
-                            <option value="en_US"> <?php sb_e('English (en)') ?> </option>
-                            <option value="es_ES"> <?php sb_e('Español (es_ES)') ?> </option>
-                            <option value="es_MX"> <?php sb_e('Español (es_MX)') ?> </option>
+            <div id="form-container" class="sb-bulk-sender sb-additional-details sb-hide">
+                <form id="user-template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
+                    <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
+                        <div class="api-bubble-container">
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:260px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <div class="FooterTemplate"></div>
+                            <div class="Buttons"></div>
 
-                        </select>
-                        <select class="LoadedTemplate" name="LoadedTemplate">
-                            <option value="">Select a template</option>
-                        </select>
+                        </div>
                     </div>
-                    <div class="sb-input-setting api-cloud-bubble">
-                        <div style="margin: auto;display: inline-flex;justify-content: center;width: 100%;">
-                            <img src="/media/spike.png" style="width: 20px;vertical-align: top;margin-right: -4px;height: 30px;">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" name="BodyTemplate"></textarea>
+                    <div style="max-width: 100%; width: 100%; max-width: 320px; ">
+                        <div class="sb-input-setting" style="gap:10px;display:flex;flex-direction: column;max-width: 100%;">
+
+                            <select class="Language" name="Language" required>
+                                <option value="es"> <?php sb_e('Español (es)') ?> </option>
+                                <option value="es_AR"> <?php sb_e('Español (es_AR)') ?> </option>
+                                <option value="en_US"> <?php sb_e('English (en)') ?> </option>
+                                <option value="es_ES"> <?php sb_e('Español (es_ES)') ?> </option>
+                                <option value="es_MX"> <?php sb_e('Español (es_MX)') ?> </option>
+                            </select>
+                            <select class="LoadedTemplate" name="LoadedTemplate">
+                                <option value="">Select a template</option>
+                            </select>
+                            <!-- Add this new input for Image URL -->
+                            <div style="display:flex"">
+                            <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                            </div>
+                            <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
+                                <div class='variables'>
+                                    <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
+                                </div>
+                                <div style="display: flex;justify-content: flex-start;margin: 1px;gap: 5px;align-items: center;">
+                                    <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn"><i class="bi bi-dash-lg"></i></a>
+                                    <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn"><i class="bi bi-plus-lg"></i></a>
+                                </div>
+                            </div>
+                            <div class="sb-bottom send-meta">
+                                <button class="sb-btn sb-icon sb-send-direct-message" style="width:fit-content;border: none;text-align: end;">
+                                    <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
+                                </button>
+                                <div></div>
+                            </div>
                         </div>
                     </div>
 
-                    <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
-                        <div class='variables'>
-                            <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
-                        </div>
-                        <div style="display: flex;justify-content: flex-start;margin: 1px;gap: 5px;align-items: center;">
-                            <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn"><i class="bi bi-dash-lg"></i></a>
-                            <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                    </div>
-                    <div class="sb-bottom send-meta">
-                        <button class="sb-btn sb-icon sb-send-direct-message" style="width:fit-content;border: none;text-align: end;">
-                            <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
-                        </button>
-                        <div></div>
-                    </div>
+
+
 
                 </form>
 
@@ -696,138 +706,141 @@ function sb_send_template_box()
 
         <div class="sb-main sb-scroll-area">
             <div id="form-container meta" style="display: flex;flex-direction: column;" class="sb-additional-details">
-                <form id="template-form">
-                    <div class="sb-input-setting">
-                        <select class="Language" name="Language" required>
-                            <option value="es"> <?php sb_e('Español (es)') ?> </option>
-                            <option value="es_AR"> <?php sb_e('Español (es_AR)') ?> </option>
-                            <option value="en_US"> <?php sb_e('English (en)') ?> </option>
-                            <option value="es_ES"> <?php sb_e('Español (es_ES)') ?> </option>
-                            <option value="es_MX"> <?php sb_e('Español (es_MX)') ?> </option>
-                        </select>
-                    </div>
-
-                    <div class="sb-input-setting">
-                        <select class="LoadedTemplate" name="LoadedTemplate" id="templateSelect">
-                            <option value="">Select a template</option>
-                        </select>
-                    </div>
-
-                    <br>
-
-                    <div class="sb-input-setting api-cloud-bubble">
-                        <div style="margin: auto;display: inline-flex;justify-content: center;width: 100%;">
-                            <img src="/media/spike.png" style="width: 20px;vertical-align: top;margin-right: -4px;height: 30px;">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" name="BodyTemplate"></textarea>
+                <form id="template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
+                    <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
+                        <div class="api-bubble-container">
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:260px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <div class="FooterTemplate"></div>
+                            <div class="Buttons"></div>
+                            </div>
                         </div>
-                    </div>
+                            <div style="max-width: 100%; width: 100%; max-width: 320px; ">
+                        <div class="sb-input-setting" style="gap:10px;display:flex;flex-direction: column;max-width: 100%;">
 
-                    <div style="display: flex;flex-wrap: wrap;flex-direction: column;margin-bottom: 10px;align-items: stretch;" class="sb-input-setting Variables">
-                        <br>
-                        <p style=" width: 100%; font-weight: 600;">Variables</p>
-                        <div class='variables sb-repeater-add '>
-                            <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
-                        </div>
-                        <div style="align-self: flex-end;">
-                            <a type="button" class="sb-repeater-add RemVariableButton whatsapp_var_buttons_1 sb-btn">- <?php sb_e('Delete') ?></a>
-                            <a type="button" class="sb-repeater-add AddVariableButton whatsapp_var_buttons_2 sb-btn">+ <?php sb_e('Add') ?></a>
-                        </div>
-                    </div>
 
-                    <div class="sb-bottom send-meta">
-                        <button class="sb-repeater-add  sb-btn sb-icon" style="border: none;margin-top: 40px;text-align: end;" type="submit">
-                            <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
-                        </button>
+                                <select class="Language" name="Language" required>
+                                    <option value="es"> <?php sb_e('Español (es)') ?> </option>
+                                    <option value="es_AR"> <?php sb_e('Español (es_AR)') ?> </option>
+                                    <option value="en_US"> <?php sb_e('English (en)') ?> </option>
+                                    <option value="es_ES"> <?php sb_e('Español (es_ES)') ?> </option>
+                                    <option value="es_MX"> <?php sb_e('Español (es_MX)') ?> </option>
+                                </select>
+                                <select class="LoadedTemplate" name="LoadedTemplate" id="templateSelect">
+                                    <option value="">Select a template</option>
+                                </select>
+                                <!-- Add this new input for Image URL -->
+                                <div style="display:flex"">
+                                    <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                                </div>
+                                <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
+                                    <div class='variables'>
+                                        <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
+                                    </div>
+                                    <div style="display: flex;justify-content: flex-start;margin: 1px;gap: 5px;align-items: center;">
+                                        <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn"><i class="bi bi-dash-lg"></i></a>
+                                        <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn"><i class="bi bi-plus-lg"></i></a>
+                                    </div>
+                                </div>
+                                <div class="sb-bottom send-meta">
+                                    <button class="sb-repeater-add  sb-btn sb-icon" style="border: none;margin-top: 40px;text-align: end;" type="submit">
+                                        <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
+                                    </button>
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </form>
             </div>
-        </div>
+     
 
     </div>
     <script>
         const meta = new Metatemplate;
         meta.init("#template-form");
-// Theme toggler
-const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
-const htmlTag = document.documentElement;
-const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        // Theme toggler
+        const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
+        const htmlTag = document.documentElement;
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-// Function to update the theme
-const updateTheme = () => {
-    const currentTheme = htmlTag.dataset.theme;
-    let newTheme;
-    let newThemeColor;
+        // Function to update the theme
+        const updateTheme = () => {
+            const currentTheme = htmlTag.dataset.theme;
+            let newTheme;
+            let newThemeColor;
 
-    switch (currentTheme) {
-        case 'dark':
-            newTheme = 'light';
-            newThemeColor = 'white'; // Light theme color
-            htmlTag.classList.remove('dark'); // Remove dark class
-            break;
-        case 'light':
-            newTheme = 'app';
-            newThemeColor = 'white'; // WhatsApp theme color
-            htmlTag.classList.remove('dark'); // Remove dark class
-            break;
-        case 'app':
-            newTheme = 'routin';
-            newThemeColor = 'white'; // Google theme color
-            htmlTag.classList.remove('dark'); // Remove dark class
-            break;
-        case 'routin':
-            newTheme = 'steambox';
-            newThemeColor = ''; // Leave the color unchanged
-            htmlTag.classList.remove('dark'); // Remove dark class
-            break;
-        case 'steambox':
-        default:
-            newTheme = 'dark';
-            newThemeColor = ''; // Leave the color unchanged
-            htmlTag.classList.add('dark'); // Add dark class
-            break;
-    }
+            switch (currentTheme) {
+                case 'dark':
+                    newTheme = 'light';
+                    newThemeColor = 'white'; // Light theme color
+                    htmlTag.classList.remove('dark'); // Remove dark class
+                    break;
+                case 'light':
+                    newTheme = 'app';
+                    newThemeColor = 'white'; // WhatsApp theme color
+                    htmlTag.classList.remove('dark'); // Remove dark class
+                    break;
+                case 'app':
+                    newTheme = 'routin';
+                    newThemeColor = 'white'; // Google theme color
+                    htmlTag.classList.remove('dark'); // Remove dark class
+                    break;
+                case 'routin':
+                    newTheme = 'steambox';
+                    newThemeColor = ''; // Leave the color unchanged
+                    htmlTag.classList.remove('dark'); // Remove dark class
+                    break;
+                case 'steambox':
+                default:
+                    newTheme = 'dark';
+                    newThemeColor = ''; // Leave the color unchanged
+                    htmlTag.classList.add('dark'); // Add dark class
+                    break;
+            }
 
-    htmlTag.dataset.theme = newTheme;
-    if (newThemeColor) {
-        metaThemeColor.content = newThemeColor;
-    }
-    localStorage.setItem('theme', newTheme);
-};
+            htmlTag.dataset.theme = newTheme;
+            if (newThemeColor) {
+                metaThemeColor.content = newThemeColor;
+            }
+            localStorage.setItem('theme', newTheme);
+        };
 
-// Retrieve stored theme from local storage and apply it
-const storedTheme = localStorage.getItem('theme');
-if (storedTheme) {
-    htmlTag.dataset.theme = storedTheme;
-    switch (storedTheme) {
-        case 'light':
-            metaThemeColor.content = 'white'; // Default to light theme color
-            break;
-        case 'app':
-            metaThemeColor.content = 'white'; // WhatsApp theme color
-            break;
-        case 'routin':
-            // Leave the color unchanged
-            break;
-        case 'steambox':
-            // Leave the color unchanged
-            break;
-        case 'dark':
-        default:
-            metaThemeColor.content = 'color(srgb 0.1091 0.0607 0.2083)';
-            htmlTag.classList.add('dark'); // Add dark class for the dark theme
-            break;
-    }
-} else {
-    // Set default theme to "light"
-    htmlTag.dataset.theme = 'light';
-    metaThemeColor.content = 'white'; // Light theme color
-}
+        // Retrieve stored theme from local storage and apply it
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            htmlTag.dataset.theme = storedTheme;
+            switch (storedTheme) {
+                case 'light':
+                    metaThemeColor.content = 'white'; // Default to light theme color
+                    break;
+                case 'app':
+                    metaThemeColor.content = 'white'; // WhatsApp theme color
+                    break;
+                case 'routin':
+                    // Leave the color unchanged
+                    break;
+                case 'steambox':
+                    // Leave the color unchanged
+                    break;
+                case 'dark':
+                default:
+                    metaThemeColor.content = 'color(srgb 0.1091 0.0607 0.2083)';
+                    htmlTag.classList.add('dark'); // Add dark class for the dark theme
+                    break;
+            }
+        } else {
+            // Set default theme to "light"
+            htmlTag.dataset.theme = 'light';
+            metaThemeColor.content = 'white'; // Light theme color
+        }
 
-// Add event listeners to theme toggle buttons
-themeToggleBtns.forEach(btn => {
-    btn.addEventListener('click', updateTheme);
-});
+        // Add event listeners to theme toggle buttons
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', updateTheme);
+        });
 
 
 
@@ -1137,7 +1150,7 @@ function sb_installation_box($error = false)
 
                 ::-webkit-scrollbar-thumb {
                     background-color: #888 !important;
-                    border-radius:  var(--chat-rounded-size-7) !important;
+                    border-radius: var(--chat-rounded-size-7) !important;
                 }
 
                 ::-webkit-scrollbar-thumb:hover {
@@ -1264,24 +1277,24 @@ function sb_component_admin()
 
                                 <div class="sb-select inbox">
                                     <p class="non-hover" data-value="0">
-                                     <i class="bi-inboxes-fill"></i>&nbsp; <?php sb_e('Inbox') ?><span> </span>
+                                        <i class="bi-inboxes-fill"></i>&nbsp; <?php sb_e('Inbox') ?><span> </span>
                                     </p>
                                     <ul style="min-width: 8rem;max-height: none;">
                                         <li data-value="0" class="sb-active">
-                                         <i class="bi bi-clock-history"></i>&nbsp; <?php sb_e('Inbox') ?>
+                                            <i class="bi bi-clock-history"></i>&nbsp; <?php sb_e('Inbox') ?>
                                             <span></span>
                                         </li>
                                         <hr>
                                         <li data-value="6">
-                                         <i class="bi-pin-fill"></i>&nbsp; <?php sb_e('Follow up') ?>
+                                            <i class="bi-pin-fill"></i>&nbsp; <?php sb_e('Follow up') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="3">
-                                         <i class="bi-archive"></i>&nbsp; <?php sb_e('Archived') ?>
+                                            <i class="bi-archive"></i>&nbsp; <?php sb_e('Archived') ?>
                                         </li>
                                         <?php if ($is_admin) { ?>
                                             <li data-value="4">
-                                             <i class="bi-box"></i>&nbsp; <?php sb_e('Container') ?>
+                                                <i class="bi-box"></i>&nbsp; <?php sb_e('Container') ?>
                                             </li>
                                         <?php } ?>
                                     </ul>
@@ -1377,7 +1390,7 @@ function sb_component_admin()
                             <div class="sb-scroll-area">
                                 <div class="close-button-div"><i class="bi-x-lg no-show sb-btn-collapse collapse"></i></div>
                                 <div class="open-profile sb-profile sb-profile-detail">
-                                <i style="font-size: var(--chat-text-size-1-3);" class="bi-pencil-square"></i>
+                                    <i style="font-size: var(--chat-text-size-1-3);" class="bi-pencil-square"></i>
                                     <span class="sb-name span-profile-detail"></span>
                                 </div>
                                 <?php sb_departments('custom-select'); ?>
@@ -1851,27 +1864,28 @@ function sb_users_table_extra_fields()
         }
         echo $code;
     }
-}function sb_conversations_filter()
+}
+function sb_conversations_filter()
 {
     // Verificar si los filtros están deshabilitados
     if (!sb_get_setting('disable-filters')) return;
-    
+
     // Obtener los departamentos y contar cuántos hay
     $departments = sb_get_setting('departments');
     $count = is_array($departments) ? count($departments) : 0;
-    
+
     // Generar el botón de filtro y la lista de departamentos
     $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '">';
     $code .= '<p><i class="bi-building"></i> &nbsp;' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;">';
     $code .= '<li data-value=""><i class="bi-clock-history"></i> &nbsp;' . sb_('All departments') . '</li><hr>';
-    
+
     // Añadir cada departamento a la lista
     for ($i = 0; $i < $count; $i++) {
         $code .= '<li data-value="' . $departments[$i]['department-id'] . '">';
         $code .= '<i class="bi bi-diagram-3-fill"></i> &nbsp; ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
-    
+
     // Definir los canales de comunicación
     $sources = [
         ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
@@ -1886,11 +1900,11 @@ function sb_users_table_extra_fields()
         ['wc', 'WeChat', false, ''], // WeChat (no icon provided)
         ['tm', 'SMS', false, ''] // SMS (no icon provided)
     ];
-    
+
     // Generar la lista de canales de comunicación
     $code .= '<div class="sb-select"><p><i class="bi-collection"></i><span> &nbsp; ' . sb_('All channels') . '</span></p><ul style="min-width: 8rem;max-height: none;">';
     $code .= '<li data-value=""><i class="bi bi-clock-history"></i> &nbsp;' . sb_('All channels') . '</li><hr>';
-    
+
     // Añadir cada canal a la lista
     for ($i = 0; $i < count($sources); $i++) {
         if ($sources[$i][2] === true || defined($sources[$i][2])) {
@@ -1901,10 +1915,10 @@ function sb_users_table_extra_fields()
             $code .= '<li data-value="' . $sources[$i][0] . '"' . $style . '>' . $icon_html . ' &nbsp;' . $channel_name . '</li>';
         }
     }
-    
+
     $code .= '</ul></div>';
     $code .= '</div></div>';
-    
+
     echo $code;
 }
 ?>

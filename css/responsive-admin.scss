@@ -525,13 +525,21 @@ div ul.sb-menu li,
 .sb-lightbox .sb-main>.sb-title+*,
 .sb-lightbox .sb-main>div>.sb-title+*,
 .sb-lightbox .sb-main p+.sb-title {
-    margin-top: 27px;
+    margin-top: 25px;
     //background: var(--chat-input-background);
     // padding: 10px 0px;
     box-sizing: border-box;
     overflow: hidden;
     overflow-wrap: break-word;
     border-radius: var(--chat-rounded-size-6);
+}
+
+.sb-type-text > .sb-direct-message-users {
+    max-width: 140px;
+}
+
+.api-bubble-container {
+    width: 100%;
 }
 
 .sb-board>.sb-admin-list .sb-scroll-area li[data-conversation-status="2"] .sb-name,

@@ -255,7 +255,7 @@ body::-webkit-scrollbar-thumb:hover {
 .sb-admin>.sb-header>.sb-admin-nav-right .sb-account>div,
 .sb-lightbox,
 .sb-color-palette ul {
-    color: var(--chat-app-background);
+    color: var(--chat-text-primary);
     // background: var(--chat-border-color);
     border-radius: var(--chat-rounded-size-6);
     padding: 10px 0;
@@ -1539,7 +1539,7 @@ TABLE
         &:focus {
             border-color: var(--chat-tag-background-color-active);
             /* Change border color */
-            box-shadow: 0 0 5px rgba(29, 28, 39, 0.5);
+            box-shadow: var(--box-shadow-inner);
             /* Apply box shadow */
             outline: none;
             /* Remove default outline */
@@ -3949,7 +3949,7 @@ BODY
         min-width: 280px;
         line-height: 22px;
         padding: 5px 10px;
-        min-height: 56px;
+        min-height: 250px;
     }
 
     input[type="checkbox"] {
@@ -5256,7 +5256,7 @@ BODY
         }
 
         >.sb-bottom {
-            padding-top: 30px;
+            padding-top: 50px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -5317,10 +5317,10 @@ BODY
 .whatsapp_var_buttons_1,
 .whatsapp_var_buttons_2 {
     text-align: end;
-    background: none !important;
     color: var(--chat-btn-background) !important;
     font-weight: 300;
-    padding: 0px 10px !important;
+    padding: 0 10px !important;
+    background-color: var(--chat-app-background) !important;
 }
 
 .sb-profile-edit-box,
@@ -5349,6 +5349,7 @@ BODY
 
 .send-meta {
     text-align: end;
+    margin-top: 90px;
 }
 
 .sb-direct-message-box {

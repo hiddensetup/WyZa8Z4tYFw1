@@ -63,13 +63,10 @@ function Metatemplate() {
 
     // Create an img element to display the image
     const imageDisplay = document.createElement("img");
-    imageDisplay.style.maxWidth = "33px"; // Set the size of the image square
-    imageDisplay.style.height = "33px"; // Ensure it is a square
+    imageDisplay.style.maxWidth = "100px"; // Set the size of the image square
+    imageDisplay.style.height = "100px"; // Ensure it is a square
     imageDisplay.style.objectFit = "cover"; // Ensure the image covers the square without distortion
-    imageDisplay.style.borderRadius = "8px 0px 0px 8px"; // Apply border-radius
-    imageDisplay.style.border = ".8px solid var(--chat-border-color)"; // Apply border
-    imageDisplay.style.padding = "3px"; // Apply padding
-    imageUrlInput.insertAdjacentElement("beforebegin", imageDisplay);
+    imageUrlInput.insertAdjacentElement("afterend", imageDisplay);
 
     let loadedTemplates = {};
 
@@ -185,7 +182,7 @@ function Metatemplate() {
             buttonsComponents.forEach((buttonsComponent) => {
               if (buttonsComponent.buttons) {
                 buttonsComponent.buttons.forEach((button, index) => {
-                  const buttonElement = document.createElement("p");
+                  const buttonElement = document.createElement("a");
                   buttonElement.className = `api-dynamic-button Button${index}`;
                   buttonElement.name = `Button${index}Text`;
                   buttonElement.textContent = button.text;

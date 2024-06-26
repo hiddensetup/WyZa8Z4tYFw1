@@ -36,16 +36,14 @@ function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_
             $link = $attachment[1];
             $media_type = determine_media_type($link);
             $query = ['messaging_product' => 'whatsapp', 'recipient_type' => 'individual', 'to' => $to, 'type' => $media_type,];
-            if (in_array($media_type, ['audio', 'video'])) {
+            if (in_array($media_type, ['audio', 'video', 'image'])) {
                 $query[$media_type] = ['id' => $attachment[2]];
-            } elseif ($media_type == 'image') {
-                $query['image'] = ['link' => $link];
-            } elseif ($media_type == 'document') {
+            }
+            if ($media_type == 'document') {
                 $query['document'] = ['link' => $link, 'caption' => $attachment[0]];
             }
             $response = $cloud_phone_id ? sb_whatsapp_cloud_curl("$cloud_phone_id/messages", $query) : sb_whatsapp_cloud_curl('messages', $query);
         }
-        
         if ($message_without_buttons = remove_interactive_buttons($message)) {
             $query = ['messaging_product' => 'whatsapp', 'recipient_type' => 'individual', 'to' => $to, 'type' => 'text', 'text' => ['preview_url' => has_preview_url($message_without_buttons), 'body' => $message_without_buttons,],];
             $response = $cloud_phone_id ? sb_whatsapp_cloud_curl("$cloud_phone_id/messages", $query, $phone_number_id) : sb_whatsapp_cloud_curl('messages', $query);
@@ -86,7 +84,7 @@ function determine_media_type($link)
 
 function sb_whatsapp_cloud_curl($url_part, $post_fields = false, $phone_number_id = false, $type = 'POST')
 {
-    $url = "https://graph.facebook.com/v18.0/$url_part";
+    $url = "https://graph.facebook.com/v20.0/$url_part";
     $headers = ['Authorization: Bearer ' . sb_whatsapp_cloud_get_token($phone_number_id), 'Content-Type: application/json',];
     $response = sb_curl($url, json_encode($post_fields), $headers, $type);
 
@@ -111,54 +109,158 @@ function sb_whatsapp_cloud_get_token($phone_number_id = false, $return_departmen
     return trim($return_department ? sb_get_setting('whatsapp-department') : sb_get_multi_setting('whatsapp-cloud', 'whatsapp-cloud-token'));
 }
 
+// function sb_whatsapp_send_meta_template($template)
+// {
+//     $query = ['messaging_product' => 'whatsapp', 'recipient_type' => 'individual', 'to' => $template['to'], 'type' => $template['type'],];
+//     $cloud_phone_id = sb_get_multi_setting('whatsapp-cloud', 'whatsapp-cloud-phone-id');
+//     $variables = [];
+//     foreach ($template['variables'] as $parameter) {
+//         $variables[] = ["type" => "text", "text" => $parameter];
+//     };
+//     $query['template'] = ['name' => $template['template_name'], 'language' => ['code' => $template['language']], 'components' => [],];
+//     if ($template['type'] === 'template') {
+//         $query['template']['components'][] = ["type" => "body", "parameters" => $variables];
+//     }
+//     $response = sb_whatsapp_cloud_curl($cloud_phone_id . '/messages', $query, $cloud_phone_id);
+//     return $response;
+// }
+
+
 function sb_whatsapp_send_meta_template($template)
 {
-    $query = ['messaging_product' => 'whatsapp', 'recipient_type' => 'individual', 'to' => $template['to'], 'type' => $template['type'],];
-    $cloud_phone_id = sb_get_multi_setting('whatsapp-cloud', 'whatsapp-cloud-phone-id');
+    $query = [
+        'messaging_product' => 'whatsapp',
+        'recipient_type' => 'individual',
+        'to' => $template['to'],
+        'type' => $template['type'],
+    ];
+
+    // Prepare variables for the body parameters
     $variables = [];
     foreach ($template['variables'] as $parameter) {
         $variables[] = ["type" => "text", "text" => $parameter];
-    };
-    $query['template'] = ['name' => $template['template_name'], 'language' => ['code' => $template['language']], 'components' => [],];
-    if ($template['type'] === 'template') {
-        $query['template']['components'][] = ["type" => "body", "parameters" => $variables];
     }
+
+    // Prepare the template structure
+    $query['template'] = [
+        'name' => $template['template_name'],
+        'language' => ['code' => $template['language']],
+        'components' => [],
+    ];
+
+    // Add header component with image if provided
+    if (isset($template['image_url'])) {
+        $query['template']['components'][] = [
+            'type' => 'header',
+            'parameters' => [
+                [
+                    'type' => 'image',
+                    'image' => [
+                        'link' => $template['image_url'],
+                    ],
+                ],
+            ],
+        ];
+    }
+
+    // Add body component with text parameters
+    $query['template']['components'][] = [
+        'type' => 'body',
+        'parameters' => $variables,
+    ];
+
+    // Add footer component if present in template (optional)
+    if (isset($template['footer_text'])) {
+        $query['template']['components'][] = [
+            'type' => 'footer',
+            'text' => $template['footer_text'],
+        ];
+    }
+
+    // Add buttons component if present in template (optional)
+    if (isset($template['buttons']) && is_array($template['buttons'])) {
+        foreach ($template['buttons'] as $button) {
+            $query['template']['components'][] = [
+                'type' => 'buttons',
+                'buttons' => [
+                    [
+                        'type' => 'quick_reply',
+                        'text' => $button['text'],
+                    ],
+                ],
+            ];
+        }
+    }
+
+    // Call the WhatsApp cloud API function to send the message
+    $cloud_phone_id = sb_get_multi_setting('whatsapp-cloud', 'whatsapp-cloud-phone-id');
     $response = sb_whatsapp_cloud_curl($cloud_phone_id . '/messages', $query, $cloud_phone_id);
+
     return $response;
 }
 
-function sb_whatsapp_send_template($phone, $user_language = '', $conversation_url_parameter = '', $user_name = '', $user_email = '', $template_name = false, $phone_number_id = false)
+
+
+
+function sb_whatsapp_send_template($phone, $user_language = '', $conversation_url_parameter = '', $user_name = '', $user_email = '', $template_name = false, $phone_number_id = false , $image_url = null)
 {
-    if ($template) {
-        return sb_whatsapp_send_message($phone, str_replace(['{conversation_url_parameter}', '{recipient_name}', '{recipient_email}'], [$conversation_url_parameter, $user_name, $user_email], sb_translate_string($template, $user_language)), [], $phone_number_id);
+    if ($template_name) {
+        return sb_whatsapp_send_message($phone, str_replace(['{conversation_url_parameter}', '{recipient_name}', '{recipient_email}'], [$conversation_url_parameter, $user_name, $user_email], sb_translate_string($template_name, $user_language)), [], $phone_number_id);
     } else {
         $settings = sb_get_setting('whatsapp-template-cloud');
         $template_languages = explode(',', str_replace(' ', '', $settings['whatsapp-template-cloud-languages']));
         $template_language = false;
+        
+        // Determine template language
         for ($i = 0; $i < count($template_languages); $i++) {
             if (substr($template_languages[$i], 0, 2) == $user_language) {
                 $template_language = $template_languages[$i];
                 break;
             }
         }
-        if (!$template_language) $template_language = $template_languages[0];
-        $query = ['type' => 'template', 'template' => ['name' => $template_name ? $template_name : $settings['whatsapp-template-cloud-name'], 'language' => ['code' => $template_language]]];
+        if (!$template_language) {
+            $template_language = $template_languages[0];
+        }
+
+        // Prepare the template query
+        $query = [
+            'messaging_product' => 'whatsapp',
+            'recipient_type' => 'individual',
+            'to' => $phone,
+            'type' => 'template',
+            'template' => [
+                'name' => $template_name ? $template_name : $settings['whatsapp-template-cloud-name'],
+                'language' => ['code' => $template_language],
+                'components' => []
+            ]
+        ];
+
+
+
+        // Process header and body parameters
         $parameter_sections = [$settings['whatsapp-template-cloud-parameters-header'], $settings['whatsapp-template-cloud-parameters-body']];
-        $components = [];
         for ($i = 0; $i < 2; $i++) {
             if ($parameter_sections[$i]) {
                 $parameters = explode(',', trim(str_replace(['{conversation_url_parameter}', '{recipient_name}', '{recipient_email}'], [$conversation_url_parameter, $user_name, $user_email], $parameter_sections[$i])));
                 $count = count($parameters);
                 if ($count) {
+                    $component_parameters = [];
                     for ($j = 0; $j < $count; $j++) {
-                        $parameters[$j] = ['type' => 'text', 'text' => $parameters[$j]];
+                        $component_parameters[] = ['type' => 'text', 'text' => trim($parameters[$j])]; // Adjusted to trim each parameter
                     }
-                    array_push($components, ['type' => $i ? 'body' : 'header', 'parameters' => $parameters]);
+                    $query['template']['components'][] = ['type' => $i ? 'body' : 'header', 'parameters' => $component_parameters];
                 }
             }
         }
-        if (count($components)) $query['template']['components'] = $components;
-        return sb_whatsapp_send_message($phone, $query, $phone_number_id);
+
+        // Log the query to console or file (for testing purposes)
+        error_log("WhatsApp Template Query: " . json_encode($query));
+
+        // Send the template message using WhatsApp cloud
+        $cloud_phone_id = sb_get_multi_setting('whatsapp-cloud', 'whatsapp-cloud-phone-id');
+        $response = sb_whatsapp_cloud_curl("$cloud_phone_id/messages", $query, $phone_number_id);
+
+        return $response;
     }
     return false;
 }
@@ -194,6 +296,7 @@ function get_interactive_buttons($message)
     }
     return false;
 }
+
 
 function sb_whatsapp_rich_messages($message, $extra = false)
 {

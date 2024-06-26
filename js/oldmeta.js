@@ -39,8 +39,7 @@ function Metatemplate() {
       language: language,
       variables: parameters,
       BodyTemplate: this.selectQuery(".BodyTemplate").value,
-      image_url: imageUrl, // Ensure this is correctly set to template.image_url
-      // footer_text: this.selectQuery('.FooterTemplate').value // Include footer text in payload
+      image_url: imageUrl,
     };
   };
 
@@ -58,18 +57,13 @@ function Metatemplate() {
     const languageSelect = this.selectQuery(".Language");
     const imageUrlInput = this.selectQuery(".ImageUrl");
     const buttonsDiv = this.selectQuery(".Buttons");
-    const footerTemplateInput = this.selectQuery(".FooterTemplate"); // New line for footer text input
-
 
     // Create an img element to display the image
     const imageDisplay = document.createElement("img");
-    imageDisplay.style.maxWidth = "33px"; // Set the size of the image square
-    imageDisplay.style.height = "33px"; // Ensure it is a square
+    imageDisplay.style.maxWidth = "100px"; // Set the size of the image square
+    imageDisplay.style.height = "100px"; // Ensure it is a square
     imageDisplay.style.objectFit = "cover"; // Ensure the image covers the square without distortion
-    imageDisplay.style.borderRadius = "8px 0px 0px 8px"; // Apply border-radius
-    imageDisplay.style.border = ".8px solid var(--chat-border-color)"; // Apply border
-    imageDisplay.style.padding = "3px"; // Apply padding
-    imageUrlInput.insertAdjacentElement("beforebegin", imageDisplay);
+    imageUrlInput.insertAdjacentElement("afterend", imageDisplay);
 
     let loadedTemplates = {};
 
@@ -97,7 +91,6 @@ function Metatemplate() {
         const templateBody = loadedTemplates[templateName];
         languageSelect.value = templateBody.language;
         bodyTemplateInput.value = templateBody.template;
-        footerTemplateInput.textContent = templateBody.footer; // Update footer text content
       } else {
         const option = document.createElement("option");
         option.text = templateName;
@@ -105,7 +98,6 @@ function Metatemplate() {
         loadedTemplates[templateName] = {
           language: "",
           template: "",
-          footer: "", // Add this line
         };
       }
 
@@ -125,7 +117,7 @@ function Metatemplate() {
           templatesData.forEach((template) => {
             const option = document.createElement("option");
             option.value = template.name;
-            option.textContent = template.name; // Display template name
+            option.textContent = template.name;
             loadedTemplateSelect.appendChild(option);
           });
 
@@ -185,24 +177,16 @@ function Metatemplate() {
             buttonsComponents.forEach((buttonsComponent) => {
               if (buttonsComponent.buttons) {
                 buttonsComponent.buttons.forEach((button, index) => {
-                  const buttonElement = document.createElement("p");
-                  buttonElement.className = `api-dynamic-button Button${index}`;
-                  buttonElement.name = `Button${index}Text`;
-                  buttonElement.textContent = button.text;
-                  buttonsDiv.appendChild(buttonElement);
+                  const buttonInput = document.createElement("input");
+                  buttonInput.type = "text";
+                  buttonInput.className = `Button${index}Text`;
+                  buttonInput.name = `Button${index}Text`;
+                  buttonInput.placeholder = `Button ${index + 1} Text`;
+                  buttonInput.value = button.text;
+                  buttonsDiv.appendChild(buttonInput);
                 });
               }
             });
-
-            // Populate footer text if it exists
-            const footerComponent = selectedTemplate.components.find(
-              (component) => component.type === "FOOTER"
-            );
-            if (footerComponent) {
-              footerTemplateInput.textContent = footerComponent.text; // Update footer text content
-            } else {
-              footerTemplateInput.textContent = "";
-            }
           }
         }
       };
@@ -217,16 +201,13 @@ function Metatemplate() {
         if (currentTemplate === templateBody.template) {
           loadedTemplateSelect.value = templateName;
           languageSelect.value = templateBody.language;
-          footerTemplateInput.textContent = templateBody.footer; // Update footer text content
           return;
         }
       }
     });
 
     addVariable.addEventListener("click", addVariables);
-    // Remove input an event listener to the button
     remVariable.addEventListener("click", function () {
-      // Remove the last input element
       const varInput = $this.selectQueryAll(".variables input");
       const varInputTotal = varInput.length;
       if (varInputTotal > 1) {

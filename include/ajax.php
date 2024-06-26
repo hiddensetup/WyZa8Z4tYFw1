@@ -206,9 +206,7 @@ switch ($_POST['function']) {
     case 'whatsmeow-send-message':
             die(sb_json_response(sb_whatsmeow_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));    
     case 'whatsapp-send-template':
-        die(sb_json_response(sb_whatsapp_send_template($_POST['phone'], sb_post('language', ''), sb_post('conversation_url_parameter', ''), sb_post('user_name', ''), sb_post('user_email', ''), sb_post('template_name'), sb_post('phone_id'))));
-        // case 'whatsapp-send-meta-template':
-        //      die(sb_json_response(sb_whatsapp_send_meta_template($_POST['payload'])));
+        die(sb_json_response(sb_whatsapp_send_template($_POST['phone'], sb_post('language', ''), sb_post('conversation_url_parameter', ''), sb_post('user_name', ''), sb_post('user_email', ''), sb_post('template_name'),  sb_post('phone_id'))));
     case 'whatsapp-send-meta-template':
         die(sb_json_response(sb_whatsapp_send_meta_template($_POST['payload'], $cloud_phone_id)));
     case 'telegram-send-message':

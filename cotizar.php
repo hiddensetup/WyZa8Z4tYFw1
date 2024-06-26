@@ -246,10 +246,7 @@
                     <td>Número de Usuarios</td>
                     <td>${this.userCount}</td>
                 </tr>
-                <tr>
-                    <td>Steamboxchat acceso Web/Mobile (Max. 15 agentes)</td>
-                    <td>Gratis</td>
-                </tr>
+                
                 <tr>
                     <td>Costo de Implementación</td>
                     <td>$${setupCost} USD</td>
@@ -275,10 +272,9 @@
     
         <h5 class="mb-2">Notas Adicionales:</h5>
         <ul>
-            <li class="mb-2">Steambox Chat ofrece soporte 24/7. Cumplimos con nuestro Acuerdo de Nivel de Servicio (SLA), asegurando que su consulta sea atendida en un máximo de 6 horas comparado a competidores. Consulte nuestros <a href="${this.terms}" class="link">términos y condiciones</a> para más detalles.</li>
-            <li class="mb-2"><strong>Reduccion de costos: </strong> Recomendamos el plan semestral equivalente a $69 USD por mes ya que es escalable y permite acelerar el retorno de inversión comparado a otras soluciones. </li>
-            <li class="mb-2">Garantizamos la total privacidad de sus datos según las regulaciones GDPR, con servidores ubicados en Europa. Consulte nuestra <a href="${this.privacy}" class="link">política de privacidad</a> para más detalles.</li>
-            <li class="mb-2"><strong>Otros servicios: </strong> Incluir personal para prospeción / atención al cliente y personalizar Steambox luego de adquirir un plan.</li>
+            <li class="mb-2"><strong>Soporte 24/7: </strong> Cumplimos con nuestro Acuerdo de Nivel de Servicio (SLA), asegurando que su consulta sea atendida en un máximo de 6 horas. Consulte nuestros <a href="${this.terms}" class="link">términos y condiciones</a> para más detalles.</li>
+            <li class="mb-2"><strong>Reduccion de costos operativos: </strong> A diferencia de competidores no cobramos por agente y mantienes un costo fijo de retorno rápido de inversión.</li>
+            <li class="mb-2"><strong>Otros servicios: </strong> Acceso con 50% de descuento en https://qrcode.steamboxchat.com y 50% https://chatbot.steamboxchat.com en flujos de chatbots personalizados para WhatsApp. </li>
         </ul>
 </div>
  
