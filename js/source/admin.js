@@ -10399,7 +10399,7 @@ function showContent() {
   const html = document.documentElement;
 
   overlay.style.display = "none";
-  html.style.animation = "fade-in .2s ease-out";
+  html.style.animation = "fade-in .1s ease-in";
 }
 
 // Function to initialize the loading animation

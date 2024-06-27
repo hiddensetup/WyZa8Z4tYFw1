@@ -702,7 +702,7 @@ div ul.sb-menu,
   >li {
     padding: 10px;
     cursor: pointer;
-    border-radius: var(--chat-rounded-size-6);
+    border-radius: var(--chat-rounded-size-3);
     background: rgba(var(--chat-btn-background), 10%);
     transition: var(--transition);
     -webkit-transition: var(--transition-2);
@@ -786,7 +786,7 @@ div ul.sb-menu,
       border-bottom: 0.5px solid var(--chat-btn-background) !important;
       border-right: 0.5px solid var(--chat-btn-background) !important;
       border-left: 4px solid var(--chat-btn-background) !important;
-      border-radius: var(--chat-rounded-size-6);
+      border-radius: var(--chat-rounded-size-3);
       max-width: 380px;
       margin: 0px 0px 5px auto;
 
@@ -802,7 +802,7 @@ div ul.sb-menu,
       border-bottom: 0.5px solid var(--chat-btn-background);
       border-right: 0.5px solid var(--chat-btn-background);
       border-left: 4px solid var(--chat-btn-background);
-      border-radius: var(--chat-rounded-size-6);
+      border-radius: var(--chat-rounded-size-3);
       color: var(--chat-text-primary);
       max-width: 380px;
       margin: 0px 0px 5px auto !important;
@@ -4531,7 +4531,7 @@ div {
   left: 50%;
   transform: translate(-50%, -75%);
   transition: var(--transition);
-  background-color: white;
+  background-color:#fdffeb;
   padding: 10px;
   display: block;
   visibility: visible;

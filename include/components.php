@@ -761,86 +761,82 @@ function sb_send_template_box()
     <script>
         const meta = new Metatemplate;
         meta.init("#template-form");
-        // Theme toggler
+       
+       
+       
         const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
-        const htmlTag = document.documentElement;
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+const htmlTag = document.documentElement;
+const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-        // Function to update the theme
-        const updateTheme = () => {
-            const currentTheme = htmlTag.dataset.theme;
-            let newTheme;
-            let newThemeColor;
+const updateTheme = () => {
+    const currentTheme = htmlTag.dataset.theme;
+    let newTheme;
+    let newThemeColor;
 
-            switch (currentTheme) {
-                case 'dark':
-                    newTheme = 'light';
-                    newThemeColor = 'white'; // Light theme color
-                    htmlTag.classList.remove('dark'); // Remove dark class
-                    break;
-                case 'light':
-                    newTheme = 'app';
-                    newThemeColor = 'white'; // WhatsApp theme color
-                    htmlTag.classList.remove('dark'); // Remove dark class
-                    break;
-                case 'app':
-                    newTheme = 'routin';
-                    newThemeColor = 'white'; // Google theme color
-                    htmlTag.classList.remove('dark'); // Remove dark class
-                    break;
-                case 'routin':
-                    newTheme = 'steambox';
-                    newThemeColor = ''; // Leave the color unchanged
-                    htmlTag.classList.remove('dark'); // Remove dark class
-                    break;
-                case 'steambox':
-                default:
-                    newTheme = 'dark';
-                    newThemeColor = ''; // Leave the color unchanged
-                    htmlTag.classList.add('dark'); // Add dark class
-                    break;
-            }
+    switch (currentTheme) {
+        case 'dark':
+            newTheme = 'light';
+            newThemeColor = 'white';
+            htmlTag.classList.remove('dark');
+            break;
+        case 'light':
+            newTheme = 'app';
+            newThemeColor = 'white';
+            htmlTag.classList.remove('dark');
+            break;
+        case 'app':
+            newTheme = 'routin';
+            newThemeColor = 'white';
+            htmlTag.classList.remove('dark');
+            break;
+        case 'routin':
+            newTheme = 'steambox';
+            newThemeColor = 'white';
+            htmlTag.classList.remove('dark');
+            break;
+        case 'steambox':
+        default:
+            newTheme = 'dark';
+            newThemeColor = '#181620';
+            htmlTag.classList.add('dark');
+            break;
+    }
 
-            htmlTag.dataset.theme = newTheme;
-            if (newThemeColor) {
-                metaThemeColor.content = newThemeColor;
-            }
-            localStorage.setItem('theme', newTheme);
-        };
+    htmlTag.dataset.theme = newTheme;
+    metaThemeColor.content = newThemeColor;
+    localStorage.setItem('theme', newTheme);
+};
 
-        // Retrieve stored theme from local storage and apply it
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            htmlTag.dataset.theme = storedTheme;
-            switch (storedTheme) {
-                case 'light':
-                    metaThemeColor.content = 'white'; // Default to light theme color
-                    break;
-                case 'app':
-                    metaThemeColor.content = 'white'; // WhatsApp theme color
-                    break;
-                case 'routin':
-                    // Leave the color unchanged
-                    break;
-                case 'steambox':
-                    // Leave the color unchanged
-                    break;
-                case 'dark':
-                default:
-                    metaThemeColor.content = 'color(srgb 0.1091 0.0607 0.2083)';
-                    htmlTag.classList.add('dark'); // Add dark class for the dark theme
-                    break;
-            }
-        } else {
-            // Set default theme to "light"
-            htmlTag.dataset.theme = 'light';
-            metaThemeColor.content = 'white'; // Light theme color
-        }
+const storedTheme = localStorage.getItem('theme');
+if (storedTheme) {
+    htmlTag.dataset.theme = storedTheme;
+    switch (storedTheme) {
+        case 'light':
+            metaThemeColor.content = 'white';
+            break;
+        case 'app':
+            metaThemeColor.content = 'white';
+            break;
+        case 'routin':
+            metaThemeColor.content = 'white';
+            break;
+        case 'steambox':
+            metaThemeColor.content = 'white';
+            break;
+        case 'dark':
+        default:
+            metaThemeColor.content = '#181620';
+            htmlTag.classList.add('dark');
+            break;
+    }
+} else {
+    htmlTag.dataset.theme = 'light';
+    metaThemeColor.content = 'white';
+}
 
-        // Add event listeners to theme toggle buttons
-        themeToggleBtns.forEach(btn => {
-            btn.addEventListener('click', updateTheme);
-        });
+themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', updateTheme);
+});
 
 
 

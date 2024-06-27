@@ -4058,8 +4058,8 @@ BODY
             }
 
             &:hover {
-                border: 0.5px solid var(--chat-border-color);
-                box-shadow: 0 0 5px rgba(39, 156, 255, 0.2);
+                border: .5px solid var(--chat-border-color);
+                box-shadow: var(--box-shadow-inner);
 
                 &:before {
                     color: var(--chat-border-color);
@@ -6084,8 +6084,7 @@ BODY
 
 .daterangepicker td.available:hover,
 .daterangepicker th.available:hover {
-    background-color: var(--chat-btn-background);
-    border-color: transparent;
+    background: var(--chat-text-theme-background);    border-color: transparent;
     color: var(--chat-app-background) !important;
 }
 
@@ -6101,11 +6100,11 @@ BODY
 .daterangepicker td.off.end-date {
     //background-color: transparent;
     border-color: transparent;
-    color: var(--chat-text-tertiary);
+    color: var(--chat-text-date);
 }
 
 .daterangepicker td.in-range {
-    background-color: var(--chat-text-primary);
+    background: var(--chat-tag-background-color-active);
     border-color: transparent;
     color: var(--chat-text-white-or-black);
     border-radius: 0;
