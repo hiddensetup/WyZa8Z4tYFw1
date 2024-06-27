@@ -712,50 +712,50 @@ function sb_send_template_box()
                             <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:260px;box-sizing: border-box;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
-                            </div>
                         </div>
-                            <div style="max-width: 100%; width: 100%; max-width: 320px; ">
+                    </div>
+                    <div style="max-width: 100%; width: 100%; max-width: 320px; ">
                         <div class="sb-input-setting" style="gap:10px;display:flex;flex-direction: column;max-width: 100%;">
 
 
-                                <select class="Language" name="Language" required>
-                                    <option value="es"> <?php sb_e('Español (es)') ?> </option>
-                                    <option value="es_AR"> <?php sb_e('Español (es_AR)') ?> </option>
-                                    <option value="en_US"> <?php sb_e('English (en)') ?> </option>
-                                    <option value="es_ES"> <?php sb_e('Español (es_ES)') ?> </option>
-                                    <option value="es_MX"> <?php sb_e('Español (es_MX)') ?> </option>
-                                </select>
-                                <select class="LoadedTemplate" name="LoadedTemplate" id="templateSelect">
-                                    <option value="">Select a template</option>
-                                </select>
-                                <!-- Add this new input for Image URL -->
-                                <div style="display:flex"">
+                            <select class="Language" name="Language" required>
+                                <option value="es"> <?php sb_e('Español (es)') ?> </option>
+                                <option value="es_AR"> <?php sb_e('Español (es_AR)') ?> </option>
+                                <option value="en_US"> <?php sb_e('English (en)') ?> </option>
+                                <option value="es_ES"> <?php sb_e('Español (es_ES)') ?> </option>
+                                <option value="es_MX"> <?php sb_e('Español (es_MX)') ?> </option>
+                            </select>
+                            <select class="LoadedTemplate" name="LoadedTemplate" id="templateSelect">
+                                <option value="">Select a template</option>
+                            </select>
+                            <!-- Add this new input for Image URL -->
+                            <div style="display:flex"">
                                     <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                            </div>
+                            <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
+                                <div class='variables'>
+                                    <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
                                 </div>
-                                <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
-                                    <div class='variables'>
-                                        <input type="text" name="variable" placeholder="{{1}}" style="margin: 2px 2px;">
-                                    </div>
-                                    <div style="display: flex;justify-content: flex-start;margin: 1px;gap: 5px;align-items: center;">
-                                        <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn"><i class="bi bi-dash-lg"></i></a>
-                                        <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn"><i class="bi bi-plus-lg"></i></a>
-                                    </div>
+                                <div style="display: flex;justify-content: flex-start;margin: 1px;gap: 5px;align-items: center;">
+                                    <a type="button" class="RemVariableButton whatsapp_var_buttons_1 sb-btn"><i class="bi bi-dash-lg"></i></a>
+                                    <a type="button" class="AddVariableButton whatsapp_var_buttons_2 sb-btn"><i class="bi bi-plus-lg"></i></a>
                                 </div>
-                                <div class="sb-bottom send-meta">
-                                    <button class="sb-repeater-add  sb-btn sb-icon" style="border: none;margin-top: 40px;text-align: end;" type="submit">
-                                        <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
-                                    </button>
-                                    <div>
+                            </div>
+                            <div class="sb-bottom send-meta">
+                                <button class="sb-repeater-add  sb-btn sb-icon" style="border: none;margin-top: 40px;text-align: end;" type="submit">
+                                    <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
+                                </button>
+                                <div>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </form>
             </div>
-     
+
+            </form>
+        </div>
+
 
     </div>
     <script>
@@ -1216,7 +1216,7 @@ function sb_component_admin()
                     if ($admin_icon == STMBX_URL . '/media/icons.svg') {
                         // Si el valor devuelto es igual al valor predeterminado, imprime el SVG directamente
                         echo '
-        <a href="#"><svg class="rotimg" version="1.1" style="width:30px;" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 387.3 339.6" xml:space="preserve"><style>.st0{fill:var(--chat-text-primary);}</style><path class="st0" d="M192.8 318.2h85.5v16.6l64.2-36.5-64.2-36.5v16.6h-85.9c-30.7 0-59.5-11.9-81.3-33.5-21.9-21.7-34-50.6-34.1-81.5-.1-26.4 8.7-51.5 24.9-72H54.6c-11.5 22-17.5 46.7-17.4 71.5 0 85.7 69.8 155.3 155.6 155.3m0-310.5H59.1l26.1 19.9-26.1 19.9h134.1c63.4 0 115.1 51.5 115.3 115 .1 26.7-9.3 53-26.2 73.6h47.8c12-22.4 18.4-47.6 18.3-73.1.1-85.7-69.8-155.3-155.6-155.3m-149.1 45"/><path class="st0" d="M231.2 180.4c6-3.4 11-8.1 14.8-14.2 4.9-7.7 7.4-16.6 7.4-26.4v-.2c0-9.9-2.2-18.6-6.5-25.7-4.3-7.3-10.6-12.9-18.7-16.8-7.8-3.8-17.3-5.7-28.1-5.7h-60.6V236h38.7v-48.4h17.5l24.9 48.4H261zm-53-56.3h18.5c5.5 0 9.7 1.4 12.8 4.2 3 2.7 4.4 6.5 4.4 11.4v.2c0 5.1-1.4 8.8-4.2 11.5-3 2.8-7.1 4.1-12.7 4.1h-18.9v-31.4z"/></svg></a>';
+        <svg class="rotimg" version="1.1" style="width:30px;" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 387.3 339.6" xml:space="preserve"><style>.st0{fill:var(--chat-text-primary);}</style><path class="st0" d="M192.8 318.2h85.5v16.6l64.2-36.5-64.2-36.5v16.6h-85.9c-30.7 0-59.5-11.9-81.3-33.5-21.9-21.7-34-50.6-34.1-81.5-.1-26.4 8.7-51.5 24.9-72H54.6c-11.5 22-17.5 46.7-17.4 71.5 0 85.7 69.8 155.3 155.6 155.3m0-310.5H59.1l26.1 19.9-26.1 19.9h134.1c63.4 0 115.1 51.5 115.3 115 .1 26.7-9.3 53-26.2 73.6h47.8c12-22.4 18.4-47.6 18.3-73.1.1-85.7-69.8-155.3-155.6-155.3m-149.1 45"/><path class="st0" d="M231.2 180.4c6-3.4 11-8.1 14.8-14.2 4.9-7.7 7.4-16.6 7.4-26.4v-.2c0-9.9-2.2-18.6-6.5-25.7-4.3-7.3-10.6-12.9-18.7-16.8-7.8-3.8-17.3-5.7-28.1-5.7h-60.6V236h38.7v-48.4h17.5l24.9 48.4H261zm-53-56.3h18.5c5.5 0 9.7 1.4 12.8 4.2 3 2.7 4.4 6.5 4.4 11.4v.2c0 5.1-1.4 8.8-4.2 11.5-3 2.8-7.1 4.1-12.7 4.1h-18.9v-31.4z"/></svg>';
                     } else {
                         // Si se proporciona un valor diferente al predeterminado, muestra la imagen
                         echo '<img class="rotimg" style="position: fixed;bottom: 30px;height:30px;" src="' . $admin_icon . '" />';
@@ -1254,8 +1254,7 @@ function sb_component_admin()
                                 </ul>
                             </div>
                         </div>
-                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-server"></i></div>' ?>
-                        <!-- <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi"></i></div>' ?> -->
+                        <?php echo '<div class="help-center"><i style="color:var(--chat-list-active-text);" class="bi-grip-horizontal"></i></div>' ?>
 
                     </div>
                     <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);-webkit-animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);padding:8px;font-size: 1.1rem;font-weight: 500;">
@@ -1611,7 +1610,7 @@ function sb_component_admin()
                                     <li id="tab-admin" class="sb-active">
                                         <i class="bi-person-fill-gear"></i> <?php sb_e('Admin') ?>
                                     </li>
-                                   
+
                                     <li id="tab-automatica">
                                         <i class="bi-robot"></i> <?php sb_e('Automatica') ?>
                                     </li>
@@ -1651,7 +1650,7 @@ function sb_component_admin()
 
                                 <div>
                                     <?php sb_populate_settings('automatica', $sb_settings) ?>
-                                </div>                                
+                                </div>
                                 <div>
                                     <?php sb_populate_settings('notifications', $sb_settings) ?>
                                 </div>

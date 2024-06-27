@@ -1813,14 +1813,14 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
     // Initialize query parts
     $query = '';
     $query_search = '';
-    
+
     // Extract sorting field and check if it's a main field
     $sorting_field = $sorting[0];
     $main_field_sorting = in_array($sorting_field, ['id', 'first_name', 'last_name', 'email', 'profile_image', 'user_type', 'creation_time', 'last_activity', 'department']);
-    
+
     // Count user types
     $count = count($user_types);
-    
+
     // Construct user type query
     if ($count) {
         for ($i = 0; $i < $count; $i++) {
@@ -1838,7 +1838,7 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
             $query .= ' id IN (' . sb_db_escape(implode(',', $user_ids)) . ')';
         }
     }
-    
+
     // Search for users
     if ($search) {
         $searched_users = sb_search_users($search);
@@ -1850,14 +1850,14 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
             $query .= ($query ? ' AND ' : '') . 'id IN (' . substr($query_search, 0, -1) . ')';
         }
     }
-    
+
     // Append conditions to the main query
     if ($query) {
         $query = ' WHERE user_type <> "bot" AND ' . $query;
     } else {
         $query = ' WHERE user_type <> "bot"';
     }
-    
+
     // Retrieve users data with additional fields
     $users = sb_db_get(SELECT_FROM_USERS . ' FROM sb_users ' . $query . sb_routing_and_department_db('sb_conversations', true) . ($main_field_sorting ? (' ORDER BY ' . sb_db_escape($sorting_field) . ' ' . sb_db_escape($sorting[1])) : '') . ' LIMIT ' . intval(sb_db_escape($pagination, true)) * 30 . ',30', false);
     $users_count = count($users);
@@ -1865,7 +1865,7 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
     // Handle empty result
     if (!$users_count)
         return [];
-    
+
     // Process retrieved users data
     if (isset($users) && is_array($users)) {
         // Process additional data
@@ -1878,7 +1878,7 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
                 $user['conversation_source'] = $conversation[0]['source'];
             }
         }
-        
+
         // Sort users if necessary
         if (!$main_field_sorting) {
             if ($sorting[1] == 'ASC') {
@@ -1891,7 +1891,7 @@ function sb_get_users($sorting = ['creation_time', 'DESC'], $user_types = [], $s
                 });
             }
         }
-        
+
         return $users;
     } else {
         return new SBError('db-error', 'sb_get_users', $users);
@@ -6153,114 +6153,115 @@ function sb_get_setting_code($setting)
                     sb_s($setting["button-text"]) .
                     "</a>";
                 break;
-                case "range":
-                    $range = key_exists("range", $setting)
-                        ? $setting["range"]
-                        : [0, 100];
-                    $unit = key_exists("unit", $setting)
-                        ? "<label>" . $setting["unit"] . "</label>"
-                        : "";
+            case "range":
+                $range = key_exists("range", $setting)
+                    ? $setting["range"]
+                    : [0, 100];
+                $unit = key_exists("unit", $setting)
+                    ? "<label>" . $setting["unit"] . "</label>"
+                    : "";
+                $content .=
+                    '<label class="range-value">' .
+                    $range[0] .
+                    '</label><input type="range" min="' .
+                    $range[0] .
+                    '" max="' .
+                    $range[1] .
+                    '" value="' .
+                    $range[0] .
+                    '" />' .
+                    $unit;
+                break;
+            case "timetable":
+                $days = [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday",
+                ];
+                $hours = [
+                    ["", ""],
+                    ["closed", sb_("Closed")],
+                    ["00:00", "12:00 am"],
+                    ["00:30", "12:30 am"],
+                    ["01:00", "1:00 am"],
+                    ["01:30", "1:30 am"],
+                    ["02:00", "2:00 am"],
+                    ["02:30", "2:30 am"],
+                    ["03:00", "3:00 am"],
+                    ["03:30", "3:30 am"],
+                    ["04:00", "4:00 am"],
+                    ["04:30", "4:30 am"],
+                    ["05:00", "5:00 am"],
+                    ["05:30", "5:30 am"],
+                    ["06:00", "6:00 am"],
+                    ["06:30", "6:30 am"],
+                    ["07:00", "7:00 am"],
+                    ["07:30", "7:30 am"],
+                    ["08:00", "8:00 am"],
+                    ["08:30", "8:30 am"],
+                    ["09:00", "9:00 am"],
+                    ["09:30", "9:30 am"],
+                    ["10:00", "10:00 am"],
+                    ["10:30", "10:30 am"],
+                    ["11:00", "11:00 am"],
+                    ["11:30", "11:30 am"],
+                    ["12:00", "12:00 pm"],
+                    ["12:30", "12:30 pm"],
+                    ["13:00", "1:00 pm"],
+                    ["13:30", "1:30 pm"],
+                    ["14:00", "2:00 pm"],
+                    ["14:30", "2:30 pm"],
+                    ["15:00", "3:00 pm"],
+                    ["15:30", "3:30 pm"],
+                    ["16:00", "4:00 pm"],
+                    ["16:30", "4:30 pm"],
+                    ["17:00", "5:00 pm"],
+                    ["17:30", "5:30 pm"],
+                    ["18:00", "6:00 pm"],
+                    ["18:30", "6:30 pm"],
+                    ["19:00", "7:00 pm"],
+                    ["19:30", "7:30 pm"],
+                    ["20:00", "8:00 pm"],
+                    ["20:30", "8:30 pm"],
+                    ["21:00", "9:00 pm"],
+                    ["21:30", "9:30 pm"],
+                    ["22:00", "10:00 pm"],
+                    ["22:30", "10:30 pm"],
+                    ["23:00", "11:00 pm"],
+                    ["23:30", "11:30 pm"],
+                ];
+                $select = '<div class="sb-custom-select">';
+                for ($i = 0; $i < count($hours); $i++) {
+                    $select .=
+                        '<span data-value="' .
+                        $hours[$i][0] .
+                        '">' .
+                        $hours[$i][1] .
+                        "</span>";
+                }
+                $content .= '<div class="sb-timetable">';
+                for ($i = 0; $i < 7; $i++) {
                     $content .=
-                        '<label class="range-value">' .
-                        $range[0] .
-                        '</label><input type="range" min="' .
-                        $range[0] .
-                        '" max="' .
-                        $range[1] .
-                        '" value="' .
-                        $range[0] .
-                        '" />' .
-                        $unit;
-                    break;
-                case "timetable":
-                    $days = [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                        "Saturday",
-                        "Sunday",
-                    ];
-                    $hours = [
-                        ["", ""],
-                        ["closed", sb_("Closed")],
-                        ["00:00", "12:00 am"],
-                        ["00:30", "12:30 am"],
-                        ["01:00", "1:00 am"],
-                        ["01:30", "1:30 am"],
-                        ["02:00", "2:00 am"],
-                        ["02:30", "2:30 am"],
-                        ["03:00", "3:00 am"],
-                        ["03:30", "3:30 am"],
-                        ["04:00", "4:00 am"],
-                        ["04:30", "4:30 am"],
-                        ["05:00", "5:00 am"],
-                        ["05:30", "5:30 am"],
-                        ["06:00", "6:00 am"],
-                        ["06:30", "6:30 am"],
-                        ["07:00", "7:00 am"],
-                        ["07:30", "7:30 am"],
-                        ["08:00", "8:00 am"],
-                        ["08:30", "8:30 am"],
-                        ["09:00", "9:00 am"],
-                        ["09:30", "9:30 am"],
-                        ["10:00", "10:00 am"],
-                        ["10:30", "10:30 am"],
-                        ["11:00", "11:00 am"],
-                        ["11:30", "11:30 am"],
-                        ["12:00", "12:00 pm"],
-                        ["12:30", "12:30 pm"],
-                        ["13:00", "1:00 pm"],
-                        ["13:30", "1:30 pm"],
-                        ["14:00", "2:00 pm"],
-                        ["14:30", "2:30 pm"],
-                        ["15:00", "3:00 pm"],
-                        ["15:30", "3:30 pm"],
-                        ["16:00", "4:00 pm"],
-                        ["16:30", "4:30 pm"],
-                        ["17:00", "5:00 pm"],
-                        ["17:30", "5:30 pm"],
-                        ["18:00", "6:00 pm"],
-                        ["18:30", "6:30 pm"],
-                        ["19:00", "7:00 pm"],
-                        ["19:30", "7:30 pm"],
-                        ["20:00", "8:00 pm"],
-                        ["20:30", "8:30 pm"],
-                        ["21:00", "9:00 pm"],
-                        ["21:30", "9:30 pm"],
-                        ["22:00", "10:00 pm"],
-                        ["22:30", "10:30 pm"],
-                        ["23:00", "11:00 pm"],
-                        ["23:30", "11:30 pm"],
-                    ];
-                    $select = '<div class="sb-custom-select">';
-                    for ($i = 0; $i < count($hours); $i++) {
-                        $select .=
-                            '<span data-value="' .
-                            $hours[$i][0] .
-                            '">' .
-                            $hours[$i][1] .
-                            "</span>";
-                    }
-                    $content .= '<div class="sb-timetable">';
-                    for ($i = 0; $i < 7; $i++) {
-                        $content .=
-                            '<div data-day="' .
-                            strtolower($days[$i]) .
-                            '"><label>' .
-                            sb_($days[$i]) .
-                            "</label><div><div></div><span>" .
-                            sb_("To") .
-                            "</span><div></div><span>" .
-                            sb_("And") .
-                            "</span><div></div><span>" .
-                            sb_("To") .
-                            "</span><div></div></div></div>";
-                    }
-                    $content .= $select . "</div></div>";
-                    break;
-                case "select-images":                $content .= '<div class="bi-x-lg"></div>';
+                        '<div data-day="' .
+                        strtolower($days[$i]) .
+                        '"><label>' .
+                        sb_($days[$i]) .
+                        "</label><div><div></div><span>" .
+                        sb_("To") .
+                        "</span><div></div><span>" .
+                        sb_("And") .
+                        "</span><div></div><span>" .
+                        sb_("To") .
+                        "</span><div></div></div></div>";
+                }
+                $content .= $select . "</div></div>";
+                break;
+            case "select-images":
+                $content .= '<div class="bi-x-lg"></div>';
                 for ($i = 0; $i < count($setting["images"]); $i++) {
                     $content .=
                         '<div data-value="' .
@@ -9136,22 +9137,22 @@ function sb_departments($type)
                     '</p><ul class="sb-responsive-absolute-position"><li data-id="" data-value="">' .
                     sb_("None") .
                     "</li>";
-                    for ($i = 0; $i < $count; $i++) {
-                        $id = $items[$i]["department-id"];
-                        $department_name = mb_substr(ucfirst(sb_($items[$i]["department-name"])), 0, 10);
-                        if (mb_strlen($items[$i]["department-name"]) > 10) {
-                            $department_name .= '...';
-                        }
-                        $code .= '<li data-id="' .
-                            $id .
-                            '" data-value="' .
-                            sb_isset($items[$i], "department-color", $id) .
-                            '">' . '' .
-                            $department_name .
-                            "</li>";
+                for ($i = 0; $i < $count; $i++) {
+                    $id = $items[$i]["department-id"];
+                    $department_name = mb_substr(ucfirst(sb_($items[$i]["department-name"])), 0, 10);
+                    if (mb_strlen($items[$i]["department-name"]) > 10) {
+                        $department_name .= '...';
                     }
-                    
-                    
+                    $code .= '<li data-id="' .
+                        $id .
+                        '" data-value="' .
+                        sb_isset($items[$i], "department-color", $id) .
+                        '">' . '' .
+                        $department_name .
+                        "</li>";
+                }
+
+
                 echo $code . "</ul></div></div>";
                 break;
             case "dashboard":
@@ -9285,7 +9286,7 @@ function sb_css(
                   .sb-ul>span:before,.sb-article-category-links>span+span:before { background-color: ' .
             $color_1 .
             "; }";
-       
+
         $css .=
             '.sb-top, .sb-chat ,.sb-btn,.sb-editor .sb-bar-icons>div:hover:before,.sb-articles>div:hover>div,.sb-main .sb-btn-text:hover,.sb-editor,.sb-table input[type="checkbox"]:checked:before,
                   .sb-select p:hover,div ul.sb-menu li.sb-active, .sb-select ul li.sb-active,.sb-search-btn>i:hover,.sb-search-btn.sb-active i,.sb-rich-message .sb-input>span.sb-active:not(.sb-filled),
@@ -9298,7 +9299,7 @@ function sb_css(
         $css .=
             ".sb-list>div.sb-rich-cnt";
     }
-    
+
     if ($color_3) {
         $css .=
             ".sb-list>.sb-right,.sb-user-conversations>li:hover { background-color: " .
@@ -9505,30 +9506,30 @@ function sb_component_editor($admin = false)
 
         <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
 
-<div class="menu-plus bi-plus-lg"></div>
+            <div class="menu-plus bi-plus-lg"></div>
 
-<div style="min-height: 25px;" class="sb-textarea">
-    <?php
-    // Placeholder values, replace these with your actual data
-    $source = "wa"; // Placeholder value for the conversation source
-    $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
-    ?>
-    <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
-</div>
+            <div style="min-height: 25px;" class="sb-textarea">
+                <?php
+                // Placeholder values, replace these with your actual data
+                $source = "wa"; // Placeholder value for the conversation source
+                $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
+                ?>
+                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+            </div>
 
-<div class="sb-bar sb-space-between">
-    <div id='btns'>
-        <select style="display: none;" id="encodingTypeSelect">
-            <option selected value="mp3">.mp3</option>
-        </select>
-    </div>
-    <div id='recordButton' class="bi-mic-fill start stop-time"  data-sb-tooltip=""></div>
-    <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
-    <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
-    <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+            <div class="sb-bar sb-space-between">
+                <div id='btns'>
+                    <select style="display: none;" id="encodingTypeSelect">
+                        <option selected value="mp3">.mp3</option>
+                    </select>
+                </div>
+                <div id='recordButton' class="bi-mic-fill start stop-time" data-sb-tooltip=""></div>
+                <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
+                <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
+                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
 
-</div>
-</div>
+            </div>
+        </div>
 
 
         <?php if ($admin) { ?>
@@ -9557,7 +9558,7 @@ function sb_component_editor($admin = false)
                     </a>
                 <?php } ?>
 
-                
+
             </div>
 
             <div class="sb-popup sb-replies">
@@ -9993,15 +9994,15 @@ function sb_messaging_platforms_send_message(
                     : sb_get_user_extra($user_id, "phone"),
                 $message,
                 $attachments,
-            ); 
-            case "wx":
-                return sb_waweb_send_message(
-                    $platform_value
-                        ? $platform_value
-                        : sb_get_user_extra($user_id, "phone"),
-                    $message,
-                    $attachments,
-                );             
+            );
+        case "wx":
+            return sb_waweb_send_message(
+                $platform_value
+                    ? $platform_value
+                    : sb_get_user_extra($user_id, "phone"),
+                $message,
+                $attachments,
+            );
         case "tg":
             return sb_telegram_send_message(
                 $platform_value
@@ -10490,7 +10491,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $chart_type = "pie";
             $label_type = 4;
             break;
-       
+
         case "browsers":
             $title = "User browsers";
             $description =
@@ -10509,7 +10510,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $chart_type = "pie";
             $label_type = 4;
             break;
-       
+
 
         case "registrations":
             $query =
@@ -10550,11 +10551,12 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
 
         case "status-client":
             $clientStatus = array("Abierto", "Presupuesto", "Consulta", "Contactado", "Visitado", "Calificado", "Confirmado", "Pendiente", "Resuelto", "Pagado", "VIP", "Descartado", "NA");
-            $query = 'SELECT * FROM sb_conversations A, sb_users B WHERE B.id = A.user_id AND label IN ("' . implode('", "', $clientStatus) . '")';                $extra = sb_get_clientStatus_conversations();
+            $query = 'SELECT * FROM sb_conversations A, sb_users B WHERE B.id = A.user_id AND label IN ("' . implode('", "', $clientStatus) . '")';
+            $extra = sb_get_clientStatus_conversations();
             $description = "Count of all tagged conversations by team members.";
             break;
     }
-    
+
     switch ($report_name) {
         case "status-client":
             $rows = sb_db_get($query, false);
@@ -10602,7 +10604,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             }
             break;
 
-       
+
 
         case "agents-conversations-time":
         case "conversations-time":
