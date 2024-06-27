@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS -->
   <!-- <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
    -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
   <!-- Vue.js CDN -->
@@ -19,64 +19,64 @@
 </head>
 
 <body class="container" style="max-width:700px">
-    <div id="app" class="container mt-5">
-        <h1 class="mb-4">Generador de Cotización</h1>
-        <form @submit.prevent="generateQuote">
-            <!-- Grouping Business and Client Name -->
-            <div class="row mb-2">
-                <div class="col-md-6">
-                    <label for="clientBusinessName" class="form-label">Nombre del Negocio:</label>
-                    <input type="text" class="form-control" v-model="clientBusinessName" value="Mi Negocio"
-                        placeholder="Ingrese el nombre del negocio" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="clientName" class="form-label">Nombre del Cliente:</label>
-                    <input type="text" class="form-control" v-model="clientName" value="Demo"
-                        placeholder="Ingrese el nombre del cliente" required>
-                </div>
-            </div>
-    
-            <!-- Quote Type -->
-            <div class="mb-2">
-                <label for="quoteType" class="form-label">Tipo de Cotización:</label>
-                <select class="form-select" v-model="quoteType">
-                    <option selected value="mensual">Implementación</option>
-                    <option value="trimestral">Costo Trimestral</option>
-                    <option value="semestral">Costo Semestral</option>
-                </select>
-            </div>
-    
-            <!-- Monthly Setup Cost -->
-            <div class="mb-2">
-                <label for="monthlySetupCost" class="form-label">Costo de Implementación:</label>
-                <input type="number" class="form-control" v-model.number="monthlySetupCost"
-                    placeholder="Ingrese el costo mensual de setup">
-            </div>
-    
-            <!-- Grouping User Count and Date of Quote -->
-            <div class="row mb-2">
-                <div class="col-md-6">
-                    <label for="userCount" class="form-label">Número de Usuarios:</label>
-                    <input type="number" class="form-control" v-model.number="userCount" value="15"
-                        placeholder="Ingrese el número de usuarios" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="quoteDate" class="form-label">Fecha de Cotización:</label>
-                    <input type="text" class="form-control" v-model="quoteDate" readonly>
-                </div>
-            </div>
-    
-            <!-- Proposal Number -->
-            <div class="mb-2">
-                <label for="proposalNumber" class="form-label">ID Cotización:</label>
-                <input type="text" class="form-control" v-model="proposalNumber" readonly>
-            </div>
-    
-            <!-- Generate Quote Button -->
-            <button type="submit" class="btn btn-primary">Generar Cotización</button>
-        </form>
-    </div>
-    
+  <div id="app" class="container mt-5">
+    <h1 class="mb-4">Generador de Cotización</h1>
+    <form @submit.prevent="generateQuote">
+      <!-- Grouping Business and Client Name -->
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="mb-2">
+            <label for="branding" class="form-label">Nombre de la Marca:</label>
+            <input type="text" class="form-control" v-model="branding" placeholder="Ingrese el nombre de la marca" required>
+          </div>
+          <label for="clientBusinessName" class="form-label">Nombre del Negocio:</label>
+          <input type="text" class="form-control" v-model="clientBusinessName" value="Mi Negocio" placeholder="Ingrese el nombre del negocio" required>
+        </div>
+        <div class="col-md-6">
+          <label for="clientName" class="form-label">Nombre del Cliente:</label>
+          <input type="text" class="form-control" v-model="clientName" value="Demo" placeholder="Ingrese el nombre del cliente" required>
+        </div>
+      </div>
+
+      <!-- Quote Type -->
+      <div class="mb-2">
+        <label for="quoteType" class="form-label">Tipo de Cotización:</label>
+        <select class="form-select" v-model="quoteType">
+          <option selected value="mensual">Implementación</option>
+          <option value="trimestral">Costo Trimestral</option>
+          <option value="semestral">Costo Semestral</option>
+        </select>
+      </div>
+
+      <!-- Monthly Setup Cost -->
+      <div class="mb-2">
+        <label for="monthlySetupCost" class="form-label">Costo de Implementación:</label>
+        <input type="number" class="form-control" v-model.number="monthlySetupCost" placeholder="Ingrese el costo mensual de setup">
+      </div>
+
+      <!-- Grouping User Count and Date of Quote -->
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <label for="userCount" class="form-label">Número de Usuarios:</label>
+          <input type="number" class="form-control" v-model.number="userCount" value="15" placeholder="Ingrese el número de usuarios" required>
+        </div>
+        <div class="col-md-6">
+          <label for="quoteDate" class="form-label">Fecha de Cotización:</label>
+          <input type="text" class="form-control" v-model="quoteDate" readonly>
+        </div>
+      </div>
+
+      <!-- Proposal Number -->
+      <div class="mb-2">
+        <label for="proposalNumber" class="form-label">ID Cotización:</label>
+        <input type="text" class="form-control" v-model="proposalNumber" readonly>
+      </div>
+
+      <!-- Generate Quote Button -->
+      <button type="submit" class="btn btn-primary">Generar Cotización</button>
+    </form>
+  </div>
+
 
   <script>
     const app = Vue.createApp({
@@ -91,15 +91,13 @@
           privacy: 'https://steamboxchat.com/privacy',
 
 
-
-          clientName: 'Cinthya Medina',
-          clientBusinessName: 'Veritradecorp',
+          clientName: 'Frank',
+          clientBusinessName: '',
           quoteType: 'semestral',
-          monthlySetupCost: 179,
-          userCount: 4,
+          monthlySetupCost: 99,
+          userCount: 15,
           quoteDate: '',
           proposalNumber: '',
-
 
         }
       },
@@ -110,7 +108,7 @@
       methods: {
         getValidUntilDate(startDate) {
           const dateParts = startDate.split('/');
-          const day = parseInt(dateParts[0], 10) + 7;
+          const day = parseInt(dateParts[0], 10) + 15; // Cambiar de 7 a 15 para 15 días de validez
           const month = parseInt(dateParts[1], 10);
           const year = parseInt(dateParts[2], 10);
           const validUntilDate = new Date(year, month - 1, day);
@@ -180,22 +178,22 @@
 
 
         generateQuoteHTML(setupCost, totalCost) {
-  let totalLabel = '';
-  let setupDescription = '';
-  let remainingAmount = 0;
+          let totalLabel = '';
+          let setupDescription = '';
+          let remainingAmount = 0;
 
-  if (this.quoteType === 'mensual') {
-    totalLabel = 'Costo Total Mensual';
-    setupDescription = '*Si abonas 1 mes y optas por continuar con un plan se abona la diferencia 5 días antes de cumplir el mes.';
-  } else if (this.quoteType === 'trimestral') {
-    totalLabel = 'Costo Total Trimestral';
-    setupDescription = '*La implementación se abona 1 sola vez al empezar cualquier plan o se puede emplear como un pago mensual.';
-    remainingAmount = totalCost - setupCost; // Calculate remaining amount for trimestral plan
-  } else if (this.quoteType === 'semestral') {
-    totalLabel = 'Costo Total Semestral';
-    setupDescription = '*La implementación se abona 1 sola vez al empezar cualquier plan o se puede emplear como un pago mensual.';
-    remainingAmount = totalCost - setupCost; // Calculate remaining amount for semi-annual plan
-  }
+          if (this.quoteType === 'mensual') {
+            totalLabel = 'Costo Total Mensual';
+            setupDescription = '*Si abonas 1 mes y optas por continuar con un plan se abona la diferencia 5 días antes de cumplir el mes.';
+          } else if (this.quoteType === 'trimestral') {
+            totalLabel = 'Costo Total Trimestral';
+            setupDescription = '*La implementación se abona 1 sola vez al empezar cualquier plan o se puede emplear como un pago mensual.';
+            remainingAmount = totalCost - setupCost; // Calculate remaining amount for trimestral plan
+          } else if (this.quoteType === 'semestral') {
+            totalLabel = 'Costo Total Semestral';
+            setupDescription = '*La implementación se abona 1 sola vez al empezar cualquier plan o se puede emplear como un pago mensual.';
+            remainingAmount = totalCost - setupCost; // Calculate remaining amount for semi-annual plan
+          }
 
           return `<!DOCTYPE html>
 <html lang="es">
@@ -228,7 +226,7 @@
 
     <div class="section">
     <p class="my-4">Estimado/a ${this.clientName},<br>
-    aquí te compartimos nuestra propuesta detallada para la implementación de Steambox Chat. A continuación, encontrarás el desglose de costos.</p>
+    aquí te compartimos nuestra propuesta detallada para la implementación de ${this.branding} Chat. A continuación, encontrarás el desglose de costos.</p>
     </div>
 
     
@@ -249,7 +247,7 @@
                 
                 <tr>
                     <td>Costo de Implementación</td>
-                    <td>$${setupCost} USD</td>
+                    <td class="d-flex flex-column-reverse"><s class="text-muted small">$159 USD</s> <span>$${setupCost} USD<span></td>
                 </tr>
             </tbody>
             <tfoot>
@@ -272,9 +270,10 @@
     
         <h5 class="mb-2">Notas Adicionales:</h5>
         <ul>
+           <ul>
             <li class="mb-2"><strong>Soporte 24/7: </strong> Cumplimos con nuestro Acuerdo de Nivel de Servicio (SLA), asegurando que su consulta sea atendida en un máximo de 6 horas. Consulte nuestros <a href="${this.terms}" class="link">términos y condiciones</a> para más detalles.</li>
-            <li class="mb-2"><strong>Reduccion de costos operativos: </strong> A diferencia de competidores no cobramos por agente y mantienes un costo fijo de retorno rápido de inversión.</li>
-            <li class="mb-2"><strong>Otros servicios: </strong> Acceso con 50% de descuento en https://qrcode.steamboxchat.com y 50% https://chatbot.steamboxchat.com en flujos de chatbots personalizados para WhatsApp. </li>
+            <li class="mb-2"><strong>Reduccion de costos operativos: </strong> A diferencia de competidores no cobramos por agente lo cual te asegura un retorno rápido de inversión y escalabilidad. </li>
+            <li class="mb-2"><strong>Verificación de Business Manager: </strong> Al adquirir ${this.branding}, podemos verificar tu negocio/empresa sin costo adicional para que tengas un segundo número para WhatsApp Marketing.</li>
         </ul>
 </div>
  
@@ -283,17 +282,16 @@
   
   <div class="section mt-5">
 <div class="d-flex justify-content-center flex-column">
-  <img src="https://steamboxchat.com/resources/img/chat-flow-mobile.avif" class="img-fluid mb-5 align-self-center" style=" max-width: 37em; max-height: 37em;">
+  <img src="routin_multiagente_whatsapp_api.png" class="img-fluid mb-5 align-self-center" style=" max-width: 37em; max-height: 37em;">
 <div>
-    <h5 class="mt-3">Beneficios Incluidos:</h5>
-    <ul class="pb-5">
-      <li class="mb-2"><strong>Solución a Problemas de WhatsApp:</strong> Previene la pérdida de datos, elimina contactos duplicados y mejora el seguimiento de clientes.</li>
-<li class="mb-2"><strong>Automatización de Respuesta y Menú Interactivo:</strong> Ofrece un menú interactivo con respuestas automáticas y derivación a distintas unidades.</li>
-<li class="mb-2"><strong>Centralización del Número Principal de WhatsApp:</strong> Mejora el branding y facilita el contacto con los clientes a través de su canal preferido, con una alta tasa de apertura.</li>
-<li class="mb-2"><strong>Bandeja de Seguimiento Personalizada:</strong> Proporciona a los agentes una bandeja organizada para seguimiento eficiente de conversaciones atendidas.</li>
-<li class="mb-2"><strong>Chat para Sitio Web, Email y Telegram:</strong> Brinda atención instantánea a visitantes del sitio web y a consultas por Telegram y correo electrónico.</li>
-<li class="mb-2"><strong>Accesos Independientes vía Mobile y Desktop:</strong> Permite a los agentes acceder de forma independiente desde dispositivos móviles y de escritorio, asegurando flexibilidad y productividad en cualquier lugar.</li>
-    </ul>
+    <h5 class="mt-3">Principales beneficios:</h5>
+<ul class="pb-5">
+    <li class="mb-2"><strong>Todo en un solo lugar:</strong> Centraliza la gestión de WhatsApp entre varios agentes para mejorar la comunicación con clientes usando el mismo número de WhatsApp, evitando bloqueos de cuenta y problemas de rendimiento en dispositivos móviles por almacenamiento lleno.</li>
+    <li class="mb-2"><strong>Automatización inteligente:</strong> Configura respuestas automáticas, menús interactivos y chatbot de bienvenida para campañas de WhatsApp.</li>
+    <li class="mb-2"><strong>Chat para sitios web:</strong> Integramos un botón de chat a tu sitio web para responder instantáneamente y obtener información para acciones de marketing.</li>
+    <li class="mb-2"><strong>Acceso flexible:</strong> Permite a los agentes gestionar desde móviles y escritorios, garantizando productividad en cualquier lugar.</li>
+    <li class="mb-2"><strong>Integración con Telegram y correo:</strong> Recibe y gestiona mensajes de correo electrónico y mensajes de Telegram como canales adicionales sin costo.</li>
+</ul>
 
 
 </div>

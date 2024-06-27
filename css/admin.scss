@@ -3715,7 +3715,7 @@ BODY
 
             >div {
                 max-width: 1000px;
-            }
+                padding: 20px 0px;            }
         }
     }
 }
@@ -3949,7 +3949,7 @@ BODY
         min-width: 280px;
         line-height: 22px;
         padding: 5px 10px;
-        min-height: 250px;
+        min-height: 200px;
     }
 
     input[type="checkbox"] {

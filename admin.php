@@ -37,12 +37,12 @@ require('include/components.php');
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
-  <title><?php echo $connection_success && sb_get_setting('admin-title') ? sb_get_setting('admin-title') : '#Routin.bot®️' ?></title>
+  <title><?php echo $connection_success && sb_get_setting('admin-title') ? sb_get_setting('admin-title') : 'Routin®️' ?></title>
   <script src="js/vue.global.prod.js" rel="preload" as="script"></script>
   <script src="<?php echo (file_exists('js/jquery.js')) ? $steambox_url . 'js/jquery.js' : 'https://code.jquery.com/jquery-3.6.4.min.js'; ?>" integrity="<?php echo (file_exists('js/jquery.js')) ? '' : 'sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8='; ?>" crossorigin="<?php echo (file_exists('js/jquery.js')) ? '' : 'anonymous'; ?>"></script>
-  <script src="<?php echo file_exists('js/min/main.js') ? $steambox_url . 'js/min/main.js' : $steambox_url . 'js/main.js'; ?>"></script>
-  <script src="<?php echo file_exists('js/min/admin.js') ? $steambox_url . 'js/min/admin.js' : $steambox_url . 'js/admin.js'; ?>"></script>
-  <script src="<?php echo file_exists('js/min/metatemplate.js') ? $steambox_url . 'js/min/metatemplate.js' : $steambox_url . 'js/metatemplate.js'; ?>"></script>
+  <script src="<?php echo file_exists('js/min/main.js') ? $steambox_url . 'js/min/main.js' : $steambox_url . 'js/source/main.js'; ?>"></script>
+  <script src="<?php echo file_exists('js/min/admin.js') ? $steambox_url . 'js/min/admin.js' : $steambox_url . 'js/source/admin.js'; ?>"></script>
+  <script src="<?php echo file_exists('js/min/metatemplate.js') ? $steambox_url . 'js/min/metatemplate.js' : $steambox_url . 'js/source/metatemplate.js'; ?>"></script>
   <!-- <link href="<?php echo file_exists('/node_modules/bootstrap-icons/font/bootstrap-icons.min.css') ? 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css' : $steambox_url . 'node_modules/bootstrap-icons/font/bootstrap-icons.css'; ?>" rel="stylesheet" media="all"> -->
 
   <link href="<?php echo $steambox_url . 'css/admin.css' ?>" rel="stylesheet" id="theme" media="all">

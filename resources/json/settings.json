@@ -4,10 +4,24 @@
   ],
   "automatica": [
     {
+      "type": "text",
+      "id": "bot-name",
+      "title": "Bot name",
+      "content": "Rename the chat bot. Default is 'Bot'."
+    },
+    {
+      "type": "upload-image",
+      "id": "bot-image",
+      "title": "Bot profile image",
+      "content": "Set a profile image for the chat bot.",
+      "background-size": "auto 64px"
+    },
+    {
       "type": "multi-input",
       "id": "welcome-message",
       "title": "Routin'",
       "content": "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -38,27 +52,10 @@
     },
     {
       "type": "repeater",
-      "id": "saved-replies",
-      "title": "Saved replies",
-      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
-      "items": [
-        {
-          "type": "text",
-          "name": "Name",
-          "id": "reply-name"
-        },
-        {
-          "type": "textarea",
-          "name": "Saved reply",
-          "id": "reply-text"
-        }
-      ]
-    },
-    {
-      "type": "repeater",
       "id": "departments",
       "title": "Departments",
       "content": "Organize and manage your agents by assigning them to specific branches or local stores, including internal departments.",
+      "help": "https://linktr.ee/routinbot", 
       "items": [
         {
           "type": "text",
@@ -81,10 +78,44 @@
       ]
     },
     {
+      "type": "repeater",
+      "id": "saved-replies",
+      "title": "Saved replies",
+      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
+      "help": "https://linktr.ee/routinbot",
+      "items": [
+        {
+          "type": "text",
+          "name": "Name",
+          "id": "reply-name"
+        },
+        {
+          "type": "textarea",
+          "name": "Saved reply",
+          "id": "reply-text"
+        }
+      ]
+    },
+    {
+      "type": "multi-input",
+      "id": "agents",
+      "title": "Automatic Reassignment",
+      "content": "If the assigned agent is offline, the application will automatically reassign the customer to the nearest available agent, ensuring fair distribution.",
+      "help": "https://linktr.ee/routinbot",
+      "value": [
+        {
+          "type": "checkbox",
+          "id": "agent-hide-conversations-routing",
+          "title": "Reassign if offline"
+        }
+      ]
+    },
+    {
       "type": "multi-input",
       "id": "chat-timetable",
       "title": "Offline message",
       "content": "Send a message to the user when their first message is sent outside of scheduled office hours or all agents are offline. Text formatting and merge fields are supported.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -100,7 +131,8 @@
           "type": "select",
           "id": "chat-timetable-type",
           "title": "Message type",
-          "value": [
+          "help": "https://linktr.ee/routinbot",
+      "value": [
             [
               "",
               "Chat message"
@@ -136,10 +168,16 @@
   ],
   "admin": [
     {
+      "type": "text",
+      "id": "admin-title",
+      "title": "Admin title",
+      "content": "Replace the Routin.bot brand title (browser tab name)."
+    },
+    {
       "type": "upload-image",
-      "id": "admin-icon",
-      "title": "Admin icon",
-      "content": "Replace the top-left brand icon on the admin area and the browser favicon.",
+      "id": "login-icon",
+      "title": "Admin login logo",
+      "content": "Replace the brand logo on the admin login page.",
       "background-size": "auto 64px"
     },
     {
@@ -147,7 +185,7 @@
       "id": "supervisor",
       "title": "Supervisor",
       "content": "Set which actions to allow supervisors.",
-      "help": "#",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "text",
@@ -217,25 +255,12 @@
       "button-text": "Delete leads",
       "button-url": "#"
     },
-   
-    {
-      "type": "multi-input",
-      "id": "agents",
-      "title": "Automatic Reassignment",
-      "content": "If the assigned agent is offline, the application will automatically reassign the customer to the nearest available agent, ensuring fair distribution.",
-      "value": [
-        {
-          "type": "checkbox",
-          "id": "agent-hide-conversations-routing",
-          "title": "Reassign if offline"
-        }
-      ]
-    },
     {
       "type": "multi-input",
       "id": "rate-and-review",
       "title": "Rate and review question",
       "content": "This function is activated by writing <b>[rating]</b> in the message to be sent or by using the 👍 button. The message received by the customer can be: <br><br><br><b>How would you rate the service received from agent {agent_name}?</b><br><br><b>1. </b>Positive, it was very helpful. <br><b>2. </b>Negative. <br><br> This way, the customer selects an option, and the rating will appear in the reports section as a positive or negative rating.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "textarea",
@@ -249,12 +274,12 @@
         }
       ]
     },
-    
     {
       "type": "multi-input",
       "id": "close-message",
       "title": "Close message",
       "content": "This function allows an automatic message to be sent to the user when an agent archives a conversation. When the conversation is archived, the function triggers the message to be sent to the user, which could include a polite thank you note or any other custom message that the organization wishes to convey. This feature helps to maintain good communication and relationship with customers, even after a conversation has ended, and it can be useful for providing additional information or offering further assistance if needed.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -273,16 +298,14 @@
         }
       ]
     }
-   
   ],
- 
   "notifications": [
     {
       "type": "multi-input",
       "id": "push-notifications",
       "title": "Pusher® Beams notifications",
       "content": "Push notifications settings. Enter the Pusher Beams details.",
-      "help": "#",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -316,6 +339,7 @@
       "id": "chat-sound-admin",
       "title": "Sounds for Routin.bot",
       "content": "Play a sound when a agent receives an incoming message or sends an outgoing message.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         [
           "n",
@@ -348,6 +372,7 @@
       "id": "desktop-notifications",
       "title": "Desktop notifications",
       "content": "Show a desktop notification when a new message is received.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         [
           "",
@@ -372,6 +397,7 @@
       "id": "flash-notifications",
       "title": "Flash notifications",
       "content": "Show a browser tab notification when a new message is received.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         [
           "",
@@ -392,69 +418,113 @@
       ]
     },
     {
-      "type": "multi-input",
-      "id": "sms",
-      "title": "Text message notifications (Twilio)",
-      "content": "Enter your Twilio account details.",
-      "value": [
-        {
-          "type": "checkbox",
-          "id": "sms-active-agents",
-          "title": "Active for agents"
-        },
-        {
-          "type": "checkbox",
-          "id": "sms-active-users",
-          "title": "Active for users"
-        },
-        {
-          "type": "text",
-          "id": "sms-user",
-          "title": "Account SID"
-        },
-        {
-          "type": "text",
-          "id": "sms-token",
-          "title": "Token"
-        },
-        {
-          "type": "text",
-          "id": "sms-sender",
-          "title": "Sender number"
-        },
-        {
-          "type": "textarea",
-          "id": "sms-message-agent",
-          "title": "Agent message template"
-        },
-        {
-          "type": "textarea",
-          "id": "sms-message-user",
-          "title": "User message template"
-        },
-        {
-          "type": "button",
-          "id": "sms-btn",
-          "title": "Configuration URL",
-          "button-text": "Get configuration URL",
-          "button-url": "#"
-        }
-      ]
-    },
-    
-    {
       "type": "upload-image",
       "id": "notifications-icon",
       "title": "Notifications icon",
       "content": "Set the default notifications icon. The icon will be used as a profile image if the user doesn't have one.",
       "background-size": "auto 64px"
     },
+
+    
+    {
+      "type": "checkbox",
+      "id": "notify-agent-email",
+      "title": "Agent email notifications",
+      "content": "Send an email to an agent when a user replies and the agent is offline. An email is automatically sent to all agents for new conversations."
+    },
+    {
+      "type": "multi-input",
+      "setting": "emails",
+      "id": "email-agent",
+      "title": "Agent notification email",
+      "content": "Template for the email sent to an agent when a user sends a new message. You can use text and HTML.",
+      "help": "https://linktr.ee/routinbot",
+      "value": [
+        {
+          "type": "text",
+          "id": "email-agent-subject",
+          "title": "Subject"
+        },
+        {
+          "type": "textarea",
+          "id": "email-agent-content",
+          "title": "Content"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "notify-user-email",
+      "title": "User email notifications",
+      "content": "Send an email to the user when an agent replies and the user is offline."
+    },
+    {
+      "type": "multi-input",
+      "setting": "emails",
+      "id": "email-user",
+      "title": "User notification email",
+      "content": "Email template for the notification email that is sent to a user when an agent replies. You can use text and HTML.",
+      "help": "https://linktr.ee/routinbot",
+      "value": [
+        {
+          "type": "text",
+          "id": "email-user-subject",
+          "title": "Subject"
+        },
+        {
+          "type": "textarea",
+          "id": "email-user-content",
+          "title": "Content"
+        }
+      ]
+    }
+  ],
+  "mailbox": [
+    {
+      "type": "multi-input",
+      "id": "email-server",
+      "title": "SMTP",
+      "content": "Outgoing SMTP server information.",
+      "help": "https://linktr.ee/routinbot",
+      "value": [
+        {
+          "type": "text",
+          "id": "email-server-host",
+          "title": "Host"
+        },
+        {
+          "type": "text",
+          "id": "email-server-user",
+          "title": "Username"
+        },
+        {
+          "type": "text",
+          "id": "email-server-password",
+          "title": "Password"
+        },
+        {
+          "type": "number",
+          "id": "email-server-port",
+          "title": "Port"
+        },
+        {
+          "type": "text",
+          "id": "email-server-from",
+          "title": "Sender email"
+        },
+        {
+          "type": "text",
+          "id": "email-sender-name",
+          "title": "Sender name"
+        }
+      ]
+    },
     {
       "type": "multi-input",
       "id": "email-piping",
       "title": "Email piping",
       "content": "Email piping server information and more settings.",
-      "help": "#",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -480,7 +550,8 @@
           "type": "select",
           "id": "email-piping-port",
           "title": "Port",
-          "value": [
+          "help": "https://linktr.ee/routinbot",
+      "value": [
             [
               110,
               110
@@ -529,99 +600,11 @@
       ]
     },
     {
-      "type": "multi-input",
-      "id": "email-server",
-      "title": "SMTP",
-      "content": "Outgoing SMTP server information.",
-      "value": [
-        {
-          "type": "text",
-          "id": "email-server-host",
-          "title": "Host"
-        },
-        {
-          "type": "text",
-          "id": "email-server-user",
-          "title": "Username"
-        },
-        {
-          "type": "text",
-          "id": "email-server-password",
-          "title": "Password"
-        },
-        {
-          "type": "number",
-          "id": "email-server-port",
-          "title": "Port"
-        },
-        {
-          "type": "text",
-          "id": "email-server-from",
-          "title": "Sender email"
-        },
-        {
-          "type": "text",
-          "id": "email-sender-name",
-          "title": "Sender name"
-        }
-      ]
-    },
-    {
-      "type": "checkbox",
-      "id": "notify-agent-email",
-      "title": "Agent email notifications",
-      "content": "Send an email to an agent when a user replies and the agent is offline. An email is automatically sent to all agents for new conversations."
-    },
-    {
-      "type": "multi-input",
-      "setting": "emails",
-      "id": "email-agent",
-      "title": "Agent notification email",
-      "content": "Template for the email sent to an agent when a user sends a new message. You can use text and HTML.",
-      "value": [
-        {
-          "type": "text",
-          "id": "email-agent-subject",
-          "title": "Subject"
-        },
-        {
-          "type": "textarea",
-          "id": "email-agent-content",
-          "title": "Content"
-        }
-      ]
-    },
-    {
       "type": "input-button",
       "id": "test-email-agent",
       "title": "Test agent email",
       "content": "Send a test agent notification email to verify email settings.",
       "button-text": "Send email"
-    },
-    {
-      "type": "checkbox",
-      "id": "notify-user-email",
-      "title": "User email notifications",
-      "content": "Send an email to the user when an agent replies and the user is offline."
-    },
-    {
-      "type": "multi-input",
-      "setting": "emails",
-      "id": "email-user",
-      "title": "User notification email",
-      "content": "Email template for the notification email that is sent to a user when an agent replies. You can use text and HTML.",
-      "value": [
-        {
-          "type": "text",
-          "id": "email-user-subject",
-          "title": "Subject"
-        },
-        {
-          "type": "textarea",
-          "id": "email-user-content",
-          "title": "Content"
-        }
-      ]
     },
     {
       "type": "input-button",
@@ -632,7 +615,6 @@
     }
   ],
   "miscellaneous": [
-    
     {
       "type": "multi-input",
       "id": "pusher",
@@ -734,19 +716,6 @@
       ]
     },
     {
-      "type": "text",
-      "id": "admin-title",
-      "title": "Admin title",
-      "content": "Replace the Routin.bot brand title (browser tab name)."
-    },
-    {
-      "type": "upload-image",
-      "id": "login-icon",
-      "title": "Admin login logo",
-      "content": "Replace the brand logo on the admin login page.",
-      "background-size": "auto 64px"
-    },
-    {
       "type": "checkbox",
       "id": "collapse",
       "title": "Collapse panels",
@@ -773,6 +742,7 @@
       "id": "performance",
       "title": "Performance optimization",
       "content": "Disable features you don't use and improve the chat performance.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -798,6 +768,7 @@
       "id": "transcript",
       "title": "Transcript",
       "content": "Transcript settings.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "select",
@@ -838,6 +809,7 @@
     }
   ],
   "chat": [
+    
     {
       "type": "checkbox",
       "id": "front-auto-translations",
@@ -845,44 +817,11 @@
       "content": "Translate the chat widget's text elements automatically to match the user's browser language."
     },
     {
-      "type": "select",
-      "id": "chat-sound",
-      "title": "Sounds for live chat",
-      "content": "Play a sound when a user receives an incoming message or sends an outgoing message.",
-      "value": [
-        [
-          "n",
-          "None"
-        ],
-        [
-          "a",
-          "All messages"
-        ],
-        [
-          "aa",
-          "Always all messages"
-        ],
-        [
-          "i",
-          "Incoming messages only"
-        ],
-        [
-          "ia",
-          "Always incoming messages only"
-        ]
-      ]
-    },
-    {
-      "type": "article",
-      "id": "livechat",
-      "title": "Live chat code with audio support",
-      "content": "Paste this code in the head section of you website to load the live chat widget"
-    },
-    {
       "type": "multi-input",
       "id": "popup-message",
       "title": "Popup message",
       "content": "Display an automatic popup message to new users.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -912,10 +851,40 @@
       ]
     },
     {
+      "type": "select",
+      "id": "chat-sound",
+      "title": "Sounds for live chat",
+      "content": "Play a sound when a user receives an incoming message or sends an outgoing message.",
+      "help": "https://linktr.ee/routinbot",
+      "value": [
+        [
+          "n",
+          "None"
+        ],
+        [
+          "a",
+          "All messages"
+        ],
+        [
+          "aa",
+          "Always all messages"
+        ],
+        [
+          "i",
+          "Incoming messages only"
+        ],
+        [
+          "ia",
+          "Always incoming messages only"
+        ]
+      ]
+    },    
+    {
       "type": "multi-input",
       "id": "privacy",
       "title": "Privacy message",
       "content": "Display a privacy message with Accept or Decline buttons. The user must click Accept to start using the chat. This is useful for enforcing a privacy policy and GDPR compliance.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -988,6 +957,7 @@
       "id": "agents-menu",
       "title": "Agents menu",
       "content": "Show the agents menu in the dashboard and force the user to choose an agent to start a conversation.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -1006,19 +976,6 @@
       "id": "chat-offline-disable",
       "title": "Hide chat if no agents online",
       "content": "Disable and hide the chat widget if all agents are offline."
-    },
-    {
-      "type": "text",
-      "id": "bot-name",
-      "title": "Bot name",
-      "content": "Rename the chat bot. Default is 'Bot'."
-    },
-    {
-      "type": "upload-image",
-      "id": "bot-image",
-      "title": "Bot profile image",
-      "content": "Set a profile image for the chat bot.",
-      "background-size": "auto 64px"
     },
     {
       "type": "text",
@@ -1043,6 +1000,7 @@
       "id": "registration-required",
       "title": "Require registration",
       "content": "Require the user registration or login before start a chat. To enable the login area the password field must be included.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         [
           "",
@@ -1093,6 +1051,7 @@
       "id": "registration",
       "title": "Registration form",
       "content": "User registration form information.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "text",
@@ -1131,6 +1090,7 @@
       "id": "login",
       "title": "Login form",
       "content": "User login form information.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "text",
@@ -1173,6 +1133,7 @@
       "id": "registration-fields",
       "title": "Optional registration fields",
       "content": "Choose which optional fields to include in the registration form. Name, email, and password fields are all included by default.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -1237,6 +1198,7 @@
       "id": "phone-code",
       "title": "Single phone country code",
       "content": "Force users to use only one phone country code.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         [
           "",
@@ -2195,6 +2157,12 @@
   ],
   "design": [
     {
+      "type": "article",
+      "id": "livechat",
+      "title": "Install Web Chat",
+      "content": "Paste this code in the head section of you website to load the live chat widget"
+    },
+    {
       "type": "checkbox",
       "id": "show-profile-images-admin",
       "title": "Show agent profile images",
@@ -2229,6 +2197,7 @@
       "id": "header-type",
       "title": "Header type",
       "content": "Set the header appearance.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         [
           "minimal",
@@ -2277,6 +2246,7 @@
       "id": "chat-button-offset",
       "title": "Chat button offset",
       "content": "Adjust the chat button position. Values are in px.",
+      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "number",
@@ -2302,7 +2272,8 @@
           "type": "select",
           "id": "chat-button-offset-mobile",
           "title": "Apply to",
-          "value": [
+          "help": "https://linktr.ee/routinbot",
+      "value": [
             [
               "all",
               "All"

@@ -9,7 +9,7 @@ function sb_profile_box()
                 <span class="sb-name"></span>
             </div>
             <div>
-                <a style="color: var(--chat-app-logo-color);" data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
+                <a data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
                     <i class="bi-envelope-at"></i>
                 </a>
                 <a data-value="sms" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send text message') ?>">
@@ -1611,15 +1611,21 @@ function sb_component_admin()
                                     <li id="tab-admin" class="sb-active">
                                         <i class="bi-person-fill-gear"></i> <?php sb_e('Admin') ?>
                                     </li>
+                                   
                                     <li id="tab-automatica">
                                         <i class="bi-robot"></i> <?php sb_e('Automatica') ?>
                                     </li>
+
                                     <li id="tab-notifications">
                                         <i class="bi-app-indicator"></i> <?php sb_e('Notifications') ?>
+                                    </li>
+                                    <li id="tab-mailbox">
+                                        <i class="bi-mailbox"></i> <?php sb_e('Mailbox') ?>
                                     </li>
                                     <li id="tab-various">
                                         <i class="bi-box-seam"></i> <?php sb_e('Miscellaneous') ?>
                                     </li>
+
                                     <hr>
                                     <?php for ($i = 0; $i < count($apps); $i++) {
                                         if (defined($apps[$i][0])) echo '<li id="tab-' . $apps[$i][1] . '">' . sb_($apps[$i][2]) . '</li>';
@@ -1642,11 +1648,15 @@ function sb_component_admin()
                                 <div class="sb-active">
                                     <?php sb_populate_settings('admin', $sb_settings) ?>
                                 </div>
+
                                 <div>
                                     <?php sb_populate_settings('automatica', $sb_settings) ?>
-                                </div>
+                                </div>                                
                                 <div>
                                     <?php sb_populate_settings('notifications', $sb_settings) ?>
+                                </div>
+                                <div>
+                                    <?php sb_populate_settings('mailbox', $sb_settings) ?>
                                 </div>
                                 <div>
                                     <?php sb_populate_settings('miscellaneous', $sb_settings) ?>

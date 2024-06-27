@@ -147,7 +147,6 @@
     "Client token": "Token de cliente",
     "Close chat": "Cerrar chat",
     "☀️ Theme": "Tema",
-    "🌗 Change theme": "🌗 Cambiar tema",
     "The app uses a default dark theme for a comfortable viewing experience in low-light environments. You can switch to a light theme or choose one that best suits your needs.": "La aplicación usa un tema oscuro por defecto para una experiencia agradable a la vista en ambientes con poca luz. Puede cambiar a un tema claro o elegir el que mejor se adapte a sus necesidades.",
     "Close message": "Mensaje de cierre",
     "Collapse panels": "Contraer paneles",
@@ -319,7 +318,6 @@
     "Hide on mobile": "Ocultar en el móvil",
     "Hide the agent's profile image within the chat.": "Oculte la imagen de perfil del agente dentro del chat.",
     "Hide timetable": "Ocultar horario",
-    "Host": "Anfitrión",
     "Human takeover": "Adquisición humana",
     "If the chatbot doesn't understand a user's question, forwards the conversation to an agent": "Si el chatbot no comprende la pregunta de un contacto, reenvía la conversación a un agente.",
     "Image": "Imagen",
@@ -514,7 +512,7 @@
     "Send to user's email": "Enviar al correo electrónico del contacto",
     "Send transcript to user's email": "Enviar transcripción al correo electrónico del contacto",
     "Send user details": "Enviar detalles del contacto",
-    "Sender email": "Envío de correo electrónico",
+    "Sender email": "Correo electrónico",
     "Sender name": "Nombre del remitente",
     "Sender number": "Número de remitente",
     "Sends a text message if sending of the WhatsApp message fails.": "Envía un mensaje de texto si falla el envío del mensaje de WhatsApp. Puede utilizar texto y emojis",
@@ -689,7 +687,7 @@
     "Website": "Sitio web",
     "WeChat settings": "Configuración de WeChat",
     "Smart routing": "Smart routing",
-    "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.": "Routin' gestiona consultas dirigidas a departamentos por números. Cuenta con un mensaje de bienvenida y un fallback. Además, permite un flujo personalizado donde se puede pegar un JSON. Los key son:<br><br><code style=\"font-size:11px;\"><span style=\"color:var(--pink-root-color);\">main_flow</span>: Contiene los flujos numerados. <br><br><span style=\"color:var(--pink-root-color);\">flow</span>: Flujos que manejan diferentes consultas en base a reglas de respuesta. <br><br><span style=\"color:var(--pink-root-color);\">response</span>: Palabras clave que activan el flujo, indicando el tipo de consulta del cliente.<br><br><span style=\"color:var(--pink-root-color);\">replies</span>: Respuestas predeterminadas que el chatbot envía al cliente en base a las palabras clave detectadas.<br><br><span style=\"color:var(--pink-root-color);\">assign</span>: Número del departamento al cual se deriva la consulta.</code><br><br>Cada <code style=\"color:var(--pink-root-color);\">flow</code> puede tener múltiples reglas con diferentes palabras clave y números de departamento para un enrutamiento adecuado.",
+    "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.": "Chatbot Routin' gestiona consultas dirigidas a departamentos por números. Cuenta con un mensaje de bienvenida y un fallback. Además, permite un flujo personalizado donde se puede pegar un JSON. Los key son:<br><br><code style=\"font-size:11px;\"><span style=\"color:var(--pink-root-color);\">main_flow</span>: Contenedor de flujos. <br><br><span style=\"color:var(--pink-root-color);\">flow_()</span>: Flujos que apuntan al departamento por número. <br><br><span style=\"color:var(--pink-root-color);\">response</span>: Array de palabras clave y frases para activar el flujo.<br><br><span style=\"color:var(--pink-root-color);\">replies</span>: Array de respuestas automáticas aleatorias para cuando el cliente escribe alguna de las palabras clave.<br><br><span style=\"color:var(--pink-root-color);\">assign</span>: Asigna las conversaciones entrantes a los departamentos usando el número correspondiente, o deja el valor en <span style=\"color:var(--pink-root-color);\">null</span> para que no se asignen y solo se limiten a la respuesta automática <span style=\"color:var(--pink-root-color);\">replies</span>.</code><br><br>Crea todos los <code style=\"color:var(--pink-root-color);\">flow</code> que necesites para respuestas automáticas y asignación directa.",
     "When response is #": "<i style='color:var(--color-calendar-text)' class='bi-chat-square-text-fill'></i> Si la respuesta es #",
     "<p>show this message</p>": "<i style='color:var(--blue-root-color);' class='bi-robot'></i> Responde automáticamente",
     "<p>and assign to department ID</p>": "<i style='color:var(--color-green);' class='bi-shuffle'></i> Derivar al departamento # (opcional)",
@@ -713,7 +711,7 @@
     "Import customers into Contact Center Chat. Only new customers will be imported.": "Importar clientes a Contact Center Chat. Solo se importarán nuevos clientes.",
     "Import vendors into Contact Center Chat as agents. Only new vendors will be imported.": "Importe proveedores a Contact Center Chat como agentes. Solo se importarán nuevos proveedores.",
     "User login form information.": "Información del formulario de inicio de sesión del contacto.",
-    "Supercharge Your Business Expansion with Stemboxchat!": "¡Expande tu Negocio con Stemboxchat! <small style=\"color:var(--pink-root-color);\">(new)</small>",
+    "Supercharge Your Business Expansion with Routin!": "¡Expande tu Negocio con Routin! <small style=\"color:var(--pink-root-color);\">(new)</small>",
     "Exciting news! Now you can skyrocket your business reach by unlocking access to additional URLs for just $50/mo when you sign up for our fantastic 6-month prepaid plan.": "¡Increíble noticia! Con Stemboxchat puedes agregar más negocios, mas urls con propios números y equipos desde $29/mes. Todo asociado a tu mismo plan con facturación unificada.",
-    "Get all the URLs you need for new business at Stemboxchat!": "¡Obtén todas las URLs que necesitas para tu nuevo negocio en Stemboxchat!"
+    "Get all the URLs you need for new business at Routin!": "¡Obtén todas las URLs que necesitas para tu nuevo negocio en Routin!"
 }
