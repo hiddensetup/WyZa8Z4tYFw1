@@ -617,7 +617,7 @@ function sb_direct_message_box()
                 <form id="user-template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
                     <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
                         <div class="api-bubble-container">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:260px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:240px;box-sizing: border-box;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
 
@@ -709,7 +709,7 @@ function sb_send_template_box()
                 <form id="template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
                     <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
                         <div class="api-bubble-container">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:260px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:240px;box-sizing: border-box;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
                         </div>
@@ -742,7 +742,7 @@ function sb_send_template_box()
                                 </div>
                             </div>
                             <div class="sb-bottom send-meta">
-                                <button class="sb-repeater-add  sb-btn sb-icon" style="border: none;margin-top: 40px;text-align: end;" type="submit">
+                                <button class="sb-repeater-add  sb-btn sb-icon" style="border: none;text-align: end;" type="submit">
                                     <i class="bi-cash-coin"></i> <?php sb_e('Send') ?>
                                 </button>
                                 <div>
