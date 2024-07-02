@@ -1706,3 +1706,931 @@ Array
     [Conversation] => ok
     [ExtraFields] => map[]
 )
+Array
+(
+    [ID] => 3A633A8ACD0E2DAC0CA7
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 15:57:46 -0300 -03
+    [MediaType] => ptv
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A633A8ACD0E2DAC0CA7
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 15:57:46 -0300 -03
+    [MediaType] => ptv
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 781D90486EF8127C30C1778CDA032B1E
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34662531131@s.whatsapp.net
+    [SenderName] => José Vicente  de SoluOpen
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:00:10 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 781D90486EF8127C30C1778CDA032B1E
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34662531131@s.whatsapp.net
+    [SenderName] => José Vicente  de SoluOpen
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:00:10 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 👏👏
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A1366DAAF8B089D29FC
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:08:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A1366DAAF8B089D29FC
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:08:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Full
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A8A57391F404C18BA62
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:08:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Yo quiero ser parte
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A742110BC39F207A9EB
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573183920580@s.whatsapp.net
+    [SenderName] => CREO PUBLICIDAD
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:09:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A742110BC39F207A9EB
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573183920580@s.whatsapp.net
+    [SenderName] => CREO PUBLICIDAD
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:09:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Súper
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AE22144DA1531303125
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573183920580@s.whatsapp.net
+    [SenderName] => CREO PUBLICIDAD
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:09:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ahí estaremos
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A54617F9CF00A43B8A0
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573183920580@s.whatsapp.net
+    [SenderName] => CREO PUBLICIDAD
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:09:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => En primera fila
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A1909C05E18A5927FD8
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:10:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A1909C05E18A5927FD8
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:10:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+34660172262@s.whatsapp.net}
+〚Buenas si esto ya se ha compartido en ocasiones el precio de es 1usd por día por bot lo que es un aproximado de 30 usd al mes〛$30 dólares 
+Plus $20 dólares de GPT
+Sería en plan ofrecerle a $65 dólares  algo así tienen pensado ?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AABE11E9D1D0DDF62DC
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:11:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Solo es 1usd aproximadamente por día
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A331C262E12E6D30893
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:11:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Los 20,usd de gpt a que te refi
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A58587D58C505CE5C9D
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:11:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Refiere
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A49E6BF6A82BDCCCE18
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:14:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+34660172262@s.whatsapp.net}
+〚Solo es 1usd aproximadamente por día〛$30 Por eso pero ejemplo vamos a decir que el cliente quiere demanda. El mes completo. 
+$20 dólares para la expiación de las conversaciones al mes ? No con el gpt?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A06FDB3B40F7DDBC054
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:14:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Porque si no tendría el Limited de conversación
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD7E06C06AF0EA09740
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:14:47 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A42D9402316B6B62BF4
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 5214451009780@s.whatsapp.net
+    [SenderName] => Novedades Gaytan
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:15:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A42D9402316B6B62BF4
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 5214451009780@s.whatsapp.net
+    [SenderName] => Novedades Gaytan
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:15:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Me interesa ser reseller ¿cómo puedo ser parte?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD6564F8207F8FFF19E
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:16:13 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD6EFFF104F7107838C
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 5214451009780@s.whatsapp.net
+    [SenderName] => Novedades Gaytan
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:16:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DC70E67C890A44369C14A09E82EEA89A
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34685171642@s.whatsapp.net
+    [SenderName] => Diego
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:19:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DC70E67C890A44369C14A09E82EEA89A
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34685171642@s.whatsapp.net
+    [SenderName] => Diego
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:19:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AC852F361C831F2F624
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259:39@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:19:45 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AF83E03E52D3BF972BF
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259:39@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:19:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => me aparece eso al darle al link que me dices
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A5FCA83723A186BBCE0
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 17872039177@s.whatsapp.net
+    [SenderName] => Jorge González
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:24:16 -0300 -03
+    [MediaType] => ptt
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A4AD8BFEEC8A6329293
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259:39@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:24:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => voy a internar de nuevo con el codigo QR
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A328339D93C28F465DB
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259:39@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:24:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => no funciona
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A4C82FC97A015487F4D
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:24:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AF9EAF8E85171C852EA
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259:39@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:24:45 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ya lo he hecho 3 veces
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AA053AD985039E31570
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259:39@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:24:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => y sigue dando el problema
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AE6ECF37C24EECEAE94
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:25:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Perfecto 👌 ya tengo apuntado
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A0B41F798616022349F
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 56942450861@s.whatsapp.net
+    [SenderName] => CMC
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:25:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A0B41F798616022349F
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 56942450861@s.whatsapp.net
+    [SenderName] => CMC
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:25:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E115872F52F31E8C465E0880B115C3C3
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34685171642@s.whatsapp.net
+    [SenderName] => Diego
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:26:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Ya somos 2! Estoy también interesado en ser reseller, este proyecto tiene muy buena pinta y me encantaría estar desde el inicio
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A7114F35096DE8BBA6D
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 34660172262@s.whatsapp.net
+    [SenderName] => Leifer Mendez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:26:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5FEF742239231C732D7D7521A823CD16
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 51925184354@s.whatsapp.net
+    [SenderName] => JZU
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:32:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5FEF742239231C732D7D7521A823CD16
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 51925184354@s.whatsapp.net
+    [SenderName] => JZU
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 16:32:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Yo no tengo clientes, pienso que sería útil pero me es difícil porque no se programar, no tengo agencia alguna, lo único que como soy de paracas y es zona turística sería muy útil, le veo futuro, buscaré crearle el bot al negocio familiar y de acuerdo a eso si soy bueno ofrecerlo como un producto
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => D048DFD90CEAC141A1EE6EA0940A3328
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 5493834693452@s.whatsapp.net
+    [SenderName] => Claudio
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:00:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => D048DFD90CEAC141A1EE6EA0940A3328
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 5493834693452@s.whatsapp.net
+    [SenderName] => Claudio
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:00:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+34662531131@s.whatsapp.net}
+〚Ese será el negocio del cloud  nocode ofrece servicios y tutorías y hacer plantillas ,endpoint ,apis etc
+Al final el nocode será rentable y todo menos para el nocode〛😂😂
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 99A0B7E920B551F56F
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573183920580:61@s.whatsapp.net
+    [SenderName] => CREO PUBLICIDAD
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:01:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 99A0B7E920B551F56F
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573183920580:61@s.whatsapp.net
+    [SenderName] => CREO PUBLICIDAD
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:01:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD294D6616042E09D52
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50322494265@s.whatsapp.net
+    [SenderName] => Hillkom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:04:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD294D6616042E09D52
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50322494265@s.whatsapp.net
+    [SenderName] => Hillkom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:04:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD963C8E9D966B1BC93
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50322494265@s.whatsapp.net
+    [SenderName] => Hillkom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:06:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AD963C8E9D966B1BC93
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50322494265@s.whatsapp.net
+    [SenderName] => Hillkom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:06:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A5E804B52FF6A8CD862
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50322494265@s.whatsapp.net
+    [SenderName] => Hillkom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:07:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+34660172262@s.whatsapp.net}
+〚Perfecto 👌 ya tengo apuntado〛Yo también me apunto 📝
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3ABA1EAE28E114BA7EC6
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50322494265@s.whatsapp.net
+    [SenderName] => Hillkom
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:08:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AF2C727A3BD065786BE
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50372617149@s.whatsapp.net
+    [SenderName] => Melvin Aguiar
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:08:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AF2C727A3BD065786BE
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 50372617149@s.whatsapp.net
+    [SenderName] => Melvin Aguiar
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:08:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+34660172262@s.whatsapp.net}
+〚Perfecto 👌 ya tengo apuntado〛Yo también me apunto 📝
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 84AC9F2D28F6C44FBE3D981E896868C5
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573227109859@s.whatsapp.net
+    [SenderName] => yerson benavides
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:11:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 84AC9F2D28F6C44FBE3D981E896868C5
+    [Chat] => 120363296917461026@g.us
+    [Caption] => 
+    [Sender] => 573227109859@s.whatsapp.net
+    [SenderName] => yerson benavides
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:11:06 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => {+50372617149@s.whatsapp.net}
+〚Yo también me apunto 📝〛X2
+    [ExtraFields] => map[]
+)

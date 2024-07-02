@@ -9149,28 +9149,6 @@ $(settings_area).on(
 );
 
 
-
-    // Event handler for the start button
-    $(settings_area).on(
-      "click",
-      "#whatsmeow-go-start .sb-btn",
-      function (event) {
-        handleWhatsmeowButtonClick(event, "start");
-      }
-    );
-
-    // Event handler for the restart button
-    $(settings_area).on(
-      "click",
-      "#whatsmeow-go-restart .sb-btn",
-      function (event) {
-        handleWhatsmeowButtonClick(event, "restart");
-      }
-    );
-
-
-
-
 //WAWEB
 function handlewawebButtonClick(event, action) {
   event.preventDefault();
