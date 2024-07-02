@@ -2634,3 +2634,20 @@ Array
 〚Yo también me apunto 📝〛X2
     [ExtraFields] => map[]
 )
+Array
+(
+    [ID] => D4CD982C55884D44A7615BF7EC6B0DBB
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 17:14:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)

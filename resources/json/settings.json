@@ -171,7 +171,7 @@
       "type": "text",
       "id": "admin-title",
       "title": "Admin title",
-      "content": "Replace the Routin.bot brand title (browser tab name)."
+      "content": "Replace the Routin Cloud brand title (browser tab name)."
     },
     {
       "type": "upload-image",
@@ -337,7 +337,7 @@
     {
       "type": "select",
       "id": "chat-sound-admin",
-      "title": "Sounds for Routin.bot",
+      "title": "Sounds for Routin Cloud",
       "content": "Play a sound when a agent receives an incoming message or sends an outgoing message.",
       "help": "https://linktr.ee/routinbot",
       "value": [

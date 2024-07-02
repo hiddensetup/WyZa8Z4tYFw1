@@ -5,7 +5,7 @@
  * API.PHP
  * ==========================================================
  *
- * API main file. This file listens the POST queries and return the result. � 2017-2022 Routin.bot.dev. All rights reserved.
+ * API main file. This file listens the POST queries and return the result. � 2017-2022 Routin Cloud. All rights reserved.
  *
  */
 
@@ -90,7 +90,7 @@ if (isset($_POST['AccountSid']) && isset($_POST['From'])) {
         }
     }
 
-    // Send message to Routin.bot
+    // Send message to Routin Cloud
     if (!$conversation_id) $conversation_id = sb_isset(sb_new_conversation($user_id, 2, '', false, -1, 'tm'), 'details', [])['id'];
     sb_send_message($user_id, $conversation_id, $message, $attachments, 2);
 

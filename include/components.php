@@ -270,7 +270,7 @@ function sb_profile_edit_box()
 function displayMessage()
 {
     $jsonString = '{
-        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin.botchat, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
+        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin Cloud, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
         "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Routin.bot mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Routin.bot también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Sistema Sobrecargado! </h2><span style=\"color:var(--chat-text-primary)\">Estamos experimentando una alta demanda en nuestros servidores en este momento. Por favor, sé paciente y vuelve a intentarlo más tarde. Agradecemos tu comprensión.</span><br><br><span style=\"color:var(--chat-text-primary)\">Mientras tanto, ¿por qué no exploras otras funciones de Steambox? ¡Hay mucho por descubrir!</span>"
     }
@@ -314,7 +314,7 @@ function sb_login_box()
                 if (!$messageDisplayed) {
                 ?>
                     <!-- Your login form HTML goes here -->
-                    <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
+                    <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/routin.svg' ?>" />
                 <?php } ?>
             </div>
         </div>
@@ -339,8 +339,8 @@ function sb_login_box()
         <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly" class="sb-text">
             <div style="margin: 0.2rem auto 1rem auto;max-width: 270px;" class="sb-info"></div>
 
-            <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
-            <small>&copy; <?php echo date("Y"); ?> Routin.botchat</small>
+            <!-- <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a> -->
+            <small>&copy; <?php echo date("Y"); ?> Routin Cloud</small>
 
         </div>
     </form>
@@ -357,7 +357,7 @@ function sb_login_box()
                     });
                 });
                 $('#sb-error-check').one('error', function() {
-                    // $('.sb-info').html('It looks like the chat URL has changed. Edit the config.php file(it\'s in the Routin.bot folder) and update the STMBX_URL constant with the new URL.').addClass('sb-active');
+                    // $('.sb-info').html('It looks like the chat URL has changed. Edit the config.php file(it\'s in the Routin Cloud folder) and update the STMBX_URL constant with the new URL.').addClass('sb-active');
                 });
                 SBPusher.initServiceWorker();
             });
@@ -1055,7 +1055,7 @@ function sb_routing_select($exclude_id = false)
  * INSTALLATION BOX
  * ----------------------------------------------------------
  *
- * Display the form to install Routin.bot
+ * Display the form to install Routin Cloud
  *
  */
 
@@ -1179,13 +1179,13 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
-        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
-        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Routin.botchat to read and reply to all messages sent to your Telegram bot directly in Routin.botchat.'],
-        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Routin.botchat.'],
-        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin.botchat.'],
-        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Routin.botchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Routin Cloud to read and reply to all messages sent to your Telegram bot directly in Routin Cloud.'],
+        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Routin Cloud.'],
+        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin Cloud.'],
+        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Routin Cloud.'],
         ['SB_TICKETS', 'tickets', 'Tickets', 'Provide help desk support to your customers by including a ticket area, with all chat features included, on any web page in seconds.'],
     ];
     $logged = $active_user && sb_is_agent($active_user);

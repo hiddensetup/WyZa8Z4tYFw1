@@ -9078,7 +9078,7 @@ function sb_json_array($json, $default = [])
  * 10. Chat editor
  * 11. Return the position of the least occurence on left searching from right to left
  * 12. Verification cookie
- * 13. On Routin.bot close
+ * 13. On Routin Cloud close
  * 14. Auto messages server-side execution
  * 15. Messaging platforms function
  * 16. Send a messaging platform message

@@ -89,7 +89,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sb-form-container .sb-top-bar img {
-    width: 90px;
     margin-bottom: 20px;
 
 }
@@ -5580,7 +5579,7 @@ BODY
     // animation: fade-in 1s ease-in;
     // -webkit-animation: fade-in 1s ease-in;
 
-    padding: 0 50px 55px;
+    padding: 25px;
     position: static;
     animation: fade-in 1s ease-in;
     -webkit-animation: fade-in 1s ease-in;
@@ -5594,7 +5593,7 @@ BODY
         text-align: center;
 
         img {
-            max-width: 100%;
+            max-width:250px;
         }
 
         .sb-title {
