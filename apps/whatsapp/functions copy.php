@@ -52,8 +52,6 @@ function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_
         }
     }
 
-    
-
     // // Log the response to a text file
     // $logFile = __DIR__ . '/response_log.txt';
     // file_put_contents($logFile, json_encode($response) . PHP_EOL, FILE_APPEND);

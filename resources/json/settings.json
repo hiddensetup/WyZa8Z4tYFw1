@@ -38,6 +38,7 @@
           "id": "welcome-msg",
           "title": "Welcome message"
         },
+     
         {
           "type": "textarea",
           "id": "json-flow",

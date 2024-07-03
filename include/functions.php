@@ -9680,8 +9680,6 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
         "id" => $message_id,
     ];
 }
-
-
 function sb_option_assign_reply($option, $conversation_id)
 {
     $opt = "option";
@@ -9715,36 +9713,39 @@ function sb_option_assign_reply($option, $conversation_id)
         }
     }
 
-    // Proceed with sending the appropriate reply based on matched option
-    if (!empty($reply)) {
-        // Choose a random reply from the array of replies
-        $randomIndex = array_rand($reply["reply"]);
-        $message = $reply["reply"][$randomIndex];
+    // Check if the assigned option reply was sent recently
+    if (sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' . $opt . '_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true))["count"] == 0) {
+        if (!empty($reply)) {
+            // Choose a random reply from the array of replies
+            $randomIndex = array_rand($reply["reply"]);
+            $message = $reply["reply"][$randomIndex];
 
-        if (!empty($reply["assign"])) {
-            sb_update_conversation_department($conversation_id, $reply["assign"], false);
-            return [
-                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"],
-                "message" => $message,
-            ];
+            if (!empty($reply["assign"])) {
+                sb_update_conversation_department($conversation_id, $reply["assign"], false);
+                return [
+                    "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"],
+                    "message" => $message,
+                ];
+            } else {
+                sb_db_query('UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' . $wel . '_option%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true));
+                return [
+                    "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
+                    "message" => $message,
+                ];
+            }
         } else {
-            sb_db_query('UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' . $wel . '_option%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true));
+            // If no matching option is found, send the global fallback message
+            $message = sb_get_multi_setting("welcome-message", "fallback-msg");
             return [
                 "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
                 "message" => $message,
             ];
         }
-    } else {
-        // If no matching option is found, send a fallback message
-        $message = sb_get_multi_setting("welcome-message", "fallback-msg");
-        return [
-            "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
-            "message" => $message,
-        ];
     }
 
     return false;
 }
+
 
 
 function sb_get_user_detail($conversation_id)
