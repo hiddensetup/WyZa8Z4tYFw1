@@ -2651,3 +2651,3796 @@ Array
     [Conversation] => 
     [ExtraFields] => map[]
 )
+Array
+(
+    [ID] => 52838A190438CA5AA74E4A6A00DAB10B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => B94D520A1EEF435DA98626168EDE48EE
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 994AD53E9149AC1B41611E52C00B4C4A
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5740D0CF0BFE500F36B403DAC5313CB1
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 0AAB1C4A1C6B6B5F5A8F0564E3A25BA1
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 6E2C49CEB086523F66FCC7377C06798C
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 24B7BA096F8273A5BD5EC88ABE35DDDE
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 1CD4C92395D2891142F13D2ACDFE093B
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => 
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:29:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A1F4CE9741BDD33FA75CFBA209CDB352
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:34:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => test
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => C42C5469CFF2F17483FF132DA251234D
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057@s.whatsapp.net
+    [SenderName] => On Service Panamá
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:34:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Gracias por tu mensaje. En este momento no podemos responder, pero lo haremos lo antes posible.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 44DB2DA2A412D2EDFC2F6E7CB192AE9F
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:34:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3E50B1EA8A6AA47F40021A772B33C65D
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:34:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => test
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 012FD57E76960698286F5C020D1C06D7
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:38:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0F05E1F795B21FE2F6D
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:38:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¡Hola! 👋¡Bienvenido/a a nuestro negocio! Estamos aquí para ayudarte. 😊
+
+Por favor, selecciona una de las opciones a continuación:
+
+1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 0868F0BAEAFFF9AA023F814CBA5E02E1
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:38:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0939EC4C689FB63B9CA
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:38:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Te conectaremos con nuestro departamento de ventas de repuestos.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 345341E0EDBD320E6140605154FFDB36
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:41:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB02FDBDACF6D0AD1C6BD
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:41:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, selecciona una de las opciones a continuación: 1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico 
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E3F5A599DDE1CBCA7864A4735A585B54
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:41:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ho
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB056864EEB7238E7707F
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:41:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, selecciona una de las opciones a continuación: 1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico 
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 397E37A5E97BE1FB5174A60173C41B18
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:43:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => quirdz
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 19EA5453AE892185D5521BCB99D8CD21
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:43:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => helado
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 80A453BC54594423F0C455B2482081F6
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:43:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Tenes la plata?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 41D1CE93F69ACE6A6F429BDFE228D527
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:43:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => No gastes esa plata
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7B4738095BF17235F4649FF4950DCACD
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:44:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => obvio
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DD3EF6794DB570862FC1099C720EA19B
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:44:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => quieres
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => D57205E05E6B261D814B35B54C799C9A
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:44:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 9230E9360EE4CB8C12F2922880F29116
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:44:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => El bombon
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 85212B5050942956BB8CE189CB40F1A0
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:44:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => no quieres cucurucho de algo?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => ADA83911FD23F65471557068D88F3361
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:45:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => bueno
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7EAEAF06130F7532F774B05CE328BA0F
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:45:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => bombon de la vez pasada
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 538B9AE9735F1C90EB76CE7F870A739D
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:45:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => No
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A4250A93247DECA0CC222B82E801E15D
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:45:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Si
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 8142251E705B96FB50FA0FDE9281C694
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:46:17 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => B6FE28A9CED8F525A2881281EEACC405
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:46:17 -0300 -03
+    [MediaType] => image
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 40B9EEB5A0972526DDE8DB0D3253F8E4
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:46:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => yo llego un shot
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A14FDE45515DC38D3AD243895010FEDE
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491122554897@s.whatsapp.net
+    [SenderName] => Carla
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:49:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => El escoces me gusta
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 338AB4E49F4857C4306218C68A90B6DC
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:49:46 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB09E2F4E5FE4A222C615
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:49:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Te conectaremos con nuestro departamento de ventas de repuestos.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A4645E47036D8BC3C1E0C6AB368567B1
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:49:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0FF3F49215009AD8158
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:49:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, selecciona una de las opciones a continuación: 1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico 
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7B35279BF61618473D1FF8120EC189FE
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:49:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB045D8615B69B96C387B
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:50:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Te conectaremos con nuestro departamento de ventas de repuestos.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0FDA3AC3B48E420170F
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:55:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, selecciona una de las opciones a continuación: 1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico 
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB062B51E3AF4FACF8AB7
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:56:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0D57DEB3077F001C6FE
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:57:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Saludos le escribimos del Centro Autorizado On Service Panama  👋🏻 👨🏻‍💻, 
+nos gustaría conocer su experiencia.
+*   Si esta satisfecho con nuestro servicio, enviar un  ❤️
+*   Si esta insatisfecho con nuestro servicio, enviar un 👎🏻
+Si tiene alguna consulta o sugerencia, con mucho gusto nos las puede realizar
+Feliz día!
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB063CE6882786CD67102
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:57:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ¡Hola! 👋¡Bienvenido/a a nuestro negocio! Estamos aquí para ayudarte. 😊
+
+Por favor, selecciona una de las opciones a continuación:
+
+1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0CDE619AF25AF68CA28
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:57:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Te conectaremos con nuestro equipo de soporte técnico.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0FDDABA7005C95BB051
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:57:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, selecciona una de las opciones a continuación: 1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico 
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB09DC41D741AB2015DC5
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:58:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Te conectaremos con nuestro departamento de ventas de repuestos.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0F042D9E7D541A223DC
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:58:17 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, selecciona una de las opciones a continuación: 1️⃣ Para ventas de repuestos
+2️⃣ Para soporte técnico 
+
+¡Gracias por confiar en nosotros! 💼🔝🚀
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0490B9B7B1C48826151
+    [Chat] => 50766420057@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50766420057:30@s.whatsapp.net
+    [SenderName] => 50766420057
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 19:58:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Te conectaremos con nuestro equipo de soporte técnico.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AB9D3E558B24F79B9FC
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 5215567578219@s.whatsapp.net
+    [SenderName] => Japonés con Shu sensei
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => true
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AB9D3E558B24F79B9FC
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 5215567578219@s.whatsapp.net
+    [SenderName] => Japonés con Shu sensei
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => true
+    [Conversation] => Bienvenidos estudiantes nuevos/as!!! HOY tenemos clase 🇯🇵📚
+
+MARTES Y MIÉRCOLES
+8:30 p.m. (MX, GTM, CRI)
+9:30 p.m. (COL, PE, ECU)
+10:30 p.m. (BOL, VEN, CL)
+11:30 p.m. (ARG) 
+MIÉRCOLES Y JUEVES
+11:30 a.m. (JPN)
+
+Link de zoom
+
+https://us02web.zoom.us/j/83233025039
+ID: 832 3302 5039
+
+Si no pueden ingresar a zoom, pueden ver la transmisión en vivo por YouTube👏
+
+YouTube 2 de JULIO
+https://www.youtube.com/watch?v=FLfQvVwEgLE&ab_channel=Japon%C3%A9sconShu-sensei
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AA757A2AC739E033A99
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 9C9243D497B8C91202
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 9C9243D497B8C91202
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AA1A51180722142784C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 3
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 4554C08645D5F1CD21
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Puedes generar una reunión de asesoría. en https://calendly.com/whatsappsteambox
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AB7DC25EF5337F5687F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 6511D9FCBD7D1391F3
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:44 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A04186CD243A3C44B22
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 1
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 34D7C3F292C9B4A395
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, comparteme los siguientes datos:
+
+1️⃣ Correo electrónico para acceder a Steambox
+2️⃣ Número WhatsApp Web que quieres conectar con su prefijo internacional.
+3️⃣ Cantidad de agentes (máx 15)
+
+Aguardo tu respuesta 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A69AD0BA6FC8BF7FD7D
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => ok
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 499CEC700DD4CBDC83
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:03:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AB4CE239579A2D28B93
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 5215580403959@s.whatsapp.net
+    [SenderName] => Aloha 👽
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:07:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AB4CE239579A2D28B93
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 5215580403959@s.whatsapp.net
+    [SenderName] => Aloha 👽
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:07:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 048AD625DCAF6771F4
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:09:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 00256D55478E920B48
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:10:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Puedes generar una reunión de asesoría. en https://calendly.com/whatsappsteambox
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3C5F07DA9EA79401FF
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:10:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 48004BBEAA1E225DEF
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:10:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, comparteme los siguientes datos:
+
+1️⃣ Correo electrónico para acceder a Steambox
+2️⃣ Número WhatsApp Web que quieres conectar con su prefijo internacional.
+3️⃣ Cantidad de agentes (máx 15)
+
+Aguardo tu respuesta 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => AB79B4D436E641F585
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:10:20 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => FB8F8ABA67CC1D5CC0
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:19:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 202074C7CFD2A3D411
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:19:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, comparteme los siguientes datos:
+
+1️⃣ Correo electrónico para acceder a Steambox
+2️⃣ Número WhatsApp Web que quieres conectar con su prefijo internacional.
+3️⃣ Cantidad de agentes (máx 15)
+
+Aguardo tu respuesta 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 49AEDA371328F955E2
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:19:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => F48997BF66B3B3B298
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:19:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A067DA20CAA563549E
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:19:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 884F6EAC426CFF1862
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:19:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 6ED88F9FCFC5D61173
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:26:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, comparteme los siguientes datos:
+
+1️⃣ Correo electrónico para acceder a Steambox
+2️⃣ Número WhatsApp Web que quieres conectar con su prefijo internacional.
+3️⃣ Cantidad de agentes (máx 15)
+
+Aguardo tu respuesta 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E892633E4C60DAC056
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:29:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 0856F8627A76C4E405
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:29:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => D6DF5D46B4A8E8F331
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:30:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A4CE51EAA516243C026
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:34:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Este problema es reciente?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A3A084F045490794A97
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:34:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => lo del bot
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A456A93B1C1CDD76FDA
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208:64@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:34:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => o es algo que pasaba dias atras?
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 90A15AE1D66F963D03
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:38:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5EAE37E8C0453669FA
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:38:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 0798EDFCB5223DE976
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:38:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 64EC89B5BEF9C93CB8
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:38:37 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 65BE9C4C35511A612F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 20:38:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor selecciona una de las opciones 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 522661B2E4E95DEF74
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:18:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 49219051A80BB61B4B
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:18:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 55099EC0ED84E6CF5C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:18:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DA2801E8D6961C5456
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:20:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A97C784D84F1F3D1BE
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:21:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => B9079E668620151F62
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:26:52 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => AA4583FEE3A2D7E889
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:27:11 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A02466C59812686C4C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:27:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => FDABF0176770727EF6
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:28:03 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => C173EECACD28FE1CE1
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:29:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => FBB5F4561F21935744
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:32:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DA24A92E09C94247BB
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:34:49 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 2E49292448D3392229
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:34:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A88F24EF18E1B7361
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:35:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 906B6A89BCE73F3347
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:38:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 4F4E1E7201649A2D0D
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:38:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 221D9765D402C7CCAD
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:38:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 4CD274FDA148AA15BB
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:39:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 81B03A436AFF21F328
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:39:10 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7305BCD6B926A0CE30
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:39:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 1661DBD0C722DFE3BC
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:43:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 667FDFC3853C290F44
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:43:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AA87F173CD62B193F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:43:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E875DA061A3DAAFDEA
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:43:29 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3AFA1A3BF18CBF0F2AB4
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 50761519259@s.whatsapp.net
+    [SenderName] => Audio Esis 👨🏻‍💻🙏🏻
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:43:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Es reciente
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => ED3442E50364D1687C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:45:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E5809A40D1D2D48526
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:50:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 281D662B4FBDE18C0D
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:50:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DCFFA5E38B28714A4D
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:50:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E9414421A4F3963078
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:52:36 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => C4FD224D64DDF2AED4
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:52:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 694B4A523E47103B6F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:52:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A5C9F989D9C7B753A1
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:53:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 37A825FDDD1EC452C6
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:53:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 6E7278462E8F5C70F4
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:56:07 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 379F2B89B30B9B780C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:56:12 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => C41FA84D34E0D943D0
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:56:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => FCB16558A6537E817E
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:56:48 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E92FE38135EF9E72E8
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:56:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => F1166C13594295BDC1
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 21:57:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A4254ADC521BABA328CFA76AB54CA20A
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A66095659BAFB6A833718AEA6A878554
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 33304091125A38BA48C036953AF847BC
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => estoy revisandolo
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 101ACECB90BF821B51
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:38 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 1EEB380932AE2A6A3A
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:43 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5F66E553CB9F5A50E5
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 98E1BECBE54AB29D41
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:05:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7018919D74AFF9996BED3B544C1C2C10
+    [Chat] => 50761519259@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:07:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 40E1A77FD18817D33C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:08:20 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 679C3AE35349C18180
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:08:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => D72F26DE92836FCBEA
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:08:30 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 65F17CBDE7BA82B545
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:09:09 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 08A133C01B5E2285E1
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:09:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => CD3CF51AC3622C8513
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:09:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Derivándote con nuestro equipo de soporte humano.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A1C2969E5F068A74B5
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:09:23 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => B334517CE2EE7EE71A
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:09:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => ECFA838DA7BEBC6E6A
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:09:58 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => AA12BD3A0338204CCD
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:10:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Lo siento, no entendí tu respuesta. Por favor, selecciona una opción válida o vuelve a intentarlo.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7AC35A42E6015B80E1
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:14:42 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3C721AB8D97196205F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:14:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Por favor, comparteme los siguientes datos:
+
+1️⃣ Correo electrónico para acceder a Steambox
+2️⃣ Número WhatsApp Web que quieres conectar con su prefijo internacional.
+3️⃣ Cantidad de agentes (máx 15)
+
+Aguardo tu respuesta 👩‍💻
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 20930503C688CB09CE
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:14:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => F103F562F05C609068E54B087FEFC63F
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 5215518416317@s.whatsapp.net
+    [SenderName] => AMOR...DIDAS💋🤩
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:22:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => F103F562F05C609068E54B087FEFC63F
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 5215518416317@s.whatsapp.net
+    [SenderName] => AMOR...DIDAS💋🤩
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:22:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E8D56D1606491EF4AA
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:25:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 21CABF945C023B30ED
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:25:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 92CB5E4EC3BA64B71F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:25:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => CAF2B6F5AD0F86FE1B
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:25:19 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5A686E1FFE590CB8F9
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:21 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E4AF59535EA6ED9972
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 917E72BCDE5746D888
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:26 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7274645FEBA9433620
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 4201475182FE45AF77
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:53 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => BBAD96E220E5EB0C6A
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:54 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => ABD72B0731B57DBEA9
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:57 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => BB25D7365022B2BCFA
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:26:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E4BAE6154C234417C8
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:27:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5524516A2287F67673
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:27:05 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5B2EF7B278D89F9533
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:27:50 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => EABFF4ABC61EB891E8
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:27:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => B6B1C5C51F7C7A148A
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:27:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 65DCDA3C5977D0A05F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:27:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 258A5502A979BC7AB1
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:38:14 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 04831789316245A1C9
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:49:27 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => F57E8528EE1BB4F5C2
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:49:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => FEDD1E4E275DEF5517
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:50:40 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7E967FB6D4F9D1250F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:50:51 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 11F8815A7DDB16F653
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:52:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E9DDD6DB6B436949D8
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:53:01 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => For printing quotes, please provide your details. We'll respond shortly.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 319149E74B55FE47AD
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:53:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DA8B1404017EFCC87F
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:57:35 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DDF822741C730BE5C0
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:57:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 8D3FD3915BAEDECE8D
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:58:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 11FAC14874730B3D27
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 22:58:39 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => E4336F91F1053D3C40
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:01:16 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 64051BF2D9E618C724
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:01:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => If you encounter problems with your print order, we're here to help.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 6F8F33C89E96201497
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:01:31 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => D271CD6B885FFFBE88
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:01:47 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => If you encounter problems with your print order, we're here to help.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 8DE6BD24DEC4FD011A
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:01:56 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Interested in our printing products? Let us know what you're looking for.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5073CFB20055990034
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:02:02 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DD70BEBB2D6EBF0B89
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:06:55 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 09EE9A613940DA0FD4
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:07:00 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => For issues with ongoing print orders, provide your order number and details.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 5DA568E2311FA93A83
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:07:05 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 12BE37D6EF64F8B6B9
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:07:59 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 423D06FF0E7CA88328
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:08:04 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => If you encounter problems with your print order, we're here to help.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 7A7248374C48D4F5F3
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:08:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 505FE41B22E7B55EE0
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:09:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 828206B1C91FEAE0FE
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:09:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => For printing quotes, please provide your details. We'll respond shortly.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DC6CA4A12B7FE8E80D
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:09:18 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => B8884D6895F17C4D81
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:10:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Bienvenid@ a Steambox, mi nombre es Shadia. Te puedo ayudar con lo siguiente: 
+
+- 1️⃣ Generarte acceso gratuito.
+- 2️⃣ Derivarte con soporte humano.
+- 3️⃣ Generar una reunión de asesoría.
+
+Aguardo tu respuesta 😉
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A981958502CE34F86B9
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 50433941772@s.whatsapp.net
+    [SenderName] => Ana Rosa Moncada Sánchez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:42:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3A981958502CE34F86B9
+    [Chat] => 120363276911114901@g.us
+    [Caption] => 
+    [Sender] => 50433941772@s.whatsapp.net
+    [SenderName] => Ana Rosa Moncada Sánchez
+    [IsFromMe] => false
+    [IsGroup] => true
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:42:13 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => 
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 24261F35E0D8B65A85
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:45:15 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 25D0D0004876C2528C
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:45:22 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => If you encounter problems with your print order, we're here to help.
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => DC228B84854E01AFA6
+    [Chat] => 13028035360@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 13028035360@s.whatsapp.net
+    [SenderName] => 13028035360
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-02 23:45:32 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Error
+    [ExtraFields] => map[]
+)
