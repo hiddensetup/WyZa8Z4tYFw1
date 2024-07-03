@@ -3,7 +3,7 @@ define('SB_WHATSAPP', 'CLOUD');
 
 function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_number_id = false) //$payload
 {
-    if (strpos($message, '*~Registro de contacto*') !== false) {
+    if (strpos($message, '*Plantilla WhatsApp*') !== false) {
         return ['success' => false, 'error' => ''];
     }
     if (empty($message) && empty($attachments)) {

@@ -7401,7 +7401,7 @@ $("#template-form").on("submit", function (e) {
           } else if (response) {
               SBChat.sendMessage(
                   -1,
-                  `*~Registro de contacto*, {agent_name} \n\n ${template.BodyTemplate}`,
+                  `*Plantilla WhatsApp*, {agent_name} \n\n ${template.BodyTemplate}`,
                   false
               );
               SBChat.showResponse(`${template.BodyTemplate}`);
