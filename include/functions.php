@@ -9696,14 +9696,14 @@ function sb_option_assign_reply($option, $conversation_id)
     if (json_last_error() === JSON_ERROR_NONE && isset($flowData['main_flow'])) {
         foreach ($flowData['main_flow'] as $flow) {
             foreach ($flow as $response) {
-                // Check if the provided option matches any of the responses in the JSON flow
-                if (isset($response['response']) && is_array($response['response'])) {
-                    foreach ($response['response'] as $res) {
-                        if ($option === strtolower($res)) {
-                            $reply["option"] = $res;
+                // Check if the provided option matches any of the keywords in the JSON flow
+                if (isset($response['keywords']) && is_array($response['keywords'])) {
+                    foreach ($response['keywords'] as $keyword) {
+                        if ($option === strtolower($keyword)) {
+                            $reply["option"] = $keyword;
                             // Handle replies as an array
-                            $replies = isset($response['replies']) ? $response['replies'] : [];
-                            $reply["reply"] = is_array($replies) ? $replies : [$replies]; // Ensure $reply["reply"] is always an array
+                            $bot_replies = isset($response['bot_reply']) ? $response['bot_reply'] : [];
+                            $reply["reply"] = is_array($bot_replies) ? $bot_replies : [$bot_replies]; // Ensure $reply["reply"] is always an array
                             $reply["assign"] = isset($response['assign']) ? $response['assign'] : '';
                             break 3; // Exit all loops once a match is found
                         }
@@ -9745,6 +9745,7 @@ function sb_option_assign_reply($option, $conversation_id)
 
     return false;
 }
+
 
 
 
