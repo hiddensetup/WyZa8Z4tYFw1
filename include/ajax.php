@@ -213,12 +213,12 @@ switch ($_POST['function']) {
         die(sb_json_response(sb_telegram_send_message($_POST['chat_id'], sb_post('message', ''), sb_post('attachments', []))));
     case 'telegram-synchronization':
         die(sb_json_response(sb_telegram_synchronization($_POST['token'], sb_post('cloud_token'))));
-        // case 'twitter-send-message':
-        //     die(sb_json_response(sb_twitter_send_message($_POST['twitter_id'], sb_post('message', ''), sb_post('attachments', []))));
-        // case 'twitter-subscribe':
-        //     die(sb_json_response(sb_twitter_subscribe(sb_post('cloud_token'))));
-        // case 'gbm-send-message':
-        //     die(sb_json_response(sb_gbm_send_message($_POST['google_conversation_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('token'))));
+        case 'twitter-send-message':
+            die(sb_json_response(sb_twitter_send_message($_POST['twitter_id'], sb_post('message', ''), sb_post('attachments', []))));
+        case 'twitter-subscribe':
+            die(sb_json_response(sb_twitter_subscribe(sb_post('cloud_token'))));
+        case 'gbm-send-message':
+            die(sb_json_response(sb_gbm_send_message($_POST['google_conversation_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('token'))));
         // case 'wechat-send-message':
         //     die(sb_json_response(sb_wechat_send_message($_POST['open_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('token'))));
     case 'send-sms':

@@ -3,8 +3,8 @@
     "type": "multi-input",
     "id": "whatsmeow-go",
     "title": "WhatsApp <small style=\"color:var(--color-green);\">(new)</small>",
-    "content": "Explore our API for external use!<br><br>With WhatsApp Web, you can connect WhatsApp to your ERP directly or use it in Routin.botchat at no cost. Link up to 15 agents using your own hosting with no API cost.<br><br>Routin.botchat Support: Starting from $79/month, prepaid for 6 months.",
-    "help": "https://wa.me/5491156165558/?text=¡Hola!%20Estoy%20interesado%20en%20usar%20WhatsApp%20Web%20con%20Routin.botchat.%0A¿Podrías%20proporcionarme%20el%20token%20de%20acceso%3F%0A%0AOlá!%20Estou%20interessado%20em%20usar%20o%20WhatsApp%20Web%20com%20o%20Routin.botchat.%0AVocê%20poderia%20me%20fornecer%20o%20token%20de%20acesso%3F",
+    "content": "Link WhatsApp Business to Routin Cloud: $99/month, +$19/month for extra number.",
+    "help": "https://routin.cloud/",
     "value": [
       {
         "type": "text",

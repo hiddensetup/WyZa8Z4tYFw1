@@ -27,7 +27,7 @@ if ($signature !== 'sha256='. base64_encode(hash_hmac('sha256', $raw, sb_get_mul
 
 if (isset($response['direct_message_events'])) {
     $GLOBALS['SB_FORCE_ADMIN'] = true;
-    sb_cloud_load_by_url();
+    // sb_cloud_load_by_url();
     $message_create = $response['direct_message_events'][0]['message_create'];
     $message = $message_create['message_data']['text'];
 

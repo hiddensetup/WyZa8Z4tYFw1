@@ -25,7 +25,7 @@ if ($response) {
     if (isset($response['message'])) {
         require('../../include/functions.php');
         $GLOBALS['SB_FORCE_ADMIN'] = true;
-        sb_cloud_load_by_url();
+        // sb_cloud_load_by_url();
         $response_message = $response['message'];
         $from = $response_message['from'];
         $chat_id = $response_message['chat']['id'];

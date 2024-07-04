@@ -1673,11 +1673,12 @@ div ul.sb-menu,
 
   .sb-loader {
     position: absolute;
-    width: 40px;
+    width: 35px;
     left: 0;
     right: 0;
-    top: 0;
+    top: 0px;
     display: none;
+    padding: 2px;
 
     &.sb-active {
       display: block;
