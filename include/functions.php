@@ -9680,6 +9680,7 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
         "id" => $message_id,
     ];
 }
+
 function sb_option_assign_reply($option, $conversation_id)
 {
     $opt = "option";
@@ -9716,11 +9717,25 @@ function sb_option_assign_reply($option, $conversation_id)
     // Check if the assigned option reply was sent recently
     if (sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' . $opt . '_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true))["count"] == 0) {
         if (!empty($reply)) {
-            // Choose a random reply from the array of replies
-            $randomIndex = array_rand($reply["reply"]);
-            $message = $reply["reply"][$randomIndex];
+            // If assign is a URL, fetch the response from the API endpoint
+            if (filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
+                $api_response = sb_fetch_api_response($reply["assign"]);
+                if ($api_response) {
+                    // Set the API response as the bot reply
+                    $bot_replies = is_array($api_response) ? $api_response : [$api_response];
+                    // Choose a random reply from the array of replies
+                    $randomIndex = array_rand($bot_replies);
+                    $message = $bot_replies[$randomIndex];
+                } else {
+                    $message = "No se pudo obtener la respuesta del servidor.";
+                }
+            } else {
+                // Choose a random reply from the array of replies
+                $randomIndex = array_rand($reply["reply"]);
+                $message = $reply["reply"][$randomIndex];
+            }
 
-            if (!empty($reply["assign"])) {
+            if (!empty($reply["assign"]) && !filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
                 sb_update_conversation_department($conversation_id, $reply["assign"], false);
                 return [
                     "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"],
@@ -9746,7 +9761,22 @@ function sb_option_assign_reply($option, $conversation_id)
     return false;
 }
 
+function sb_fetch_api_response($url)
+{
+    // Fetch response from the API endpoint
+    $response = file_get_contents($url);
+    if ($response === FALSE) {
+        return false;
+    }
 
+    // Parse response (assuming JSON for simplicity, adjust if necessary)
+    $data = json_decode($response, true);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        return false;
+    }
+
+    return $data;
+}
 
 
 function sb_get_user_detail($conversation_id)
