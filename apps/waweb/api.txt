@@ -17264,3 +17264,101 @@ Array
 7397894630:AAFPcK1ZM3hGZ9z2u9W8VptBcaub2gQqxQg
     [ExtraFields] => map[]
 )
+Array
+(
+    [ID] => 3EB0A0FA5A86A9D9F2D6DF
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130:2@s.whatsapp.net
+    [SenderName] => 5491154252130
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-04 20:31:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => hola
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB01A7128A2BDDCCB2A4D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130:2@s.whatsapp.net
+    [SenderName] => 5491154252130
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-04 20:33:25 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cotización para Plan Básico (trimestral):
+Sitio web: https://google.com
+Nombre: frank
+País: peru
+Teléfono: 5491165900208
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB09189C25769D2987D91
+    [Chat] => 5491122554897@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130:2@s.whatsapp.net
+    [SenderName] => 5491154252130
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-04 20:42:05 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cotización para Plan Business (semestral):
+Sitio web: https://google.com
+Nombre: Frankl
+País: peru
+Teléfono: 238523485342856
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => 3EB0FFD5D640FB5B1FB8EB
+    [Chat] => 5491154252130@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491154252130:2@s.whatsapp.net
+    [SenderName] => 5491154252130
+    [IsFromMe] => true
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-04 20:44:08 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => Cotización para Plan Básico (trimestral):
+Sitio web: https://google.com
+Nombre: frank
+País: peru
+Teléfono: 23943942394
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => F032E20C033E36F84E48DA7109F8B9D9
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => ~Software Sales
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-05 20:24:24 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => All right, let's switch it up to the strongest southern UK accent and slang.
+Listen up, mate! With Routin, you can create a wicked chatbot to chat to your customers on WhatsApp and get 'em interested in your business, innit? We've got a top team of experts ready to 'elp you out and make sure your customer service is bangin'! So, come on over and let's have a chat about what you need.
+    [ExtraFields] => map[]
+)

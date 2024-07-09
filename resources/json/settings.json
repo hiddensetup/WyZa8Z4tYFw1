@@ -7,14 +7,18 @@
       "type": "text",
       "id": "bot-name",
       "title": "Bot name",
-      "content": "Rename the chat bot. Default is 'Bot'."
+      "content": "Rename the chat bot. Default is 'Bot'.",
+      "help": "https://linktr.ee/routinbot"
+
     },
     {
       "type": "upload-image",
       "id": "bot-image",
       "title": "Bot profile image",
       "content": "Set a profile image for the chat bot.",
-      "background-size": "auto 64px"
+      "background-size": "auto 64px",
+      "help": "https://linktr.ee/routinbot"
+
     },
     {
       "type": "multi-input",
