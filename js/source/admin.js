@@ -9006,7 +9006,7 @@ function handleWhatsmeowButtonClick(event, action) {
 
   let inputSelector = "#whatsmeow-go-qr input";
   let qrInput = settings_area.find(inputSelector).val();
-  let url = action === "start" ? "/get_ww.php?qrurl=" : "/reset_ww.php";
+  let url = action === "start" ? "/include/get_ww.php?qrurl=" : "/include/reset_ww.php";
 
   if (action === "start") {
       $("#qr_loading1").show();
@@ -9155,7 +9155,7 @@ function handlewawebButtonClick(event, action) {
 
   let inputSelector = "#waweb-go-qr input";
   let qrInput = settings_area.find(inputSelector).val();
-  let url = action === "start" ? "/get_wx.php?qrurl=" : "/reset_wx.php";
+  let url = action === "start" ? "/include/get_wx.php?qrurl=" : "/include/reset_wx.php";
 
   if (action === "start") {
       $("#qr_loading2").show();
