@@ -9691,6 +9691,9 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 
 
 
+function sb_count_fallback_messages($conversation_id) {
+    return sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true))['count'];
+}
 
 function sb_option_assign_reply($option, $conversation_id)
 {
@@ -9768,12 +9771,20 @@ function sb_option_assign_reply($option, $conversation_id)
                 "messages" => $bot_replies,
             ];
         } else {
-            // If no matching option is found, send the global fallback message
-            $message = sb_get_multi_setting("welcome-message", "fallback-msg");
-            return [
-                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
-                "message" => $message,
-            ];
+            // Verificar el número de veces que se ha enviado el mensaje de fallback
+            $fallback_count = sb_count_fallback_messages($conversation_id);
+            
+            if ($fallback_count < 3) {
+                // Si no se ha enviado 3 veces, enviar el mensaje de fallback
+                $message = sb_get_multi_setting("welcome-message", "fallback-msg");
+                return [
+                    "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["fallback_message" => true])["id"],
+                    "message" => $message,
+                ];
+            } else {
+                // Si ya se ha enviado 3 veces, no enviar nada
+                return false;
+            }
         }
     }
 
