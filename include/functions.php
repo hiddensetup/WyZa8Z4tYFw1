@@ -9692,7 +9692,6 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 
 
 
-
 function sb_option_assign_reply($option, $conversation_id)
 {
     $opt = "option";
@@ -9742,7 +9741,8 @@ function sb_option_assign_reply($option, $conversation_id)
 
             $response_ids = [];
             foreach ($bot_replies as $bot_reply) {
-                $message = $bot_reply['message'];
+                // Ensure $bot_reply is an array if it isn't already
+                $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
                 $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
 
                 if (!empty($reply["assign"]) && !filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
@@ -9782,20 +9782,6 @@ function sb_option_assign_reply($option, $conversation_id)
     return false;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function sb_fetch_api_response($url)
 {
     // Fetch response from the API endpoint
@@ -9812,6 +9798,7 @@ function sb_fetch_api_response($url)
 
     return $data;
 }
+
 
 
 function sb_get_user_detail($conversation_id)
