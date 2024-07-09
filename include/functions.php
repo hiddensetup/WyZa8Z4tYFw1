@@ -9770,10 +9770,8 @@ function sb_option_assign_reply($option, $conversation_id)
         } else {
             // If no matching option is found, send the global fallback message
             $message = sb_get_multi_setting("welcome-message", "fallback-msg");
-            $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
-            sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
             return [
-                "id" => $response_id,
+                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
                 "message" => $message,
             ];
         }
