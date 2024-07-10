@@ -3950,36 +3950,44 @@ conversations_area.find(".open-profile-name").on("click", function() {
                 .html(item.html());
             }
 
-            // Activate conversation
-            if ([1, 2].includes(conversation_status_code)) {
-              conversation_status_code = 0;
-            }
-            if (
-              select_status_code != conversation_status_code &&
-              !$(conversations_admin_list).find(".sb-search-btn").sbActive()
-            ) {
-              select.find(`[data-value="${conversation_status_code}"]`).click();
-              select.find("ul").sbActive(false);
-            }
-            if (responsive) {
-              this.mobileOpenConversation();
-            }
-            if (
-              !conversation.length &&
-              (select_status_code == conversation_status_code ||
-                (select_status_code == 0 && conversation_status_code == 1))
-            ) {
-              conversations_admin_list_ul.prepend(
-                SBConversations.getListCode(response).replace(
-                  "<li",
-                  '<li class="sb-active"'
-                )
-              );
-            }
-            conversation.sbActive(true);
-            if (scroll) {
-              this.scrollTo();
-            }
+        // Activate conversation
+if ([1, 2].includes(conversation_status_code)) {
+  conversation_status_code = 0;
+} else if (conversation_status_code === 6) {
+  // Keep status 6 as is for assigned conversations
+}
+
+if (
+  (select_status_code != conversation_status_code && select_status_code != 6) &&
+  !$(conversations_admin_list).find(".sb-search-btn").sbActive()
+) {
+  select.find(`[data-value="${conversation_status_code}"]`).click();
+  select.find("ul").sbActive(false);
+}
+
+if (responsive) {
+  this.mobileOpenConversation();
+}
+
+if (
+  !conversation.length &&
+  (select_status_code == conversation_status_code ||
+  (select_status_code == 0 && (conversation_status_code == 1 || conversation_status_code == 6)) ||
+  (select_status_code == 6 && conversation_status_code == 0))
+) {
+  conversations_admin_list_ul.prepend(
+      SBConversations.getListCode(response).replace(
+          "<li",
+          '<li class="sb-active"'
+      )
+  );
+}
+
+conversation.sbActive(true);
+
+if (scroll) {
+  this.scrollTo();
+}
 
             // Check if another agent has the conversation open
             let busy = response.get("busy");
@@ -4098,7 +4106,7 @@ conversations_area.find(".open-profile-name").on("click", function() {
       conversations_admin_list_ul.html(code);
       conversations_admin_list_ul.css("position", "relative");
       conversations_admin_list_ul.css("bottom", "15px");
-      SBConversations.positionList();
+      this.positionList();
       this.updateMenu();
 
       SBF.event("SBAdminConversationsLoaded", {
@@ -4106,42 +4114,42 @@ conversations_area.find(".open-profile-name").on("click", function() {
       });
     },
 
-    // positionList() {
-    // 	let chat_list = document.querySelectorAll('ul.sorting-by-last-message li');
-    // 	let totalHeight = 0;
-
-    // 	chat_list.forEach((list, index) => {
-    // 		let conversationHeight = list.offsetHeight;
-    // 		let conversation_id = list.getAttribute('data-conversation-id');
-    // 		this.chat_tops[0][conversation_id] = list.getAttribute('data-time');
-    // 		let y_pos = totalHeight;
-    // 		let order_css = `border-bottom: 1px solid rgb(122 122 122 / 27%); z-index:${parseInt(chat_list.length) - index};position:absolute;width:-webkit-fill-available;width:-moz-available;transform:translateY(${y_pos}px);`;
-    // 		list.style = order_css;
-    // 		totalHeight += conversationHeight;
-    // 	});
-
-    // },
 
     positionList() {
-      let chat_list = document.querySelectorAll(
-        "ul.sorting-by-last-message li"
-      );
+      let chat_list = Array.from(document.querySelectorAll("ul.sorting-by-last-message li"));
       let totalHeight = 0;
-
+    
+      // Sort the chat_list array based on data-time attribute
+      chat_list.sort((a, b) => {
+        let timeA = parseInt(a.getAttribute("data-time"));
+        let timeB = parseInt(b.getAttribute("data-time"));
+        return timeB - timeA; // Sort in descending order (latest first)
+      });
+    
+      // Reorder the DOM elements and apply styles
       chat_list.forEach((list, index) => {
         let conversationHeight = list.offsetHeight;
         let conversation_id = list.getAttribute("data-conversation-id");
         this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
-
+    
         let order_css = `
-				position:relative;
-				width: -webkit-fill-available;
-				width: -moz-available;
-			  `;
-
+          position: relative;
+          width: -webkit-fill-available;
+          width: -moz-available;
+          order: ${index}; // Use flexbox order for positioning
+        `;
+    
         list.style = order_css;
         totalHeight += conversationHeight;
+    
+        // Move the element to the end of the list, it will be ordered by the 'order' property
+        list.parentNode.appendChild(list);
       });
+    
+      // Set the parent ul to use flexbox
+      let parentUl = document.querySelector("ul.sorting-by-last-message");
+      parentUl.style.display = "flex";
+      parentUl.style.flexDirection = "column";
     },
 
     // Update the left conversations list with new conversations or messages
@@ -4345,6 +4353,8 @@ conversations_area.find(".open-profile-name").on("click", function() {
               if (scroll_to_conversation) {
                 this.scrollTo();
               }
+            
+              this.positionList();
               this.updateMenu();
             }
           }
@@ -7691,40 +7701,69 @@ $(".bi-search").click(function () {
       }
     );
 
-    // Agent assignment
-    $(conversations_area).on("click", "#conversation-agent li", function (e) {
-      let select = $(this).parent().parent();
-      let agent_id = $(this).data("id");
-      if (
-        agent_id == select.find(" > p").attr("data-value") ||
-        agent_id == SB_ACTIVE_AGENT["id"]
-      )
-        return true;
-      if (!SBChat.conversation) {
-        $(select).addClass("sb-active sb-responsive-absolute-position"); // Add both classes to the select element
-        e.preventDefault();
-        return false;
-      }
-      if (!select.sbLoading()) {
-        dialog(
-          `${sb_("The new agent will be")} ${$(this).html()}.`,
-          "alert",
+// Agent assignment
+$(conversations_area).on("click", "#conversation-agent li", function (e) {
+  let select = $(this).parent().parent();
+  let agent_id = $(this).data("id");
+  if (
+    agent_id == select.find(" > p").attr("data-value") ||
+    agent_id == SB_ACTIVE_AGENT["id"]
+  )
+    return true;
+  if (!SBChat.conversation) {
+    $(select).addClass("sb-active sb-responsive-absolute-position");
+    e.preventDefault();
+    return false;
+  }
+  if (!select.sbLoading()) {
+    dialog(
+      `${sb_("The new agent will be")} ${$(this).html()}.`,
+      "alert",
+      () => {
+        select.sbLoading(true);
+        SBConversations.assignAgent(
+          SBChat.conversation.id,
+          agent_id,
           () => {
-            select.sbLoading(true);
-            SBConversations.assignAgent(
-              SBChat.conversation.id,
-              agent_id,
-              () => {
-                SBConversations.setActiveAgent(agent_id);
-                select.sbLoading(false);
-              }
-            );
+            SBConversations.setActiveAgent(agent_id);
+            
+            // Update conversation status to 6 (assigned)
+            SBChat.conversation.set('conversation_status_code', 6);
+            
+            // Update UI to reflect the new status
+            let conversationItem = conversations_admin_list_ul.find(`[data-conversation-id="${SBChat.conversation.id}"]`);
+            conversationItem.attr('data-conversation-status', '6');
+            
+            // If there's a status indicator element, update it
+            let statusIndicator = conversationItem.find('.sb-status');
+            if (statusIndicator.length) {
+              statusIndicator.attr('data-sb-status', '6');
+            }
+            
+            // Update the status in the conversations array
+            let index = conversations.findIndex(c => c.id === SBChat.conversation.id);
+            if (index !== -1) {
+              conversations[index].conversation_status_code = 6;
+            }
+            
+            // Refresh the conversation list to reflect the new order
+            SBConversations.update();
+            
+            // Update the conversation details panel if it's open
+            if (conversations_area.find('.sb-conversation-details').sbActive()) {
+              SBConversations.updateConversationDetails();
+            }
+            
+            select.sbLoading(false);
           }
         );
       }
-      e.preventDefault();
-      return false;
-    });
+    );
+  }
+  e.preventDefault();
+  return false;
+});
+
 
     function loadDefaultDateTime(showAlert) {
       let now = moment();

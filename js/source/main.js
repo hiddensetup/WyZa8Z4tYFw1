@@ -7871,7 +7871,7 @@ $("#template-form").on("submit", function (e) {
     });
 
 
-    /**inbox loader $('.sb-select li[data-value="6"]').eq(0).click();}**/
+    /**inbox loader**/
     $(global).on("click", ".sb-select li", function () {
       let select = $(this).closest(".sb-select");
       let value = $(this).data("value");
