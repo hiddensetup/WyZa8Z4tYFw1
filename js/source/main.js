@@ -3479,7 +3479,7 @@
         main.sbActive(true);
         $("body").addClass("sb-chat-open");
         if (CHAT_SETTINGS["welcome-trigger"] == "open") {
-          this.welcome();
+          // this.welcome();
         }
         this.calculateLabelDates();
       }

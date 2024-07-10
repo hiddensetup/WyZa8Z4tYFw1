@@ -1608,7 +1608,7 @@ function sb_component_admin()
                                     </li>
 
                                     <li id="tab-automatica">
-                                        <i class="bi-robot"></i> <?php sb_e('Automatica') ?>
+                                        <i class="bi-robot"></i> <?php sb_e('Automática') ?>
                                     </li>
 
                                     <li id="tab-notifications">
