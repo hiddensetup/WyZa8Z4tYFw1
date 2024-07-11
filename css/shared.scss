@@ -1456,8 +1456,8 @@ div ul.sb-menu,
     padding: 10px 15px 0px 15px;
     letter-spacing: 0.3px;
     width: calc(100% - 30px);
-    line-height: 1.4rem;
-    height: 2rem;
+    line-height: 1.5rem;
+    height: 35px;
     outline: 0 !important;
     text-align: left;
     font-weight: 400;
@@ -1470,7 +1470,7 @@ div ul.sb-menu,
     display: block;
 
     &:focus {
-      box-shadow: transparent;
+      box-shadow: none;
     }
   }
 
@@ -1480,7 +1480,7 @@ div ul.sb-menu,
     display: none;
     cursor: pointer;
     font-size: var(--chat-text-size-1-4);
-    padding: 8px;
+    padding: 10px;
     align-self: flex-end;
     margin: auto 0px;
     transition: var(--transition-2);
@@ -3217,7 +3217,7 @@ div ul.sb-menu,
   color: var(--chat-text-primary) !important;
   cursor: pointer;
   font-size: var(--chat-text-size-1-4);
-  padding: 8px;
+  padding: 10px;
   align-self: flex-end;
   margin: auto 0px;
 

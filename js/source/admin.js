@@ -7748,7 +7748,8 @@ $(conversations_area).on("click", "#conversation-agent li", function (e) {
             
             // Refresh the conversation list to reflect the new order
             SBConversations.update();
-            
+            SBConversations.updateMenu();
+
             // Update the conversation details panel if it's open
             if (conversations_area.find('.sb-conversation-details').sbActive()) {
               SBConversations.updateConversationDetails();
@@ -9494,9 +9495,11 @@ function handlewawebButtonClick(event, action) {
   textArea.addEventListener("input", () => {
     if (textArea.value.trim() === "") {
       sending.classList.add("sb-hide");
+      recButton.classList.remove("sb-hide");
+
     } else {
       sending.classList.remove("sb-hide");
-      recButton.classList.remove("sb-hide");
+      recButton.classList.add("sb-hide");
     }
   });
 

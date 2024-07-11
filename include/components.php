@@ -1281,7 +1281,7 @@ function sb_component_admin()
                                         </li>
                                         <hr>
                                         <li data-value="6">
-                                            <i class="bi-pin-fill"></i>&nbsp; <?php sb_e('Follow up') ?>
+                                            <i class="bi-stars"></i>&nbsp; <?php sb_e('My chats') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="3">

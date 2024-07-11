@@ -60,7 +60,7 @@
       var t = this[0];
       (t.style.height = "auto"), (t.style.maxHeight = "25px");
       window.getComputedStyle(t);
-      (t.style.height = (t.scrollHeight > 350 ? 350 : t.scrollHeight) + "px"),
+      (t.style.height = (t.scrollHeight > 35 ? 100 : t.scrollHeight) + "px"),
         (t.style.maxHeight = ""),
         $(t).trigger("textareaChanged");
     },
@@ -2468,7 +2468,7 @@
   // // Encode the message to handle special characters and ensure URL integrity
   // message = encodeURIComponent(message);
 
-  return message;
+  return  message;
 }
   }
 
@@ -2994,7 +2994,7 @@
           conversation_id: this.conversation.id,
           conversation: this.conversation,
           conversation_status_code: conversation_status_code,
-          message: message,
+          message: message, // render whatsapp name
           attachments: attachments,
         };
 
@@ -3003,7 +3003,7 @@
             function: "send-message",
             user_id: user_id,
             conversation_id: this.conversation.id,
-            message: message,
+            message: message, //render only in chat onveersation
             attachments: attachments,
             conversation_status_code: conversation_status_code,
             queue: !admin && CHAT_SETTINGS["queue"] && is_user,

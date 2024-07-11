@@ -3822,8 +3822,8 @@ BODY
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
         appearance: none !important;
-        width: 40px !important;
-        height: 10px !important;
+        width: 37px !important;
+        height: 17px !important;
         background-color: var(--chat-input-search-responsive) !important;
         border-radius: 24px !important;
         position: relative !important;
@@ -3837,8 +3837,8 @@ BODY
     .switch-toggle:before {
         content: "";
         position: absolute !important;
-        width: 19.5px !important;
-        height: 19.5px !important;
+        width: 19px;
+        height: 19px;
         background: var(--chat-input-toggle-color) !important;
         border-radius: 24px !important;
         top: 0px !important;
@@ -3851,7 +3851,7 @@ BODY
     }
 
     .switch-toggle:checked:before {
-        left: 23px !important;
+        left: 16px !important;
         color: transparent;
     }
 }
@@ -3919,20 +3919,18 @@ BODY
     select,
     textarea {
         border-radius: var(--chat-rounded-size-6);
-        border: 0.5px solid var(--chat-border-color);
-        outline: none;
+        border: .5px solid var(--chat-border-color);
+        outline: 0;
         color: var(--chat-text-primary);
         font-size: var(--chat-text-size-1-0);
         line-height: 35px;
-        height: 40px;
-        padding: 0 10px;
-        width: 100%;
-        min-width: 300px;
+        padding: 7px;
         box-sizing: border-box;
         background-color: var(--chat-input-background);
-        animation: fade-in 0.3s ease-in;
-        -webkit-animation: fade-in 0.3s ease-in;
+        animation: fade-in .3s ease-in;
+        -webkit-animation: fade-in .3s ease-in;
         font-weight: 400;
+        padding: 10px 10px;
 
         &:focus {
             border: 0.5px solid var(--chat-border-color);
@@ -3952,20 +3950,21 @@ BODY
     }
 
     input[type="checkbox"] {
-        clear: none;
-        cursor: pointer;
-        display: inline-block;
-        line-height: 0;
-        min-height: 22px;
-        outline: 0;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        vertical-align: middle;
-        width: 35px;
-        min-width: 45px !important;
-        outline: none;
-        box-shadow: none;
+        // clear: none;
+        // cursor: pointer;
+        // display: inline-block;
+        // line-height: 0;
+        // min-height: 22px;
+        // outline: 0;
+        // padding: 0;
+        // margin: 0;
+        // text-align: center;
+        // vertical-align: middle;
+        // width: 35px;
+        // min-width: 45px !important;
+        // outline: none;
+        // box-shadow: none;
+        
 
         &:checked:before {
             content: "\f26e" !important;
@@ -3978,8 +3977,8 @@ BODY
             font-size: var(--chat-text-size-1-0);
             color: var(--chat-border-color);
             margin: 0;
-            width: 100%;
-            height: 100%;
+            // width: 100%;
+            // height: 100%;
         }
     }
 

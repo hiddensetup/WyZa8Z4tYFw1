@@ -9482,11 +9482,13 @@ function sb_component_editor($admin = false)
 ?>
 
     <div class="sb-editor" id="controls">
+
         <?php if ($admin) {
             echo '<div class="sb-agent-label"></div>';
         } ?>
 
         <div class="sb-bar-icons sb-hide">
+            
             <div class="bi-emoji-grin" data-sb-tooltip="<?php sb_e("Emojis"); ?>"></div>
             <div class="bi-list-stars" id="send-rating-button" data-sb-tooltip="<?php sb_e("Feedback?"); ?>"></div>
 
@@ -9505,16 +9507,21 @@ function sb_component_editor($admin = false)
         </div>
 
         <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
-
+   
             <div class="menu-plus bi-plus-lg"></div>
-
-            <div style="min-height: 25px;" class="sb-textarea">
+            <div style="padding:0px!important"  class="sb-setting">
+    <input type="checkbox" id="agentNameToggle" class="switch-toggle">
+    <label style="font-size:8px;display:none" for="agentNameToggle">Nombre en chat</label>
+    </div>
+            <div style="min-height: 35px;" class="sb-textarea">
                 <?php
                 // Placeholder values, replace these with your actual data
                 $source = "wa"; // Placeholder value for the conversation source
                 $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
                 ?>
                 <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+            
+
             </div>
 
             <div class="sb-bar sb-space-between">
@@ -9629,8 +9636,47 @@ function sb_component_editor($admin = false)
             <input type="file" name="files[]" class="sb-upload-files" multiple />
         </form>
         <div class="sb-attachments"> </div>
-    </div>
 
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const textarea = document.querySelector('.sb-textarea textarea');
+    const submitButton = document.querySelector('.sb-submit');
+    const agentNameToggle = document.getElementById('agentNameToggle');
+
+    // Load saved preference from localStorage
+    const agentNameEnabled = localStorage.getItem('agentNameEnabled') === 'true';
+    agentNameToggle.checked = agentNameEnabled;
+
+    // Save preference to localStorage when checkbox is toggled
+    agentNameToggle.addEventListener('change', function() {
+        localStorage.setItem('agentNameEnabled', this.checked);
+    });
+
+    function prependAgentName() {
+        if (!agentNameToggle.checked) return; // Don't prepend if checkbox is unchecked
+
+        let message = textarea.value.trim();
+        if (message && !message.startsWith('*{agent_name}*')) {
+            textarea.value = `*{agent_name}*\n ${message}`;
+        }
+    }
+
+    // Modify the textarea content just before submission
+    submitButton.addEventListener('click', function(e) {
+        prependAgentName();
+    });
+
+    // Also handle Enter key press
+    textarea.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            prependAgentName();
+            submitButton.click(); // Trigger the submit button click
+        }
+    });
+});
+</script>
 <?php
 }
 

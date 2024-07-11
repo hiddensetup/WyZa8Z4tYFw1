@@ -4,11 +4,6 @@ define('SB_WAWEB', 'Go');
 function sb_waweb_send_message($to, $message = '', $attachments = [])
 {
 
-    // Check if the message contains "~Registro de contacto"
-    if (strpos($message, '*~Registro de contacto*') !== false) {
-        return ['success' => false, 'error' => 'Template sent'];
-    }
-
     if (empty($message) && empty($attachments)) return false;
 
     $to = trim(str_replace('+', '', $to));
