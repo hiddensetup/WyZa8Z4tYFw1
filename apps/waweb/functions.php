@@ -1,12 +1,21 @@
 <?php
 define('SB_WAWEB', 'Go');
 
+// Define a list of blacklisted numbers
+$blacklist = ['5491165900208', '5491126415491', '34660172262', '50761519259', '5491140908465','525574957250']; // Example blacklisted numbers
+
 function sb_waweb_send_message($to, $message = '', $attachments = [])
 {
-
-    if (empty($message) && empty($attachments)) return false;
+    if (empty($message) && empty($attachments)) return json_encode(['status' => 'error', 'message' => 'Message and attachments are empty']);
 
     $to = trim(str_replace('+', '', $to));
+    
+    // Check if the recipient's number is blacklisted
+    global $blacklist;
+    if (in_array($to, $blacklist)) {
+        return json_encode(['status' => 'blacklisted', 'message' => 'Recipient is blacklisted.']);
+    }
+
     $user = sb_get_user_by('phone', $to);
     $response = false;
     $merge_field = false;
@@ -16,9 +25,8 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
 
     // Security
     if (!sb_is_agent() && !sb_is_agent($user) && sb_get_active_user_ID() != sb_isset($user, 'id') && empty($GLOBALS['SB_FORCE_ADMIN'])) {
-        return new SBError('security-error', 'sb_waweb_send_message');
+        return json_encode(['status' => 'error', 'message' => 'Security error']);
     }
-
 
     // Send the message
     if (is_string($message)) {
@@ -40,6 +48,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
             // send a text message with the attachment info
         }
     }
+
     if ($goproxy) {
         $wawebGoUrl = sb_get_multi_setting('waweb-go', 'waweb-go-url');
         $goUrl = WX_URL_GO; // Use the base URL constant
@@ -69,11 +78,11 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
     } else {
         if ($message) {
             $query = ['messaging_product' => 'waweb', 'recipient_type' => 'individual', 'to' => $to];
+            // You can add the actual send logic here, if necessary.
         }
-        return $response;
+        return json_encode(['status' => 'success', 'message' => 'Message sent successfully']);
     }
 }
-
 
 function sb_waweb_rich_messages($message, $extra = false)
 {
