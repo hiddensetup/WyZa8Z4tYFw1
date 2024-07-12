@@ -1,5 +1,5 @@
 <?php
-define('SB_WAWEB', 'Go');
+define('SB_WHATSMEOW', 'Go');
 
 // Define a list of blacklisted numbers
 $blacklist = ['5491165900208', '5491126415491', '34660172262', '50761519259', '5491140908465','525574957250']; // Example blacklisted numbers
