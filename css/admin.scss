@@ -273,7 +273,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: var(--chat-tooltip-background);
     color: var(--chat-text-tooltip)!important;
     // margin: 6px 0;
-    border-radius: var(--chat-rounded-size-8);
+    border-radius: var(--chat-rounded-size-6);
     list-style: none;
     font-weight: normal !important;
     font-size: small !important;
@@ -1759,12 +1759,11 @@ TABLE
     }
 
     >div {
-        font-size: 0.85rem;
-        line-height: 20px;
-        padding: 8px 12px;
+        font-size: .85rem;
         max-width: 250px;
+        padding: 5px 12px;
         text-align: center;
-        letter-spacing: 0.3px;
+        letter-spacing: .3px;
         white-space: nowrap;
         color: var(--chat-btn-background);
     }
@@ -1862,7 +1861,7 @@ TABLE
         left: 0;
         bottom: 0;
         z-index: 9;
-        background: var(--chat-app-background);
+        background: var(--chat-background-menu-selected);
 
         // background: var(--top-bar-mobile-color);
 
@@ -1936,7 +1935,7 @@ TABLE
             font-size: var(--chat-text-size-1-0);
             line-height: 20px;
             font-weight: 600;
-            padding: 8px 12px;
+            padding: 5px 12px;
             text-align: center;
             letter-spacing: 0.5px;
             //color: rgb(40, 40, 40);
@@ -2675,7 +2674,7 @@ BODY
     }
 
     #open-modal-button {
-        scale: .9;
+        scale: 1;
 
     }
 
@@ -2801,13 +2800,17 @@ BODY
         }
 
         .sb-list {
+
             height: 100%;
             overflow-y: scroll;
-            padding: 0px 0px 40px 0px;
-            // transition: var(--transition-3);
+            padding: 0 0 40px 0;
             background: var(--chat-background-image);
             background-color: var(--chat-conversation-background) !important;
-
+            background-blend-mode: overlay;
+            background-size: contain;
+            height: 100%;
+            overflow-y: scroll;
+        
 
             >div {
                 //max-width: calc(100% - 185px);
@@ -2990,7 +2993,18 @@ BODY
             background-color: var(--chat-bottom-bar-color);
             font-size: var(--chat-text-size-1-4);
 
+            .bi-emoji-grin {
+                position: relative;
+                right: 18px;
+                bottom: 0px;
+                color: var(--chat-text-tertiary);
+                transition: color 1s ease-in;
 
+                &:active, &:hover {
+                    color: var(--chat-text-primary);
+
+                }
+            }
 
 
 
@@ -3923,7 +3937,7 @@ BODY
         outline: 0;
         color: var(--chat-text-primary);
         font-size: var(--chat-text-size-1-0);
-        line-height: 35px;
+        // line-height: 35px;
         padding: 7px;
         box-sizing: border-box;
         background-color: var(--chat-input-background);

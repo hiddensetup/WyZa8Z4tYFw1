@@ -1411,7 +1411,18 @@ function sb_update_user(
     if (sb_is_agent($user_type) && !sb_is_agent(false, true, true)) {
         return new SBError("security-error", "sb_update_user");
     }
+    // Clean and format the phone number
+    if (!empty($settings_extra["phone"])) {
+        $cleanedPhone = preg_replace("/[^a-zA-Z0-9@.]/", "", $settings_extra["phone"][0]);
 
+        // Add plus "+" symbol if not already present
+        if (strpos($cleanedPhone, '+') === false) {
+            $cleanedPhone = '+' . $cleanedPhone;
+        }
+
+
+        $settings_extra["phone"][0] = $cleanedPhone;
+    }
     // Validate duplicate email
     if ($email) {
         $email = sb_db_escape($email);
@@ -6076,7 +6087,7 @@ function sb_get_setting_code($setting)
             case "article":
                 $content .= '
                  <div>
-                 <p class="active">Download link: <a class="sb-btn" href="js/ef59c86d2fc11514f162bc00504408d46e61d3.html" target="_blank">Get Live Chat</a>
+                 <p class="active">Download link: <a class="sb-btn" href="https://routin.cloud/webchat" target="_blank">Obtener</a>
                  </p>
                  </div>';
                 break;
@@ -9245,14 +9256,10 @@ function sb_office_hours()
 
 function sb_css(
     $color_1 = false,
-    $color_2 = false,
-    $color_3 = false,
     $return = false
 ) {
     $css = "";
     $color_1 = $color_1 ? $color_1 : sb_get_setting("color-1");
-    $color_2 = $color_2 ? $color_2 : sb_get_setting("color-2");
-    $color_3 = $color_3 ? $color_3 : sb_get_setting("color-3");
     $chat_button_offset_top = sb_get_multi_setting(
         "chat-button-offset",
         "chat-button-offset-top"
@@ -9281,31 +9288,11 @@ function sb_css(
             : ["", ""]);
     if ($color_1) {
         $css .=
-            '.sb-chat-btn, .sb-chat>div>.sb-header,.sb-chat ,.sb-btn:hover,.sb-chat .sb-scroll-area .sb-header,.sb-input.sb-input-btn>div,div ul.sb-menu li:hover,
-                  .sb-select ul li:hover,.sb-popup.sb-emoji .sb-emoji-bar>div.sb-active, .sb-popup.sb-emoji .sb-emoji-bar>div:hover,.sb-btn,a.sb-btn,.sb-rich-message[disabled] .sb-buttons .sb-btn,
-                  .sb-ul>span:before,.sb-article-category-links>span+span:before { background-color: ' .
+            '.sb-chat-btn, .sb-label-date-top.sb-active { background-color: ' .
             $color_1 .
             "; }";
-
-        $css .=
-            '.sb-top, .sb-chat ,.sb-btn,.sb-editor .sb-bar-icons>div:hover:before,.sb-articles>div:hover>div,.sb-main .sb-btn-text:hover,.sb-editor,.sb-table input[type="checkbox"]:checked:before,
-                  .sb-select p:hover,div ul.sb-menu li.sb-active, .sb-select ul li.sb-active,.sb-search-btn>i:hover,.sb-search-btn.sb-active i,.sb-rich-message .sb-input>span.sb-active:not(.sb-filled),
-                  .sb-input.sb-input-image .image:hover:before,.sb-rich-message .sb-card .sb-card-btn,.sb-slider-arrow:hover,.sb-loading:not(.sb-btn):before,.sb-articles>div.sb-title,.sb-article-categories>div:hover, .sb-article-categories>div.sb-active,
-                  .sb-article-categories>div span:hover,.sb-article-categories>div span.sb-active,.sb-btn-text:hover { color: ' .
-            $color_1 .
-            "; }";
-        $css .=
-            ".sb-search-btn>input:focus,.sb-input>input:focus, .sb-input>select:focus, .sb-input>textarea:focus { box-shadow: 0 0 5px rgba(104, 104, 104, 0.2); }";
-        $css .=
-            ".sb-list>div.sb-rich-cnt";
     }
 
-    if ($color_3) {
-        $css .=
-            ".sb-list>.sb-right,.sb-user-conversations>li:hover { background-color: " .
-            $color_3 .
-            "; }";
-    }
     if ($chat_button_offset_top) {
         $css .=
             $chat_button_offset_left_mobile[0] .
@@ -9488,17 +9475,34 @@ function sb_component_editor($admin = false)
         } ?>
 
         <div class="sb-bar-icons sb-hide">
-            
-            <div class="bi-emoji-grin" data-sb-tooltip="<?php sb_e("Emojis"); ?>"></div>
-            <div class="bi-list-stars" id="send-rating-button" data-sb-tooltip="<?php sb_e("Feedback?"); ?>"></div>
 
-            <div class="bi-crosshair"></div>
+
+            <div id="send-rating-button">
+                <i class="bi bi-stoplights-fill"></i>
+                <span><?php sb_e("Feedback"); ?></span>
+            </div>
+
+            <div id="set-status">
+                <i class="bi bi-kanban-fill"></i>
+                <span><?php sb_e("Status"); ?></span>
+            </div>
 
             <?php if ($admin || !sb_get_setting("disable-uploads")) {
-                echo '<div class="bi-paperclip" ></div>';
+                echo '<div id="upload-files">
+                <i class="bi-folder-fill"></i>
+                <span>Uploads</span>
+                </div>';
             } ?>
-            <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
-            <div class="bi-wind api-whatsapp-button" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
+
+            <div id="load-saved-replies">
+                <i class="bi bi-envelope-fill"></i>
+                <span><?php sb_e("Load a saved reply"); ?></span>
+            </div>
+            <div class="api-whatsapp-button" id="open-modal-button">
+                <i class="bi bi-wind wind-whatsapp-color"></i>
+                <span><?php sb_e("Templates"); ?></span>
+            </div>
+            <!-- <div class="bi bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div> -->
 
         </div>
 
@@ -9507,12 +9511,11 @@ function sb_component_editor($admin = false)
         </div>
 
         <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
-   
+
             <div class="menu-plus bi-plus-lg"></div>
-            <div style="padding:0px!important"  class="sb-setting">
-    <input type="checkbox" id="agentNameToggle" class="switch-toggle">
-    <label style="font-size:8px;display:none" for="agentNameToggle">Nombre en chat</label>
-    </div>
+            <div style="padding:0px!important" data-sb-tooltip="Mostrar nombre" class="sb-setting">
+                <input type="checkbox" id="agentNameToggle" class="switch-toggle">
+            </div>
             <div style="min-height: 35px;" class="sb-textarea">
                 <?php
                 // Placeholder values, replace these with your actual data
@@ -9520,7 +9523,7 @@ function sb_component_editor($admin = false)
                 $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
                 ?>
                 <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
-            
+
 
             </div>
 
@@ -9530,6 +9533,8 @@ function sb_component_editor($admin = false)
                         <option selected value="mp3">.mp3</option>
                     </select>
                 </div>
+                <div class="bi-emoji-grin"></div>
+
                 <div id='recordButton' class="bi-mic-fill start stop-time" data-sb-tooltip=""></div>
                 <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
                 <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
@@ -9561,7 +9566,7 @@ function sb_component_editor($admin = false)
                 foreach ($clientStatus as $label) {
                 ?>
                     <a id="<?= $label ?>" class="sb-input-setting cst-a">
-                        <i class="<?= "cst-i bi-crosshair tags-" . $label ?>"></i>&nbsp;<?= $label ?>
+                        <i class="<?= "cst-i bi-kanban-fill tags-" . $label ?>"></i>&nbsp;<?= $label ?>
                     </a>
                 <?php } ?>
 
@@ -9638,45 +9643,45 @@ function sb_component_editor($admin = false)
         <div class="sb-attachments"> </div>
 
     </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const textarea = document.querySelector('.sb-textarea textarea');
-    const submitButton = document.querySelector('.sb-submit');
-    const agentNameToggle = document.getElementById('agentNameToggle');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.querySelector('.sb-textarea textarea');
+            const submitButton = document.querySelector('.sb-submit');
+            const agentNameToggle = document.getElementById('agentNameToggle');
 
-    // Load saved preference from localStorage
-    const agentNameEnabled = localStorage.getItem('agentNameEnabled') === 'true';
-    agentNameToggle.checked = agentNameEnabled;
+            // Load saved preference from localStorage
+            const agentNameEnabled = localStorage.getItem('agentNameEnabled') === 'true';
+            agentNameToggle.checked = agentNameEnabled;
 
-    // Save preference to localStorage when checkbox is toggled
-    agentNameToggle.addEventListener('change', function() {
-        localStorage.setItem('agentNameEnabled', this.checked);
-    });
+            // Save preference to localStorage when checkbox is toggled
+            agentNameToggle.addEventListener('change', function() {
+                localStorage.setItem('agentNameEnabled', this.checked);
+            });
 
-    function prependAgentName() {
-        if (!agentNameToggle.checked) return; // Don't prepend if checkbox is unchecked
+            function prependAgentName() {
+                if (!agentNameToggle.checked) return; // Don't prepend if checkbox is unchecked
 
-        let message = textarea.value.trim();
-        if (message && !message.startsWith('*{agent_name}*')) {
-            textarea.value = `*{agent_name}*\n ${message}`;
-        }
-    }
+                let message = textarea.value.trim();
+                if (message && !message.startsWith('*{agent_name}*')) {
+                    textarea.value = `*{agent_name}*\n ${message}`;
+                }
+            }
 
-    // Modify the textarea content just before submission
-    submitButton.addEventListener('click', function(e) {
-        prependAgentName();
-    });
+            // Modify the textarea content just before submission
+            submitButton.addEventListener('click', function(e) {
+                prependAgentName();
+            });
 
-    // Also handle Enter key press
-    textarea.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            prependAgentName();
-            submitButton.click(); // Trigger the submit button click
-        }
-    });
-});
-</script>
+            // Also handle Enter key press
+            textarea.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    prependAgentName();
+                    submitButton.click(); // Trigger the submit button click
+                }
+            });
+        });
+    </script>
 <?php
 }
 
@@ -9737,7 +9742,8 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 
 
 
-function sb_count_fallback_messages($conversation_id) {
+function sb_count_fallback_messages($conversation_id)
+{
     return sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true))['count'];
 }
 
@@ -9819,7 +9825,7 @@ function sb_option_assign_reply($option, $conversation_id)
         } else {
             // Verificar el número de veces que se ha enviado el mensaje de fallback
             $fallback_count = sb_count_fallback_messages($conversation_id);
-            
+
             if ($fallback_count < 3) {
                 // Si no se ha enviado 3 veces, enviar el mensaje de fallback
                 $message = sb_get_multi_setting("welcome-message", "fallback-msg");

@@ -123,7 +123,7 @@
                     const formData = new FormData();
                     formData.append('password', this.password);
 
-                    const response = await fetch('hash.php', {
+                    const response = await fetch('/include/hash.php', {
                         method: 'POST',
                         body: formData
                     });

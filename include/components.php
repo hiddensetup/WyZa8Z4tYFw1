@@ -145,7 +145,7 @@ function sb_profile_edit_box()
 
                     <div id="last_name" data-type="text" name="last_name" class="sb-input">
                         <span><?php sb_e('Last name') ?></span>
-                        <input type="text" name="last_name" required />
+                        <input type="text" name="last_name" />
                     </div>
 
                     <div id="password" data-type="password" name="password" class="sb-input">
@@ -158,10 +158,6 @@ function sb_profile_edit_box()
                         <input type="email" name="email" />
                     </div>
                 </div>
-
-
-
-
                 <a class="sb-delete sb-btn-text sb-btn-red">
                     <i class="bi-trash"></i><?php sb_e('Delete user') ?>
                 </a>
@@ -761,82 +757,82 @@ function sb_send_template_box()
     <script>
         const meta = new Metatemplate;
         meta.init("#template-form");
-       
-       
-       
+
+
+
         const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
-const htmlTag = document.documentElement;
-const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        const htmlTag = document.documentElement;
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-const updateTheme = () => {
-    const currentTheme = htmlTag.dataset.theme;
-    let newTheme;
-    let newThemeColor;
+        const updateTheme = () => {
+            const currentTheme = htmlTag.dataset.theme;
+            let newTheme;
+            let newThemeColor;
 
-    switch (currentTheme) {
-        case 'dark':
-            newTheme = 'light';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'light':
-            newTheme = 'app';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'app':
-            newTheme = 'routin';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'routin':
-            newTheme = 'steambox';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'steambox':
-        default:
-            newTheme = 'dark';
-            newThemeColor = '#181620';
-            htmlTag.classList.add('dark');
-            break;
-    }
+            switch (currentTheme) {
+                case 'dark':
+                    newTheme = 'light';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'light':
+                    newTheme = 'app';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'app':
+                    newTheme = 'routin';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'routin':
+                    newTheme = 'steambox';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'steambox':
+                default:
+                    newTheme = 'dark';
+                    newThemeColor = '#181620';
+                    htmlTag.classList.add('dark');
+                    break;
+            }
 
-    htmlTag.dataset.theme = newTheme;
-    metaThemeColor.content = newThemeColor;
-    localStorage.setItem('theme', newTheme);
-};
+            htmlTag.dataset.theme = newTheme;
+            metaThemeColor.content = newThemeColor;
+            localStorage.setItem('theme', newTheme);
+        };
 
-const storedTheme = localStorage.getItem('theme');
-if (storedTheme) {
-    htmlTag.dataset.theme = storedTheme;
-    switch (storedTheme) {
-        case 'light':
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            htmlTag.dataset.theme = storedTheme;
+            switch (storedTheme) {
+                case 'light':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'app':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'routin':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'steambox':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'dark':
+                default:
+                    metaThemeColor.content = '#181620';
+                    htmlTag.classList.add('dark');
+                    break;
+            }
+        } else {
+            htmlTag.dataset.theme = 'light';
             metaThemeColor.content = 'white';
-            break;
-        case 'app':
-            metaThemeColor.content = 'white';
-            break;
-        case 'routin':
-            metaThemeColor.content = 'white';
-            break;
-        case 'steambox':
-            metaThemeColor.content = 'white';
-            break;
-        case 'dark':
-        default:
-            metaThemeColor.content = '#181620';
-            htmlTag.classList.add('dark');
-            break;
-    }
-} else {
-    htmlTag.dataset.theme = 'light';
-    metaThemeColor.content = 'white';
-}
+        }
 
-themeToggleBtns.forEach(btn => {
-    btn.addEventListener('click', updateTheme);
-});
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', updateTheme);
+        });
 
 
 
@@ -930,11 +926,10 @@ themeToggleBtns.forEach(btn => {
         function toggleWhatsAppButton(visible) {
             const whatsAppButton = document.querySelector(".api-whatsapp-button");
             if (whatsAppButton) {
-                whatsAppButton.style.visibility = visible ? "visible" : "hidden"; // Fix: Use the 'visible' argument to set visibility
+                whatsAppButton.style.display = visible ? "inherit" : "none"; // Fix: Use the 'visible' argument to set visibility
             }
         }
-
-
+        
         // Function to check if there are active WhatsApp conversation items and toggle the WhatsApp button accordingly
         function checkActiveWAConversation() {
             const conversationItem = document.querySelector(
@@ -1255,7 +1250,8 @@ function sb_component_admin()
                     </div>
                     <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);-webkit-animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);padding:8px;font-size: 1.1rem;font-weight: 500;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
-                        <a href="#" class="themeToggleBtn"> <i class="bi bi-palette2"></i> <?php sb_e('Tema') ?></a>
+                        <a href="#" class="themeToggleBtn"> <i class="bi-circle" style=" background: var(--chat-app-theme-color); border-radius: 24px; color: white; padding:0.8px 1px 0px 1px"></i> <?php sb_e('Tema') ?></a>
+                        <!-- <a href="#" class="startConversation"> <i class="bi-wind"></i> <?php sb_e('WhatsApp') ?></a> START CONVERSATION CREATION -->
                         <hr>
                         <a href="#" class="logout"><i class="bi bi-power"></i> <?php sb_e('Logout') ?></a>
 
@@ -1269,7 +1265,6 @@ function sb_component_admin()
                     <div class="sb-board">
                         <div class="sb-admin-list">
                             <div class="sb-top">
-
                                 <div class="sb-select inbox">
                                     <p class="non-hover" data-value="0">
                                         <i class="bi-inboxes-fill"></i>&nbsp; <?php sb_e('Inbox') ?><span> </span>

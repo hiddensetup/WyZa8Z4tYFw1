@@ -2180,12 +2180,6 @@
       "content": "Set the primary color of the chat widget."
     },
     {
-      "type": "color",
-      "id": "color-2",
-      "title": "Secondary color",
-      "content": "Set the secondary color of the chat widget."
-    },
-    {
       "type": "text",
       "id": "header-headline",
       "title": "Header title",

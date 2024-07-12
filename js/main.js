@@ -1,1 +1,8042 @@
-'use strict';const _0x32fb60=_0x2301;function _0x7fe3(){const _0xd5020d=['<div\x20class=\x22sb-card-header\x22>','twitter-id','tickets-registration-required','*Plantilla\x20WhatsApp*,\x20{agent_name}\x20\x0a\x0a\x20','change','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<audio\x20controls\x20style=\x22max-width:\x20100%;\x20max-height:\x2033px;\x20border-radius:\x20var(--chat-rounded-size-6);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<source\x20src=\x22','Phone','lastAgent','scrollHeader','language','Client','data-type=\x22multiple\x22','SameSite=None;Secure;','notifications','addConversation','calculateLabelDates','hidden','brand','\x20[list\x20values=\x22','add-user-and-login','Location','.sb-articles\x20>\x20div:not(.sb-title)','</div><div>','delay','Please\x20insert\x20email\x20and\x20password.','POST','get_value','type','timetable','upload','beforeunload','label-names','<div\x20class=\x22sb-notify-message\x20sb-rich-cnt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22server-response\x22>\x20<i\x20class=\x22bi-check2-all\x22></i></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sb-cnt\x22><div\x20class=\x22sb-message\x22>','sb-upload-files.change','text','translate','dialogflow-disable-tickets','disable-bot','.sb-rich-message\x20.sb-submit,.sb-rich-message\x20.sb-select\x20ul\x20li','start','sb-select','.sb-attachments','offlineMessage','<div\x20class=\x22sb-slider\x22><div>[items]</div></div><div\x20class=\x22sb-slider-arrow\x20bi-chevron-left[class]\x22></div><div\x20class=\x22sb-slider-arrow\x20bi-chevron-right\x20sb-active[class]\x22></div>','.sb-btn-new-conversation,.sb-departments-list\x20>\x20div,.sb-agents-list\x20>\x20div','Name','/include/init.php','SBNewConversationReceived','<p\x20style=\x22font-family:\x20monospace;\x22>','www.pinterest.com/pin/create/button/?url=','data-conversation-id','description-',',\x20and\x20a\x20password\x20(8\x20character\x20minimum)','\x22\x20width=\x2230\x22\x20height=\x2230\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','.sb-admin,\x20.sb-chat,\x20.sb-tickets','deltaY','sb-dashboard-active','sb-hide','sb-info-card-info','<i></i></div>','initServiceWorker','.sb-conversation-busy[data-agent=\x22','</div><div\x20class=\x22sb-text\x22>','each','human-takeover-','data-offset','to\x20upload\x20file','default_department','sb-rich-message','select,input[disabled]','show','New\x20message...','is-exactly','phone-codes','event','\x22\x20message=\x22','pusher_beams','registration','SBF.ajax.','\x22></div>','<div\x20style=\x22padding-top:\x200px\x22\x20class=\x22sb-message-attachments\x22>','update-message','html','positive','&cloud=','25px','removeItem','sb-error','<div\x20class=\x22sb-card-extra\x22>','max-height','[data-id=\x22','.sb-dashboard-btn','UTC','message','<div\x20class=\x22sb-text\x22>','sb-panel-active','closest','.sb-dialog-box','agent','\x20required.','admin_set','.sb-user-conversations','tab_active','</del>','getCode','set-typing','volume','sendEmail','conversation-status-updated','initInputs','typing_settings','rate','logout','function','index','https:','updateConversations','true','response','sb-filled','chips','sounds','link-','getComputedStyle','SBUser.update','</p>','margin-left','typing_enabled','NO_MATCH','right','isConversationsEmpty','storageTime','#load-more','.min','.sb-search-btn\x20i','web.whatsapp.com/send?text=','\x22><div><span\x20class=\x22sb-name\x22>','[rating]','cloudChannelRename','then','country','granted','<div\x20id=\x22','</a></div></div>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-file-earmark-text-fill\x22\x20style=\x22font-size:1.89rem;\x20color:\x20var(--chat-text-primary)\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','01/01/2000\x20','welcome-disable-office-hours','www.','user_id','profile_image','messageMenu','javascript:','main_header','<li\x20','SBNewEmailAddress','offline','SBUser.getConversations','SBConversation.addMessages()','0000-00-00\x2000:00:00','<iframe\x20loading=\x22lazy\x22','.sb-profile-agent\x20.sb-status','Saturday','.sb-content','catch','agent-not-authorized',',\x20left=','subscribe','toUpperCase','325.6px','cors','get_select_setting','nameBeautified','\x22>+','appendChild','Payload:','webhooks','agents','placeholder','btn-decline','focusout','<div\x20class=\x22sb-btn\x22>No</div>','<div\x20class=\x22sb-card-img\x22\x20style=\x22background-image:url(\x27','sb-loading','onend','linksData','queryResult','manualExpandTextarea','exec','template_name','update-user-and-message','get-block-setting','\x20target=\x22_blank\x22','isBottom','presenceCheck','getMonth','<button\x20class=\x22sb-rich-btn\x20sb-btn\x22>','agent_id','SBBotAction','getLastUserMessage','class=\x22sb-active\x22\x20','is_busy','length','whatsapp-cloud','</option>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22server-response\x22>\x20<i\x20class=\x22bi-check2-all\x22></i></div>\x0a\x09\x09\x09\x09\x20\x20<div\x20class=\x22sb-cnt\x22\x20style=\x22width:fit-content;margin:6px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x09\x09\x09\x09\x20\x20<div\x20class=\x22sb-message\x22\x20data-value=\x22','visitor','sb-text-list\x20sb-text-list-single','exclude_urls','push-notifications-id','get-new-user-conversations','.sb-status','<div\x20data-name=\x22','initialized','addEventListener',',\x20phone\x20number','https://js.pusher.com/7.0/pusher.min.js','sb-active\x20sb-filled','registration-details','withCredentials','‎```\x0a$1\x0a```‎','<div></div>','dialog','.sb-select\x20li','href','scrollHeight','.sb-slider','sb-status-typing','URL','removeConversation','chat-login-init','timetable-message','.sb-rich-login\x20.sb-registration-area','presence','calculateLabelDateFirst','rate-reply','newConversation','.sb-chat-btn\x20span','.sb-lightbox-media','extension_error','</li>','getConversationsCode','send','.sb-focus','delete','.png','timeout_queue','<div\x20class=\x22sb-top\x22>','\x22\x20autocomplete=\x22false\x22\x20type=\x22','SBTyping','%20','cookie-domain','humanTakeover','SBMessageDeleted','share','unix','assignAgent','registration-required','</h3>','</select>','<div\x20class=\x22menu-bubble\x22><div\x20class=\x22sb-time\x22>','/sw.js?v=','outerHTML','validation-error','sb-header-agent','conversation_id','which','setConversationStatus','SBUser.getFullConversation','office-hours','\x20height=\x22','Thank\x20you\x20for\x20your\x20feedback!','replaceWith','conversations','data-name','emoji_options','1752824NuHhHs','isInitDashboard','sb-dialogflow-disabled','next','pop','preventDefault','Message\x20not\x20of\x20type\x20SBMessage','category','__proto__','required','<div\x20data-id=\x22','clear','SBF','pitch','parse','onclick=','.sb-name','headerAnimation','getAll','toLocaleString','online','flashNotification','<script','sb-init-form','extra','sb-status-online','dashboard','<div\x20data-color=\x22','rich-messages','link-text-','[list\x20values=\x22','http','setClass','attr','<span>','visitors-registration','sb-no-conversations','sb-departments-list','file','bot','append','agent_online','updateNotifications','referring','<video\x20width=\x22auto\x22\x20controls\x20style=\x22object-fit:\x20cover;width:100%;border-radius:var(--chat-rounded-size-8);\x22><source\x20src=\x22','activate','[data-value]','user_type','automations','<li\x20style=\x22margin-left:5px;margin-right:0px\x22>','new-window','dragover','updateMessage','indexOf','SBAttachments','width:\x20auto;\x20height:\x20auto;','object','serviceWorker','populateEmojiBar','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','start_header','stylesheet','language_detection','You\x20cannot\x20sign\x20in\x20as\x20an\x20agent.','<div\x20id=\x27sb-reply-to\x27><strong\x20id=\x27sb-reply-top-name\x27>','outerHeight','show-profile-images','addClass','SBPusherInit','383153vredSU','uploadResponse','emoji','range','Not\x20helpful','<div\x20class=\x22sb-card\x22>[settings]</div>','loadUpdate','.bi-arrow-up-circle-fill','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sb-cnt\x22\x20style=\x22min-width:80px;\x20max-width:100%;\x20padding:4px\x204px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sb-message\x22\x20data-value=\x22','audio','.sb-area-conversations','Missing\x20user\x20ID','</code>','after','splice','[positive]','split','string','</a><a\x20class=\x22sb-btn\x20sb-decline\x22>','deactivateAll','get','headerAgent','ogg','</ul>','<div\x20style=\x22display:flex;flex-direction:row;align-items:\x20center;\x22\x20data-name=\x22','<div\x20style=\x22display:flex;margin-bottom:\x206px;flex-wrap:\x20wrap;flex-direction:\x20column;\x22\x20class=\x22sb-image','push-notifications','getTime','sound','find','labels','.sb-input-image\x20.image','SBLoginForm','default_tags','main.js','6TvmkAw','tickets-enter-button','www.facebook.com/sharer.php?u=','\x22><img\x20loading=\x22lazy\x22\x20src=\x22','input.unknown','push-notifications-users','\x22\x20style=\x22background-image:url(\x27','650SswjyO','</span><span\x20class=\x22sb-status\x22>','conversation','</div>','hasOwnProperty','is-not','display-users-thumb','.sb-rich-registration\x20.sb-login-area','44143PMkYee','delete-message','data-type=\x22','\x27)\x22></div><div\x20class=\x22sb-list-title\x22>','</span><div>','getMinutes','<style>','getSelection','.sb-list','end_conversation','<div\x20class=\x22sb-top\x22>s',',\x20top=','<div\x20id=\x27sb-reply-to-alt\x27><strong\x20id=\x27sb-reply-top-name-alt\x27>Tú</strong><br>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20style=\x22border-radius:\x20.4rem;\x20width:\x2033px;\x20vertical-align:\x20middle;object-fit:cover;\x22\x20src=\x22','\x22\x20placeholder=\x22','<ul>','input,\x20select,\x20textarea','alt','sb-human-takeover','replaceAll','card','\x20class=\x22sb-rich-message\x20sb-rich-','is_busy_populate','\x20disabled=\x22true\x22]','log','select','setExtra','scrollBottom','is-typing','\x20>\x20div','browsing_time','followUp','.php?','CHAT_SETTINGS','name','#sb-audio','touches','insertText','rich_messsages','profile','dialogflow','variables','creation_time','sb-subscribe-form','presenceUpdateAdmin','agents-online','onNewMessageReceived','cloud','data-count','<li>','‎*$1*‎','.sb-area-users.sb-active','\x22\x20\x20type=\x22video/mp4\x22></video></a>','change\x20keyup\x20paste','sb-drag','clickFirst','SBUser.delete','?lang=','<div\x20id=\x22email\x22\x20data-type=\x22email\x22\x20class=\x22sb-input\x20sb-input-btn\x22><span\x20class=\x22','end','registration-link','7354728xscIGK','initArticlesPage','label','.sb-form-extra','>\x20div','class','[settings]','setLoad','escape','getLastMessage','init_push_notifications','focus\x20focusout\x20click','trim','human_takeover','list-image','sb-input-image','getSeconds','token','#conversation-agent','yes','tickets-manual-init','First\x20name','language-detection-completed','attachments','lead','ajax','searchArticles','update-users-last-activity','insertEmoji','</style>','data-value','372156hVVcLF','queue','routin-storage','routin','.sb-title','initChat','SBMessageSent','#email',';expires=Thu,\x2001\x20Jan\x201970\x2000:00:01\x20GMT;path=/;','sb-success','btn-approve','getURL','/apps/tickets/tickets','https://worldtimeapi.org/api/timezone/','validation','val','skip','[articles]','sb-popup-active','<div><div\x20class=\x22sb-thumb\x22\x20style=\x22background-image:url(\x27','onerror=','getActiveUser','SBDashboardClosed','getFullConversation','\x22\x20data-type=\x22','cities','pushState','done','<iframe\x20width=\x27270\x27\x20height=\x27270\x27\x20frameborder=\x270\x27\x20\x20style=\x27margin:0px\x20-21px\x20-4px\x20-7px;\x20border-radius:4px;\x20border:\x200;\x20width:\x20auto;\x27\x20src=\x27https://maps.google.com/maps?q=','.sb-emoji','payload','SBConversation','activateBar','status_code','aecommerce','desktop_notifications','<div\x20class=\x22sb-select\x22><p></p><ul>[options]</ul></div>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','disable-offline','click','sms-sent','update-conversation-agent','.sb-user-conversations\x20>\x20li','-login','<i\x20class=\x22bi-x-lg\x22></i>','.sb-text','Send\x20now','#template-form','<div\x20class=\x22sb-time\x22>','///','</tr>','SBLogout','getFullYear','login-cookie','<div\x20class=\x22sb-time\x22></div>','.sb-emoji-list','</div><div\x20class=\x22bi-x-lg\x22></div></div>','Today','maxHeight','user','sbActive','.sb-search-btn\x20>\x20i','2000-01-01\x2000:00:00','close-chat','get-front-settings','run_all_final','title','client-typing','null','\x20>\x20.sb-body','.sb-rich-message','</span>','storage','SBForm','textarea','active_user','css','button','render','tags','li[data-conversation-id=\x22','.sb-upload-files','search','populate','[values]','duplicate-email','sb-focus','sb-info-card-error','sb-notify-active','createElement','<div\x20class=\x22sb-content\x22>','message_status_code','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','hideDashboard','sb-cloud','getElementsByTagName','set','buttons','[email\x20id=\x22sb-follow-up-form\x22\x20title=\x22','Selected\x20Source:','beautifyTime','sb-rich-message\x20sb-margin-bottom','result','number','sb-header-hidden','color','<div\x20class=\x22sb-dashboard-btn\x20bi-x-lg\x22></div>','sb-info-card-error\x20sb-info-card-warning\x20sb-info-card-info','MM/DD/YYYY\x20hh:mm\x20A','image-','get-new-messages','removeAllRanges','18tQdncD','Typing','clientY','disabled=\x22true\x22','#sb-tickets','latitude','queued','speechSynthesis','<input\x20disabled\x20value=\x22','947575oaqJUP','<table><tbody>[header][values]</tbody></table>','onMessageSent','privacy','user_online','populateEmoji','chat-open','focus','Are\x20you\x20sure?','prop','bind','Routin.bot\x20error\x20[','</span><input\x20value=\x22','link-text','SBConversation.constructor','conversation-status-update-3','Online','dialogflow-language','_blank','tickets-conversations-title-user','header','details','&#x','0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ','video','undefined','onstart','[data-required]','get-conversation','\x0a\x09\x09\x09\x09\x20\x0a\x09\x09\x09\x09\x20\x20<div\x20style=\x22padding-right:\x20var(--chat-spacing-size-1-4);text-decoration:none;padding-left:\x20var(--chat-spacing-size-5);\x22>\x0a\x09\x09\x09\x09\x09','conversation_status_code','sent','dialogflow-token','decline','target','replace','.sb-social-buttons\x20div','rating','url(\x22','cron-jobs','list','.bi-emoji-grin','getRegistrationErrorMessage','removeAttr','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=','is_logout','email','floor','bi-chevron-right','load-more','protocol','getLastConversation','body\x20>\x20div\x20>\x20main\x20>\x20div.sb-active.sb-area-conversations\x20>\x20div\x20>\x20div.sb-user-details.sb-top\x20>\x20div.sb-scroll-area\x20>\x20div.sb-profile-list.sb-profile-list-conversation\x20>\x20ul\x20>\x20li:nth-child(8)\x20>\x20label','.sb-select','rich-message','getRecipientUserID','Thursday','table','initPushNotifications','perfex-login','sbLoading','headerReset','Time\x20zone\x20','sb-text-list','.sb-shadow-conversation[data-id=\x22','new-conversation','rate-and-review','/css/','disable-office-hours','slice','\x22\x20allowfullscreen></iframe>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Your\x20browser\x20does\x20not\x20support\x20the\x20audio\x20element.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</audio>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','finalizeInit','bot-id','pusher:subscription_error','getReply','</div><p\x20style=\x27padding:\x200px\x204px;\x20margin:0px;\x20cursor:pointer;\x27>','hide','.sb-popup-message','\x22\x20autocomplete=\x22off\x22\x20type=\x22email\x22\x20required><div\x20class=\x22sb-submit\x20bi-chevron-right\x22></div></div>','console','<div\x20id=\x22phone\x22\x20data-type=\x22select-input\x22\x20class=\x22sb-input\x20sb-input-select-input\x22><span\x20class=\x22','lastIndexOf','#sb-audio-out','warn','SBActiveConversationStatusUpdated','input','<div\x20class=\x22sb-form\x22>[values]</div>','Conversation\x20not\x20of\x20type\x20SBConversation','get-select-setting','SBReady','.sb-rich-message\x20.sb-input\x20>\x20span','SBChatClose','.sb-rich-message[id=\x22','First\x20name,\x20last\x20name','channels','<div\x20class=\x22sb-rating\x22><span>[label]</span></div>','header-name','new-email-address','input[type=\x22tel\x22]','^([{,+0-9]+[@s.whatsapp.net])','setConversation','.sb-info','data','</span><span\x20class=\x22sb-time\x22>','hasClass','images','<div\x20style=\x22margin:\x208px;\x22\x20class=\x22sb-buttons\x22>[options]</div>','SBMessage','started','sb-btn','url','.sb-lightbox-media,\x20.sb-lightbox-overlay,\x20.sb-send-template-box','temp','\x0aFunction\x20name:\x20','Missing\x20conversation\x20ID','redirect','drop','\x20...','values=\x22','Hello','SBBotPayload','<a\x20target=\x22_blank\x22\x20href=\x22','project_id','lightbox','sending','onerror','header-animation','toLocaleTimeString','count','\x22\x20/></div>','keyup','errorValidation','create-email','isArray','scrollY','substring','getDepartmentCode','disabled','SBDoubleLoginError','color_2','open_popup','<div\x20class=\x22sb-image\x22><img\x20loading=\x22lazy\x22\x20src=\x22','.sb-attachments\x20>\x20div\x20>\x20i','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22max-width:30rem;\x20margin:0px;\x20text-align:start;\x20cursor:pointer;\x22\x20class=\x22readThis\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','sb-header-main\x20sb-header-brand\x20sb-header-agent\x20sb-header-minimal','.bi-chevron-right','.load-more','icon','resolvedOptions','preview','sb-login','id_last_message','DateTimeFormat','The\x20file\x20you\x20are\x20trying\x20to\x20upload\x20has\x20an\x20extension\x20that\x20is\x20not\x20allowed.','.sb-input-image\x20.image\x20>\x20.bi-x-lg','<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','success','messages','popup-mobile-hidden','.svg','stringify','real_time','trigger','span','chips-click','SBDashboard','hide-agents-thumb','‎_$1_‎','human-takeover','id_last_message_conversation','startRealTime','color_3','translatedText','remove','offline_message_set','.sb-slider-images\x20.sb-card-img','stopRealTime','dialogflow-human-takeover','cookie','[header]','#email\x20input','\x20data-settings=\x22','createRange','SBChat.setConversation','sb_wp_ajax','sendMessage','src','#password','Cierra\x20sesión\x20o\x20utiliza\x20otro\x20navegador\x20para\x20\x20ver\x20el\x20botón\x20de\x20chat\x20o\x20iniciar\x20sesión\x20como\x20usuario\x20registrado.\x20Puedes\x20deslogearte\x20escribiendo\x20SBF.reset()\x20en\x20la\x20consola\x20del\x20navegador.','sbUploadFiles','message=\x22','[items]','toString','box-shadow:none;width:\x20100px;','</span></div><div\x20class=\x22sb-message\x22>','update-conversation-department','datetime','.sb-input','script','text/css','pusher-key','run','<i\x20class=\x22bi-send\x22\x20style=\x22vertical-align:middle;padding-left:10px;\x22></i>\x20<span\x20style=\x22color:\x20#2196F3;\x22>','charAt','\x20sb-rich-cnt','dialogflow-send-user-details','********','[data-id]','.sb-rich-button\x20a','SBPusher','double-login-alert','lang','.sb-info-card','Email','requestPermission','busy','onload','<div\x20class=\x22sb-card-img\x22\x20data-value=\x22','.bi-chevron-left','data-location','emails','notifications-icon','\x20src=\x22','&mode=','sb-submit','<div\x20class=\x22sb-conversation-item\x22\x20data-user-id=\x22','.sb-conversation','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','humanTakeoverActive','{}.constructor(\x22return\x20this\x22)(\x20)','set-rating','visitor-default-name','getTimezoneOffset','error','[?|&]','cron','\x22\x20class=\x22sb-popup-message\x22>','originalEvent','/media/user.svg','.sb-chat-btn,.sb-responsive-close-btn,#sb-open-chat,.sb-open-chat','data-rating','run_all','\x22\x20data-conversation-id=\x22','style','online_ids','getItem','apps','Tuesday','sb-moving','all','sb-close-chat','getMessage','speak','presence-','chat-manual-init','get-departments','?v=','top','.sb-privacy','touchend','<div\x20class=\x22sb-privacy\x20sb-init-form\x22\x20data-decline=\x22','follow','push-notification','extra-','debounce','contains','http://','addUserAndLogin','settings','match','\x22\x20phone-required=\x22','must_translate','strip','#send-meta-template','SBBotMessage','update-user','flash-notifications','sb-open-chat','Monday','first_name','sb-rich-message\x20sb-margin-top','</script','delte\x20user','presenceRemove','includes','selectionStart','open-chat','false','inputs','\x20class=\x22sb-shadow-conversation\x20','</span><input\x20autocomplete=\x22false\x22\x20type=\x22text\x22\x20required></div>','.image','...\x20Check\x20the\x20console\x20for\x20more\x20details.','data-conversation-status=\x22','no-bot','/include/pusher.php','wheelDelta','\x20sb-hide','dragleave','values','init',',\x20email','targetWindow','welcome-delay','cron-email-piping-active','<td>','txt','google-translate','full_name','&lt;/script','</div></div>\x0a\x09\x09\x09\x09\x20\x20</div>\x0a\x09\x09\x09\x09\x20\x20','openConversation','stringToSlug','processArray','one','toLowerCase','{{inline_code_placeholder_',';path=/;','</span>\x20<span>','[negative]','\x22\x20type=\x22audio/mpeg\x22></audio></a>','<del>','stop','closeChat','‎~$1~‎','pusher-cluster','sb-init-form-active','.sb-select\x20ul','alert','sb-filled\x20sb-active','SBNewMessagesReceived','tickets-default-department','/js/min/main.js','<div\x20class=\x22sb-image-list\x22>[values]</div>','Routin.bot\x20error','call','SBUserDeleted','info','.sb-dashboard-conversations','get-rich-message','.sb-ticket-title\x20input','shortcode','savedReplies','chat-sound','<a\x20href=\x22','browser_language','Routin.bot:\x20cookies\x20not\x20available.','SBInit','char','Messages\x20not\x20of\x20type\x20SBMessage','height','delete-user','selection','register','background-image','[data-value=\x22','wp-users-system','trace','.sb-form-main','is_busy_update','SBChat.sendSMS','admin','\x20class=\x22sb-rich-btn\x20sb-btn','user_email','password-check','.sb-input,.sb-input-setting','toLocaleDateString','Away','‎$1','textareaChanged','pusher:subscription_succeeded','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20type=\x22audio/','&lt;script','return\x20(function()\x20','user.svg','.sb-loading','.webp','bot-name','chat_open','popups','wordpress','</button>','constructor','getScript','https://js.pusher.com/beams/1.0/push-notifications-cdn.js','<div>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Your\x20browser\x20does\x20not\x20support\x20the\x20audio\x20element.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</audio>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','link-name','phone','.sb-label-date-top','.sb-privacy\x20.sb-decline','image_url','private-user-','<strong>$1</strong>','init.','errors','parseHTML','sb_current_user','popstate','update','random','slack-active','reset','showArticles','data-success','mode','datetime_last_message_conversation','\x20<span>','Routin.bot\x20error\x20','textareaChange','\x22\x20data-id=\x22','showResponse','add','SBRegistrationForm','facebook-id','message-deleted','skip-dialogflow','/include/upload.php','password','<div\x20class=\x22sb-btn\x20sb-submit\x22>','returning_visitor','action','title=\x22','.sb-lightbox-media\x20>\x20i','.sb-image','\x22]\x20.sb-message','<th>','include_urls','[label]','history','es-US','Closed','(((.+)+)+)+$','automations-validate','[timetable]','\x20sb-thumb-active','</strong>\x20','email-piping','\x20(to)\x20','scrollTop','.sb-btn,.sb-select','<iframe\x20src=\x22https://maps.google.com/maps?q=','<li\x20data-value=\x22','reload','.sb-header','sb-responsive-close-btn','update-conversation-status','sb-active','check','round','setActiveAgent','queue-human-takeover','#last_name','{{code_placeholder_','header-','&amp;output=embed\x27></iframe>','body','timeout','deselectAll','.sb-submit','moveStart','message_id','design','categoryEmoji','2-digit','total_rows','.bi-paperclip','slug','disable-dashboard','//player.vimeo.com/video/','.sb-popup','Last\x20name','sb-header-animation','sb-chat-open','mp3','location','send-email','popup','timezone','generate','push','{user_email}','open','.sb-slider\x20>\x20div\x20>\x20div','visibilitychange','timetable-hide','desktop-notifications','stopPropagation','referrer','SBBusy','Sunday','.sb-attachments\x20>\x20div','img','width','whatsapp-send-meta-template','SB_ADMIN_SETTINGS','</span></div>','.sb-close-chat','<tr>','<div\x20class=\x22sb-card-description\x22>','autoLink','Please\x20fill\x20in\x20all\x20required\x20fields\x20and\x20make\x20sure\x20the\x20email\x20is\x20valid.','sb-check','SBChatOpen','offset','Helpful','updateUsersActivity','<div\x20class=\x22sb-buttons\x22><a\x20class=\x22sb-btn\x20sb-approve\x22>','SBFollowUp','openWindow','slider-images','now','tickets','timetable-disable-agents','last-name','cron-email-piping','security-error','department','welcome-trigger','link','.sb-departments-list','assign-conversation-to-agent','[data-success]','\x22\x20/><div><span\x20class=\x22sb-name\x22>','<div\x20class=\x22sb-btn\x22>Sí</div>','[data-time]','main','scroll','login','timeZone','visibilityChange','rel','\x22><img\x20style=\x22object-fit:\x20cover;\x20border-radius:\x208px;\x20','[id]','getLoad','></div>','last_name','showEmoji','getAttachments','value','callback','SBEmailSent','.sb-user-conversations\x20li','keydown','articles','substr','Value\x20not\x20of\x20type\x20SBConversation','activateConversation','showErrorMessage','innerHeight','.sb-dashboard','options','\x22\x20pattern=\x22[0-9]+\x22\x20autocomplete=\x22false\x22\x20type=\x22tel\x22\x20','ready','test','parent','sb-scroll-area','<audio\x20controls\x20style=\x22max-width:100%;border-radius:8px;margin-bottom:\x208px;background:#f1f3f4;\x22><source\x20src=\x22','>\x20div\x20>\x20.sb-scroll-area','{user_name_}','startsWith','.sb-textarea','description','<div\x20class=\x22sb-label-date\x22>','keys','autoExpandTextarea','<a\x20href=\x27','.sb-rich-login','mouseWheelEmoji','typing','.sb-btn-all-conversations','user_phone','#article-','\x22\x20data-department=\x22','showNotification','.sb-message.sb-location,\x20.sb-message\x20p\x20a[href^=\x22https://maps.google.com/\x22]','user-not-found','SBPanelActive','getConversations',',height=','head','data-decline','join','oga','loginCookie','åàáãäâèéëêìíïîòóöôùúüûñç·/_,:;','[options]','extend','https://','.sb-location','sb-conversations-hidden','&output=embed\x22></iframe>','open-conversation','cache','diagnosticInfo','source','transcript','33vKeDPb','dataTransfer','\x27)\x22></div>','\x22\x20width=\x2230\x22\x20height=\x2230\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','rate-review','...','6472564zzYgFN','[data-conversation-id=\x22','unsubscribe','</a>','<img\x20loading=\x22lazy\x22\x20src=\x22','searchEmoji','deleteMessage','\x20>\x20span','toFixed','<div\x20class=\x22sb-buttons\x22>[options]</div>','isAgent','custom_variable','new-message','.sb-decline','\x22\x20data-link=\x22https://','showPanel','\x22\x20class=\x22sb-info\x22></div></div>','getConversationByID','\x22\x20phone=\x22','audio_out','welcome','toUTCString','en-US','<br>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20style=\x22border-radius:\x20.4rem;\x20width:\x2033px;\x20vertical-align:\x20middle;object-fit:cover;\x22\x20src=\x22','\x22\x20data-value=\x22','GET','\x22\x20/>','select-input','SBF.getLocationTimeString()','ctrlKey','cancel','\x22\x20data-type=\x22text\x22\x20class=\x22sb-input\x20sb-input-text\x22><span>','label-negative','SBApps','SBConversationOpen','phone-required','</td>','subscribe-email','All\x20fields\x20are\x20required.','showDashboard','.sb-dashboard-articles\x20.sb-input-btn\x20.sb-submit-articles','[data-type=\x22select-input\x22]\x20input,[data-type=\x22select-input\x22]\x20select','scroll_position_intervals','color_1','onNewConversationReceived','department-','chat-css','longitude','^([{,+,0-9,}]+[@s.whatsapp.net])','Wednesday','.sb-menu-btn','Message\x20array\x20not\x20of\x20type\x20Array','.sb-menu\x20li','touch','cloud_user_id','articleRatingOnClick','channels_presence','hostname','getHours','BodyTemplate','.sb-message','submit','[data-id=\x22sending\x22]','data-type','boolean','status','</div></div>','<i\x20style=\x22font-size:1.2rem\x22\x20class=\x22bi-arrow-up-circle\x22></i>','list_now','</div><input\x20value=\x22','left','departments','sb-rich-success','Invalid\x20email\x20or\x20password.','range_limit','</div></div></div>','SBConversation.updateMessage','languages','are','auto-open','play','original-message','active','$1<em>$2</em>','pusher','data-id','#phone\x20[required]','chat','sms','removeClass','getExtra','.sb-menu','image','.sb-admin,\x20.sb-admin-start','translation','populateConversations','isExtraEmpty','flash_notifications','user-deleted','{{RM}}','languageCode','.sb-bar','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22menu-bubble\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22events\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22sb-time\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','bot-delay','Error.\x20Please\x20check\x20your\x20information\x20and\x20try\x20again.','siblings','init-dashboard','//www.youtube.com/embed/','sbTogglePopup','\x22><div\x20class=\x22sb-title\x22>','format','key','users','<div\x20class=\x22sb-active\x22></div>','default_agent','presenceAdd','city','changedTouches','=([^&;]+?)(&|#|;|$)'];_0x7fe3=function(){return _0xd5020d;};return _0x7fe3();}(function(_0x861705,_0x1f3255){const _0x258d60=_0x2301,_0x29f300=_0x861705();while(!![]){try{const _0x4af3a5=parseInt(_0x258d60(0x58a))/0x1*(-parseInt(_0x258d60(0x5ad))/0x2)+parseInt(_0x258d60(0x3b4))/0x3*(-parseInt(_0x258d60(0x618))/0x4)+-parseInt(_0x258d60(0x15d))/0x5*(-parseInt(_0x258d60(0x154))/0x6)+parseInt(_0x258d60(0x3ba))/0x7+parseInt(_0x258d60(0x545))/0x8+parseInt(_0x258d60(0x5f9))/0x9+-parseInt(_0x258d60(0x5b4))/0xa*(-parseInt(_0x258d60(0x5bc))/0xb);if(_0x4af3a5===_0x1f3255)break;else _0x29f300['push'](_0x29f300['shift']());}catch(_0x50ae35){_0x29f300['push'](_0x29f300['shift']());}}}(_0x7fe3,0x96be9));function _0x2301(_0x52638d,_0x2ba14a){const _0x14f7ca=_0x7fe3();return _0x2301=function(_0x651909,_0x5ea4d9){_0x651909=_0x651909-0xec;let _0x514eac=_0x14f7ca[_0x651909];return _0x514eac;},_0x2301(_0x52638d,_0x2ba14a);}!function(_0x1ba0a2){const _0x3c09f9=_0x2301,_0x48f0cb=(function(){let _0x24ac78=!![];return function(_0x435a8e,_0x495c61){const _0x2920dd=_0x24ac78?function(){if(_0x495c61){const _0x2fe172=_0x495c61['apply'](_0x435a8e,arguments);return _0x495c61=null,_0x2fe172;}}:function(){};return _0x24ac78=![],_0x2920dd;};}()),_0x5da497=(function(){let _0xc29e01=!![];return function(_0x57c3d0,_0xe0fe43){const _0x452c78=_0xc29e01?function(){if(_0xe0fe43){const _0x5a517d=_0xe0fe43['apply'](_0x57c3d0,arguments);return _0xe0fe43=null,_0x5a517d;}}:function(){};return _0xc29e01=![],_0x452c78;};}());var _0x537b7d,_0x1e4743,_0x438150,_0x6bca6,_0xb5e3a,_0x27fc27,_0xb73fc7,_0x756857,_0x23928b,_0x56692c,_0x4641e6,_0x2af748,_0x7704f6,_0x1aa2cb,_0x4cf858,_0x288bd4,_0x1eaa6b='2.28',_0x47b6a4=!0x1,_0x94a56c=!0x1,_0x5da94a=!0x1,_0x1d6b39=[!0x1,!0x1],_0x53417e=!0x1,_0x454d4e=[],_0x51c2c9=!0x1,_0x40fff8=!0x1,_0x592400=[0x98967f,''],_0x435e4b=document[_0x3c09f9(0x126)],_0x47fcfe={},_0x324bc9=0x22b>_0x1ba0a2(window)['width'](),_0x27716d=new Date(),_0x580b82='',_0x59812c=!0x1,_0x339924=_0x3c09f9(0x176),_0x41c3fa=!0x0,_0x353f62=0xea60*new Date()[_0x3c09f9(0x246)](),_0x48d357=!0x1,_0x3656d1=0x1e;_0x1ba0a2['fn']['extend']({'manualExpandTextarea':function(){const _0x28f6c8=_0x3c09f9;var _0x591d5b=this[0x0];_0x591d5b['style'][_0x28f6c8(0x2bc)]='auto',_0x591d5b[_0x28f6c8(0x251)][_0x28f6c8(0x11e)]=_0x28f6c8(0x487),window[_0x28f6c8(0x4ad)](_0x591d5b),_0x591d5b[_0x28f6c8(0x251)][_0x28f6c8(0x2bc)]=(_0x591d5b[_0x28f6c8(0x512)]>0x15e?0x15e:_0x591d5b[_0x28f6c8(0x512)])+'px',_0x591d5b['style'][_0x28f6c8(0x11e)]='',_0x1ba0a2(_0x591d5b)['trigger'](_0x28f6c8(0x2cf));},'autoExpandTextarea':function(){const _0x7c16b6=_0x3c09f9;var _0x5f5bef=this[0x0];_0x5f5bef[_0x7c16b6(0x507)](_0x7c16b6(0x1b3),function(_0x38ff68){const _0xb95e7e=_0x7c16b6;_0x1ba0a2(_0x5f5bef)[_0xb95e7e(0x4ec)]();},!0x1);}}),function(){const _0x111b66=_0x3c09f9;String['prototype'][_0x111b66(0x353)]=function(){const _0x3c7475=_0x111b66;var _0x1afd29,_0x53a392,_0x188a8b;return _0x188a8b=/(^|[\s\n]|<[A-Za-z]*\/?>)((?:https?|ftp):\/\/[\-A-Z0-9+\u0026\u2019@#\/%?=()~_|!:,.;]*[\-A-Z0-9+\u0026@#\/%=~()_|]+)/gi,_0x1afd29=arguments[_0x3c7475(0x4fb)]>0x0?[][_0x3c7475(0x1a2)]['call'](arguments,0x0)[0x0]:{},_0x53a392=(function(){const _0x22516d=_0x3c7475;var _0x426a45=[];for(var _0x4e07a9 in _0x1afd29)_0x22516d(0x37b)!==_0x4e07a9&&_0x426a45[_0x22516d(0x33f)]('\x20'+_0x4e07a9+'=\x27'+_0x1afd29[_0x4e07a9]+'\x27');return _0x426a45[_0x22516d(0x3a5)]('');}()),this['replace'](_0x188a8b,function(_0x2fc3ec,_0xe2c3af,_0x139422){const _0x1841c1=_0x3c7475;if(!_0x139422[_0x1841c1(0x26b)](/maps.google.com/g))return _0xe2c3af+(_0x1841c1(0x4a3)==typeof _0x1afd29[_0x1841c1(0x37b)]?_0x1afd29['callback'](_0x139422):'')+_0x1841c1(0x395)+_0x139422+'\x27'+_0x53a392+'>'+_0x139422+_0x1841c1(0x3bd)+(_0x1841c1(0x4a3)==typeof _0x1afd29[_0x1841c1(0x37b)]?'':'\x20');var _0x12fe2c,_0x14b759=_0x139422[_0x1841c1(0x26b)](/q=([\d.-]+),([\d.-]+)/);if(!_0x14b759)return'<iframe\x20width=\x27270\x27\x20height=\x27270\x27\x20frameborder=\x270\x27\x20style=\x27border:0;\x27\x20src=\x27https://maps.google.com/maps?q=-00.000000,-00.000000&amp;output=embed\x27></iframe>';return _0x1841c1(0x100)+_0x14b759[0x1]+','+_0x14b759[0x2]+_0x1841c1(0x326);});};}[_0x3c09f9(0x2ad)](this);var _0x5bc6df={'ajax':function(_0x5d5f26,_0x537e0f=!0x1){const _0x55f056=_0x3c09f9;_0x5d5f26[_0x55f056(0x119)]=this[_0x55f056(0x3a7)](),!(_0x55f056(0x4c6)in _0x5d5f26)&&_0x105d96()&&(_0x5d5f26[_0x55f056(0x4c6)]=_0x105d96()['id']),_0x55f056(0x43b)in _0x5d5f26||typeof SB_LANG==_0x339924||(_0x5d5f26[_0x55f056(0x43b)]=SB_LANG),_0x48d357&&(_0x5d5f26[_0x55f056(0x5eb)]=_0x48d357),_0x1ba0a2[_0x55f056(0x612)]({'method':'POST','url':SB_AJAX_URL,'data':_0x5d5f26})['done'](_0xf9bcea=>{const _0x1f3d43=_0x55f056;let _0x3e9003;if(Array[_0x1f3d43(0x1e3)](_0xf9bcea))_0x3e9003=_0xf9bcea;else try{_0x3e9003=JSON[_0x1f3d43(0x553)](_0xf9bcea);}catch(_0x36f267){_0x19680f[_0x1f3d43(0x2c5)]=!0x1,_0x19680f[_0x1f3d43(0x235)](!0x1),_0x5bc6df[_0x1f3d43(0x247)](_0xf9bcea[_0x1f3d43(0x4fb)]>0x1f4?_0xf9bcea['substr'](0x0,0x1f4)+_0x1f3d43(0x282):_0xf9bcea,_0x1f3d43(0x480)+_0x5d5f26[_0x1f3d43(0x4a3)]);return;}_0x1f3d43(0x1fa)==_0x3e9003[0x0]?_0x537e0f&&_0x537e0f(_0x3e9003[0x1]):_0x5bc6df[_0x1f3d43(0x1e1)](_0x3e9003)?_0x537e0f&&_0x537e0f(_0x3e9003):(_0x47b6a4&&_0x1f3d43(0x363)==_0x3e9003[0x1]&&setTimeout(()=>{const _0x31df60=_0x1f3d43;_0x5bc6df[_0x31df60(0x2f1)]();},0x3e8),_0x19680f[_0x1f3d43(0x2c5)]=!0x1,_0x19680f['busy'](!0x1),_0x5bc6df[_0x1f3d43(0x247)](_0x3e9003[0x1]+(_0x5bc6df['null'](_0x3e9003[0x2])?'':_0x1f3d43(0x1cf)+_0x3e9003[0x2])+(_0x5bc6df[_0x1f3d43(0x128)](_0x3e9003[0x3])?'':'\x0aError\x20message:\x20'+(_0x1f3d43(0x59b)==typeof _0x3e9003[0x3]?_0x3e9003[0x3]:_0x1f3d43(0x247)in _0x3e9003[0x3]&&_0x1f3d43(0x48f)in _0x3e9003[0x3][_0x1f3d43(0x247)]?_0x3e9003[0x3][_0x1f3d43(0x247)][_0x1f3d43(0x48f)]+'\x20in\x20function\x20\x27'+_0x3e9003[0x3][_0x1f3d43(0x247)][_0x1f3d43(0x4a3)]+'\x27':_0x3e9003[0x3])),_0x1f3d43(0x480)+_0x5d5f26['function']));});},'cors':function(_0x5bd23f='GET',_0xfdc9c7,_0x17afb3){const _0x56efd1=_0x3c09f9;let _0xaf3374=new XMLHttpRequest();if(_0x56efd1(0x50c)in _0xaf3374)_0xaf3374[_0x56efd1(0x341)](_0x5bd23f,_0xfdc9c7,!0x0);else{if(typeof XDomainRequest==_0x339924)return!0x1;(_0xaf3374=new XDomainRequest())[_0x56efd1(0x341)](_0x5bd23f,_0xfdc9c7);}_0xaf3374[_0x56efd1(0x236)]=function(){_0x17afb3(_0xaf3374['responseText']);},_0xaf3374[_0x56efd1(0x1db)]=function(){return!0x1;},_0xaf3374[_0x56efd1(0x523)]();},'upload':function(_0x10829f,_0x48ef5b){const _0xb9c1e1=_0x3c09f9;_0x48d357&&_0x10829f[_0xb9c1e1(0x56d)](_0xb9c1e1(0x5eb),_0x48d357),jQuery[_0xb9c1e1(0x612)]({'url':STMBX_URL+_0xb9c1e1(0x300),'cache':!0x1,'contentType':!0x1,'processData':!0x1,'data':_0x10829f,'type':'POST','success':function(_0x52f3cd){_0x48ef5b(_0x52f3cd);}});},'getHostname':function(_0x5ac6f7){const _0x237b52=_0x3c09f9;return new URL(_0x5ac6f7)[_0x237b52(0x3f4)][_0x237b52(0x180)](_0x237b52(0x4c5),'');},'limitText':function(_0x49b3a0,_0x5ed153){const _0xbdb6f7=_0x3c09f9;let _0x401de5=null!=_0x49b3a0?_0x49b3a0[_0xbdb6f7(0x1a2)](0x0,_0x5ed153):'';return _0x401de5[_0xbdb6f7(0x4fb)]>_0x5ed153-0x1?_0x401de5+_0xbdb6f7(0x3b9):_0x401de5;},'UTC':function(_0x39b1d5){return new Date(_0x39b1d5)['getTime']()-_0x353f62;},'null':function(_0x1245f5){const _0x1fe205=_0x3c09f9;return typeof _0x1245f5===_0x339924||null===_0x1245f5||_0x1fe205(0x128)===_0x1245f5||!0x1===_0x1245f5||!(_0x1245f5[_0x1fe205(0x4fb)]>0x0)&&_0x1fe205(0x14b)!=typeof _0x1245f5&&typeof _0x1245f5['length']!=_0x339924||_0x1245f5===_0x339924;},'deactivateAll':function(){const _0x155608=_0x3c09f9;_0x1e4743[_0x155608(0x5a7)]('.sb-popup,\x20.sb-tooltip,\x20.sb-list\x20.sb-menu,\x20.sb-select\x20ul')[_0x155608(0x120)](!0x1);},'deselectAll':function(){const _0x17d402=_0x3c09f9;window[_0x17d402(0x5c3)]?window[_0x17d402(0x5c3)]()[_0x17d402(0x153)]():document[_0x17d402(0x2be)]&&document[_0x17d402(0x2be)]['empty']();},'getURL':function(_0x512d94=!0x1,_0x4904cf=!0x1){const _0x399d85=_0x3c09f9;if(!0x1==_0x4904cf&&(_0x4904cf=location[_0x399d85(0x136)]),!0x1==_0x512d94){for(var _0x4120f9=_0x4904cf['split']('?')[_0x399d85(0x549)]()[_0x399d85(0x59a)]('&'),_0x16f91a={},_0x2dd79a=0x0;_0x2dd79a<_0x4120f9[_0x399d85(0x4fb)];_0x2dd79a++){var _0x5f1c7f=_0x4120f9[_0x2dd79a][_0x399d85(0x59a)]('=');_0x16f91a[_0x5f1c7f[0x0]]=_0x5bc6df[_0x399d85(0x601)](_0x5f1c7f[0x1]);}return _0x16f91a;}return _0x4904cf[_0x399d85(0x57a)]('?')>0x0&&(_0x4904cf=_0x4904cf['substr'](0x0,_0x4904cf[_0x399d85(0x57a)]('?'))),_0x5bc6df[_0x399d85(0x601)](decodeURIComponent((RegExp(_0x399d85(0x248)+_0x512d94+_0x399d85(0x431))[_0x399d85(0x4ed)](_0x4904cf)||[,''])[0x1][_0x399d85(0x180)](/\+/g,_0x399d85(0x52b))||''));},'URL':function(){const _0x56c9e2=_0x3c09f9;return window[_0x56c9e2(0x33a)]['href'][_0x56c9e2(0x380)](0x0,window[_0x56c9e2(0x33a)][_0x56c9e2(0x511)]['indexOf']('?'));},'stringToSlug':function(_0x3f246a){const _0x3e068d=_0x3c09f9;_0x3f246a=(_0x3f246a=_0x3f246a[_0x3e068d(0x605)]())[_0x3e068d(0x299)]();for(var _0x45c640=_0x3e068d(0x3a8),_0xe4ba09=0x0,_0x3fa5ae=_0x45c640[_0x3e068d(0x4fb)];_0xe4ba09<_0x3fa5ae;_0xe4ba09++)_0x3f246a=_0x3f246a[_0x3e068d(0x180)](RegExp(_0x45c640[_0x3e068d(0x229)](_0xe4ba09),'g'),'aaaaaaeeeeiiiioooouuuunc------'[_0x3e068d(0x229)](_0xe4ba09));return _0x3f246a['replace'](/[^a-z0-9 -]/g,'')[_0x3e068d(0x180)](/\s+/g,'-')[_0x3e068d(0x180)](/-+/g,'-')[_0x3e068d(0x180)](/^-+/,'')[_0x3e068d(0x180)](/-+$/,'')[_0x3e068d(0x180)](/ /g,'');},'slugToString':function(_0x11e999){const _0x191292=_0x3c09f9;return(_0x11e999=_0x11e999[_0x191292(0x180)](/_/g,'\x20')['replace'](/-/g,'\x20'))['charAt'](0x0)[_0x191292(0x4d9)]()+_0x11e999[_0x191292(0x1a2)](0x1);},'random':function(){const _0x40ad97=_0x3c09f9;let _0x462921='';for(var _0x21f91b=0x5;_0x21f91b>0x0;--_0x21f91b)_0x462921+=_0x40ad97(0x174)[Math[_0x40ad97(0x18c)](0x3e*Math['random']())];return _0x462921;},'isAgent':function(_0x28dda2){const _0x2a1689=_0x3c09f9;return _0x2a1689(0x494)==_0x28dda2||_0x2a1689(0x2c7)==_0x28dda2||_0x2a1689(0x56c)==_0x28dda2;},'beautifyTime':function(_0x94b99f,_0x467fe=!0x1,_0x22dbe9=!0x1){const _0x16f1c6=_0x3c09f9;let _0x2e246e;if(_0x16f1c6(0x4d0)==_0x94b99f)return'';if(_0x94b99f['indexOf']('-')>0x0){let _0x3e1af=_0x94b99f[_0x16f1c6(0x59a)](/[- :]/);_0x2e246e=new Date(_0x3e1af[0x0],_0x3e1af[0x1]-0x1,_0x3e1af[0x2],_0x3e1af[0x3],_0x3e1af[0x4],_0x3e1af[0x5]);}else{let _0x23e842=_0x94b99f[_0x16f1c6(0x59a)](/[. :]/);_0x2e246e=new Date(_0x23e842[0x2],_0x23e842[0x1]-0x1,_0x23e842[0x0],_0x23e842[0x3],_0x23e842[0x4],_0x23e842[0x5]);}let _0x3844ff=new Date(Date[_0x16f1c6(0x48e)](_0x2e246e[_0x16f1c6(0x118)](),_0x2e246e[_0x16f1c6(0x4f4)](),_0x2e246e['getDate'](),_0x2e246e[_0x16f1c6(0x3f5)](),_0x2e246e[_0x16f1c6(0x5c1)](),_0x2e246e['getSeconds']())),_0x2579cb=Math[_0x16f1c6(0x320)]((new Date()-_0x3844ff)/0x5265c00)*(_0x22dbe9?-0x1:0x1),_0x3b33da=[_0x66a1ca(_0x16f1c6(0x349)),_0x66a1ca(_0x16f1c6(0x274)),_0x66a1ca(_0x16f1c6(0x255)),_0x66a1ca(_0x16f1c6(0x3ec)),_0x66a1ca(_0x16f1c6(0x195)),_0x66a1ca('Friday'),_0x66a1ca(_0x16f1c6(0x4d3))],_0x3700b9=_0x3844ff[_0x16f1c6(0x1dd)](navigator[_0x16f1c6(0x43b)],{'hour':_0x16f1c6(0x32f),'minute':_0x16f1c6(0x32f),'hour12':!0x1});return _0x2579cb<0x1?_0x467fe?'<span>'+_0x66a1ca(_0x16f1c6(0x11d))+_0x16f1c6(0x29c)+_0x3700b9+_0x16f1c6(0x12b):'<span\x20style=\x22text-transform:\x20uppercase;\x22\x20data-today>'+_0x3700b9+'</span>':_0x2579cb<0x3?'<span>'+_0x3b33da[_0x3844ff['getDay']()]+_0x16f1c6(0x12b)+(_0x467fe?_0x16f1c6(0x2f6)+_0x3700b9+_0x16f1c6(0x12b):''):_0x16f1c6(0x567)+_0x3844ff[_0x16f1c6(0x2cc)]()+_0x16f1c6(0x12b)+(_0x467fe?_0x16f1c6(0x2f6)+_0x3700b9+_0x16f1c6(0x12b):'');},'unix':function(_0x373588){const _0x8913da=_0x3c09f9;let _0x44130e=_0x373588['split'](/[- :]/);return Date[_0x8913da(0x48e)](_0x44130e[0x0],_0x44130e[0x1]-0x1,_0x44130e[0x2],_0x44130e[0x3],_0x44130e[0x4],_0x44130e[0x5]);},'getLocationTimeString':function(_0x1349c8,_0x254056){const _0xcb57ae=_0x3c09f9;if(_0xcb57ae(0x33d)in _0x1349c8){let _0x40f7ef={};_0x40f7ef[_0xcb57ae(0x33d)]=_0x1349c8[_0xcb57ae(0x33d)][_0xcb57ae(0x37a)],_0x40f7ef[_0xcb57ae(0x4be)]=_0xcb57ae(0x4be)in _0x1349c8?_0x1349c8[_0xcb57ae(0x4be)][_0xcb57ae(0x37a)]:_0x40f7ef[_0xcb57ae(0x33d)][_0xcb57ae(0x59a)]('/')[0x0][_0xcb57ae(0x180)](/_/g,'\x20'),_0x40f7ef['city']=_0xcb57ae(0x42f)in _0x1349c8?_0x1349c8[_0xcb57ae(0x42f)][_0xcb57ae(0x37a)]:_0x40f7ef[_0xcb57ae(0x33d)][_0xcb57ae(0x59a)]('/')[0x1][_0xcb57ae(0x180)](/_/g,'\x20'),_0x5bc6df[_0xcb57ae(0x4db)](_0xcb57ae(0x3d4),_0xcb57ae(0xf1)+_0x40f7ef['timezone'],function(_0x5a9198){const _0x5b7625=_0xcb57ae;if(_0x5a9198=JSON[_0x5b7625(0x553)](_0x5a9198),_0x5bc6df[_0x5b7625(0x128)](_0x5a9198)||!_0x5bc6df[_0x5b7625(0x128)](_0x5a9198['error']))_0x5bc6df[_0x5b7625(0x247)](_0x5a9198,_0x5b7625(0x3d7)),_0x254056(responseonSuccess);else{let _0x40243a=_0x5a9198[_0x5b7625(0x222)][_0x5b7625(0x180)]('T','\x20');_0x254056(new Date(_0x40243a[_0x5b7625(0x380)](0x0,_0x40243a['indexOf']('.')))[_0x5b7625(0x558)]([],{'hour':_0x5b7625(0x32f),'minute':_0x5b7625(0x32f)})+'\x20'+_0x66a1ca('in')+'\x20'+(_0x40f7ef[_0x5b7625(0x42f)]?_0x40f7ef[_0x5b7625(0x42f)]:'')+(_0x40f7ef[_0x5b7625(0x4be)]?',\x20'+_0x40f7ef[_0x5b7625(0x4be)]:''));}});}},'dateDB':function(_0x45ed3b){const _0x599d1c=_0x3c09f9;return'now'==_0x45ed3b?((_0x45ed3b=new Date()['toISOString']()[_0x599d1c(0x180)]('T','\x20'))[_0x599d1c(0x57a)]('.')>0x0&&(_0x45ed3b=_0x45ed3b[_0x599d1c(0x380)](0x0,_0x45ed3b[_0x599d1c(0x57a)]('.'))),_0x45ed3b):_0x45ed3b['getFullYear']()+'-'+(_0x45ed3b[_0x599d1c(0x4f4)]()+0x1)+'-'+_0x45ed3b['getDate']()+'\x20'+_0x45ed3b[_0x599d1c(0x3f5)]()+':'+_0x45ed3b[_0x599d1c(0x5c1)]()+':'+_0x45ed3b[_0x599d1c(0x609)]();},'localTime':function(_0x51def0,_0x3f9428){const _0x24b54a=_0x3c09f9;return!0x1!=_0x51def0?_0x5bc6df[_0x24b54a(0x246)](_0x3f9428)==new Date()[_0x24b54a(0x246)]()?_0x51def0:moment(_0x51def0)[_0x24b54a(0x429)](_0x24b54a(0x150)):'';},'getTimezoneOffset':function(_0x856ac4){const _0x477b47=_0x3c09f9;let _0x3ab495=new Date(),_0x5664c1=_0x3ab495[_0x477b47(0x558)](_0x477b47(0x3d0),{'timeZone':_0x856ac4}),_0x112ef9=new Date(_0x5664c1),_0x15a510=new Date(_0x3ab495['getTime']()),_0xa9a6ce=Math[_0x477b47(0x320)]((_0x112ef9[_0x477b47(0x5a5)]()-_0x15a510[_0x477b47(0x5a5)]())/0xea60);return _0x3ab495['getTimezoneOffset']()-_0xa9a6ce;},'updateUsersActivity':function(_0x6796c9,_0x2263ce,_0x3c448b){const _0x5adbb1=_0x3c09f9;_0x6e0d8d[_0x5adbb1(0x40d)]?_0x3c448b(_0x6e0d8d[_0x5adbb1(0x252)][_0x5adbb1(0x27a)](_0x2263ce)?_0x5adbb1(0x559):'offline'):_0x5bc6df[_0x5adbb1(0x612)]({'function':'update-users-last-activity','user_id':_0x6796c9,'return_user_id':_0x2263ce},_0x94d6d7=>{const _0x2849ab=_0x5adbb1;_0x2849ab(0x559)===_0x94d6d7?_0x3c448b(_0x2849ab(0x559)):_0x3c448b(_0x2849ab(0x4cd));});},'search':function(_0x4db61b,_0x3e0a57){const _0xf47a2d=_0x3c09f9;if((_0x4db61b=_0x4db61b[_0xf47a2d(0x299)]())==_0x6bca6){_0x1e4743[_0xf47a2d(0x5a7)](_0xf47a2d(0x4b8))[_0xf47a2d(0x199)](!0x1);return;}clearTimeout(_0x5da94a),_0x5da94a=setTimeout(function(){_0x6bca6=_0x4db61b,_0x3e0a57();},0xc8);},'searchClear':function(_0x127a67,_0x558bb3){const _0x17f353=_0x3c09f9;_0x1ba0a2(_0x127a67)['next']()[_0x17f353(0xf3)]()&&(_0x1ba0a2(_0x127a67)[_0x17f353(0x548)]()[_0x17f353(0xf3)](''),_0x558bb3());},'error':function(_0x46bf9c,_0x1bcf82){const _0x5292e0=_0x3c09f9;if(!_0x47b6a4||!SBAdmin[_0x5292e0(0x18a)])throw _0x46bf9c instanceof Error&&(_0x46bf9c=_0x46bf9c['message']),'.'==_0x46bf9c[_0x46bf9c['length']-0x1]&&(_0x46bf9c=_0x46bf9c[_0x5292e0(0x1a2)](0x0,-0x1)),_0x46bf9c[_0x5292e0(0x27a)](_0x5292e0(0x2ac))&&(_0x46bf9c=_0x46bf9c['replace'](_0x5292e0(0x2f7),'')[_0x5292e0(0x180)](']:',']')),_0x47b6a4&&_0x46bf9c&&!_0x1bcf82['includes'](_0x5292e0(0x614))&&!_0x1bcf82[_0x5292e0(0x38f)](_0x5292e0(0x363))&&SBAdmin[_0x5292e0(0x50f)]('[Error]\x20['+_0x1bcf82+']\x20'+_0x46bf9c+'.\x20Check\x20the\x20console\x20for\x20more\x20details.','info'),_0x1e4743[_0x5292e0(0x5a7)](_0x5292e0(0x2d6))['sbLoading'](!0x1),_0x5bc6df[_0x5292e0(0x47c)]('SBError',{'message':_0x46bf9c,'function_name':_0x1bcf82}),Error(_0x5292e0(0x168)+_0x1bcf82+']:\x20'+_0x46bf9c+'.');},'errorValidation':function(_0x5bd115,_0x3bfe03=!0x0){const _0xd26c28=_0x3c09f9;return Array['isArray'](_0x5bd115)&&_0xd26c28(0x538)===_0x5bd115[0x0]&&(!0x0===_0x3bfe03||_0x5bd115[0x1]==_0x3bfe03);},'loginForm':function(_0x2ef999,_0x34a487=!0x1,_0x48b358=!0x1){const _0x4c29db=_0x3c09f9;if(!(_0x2ef999=_0x1ba0a2(_0x2ef999))[_0x4c29db(0x199)]()){_0x34a487=!0x1===_0x34a487?_0x2ef999[_0x4c29db(0x492)](_0x4c29db(0x396)):_0x1ba0a2(_0x34a487);let _0x440f0d=_0x1ba0a2[_0x4c29db(0x605)](_0x34a487[_0x4c29db(0x5a7)](_0x4c29db(0x212))['val']()),_0x61f6be=_0x1ba0a2[_0x4c29db(0x605)](_0x34a487['find']('#password\x20input')[_0x4c29db(0xf3)]());''==_0x440f0d||''==_0x61f6be?_0x34a487[_0x4c29db(0x5a7)](_0x4c29db(0x1c3))[_0x4c29db(0x484)](_0x66a1ca(_0x4c29db(0x44a)))['sbActive'](!0x0):(_0x5bc6df[_0x4c29db(0x612)]({'function':_0x4c29db(0x36f),'email':_0x440f0d,'password':_0x61f6be},_0x1262b7=>{const _0x5d3620=_0x4c29db;if(_0x1262b7&&Array[_0x5d3620(0x1e3)](_0x1262b7)){if(!_0x47b6a4&&this['isAgent'](_0x1262b7[0x0][_0x5d3620(0x574)]))_0xc0a6f0[_0x5d3620(0x383)](_0x34a487,_0x5d3620(0x584)),_0x19680f[_0x5d3620(0x5d7)]();else{let _0x2cf9b1=new _0x4692ba(_0x1262b7[0x0]);_0x2cf9b1[_0x5d3620(0x144)](_0x5d3620(0x53a),!!_0x19680f[_0x5d3620(0x5b6)]&&_0x19680f[_0x5d3620(0x5b6)]['id']),this[_0x5d3620(0x3a7)](_0x1262b7[0x1]),this[_0x5d3620(0x47c)](_0x5d3620(0x5aa),_0x2cf9b1),_0x48b358&&_0x48b358(_0x1262b7);}}else _0x34a487[_0x5d3620(0x5a7)](_0x5d3620(0x1c3))[_0x5d3620(0x484)](_0x66a1ca(_0x5d3620(0x404)))[_0x5d3620(0x120)](!0x0),_0x47b6a4||_0x19680f[_0x5d3620(0x5d7)]();_0x2ef999[_0x5d3620(0x199)](!0x1);}),_0x34a487['find'](_0x4c29db(0x1c3))[_0x4c29db(0x484)]('')[_0x4c29db(0x120)](!0x1),_0x2ef999[_0x4c29db(0x199)](!0x0));}},'loginCookie':function(_0x495f1f=!0x1){const _0x145cf6=_0x3c09f9;if(!0x1===_0x495f1f)return this['cookie']('sb-login')?this[_0x145cf6(0x210)](_0x145cf6(0x1f4)):_0x19844b(_0x145cf6(0x36f));_0x47fcfe[_0x145cf6(0x5eb)]?_0x19844b(_0x145cf6(0x36f),_0x495f1f):this['cookie']('sb-login',_0x495f1f,0x2,'set');},'login':function(_0x1c1403='',_0x3f2978='',_0x3f1627='',_0x20cc49='',_0xec730b=!0x1){const _0x38fc24=_0x3c09f9;_0x5bc6df[_0x38fc24(0x612)]({'function':_0x38fc24(0x36f),'email':_0x1c1403,'password':_0x3f2978,'user_id':_0x3f1627,'token':_0x20cc49},_0x4b27c5=>!!(!0x1!=_0x4b27c5&&Array[_0x38fc24(0x1e3)](_0x4b27c5))&&(this[_0x38fc24(0x3a7)](_0x4b27c5[0x1]),_0xec730b&&_0xec730b(_0x4b27c5),!0x0));},'logout':function(_0x403ede=!0x0){const _0x3308b1=_0x3c09f9;_0x19680f[_0x3308b1(0x20e)](),this[_0x3308b1(0x210)](_0x3308b1(0x1f4),'','',!0x1),_0x19844b(_0x3308b1(0x3af),''),_0x19844b('login',''),_0x19680f[_0x3308b1(0x542)]=!0x1,_0x105d96(!0x1),typeof sb_beams_client!==_0x339924&&sb_beams_client[_0x3308b1(0x2a0)](),_0x5bc6df[_0x3308b1(0x612)]({'function':'logout'},()=>{const _0x23f6f0=_0x3308b1;_0x5bc6df[_0x23f6f0(0x47c)](_0x23f6f0(0x117)),_0x403ede&&setTimeout(()=>{const _0x4ea37a=_0x23f6f0;location[_0x4ea37a(0x31a)]();},0x1f4);});},'activeUser':function(){return _0x105d96();},'getReply':function(_0x40591a){const _0x15eabd=_0x3c09f9;let _0x3b9ab1=RegExp(_0x15eabd(0x3eb)),_0x14447=_0x3b9ab1[_0x15eabd(0x389)](_0x40591a);return _0x14447;},'getActiveUser':function(_0x1a68f9=!0x1,_0x1b7296){const _0x136649=_0x3c09f9;let _0x3a12d8=_0x17de24['login']();!_0x3a12d8&&(_0x19844b('wp-login')||_0x19844b('whmcs-login')||_0x19844b(_0x136649(0x198))||_0x19844b('aecommerce-login'))&&(this['cookie'](_0x136649(0x1f4),'','',_0x136649(0x525)),_0x105d96(!0x1),_0x19844b('login','')),_0x5bc6df[_0x136649(0x612)]({'function':'get-active-user','db':_0x1a68f9,'login_app':JSON[_0x136649(0x1fe)](_0x3a12d8),'user_token':_0x5bc6df['getURL'](_0x136649(0x60a))},_0x4a5aa1=>{const _0x34a5fd=_0x136649;if(!_0x4a5aa1)return _0x1b7296(),!0x1;if(_0x34a5fd(0x210)in _0x4a5aa1&&_0x5bc6df[_0x34a5fd(0x3a7)](_0x4a5aa1[_0x34a5fd(0x210)]),_0x34a5fd(0x574)in _0x4a5aa1){if(!_0x47b6a4&&_0x5bc6df['isAgent'](_0x4a5aa1[_0x34a5fd(0x574)])){let _0x34dbb5=_0x34a5fd(0x21a);_0x19844b(_0x34a5fd(0x230))||(_0x19844b(_0x34a5fd(0x230),!0x0),alert(_0x34dbb5)),console[_0x34a5fd(0x1b1)]('Routin.bot:\x20'+_0x34dbb5),_0x5bc6df['event'](_0x34a5fd(0x1e8));}else _0x105d96(new _0x4692ba(_0x4a5aa1,_0x34a5fd(0x2e3)in _0x4a5aa1?{'phone':_0x4a5aa1[_0x34a5fd(0x2e3)]}:{})),_0x6e0d8d[_0x34a5fd(0x459)](),_0x3a12d8&&_0x19844b(_0x3a12d8[0x1]+_0x34a5fd(0x10f),!0x0),_0x1b7296(),_0x5bc6df['event']('SBActiveUserLoaded',_0x4a5aa1);}});},'reset':function(){const _0x5308a5=_0x3c09f9;let _0x3882ce=[_0x5308a5(0x1f4),_0x5308a5(0x142),_0x5308a5(0x547)];for(var _0x30d713=0x0;_0x30d713<_0x3882ce['length'];_0x30d713++)this['cookie'](_0x3882ce[_0x30d713],'',0x0,!0x1);try{localStorage[_0x5308a5(0x488)](_0x5308a5(0x61a));}catch(_0x3fc906){}this[_0x5308a5(0x4a2)]();},'lightbox':function(_0x710fec){const _0x277acf=_0x3c09f9;let _0x7848e8=_0x1ba0a2(_0x47b6a4?_0x1e4743:_0x537b7d)[_0x277acf(0x5a7)](_0x277acf(0x51f));_0x7848e8['sbActive'](!0x0)[_0x277acf(0x5a7)](_0x277acf(0x5d9))['html'](_0x710fec),_0x47b6a4&&(SBAdmin[_0x277acf(0x1ea)]=_0x7848e8);},'storage':function(_0x16fdb4,_0x4fb04a=_0x339924){const _0xfcf618=_0x3c09f9;try{if(typeof localStorage==_0x339924)return!0x1;}catch(_0x229f8e){return!0x1;}let _0x320cc7=localStorage[_0xfcf618(0x253)](_0xfcf618(0x61a));if(_0x320cc7=null===_0x320cc7?{}:JSON[_0xfcf618(0x553)](_0x320cc7),_0x4fb04a===_0x339924)return _0x16fdb4 in _0x320cc7&&_0x320cc7[_0x16fdb4];_0x4fb04a?_0x320cc7[_0x16fdb4]=_0x4fb04a:delete _0x320cc7[_0x16fdb4],localStorage['setItem']('routin-storage',JSON[_0xfcf618(0x1fe)](_0x320cc7));},'storageTime':function(_0x40e0bd,_0x4d01d5=!0x1){const _0x270385=_0x3c09f9;if(!0x1!==_0x4d01d5)return!0x1==_0x19844b(_0x40e0bd)||_0x27716d[_0x270385(0x5a5)]()-_0x19844b(_0x40e0bd)>0x36ee80*_0x4d01d5;_0x19844b(_0x40e0bd,_0x27716d[_0x270385(0x5a5)]());},'cookie':function(_0x11181a,_0x4e77e6=!0x1,_0xb7284a=!0x1,_0x52d111='get',_0x43b18d=!0x1){const _0xa61f89=_0x3c09f9;let _0x5ea05b=_0xa61f89(0x4a5)==location[_0xa61f89(0x18f)]?_0xa61f89(0x43e):'',_0x36342e=window[_0x47b6a4?_0xa61f89(0x34e):_0xa61f89(0x5dd)],_0x216bc1=_0x36342e&&_0x36342e[_0xa61f89(0x52c)]?'domain='+_0x36342e[_0xa61f89(0x52c)]+';':'';if(_0xa61f89(0x59e)==_0x52d111){if(!_0x41c3fa)return this[_0xa61f89(0x12c)](_0x11181a);let _0x24d5d=document[_0xa61f89(0x210)][_0xa61f89(0x59a)](';');for(var _0x131251=0x0;_0x131251<_0x24d5d[_0xa61f89(0x4fb)];_0x131251++){for(var _0x2cdb15=_0x24d5d[_0x131251];'\x20'==_0x2cdb15[_0xa61f89(0x229)](0x0);)_0x2cdb15=_0x2cdb15[_0xa61f89(0x1e5)](0x1);if(0x0==_0x2cdb15[_0xa61f89(0x57a)](_0x11181a)){let _0x560101=_0x2cdb15[_0xa61f89(0x1e5)](_0x11181a[_0xa61f89(0x4fb)]+0x1,_0x2cdb15[_0xa61f89(0x4fb)]);return!this['null'](_0x560101)&&_0x560101;}}return!0x1;}if(_0xa61f89(0x144)==_0x52d111){if(_0x41c3fa){let _0x4e61b5=new Date();_0x4e61b5['setTime'](_0x4e61b5['getTime']()+_0xb7284a*(_0x43b18d?0x1:0x15180)*0x3e8),document[_0xa61f89(0x210)]=_0x11181a+'='+_0x4e77e6+';expires='+_0x4e61b5[_0xa61f89(0x3cf)]()+_0xa61f89(0x29b)+_0x5ea05b+_0x216bc1;}else this[_0xa61f89(0x12c)](_0x11181a,_0x4e77e6);}else this[_0xa61f89(0x210)](_0x11181a)&&(_0x41c3fa?document['cookie']=_0x11181a+'='+_0x4e77e6+_0xa61f89(0xec)+_0x5ea05b+_0x216bc1:this['storage'](_0x11181a,''));},'setting':function(_0x12e5bc){return typeof _0x47fcfe!==_0x339924&&_0x12e5bc in _0x47fcfe&&_0x47fcfe[_0x12e5bc];},'get_select_setting':function(){const _0x267854=_0x3c09f9;_0x27fc27&&_0x5bc6df['ajax']({'function':_0x267854(0x1b6),'setting':[{'name':'rate-and-review','id':_0x267854(0x3b8),'type':_0x267854(0x298)},{'name':_0x267854(0x451),'id':_0x267854(0x451),'type':_0x267854(0x298)},{'name':_0x267854(0x4fc),'id':'cloud-active','type':'one'}]},_0x56e632=>{const _0x4cae07=_0x267854;_0x7704f6=_0x56e632,_0x5bc6df[_0x4cae07(0x496)](_0x4cae07(0x19f));});},'admin_set':function(_0x397ace=!0x1){const _0x3b12b9=_0x3c09f9;return!!_0x7704f6&&(_0x397ace?!!(0x0!==Object['keys'](_0x7704f6)[_0x3b12b9(0x4fb)]&&_0x7704f6[_0x3b12b9(0x5b8)](_0x397ace))&&_0x7704f6[_0x397ace]:_0x7704f6);},'get_value':function(_0x488eab){return _0x488eab instanceof Array&&_0x488eab['length']>0x0?_0x488eab[0x0]:_0x488eab;},'shortcode':function(_0x43ee23){const _0x59a314=_0x3c09f9;return _0x3b9132[_0x59a314(0x2b3)](_0x43ee23);},'event':function(_0x22ab7b,_0xb3acdf){const _0x2c26a2=_0x3c09f9;_0x1ba0a2(document)[_0x2c26a2(0x200)](_0x22ab7b,_0xb3acdf);let _0x266619=_0x47b6a4?typeof SB_ADMIN_SETTINGS!==_0x339924&&SB_ADMIN_SETTINGS[_0x2c26a2(0x4e1)]:_0x47fcfe['webhooks'],_0x246442={'SBSMSSent':_0x2c26a2(0x10c),'SBLoginForm':_0x2c26a2(0x36f),'SBRegistrationForm':'registration','SBUserDeleted':_0x2c26a2(0x41d),'SBEmailSent':'email-sent','SBNewMessagesReceived':_0x2c26a2(0x3c6),'SBNewConversationReceived':'new-conversation','SBActiveConversationStatusUpdated':_0x2c26a2(0x49e),'SBMessageDeleted':_0x2c26a2(0x2fe),'SBRichMessageSubmit':_0x2c26a2(0x193),'SBNewEmailAddress':_0x2c26a2(0x1bf)};if(_0x266619&&_0x22ab7b in _0x246442){if(!0x0!==_0x266619&&(Array['isArray'](_0x266619)||(_0x266619=_0x266619[_0x2c26a2(0x180)](/ /g,'')[_0x2c26a2(0x59a)](',')),!_0x266619[_0x2c26a2(0x27a)](_0x246442[_0x22ab7b])))return;_0x5bc6df[_0x2c26a2(0x612)]({'function':_0x2c26a2(0x4e1),'function_name':_0x22ab7b,'parameters':_0xb3acdf});}},'translate':function(_0x1523cc){const _0x1e738d=_0x3c09f9;if(!_0x47b6a4&&_0x5bc6df[_0x1e738d(0x128)](_0x47fcfe)||_0x47b6a4&&typeof SB_TRANSLATIONS===_0x339924)return _0x1523cc;let _0x4a21a2=_0x47b6a4?SB_TRANSLATIONS:_0x47fcfe['translations'];return _0x4a21a2&&_0x1523cc in _0x4a21a2?''==_0x4a21a2[_0x1523cc]?_0x1523cc:_0x4a21a2[_0x1523cc]:_0x1523cc;},'escape':function(_0x59fada){const _0x326258=_0x3c09f9;return _0x59fada?_0x59fada[_0x326258(0x5cf)](_0x326258(0x55b),_0x326258(0x2d3))[_0x326258(0x5cf)](_0x326258(0x277),_0x326258(0x293))[_0x326258(0x5cf)](_0x326258(0x4c9),'')[_0x326258(0x5cf)](_0x326258(0x554),'')[_0x326258(0x5cf)](_0x326258(0xf8),''):_0x59fada;},'visibilityChange':function(_0x1142ec=''){const _0x211716=_0x3c09f9;_0x211716(0x442)==_0x1142ec?(_0x47b6a4||_0x19680f['stopRealTime'](),_0x19680f[_0x211716(0x498)]=!0x1):(_0x105d96()&&!_0x47b6a4&&_0x19680f['startRealTime'](),_0x19680f[_0x211716(0x498)]=!0x0,clearInterval(_0x53417e),document['title']=_0x435e4b);},'settingsStringToArray':function(_0x3f9062){const _0x500b4a=_0x3c09f9;if(this[_0x500b4a(0x128)](_0x3f9062))return[];let _0x5be9ff=[];_0x3f9062=_0x3f9062[_0x500b4a(0x59a)](',');for(var _0x449c8b=0x0;_0x449c8b<_0x3f9062[_0x500b4a(0x4fb)];_0x449c8b++){let _0x295460=_0x3f9062[_0x449c8b]['split'](':');_0x5be9ff[_0x295460[0x0]]='false'!=_0x295460[0x1]&&(_0x500b4a(0x4a7)==_0x295460[0x1]||_0x295460[0x1]);}return _0x5be9ff;},'openWindow':function(_0x120aa9,_0x5b6b18=0x226,_0x58b0ce=0x15e){const _0x3893fd=_0x3c09f9;let _0x134cd0=screen[_0x3893fd(0x34c)]/0x2-_0x5b6b18/0x2,_0x49e9b3=screen[_0x3893fd(0x2bc)]/0x2-_0x58b0ce/0x2;return window[_0x3893fd(0x341)](_0x120aa9,_0x3893fd(0x28c),_0x3893fd(0x189)+_0x5b6b18+_0x3893fd(0x3a2)+_0x58b0ce+_0x3893fd(0x5c7)+_0x49e9b3+_0x3893fd(0x4d7)+_0x134cd0),!0x1;},'convertUTCDateToLocalDate':function(_0x5a5844,_0x29438a=0x0){const _0x39b565=_0x3c09f9;return _0x5a5844=new Date(_0x5a5844),_0x5a5844=new Date(_0x5a5844[_0x39b565(0x5a5)]()+0x36ee80*_0x29438a),new Date(_0x5a5844['getTime']()+-0x1*_0x353f62);},'loadResource':function(_0x287378,_0x53bd05=!0x1){const _0x1c2905=_0x3c09f9;let _0x2514f2=document[_0x1c2905(0x143)](_0x1c2905(0x3a3))[0x0],_0x28226a=document[_0x1c2905(0x13d)](_0x53bd05?_0x1c2905(0x224):_0x1c2905(0x366));_0x53bd05?_0x28226a[_0x1c2905(0x218)]=_0x287378+_0x1c2905(0x25e)+_0x1eaa6b:(_0x28226a['id']=_0x1c2905(0x61b),_0x28226a[_0x1c2905(0x372)]=_0x1c2905(0x582),_0x28226a[_0x1c2905(0x44d)]=_0x1c2905(0x225),_0x28226a[_0x1c2905(0x511)]=_0x287378+'?v='+_0x1eaa6b,_0x28226a['media']=_0x1c2905(0x257)),_0x2514f2[_0x1c2905(0x4df)](_0x28226a);},'uploadResponse':function(_0xec19c6){const _0x2fa21a=_0x3c09f9;if(_0x2fa21a(0x1fa)==(_0xec19c6=JSON[_0x2fa21a(0x553)](_0xec19c6))[0x0]){if(_0x2fa21a(0x520)==_0xec19c6[0x1]){let _0x38e7d0=_0x2fa21a(0x1f7);_0x47b6a4?SBAdmin[_0x2fa21a(0x50f)](_0x38e7d0,_0x2fa21a(0x2af)):alert(_0x38e7d0);}else{if(_0x1ba0a2(_0x438150)[_0x2fa21a(0x1c6)](_0x2fa21a(0x608)))_0x1ba0a2(_0x438150)[_0x2fa21a(0x5a7)](_0x2fa21a(0x281))[_0x2fa21a(0x566)]('data-value','')[_0x2fa21a(0x130)](_0x2fa21a(0x2c0),''),setTimeout(()=>{const _0x261c1e=_0x2fa21a;_0x1ba0a2(_0x438150)[_0x261c1e(0x5a7)](_0x261c1e(0x281))[_0x261c1e(0x566)]('data-value',_0xec19c6[0x1])[_0x261c1e(0x130)](_0x261c1e(0x2c0),'url(\x22'+_0xec19c6[0x1]+_0x261c1e(0x25e)+_0x5bc6df[_0x261c1e(0x2ef)]()+'\x22)')[_0x261c1e(0x56d)](_0x261c1e(0x110)),_0x438150=!0x1;},0x1f4);else{let _0x33b76e=_0xec19c6[0x1][_0x2fa21a(0x380)](_0xec19c6[0x1][_0x2fa21a(0x1af)]('/')+0x1),_0x209957='',_0x4fdc75=/\.(jpg|jpeg|png|gif|bmp|)$/[_0x2fa21a(0x389)](_0xec19c6[0x1][_0x2fa21a(0x299)]()),_0x5a0a93=/\.(mp3|ogg)$/[_0x2fa21a(0x389)](_0xec19c6[0x1][_0x2fa21a(0x299)]()),_0x42d40c=/\.(docx|pptx|xlsx|doc|ppt|xls)$/['test'](_0xec19c6[0x1][_0x2fa21a(0x299)]());_0x209957=_0x4fdc75?'<div\x20data-name=\x22'+_0x33b76e+_0x2fa21a(0x3d3)+_0xec19c6[0x1]+_0x2fa21a(0x2f9)+_0xec19c6[0x2]+_0x2fa21a(0x5c9)+_0xec19c6[0x1]+_0x2fa21a(0x3b7)+_0x33b76e+_0x2fa21a(0x1f9):_0x5a0a93?_0x2fa21a(0x5a2)+_0x33b76e+_0x2fa21a(0x3d3)+_0xec19c6[0x1]+_0x2fa21a(0x2f9)+_0xec19c6[0x2]+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<audio\x20controls\x20style=\x22max-width:\x20100%;\x20max-height:\x2033px;\x20border-radius:\x20var(--chat-rounded-size-6);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<source\x20src=\x22'+_0xec19c6[0x1]+_0x2fa21a(0x2d2)+_0xec19c6[0x1][_0x2fa21a(0x59a)]('.')[_0x2fa21a(0x549)]()+_0x2fa21a(0x1a4):_0x42d40c?'<div\x20data-name=\x22'+_0x33b76e+'\x22\x20data-value=\x22'+_0xec19c6[0x1]+_0x2fa21a(0x2f9)+_0xec19c6[0x2]+_0x2fa21a(0x4c2):_0x2fa21a(0x505)+_0x33b76e+_0x2fa21a(0x3d3)+_0xec19c6[0x1]+_0x2fa21a(0x2f9)+_0xec19c6[0x2]+_0x2fa21a(0x109)+_0x33b76e+_0x2fa21a(0x1f9),_0x27fc27[_0x2fa21a(0x5a7)](_0x2fa21a(0x45b))[_0x2fa21a(0x56d)](_0x209957),_0x19680f[_0x2fa21a(0x104)]();}}}else _0x5bc6df[_0x2fa21a(0x247)](_0xec19c6[0x1],_0x2fa21a(0x453));this[_0x2fa21a(0x235)]=function(_0x435d29){};},'debounce':function(_0x250cdd,_0x528276,_0x52024a=0x1f4){_0x528276 in _0x454d4e||(_0x454d4e[_0x528276]=!0x0,_0x250cdd(),setTimeout(()=>{delete _0x454d4e[_0x528276];},_0x52024a));}},_0x6e0d8d={'channels':{},'channels_presence':[],'active':!0x1,'pusher':!0x1,'started':!0x1,'pusher_beams':!0x1,'initialized':!0x1,'online_ids':[],'init_push_notifications':!0x1,'sw':!0x1,'init':function(_0x5aba57=!0x1){const _0x52daa1=_0x3c09f9;if(_0x6e0d8d[_0x52daa1(0x40d)]){if(this[_0x52daa1(0x40f)])return!_0x5aba57||_0x5aba57();_0x5aba57&&(_0x1ba0a2(window)['one'](_0x52daa1(0x589),()=>{_0x5aba57();}),(this['initialized']=!0x0,_0x1ba0a2['getScript'](_0x52daa1(0x509),()=>{const _0x2fab8b=_0x52daa1;this[_0x2fab8b(0x40f)]=new Pusher(_0x47b6a4?SB_ADMIN_SETTINGS[_0x2fab8b(0x226)]:_0x47fcfe[_0x2fab8b(0x226)],{'cluster':_0x47b6a4?SB_ADMIN_SETTINGS[_0x2fab8b(0x2a3)]:_0x47fcfe[_0x2fab8b(0x2a3)],'authEndpoint':STMBX_URL+_0x2fab8b(0x285),'auth':{'params':{'login':_0x5bc6df['loginCookie']()}}}),_0x5bc6df[_0x2fab8b(0x47c)](_0x2fab8b(0x589));})));}},'initPushNotifications':function(){const _0xebbf2=_0x3c09f9;(_0x105d96()||_0x47b6a4)&&_0x1ba0a2[_0xebbf2(0x2de)](_0xebbf2(0x2df),()=>{const _0x326982=_0xebbf2;window['navigator'][_0x326982(0x57e)][_0x326982(0x388)][_0x326982(0x4bd)](_0x2e2b1f=>{const _0x44fed5=_0x326982;this[_0x44fed5(0x47e)]=new PusherPushNotifications[(_0x44fed5(0x43c))]({'instanceId':_0x47b6a4?SB_ADMIN_SETTINGS[_0x44fed5(0x502)]:_0x47fcfe[_0x44fed5(0x502)],'serviceWorkerRegistration':_0x2e2b1f}),this[_0x44fed5(0x47e)]['start']()[_0x44fed5(0x4bd)](_0x4b9f87=>_0x4b9f87['getDeviceId']())[_0x44fed5(0x4bd)](_0x95aed0=>console[_0x44fed5(0x5d4)]('Successfully\x20registered\x20with\x20Beams.\x20Device\x20ID:',_0x95aed0))[_0x44fed5(0x4bd)](()=>this['pusher_beams']['setDeviceInterests'](_0x47b6a4?[SB_ACTIVE_AGENT['id'],_0x44fed5(0x4e2)]:[_0x105d96()['id'],_0x44fed5(0x42b)]))[_0x44fed5(0x4d5)](console[_0x44fed5(0x247)]),this[_0x44fed5(0x603)]=!0x1;});});},'initServiceWorker':function(){const _0x5909c9=_0x3c09f9;_0x5909c9(0x57e)in navigator&&(navigator['serviceWorker'][_0x5909c9(0x2bf)](_0x47b6a4||_0x5909c9(0x176)!=typeof SB_CLOUD_SW?STMBX_URL+_0x5909c9(0x536)+_0x1eaa6b:_0x47fcfe['push-notifications-url']+_0x5909c9(0x25e)+_0x1eaa6b)['then'](_0x1db6d8=>{const _0x4c7c17=_0x5909c9;_0x1db6d8[_0x4c7c17(0x2ee)](),this['sw']=_0x1db6d8;})[_0x5909c9(0x4d5)](function(_0x1fbdb1){const _0x1c84de=_0x5909c9;console[_0x1c84de(0x1b1)](_0x1fbdb1);}),navigator[_0x5909c9(0x57e)]['onmessage']=function(_0x54f62e){const _0x5d87ee=_0x5909c9;_0x47b6a4?_0x54f62e['data'][_0x5d87ee(0x53a)]?(SBAdmin[_0x5d87ee(0x542)][_0x5d87ee(0x295)](_0x54f62e[_0x5d87ee(0x1c4)][_0x5d87ee(0x53a)],_0x54f62e[_0x5d87ee(0x1c4)][_0x5d87ee(0x4c6)]),SBAdmin['conversations'][_0x5d87ee(0x2ee)]()):_0x54f62e['data'][_0x5d87ee(0x4c6)]&&(SBAdmin[_0x5d87ee(0x5e3)]['show'](_0x54f62e[_0x5d87ee(0x1c4)]['user_id']),_0x19680f[_0x5d87ee(0x593)][_0x5d87ee(0x40b)]()):_0x5d87ee(0x273)==_0x54f62e[_0x5d87ee(0x1c4)]&&_0x19680f[_0x5d87ee(0x341)]();});},'start':function(){const _0x416cd8=_0x3c09f9;!_0x47b6a4&&!this[_0x416cd8(0x1ca)]&&_0x105d96()&&(this[_0x416cd8(0x40d)]&&this[_0x416cd8(0x28a)](()=>{const _0x1b99e7=_0x416cd8;this['event'](_0x1b99e7(0x127),_0x170707=>{const _0x271e2f=_0x1b99e7;_0x170707['user_id']==_0x19680f['agent_id']&&_0x19680f[_0x271e2f(0x5b6)]&&_0x170707['conversation_id']==_0x19680f[_0x271e2f(0x5b6)]['id']&&(_0x19680f['typing'](-0x1,_0x271e2f(0x459)),clearTimeout(_0x5da94a),_0x5da94a=setTimeout(()=>{const _0x88d635=_0x271e2f;_0x19680f[_0x88d635(0x398)](-0x1,'stop');},0x3e8));}),this[_0x1b99e7(0x47c)]('new-message',_0x40fb26=>{const _0x11716a=_0x1b99e7;_0x40fb26&&_0x105d96()&&!_0x5bc6df[_0x11716a(0x128)](_0x40fb26[_0x11716a(0x53a)])&&!_0x105d96()[_0x11716a(0x3cb)](_0x40fb26[_0x11716a(0x53a)])&&(!_0x19680f[_0x11716a(0x5b6)]||_0x19680f[_0x11716a(0x5b6)]['id']!=_0x40fb26[_0x11716a(0x53a)])?_0x19680f['updateConversations']():_0x19680f['update']();}),this[_0x1b99e7(0x51a)](0x1,()=>{const _0x9a134d=_0x1b99e7;this[_0x9a134d(0x1ca)]=!0x0,_0x19680f[_0x9a134d(0x575)][_0x9a134d(0x24f)]();});}),_0x47fcfe[_0x416cd8(0x5a4)]&&(typeof Notification!=_0x339924&&_0x416cd8(0x4bf)==Notification['permission']?this[_0x416cd8(0x197)]():this[_0x416cd8(0x603)]=!0x0));},'subscribe':function(_0x3826ae,_0x3b1b60=!0x1){const _0x1f7ccb=_0x3c09f9;if(!this['pusher'])return this[_0x1f7ccb(0x28a)](()=>{this['subscribe'](_0x3826ae,_0x3b1b60);});_0x3826ae=this[_0x1f7ccb(0x4bc)](_0x3826ae);let _0x29d1aa=this['pusher']['subscribe'](_0x3826ae);_0x29d1aa[_0x1f7ccb(0x167)](_0x1f7ccb(0x1a7),_0x6f00fa=>console['log'](_0x6f00fa)),_0x29d1aa[_0x1f7ccb(0x167)](_0x1f7ccb(0x2d0),()=>{const _0x470c0a=_0x1f7ccb;this[_0x470c0a(0x1bc)][_0x3826ae]=_0x29d1aa,_0x3b1b60&&_0x3b1b60();});},'event':function(_0x4a7eb0,_0xe82e2b,_0x4f825f=_0x3c09f9(0x2e7)+_0x105d96()['id']){const _0x4d6171=_0x3c09f9;if(!this[_0x4d6171(0x40f)])return this[_0x4d6171(0x28a)](()=>{this['event'](_0x4a7eb0,_0xe82e2b,_0x4f825f);});let _0x81e768=_0x4f825f;(_0x4f825f=this[_0x4d6171(0x4bc)](_0x4f825f))in this['channels']?(this[_0x4d6171(0x1bc)][_0x4f825f]['unbind'](_0x4a7eb0),this[_0x4d6171(0x1bc)][_0x4f825f]['bind'](_0x4a7eb0,_0x38def5=>{_0xe82e2b(_0x38def5);})):this[_0x4d6171(0x4d8)](_0x81e768,()=>{const _0x1b2705=_0x4d6171;this[_0x1b2705(0x47c)](_0x4a7eb0,_0xe82e2b,_0x81e768);});},'trigger':function(_0x46a107,_0x3fbdb4={},_0x15f268='private-user-'+_0x105d96()['id']){const _0x1ede36=_0x3c09f9;if(0x0==_0x46a107[_0x1ede36(0x57a)]('client-'))return this[_0x1ede36(0x1bc)][this[_0x1ede36(0x4bc)](_0x15f268)][_0x1ede36(0x200)](_0x46a107,_0x3fbdb4);_0x5bc6df[_0x1ede36(0x612)]({'function':'pusher-trigger','channel':_0x15f268,'event':_0x46a107,'data':_0x3fbdb4},_0x21a541=>_0x21a541);},'presence':function(_0x87f91e=0x1,_0x458c8a){const _0x19f54b=_0x3c09f9;if(!this['pusher'])return this[_0x19f54b(0x28a)](()=>{const _0x5bc53e=_0x19f54b;this[_0x5bc53e(0x51a)]();});let _0x33a09d=this[_0x19f54b(0x40f)][_0x19f54b(0x4d8)](this[_0x19f54b(0x4bc)](_0x19f54b(0x25b)+_0x87f91e));_0x33a09d['bind'](_0x19f54b(0x2d0),_0x5dd48a=>{const _0x3a854c=_0x19f54b;if(_0x5dd48a[_0x3a854c(0x1de)]>0x62)return this[_0x3a854c(0x4d8)](_0x87f91e+0x1);_0x5dd48a[_0x3a854c(0x471)](_0x36afd1=>{const _0x4a46a1=_0x3a854c;this[_0x4a46a1(0x4f3)](_0x36afd1)&&this[_0x4a46a1(0x252)][_0x4a46a1(0x33f)](_0x36afd1['id']);}),_0x19680f['updateUsersActivity'](),_0x458c8a&&_0x458c8a();}),_0x33a09d[_0x19f54b(0x167)](_0x19f54b(0x1a7),_0x515878=>console[_0x19f54b(0x5d4)](_0x515878)),_0x33a09d[_0x19f54b(0x167)]('pusher:member_added',_0x2fcd6e=>{const _0xa6bc02=_0x19f54b;this[_0xa6bc02(0x4f3)](_0x2fcd6e)&&this[_0xa6bc02(0x42e)](_0x2fcd6e['id']),_0x47b6a4&&SBAdmin[_0xa6bc02(0x42b)]['onlineUserNotification'](_0x2fcd6e);}),_0x33a09d['bind']('pusher:member_removed',_0x1a61be=>{const _0xe69a65=_0x19f54b;this[_0xe69a65(0x279)](_0x1a61be['id']);}),this[_0x19f54b(0x3f3)][_0x19f54b(0x33f)](_0x33a09d);},'presenceCheck':function(_0x15b7b7){const _0x48486f=_0x3c09f9;let _0x543f8a=_0x5bc6df[_0x48486f(0x3c4)](_0x15b7b7['info']['user_type']);return(_0x47b6a4&&!_0x543f8a||!_0x47b6a4&&_0x543f8a)&&!this[_0x48486f(0x252)][_0x48486f(0x27a)](_0x15b7b7['id']);},'presenceAdd':function(_0x4954f7){const _0xe47de8=_0x3c09f9;typeof _0x4954f7==_0x339924||this[_0xe47de8(0x252)][_0xe47de8(0x27a)](_0x4954f7)||(this[_0xe47de8(0x252)][_0xe47de8(0x33f)](_0x4954f7),this[_0xe47de8(0x5e8)](_0x4954f7),_0x19680f[_0xe47de8(0x359)]());},'presenceRemove':function(_0x438819){const _0x344704=_0x3c09f9;if(typeof _0x438819==_0x339924)return;let _0x5caf01=this[_0x344704(0x252)][_0x344704(0x57a)](_0x438819);-0x1!==_0x5caf01?(this[_0x344704(0x252)][_0x344704(0x598)](_0x5caf01,0x1),this[_0x344704(0x5e8)](_0x438819),_0x19680f[_0x344704(0x359)]()):_0x47b6a4&&_0x1e4743[_0x344704(0x5a7)](_0x344704(0x46f)+_0x438819+'\x22]')[_0x344704(0x20b)]();},'presenceUnsubscribe':function(){const _0x4b834d=_0x3c09f9;for(var _0x3cad6f=0x0;_0x3cad6f<this['channels_presence'][_0x4b834d(0x4fb)];_0x3cad6f++)this[_0x4b834d(0x3f3)][_0x3cad6f][_0x4b834d(0x3bc)](this[_0x4b834d(0x4bc)](_0x4b834d(0x25b)+(_0x3cad6f+0x1)));},'presenceUpdateAdmin':function(_0x43dedc){const _0x5101db=_0x3c09f9;_0x47b6a4&&(_0x1e4743[_0x5101db(0x5a7)](_0x5101db(0x5ef))[_0x5101db(0x4fb)]&&SBAdmin['users'][_0x5101db(0x2ee)](),_0x105d96()&&_0x105d96()['id']==_0x43dedc&&SBAdmin[_0x5101db(0x42b)]['updateUsersActivity']());},'pushNotification':function(_0x117b12){const _0x555f2f=_0x3c09f9;let _0x460914=_0x47b6a4?SB_ACTIVE_AGENT[_0x555f2f(0x4c7)]:_0x105d96()[_0x555f2f(0x417)];_0x5bc6df[_0x555f2f(0x612)]({'function':_0x555f2f(0x264),'title':_0x47b6a4?SB_ACTIVE_AGENT[_0x555f2f(0x292)]:_0x105d96()['name'],'message':new _0x494501()[_0x555f2f(0x26e)](_0x117b12),'icon':_0x460914['indexOf'](_0x555f2f(0x2d5))>0x0?_0x47fcfe[_0x555f2f(0x23b)]:_0x460914,'interests':_0x19680f['getRecipientUserID'](),'conversation_id':!0x1!=_0x19680f[_0x555f2f(0x5b6)]&&_0x19680f['conversation']['id']},_0x7e530c=>_0x7e530c);},'cloudChannelRename':function(_0x275f1a){const _0x374cce=_0x3c09f9;return _0x47fcfe[_0x374cce(0x5eb)]||_0x47b6a4&&SB_ADMIN_SETTINGS[_0x374cce(0x5eb)]?_0x275f1a+'-'+(_0x47b6a4?SB_ADMIN_SETTINGS[_0x374cce(0x5eb)][_0x374cce(0x3f1)]:_0x47fcfe['cloud'][_0x374cce(0x3f1)]):_0x275f1a;}};function _0x19844b(_0x26bc1f,_0x20a528=_0x339924){const _0x1fd590=_0x3c09f9;return _0x5bc6df[_0x1fd590(0x12c)](_0x26bc1f,_0x20a528);}function _0x66a1ca(_0x395d87){const _0x46a7e4=_0x3c09f9;return _0x5bc6df[_0x46a7e4(0x455)](_0x395d87);}function _0x105d96(_0x40f1c7=-0x1){const _0x3d9a51=_0x3c09f9,_0x3f4651=_0x48f0cb(this,function(){const _0x25d56a=_0x2301;return _0x3f4651['toString']()[_0x25d56a(0x136)](_0x25d56a(0x30f))[_0x25d56a(0x21e)]()[_0x25d56a(0x2dd)](_0x3f4651)[_0x25d56a(0x136)]('(((.+)+)+)+$');});_0x3f4651();const _0x56ea09=_0x5da497(this,function(){const _0x2c668d=_0x2301,_0x39eca1=function(){const _0x5c7267=_0x2301;let _0x319819;try{_0x319819=Function(_0x5c7267(0x2d4)+_0x5c7267(0x243)+');')();}catch(_0x123a2c){_0x319819=window;}return _0x319819;},_0x247e9c=_0x39eca1(),_0x3b4282=_0x247e9c['console']=_0x247e9c[_0x2c668d(0x1ad)]||{},_0x49f74d=['log',_0x2c668d(0x1b1),_0x2c668d(0x2af),'error','exception','table',_0x2c668d(0x2c3)];for(let _0x3ad99d=0x0;_0x3ad99d<_0x49f74d['length'];_0x3ad99d++){const _0x4c2a43=_0x5da497[_0x2c668d(0x2dd)]['prototype'][_0x2c668d(0x167)](_0x5da497),_0x46210d=_0x49f74d[_0x3ad99d],_0x59ce2e=_0x3b4282[_0x46210d]||_0x4c2a43;_0x4c2a43[_0x2c668d(0x54d)]=_0x5da497[_0x2c668d(0x167)](_0x5da497),_0x4c2a43[_0x2c668d(0x21e)]=_0x59ce2e[_0x2c668d(0x21e)][_0x2c668d(0x167)](_0x59ce2e),_0x3b4282[_0x46210d]=_0x4c2a43;}});_0x56ea09();if(-0x1===_0x40f1c7)return window[_0x3d9a51(0x2ec)];window[_0x3d9a51(0x2ec)]=_0x40f1c7;}window[_0x3c09f9(0x551)]=_0x5bc6df,window[_0x3c09f9(0x22f)]=_0x6e0d8d,window[_0x3c09f9(0x2ec)]=!0x1,_0x1ba0a2['fn']['sbActive']=function(_0x23b62a=-0x1){const _0x53bebf=_0x3c09f9;return-0x1===_0x23b62a?_0x1ba0a2(this)[_0x53bebf(0x1c6)](_0x53bebf(0x31e)):(_0x1ba0a2(this)[_0x53bebf(0x565)]('sb-active',_0x23b62a),this);},_0x1ba0a2['fn']['sbLoading']=function(_0x3f4dea=_0x3c09f9(0x31f)){const _0x4ff357=_0x3c09f9;return'check'==_0x3f4dea?_0x1ba0a2(this)[_0x4ff357(0x1c6)](_0x4ff357(0x4e8)):(_0x1ba0a2(this)[_0x4ff357(0x565)](_0x4ff357(0x4e8),_0x3f4dea),this);},_0x1ba0a2['fn'][_0x3c09f9(0x427)]=function(_0x291e12=!0x1){const _0x24027c=_0x3c09f9;let _0x38a3fa=!0x0;return _0x47b6a4&&(SBAdmin[_0x24027c(0x1ea)]=!0x1),_0x1ba0a2(this)[_0x24027c(0x120)]()?(_0x1ba0a2(this)[_0x24027c(0x120)](!0x1),_0x1e4743['removeClass'](_0x24027c(0xf6)),_0x38a3fa=!0x1):(_0x1e4743['addClass']('sb-popup-active'),_0x1e4743['find'](_0x24027c(0x335))[_0x24027c(0x120)](!0x1),_0x291e12&&(_0x1ba0a2(this)[_0x24027c(0x130)]('left',_0x24027c(0x4da)),_0x1ba0a2(this)['sbActive'](!0x0)),_0x47b6a4&&setTimeout(()=>{const _0x5f1b79=_0x24027c;SBAdmin[_0x5f1b79(0x1ea)]=this;},0x1f4),_0x5bc6df[_0x24027c(0x329)]()),_0x38a3fa;},_0x1ba0a2['fn']['sbUploadFiles']=function(_0x2b1605){const _0xc7a6b3=_0x3c09f9;let _0x133455=_0x1ba0a2(this)['prop']('files');for(var _0x424a50=0x0;_0x424a50<_0x133455[_0xc7a6b3(0x4fb)];_0x424a50++){let _0x5acfad=_0x133455[_0x424a50],_0x1c871f=new FormData();_0x1c871f[_0xc7a6b3(0x56d)]('file',_0x5acfad),_0x5bc6df[_0xc7a6b3(0x44f)](_0x1c871f,_0x2b1605);}_0x1ba0a2(this)[_0xc7a6b3(0x37a)]='';},_0x1ba0a2['fn']['setProfile']=function(_0xf37bfe=!0x1,_0x1c29c4=!0x1){const _0x4b0102=_0x3c09f9;return _0x5bc6df[_0x4b0102(0x128)](_0xf37bfe)&&(_0xf37bfe=_0x105d96()?_0x105d96()[_0x4b0102(0x5de)]:''),_0x5bc6df[_0x4b0102(0x128)](_0x1c29c4)&&(_0x1c29c4=_0x105d96()?_0x105d96()[_0x4b0102(0x417)]:STMBX_URL+_0x4b0102(0x24c)),_0x1ba0a2(this)[_0x4b0102(0x5a7)](_0x4b0102(0x34b))['attr'](_0x4b0102(0x218),_0x1c29c4),_0x1ba0a2(this)[_0x4b0102(0x5a7)](_0x4b0102(0x555))[_0x4b0102(0x484)](_0xf37bfe),this;},_0x1ba0a2['fn'][_0x3c09f9(0x565)]=function(_0x81377,_0x23c78e=!0x0){const _0x42a389=_0x3c09f9;return _0x23c78e?_0x1ba0a2(this)[_0x42a389(0x588)](_0x81377):_0x1ba0a2(this)['removeClass'](_0x81377),this;};class _0x4692ba{constructor(_0x570aa9={},_0x25dcbb={}){const _0x5ead8c=_0x3c09f9;this[_0x5ead8c(0x172)]=_0x570aa9,this['extra']=_0x25dcbb,this[_0x5ead8c(0x542)]=[],this[_0x5ead8c(0x297)](_0x570aa9);}get['id'](){const _0x506027=_0x3c09f9;return''==this[_0x506027(0x59e)]('id')?this[_0x506027(0x59e)](_0x506027(0x4c6)):this['get']('id');}get[_0x3c09f9(0x44d)](){const _0x30a635=_0x3c09f9;return this[_0x30a635(0x59e)](_0x30a635(0x574));}get[_0x3c09f9(0x5de)](){const _0x47b7d0=_0x3c09f9;return _0x47b7d0(0x275)in this[_0x47b7d0(0x172)]?this[_0x47b7d0(0x172)][_0x47b7d0(0x275)]+(this['details']['last_name']?'\x20'+this[_0x47b7d0(0x172)][_0x47b7d0(0x377)]:''):'';}get[_0x3c09f9(0x4dd)](){const _0x2a2bfa=_0x3c09f9;return _0x2a2bfa(0x377)in this['details']&&'#'!=this['details'][_0x2a2bfa(0x377)][_0x2a2bfa(0x229)](0x0)?this['name']:_0x47fcfe[_0x2a2bfa(0x245)];}get['image'](){const _0x2de134=_0x3c09f9;return this[_0x2de134(0x59e)](_0x2de134(0x4c7));}get['language'](){const _0x2fc4b0=_0x3c09f9;let _0x35ab93=this[_0x2fc4b0(0x415)]('language');return _0x35ab93||(_0x35ab93=this[_0x2fc4b0(0x415)](_0x2fc4b0(0x2b7))),_0x35ab93?_0x35ab93['value'][_0x2fc4b0(0x299)]():'';}[_0x3c09f9(0x59e)](_0x5d5c29){const _0x3eb4fb=_0x3c09f9;return _0x5d5c29 in this[_0x3eb4fb(0x172)]&&!_0x5bc6df[_0x3eb4fb(0x128)](this[_0x3eb4fb(0x172)][_0x5d5c29])?this[_0x3eb4fb(0x172)][_0x5d5c29]:'';}[_0x3c09f9(0x415)](_0x1ae65e){const _0xa5a31e=_0x3c09f9;return _0x1ae65e in this['extra']&&!_0x5bc6df[_0xa5a31e(0x128)](this[_0xa5a31e(0x55d)][_0x1ae65e])?this['extra'][_0x1ae65e]:'';}['set'](_0x1a67dd,_0x43429d){const _0x49fa2f=_0x3c09f9;this[_0x49fa2f(0x172)][_0x1a67dd]=_0x43429d;}[_0x3c09f9(0x5d6)](_0xe78220,_0x12f64c){const _0xefd43=_0x3c09f9;this[_0xefd43(0x55d)][_0xe78220]=_0x12f64c;}[_0x3c09f9(0x297)](_0x535666){const _0xe5f8e4=_0x3c09f9;if(_0x535666&&_0xe5f8e4(0x172)in _0x535666){for(var _0x591ab1=0x0;_0x591ab1<_0x535666[_0xe5f8e4(0x172)][_0xe5f8e4(0x4fb)];_0x591ab1++)this[_0xe5f8e4(0x5d6)](_0x535666[_0xe5f8e4(0x172)][_0x591ab1][_0xe5f8e4(0x332)],_0x535666[_0xe5f8e4(0x172)][_0x591ab1]);delete _0x535666[_0xe5f8e4(0x172)],this[_0xe5f8e4(0x172)]=_0x535666;}}[_0x3c09f9(0x2ee)](_0x1ddaca){const _0x140751=_0x3c09f9;this['id']?_0x5bc6df[_0x140751(0x612)]({'function':'get-user','user_id':this['id'],'extra':!0x0},_0x1f701c=>{const _0x5bd825=_0x140751;this[_0x5bd825(0x297)](_0x1f701c),_0x1ddaca();}):_0x5bc6df[_0x140751(0x247)](_0x140751(0x595),_0x140751(0x4ae));}[_0x3c09f9(0x3a1)](_0x13326b=!0x1,_0x4c16fd){const _0x529965=_0x3c09f9;this['id']?_0x5bc6df[_0x529965(0x612)]({'function':'get-user-conversations','user_id':this['id'],'exclude_id':_0x4c16fd,'agent':_0x5bc6df[_0x529965(0x3c4)](this[_0x529965(0x44d)])},_0x53d9d5=>{const _0x10b8b4=_0x529965;let _0x3e1a38=[];for(var _0x17a1fb=0x0;_0x17a1fb<_0x53d9d5[_0x10b8b4(0x4fb)];_0x17a1fb++){let _0x358851=_0x53d9d5[_0x17a1fb][_0x10b8b4(0x17b)];if(0x3!=_0x358851||!_0x47fcfe[_0x10b8b4(0x123)]){let _0x2de2b7=new _0x5a9e9c([new _0x494501(_0x53d9d5[_0x17a1fb])],{'id':_0x53d9d5[_0x17a1fb]['conversation_id'],'conversation_status_code':_0x358851,'department':_0x53d9d5[_0x17a1fb][_0x10b8b4(0x364)],'agent_id':_0x53d9d5[_0x17a1fb]['agent_id'],'title':_0x53d9d5[_0x17a1fb][_0x10b8b4(0x126)]});_0x3e1a38[_0x10b8b4(0x33f)](_0x2de2b7);}}this['conversations']=_0x3e1a38,_0x13326b&&_0x13326b(_0x3e1a38);}):_0x5bc6df['error']('Missing\x20user\x20ID',_0x529965(0x4ce));}[_0x3c09f9(0x522)](_0x492413=!0x1){const _0x20614c=_0x3c09f9;let _0x188675='',_0x1214b7=_0x19680f['conversation']?_0x19680f[_0x20614c(0x5b6)]['id']:-0x1;_0x492413||(_0x492413=this[_0x20614c(0x542)]);for(var _0x850f66=0x0;_0x850f66<_0x492413[_0x20614c(0x4fb)];_0x850f66++)_0x492413[_0x850f66]instanceof _0x5a9e9c?_0x188675+=_0x20614c(0x4cb)+(_0x1214b7==_0x492413[_0x850f66]['id']?_0x20614c(0x4f9):'')+_0x20614c(0x283)+_0x492413[_0x850f66]['get']('conversation_status_code')+_0x20614c(0x250)+_0x492413[_0x850f66]['id']+_0x20614c(0x39c)+_0x492413[_0x850f66]['get'](_0x20614c(0x364))+'\x22>'+_0x492413[_0x850f66][_0x20614c(0x49a)]()+'</li>':_0x5bc6df[_0x20614c(0x247)](_0x20614c(0x1b5),'SBUser.getConversationsCode');return _0x188675;}[_0x3c09f9(0xfb)](_0x382395=!0x1,_0x13f4da=!0x1,_0x535347=0x1e,_0x1876a3=0x1e){const _0xd5ff01=_0x3c09f9;!0x1!==_0x382395?_0x5bc6df[_0xd5ff01(0x612)]({'function':_0xd5ff01(0x179),'conversation_id':_0x382395,'load_chat':_0x535347,'limit':_0x1876a3},_0x22aa4d=>{const _0x5e4a68=_0xd5ff01;let _0x4bf371=[];if(_0x22aa4d){if(_0x5e4a68(0x4d6)===_0x22aa4d){window['location']['href']=_0x5bc6df[_0x5e4a68(0x515)]();return;}for(var _0x245caa=0x0;_0x245caa<_0x22aa4d['messages'][_0x5e4a68(0x4fb)];_0x245caa++)(_0x288bd4=_0x22aa4d[_0x5e4a68(0x330)])<=_0x3656d1&&setTimeout(()=>_0x1ba0a2(_0x5e4a68(0x240))[_0x5e4a68(0x5a7)]('.load-more')[_0x5e4a68(0x1aa)](),0x12c),_0x22aa4d['messages'][_0x245caa][_0x5e4a68(0x330)]=_0x22aa4d['total_rows'],_0x4bf371[_0x5e4a68(0x33f)](new _0x494501(_0x22aa4d[_0x5e4a68(0x1fb)][_0x245caa]));}_0x13f4da&&_0x13f4da(new _0x5a9e9c(_0x4bf371,!!_0x22aa4d&&_0x22aa4d[_0x5e4a68(0x172)]));}):_0x5bc6df['error'](_0xd5ff01(0x1d0),_0xd5ff01(0x53d));}['getConversationByID'](_0x381b8b,_0x3ed0c9=!0x1){const _0x1665d1=_0x3c09f9;for(var _0x689d52=0x0;_0x689d52<this[_0x1665d1(0x542)][_0x1665d1(0x4fb)];_0x689d52++)if(this[_0x1665d1(0x542)][_0x689d52]['id']==_0x381b8b)return _0x3ed0c9?_0x689d52:this['conversations'][_0x689d52];return!0x1;}[_0x3c09f9(0x440)](_0x14590b){const _0x506a14=_0x3c09f9;if(_0x14590b instanceof _0x5a9e9c){let _0x12d57f=_0x14590b['id'],_0x5388b0=!0x0;for(var _0x553a9c=0x0;_0x553a9c<this[_0x506a14(0x542)][_0x506a14(0x4fb)];_0x553a9c++)if(this[_0x506a14(0x542)][_0x553a9c]['id']==_0x12d57f){this['conversations'][_0x553a9c]=_0x14590b,_0x5388b0=!0x1;break;}return _0x5388b0&&this[_0x506a14(0x542)]['unshift'](_0x14590b),_0x5388b0;}_0x5bc6df[_0x506a14(0x247)](_0x506a14(0x1b5),'SBUser.addConversation');}[_0x3c09f9(0x516)](_0x392ff8){const _0x5472cb=_0x3c09f9;let _0x998e44=this[_0x5472cb(0x3cb)](_0x392ff8,!0x0);!0x1!==_0x998e44&&this[_0x5472cb(0x542)][_0x5472cb(0x598)](_0x998e44,0x1);}[_0x3c09f9(0x190)](){const _0xa7c797=_0x3c09f9;return!this[_0xa7c797(0x4b4)]()&&this[_0xa7c797(0x542)][this[_0xa7c797(0x542)][_0xa7c797(0x4fb)]-0x1];}[_0x3c09f9(0x4b4)](){const _0x595e6b=_0x3c09f9;return 0x0==this[_0x595e6b(0x542)][_0x595e6b(0x4fb)];}[_0x3c09f9(0x41b)](){const _0x1cd212=_0x3c09f9;return 0x0===Object[_0x1cd212(0x393)](this[_0x1cd212(0x55d)])[_0x1cd212(0x4fb)]&&this[_0x1cd212(0x55d)][_0x1cd212(0x2dd)]===Object;}[_0x3c09f9(0x525)](_0xaa9e03){const _0x44ed2b=_0x3c09f9;this['id']?_0x5bc6df[_0x44ed2b(0x612)]({'function':_0x44ed2b(0x2bd),'user_id':this['id']},()=>(_0x5bc6df['event'](_0x44ed2b(0x2ae),this['id']),console[_0x44ed2b(0x5d4)](_0x44ed2b(0x278)),_0xaa9e03(),!0x0)):_0x5bc6df['error'](_0x44ed2b(0x595),_0x44ed2b(0x5f4));}}window['SBUser']=_0x4692ba;class _0x494501{constructor(_0x350b96={}){const _0x493c89=_0x3c09f9;this[_0x493c89(0x172)]=_0x350b96,this[_0x493c89(0x4ea)]='',_0x493c89(0x275)in this[_0x493c89(0x172)]&&(this[_0x493c89(0x172)][_0x493c89(0x292)]=this[_0x493c89(0x172)][_0x493c89(0x275)]+'\x20'+this['details'][_0x493c89(0x377)]),_0x350b96[_0x493c89(0x13f)]&&(_0x350b96[_0x493c89(0x105)]=_0x350b96[_0x493c89(0x13f)]),delete _0x350b96[_0x493c89(0x13f)],delete _0x350b96[_0x493c89(0x3b2)],delete _0x350b96[_0x493c89(0x55d)],delete _0x350b96[_0x493c89(0x126)],delete _0x350b96[_0x493c89(0x133)],delete _0x350b96[_0x493c89(0x5a8)],delete _0x350b96['agent_id'],delete _0x350b96[_0x493c89(0x364)];let _0x4e24f7=this[_0x493c89(0x59e)](_0x493c89(0x102));if(_0x4e24f7)try{var _0x45ce2b=JSON[_0x493c89(0x553)](this['get'](_0x493c89(0x102))['replace']('\x5c\x27','\x27'));_0x4e24f7=_0x45ce2b&&_0x493c89(0x57d)==typeof _0x45ce2b?_0x45ce2b:{};}catch(_0x39f8b6){_0x4e24f7={};}else _0x4e24f7={};this['set']('payload',_0x4e24f7);}get['id'](){return this['get']('id');}get['attachments'](){const _0x5708d0=_0x3c09f9;return _0x5bc6df['null'](this['details']['attachments'])?[]:JSON[_0x5708d0(0x553)](this[_0x5708d0(0x172)][_0x5708d0(0x610)]);}get[_0x3c09f9(0x48f)](){const _0x1d8be4=_0x3c09f9;return this[_0x1d8be4(0x59e)]('message');}[_0x3c09f9(0x59e)](_0x339675){const _0x4f7d57=_0x3c09f9;return _0x339675 in this[_0x4f7d57(0x172)]&&!_0x5bc6df[_0x4f7d57(0x128)](this[_0x4f7d57(0x172)][_0x339675])?this[_0x4f7d57(0x172)][_0x339675]:'';}[_0x3c09f9(0x144)](_0x19f91e,_0x3cc6a9){const _0x3a5287=_0x3c09f9;this[_0x3a5287(0x172)][_0x19f91e]=_0x3cc6a9;}['payload'](_0x4525f9=!0x1,_0xb374ae=!0x1){const _0x3758ae=_0x3c09f9;let _0x4f6889=this[_0x3758ae(0x59e)](_0x3758ae(0x102));if(!0x1!==_0x4525f9&&!0x1!==_0xb374ae)_0x4f6889[_0x4525f9]=_0xb374ae,this[_0x3758ae(0x144)](_0x3758ae(0x102),_0x4f6889);else{if(!0x1!==_0x4525f9)return _0x4525f9 in _0x4f6889?_0x4f6889[_0x3758ae(0x42a)]:'id'in _0x4f6889&&_0x4f6889['id']==_0x4525f9&&_0x4f6889;}return _0x4f6889;}[_0x3c09f9(0x375)](){return _0x3656d1;}['setLoad'](_0x2f6a79){_0x3656d1=_0x2f6a79;}[_0x3c09f9(0x49a)](_0x2f9db8=!0x1){const _0x5d58ff=_0x3c09f9;let _0x275f3c=_0x5bc6df[_0x5d58ff(0x3c4)](this[_0x5d58ff(0x172)][_0x5d58ff(0x574)]),_0x47a550=_0x47b6a4?SBAdmin['conversations'][_0x5d58ff(0x4c8)](_0x275f3c):'',_0x348cfc=_0x2f9db8?this['get'](_0x5d58ff(0x419)):!this[_0x5d58ff(0x48f)]&&'preview'in this[_0x5d58ff(0x102)]?this[_0x5d58ff(0x102)][_0x5d58ff(0x1f3)]:this[_0x5d58ff(0x48f)],_0x4cfc0c=this['attachments'],_0x559f6c='',_0x5a569d='',_0x3281a2=_0x47b6a4&&SB_ADMIN_SETTINGS[_0x5d58ff(0x587)]||!_0x47b6a4&&(_0x275f3c&&!_0x47fcfe[_0x5d58ff(0x204)]||!_0x275f3c&&_0x47fcfe[_0x5d58ff(0x5ba)])?'<div\x20class=\x22sb-thumb\x22><img\x20loading=\x22lazy\x22\x20src=\x22'+this['details'][_0x5d58ff(0x4c7)]+'\x22><div\x20class=\x22sb-tooltip\x22><div>'+this[_0x5d58ff(0x172)][_0x5d58ff(0x292)]+_0x5d58ff(0x406):'',_0x25e5bf=(_0x275f3c?'sb-right':'')+(''==_0x3281a2?'':_0x5d58ff(0x312)),_0x147d66='';if(!_0x348cfc&&!_0x4cfc0c[_0x5d58ff(0x4fb)])return'';let _0x5c2254=this['payload']();_0x5c2254[_0x5d58ff(0x159)]&&_0x5c2254[_0x5d58ff(0x3ea)]&&(_0x5c2254[_0x5d58ff(0x159)],_0x5c2254[_0x5d58ff(0x3ea)]);let _0x31738a=RegExp(_0x5d58ff(0x1c1))['test'](_0x348cfc);if(_0x275f3c&&!_0x31738a){let _0x355070=_0x348cfc['match'](/\[.+?\]/g)||[],_0xa1599f=!0x1,_0xc59f5c=_0x355070[_0x5d58ff(0x4fb)];for(var _0x94fcfd=0x0;_0x94fcfd<_0xc59f5c;_0x94fcfd++){let _0x73da45=_0x3b9132[_0x5d58ff(0x2b3)](_0x355070[_0x94fcfd]),_0x54db0a=_0x3b9132[_0x5d58ff(0x33e)](_0x73da45[0x1],_0x73da45[0x0]);_0x54db0a&&('['!=_0x348cfc['charAt'](0x0)&&(_0x54db0a=_0x54db0a[_0x5d58ff(0x180)](_0x5d58ff(0x476),_0x5d58ff(0x276))),']'!=_0x348cfc[_0x5d58ff(0x229)](_0x348cfc['length']-0x1)&&(_0x54db0a=_0x54db0a[_0x5d58ff(0x180)]('sb-rich-message',_0x5d58ff(0x149))),_0x348cfc=_0x348cfc[_0x5d58ff(0x180)](_0x355070[_0x94fcfd],'{{RM}}'),_0x348cfc=this[_0x5d58ff(0x132)](_0x348cfc)[_0x5d58ff(0x180)](_0x5d58ff(0x41e),_0x54db0a),_0xa1599f=!0x0,_0x147d66=_0x5d58ff(0x5be)+_0x73da45[0x0]+'\x22');}_0xa1599f&&(_0x25e5bf+=_0x5d58ff(0x22a),_0xc59f5c>0x1&&(_0x147d66=_0x5d58ff(0x43d))),_0xc59f5c||(_0x348cfc=this[_0x5d58ff(0x132)](_0x348cfc));}else _0x348cfc=this[_0x5d58ff(0x132)](_0x348cfc);if(_0x4cfc0c[_0x5d58ff(0x4fb)]){_0x559f6c=_0x5d58ff(0x482);for(var _0x94fcfd=0x0;_0x94fcfd<_0x4cfc0c[_0x5d58ff(0x4fb)];_0x94fcfd++){let _0x2e8c76=_0x4cfc0c[_0x94fcfd][0x1];/.jpg|.jpeg|.png|.webp|.gif/[_0x5d58ff(0x389)](_0x2e8c76)?_0x5a569d+=_0x5d58ff(0x5a3)+(_0x2e8c76[_0x5d58ff(0x27a)](_0x5d58ff(0x526))?'\x20sb-image-png':'')+_0x5d58ff(0x373)+(_0x2e8c76[_0x5d58ff(0x27a)](_0x5d58ff(0x2d7))?_0x5d58ff(0x21f):_0x5d58ff(0x57c))+'\x22\x20loading=\x22lazy\x22\x20src=\x22'+_0x2e8c76+_0x5d58ff(0x1df):_0x5d58ff(0x3a6)===_0x4cfc0c['toString']()[_0x5d58ff(0x380)](_0x4cfc0c['length']-0x4)||_0x5d58ff(0x339)===_0x4cfc0c[_0x5d58ff(0x21e)]()[_0x5d58ff(0x380)](_0x4cfc0c[_0x5d58ff(0x4fb)]-0x4)||_0x5d58ff(0x5a0)===_0x4cfc0c[_0x5d58ff(0x21e)]()[_0x5d58ff(0x380)](_0x4cfc0c['length']-0x4)||'amr'===_0x4cfc0c[_0x5d58ff(0x21e)]()[_0x5d58ff(0x380)](_0x4cfc0c[_0x5d58ff(0x4fb)]-0x4)?_0x5a569d+=_0x5d58ff(0x38c)+_0x2e8c76+_0x5d58ff(0x29e):'mp4'===_0x4cfc0c[_0x5d58ff(0x21e)]()[_0x5d58ff(0x380)](_0x4cfc0c['length']-0x4)?_0x5a569d+=_0x5d58ff(0x571)+_0x2e8c76+_0x5d58ff(0x5f0):_0x5a569d+=''+(_0x2e8c76?'<a\x20rel=\x22noopener\x22\x20style=\x22padding-right:\x20var(--chat-spacing-size-1-4);text-decoration:none;padding-left:\x20var(--chat-spacing-size-5);\x22\x20target=\x22_blank\x22\x20class=\x22sb-message\x22\x20href=\x22'+_0x2e8c76+'\x22><i\x20class=\x22bi-file-text\x22></i>\x20'+_0x4cfc0c[_0x94fcfd][0x0]+_0x5d58ff(0x3bd):'\x20');}_0x559f6c+=_0x5d58ff(0x5b7);}var _0x3a8d6b='';if(_0x348cfc[_0x5d58ff(0x27a)]('〚')){var _0x41ac58=_0x105d96()['name'],_0x568b14=_0x105d96()['getExtra'](_0x5d58ff(0x2e3))[_0x5d58ff(0x37a)],_0x55637f=Number(_0x568b14),_0x3fb5cf='';if(_0x55637f>0x0){if(_0x348cfc[_0x5d58ff(0x27a)](_0x568b14))_0x348cfc=_0x348cfc[_0x5d58ff(0x180)](_0x568b14,_0x41ac58);else{var _0x39c72c=_0x348cfc[_0x5d58ff(0x57a)]('}');_0x348cfc=_0x348cfc[_0x5d58ff(0x1e5)](_0x39c72c+0x1),_0x3fb5cf=_0x5d58ff(0x5cd);}}else{if(_0x568b14=_0x1ba0a2(document)[_0x5d58ff(0x5a7)](_0x5d58ff(0x191))['innerText'],_0x348cfc[_0x5d58ff(0x27a)](_0x568b14))_0x348cfc=_0x348cfc['replace'](_0x568b14,_0x41ac58);else{var _0x39c72c=_0x348cfc['indexOf']('}');_0x348cfc=_0x348cfc[_0x5d58ff(0x1e5)](_0x39c72c+0x1),_0x3fb5cf=_0x5d58ff(0x5cd);}}(_0x348cfc=(_0x348cfc=(_0x348cfc=(_0x348cfc=(_0x348cfc=(_0x348cfc=(_0x348cfc=_0x348cfc['replace'](/<br\s*\/?>/,''))[_0x5d58ff(0x180)]('〚',_0x5d58ff(0x5cd)==_0x3fb5cf?_0x5d58ff(0x5c8):_0x5d58ff(0x585)+_0x41ac58+'</strong><br>'))[_0x5d58ff(0x180)]('〛',_0x5d58ff(0x1a9)))[_0x5d58ff(0x180)](/\|(?=\n)/,_0x5d58ff(0x5b7)))['replace'](/<p\s*\/?>\s*<p\s*\/?>/g,''))[_0x5d58ff(0x180)]('{',''))[_0x5d58ff(0x180)]('@s.whatsapp.net}',''))[_0x5d58ff(0x38f)](_0x41ac58)&&(_0x348cfc=_0x348cfc[_0x5d58ff(0x1e5)](_0x41ac58[_0x5d58ff(0x4fb)])[_0x5d58ff(0x605)]()),_0x3a8d6b=_0x5d58ff(0x54f)+this[_0x5d58ff(0x172)]['id']+'\x22\x20'+_0x147d66+_0x5d58ff(0x27f)+_0x25e5bf+'\x22>'+_0x3281a2+_0x5d58ff(0x592)+(this[_0x5d58ff(0x4ea)]?encodeURI(this[_0x5d58ff(0x4ea)][_0x5d58ff(0x48f)]):encodeURI(_0x348cfc))+_0x5d58ff(0x580)+_0x5a569d+_0x5d58ff(0x1ed)+(this['linksData']?this[_0x5d58ff(0x4ea)][_0x5d58ff(0x48f)]:_0x348cfc[_0x5d58ff(0x180)](/\|/g,'\x20'))+_0x5d58ff(0x2d1)+_0x559f6c+_0x5d58ff(0x421)+_0x5bc6df['beautifyTime'](this[_0x5d58ff(0x172)][_0x5d58ff(0x5e6)],!0x0)+_0x5d58ff(0x140)+_0x47a550+_0x5d58ff(0x241);}else _0x3a8d6b=_0x5d58ff(0x54f)+this['details']['id']+'\x22\x20'+_0x147d66+'\x20\x20class=\x22sb-shadow-conversation\x20'+_0x25e5bf+'\x22\x20\x20style=\x22transition:\x200.3s\x20all\x22>'+_0x3281a2+_0x5d58ff(0x4fe)+(this[_0x5d58ff(0x4ea)]?encodeURIComponent(this[_0x5d58ff(0x4ea)][_0x5d58ff(0x48f)]):encodeURIComponent(_0x348cfc))+'\x22>\x0a\x09\x09\x09\x09\x20\x20'+_0x5a569d+_0x5d58ff(0x17a)+(this[_0x5d58ff(0x4ea)]?this['linksData'][_0x5d58ff(0x48f)]:_0x348cfc[_0x5d58ff(0x180)](/\|/g,'\x20'))+'\x0a\x09\x09\x09\x09\x20\x20</div>\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x09'+_0x559f6c+_0x5d58ff(0x535)+_0x5bc6df['beautifyTime'](this[_0x5d58ff(0x172)][_0x5d58ff(0x5e6)],!0x0)+_0x5d58ff(0x294)+_0x47a550+'\x0a\x09\x09\x09\x09</div>\x0a\x09\x09\x09\x0a\x09\x09\x09\x20\x20';return _0x3a8d6b;}['render'](_0xc8e52b=!0x1){const _0x2aa05a=_0x3c09f9;!0x1===_0xc8e52b&&(_0xc8e52b=''+this['details'][_0x2aa05a(0x48f)]);let _0x5ae8f4=_0xc8e52b['length'],_0x3eebea=(_0xc8e52b=(_0xc8e52b=_0xc8e52b[_0x2aa05a(0x180)](/- /g,_0x2aa05a(0x576))+'</li>')[_0x2aa05a(0x180)](/(?:\r\n|\r|\n)/g,'<br>'))[_0x2aa05a(0x26b)](/```([\s\S]+?)```/g)||[];for(var _0x1c68f9=0x0;_0x1c68f9<_0x3eebea[_0x2aa05a(0x4fb)];_0x1c68f9++){let _0x31fdf6=_0x2aa05a(0x324)+_0x1c68f9+'}}';_0xc8e52b=_0xc8e52b[_0x2aa05a(0x180)](_0x3eebea[_0x1c68f9],_0x31fdf6);}let _0x303271=_0xc8e52b[_0x2aa05a(0x26b)](/`([^`]+)`/g)||[];for(var _0x1c68f9=0x0;_0x1c68f9<_0x303271['length'];_0x1c68f9++){let _0x181beb=_0x2aa05a(0x29a)+_0x1c68f9+'}}';_0xc8e52b=_0xc8e52b['replace'](_0x303271[_0x1c68f9],_0x181beb);}_0xc8e52b=(_0xc8e52b=(_0xc8e52b=_0xc8e52b[_0x2aa05a(0x180)](/(?<!\*)\*(.*?)\*(?!\*)/g,_0x2aa05a(0x2e8)))[_0x2aa05a(0x180)](/(^|\s)\_([^\_]+)\_/g,_0x2aa05a(0x40e)))['replace'](/(<li>\s*)?~([^~]+)~/g,function(_0x346173,_0x5d837c,_0x222ae3){const _0xeb3ebe=_0x2aa05a;return _0x5d837c?'<li>'+_0x5d837c+_0xeb3ebe(0x29f)+_0x222ae3+_0xeb3ebe(0x499):_0xeb3ebe(0x29f)+_0x222ae3+'</del>';}),((0x6==_0x5ae8f4||0x5==_0x5ae8f4)&&_0xc8e52b[_0x2aa05a(0x38f)](_0x2aa05a(0x173))||_0x5ae8f4<0x3&&_0xc8e52b[_0x2aa05a(0x26b)](/(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/))&&(_0xc8e52b='<span\x20class=\x22emoji-large\x22>'+_0xc8e52b+_0x2aa05a(0x12b)),_0xc8e52b[_0x2aa05a(0x27a)](_0x2aa05a(0x564))&&(_0xc8e52b=_0xc8e52b[_0x2aa05a(0x353)]({'target':_0x2aa05a(0x16f)}));for(var _0x1c68f9=0x0;_0x1c68f9<_0x303271[_0x2aa05a(0x4fb)];_0x1c68f9++){let _0x514610=_0x2aa05a(0x29a)+_0x1c68f9+'}}';_0xc8e52b=_0xc8e52b[_0x2aa05a(0x180)](_0x514610,_0x2aa05a(0x462)+_0x303271[_0x1c68f9][_0x2aa05a(0x1e5)](0x1,_0x303271[_0x1c68f9][_0x2aa05a(0x4fb)]-0x1)+_0x2aa05a(0x4af));}for(var _0x1c68f9=0x0;_0x1c68f9<_0x3eebea[_0x2aa05a(0x4fb)];_0x1c68f9++){let _0x886b5e=_0x2aa05a(0x324)+_0x1c68f9+'}}';_0xc8e52b=_0xc8e52b['replace'](_0x886b5e,'<code>'+_0x3eebea[_0x1c68f9][_0x2aa05a(0x1e5)](0x3,_0x3eebea[_0x1c68f9][_0x2aa05a(0x4fb)]-0x3)+_0x2aa05a(0x596));}return _0xc8e52b[_0x2aa05a(0x180)](/&amp;lt;/g,'&lt;');}[_0x3c09f9(0x26e)](_0x3ba7d6=!0x1){const _0x7a5cf3=_0x3c09f9;return!0x1===_0x3ba7d6&&(_0x3ba7d6=''+this[_0x7a5cf3(0x172)][_0x7a5cf3(0x48f)]),_0x3ba7d6=_0x3ba7d6['replace'](/https:\/\/maps\.google\.com\/.*\b/g,_0x77aa22=>_0x7a5cf3(0x228)+_0x66a1ca(_0x7a5cf3(0x446))+_0x7a5cf3(0x12b));}}window[_0x3c09f9(0x1c9)]=_0x494501;class _0x5a9e9c{constructor(_0x13b765,_0x563569){const _0x24bf32=_0x3c09f9;this[_0x24bf32(0x172)]=_0x5bc6df[_0x24bf32(0x128)](_0x563569)?{}:_0x563569,Array[_0x24bf32(0x1e3)](_0x13b765)?(this[_0x24bf32(0x1fb)]=[],_0x13b765[_0x24bf32(0x4fb)]&&(_0x13b765[0x0]instanceof _0x494501?this[_0x24bf32(0x1fb)]=_0x13b765:_0x5bc6df[_0x24bf32(0x247)](_0x24bf32(0x2bb),_0x24bf32(0x16b)))):_0x5bc6df[_0x24bf32(0x247)](_0x24bf32(0x3ee),_0x24bf32(0x16b));}get['id'](){const _0x16930c=_0x3c09f9;return''==this['get']('id')?this['get'](_0x16930c(0x53a)):this['get']('id');}['get'](_0x308240){const _0x527032=_0x3c09f9;if(_0x308240 in this[_0x527032(0x172)]&&!_0x5bc6df[_0x527032(0x128)](this[_0x527032(0x172)][_0x308240]))return this[_0x527032(0x172)][_0x308240];if(_0x527032(0x126)==_0x308240){if(!_0x5bc6df[_0x527032(0x128)](this[_0x527032(0x172)][_0x527032(0x275)]))return this[_0x527032(0x172)][_0x527032(0x275)]+'\x20'+this['details'][_0x527032(0x377)];if(this[_0x527032(0x1fb)][_0x527032(0x4fb)])return this['messages'][0x0]['get']('full_name');}return'';}[_0x3c09f9(0x144)](_0x2a3dc7,_0x66f3ff){this['details'][_0x2a3dc7]=_0x66f3ff;}[_0x3c09f9(0x259)](_0x207e75){const _0x4946a2=_0x3c09f9;for(var _0x32fefb=0x0;_0x32fefb<this[_0x4946a2(0x1fb)]['length'];_0x32fefb++)if(this['messages'][_0x32fefb]['id']==_0x207e75)return this[_0x4946a2(0x1fb)][_0x32fefb]['set']('index',_0x32fefb),this[_0x4946a2(0x1fb)][_0x32fefb];return!0x1;}[_0x3c09f9(0x602)](){const _0xa44601=_0x3c09f9;let _0x5b200d=this[_0xa44601(0x1fb)]['length']-0x1;for(var _0x2c039b=_0x5b200d;_0x2c039b>-0x1;_0x2c039b--)if(this[_0xa44601(0x1fb)][_0x2c039b][_0xa44601(0x48f)]||this['messages'][_0x2c039b][_0xa44601(0x610)][_0xa44601(0x4fb)])return this[_0xa44601(0x1fb)][_0x2c039b];return!0x1;}[_0x3c09f9(0x4f8)](_0x57d907=!0x1,_0x3fb97a=!0x1){const _0x1a514c=_0x3c09f9;!0x1===_0x57d907&&(_0x57d907=this[_0x1a514c(0x1fb)]['length']-0x1);for(var _0x1a261f=_0x57d907;_0x1a261f>-0x1;_0x1a261f--){let _0x3ad163=this[_0x1a514c(0x1fb)][_0x1a261f],_0x2b8f6c=_0x3ad163[_0x1a514c(0x59e)](_0x1a514c(0x574));if((_0x3ad163['message']||_0x3ad163[_0x1a514c(0x610)]['length'])&&(!_0x3fb97a&&!_0x5bc6df[_0x1a514c(0x3c4)](_0x2b8f6c)||!0x0===_0x3fb97a&&(_0x1a514c(0x494)==_0x2b8f6c||_0x1a514c(0x2c7)==_0x2b8f6c)||_0x1a514c(0x56c)==_0x3fb97a&&'bot'==_0x2b8f6c||_0x1a514c(0x284)==_0x3fb97a&&_0x1a514c(0x56c)!=_0x2b8f6c||_0x1a514c(0x257)==_0x3fb97a&&_0x5bc6df['isAgent'](_0x2b8f6c)))return this[_0x1a514c(0x1fb)][_0x1a261f][_0x1a514c(0x144)](_0x1a514c(0x4a4),_0x1a261f-0x1),this[_0x1a514c(0x1fb)][_0x1a261f];}return!0x1;}['getUserMessages'](_0x14e473=_0x3c09f9(0x11f)){const _0x4484ac=_0x3c09f9;let _0x3f2965=[],_0x138869=_0x4484ac(0x11f)==_0x14e473?[_0x4484ac(0x4ff),_0x4484ac(0x611),_0x4484ac(0x11f)]:'agents'==_0x14e473?[_0x4484ac(0x494),'admin']:['bot'];for(var _0x3ffcd0=0x0;_0x3ffcd0<this['messages'][_0x4484ac(0x4fb)];_0x3ffcd0++)_0x138869[_0x4484ac(0x27a)](this[_0x4484ac(0x1fb)][_0x3ffcd0]['get'](_0x4484ac(0x574)))&&_0x3f2965['push'](this[_0x4484ac(0x1fb)][_0x3ffcd0]);return _0x3f2965;}[_0x3c09f9(0x579)](_0x2c931f,_0x27fb30){const _0x190286=_0x3c09f9;if(_0x27fb30 instanceof _0x494501){for(var _0x129a75=0x0;_0x129a75<this['messages'][_0x190286(0x4fb)];_0x129a75++)if(this[_0x190286(0x1fb)][_0x129a75]['id']==_0x2c931f)return this[_0x190286(0x1fb)][_0x129a75]=_0x27fb30,!0x0;}else _0x5bc6df[_0x190286(0x247)](_0x190286(0x54b),_0x190286(0x407));return!0x1;}['addMessages'](_0x195c71){const _0x18d8ff=_0x3c09f9;if(Array['isArray'](_0x195c71)){for(var _0x4f3642=0x0;_0x4f3642<_0x195c71[_0x18d8ff(0x4fb)];_0x4f3642++)_0x195c71[_0x4f3642]instanceof _0x494501&&this['messages'][_0x18d8ff(0x33f)](_0x195c71[_0x4f3642]);}else _0x195c71 instanceof _0x494501?this[_0x18d8ff(0x1fb)][_0x18d8ff(0x33f)](_0x195c71):_0x5bc6df['error']('Messages\x20not\x20of\x20type\x20SBMessage',_0x18d8ff(0x4cf));return this;}[_0x3c09f9(0x49a)](){const _0x2b34f8=_0x3c09f9;let _0x5d072f=this['messages'][_0x2b34f8(0x4fb)];if(_0x5d072f){let _0x335195=this['messages'][_0x5d072f-0x1],_0x11fba7=_0x335195[_0x2b34f8(0x48f)];if(!0x1!==_0x11fba7[_0x2b34f8(0x57a)]('[')){let _0x2b46f0=_0x11fba7[_0x2b34f8(0x26b)](/\[.+?\]/g)||[];if(_0x2b46f0[_0x2b34f8(0x4fb)]){let _0x4f78a6=_0x3b9132[_0x2b34f8(0x2b3)](_0x2b46f0[0x0]);_0x11fba7=_0x11fba7[_0x2b34f8(0x180)](_0x2b46f0[0x0],_0x66a1ca(_0x5bc6df[_0x2b34f8(0x128)](_0x4f78a6[0x1][_0x2b34f8(0x48f)])?_0x5bc6df[_0x2b34f8(0x128)](_0x4f78a6[0x1][_0x2b34f8(0x126)])?'':_0x4f78a6[0x1][_0x2b34f8(0x126)]:_0x4f78a6[0x1][_0x2b34f8(0x48f)]));}}if(_0x5bc6df[_0x2b34f8(0x1a8)](_0x11fba7)){let _0x1db731=_0x11fba7[_0x2b34f8(0x57a)]('}');_0x11fba7=_0x11fba7[_0x2b34f8(0x1e5)](_0x1db731+0x1);}let _0x77c51=this[_0x2b34f8(0x59e)](_0x2b34f8(0x126));return(!_0x77c51||_0x94a56c&&_0x47fcfe[_0x2b34f8(0x170)])&&(_0x77c51=_0x5bc6df[_0x2b34f8(0x3c4)](_0x335195['get'](_0x2b34f8(0x574)))?_0x335195[_0x2b34f8(0x59e)](_0x2b34f8(0x292)):_0x66a1ca('You')),_0x2b34f8(0x23f)+_0x335195['get'](_0x2b34f8(0x4c6))+_0x2b34f8(0x5b0)+_0x335195[_0x2b34f8(0x59e)](_0x2b34f8(0x4c7))+_0x2b34f8(0x4ba)+_0x77c51+_0x2b34f8(0x1c5)+_0x5bc6df[_0x2b34f8(0x148)](_0x335195[_0x2b34f8(0x59e)]('creation_time'))+_0x2b34f8(0x220)+(_0x11fba7['length']>0x72?_0x11fba7[_0x2b34f8(0x380)](0x0,0x72)+_0x2b34f8(0x1d3):_0x11fba7)+'</div></div>';}return'';}[_0x3c09f9(0x3c0)](_0x25aa7e){const _0x182777=_0x3c09f9;for(var _0x51e1bb=0x0;_0x51e1bb<this['messages'][_0x182777(0x4fb)];_0x51e1bb++)if(this[_0x182777(0x1fb)][_0x51e1bb]['id']==_0x25aa7e)return this[_0x182777(0x1fb)][_0x182777(0x598)](_0x51e1bb,0x1),!0x0;return!0x1;}['searchMessages'](_0x5a9784,_0x2a03d4=!0x1){const _0x3c080e=_0x3c09f9;let _0x382ab2=[];for(var _0x10737d=0x0;_0x10737d<this[_0x3c080e(0x1fb)][_0x3c080e(0x4fb)];_0x10737d++){let _0x5a8fd7=this[_0x3c080e(0x1fb)][_0x10737d][_0x3c080e(0x48f)];(_0x2a03d4&&_0x5a8fd7==_0x5a9784||!_0x2a03d4&&_0x5a8fd7['includes'](_0x5a9784))&&_0x382ab2[_0x3c080e(0x33f)][messages[_0x10737d]];}return _0x382ab2;}[_0x3c09f9(0x379)](){const _0x1d129d=_0x3c09f9;let _0x1b2134=[];for(var _0x3777aa=0x0;_0x3777aa<this['messages'][_0x1d129d(0x4fb)];_0x3777aa++){let _0x205bfd=this[_0x1d129d(0x1fb)][_0x3777aa]['attachments'];for(var _0x1cdd87=0x0;_0x1cdd87<_0x205bfd[_0x1d129d(0x4fb)];_0x1cdd87++){let _0xd10418=_0x205bfd[_0x1cdd87][0x1];_0x1b2134['push']([_0x205bfd[_0x1cdd87][0x0],_0xd10418,_0xd10418[_0x1d129d(0x380)](_0xd10418[_0x1d129d(0x1af)]('.')+0x1),this['messages'][_0x3777aa]['id']]);}}return _0x1b2134;}}window[_0x3c09f9(0x103)]=_0x5a9e9c;var _0x19680f={'rich_messages_list':['chips',_0x3c09f9(0x145),_0x3c09f9(0x5d5),_0x3c09f9(0x27e),_0x3c09f9(0x196),'list'],'emoji_options':{'range':0x0,'range_limit':0x2f,'list':[],'list_now':[],'touch':!0x1},'initialized':!0x1,'editor_listening':!0x1,'conversation':!0x1,'load_message':[],'is_busy':!0x1,'is_busy_update':!0x1,'is_busy_populate':!0x1,'chat_open':!0x1,'real_time':!0x1,'agent_id':-0x1,'agent_online':!0x1,'user_online':!0x1,'expanded':!0x1,'main_header':!0x0,'start_header':!0x1,'desktop_notifications':!0x1,'flash_notifications':!0x1,'id_last_message':0x0,'id_last_message_conversation':0x0,'datetime_last_message_conversation':_0x3c09f9(0x122),'audio':!0x1,'audio_out':!0x1,'tab_active':!0x0,'notifications':[],'typing_settings':{'typing':!0x1,'sent':!0x1,'timeout':!0x1},'email_sent':!0x1,'dashboard':!0x1,'articles':!0x1,'articles_categories':!0x1,'skip':!0x1,'queue_interval':!0x1,'departments':!0x1,'default_department':null,'default_agent':null,'default_tags':null,'offline_message_set':!0x1,'setActiveAgent':function(_0x52fd66){const _0x56a2b3=_0x3c09f9;let _0x389c3c=_0x1ba0a2('.sb-admin')[_0x56a2b3(0x5a7)](_0x56a2b3(0x594))[_0x56a2b3(0x5a7)](_0x56a2b3(0x60b)),_0x39f3bb=_0x389c3c[_0x56a2b3(0x5a7)](_0x56a2b3(0x48c)+_0x52fd66+'\x22]');_0x19680f[_0x56a2b3(0x5b6)]['set'](_0x56a2b3(0x4f6),_0x52fd66),_0x389c3c[_0x56a2b3(0x5a7)]('\x20>\x20p')[_0x56a2b3(0x566)](_0x56a2b3(0x617),_0x39f3bb[_0x56a2b3(0x1c4)]('value'))[_0x56a2b3(0x484)](_0x39f3bb[_0x56a2b3(0x484)]())[_0x56a2b3(0x548)]()[_0x56a2b3(0x120)](!0x1),_0x56a2b3(0x494)==SB_ACTIVE_AGENT[_0x56a2b3(0x574)]&&(!SB_ADMIN_SETTINGS[_0x56a2b3(0x368)]||_0x52fd66)&&(conversations_admin_list_ul[_0x56a2b3(0x5a7)](_0x56a2b3(0x3bb)+_0x19680f[_0x56a2b3(0x5b6)]['id']+'\x22]')[_0x56a2b3(0x20b)](),SBConversations[_0x56a2b3(0x5f3)]()),_0x52fd66&&_0x19680f[_0x56a2b3(0x2fa)]('Agent\x20assigned.\x20The\x20agent\x20has\x20been\x20notified.');},'assignAgent':function(_0x2b6fc5,_0x36ba34,_0x1d1cb2=!0x1){const _0x17edbc=_0x3c09f9;_0x5bc6df[_0x17edbc(0x612)]({'function':'update-conversation-agent','conversation_id':_0x2b6fc5,'agent_id':_0x36ba34,'message':_0x19680f[_0x17edbc(0x5b6)][_0x17edbc(0x602)]()[_0x17edbc(0x48f)]},_0x2ad38b=>{_0x1d1cb2&&_0x1d1cb2(_0x2ad38b);});},'assignAgent':function(_0x8dcb0a,_0x5255ca,_0x4d24b3=!0x1){const _0x2dbc1f=_0x3c09f9;_0x5bc6df['ajax']({'function':'update-conversation-agent','conversation_id':_0x8dcb0a,'agent_id':_0x5255ca,'message':_0x19680f[_0x2dbc1f(0x5b6)]['getLastMessage']()[_0x2dbc1f(0x48f)]},_0x279d61=>{_0x4d24b3&&_0x4d24b3(_0x279d61);});},'showResponse':function(_0x59d031,_0x310969=!0x1){const _0x4fb803=_0x3c09f9;let _0x5383b4=_0x1ba0a2('.sb-admin');_0x5383b4[_0x4fb803(0x5a7)]('.sb-area-conversations');var _0x3d53b2=_0x5383b4['find'](_0x4fb803(0x232));_0x310969?_0x4fb803(0x247)==_0x310969?_0x3d53b2['addClass'](_0x4fb803(0x13b)):_0x3d53b2['addClass'](_0x4fb803(0x46c)):(_0x3d53b2[_0x4fb803(0x414)](_0x4fb803(0x14f)),clearTimeout(_0x5da94a),_0x5da94a=setTimeout(()=>{const _0x1c8426=_0x4fb803;_0x3d53b2[_0x1c8426(0x120)](!0x1);},0x1388)),_0x3d53b2[_0x4fb803(0x484)]('<h3>'+_0x66a1ca(_0x59d031)+_0x4fb803(0x533))['sbActive'](!0x0);},'sendMessage':function(_0x3855b9=-0x1,_0x2379e1='',_0x121d5a=[],_0x2ba901=!0x1,_0x1e1521=!0x1,_0x272cd8=!0x1){const _0x27322e=_0x3c09f9;let _0x28bc61=_0x4cf858&&_0x17de24[_0x27322e(0x5e4)][_0x27322e(0x40d)](),_0x59e350=!0x1;if(void 0x0!=_0x19680f[_0x27322e(0x5b6)]['id']&&_0x105d96()[_0x27322e(0xfb)](_0x19680f['conversation']['id'],_0x16a403=>{const _0x36a6cb=_0x27322e;_0x16a403['details'][_0x36a6cb(0x4f6)]!=SB_ACTIVE_AGENT['id']&&_0x19680f[_0x36a6cb(0x531)](_0x19680f[_0x36a6cb(0x5b6)]['id'],SB_ACTIVE_AGENT['id'],()=>{const _0x2f598e=_0x36a6cb;_0x19680f[_0x2f598e(0x321)](SB_ACTIVE_AGENT['id']);});}),!_0x105d96()&&!_0x47b6a4){this['addUserAndLogin'](()=>this['sendMessage'](_0x3855b9,_0x2379e1,_0x121d5a,_0x2ba901,_0x1e1521),!0x0);return;}if(!this[_0x27322e(0x5b6)]){let _0x3fe4d0=!_0x47b6a4&&_0x105d96()[_0x27322e(0x190)]();if(!_0x3fe4d0||_0x27322e(0x19e)==_0x580b82||_0x19680f[_0x27322e(0x475)]&&_0x19680f[_0x27322e(0x475)]!=_0x3fe4d0['get'](_0x27322e(0x364))||_0x19680f[_0x27322e(0x42d)]&&_0x19680f[_0x27322e(0x42d)]!=_0x3fe4d0['get'](_0x27322e(0x4f6))){this[_0x27322e(0x51d)](_0x272cd8,_0x3855b9,'',[],_0x47b6a4&&SB_ACTIVE_AGENT[_0x27322e(0x364)]?SB_ACTIVE_AGENT['department']:null,null,()=>this[_0x27322e(0x217)](_0x3855b9,_0x2379e1,_0x121d5a,_0x2ba901,_0x1e1521));return;}this[_0x27322e(0x295)](_0x3fe4d0['id']),this[_0x27322e(0x1c2)](_0x3fe4d0),_0x580b82=!0x1;}this['calculateLabelDateFirst'](),-0x1==_0x3855b9&&(_0x3855b9=_0x47b6a4?SB_ACTIVE_AGENT['id']:_0x105d96()['id']);let _0xcfa053=_0x3855b9!=_0x1aa2cb;if(!_0x2379e1&&!_0x121d5a[_0x27322e(0x4fb)]){var _0x2379e1=_0xb73fc7[_0x27322e(0xf3)]()['trim']();_0x27fc27[_0x27322e(0x5a7)](_0x27322e(0x34a))[_0x27322e(0x471)](function(){const _0x400a40=_0x27322e;_0x121d5a[_0x400a40(0x33f)]([_0x1ba0a2(this)[_0x400a40(0x566)](_0x400a40(0x543)),_0x1ba0a2(this)[_0x400a40(0x566)](_0x400a40(0x617)),_0x1ba0a2(this)['attr'](_0x400a40(0x410))]);}),_0x47b6a4&&SBAdmin[_0x27322e(0x26d)]&&(_0x17de24[_0x27322e(0x5e4)][_0x27322e(0x455)]([_0x2379e1],_0x105d96()[_0x27322e(0x43b)],_0x147246=>{const _0x2fad01=_0x27322e;_0x147246['length']&&(_0x1e1521?_0x1e1521[_0x2fad01(0x40c)]=_0x2379e1:_0x1e1521={'original-message':_0x2379e1},_0x147246[0x0][_0x2fad01(0x20a)]&&(_0x2379e1=_0x147246[0x0]['translatedText'])),this['sendMessage'](_0x3855b9,_0x2379e1,_0x121d5a,_0x2ba901,_0x1e1521,_0x272cd8);}),_0x59e350=!0x0);}if(this[_0x27322e(0x235)](!0x0),_0xcfa053&&(_0xb73fc7['val']('')[_0x27322e(0x130)](_0x27322e(0x2bc),''),_0x27fc27[_0x27322e(0x5a7)](_0x27322e(0x45b))[_0x27322e(0x484)]('')),this[_0x27322e(0x104)](!0x1),!_0x59e350){if(!0x1===_0x272cd8&&_0x3855b9==_0x1aa2cb&&(_0x272cd8=_0x27322e(0xf4)),_0x47b6a4||!_0xcfa053||_0x28bc61||(_0x272cd8=0x2),_0x2379e1||_0x121d5a['length']||_0x1e1521){let _0x48cef7={'user_id':_0x3855b9,'user':_0x105d96(),'conversation_id':this[_0x27322e(0x5b6)]['id'],'conversation':this[_0x27322e(0x5b6)],'conversation_status_code':_0x272cd8,'message':_0x2379e1,'attachments':_0x121d5a};_0x5bc6df['ajax']({'function':'send-message','user_id':_0x3855b9,'conversation_id':this['conversation']['id'],'message':_0x2379e1,'attachments':_0x121d5a,'conversation_status_code':_0x272cd8,'queue':!_0x47b6a4&&_0x47fcfe[_0x27322e(0x619)]&&_0xcfa053,'payload':_0x1e1521,'recipient_id':!!_0x47b6a4&&_0x105d96()['id']},_0x281936=>{const _0x4e9a93=_0x27322e;_0x47b6a4||_0x3855b9!=_0x1aa2cb||(this[_0x4e9a93(0x55f)]?this[_0x4e9a93(0x4a6)]():this['chat_open']||this['updateNotifications'](_0x4e9a93(0x2fb),this[_0x4e9a93(0x5b6)]['id'])),(!_0x47b6a4||this[_0x4e9a93(0x161)])&&(_0x47b6a4||this['agent_online'])||this[_0x4e9a93(0x2ee)](),_0x47b6a4||!_0xcfa053||_0x4cf858||(this[_0x4e9a93(0x5db)](),this[_0x4e9a93(0x45c)]()),!_0x47b6a4&&_0xcfa053&&(!_0x1e1521||_0x4e9a93(0x5ce)!=_0x1e1521['id']&&_0x5bc6df[_0x4e9a93(0x128)](_0x1e1521[_0x4e9a93(0x2ff)]))&&_0x17de24[_0x4e9a93(0x5e4)][_0x4e9a93(0x48f)](_0x2379e1,_0x121d5a),_0xcfa053&&_0x47fcfe['language-detection']&&this[_0x4e9a93(0x5b6)]&&_0x2379e1['split']('\x20')[_0x4e9a93(0x4fb)]>0x1&&!_0x5bc6df[_0x4e9a93(0x12c)]('language-detection-completed')&&(_0x5bc6df['ajax']({'function':'google-language-detection-update-user','user_id':_0x3855b9,'string':_0x2379e1,'token':_0x17de24['dialogflow']['token']}),_0x5bc6df[_0x4e9a93(0x12c)](_0x4e9a93(0x60f),!0x0)),!this[_0x4e9a93(0x37f)]||_0x47b6a4||!_0x47fcfe['articles']||_0x47fcfe[_0x4e9a93(0x53e)]||this['isInitDashboard']()||setTimeout(()=>{const _0x5e11b7=_0x4e9a93;this[_0x5e11b7(0x5b6)]&&(this['sendMessage'](_0x1aa2cb,_0x5e11b7(0xf5)),this[_0x5e11b7(0x5d7)](),this['articles']=!0x1);},0x1388),_0x281936[_0x4e9a93(0x619)]&&this[_0x4e9a93(0x619)](this[_0x4e9a93(0x5b6)]['id']),_0x48cef7[_0x4e9a93(0x32c)]=_0x281936['id'],_0x5bc6df[_0x4e9a93(0x47c)](_0x4e9a93(0x61e),_0x48cef7),_0x94a56c&&SBTickets[_0x4e9a93(0x15f)](),_0x2ba901&&_0x2ba901(_0x48cef7),_0x281936[_0x4e9a93(0x43f)][_0x4e9a93(0x4fb)]&&_0x5bc6df[_0x4e9a93(0x47c)]('SBNotificationsSent',_0x281936[_0x4e9a93(0x43f)]),this[_0x4e9a93(0xf4)]&&(this[_0x4e9a93(0xf4)]=!0x1),this[_0x4e9a93(0x235)](!0x1);}),_0xcfa053&&(_0x2379e1=_0x5bc6df[_0x27322e(0x601)](_0x2379e1),_0xb5e3a[_0x27322e(0x56d)](new _0x494501({'id':_0x27322e(0x1da),'profile_image':_0x47b6a4?SB_ACTIVE_AGENT['profile_image']:_0x105d96()[_0x27322e(0x417)],'full_name':_0x105d96()[_0x27322e(0x5de)],'creation_time':'0000-00-00\x2000:00:00','message':_0x2379e1,'user_type':_0x47b6a4?_0x27322e(0x494):_0x27322e(0x11f)})[_0x27322e(0x49a)]()[_0x27322e(0x180)](_0x27322e(0x11a),_0x27322e(0x114)+_0x66a1ca('Sending')+_0x27322e(0x46d))),this[_0x27322e(0x55f)]||this[_0x27322e(0x5d7)]()),(this[_0x27322e(0x593)]&&!_0x47b6a4&&this[_0x27322e(0x2d9)]&&_0xcfa053&&['a','aa'][_0x27322e(0x27a)](_0x47fcfe['chat-sound'])||_0x47b6a4&&'a'==SB_ADMIN_SETTINGS[_0x27322e(0x4ab)])&&this[_0x27322e(0x3cd)][_0x27322e(0x40b)]();}else this[_0x27322e(0x235)](!0x1);}},'sendBotMessage':function(_0x21fc15='',_0x1b8131=[]){const _0x23d8f2=_0x3c09f9;return _0x17de24[_0x23d8f2(0x5e4)][_0x23d8f2(0x48f)](_0x21fc15,_0x1b8131);},'updateMessage':function(_0x54c6fa,_0x1a3bce=''){const _0x3c3f34=_0x3c09f9;_0x5bc6df[_0x3c3f34(0x612)]({'function':_0x3c3f34(0x483),'message_id':_0x54c6fa,'message':_0x1a3bce});},'sendEmail':function(_0x54d977,_0x5c2594,_0x3e6b58=!0x1){const _0x4c8fb0=_0x3c09f9;let _0x566a9b=_0x3e6b58?_0x105d96()['id']:this[_0x4c8fb0(0x194)]();if(!_0x47b6a4&&!isNaN(_0x566a9b)&&this['agent_online'])return!0x1;_0x5bc6df[_0x4c8fb0(0x612)]({'function':_0x4c8fb0(0x1e2),'recipient_id':_0x566a9b,'sender_name':_0x47b6a4?_0x3e6b58?SB_ACTIVE_AGENT[_0x4c8fb0(0x292)]:_0x105d96()[_0x4c8fb0(0x5de)]:_0x3e6b58?_0x47fcfe[_0x4c8fb0(0x2d8)]:_0x105d96()[_0x4c8fb0(0x5de)],'sender_profile_image':_0x47b6a4?_0x3e6b58?SB_ACTIVE_AGENT[_0x4c8fb0(0x4c7)]:_0x105d96()['name']:_0x3e6b58?_0x47fcfe['bot-image']:_0x105d96()[_0x4c8fb0(0x417)],'message':_0x54d977,'attachments':_0x5c2594,'department':!!this[_0x4c8fb0(0x5b6)]&&this[_0x4c8fb0(0x5b6)][_0x4c8fb0(0x59e)](_0x4c8fb0(0x364)),'conversation_id':!!this[_0x4c8fb0(0x5b6)]&&this[_0x4c8fb0(0x5b6)]['id']},()=>{const _0x45455c=_0x4c8fb0;_0x5bc6df[_0x45455c(0x47c)](_0x45455c(0x37c),{'recipient_id':_0x566a9b,'message':_0x54d977,'attachments':_0x5c2594});});},'sendSMS':function(_0x4ada48){const _0x48ab26=_0x3c09f9;let _0x34b503=this[_0x48ab26(0x194)]();if(!_0x47b6a4&&!isNaN(_0x34b503)&&this[_0x48ab26(0x56e)])return!0x1;_0x5bc6df[_0x48ab26(0x612)]({'function':'send-sms','to':_0x34b503,'message':_0x4ada48,'conversation_id':!!this[_0x48ab26(0x5b6)]&&this[_0x48ab26(0x5b6)]['id']},_0x338b6c=>{const _0x2cf064=_0x48ab26;_0x2cf064(0x17c)==_0x338b6c[_0x2cf064(0x3fc)]||_0x2cf064(0x15a)==_0x338b6c[_0x2cf064(0x3fc)]?_0x5bc6df[_0x2cf064(0x47c)]('SBSMSSent',{'recipient_id':this[_0x2cf064(0x194)](),'message':_0x4ada48,'response':_0x338b6c}):_0x338b6c['message']&&_0x5bc6df[_0x2cf064(0x247)](_0x338b6c[_0x2cf064(0x48f)],_0x2cf064(0x2c6));});},'desktopNotification':function(_0x29baf2,_0x27ea2f,_0x424317,_0x45ea2a=!0x1,_0x44eff8=!0x1){const _0x3c5042=_0x3c09f9;if(_0x3c5042(0x4bf)!==Notification['permission'])Notification[_0x3c5042(0x234)]();else{let _0x519898=_0x27ea2f[_0x3c5042(0x180)](/\*(.*?)\*/g,_0x3c5042(0x5ee))[_0x3c5042(0x180)](/_(.*?)_/g,_0x3c5042(0x205))[_0x3c5042(0x180)](/~(.*?)~/g,_0x3c5042(0x2a2))[_0x3c5042(0x180)](/```(.*?)```/g,_0x3c5042(0x50d))[_0x3c5042(0x180)](/`(.*?)`/g,'‎`$1`‎')['replace'](/^([{,+,0-9,}]+[@s.whatsapp.net])/g,_0x3c5042(0x2ce));_0x519898||(_0x519898='📄'),_0x6e0d8d['sw'][_0x3c5042(0x39d)](_0x29baf2,{'body':new _0x494501()[_0x3c5042(0x26e)](_0x519898),'icon':_0x424317['indexOf']('user.svg')>0x0?_0x47fcfe[_0x3c5042(0x23b)]:_0x424317})['onclick']=()=>{const _0x56fa44=_0x3c5042;_0x47b6a4?_0x45ea2a?(SBAdmin[_0x56fa44(0x542)]['openConversation'](_0x45ea2a,!0x1==_0x44eff8?_0x105d96()['id']:_0x44eff8),SBAdmin['conversations']['update']()):_0x44eff8&&SBAdmin['profile'][_0x56fa44(0x478)](_0x44eff8):this[_0x56fa44(0x459)](),window[_0x56fa44(0x164)]();};}},'updateNote':function(_0xc2dbe9,_0x1c71f4,_0x221bfd,_0x2ed83f=!0x1){const _0x2145c1=_0x3c09f9;_0x5bc6df[_0x2145c1(0x612)]({'function':'update-note','conversation_id':_0xc2dbe9,'note_id':_0x1c71f4,'status':_0x221bfd},_0x4aa4a1=>{const _0xcc24fa=_0x2145c1;this[_0xcc24fa(0x235)]=!0x1,_0x2ed83f&&_0x2ed83f(_0x4aa4a1);});},'getRecipientUserID':function(){const _0x3ad1bb=_0x3c09f9;return _0x47b6a4?_0x105d96()['id']:this[_0x3ad1bb(0x439)](!0x1)?this[_0x3ad1bb(0x439)](!0x1)[_0x3ad1bb(0x4c6)]:_0x5bc6df[_0x3ad1bb(0x128)](this[_0x3ad1bb(0x5b6)][_0x3ad1bb(0x59e)]('agent_id'))?_0x5bc6df[_0x3ad1bb(0x128)](this[_0x3ad1bb(0x5b6)][_0x3ad1bb(0x59e)](_0x3ad1bb(0x364)))?_0x3ad1bb(0x4e2):_0x3ad1bb(0x3e8)+this[_0x3ad1bb(0x5b6)][_0x3ad1bb(0x59e)](_0x3ad1bb(0x364)):this[_0x3ad1bb(0x5b6)][_0x3ad1bb(0x59e)](_0x3ad1bb(0x4f6));},'submit':function(){const _0x1a11c1=_0x3c09f9;!this['is_busy']&&(this['sendMessage'](),_0x47fcfe[_0x1a11c1(0x28e)]&&(setInterval(function(){const _0x5e9b9e=_0x1a11c1;_0x5bc6df[_0x5e9b9e(0x612)]({'function':_0x5e9b9e(0x314)});},0xea60),_0x47fcfe[_0x1a11c1(0x28e)]=!0x1),_0x6e0d8d['init_push_notifications']&&_0x6e0d8d[_0x1a11c1(0x197)]());},'initChat':function(){const _0x4817d6=_0x3c09f9;_0x47b6a4||_0x5bc6df[_0x4817d6(0xf9)](!0x0,()=>{const _0x162053=_0x4817d6;let _0x29c9a0=!0x1!==_0x105d96(),_0x2376b8=!!_0x29c9a0&&_0x105d96()[_0x162053(0x44d)];if(_0x94a56c||!_0x47fcfe[_0x162053(0x33c)]['active']||_0x19844b(_0x162053(0x33c))||_0x324bc9&&_0x47fcfe[_0x162053(0x1fc)]||this[_0x162053(0x33c)](),_0x19680f['automations'][_0x162053(0x24f)](),!_0x94a56c&&_0x47fcfe[_0x162053(0x160)]&&!_0x47fcfe[_0x162053(0x532)]&&!_0x19844b('privacy-approved')){this[_0x162053(0x160)]();return;}if(typeof Notification!==_0x339924&&!_0x47fcfe['push-notifications-users']&&(_0x162053(0x257)==_0x47fcfe[_0x162053(0x345)]||_0x162053(0x42b)==_0x47fcfe[_0x162053(0x345)]||_0x47b6a4&&'agents'==_0x47fcfe[_0x162053(0x345)])&&(this['desktop_notifications']=!0x0),(_0x162053(0x257)==_0x47fcfe[_0x162053(0x272)]||'users'==_0x47fcfe[_0x162053(0x272)]||_0x47b6a4&&_0x162053(0x4e2)==_0x47fcfe['flash-notifications'])&&(this['flash_notifications']=!0x0),this[_0x162053(0x47f)](!0x0)&&!_0x94a56c){this[_0x162053(0x47f)](),!_0x29c9a0&&_0x47fcfe[_0x162053(0x568)]&&this[_0x162053(0x269)]();return;}!_0x29c9a0&&(_0x47fcfe[_0x162053(0x568)]||_0x47fcfe['subscribe']||_0x94a56c)&&(!_0x94a56c||!_0x47fcfe[_0x162053(0x434)])?this[_0x162053(0x269)](()=>{const _0x5154e5=_0x162053;this[_0x5154e5(0x3ce)](),this[_0x5154e5(0x1a5)]();}):!this[_0x162053(0x5b6)]&&_0x29c9a0?this['populateConversations']():this['finalizeInit'](),_0x47fcfe[_0x162053(0x1be)]&&_0x29c9a0&&_0x162053(0x11f)==_0x2376b8&&!_0x94a56c&&_0x756857[_0x162053(0x5a7)](_0x162053(0x61c))[_0x162053(0x484)](_0x66a1ca(_0x162053(0x1d5))+'\x20'+_0x105d96()[_0x162053(0x4dd)]+'!'),this['welcome'](),_0x6e0d8d['active']||setInterval(()=>{const _0x3b31ba=_0x162053;this[_0x3b31ba(0x4a6)](),this['updateUsersActivity']();},0x27d8),this['scrollBottom'](!0x0);});},'finalizeInit':function(){const _0x4c8b06=_0x3c09f9;this[_0x4c8b06(0x506)]||(_0x537b7d[_0x4c8b06(0x566)](_0x4c8b06(0x251),''),_0x47b6a4||_0x94a56c||(this[_0x4c8b06(0x546)]()&&this[_0x4c8b06(0x3e2)](),!_0x324bc9&&window[_0x4c8b06(0x384)]<0x2f8&&_0x537b7d['find'](_0x4c8b06(0x129))[_0x4c8b06(0x130)](_0x4c8b06(0x48b),window[_0x4c8b06(0x384)]-0x82+'px')),this['initialized']=!0x0,!_0x47b6a4&&(_0x105d96()&&!this[_0x4c8b06(0x47f)](!0x0)&&(_0x19844b(_0x4c8b06(0x3af))&&this[_0x4c8b06(0x295)](_0x19844b(_0x4c8b06(0x3af))),_0x5bc6df[_0x4c8b06(0xef)]('conversation')&&this[_0x4c8b06(0x295)](_0x5bc6df[_0x4c8b06(0xef)](_0x4c8b06(0x5b6)))),(!this[_0x4c8b06(0x2d9)]&&(!_0x324bc9&&_0x19844b('chat-open')||_0x4c8b06(0x341)==_0x5bc6df[_0x4c8b06(0xef)](_0x4c8b06(0x412)))||_0x5bc6df[_0x4c8b06(0xef)](_0x4c8b06(0x5b6)))&&setTimeout(()=>{this['start']();},0x1f4),_0x47fcfe['timetable-type']&&_0x19680f[_0x4c8b06(0x45c)](),_0x47fcfe['queue-human-takeover']&&_0x17de24[_0x4c8b06(0x5e4)]['humanTakeoverActive']()&&(_0x47fcfe[_0x4c8b06(0x619)]=!0x0)),_0x94a56c&&SBTickets[_0x4c8b06(0x28a)](),_0x5bc6df[_0x4c8b06(0x47c)](_0x4c8b06(0x2b9)));},'start':function(){const _0x1b85e9=_0x3c09f9;this[_0x1b85e9(0x506)]&&(this[_0x1b85e9(0x137)](),this[_0x1b85e9(0x59f)](),this[_0x1b85e9(0x359)](),this[_0x1b85e9(0x208)](),this[_0x1b85e9(0x2d9)]=!0x0,this['popup'](!0x0),this['conversation']&&this[_0x1b85e9(0x56f)]('remove',this[_0x1b85e9(0x5b6)]['id']),_0x537b7d[_0x1b85e9(0x120)](!0x0),_0x1ba0a2(_0x1b85e9(0x327))[_0x1b85e9(0x588)](_0x1b85e9(0x338)),_0x47fcfe[_0x1b85e9(0x365)],this[_0x1b85e9(0x441)]());},'open':function(_0x2d2121=!0x0){const _0x2265c9=_0x3c09f9;_0x2d2121&&!this[_0x2265c9(0x2d9)]?(this['start'](),this[_0x2265c9(0x2d9)]=!0x0,this[_0x2265c9(0x208)](),_0x537b7d[_0x2265c9(0x120)](!0x0),_0x1ba0a2(_0x2265c9(0x327))[_0x2265c9(0x588)](_0x2265c9(0x338)),_0x19844b(_0x2265c9(0x163),!0x0),_0x324bc9&&history[_0x2265c9(0xfe)]({'chat-open':!0x0},'',''),_0x5bc6df[_0x2265c9(0x47c)](_0x2265c9(0x356))):!_0x2d2121&&this[_0x2265c9(0x2d9)]&&(_0x537b7d['sbActive'](!0x1),this[_0x2265c9(0x20e)](),this['chat_open']=!0x1,_0x19844b('chat-open',!0x1),_0x1ba0a2(_0x2265c9(0x327))[_0x2265c9(0x414)](_0x2265c9(0x338)),_0x5bc6df[_0x2265c9(0x47c)](_0x2265c9(0x1b9)));},'openConversation':function(_0x38288c){const _0x1e44cd=_0x3c09f9;_0x105d96()[_0x1e44cd(0xfb)](_0x38288c,_0x40020e=>{const _0x595cf1=_0x1e44cd;if(!_0x40020e['id'])return _0x19844b('open-conversation',''),!0x1;this[_0x595cf1(0x1c2)](_0x40020e),this[_0x595cf1(0x141)](),this['populate'](),this[_0x595cf1(0x4ca)]=!0x1,_0x19844b(_0x595cf1(0x619))==_0x38288c&&this[_0x595cf1(0x619)](_0x38288c),(this['chat_open']||_0x94a56c)&&this[_0x595cf1(0x56f)](_0x595cf1(0x20b),_0x38288c),_0x94a56c&&SBTickets[_0x595cf1(0x382)](_0x40020e),_0x19844b(_0x595cf1(0x3af),_0x38288c),_0x5bc6df['event'](_0x595cf1(0x3dd),_0x40020e);});},'loadUpdate':function(_0x141962){const _0xabd9fa=_0x3c09f9;let _0x4561dd=_0x141962[_0xabd9fa(0x4fb)],_0x2e539c='',_0x4b8d18=[],_0x2c3e33=!0x1;this[_0xabd9fa(0x51b)]();for(var _0x5034b3=0x0;_0x5034b3<_0x4561dd;_0x5034b3++)if(!_0x4b8d18[_0xabd9fa(0x27a)](_0x141962[_0x5034b3][_0xabd9fa(0x172)]['id'])){let _0x36c9c5=new _0x494501(_0x141962[_0x5034b3][_0xabd9fa(0x172)]);_0x36c9c5[_0xabd9fa(0x102)]();let _0x13aad4=_0x5bc6df['beautifyTime'](_0x36c9c5[_0xabd9fa(0x59e)](_0xabd9fa(0x5e6)));_0x13aad4!=_0x2c3e33&&(_0x2e539c+=_0xabd9fa(0x392)+_0x13aad4+_0xabd9fa(0x5b7),_0x2c3e33=_0x13aad4),_0x2e539c+=_0x36c9c5['getCode'](),_0x4b8d18['push'](_0x36c9c5['id']);}_0x1ba0a2('.sb-list\x20.sb-label-date:nth-child(2)')[_0xabd9fa(0x597)](_0x2e539c),_0x1ba0a2('.sb-list\x20.sb-label-date:nth-child(2)')['remove'](),this[_0xabd9fa(0x55f)]||this[_0xabd9fa(0x441)]();},'update':function(){const _0x421928=_0x3c09f9;if(this[_0x421928(0x5b6)]){if(this[_0x421928(0x2c5)])return;let _0x55de5c=this['conversation'][_0x421928(0x602)](),_0x44fbd2=!0x1;_0x5bc6df[_0x421928(0x612)]({'function':_0x421928(0x152),'conversation_id':this['conversation']['id'],'datetime':this[_0x421928(0x2f5)],'last_id':this[_0x421928(0x207)]},_0x5843c4=>{const _0x200145=_0x421928;let _0x1aa383=_0x5843c4['length'];if(this['is_busy_update']=!0x1,this[_0x200145(0x5b6)]&&Array['isArray'](_0x5843c4)&&_0x1aa383>0x0&&(!_0x55de5c||_0x55de5c['id']!=_0x5843c4[_0x1aa383-0x1]['id']||_0x55de5c[_0x200145(0x48f)]!=_0x5843c4[_0x1aa383-0x1][_0x200145(0x48f)]||_0x55de5c[_0x200145(0x102)]!=_0x5843c4[_0x1aa383-0x1][_0x200145(0x102)]||_0x55de5c[_0x200145(0x610)]!=_0x5843c4[_0x1aa383-0x1][_0x200145(0x610)])){let _0x3401bc='',_0x11aa3f=[],_0x2b2525=[],_0x5f128d=!0x1;this[_0x200145(0x51b)]();for(var _0x384da0=0x0;_0x384da0<_0x1aa383;_0x384da0++)if(!_0x2b2525[_0x200145(0x27a)](_0x5843c4[_0x384da0]['id'])){let _0x54703c=new _0x494501(_0x5843c4[_0x384da0]),_0x460e26=_0x54703c[_0x200145(0x102)]();if(this[_0x200145(0x207)]=_0x54703c['id'],this['datetime_last_message_conversation']=_0x54703c[_0x200145(0x59e)](_0x200145(0x5e6)),![_0x200145(0x3fb),_0x200145(0x59b)][_0x200145(0x27a)](typeof _0x460e26)){if('event'in _0x460e26){let _0x3249d7=_0x460e26[_0x200145(0x47c)];if((_0x200145(0x5bd)!=_0x3249d7||!0x1===this[_0x200145(0x5b6)]['getMessage'](_0x54703c['id']))&&(_0x47b6a4||''!=_0x54703c['message']||_0x54703c[_0x200145(0x610)][_0x200145(0x4fb)])||this[_0x200145(0x3c0)](_0x54703c['id']),_0x17de24['dialogflow'][_0x200145(0x40d)]()||'conversation-status-update-3'!=_0x3249d7&&'conversation-status-update-4'!=_0x3249d7&&'activate-bot'!=_0x3249d7||(_0x17de24['dialogflow']['active'](_0x200145(0x572)),_0x5f128d=!0x0),_0x47fcfe['close-chat']&&_0x200145(0x16c)==_0x3249d7){this[_0x200145(0x2a1)](!0x1);return;}}_0x200145(0x206)in _0x460e26&&_0x47fcfe[_0x200145(0x322)]&&(_0x47fcfe[_0x200145(0x619)]=!0x0,_0x19680f[_0x200145(0x619)](_0x19680f[_0x200145(0x5b6)]['id']));}if(this[_0x200145(0x5b6)][_0x200145(0x259)](_0x5843c4[_0x384da0]['id']))this[_0x200145(0x5b6)][_0x200145(0x579)](_0x54703c['id'],_0x54703c),_0xb5e3a[_0x200145(0x5a7)](_0x200145(0x48c)+_0x54703c['id']+'\x22]')[_0x200145(0x541)](_0x54703c[_0x200145(0x49a)]()),_0x44fbd2=!0x0;else{this['conversation']['addMessages'](_0x54703c);let _0x45a293=_0x19680f['conversation'][_0x200145(0x4f8)](!0x1,!0x0);if(_0x45a293&&_0x54703c[_0x200145(0x172)][_0x200145(0x4c6)]!=_0x45a293?.[_0x200145(0x59e)](_0x200145(0x4c6))&&_0x200145(0x4bb)==_0x45a293?.[_0x200145(0x59e)](_0x200145(0x48f))){let _0x1a7de4=0x1==_0x54703c[_0x200145(0x172)][_0x200145(0x48f)]?'positive':'negative',_0x1da733=_0x5bc6df[_0x200145(0x44c)](_0x5bc6df['admin_set'](_0x200145(0x19f))[_0x200145(0x51c)]);var _0x5f3d59={'conversation_id':_0x19680f[_0x200145(0x5b6)]['id'],'agent_id':_0x45a293?_0x45a293[_0x200145(0x59e)](_0x200145(0x4c6)):_0x1aa2cb,'user_id':_0x105d96()['id'],'source':this[_0x200145(0x5b6)][_0x200145(0x59e)](_0x200145(0x3b2)),'message':_0x54703c['details'][_0x200145(0x48f)],'rating':_0x200145(0x485)==_0x1a7de4?0x1:-0x1};let _0x3cc2c8={'rich-messages':{}},_0x3217ac=_0x5bc6df[_0x200145(0x2ef)]()+_0x54703c[_0x200145(0x172)]['id'];_0x3cc2c8[_0x200145(0x561)][_0x3217ac]={'type':_0x200145(0x182),'result':_0x5f3d59};let _0x2fc2cd={'function':_0x200145(0x244),'payload':_0x3cc2c8,'settings':_0x5f3d59,'message_id':_0x45a293['id'],'message':_0x1da733};(0x1==_0x54703c[_0x200145(0x172)][_0x200145(0x48f)]||0x2==_0x54703c[_0x200145(0x172)]['message'])&&_0x5bc6df[_0x200145(0x612)](_0x2fc2cd,_0x509047=>{const _0xa69472=_0x200145;'tk'!=this[_0xa69472(0x5b6)][_0xa69472(0x59e)](_0xa69472(0x3b2))&&_0x19680f['sendMessage'](SB_ACTIVE_AGENT['id'],_0x1da733);});}_0x3401bc+=_0x54703c[_0x200145(0x49a)]();}_0x11aa3f['push'](_0x54703c),_0x2b2525[_0x200145(0x33f)](_0x54703c['id']);}_0xb5e3a[_0x200145(0x56d)](_0x3401bc);let _0x471ef3=this['conversation'][_0x200145(0x602)](),_0x335ded=_0x471ef3[_0x200145(0x59e)](_0x200145(0x574)),_0xe6c282=_0x5bc6df[_0x200145(0x3c4)](_0x335ded);_0x47b6a4||!_0xe6c282||_0x200145(0x56c)==_0x335ded||(this['chat_open']&&(-0x1==_0x471ef3[_0x200145(0x48f)][_0x200145(0x57a)](_0x200145(0x403))&&this[_0x200145(0x53c)](0x0),_0x47fcfe[_0x200145(0x263)][_0x200145(0x40d)]&&clearTimeout(_0x5da94a)),_0x5f128d||_0x17de24[_0x200145(0x5e4)][_0x200145(0x40d)](!0x1)),_0x19844b(_0x200145(0x619))==this[_0x200145(0x5b6)]['id']&&_0xe6c282&&_0x200145(0x56c)!=_0x335ded&&this[_0x200145(0x619)](_0x200145(0x550)),_0xb5e3a['find'](_0x200145(0x3f9))[_0x200145(0x20b)](),this[_0x200145(0x59f)](),this[_0x200145(0x55f)]||_0x44fbd2||(this[_0x200145(0x5d7)](),setTimeout(()=>{const _0x3f43d8=_0x200145;this[_0x3f43d8(0x5d7)]();},0x12c)),(this[_0x200145(0x55f)]||!this[_0x200145(0x2d9)])&&this[_0x200145(0x56f)](_0x200145(0x2fb),this[_0x200145(0x5b6)]['id']),this[_0x200145(0x398)](-0x1,'stop'),this[_0x200145(0x235)](!0x1),this[_0x200145(0x593)]&&(0x1!=_0x1aa383||!(_0x5bc6df['null'](_0x11aa3f[0x0][_0x200145(0x48f)])&&_0x5bc6df[_0x200145(0x128)](_0x11aa3f[0x0][_0x200145(0x610)])))&&(!_0x47b6a4&&this[_0x200145(0x2d9)]&&(_0xe6c282||_0x200145(0x56c)==_0x335ded)&&['aa','ia']['includes'](_0x47fcfe[_0x200145(0x2b5)])||_0x47b6a4&&!_0x5bc6df[_0x200145(0x3c4)](_0x335ded)&&['a','i','ic'][_0x200145(0x27a)](SB_ADMIN_SETTINGS['sounds']))&&this['audio'][_0x200145(0x40b)](),_0x5bc6df[_0x200145(0x47c)](_0x200145(0x2a8),_0x11aa3f),_0x94a56c&&SBTickets[_0x200145(0x5ea)](_0x11aa3f[0x0]);}}),this[_0x421928(0x2c5)]=!0x0,setTimeout(()=>{const _0x3cfe1f=_0x421928;this[_0x3cfe1f(0x2c5)]=!0x1;},0x1388);}else this[_0x421928(0x4a6)]();},'updateConversations':function(){const _0x38accb=_0x3c09f9;_0x105d96()&&_0x5bc6df['ajax']({'function':_0x38accb(0x503),'datetime':this[_0x38accb(0x1f5)]},_0xe260f1=>{const _0x3053c6=_0x38accb;if(_0xe260f1[_0x3053c6(0x4fb)]){this[_0x3053c6(0x1f5)]=_0xe260f1[0x0]['id'];for(var _0x430037=0x0;_0x430037<_0xe260f1[_0x3053c6(0x4fb)];_0x430037++){let _0x5a58c0=_0xe260f1[_0x430037][_0x3053c6(0x53a)],_0x25bcc9=new _0x494501(_0xe260f1[_0x430037]),_0x30e475=_0xe260f1[_0x430037][_0x3053c6(0x17b)],_0x1d735e=new _0x5a9e9c([_0x25bcc9],{'id':_0x5a58c0,'conversation_status_code':_0x30e475,'department':_0xe260f1[_0x430037]['department'],'title':_0xe260f1[_0x430037]['title']}),_0x1d0976=_0x105d96()['addConversation'](_0x1d735e);_0xe260f1[_0x430037][_0x3053c6(0x4c6)]!=_0x105d96()['id']&&(this['conversation']['id']!=_0x5a58c0||!this[_0x3053c6(0x2d9)])&&(this[_0x3053c6(0x56f)](_0x3053c6(0x2fb),_0x5a58c0),_0x47fcfe[_0x3053c6(0x40a)]&&this[_0x3053c6(0x459)]());let _0x4acbbf=_0x25bcc9['payload']();if(_0x3053c6(0x3fb)==typeof _0x4acbbf||!(_0x3053c6(0x47c)in _0x4acbbf)||(_0x3053c6(0x27c)==_0x4acbbf[_0x3053c6(0x47c)]&&(_0x324bc9?this['open'](!0x1):((this[_0x3053c6(0x5b6)]['id']!=_0x5a58c0||this[_0x3053c6(0x55f)])&&this['openConversation'](_0x5a58c0),setTimeout(()=>{const _0x3fb8ed=_0x3053c6;this[_0x3fb8ed(0x341)]();},0x1f4))),''!=_0x25bcc9['message']||_0x25bcc9[_0x3053c6(0x610)]['length']))!this['tab_active']&&(this[_0x3053c6(0x107)]&&_0x19680f['desktopNotification'](_0x25bcc9[_0x3053c6(0x59e)](_0x3053c6(0x292)),_0x25bcc9[_0x3053c6(0x48f)],_0x25bcc9[_0x3053c6(0x59e)]('profile_image')),this[_0x3053c6(0x41c)]&&this[_0x3053c6(0x55a)](),this['audio']&&['a','aa','i'][_0x3053c6(0x27a)](_0x47fcfe[_0x3053c6(0x2b5)])&&(!this['chat_open']||!this[_0x3053c6(0x498)]||this[_0x3053c6(0x55f)])&&!(_0x5bc6df['null'](_0x25bcc9['message'])&&_0x5bc6df[_0x3053c6(0x128)](_0x25bcc9[_0x3053c6(0x610)]))&&this[_0x3053c6(0x593)][_0x3053c6(0x40b)]()),_0x1d0976&&(_0x5bc6df[_0x3053c6(0x47c)](_0x3053c6(0x461),_0x1d735e),_0x94a56c&&SBTickets[_0x3053c6(0x3e7)](_0x1d735e));}_0x537b7d[_0x3053c6(0x5a7)](_0x3053c6(0x497))[_0x3053c6(0x484)](_0x105d96()[_0x3053c6(0x522)]()),_0x537b7d[_0x3053c6(0x5a7)](_0x3053c6(0x2b0))['setClass'](_0x3053c6(0x3ad),_0x537b7d[_0x3053c6(0x5a7)](_0x3053c6(0x10e))[_0x3053c6(0x4fb)]>0x3);}});},'populate':function(){const _0x2a4516=_0x3c09f9;if(this['conversation']){let _0xf320ff='',_0x3ff650=_0xb5e3a[_0x2a4516(0x5a7)]('\x20>\x20.sb-notify-message'),_0x1601c8=!0x1;for(var _0x513ebb=0x0;_0x513ebb<this['conversation'][_0x2a4516(0x1fb)][_0x2a4516(0x4fb)];_0x513ebb++){let _0x25f104=this[_0x2a4516(0x5b6)][_0x2a4516(0x1fb)][_0x513ebb],_0xfd246e=_0x5bc6df['beautifyTime'](_0x25f104[_0x2a4516(0x59e)](_0x2a4516(0x5e6)));_0xfd246e!=_0x1601c8&&(_0xf320ff+=_0x2a4516(0x392)+_0xfd246e+_0x2a4516(0x5b7),_0x1601c8=_0xfd246e),_0xf320ff+=_0x25f104[_0x2a4516(0x49a)]();}_0xb5e3a[_0x2a4516(0x484)]((_0x3ff650[_0x2a4516(0x4fb)]?_0x3ff650[0x0][_0x2a4516(0x537)]:'')+_0xf320ff),this['dashboard']||(this[_0x2a4516(0x5d7)](),this['calculateLabelDates']());}else _0x105d96()&&!_0x105d96()['isConversationsEmpty']()&&(_0x47fcfe[_0x2a4516(0x333)]?this[_0x2a4516(0x295)](_0x105d96()[_0x2a4516(0x542)][0x0]['id']):this[_0x2a4516(0x3e2)]());},'populateConversations':function(_0x1e1bf1=!0x1){const _0x3df4f1=_0x3c09f9;!this[_0x3df4f1(0x5d2)]&&_0x105d96()&&(this[_0x3df4f1(0x5d2)]=!0x0,setTimeout(()=>{const _0x1164e9=_0x3df4f1;this[_0x1164e9(0x5d2)]=!0x1;},0x1388),_0x105d96()[_0x3df4f1(0x3a1)](_0x45d3b9=>{const _0x401a8b=_0x3df4f1;let _0x2abe35=_0x45d3b9['length'];if(_0x2abe35){let _0x22f2d2=Date[_0x401a8b(0x35e)]();this['id_last_message']=_0x45d3b9[0x0][_0x401a8b(0x1fb)][0x0]['id'];for(var _0x41c0de=0x0;_0x41c0de<_0x2abe35;_0x41c0de++)0x1!=_0x45d3b9[_0x41c0de][_0x401a8b(0x59e)](_0x401a8b(0x17b))||this[_0x401a8b(0x5b6)]&&this['conversation']['id']==_0x45d3b9[_0x41c0de]['id']||this[_0x401a8b(0x56f)](_0x401a8b(0x2fb),_0x45d3b9[_0x41c0de]['id']),_0x22f2d2-_0x5bc6df[_0x401a8b(0x48e)](_0x45d3b9[_0x41c0de][_0x401a8b(0x1fb)][0x0]['get'](_0x401a8b(0x5e6)))<0x1770&&this[_0x401a8b(0x341)]();_0x537b7d['removeClass'](_0x401a8b(0x569)),_0x537b7d['find'](_0x401a8b(0x497))[_0x401a8b(0x484)](_0x105d96()[_0x401a8b(0x522)]()),_0x537b7d[_0x401a8b(0x5a7)](_0x401a8b(0x2b0))[_0x401a8b(0x565)]('sb-conversations-hidden',_0x537b7d[_0x401a8b(0x5a7)](_0x401a8b(0x10e))[_0x401a8b(0x4fb)]>0x3);}this[_0x401a8b(0x506)]&&_0x401a8b(0x3af)!=_0x580b82||0x1!=_0x2abe35||this[_0x401a8b(0x546)]()||_0x19844b(_0x401a8b(0x3af))||(this[_0x401a8b(0x295)](_0x105d96()[_0x401a8b(0x542)][0x0]['id']),_0x401a8b(0x3af)!=_0x580b82||(_0x580b82='')),_0x1e1bf1&&_0x1e1bf1(_0x45d3b9),this[_0x401a8b(0x1a5)]();}));},'newConversation':function(_0x3ef645,_0x51ea74=-0x1,_0x3809eb='',_0x1ea90f=[],_0x5a33b1=null,_0x7ec7da=null,_0x59e3c9=!0x1,_0x283956=selectedSource){const _0x7981f5=_0x3c09f9;_0x105d96()&&_0x5bc6df['ajax']({'function':_0x7981f5(0x19e),'status_code':_0x3ef645,'title':_0x94a56c?_0x537b7d[_0x7981f5(0x5a7)](_0x7981f5(0x2b2))['val']():null,'department':_0x5bc6df[_0x7981f5(0x128)](_0x5a33b1)?this['default_department']:_0x5a33b1,'agent_id':_0x5bc6df[_0x7981f5(0x128)](_0x7ec7da)?this[_0x7981f5(0x42d)]:_0x7ec7da,'tags':this[_0x7981f5(0x5ab)],'source':_0x283956},_0xbd20e1=>{const _0x252b5c=_0x7981f5;if(_0x5bc6df[_0x252b5c(0x1e1)](_0xbd20e1,_0x252b5c(0x39f))){this[_0x252b5c(0x269)](()=>{this['newConversation'](_0x3ef645,_0x51ea74,_0x3809eb,_0x1ea90f,_0x5a33b1,_0x7ec7da,_0x59e3c9);});return;}let _0x193f20=new _0x5a9e9c([],_0xbd20e1[_0x252b5c(0x172)]);this['setConversation'](_0x193f20),this['sendMessage'](_0x51ea74,_0x3809eb,_0x1ea90f),_0x105d96()[_0x252b5c(0x542)]['push'](_0x193f20),_0x59e3c9&&_0x59e3c9(_0x193f20);});},'setConversation':function(_0x22af6f){const _0x3a8df1=_0x3c09f9;_0x22af6f instanceof _0x5a9e9c?(this['conversation']=_0x22af6f,this[_0x3a8df1(0x207)]=this[_0x3a8df1(0x5b6)][_0x3a8df1(0x602)]()?this[_0x3a8df1(0x5b6)]['getLastMessage']()['id']:0x0,this[_0x3a8df1(0x2f5)]=!0x1==this['conversation']['getLastMessage']()?'2000-01-01\x2000:00:00':this['conversation'][_0x3a8df1(0x602)]()[_0x3a8df1(0x59e)](_0x3a8df1(0x5e6)),_0x22af6f['id']!=this[_0x3a8df1(0x5b6)]['id']&&this[_0x3a8df1(0x619)](_0x22af6f['id']),_0x19844b(_0x3a8df1(0x3af),_0x22af6f['id']),_0x5bc6df[_0x3a8df1(0x47c)]('SBActiveConversationChanged',_0x22af6f)):_0x5bc6df[_0x3a8df1(0x247)](_0x3a8df1(0x381),_0x3a8df1(0x215));},'getDepartmentCode'(_0x59b323,_0x287b9a){const _0x3700b=_0x3c09f9;if(this[_0x3700b(0x402)]){if('all'==_0x59b323){let _0x15791d='';for(var _0x57edc1 in this[_0x3700b(0x402)])this[_0x3700b(0x1e6)](this[_0x3700b(0x402)][_0x57edc1]['id'],_0x1e749c=>{_0x15791d+=_0x1e749c;});_0x287b9a(_0x15791d);}else _0x287b9a(_0x3700b(0x560)+this[_0x3700b(0x402)][_0x59b323][_0x3700b(0x14d)]+'\x22>'+(''==this[_0x3700b(0x402)][_0x59b323][_0x3700b(0x417)]?'<span></span>':_0x3700b(0x3be)+this[_0x3700b(0x402)][_0x59b323]['image']+_0x3700b(0x3d5))+_0x3700b(0x2e0)+this[_0x3700b(0x402)][_0x59b323][_0x3700b(0x5de)]+_0x3700b(0x50e));}else _0x5bc6df[_0x3700b(0x612)]({'function':_0x3700b(0x25d)},_0x353910=>{const _0xf921ff=_0x3700b;_0x353910&&(this[_0xf921ff(0x402)]=_0x353910,this[_0xf921ff(0x1e6)](_0x59b323,_0x287b9a));});},'startRealTime':function(){const _0x850cc3=_0x3c09f9;_0x6e0d8d[_0x850cc3(0x40d)]||(this[_0x850cc3(0x20e)](),this[_0x850cc3(0x1ff)]=setInterval(()=>{const _0x119d49=_0x850cc3;this[_0x119d49(0x2ee)](),this[_0x119d49(0x398)](_0x47b6a4?_0x105d96()?_0x105d96()['id']:-0x1:this[_0x119d49(0x4f6)],_0x119d49(0x31f));},0x3e8));},'stopRealTime':function(){const _0x42c16f=_0x3c09f9;clearInterval(this[_0x42c16f(0x1ff)]);},'updateUsersActivity':function(){const _0x299728=_0x3c09f9;_0x105d96()&&_0x5bc6df[_0x299728(0x359)](_0x105d96()['id'],this[_0x299728(0x4f6)],_0x1c4a9c=>{const _0x39b166=_0x299728;this[_0x39b166(0x4a0)][_0x39b166(0x398)]||(_0x39b166(0x559)==_0x1c4a9c||this[_0x39b166(0x4f6)]==_0x1aa2cb?(_0x1ba0a2(_0x23928b)[_0x39b166(0x588)](_0x39b166(0x55e))[_0x39b166(0x484)](_0x66a1ca('Online')),this['agent_online']=this['agent_id']!=_0x1aa2cb):(_0x1ba0a2(_0x23928b)['removeClass'](_0x39b166(0x55e))[_0x39b166(0x484)](_0x66a1ca('Away')),this[_0x39b166(0x56e)]=!0x1));});},'busy':function(_0x5663ee){const _0x290255=_0x3c09f9;_0x27fc27[_0x290255(0x5a7)]('.sb-loader')[_0x290255(0x120)](_0x5663ee),this[_0x290255(0x4fa)]=_0x5663ee,_0x5bc6df[_0x290255(0x47c)](_0x290255(0x348),_0x5663ee);},'headerAgent':function(){const _0x4a913d=_0x3c09f9;if(!_0x47b6a4&&!_0x94a56c&&!this[_0x4a913d(0x55f)]&&this['conversation']&&(-0x1==this['agent_id']||this[_0x4a913d(0x5b6)]['getLastMessage']()&&_0x5bc6df[_0x4a913d(0x3c4)](this[_0x4a913d(0x5b6)][_0x4a913d(0x602)]()[_0x4a913d(0x59e)](_0x4a913d(0x574)))&&this['conversation'][_0x4a913d(0x602)]()['get'](_0x4a913d(0x4c6))!=this[_0x4a913d(0x4f6)])){let _0x1b7b13=this[_0x4a913d(0x439)]();_0x1b7b13&&(this[_0x4a913d(0x4f6)]=_0x1b7b13[_0x4a913d(0x4c6)],this[_0x4a913d(0x19a)](),_0x756857['addClass'](_0x4a913d(0x539))['attr']('data-agent-id',this['agent_id'])[_0x4a913d(0x484)]('<div\x20class=\x22sb-dashboard-btn\x20bi-chevron-left\x22></div><div\x20class=\x22sb-profile\x22><img\x20loading=\x22lazy\x22\x20src=\x22'+_0x1b7b13[_0x4a913d(0x4c7)]+_0x4a913d(0x36a)+_0x1b7b13[_0x4a913d(0x292)]+_0x4a913d(0x5b5)+_0x66a1ca(_0x4a913d(0x2cd))+'</span></div><i\x20class=\x22sb-icon\x20bi-x-lg\x20'+(!_0x324bc9&&_0x47fcfe[_0x4a913d(0x123)]?_0x4a913d(0x258):_0x4a913d(0x31c))+'\x22></i></div><div\x20class=\x22sb-label-date-top\x22></div>'),_0x23928b=_0x756857['find'](_0x4a913d(0x504)),this[_0x4a913d(0x359)](),_0x2af748=_0x756857['find'](_0x4a913d(0x2e4)),_0x5bc6df[_0x4a913d(0x4b5)]('header-animation',0x1)&&this[_0x4a913d(0x556)]());}},'headerReset':function(){const _0x33fc7f=_0x3c09f9;!0x1==this['start_header']&&(this[_0x33fc7f(0x581)]=[_0x756857['html'](),_0x756857[_0x33fc7f(0x566)](_0x33fc7f(0x5fe))]),_0x756857['removeClass'](_0x33fc7f(0x1ee)),this['main_header']=!0x1;},'headerAnimation':function(){const _0x1c4dcd=_0x3c09f9;_0x756857[_0x1c4dcd(0x588)](_0x1c4dcd(0x337)),setTimeout(()=>{const _0x26f835=_0x1c4dcd;_0x756857['removeClass'](_0x26f835(0x337));},0x1f40),_0x5bc6df[_0x1c4dcd(0x4b5)](_0x1c4dcd(0x1dc));},'lastAgent':function(_0x1f7e0e=!0x0){const _0x237edd=_0x3c09f9;let _0x3b43c1=!0x1;if(this[_0x237edd(0x5b6)]){let _0x4da9e2=this[_0x237edd(0x5b6)][_0x237edd(0x4f8)](!0x1,!_0x1f7e0e||_0x237edd(0x257));_0x4da9e2&&(_0x3b43c1={'user_id':_0x4da9e2[_0x237edd(0x59e)](_0x237edd(0x4c6)),'full_name':_0x4da9e2['get'](_0x237edd(0x292)),'profile_image':_0x4da9e2[_0x237edd(0x59e)](_0x237edd(0x4c7))});}return _0x3b43c1;},'scrollBottom':function(_0x5412e0=!0x1){_0x40fff8=!0x1,setTimeout(()=>{_0x40fff8=!0x0;},0x3e8),setTimeout(()=>{const _0x54895e=_0x2301;_0x4641e6[_0x54895e(0x316)](_0x5412e0?0x0:_0x4641e6[0x0]['scrollHeight']),this[_0x54895e(0x43a)]();},0x12c);},'isBottom':function(){const _0x1fee3e=_0x3c09f9;return _0x4641e6[0x0][_0x1fee3e(0x316)]===_0x4641e6[0x0]['scrollHeight']-_0x4641e6[0x0]['offsetHeight'];},'scrollHeader':function(){const _0x5b3878=_0x3c09f9;if(this[_0x5b3878(0x4ca)]&&this['dashboard']){let _0x17ed41=_0x4641e6[_0x5b3878(0x316)]();_0x17ed41>-0x1&&_0x17ed41<0x3e8&&_0x756857[_0x5b3878(0x5a7)](_0x5b3878(0x4d4))[_0x5b3878(0x130)]({'opacity':0x1-_0x17ed41/0x1f4,'top':-(_0x17ed41/0xa*0x1)+'px'});}},'showDashboard':function(){const _0x44ceb8=_0x3c09f9;_0x47b6a4||_0x94a56c||(_0x537b7d[_0x44ceb8(0x588)](_0x44ceb8(0x46a)),_0x756857[_0x44ceb8(0x414)](_0x44ceb8(0x539)),this['hidePanel'](),this[_0x44ceb8(0x581)]&&_0x756857[_0x44ceb8(0x484)](this[_0x44ceb8(0x581)][0x0])['addClass'](this['start_header'][0x1]),_0x4641e6[_0x44ceb8(0x5a7)](_0x44ceb8(0x5d9))['sbActive'](!0x1),_0x537b7d[_0x44ceb8(0x5a7)](_0x44ceb8(0x385))[_0x44ceb8(0x120)](!0x0),this[_0x44ceb8(0x41a)](),this['conversation']=!0x1,this[_0x44ceb8(0x4f6)]=-0x1,this[_0x44ceb8(0x20e)](),this[_0x44ceb8(0x55f)]=!0x0,this[_0x44ceb8(0x4ca)]=!0x0,this[_0x44ceb8(0x5d7)](!0x0),_0x5bc6df[_0x44ceb8(0x47c)](_0x44ceb8(0x203)));},'hideDashboard':function(){const _0x1e5c22=_0x3c09f9;_0x47b6a4||_0x94a56c||(_0xb5e3a[_0x1e5c22(0x120)](!0x0),_0x537b7d['removeClass'](_0x1e5c22(0x46a))['find']('.sb-dashboard')[_0x1e5c22(0x120)](!0x1),this['dashboard']=!0x1,this[_0x1e5c22(0x59f)](),this[_0x1e5c22(0x43a)](0x0),this[_0x1e5c22(0x2d9)]&&this[_0x1e5c22(0x208)](),_0x5bc6df[_0x1e5c22(0x47c)](_0x1e5c22(0xfa)));},'showPanel':function(_0x38a177,_0x1ccc09){const _0x4306d4=_0x3c09f9;if(_0x94a56c)return SBTickets[_0x4306d4(0x3c9)](_0x38a177,_0x1ccc09);let _0x3b8431=_0x4641e6[_0x4306d4(0x5a7)]('\x20>\x20.sb-panel-'+_0x38a177);_0x3b8431[_0x4306d4(0x4fb)]&&(_0x4641e6[_0x4306d4(0x5a7)](_0x4306d4(0x5d9))[_0x4306d4(0x120)](!0x1),_0x3b8431[_0x4306d4(0x120)](!0x0),this[_0x4306d4(0x581)]||(this['start_header']=[_0x756857[_0x4306d4(0x484)](),_0x756857['attr'](_0x4306d4(0x5fe))]),_0x756857[_0x4306d4(0x566)](_0x4306d4(0x5fe),'sb-header\x20sb-header-panel')['html'](_0x66a1ca(_0x1ccc09)+_0x4306d4(0x14e)),_0x537b7d[_0x4306d4(0x588)]('sb-panel-active'),this['dashboard']=!0x0),_0x5bc6df[_0x4306d4(0x47c)](_0x4306d4(0x3a0),_0x38a177);},'hidePanel':function(){const _0x5c60da=_0x3c09f9;_0x537b7d['removeClass'](_0x5c60da(0x491)),_0x756857['removeClass']('sb-header-panel');},'clear':function(){const _0x1e22db=_0x3c09f9;this[_0x1e22db(0x5b6)]=!0x1,_0xb5e3a[_0x1e22db(0x484)]('');},'updateNotifications':function(_0x374ed2='add',_0x2745dc){const _0x7d7e7b=_0x3c09f9;if(_0x7d7e7b(0x2fb)!=_0x374ed2||this[_0x7d7e7b(0x43f)][_0x7d7e7b(0x27a)](_0x2745dc)||(this['notifications']['push'](_0x2745dc),!this['dashboard']&&this[_0x7d7e7b(0x5b6)]&&this[_0x7d7e7b(0x5b6)]['id']!=_0x2745dc&&this['headerAnimation']()),_0x7d7e7b(0x20b)==_0x374ed2){for(var _0x189303=0x0;_0x189303<this[_0x7d7e7b(0x43f)][_0x7d7e7b(0x4fb)];_0x189303++)if(this[_0x7d7e7b(0x43f)][_0x189303]==_0x2745dc){this[_0x7d7e7b(0x43f)][_0x7d7e7b(0x598)](_0x189303,0x1),0x0!=this['conversation'][_0x7d7e7b(0x59e)](_0x7d7e7b(0x17b))&&['1','2',0x1,0x2][_0x7d7e7b(0x27a)](this['conversation']['get'](_0x7d7e7b(0x17b)))&&this[_0x7d7e7b(0x53c)](0x0);break;}}let _0x4194f5=this[_0x7d7e7b(0x43f)][_0x7d7e7b(0x4fb)];_0x537b7d[_0x7d7e7b(0x5a7)](_0x7d7e7b(0x51e))[_0x7d7e7b(0x566)](_0x7d7e7b(0x5ec),_0x4194f5)['html'](_0x4194f5>-0x1?_0x4194f5:0x0),_0x5bc6df[_0x7d7e7b(0x47c)]('SBNotificationsUpdate',{'action':_0x374ed2,'conversation_id':_0x2745dc});},'setConversationStatus':function(_0x227d02){const _0x2fe662=_0x3c09f9;return!!this['conversation']&&(_0x5bc6df[_0x2fe662(0x612)]({'function':_0x2fe662(0x31d),'conversation_id':this[_0x2fe662(0x5b6)]['id'],'status_code':_0x227d02},()=>{const _0x4469f2=_0x2fe662;this[_0x4469f2(0x5b6)]['set'](_0x4469f2(0x17b),_0x227d02),_0x5bc6df[_0x4469f2(0x47c)](_0x4469f2(0x1b2),{'conversation_id':this[_0x4469f2(0x5b6)]['id'],'status_code':_0x227d02});}),!0x0);},'typing':function(_0x49e6b9=-0x1,_0xc6c4ab=_0x3c09f9(0x31f)){const _0x670ecf=_0x3c09f9;if(this[_0x670ecf(0x5b6)]){let _0x5dc34f=this[_0x670ecf(0x56e)]||_0x47b6a4&&this[_0x670ecf(0x161)];if(_0x670ecf(0x31f)==_0xc6c4ab&&!_0x6e0d8d[_0x670ecf(0x40d)]&&-0x1!=_0x49e6b9&&_0x49e6b9!=_0x1aa2cb&&_0x5dc34f)_0x5bc6df[_0x670ecf(0x612)]({'function':_0x670ecf(0x5d8),'user_id':_0x49e6b9,'conversation_id':this[_0x670ecf(0x5b6)]['id']},_0x44470c=>{const _0x312564=_0x670ecf;_0x44470c&&!this[_0x312564(0x4a0)][_0x312564(0x398)]?this[_0x312564(0x398)](-0x1,_0x312564(0x459)):!_0x44470c&&this[_0x312564(0x4a0)][_0x312564(0x398)]&&this[_0x312564(0x398)](-0x1,'stop');});else{if('set'==_0xc6c4ab&&_0x5dc34f){let _0x400236=this[_0x670ecf(0x5b6)][_0x670ecf(0x59e)]('source');_0x400236&&(_0x400236='fb'==_0x400236?[_0x400236,_0x105d96()[_0x670ecf(0x415)](_0x670ecf(0x2fd))[_0x670ecf(0x37a)],this[_0x670ecf(0x5b6)][_0x670ecf(0x59e)](_0x670ecf(0x55d))]:'tw'==_0x400236&&[_0x400236,_0x105d96()['getExtra'](_0x670ecf(0x433))[_0x670ecf(0x37a)]]),_0x6e0d8d[_0x670ecf(0x40d)]?_0x5bc6df[_0x670ecf(0x266)](()=>{const _0x4b4d09=_0x670ecf;_0x6e0d8d['trigger']('client-typing',{'user_id':_0x47b6a4?SB_ACTIVE_AGENT['id']:_0x105d96()['id'],'conversation_id':this[_0x4b4d09(0x5b6)]['id']}),_0x400236&&_0x5bc6df[_0x4b4d09(0x612)]({'function':_0x4b4d09(0x49b),'source':_0x400236});},'#2'):this[_0x670ecf(0x4a0)][_0x670ecf(0x17c)]?(clearTimeout(this[_0x670ecf(0x4a0)][_0x670ecf(0x328)]),this[_0x670ecf(0x4a0)][_0x670ecf(0x328)]=setTimeout(()=>{const _0x2dedba=_0x670ecf;_0x5bc6df[_0x2dedba(0x612)]({'function':_0x2dedba(0x49b),'user_id':_0x49e6b9,'conversation_id':-0x1},()=>{const _0x57f460=_0x2dedba;this[_0x57f460(0x4a0)][_0x57f460(0x17c)]=!0x1;});},0x7d0)):(this[_0x670ecf(0x4a0)][_0x670ecf(0x17c)]=!0x0,_0x5bc6df[_0x670ecf(0x612)]({'function':_0x670ecf(0x49b),'user_id':_0x49e6b9,'conversation_id':this['conversation']['id'],'source':_0x400236}),this[_0x670ecf(0x398)](_0x49e6b9,_0x670ecf(0x144)));}else{if(_0x670ecf(0x459)==_0xc6c4ab||_0x670ecf(0x2a0)==_0xc6c4ab){let _0x13c87f=_0x670ecf(0x459)==_0xc6c4ab;if(!_0x47b6a4&&_0x23928b){if(_0x13c87f)_0x1ba0a2(_0x23928b)[_0x670ecf(0x588)]('sb-status-typing')[_0x670ecf(0x484)](_0x66a1ca(_0x670ecf(0x155)));else{let _0x5421b7=this['agent_online']||this[_0x670ecf(0x4f6)]==_0x1aa2cb;_0x1ba0a2(_0x23928b)[_0x670ecf(0x414)](_0x670ecf(0x514))[_0x670ecf(0x484)](_0x66a1ca(_0x5421b7?_0x670ecf(0x16d):_0x670ecf(0x2cd))),_0x5421b7&&_0x1ba0a2(_0x23928b)['addClass'](_0x670ecf(0x55e));}}this['typing_settings'][_0x670ecf(0x398)]=_0x13c87f,_0x5bc6df[_0x670ecf(0x47c)](_0x670ecf(0x52a),_0x13c87f);}}}}},'categoryEmoji':function(_0x11be0b){const _0xbfd5b2=_0x3c09f9;let _0x3cb7da=this[_0xbfd5b2(0x544)]['list'];if(_0xbfd5b2(0x257)==_0x11be0b)this['emoji_options'][_0xbfd5b2(0x3ff)]=_0x3cb7da;else{this[_0xbfd5b2(0x544)][_0xbfd5b2(0x3ff)]=[];for(var _0x4b7da1=0x0;_0x4b7da1<_0x3cb7da[_0xbfd5b2(0x4fb)];_0x4b7da1++)_0x3cb7da[_0x4b7da1][_0xbfd5b2(0x54c)][_0xbfd5b2(0x38f)](_0x11be0b)&&this[_0xbfd5b2(0x544)][_0xbfd5b2(0x3ff)][_0xbfd5b2(0x33f)](_0x3cb7da[_0x4b7da1]);}this[_0xbfd5b2(0x544)][_0xbfd5b2(0x58d)]=0x0,this['populateEmoji'](0x0),this[_0xbfd5b2(0x57f)]();},'mouseWheelEmoji':function(_0x4757a3){const _0x1cae1f=_0x3c09f9;var _0x35546b;let _0x42036b=this['emoji_options'][_0x1cae1f(0x58d)],_0x58bc9e;(typeof(_0x58bc9e=(_0x35546b=_0x4757a3)[_0x1cae1f(0x24b)][_0x1cae1f(0x286)])==_0x339924&&(_0x58bc9e=_0x35546b[_0x1cae1f(0x24b)][_0x1cae1f(0x469)]),typeof _0x58bc9e==_0x339924&&(_0x58bc9e=-0x1*_0x35546b[_0x1cae1f(0x24b)]['detail']),_0x58bc9e>0x0||_0x324bc9&&typeof _0x4757a3[_0x1cae1f(0x24b)][_0x1cae1f(0x430)]!==_0x339924&&this['emoji_options'][_0x1cae1f(0x3f0)]<_0x4757a3[_0x1cae1f(0x24b)][_0x1cae1f(0x430)][0x0][_0x1cae1f(0x156)])?_0x42036b-=_0x42036b<0x1?0x0:0x1:_0x42036b+=_0x42036b>this[_0x1cae1f(0x544)][_0x1cae1f(0x405)]?0x0:0x1,_0x56692c[_0x1cae1f(0x5a7)]('.sb-emoji-bar\x20>\x20div')[_0x1cae1f(0x120)](!0x1)['eq'](_0x42036b)['sbActive'](!0x0),this[_0x1cae1f(0x544)][_0x1cae1f(0x58d)]=_0x42036b,this[_0x1cae1f(0x162)](_0x42036b),_0x4757a3['preventDefault']();},'insertEmoji':function(_0x2b1651){const _0x2c8fc9=_0x3c09f9;_0x2b1651[_0x2c8fc9(0x57a)](_0x2c8fc9(0x1fd))>0x0&&(_0x2b1651=_0x1ba0a2[_0x2c8fc9(0x2eb)](_0x2b1651)[0x0][_0x2c8fc9(0x5cd)]),this[_0x2c8fc9(0x5e1)](_0x2b1651),_0x56692c[_0x2c8fc9(0x427)]();},'showEmoji':function(_0x15c380){const _0x470db0=_0x3c09f9;_0x56692c[_0x470db0(0x427)](_0x15c380)&&(_0x47b6a4||_0x56692c[_0x470db0(0x130)]({'left':_0x27fc27[_0x470db0(0x357)]()['left']+(_0x94a56c?0x44:0x14),'top':_0x27fc27[_0x470db0(0x357)]()['top']-window[_0x470db0(0x1e4)]-(_0x94a56c?_0x27fc27[_0x470db0(0x2bc)]()-0x14a:0x130)}),''==_0x56692c['find']('.sb-emoji-list\x20>\x20ul')[_0x470db0(0x484)]()&&jQuery[_0x470db0(0x612)]({'method':'POST','url':SB_AJAX_URL,'data':{'function':_0x470db0(0x58c)}})[_0x470db0(0xff)](_0x524096=>{const _0x499dea=_0x470db0;this['emoji_options'][_0x499dea(0x185)]=JSON['parse'](_0x524096),this['emoji_options'][_0x499dea(0x3ff)]=this[_0x499dea(0x544)][_0x499dea(0x185)],this[_0x499dea(0x162)](0x0),this[_0x499dea(0x57f)]();}),_0x5bc6df[_0x470db0(0x329)]());},'populateEmoji':function(_0x3bf4ab){const _0x4f6ebb=_0x3c09f9;let _0x28f669='',_0x22ec86=_0x324bc9?0x2a:0x30,_0x170881=_0x3bf4ab*_0x22ec86+_0x22ec86,_0x259e73=this[_0x4f6ebb(0x544)][_0x4f6ebb(0x3ff)];_0x170881>_0x259e73[_0x4f6ebb(0x4fb)]&&(_0x170881=_0x259e73['length']),this[_0x4f6ebb(0x544)][_0x4f6ebb(0x405)]=_0x259e73[_0x4f6ebb(0x4fb)]/_0x22ec86-0x1,this[_0x4f6ebb(0x544)][_0x4f6ebb(0x58d)]=_0x3bf4ab;for(var _0x566316=_0x3bf4ab*_0x22ec86;_0x566316<_0x170881;_0x566316++)_0x28f669+=_0x4f6ebb(0x5ed)+_0x259e73[_0x566316][_0x4f6ebb(0x2ba)]+_0x4f6ebb(0x521);_0x56692c[_0x4f6ebb(0x5a7)](_0x4f6ebb(0x11b))[_0x4f6ebb(0x484)](_0x4f6ebb(0x5cb)+_0x28f669+_0x4f6ebb(0x5a1));},'populateEmojiBar':function(){const _0x7bacc4=_0x3c09f9;let _0x3ed3d8=_0x7bacc4(0x42c),_0x174818=_0x324bc9?0x2a:0x31;for(var _0x512f4a=0x0;_0x512f4a<this['emoji_options'][_0x7bacc4(0x3ff)][_0x7bacc4(0x4fb)]/_0x174818-0x1;_0x512f4a++)_0x3ed3d8+=_0x7bacc4(0x50e);this[_0x7bacc4(0x544)]['range']=0x0,_0x56692c[_0x7bacc4(0x5a7)]('.sb-emoji-bar')[_0x7bacc4(0x484)](_0x3ed3d8);},'clickEmojiBar':function(_0x4249bf){const _0x5301b4=_0x3c09f9;let _0x165cd6=_0x1ba0a2(_0x4249bf)[_0x5301b4(0x4a4)]();this[_0x5301b4(0x162)](_0x165cd6),this[_0x5301b4(0x544)]['range']=_0x165cd6,_0x56692c[_0x5301b4(0x5a7)]('.sb-emoji-bar\x20>\x20div')[_0x5301b4(0x120)](!0x1)['eq'](_0x165cd6)[_0x5301b4(0x120)](!0x0);},'searchEmoji':function(_0x18bed2){const _0x15ab4e=_0x3c09f9;_0x5bc6df[_0x15ab4e(0x136)](_0x18bed2,()=>{const _0x27cf2f=_0x15ab4e;if(_0x18bed2[_0x27cf2f(0x4fb)]>0x1){let _0x48b56b=this[_0x27cf2f(0x544)][_0x27cf2f(0x185)],_0x42f493=[];for(var _0x47777f=0x0;_0x47777f<_0x48b56b['length'];_0x47777f++)(_0x48b56b[_0x47777f]['category']['toLowerCase']()[_0x27cf2f(0x27a)](_0x18bed2)||_0x48b56b[_0x47777f][_0x27cf2f(0x5de)][_0x27cf2f(0x299)]()[_0x27cf2f(0x27a)](_0x18bed2))&&_0x42f493['push'](_0x48b56b[_0x47777f]);this[_0x27cf2f(0x544)][_0x27cf2f(0x3ff)]=_0x42f493;}else this[_0x27cf2f(0x544)][_0x27cf2f(0x3ff)]=this[_0x27cf2f(0x544)][_0x27cf2f(0x185)];this[_0x27cf2f(0x544)]['range']=0x0,this[_0x27cf2f(0x162)](0x0),this['populateEmojiBar']();});},'textareaChange':function(_0x62849f){const _0x21be6f=_0x3c09f9;let _0x599278=_0x1ba0a2(_0x62849f)[_0x21be6f(0xf3)]();_0x47b6a4&&SBAdmin[_0x21be6f(0x542)][_0x21be6f(0x2b4)](_0x62849f,_0x599278),_0x599278?(this['typing'](_0x47b6a4&&!_0x6e0d8d['active']?SB_ACTIVE_AGENT['id']:_0x105d96()['id'],_0x21be6f(0x144)),this[_0x21be6f(0x104)]()):this[_0x21be6f(0x104)](!0x1);},'insertText':function(_0x4610c5){const _0x3e47f7=_0x3c09f9;let _0xae3868=_0x1ba0a2(_0xb73fc7['get'](0x0)),_0x57e6c0=0x0;if(this[_0x3e47f7(0x55f)])return!0x1;if(_0x3e47f7(0x27b)in _0xae3868[_0x3e47f7(0x59e)](0x0))_0x57e6c0=_0xae3868[_0x3e47f7(0x59e)](0x0)[_0x3e47f7(0x27b)];else{if('selection'in document){_0xae3868['focus']();let _0x4a8f9d=document[_0x3e47f7(0x2be)][_0x3e47f7(0x214)]();var _0x1a6313=document[_0x3e47f7(0x2be)][_0x3e47f7(0x214)]()['text']['length'];_0x4a8f9d[_0x3e47f7(0x32b)]('character',-_0xae3868['value'][_0x3e47f7(0x4fb)]),_0x57e6c0=_0x4a8f9d['text']['length']-_0x1a6313;}}_0xae3868[_0x3e47f7(0xf3)](_0xae3868[_0x3e47f7(0xf3)]()[_0x3e47f7(0x380)](0x0,_0x57e6c0)+_0x4610c5+_0xae3868[_0x3e47f7(0xf3)]()[_0x3e47f7(0x380)](_0x57e6c0)),_0xae3868[_0x3e47f7(0x164)](),_0xae3868['manualExpandTextarea'](),this['activateBar']();},'enabledAutoExpand':function(){const _0x473760=_0x3c09f9;_0xb73fc7[_0x473760(0x4fb)]&&_0xb73fc7[_0x473760(0x394)]();},'privacy':function(){const _0x5c6a6d=_0x3c09f9;_0x5bc6df[_0x5c6a6d(0x612)]({'function':_0x5c6a6d(0x4f0),'value':_0x5c6a6d(0x160)},_0x31d93f=>{const _0x37c52c=_0x5c6a6d;_0x4641e6[_0x37c52c(0x56d)](_0x37c52c(0x262)+_0x31d93f[_0x37c52c(0x17e)]+_0x37c52c(0x428)+_0x31d93f[_0x37c52c(0x126)]+_0x37c52c(0x470)+_0x31d93f['message']+_0x37c52c(0x5b7)+(_0x31d93f[_0x37c52c(0x366)]?_0x37c52c(0x1d7)+_0x31d93f['link']+'\x22>'+_0x31d93f[_0x37c52c(0x2e2)]+_0x37c52c(0x3bd):'')+(_0x37c52c(0x35a)+_0x31d93f[_0x37c52c(0xee)]+_0x37c52c(0x59c)+_0x31d93f[_0x37c52c(0x4e4)]+_0x37c52c(0x4c1))),this['finalizeInit'](),_0x5bc6df[_0x37c52c(0x47c)]('SBPrivacy');}),this['dashboard']||this['showDashboard'](),this[_0x5c6a6d(0x55f)]=!0x0,_0x537b7d['addClass'](_0x5c6a6d(0x2a4));},'popup':function(_0x3eff15=!0x1,_0x1731f3=!0x1){const _0x19505a=_0x3c09f9;if(_0x3eff15){let _0x3f1d3e=_0x537b7d[_0x19505a(0x5a7)](_0x19505a(0x1ab)),_0x1816f5=_0x3f1d3e[_0x19505a(0x566)]('data-id');_0x19844b(_0x19505a(0x33c)+(_0x5bc6df[_0x19505a(0x128)](_0x1816f5)?'':_0x1816f5),!0x0),_0x3f1d3e[_0x19505a(0x20b)]();return;}setTimeout(()=>{const _0x4af99d=_0x19505a;this['chat_open']||(!0x1==_0x1731f3&&(_0x1731f3=_0x47fcfe[_0x4af99d(0x33c)]),_0x537b7d[_0x4af99d(0x5a7)](_0x4af99d(0x1ab))[_0x4af99d(0x20b)](),_0x537b7d['append'](_0x4af99d(0x54f)+('id'in _0x1731f3?_0x1731f3['id']:'')+_0x4af99d(0x24a)+(_0x4af99d(0x417)in _0x1731f3&&_0x1731f3[_0x4af99d(0x417)]?'<img\x20loading=\x22lazy\x22\x20src=\x22'+_0x1731f3[_0x4af99d(0x417)]+_0x4af99d(0x3d5):'')+(_0x4af99d(0x126)in _0x1731f3&&_0x1731f3[_0x4af99d(0x126)]?_0x4af99d(0x528)+_0x1731f3['title']+_0x4af99d(0x5b7):'')+('<div\x20class=\x22sb-text\x22>'+_0x1731f3[_0x4af99d(0x48f)]+_0x4af99d(0x11c))),_0x5bc6df[_0x4af99d(0x47c)]('SBPopup',_0x1731f3));},0x3e8);},'followUp':function(){const _0x480a4f=_0x3c09f9;this['followUpCheck']()&&(_0x5da94a&&clearTimeout(_0x5da94a),_0x5da94a=setTimeout(()=>{const _0x502602=_0x2301;if(this['followUpCheck']()){let _0x585817=_0x47fcfe[_0x502602(0x263)];this[_0x502602(0x217)](_0x1aa2cb,_0x502602(0x146)+_0x585817[_0x502602(0x126)]+_0x502602(0x47d)+_0x585817['message']+_0x502602(0x5ca)+_0x585817[_0x502602(0x4e3)]+'\x22\x20name=\x22'+_0x585817[_0x502602(0x5de)]+'\x22\x20last-name=\x22'+_0x585817[_0x502602(0x361)]+_0x502602(0x3cc)+_0x585817[_0x502602(0x2e3)]+_0x502602(0x26c)+_0x585817[_0x502602(0x3de)]+'\x22\x20success=\x22'+_0x585817[_0x502602(0x1fa)]+'\x22]'),this[_0x502602(0x5d7)](),_0x5bc6df[_0x502602(0x4b5)](_0x502602(0x18b)),_0x5bc6df[_0x502602(0x47c)](_0x502602(0x35b));}},_0x5bc6df['null'](_0x47fcfe[_0x480a4f(0x263)][_0x480a4f(0x449)])?_0x47fcfe[_0x480a4f(0x53e)]||_0x59812c?0x3a98:_0x17de24['dialogflow'][_0x480a4f(0x40d)]()?0x1f40:0x1388:parseInt(_0x47fcfe['follow'][_0x480a4f(0x449)])));},'followUpCheck':function(){const _0x5012dc=_0x3c09f9;return!_0x47b6a4&&this['conversation']&&_0x47fcfe[_0x5012dc(0x263)]['active']&&_0x105d96()&&!_0x105d96()[_0x5012dc(0x59e)](_0x5012dc(0x18b))&&_0x5bc6df[_0x5012dc(0x4b5)](_0x5012dc(0x18b),0x18)&&(_0x47fcfe[_0x5012dc(0x53e)]||!_0x47fcfe[_0x5012dc(0x263)][_0x5012dc(0x1a1)]);},'welcome':function(){const _0x4541f4=_0x3c09f9;('open'!=_0x47fcfe[_0x4541f4(0x365)]||this[_0x4541f4(0x2d9)])&&(_0x47fcfe[_0x4541f4(0x53e)]||!_0x47fcfe[_0x4541f4(0x4c4)])&&_0x47fcfe[_0x4541f4(0x3ce)]&&!_0x19844b(_0x4541f4(0x3ce))&&_0x105d96()&&_0x5bc6df['ajax']({'function':_0x4541f4(0x4f0),'value':_0x4541f4(0x3ce)},_0x218ec7=>{const _0x45d413=_0x4541f4;setTimeout(()=>{const _0x1466cc=_0x2301;_0x47fcfe['dialogflow-welcome']&&(!0x1===this['conversation']?this[_0x1466cc(0x51d)](0x3,-0x1,'',[],null,null,function(){const _0x4d9a88=_0x1466cc;_0x17de24[_0x4d9a88(0x5e4)][_0x4d9a88(0x3ce)](_0x218ec7[_0x4d9a88(0x341)],_0x218ec7[_0x4d9a88(0x5a6)]);}):_0x17de24['dialogflow'][_0x1466cc(0x3ce)](_0x218ec7[_0x1466cc(0x341)],_0x218ec7[_0x1466cc(0x5a6)])),this[_0x1466cc(0x217)](_0x1aa2cb,_0x218ec7['message'],[],!0x1,!0x1,0x3),_0x218ec7[_0x1466cc(0x341)]&&this[_0x1466cc(0x459)](),_0x218ec7[_0x1466cc(0x5a6)]&&this[_0x1466cc(0x593)][_0x1466cc(0x40b)](),this[_0x1466cc(0xf4)]=!0x0,_0x5bc6df[_0x1466cc(0x47c)]('SBWelcomeMessage');},parseInt(_0x94a56c?0x0:_0x47fcfe[_0x45d413(0x28d)])),_0x19844b('welcome',!0x0);});},'offlineMessage':function(){const _0x306df3=_0x3c09f9;if(!_0x47b6a4&&!this[_0x306df3(0x20c)]&&_0x47fcfe[_0x306df3(0x44e)]&&(!_0x47fcfe[_0x306df3(0x53e)]||!_0x59812c&&!_0x47fcfe[_0x306df3(0x360)])&&_0x5bc6df[_0x306df3(0x4b5)](_0x306df3(0x44e),0x1)){let _0x3cf3b0=_0x47fcfe[_0x306df3(0x518)];switch(_0x47fcfe['timetable-type']){case _0x306df3(0x171):_0x3cf3b0[0x0]&&_0x756857[_0x306df3(0x5a7)](_0x306df3(0x61c))[_0x306df3(0x484)](_0x3cf3b0[0x0]),_0x756857['find']('.sb-text')['html'](_0x3cf3b0[0x1]),this[_0x306df3(0x20c)]=!0x0;break;case _0x306df3(0x2af):_0xb5e3a['prepend'](_0x306df3(0x452)+(_0x3cf3b0[0x0]?'<strong>'+_0x3cf3b0[0x0]+_0x306df3(0x313):'')+_0x3cf3b0[0x1]+_0x306df3(0x406)),_0x537b7d['addClass'](_0x306df3(0x13c)),this[_0x306df3(0x20c)]=!0x0;break;default:setTimeout(()=>{const _0x5a22dc=_0x306df3;this['conversation']&&(this[_0x5a22dc(0x217)](_0x1aa2cb,_0x47fcfe[_0x5a22dc(0x344)]?''+(_0x3cf3b0[0x0]?'*'+_0x3cf3b0[0x0]+'*\x0a':'')+_0x3cf3b0[0x1]:_0x5a22dc(0x311)),this[_0x5a22dc(0x5d7)](),this['offline_message_set']=!0x0,_0x5bc6df[_0x5a22dc(0x4b5)](_0x5a22dc(0x44e)));},0x1388);}}},'deleteMessage':function(_0x4840dd){const _0x5c679f=_0x3c09f9;_0x5bc6df[_0x5c679f(0x612)]({'function':_0x5c679f(0x5bd),'message_id':_0x4840dd},()=>{const _0x1f0dd5=_0x5c679f;this['conversation']&&this['conversation'][_0x1f0dd5(0x3c0)](_0x4840dd),_0xb5e3a['find']('[data-id=\x22'+_0x4840dd+'\x22]')[_0x1f0dd5(0x20b)](),this[_0x1f0dd5(0x2ee)](),console[_0x1f0dd5(0x5d4)](_0x1f0dd5(0x412),_0x4840dd),_0x5bc6df[_0x1f0dd5(0x47c)](_0x1f0dd5(0x52e),_0x4840dd);});},'registration':function(_0x4a7450=!0x1,_0x195e44=_0x47fcfe[_0x3c09f9(0x532)]){const _0x20d607=_0x3c09f9;if(_0x4a7450)return _0x47fcfe['registration-required']&&(!_0x47fcfe['registration-offline']||!_0x59812c)&&(!_0x47fcfe['registration-timetable']||!_0x47fcfe[_0x20d607(0x53e)])&&(!0x1===_0x105d96()||[_0x20d607(0x4ff),_0x20d607(0x611)]['includes'](_0x105d96()['type']));_0x4641e6[_0x20d607(0x56d)](_0x3b9132[_0x20d607(0x33e)]({},_0x47fcfe[_0x20d607(0x5f8)]?_0x20d607(0x36f):_0x195e44,_0x20d607(0x55c))),this['dashboard']||this[_0x20d607(0x3e2)](),this[_0x20d607(0x55f)]=!0x0,this[_0x20d607(0x1a5)](),_0x537b7d[_0x20d607(0x588)](_0x20d607(0x2a4));},'activateBar':function(_0x1ab61b=!0x0){const _0x4f63d4=_0x3c09f9;_0x27fc27[_0x4f63d4(0x5a7)](_0x4f63d4(0x420))[_0x4f63d4(0x120)](_0x1ab61b);},'addUserAndLogin':function(_0x2bd8c2=!0x1,_0x586af9=!0x1){const _0x5f4737=_0x3c09f9;let _0x1a6538=typeof SB_DEFAULT_USER!=_0x339924?SB_DEFAULT_USER:{};_0x1a6538[_0x5f4737(0x574)]=_0x586af9?_0x5f4737(0x611):_0x5f4737(0x4ff),_0x5bc6df[_0x5f4737(0x612)]({'function':_0x5f4737(0x445),'settings':_0x1a6538,'settings_extra':_0x1a6538[_0x5f4737(0x55d)]},_0x3fba9a=>{const _0x15f72f=_0x5f4737;_0x5bc6df[_0x15f72f(0x3a7)](_0x3fba9a[0x1]),_0x105d96(new _0x4692ba(_0x3fba9a[0x0])),_0x6e0d8d['start'](),_0x6e0d8d[_0x15f72f(0x40d)]||_0x19680f['automations'][_0x15f72f(0x24f)](),_0x2bd8c2&&_0x2bd8c2(_0x3fba9a);});},'isInitDashboard':function(){const _0x4410ad=_0x3c09f9;return _0x47fcfe[_0x4410ad(0x425)]||_0x105d96()&&_0x105d96()[_0x4410ad(0x542)]['length']>0x1;},'uploadResponse':function(_0x7d94a2){const _0x4eebc7=_0x3c09f9;if(_0x4eebc7(0x1fa)==(_0x7d94a2=JSON[_0x4eebc7(0x553)](_0x7d94a2))[0x0]){if(_0x4eebc7(0x520)==_0x7d94a2[0x1]){let _0x48e816=_0x4eebc7(0x1f7);_0x47b6a4?SBAdmin['dialog'](_0x48e816,_0x4eebc7(0x2af)):alert(_0x48e816);}else{if(_0x1ba0a2(_0x438150)[_0x4eebc7(0x1c6)](_0x4eebc7(0x608)))_0x1ba0a2(_0x438150)[_0x4eebc7(0x5a7)](_0x4eebc7(0x281))[_0x4eebc7(0x566)]('data-value','')['css'](_0x4eebc7(0x2c0),''),setTimeout(()=>{const _0x540f0f=_0x4eebc7;_0x1ba0a2(_0x438150)[_0x540f0f(0x5a7)](_0x540f0f(0x281))[_0x540f0f(0x566)](_0x540f0f(0x617),_0x7d94a2[0x1])[_0x540f0f(0x130)](_0x540f0f(0x2c0),_0x540f0f(0x183)+_0x7d94a2[0x1]+_0x540f0f(0x25e)+_0x5bc6df[_0x540f0f(0x2ef)]()+'\x22)')[_0x540f0f(0x56d)](_0x540f0f(0x110)),_0x438150=!0x1;},0x1f4);else{let _0x17e3a5=_0x7d94a2[0x1][_0x4eebc7(0x380)](_0x7d94a2[0x1][_0x4eebc7(0x1af)]('/')+0x1),_0x5d45cc='',_0x42f3b0=/\.(jpg|jpeg|png|)$/['test'](_0x7d94a2[0x1][_0x4eebc7(0x299)]()),_0x37c9dd=/\.(mp3|ogg)$/[_0x4eebc7(0x389)](_0x7d94a2[0x1][_0x4eebc7(0x299)]()),_0x45cefc=/\.(docx|pptx|xlsx|doc|ppt|xls)$/['test'](_0x7d94a2[0x1][_0x4eebc7(0x299)]());_0x5d45cc=_0x42f3b0?_0x4eebc7(0x505)+_0x17e3a5+_0x4eebc7(0x3d3)+_0x7d94a2[0x1]+_0x4eebc7(0x2f9)+_0x7d94a2[0x2]+_0x4eebc7(0x3d2)+_0x7d94a2[0x1]+_0x4eebc7(0x467):_0x37c9dd?_0x4eebc7(0x5a2)+_0x17e3a5+_0x4eebc7(0x3d3)+_0x7d94a2[0x1]+_0x4eebc7(0x2f9)+_0x7d94a2[0x2]+_0x4eebc7(0x437)+_0x7d94a2[0x1]+_0x4eebc7(0x2d2)+_0x7d94a2[0x1][_0x4eebc7(0x59a)]('.')[_0x4eebc7(0x549)]()+_0x4eebc7(0x2e1):_0x45cefc?'<div\x20data-name=\x22'+_0x17e3a5+_0x4eebc7(0x3d3)+_0x7d94a2[0x1]+_0x4eebc7(0x2f9)+_0x7d94a2[0x2]+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-file-earmark-text-fill\x22\x20style=\x22font-size:1.8rem\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>':_0x4eebc7(0x505)+_0x17e3a5+'\x22\x20data-value=\x22'+_0x7d94a2[0x1]+_0x4eebc7(0x2f9)+_0x7d94a2[0x2]+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-file-earmark-text-fill\x22\x20style=\x22font-size:1.89rem;\x20color:\x20var(--chat-text-primary)\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi-x-lg\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div',_0x27fc27[_0x4eebc7(0x5a7)]('.sb-attachments')[_0x4eebc7(0x56d)](_0x5d45cc),_0x19680f['activateBar']();}}}else _0x5bc6df[_0x4eebc7(0x247)](_0x7d94a2[0x1],_0x4eebc7(0x453));this['busy'](!0x1);},'closeChat':function(_0x336951=!0x0){const _0x5f3208=_0x3c09f9;let _0x254f4d=this[_0x5f3208(0x5b6)]['id'];function _0x3006bc(){const _0x32df9a=_0x5f3208;_0x537b7d[_0x32df9a(0x5a7)](_0x32df9a(0x134)+_0x254f4d+'\x22]')[_0x32df9a(0x20b)](),_0x580b82='new-conversation',_0x19680f[_0x32df9a(0x550)](),_0x19844b(_0x32df9a(0x3af),''),_0x105d96()[_0x32df9a(0x516)](_0x254f4d),_0x47fcfe[_0x32df9a(0x333)]||_0x19680f[_0x32df9a(0x3e2)]();}_0x19680f[_0x5f3208(0x550)](),_0x336951?_0x5bc6df[_0x5f3208(0x612)]({'function':_0x5f3208(0x31d),'conversation_id':_0x254f4d,'status_code':0x3},()=>{_0x3006bc();}):_0x3006bc();},'automations':{'history':[],'busy':[],'scroll_position_intervals':{},'timeout_queue':[],'run_all':function(){const _0x4583fc=_0x3c09f9;let _0x1346c7=_0x47fcfe[_0x4583fc(0x575)];for(var _0x2df325=0x0;_0x2df325<_0x1346c7[_0x4583fc(0x4fb)];_0x2df325++){let _0x3ea8c0=_0x1346c7[_0x2df325],_0x4a18ba=_0x3ea8c0['conditions'],_0x43caf1=0x0==_0x4a18ba[_0x4583fc(0x4fb)],_0x4f2ad7=!0x1,_0x3b313a=!0x1,_0x44737b=!0x1;for(var _0x77ed7=0x0;_0x77ed7<_0x4a18ba['length'];_0x77ed7++){let _0x4805c2=_0x4a18ba[_0x77ed7][0x1];switch(_0x43caf1=!0x1,_0x4a18ba[_0x77ed7][0x0]){case _0x4583fc(0x5da):_0x43caf1=!0x0,_0x4f2ad7=_0x4805c2;break;case'scroll_position':_0x43caf1=!0x0,_0x3b313a=_0x4805c2;break;case _0x4583fc(0x30a):case'exclude_urls':case _0x4583fc(0x570):let _0xc66632=_0x4583fc(0x570)==_0x4a18ba[_0x77ed7][0x0]?document[_0x4583fc(0x347)]:window[_0x4583fc(0x33a)]['href'],_0xd817d5=_0x4a18ba[_0x77ed7][0x2][_0x4583fc(0x59a)](','),_0x3ae895=_0x4583fc(0x501)!=_0x4a18ba[_0x77ed7][0x0];_0x3ae895||(_0x43caf1=!0x0),_0xc66632=_0xc66632['replace']('https://','')[_0x4583fc(0x180)](_0x4583fc(0x268),'')[_0x4583fc(0x180)]('www.','');for(var _0x4368d3=0x0;_0x4368d3<_0xd817d5['length'];_0x4368d3++)if(_0xd817d5[_0x4368d3]=_0x1ba0a2[_0x4583fc(0x605)](_0xd817d5[_0x4368d3]['replace'](_0x4583fc(0x3ab),'')[_0x4583fc(0x180)]('http://','')[_0x4583fc(0x180)](_0x4583fc(0x4c5),'')),_0x4583fc(0x267)==_0x4805c2&&-0x1!=_0xc66632[_0x4583fc(0x57a)](_0xd817d5[_0x4368d3])||'does-not-contain'==_0x4805c2&&-0x1==_0xc66632[_0x4583fc(0x57a)](_0xd817d5[_0x4368d3])||_0x4583fc(0x47a)==_0x4805c2&&_0xd817d5[_0x4368d3]==_0xc66632||_0x4583fc(0x5b9)==_0x4805c2&&_0xd817d5[_0x4368d3]!=_0xc66632){_0x43caf1=_0x3ae895;break;}break;case _0x4583fc(0x3c5):let _0x29f572=_0x4805c2['split']('=');_0x29f572[0x0]in window&&window[_0x29f572[0x0]]==_0x29f572[0x1]&&(_0x43caf1=!0x0);break;case _0x4583fc(0x303):case _0x4583fc(0x574):case _0x4583fc(0xfd):case _0x4583fc(0x408):case'countries':_0x43caf1=_0x105d96(),_0x44737b=!0x0;break;case _0x4583fc(0x39a):_0x43caf1=_0x105d96()&&!_0x5bc6df[_0x4583fc(0x128)](_0x105d96()['getExtra'](_0x4583fc(0x2e3)));break;case _0x4583fc(0x2c9):_0x43caf1=_0x105d96()&&!_0x5bc6df[_0x4583fc(0x128)](_0x105d96()[_0x4583fc(0x59e)](_0x4583fc(0x18b)));break;default:_0x43caf1=!0x0;}if(!_0x43caf1)break;}[_0x4583fc(0x1fb),_0x4583fc(0x23a),_0x4583fc(0x413)][_0x4583fc(0x27a)](_0x3ea8c0['type'])&&!_0x105d96()&&(_0x43caf1=!0x1),!_0x43caf1||(_0x44737b?_0x3ea8c0['id']in this[_0x4583fc(0x235)]||(_0x5bc6df[_0x4583fc(0x612)]({'function':_0x4583fc(0x310),'automation':_0x3ea8c0},_0x837479=>{const _0x70df52=_0x4583fc;!0x1!==_0x837479&&this['run_all_final'](_0x3ea8c0,_0x3b313a,_0x4f2ad7),delete this[_0x70df52(0x235)][_0x3ea8c0['id']];}),this[_0x4583fc(0x235)][_0x3ea8c0['id']]=!0x0):this[_0x4583fc(0x125)](_0x3ea8c0,_0x3b313a,_0x4f2ad7));}},'run_all_final':function(_0x5ce45e,_0x55ba1a,_0x3a2c47){const _0x5ae103=_0x3c09f9;_0x55ba1a?this[_0x5ae103(0x3e5)][_0x5ce45e['id']]=setInterval(()=>{const _0x41a135=_0x5ae103;_0x1ba0a2(window)[_0x41a135(0x316)]()>parseInt(_0x55ba1a)&&(_0x3a2c47?setTimeout(()=>{this['run'](_0x5ce45e);},0x3e8*parseInt(_0x3a2c47)):this[_0x41a135(0x227)](_0x5ce45e),clearInterval(this[_0x41a135(0x3e5)][_0x5ce45e['id']]));},0x3e8):_0x3a2c47?this['timeout_queue'][_0x5ae103(0x27a)](_0x5ce45e['id'])||(setTimeout(()=>{const _0x4c508d=_0x5ae103;this[_0x4c508d(0x227)](_0x5ce45e);},0x3e8*parseInt(_0x3a2c47)),this[_0x5ae103(0x527)][_0x5ae103(0x33f)](_0x5ce45e['id'])):this[_0x5ae103(0x227)](_0x5ce45e);},'run':function(_0x37cb7b){const _0x5ae958=_0x3c09f9;if(!this[_0x5ae958(0x30c)][_0x5ae958(0x27a)](_0x37cb7b['id']))switch(_0x37cb7b[_0x5ae958(0x44d)]){case'messages':case _0x5ae958(0x23a):case _0x5ae958(0x413):if((!_0x6e0d8d[_0x5ae958(0x40d)]||_0x6e0d8d[_0x5ae958(0x1ca)])&&!(_0x37cb7b['id']in this['busy'])){if(_0x5ae958(0x1fb)==_0x37cb7b['type']&&_0x19680f[_0x5ae958(0x2d9)]){let _0x3ae804=!!_0x19680f[_0x5ae958(0x5b6)]&&_0x19680f[_0x5ae958(0x5b6)][_0x5ae958(0x4f8)](!0x1,_0x5ae958(0x284));if(_0x3ae804&&Date[_0x5ae958(0x35e)]()-0x927c0<_0x5bc6df['unix'](_0x3ae804['get'](_0x5ae958(0x5e6))))return;}_0x5bc6df[_0x5ae958(0x612)]({'function':'automations-run','automation':_0x37cb7b},_0x4282ae=>{const _0x5958e4=_0x5ae958;!0x1===_0x4282ae||(this['history']['push'](_0x37cb7b['id']),'messages'!=_0x37cb7b[_0x5958e4(0x44d)]||_0x6e0d8d[_0x5958e4(0x40d)]||_0x19680f[_0x5958e4(0x4a6)]()),delete this[_0x5958e4(0x235)][_0x37cb7b['id']];}),this['busy'][_0x37cb7b['id']]=!0x0;}break;case _0x5ae958(0x2da):_0x19844b(_0x5ae958(0x33c)+_0x37cb7b['id'])||setTimeout(()=>{const _0x52b086=_0x5ae958;if(_0x19680f['chat_open']){if(_0x37cb7b['fallback']){let _0x520f22=!!_0x19680f[_0x52b086(0x5b6)]&&_0x19680f[_0x52b086(0x5b6)][_0x52b086(0x4f8)](!0x1,_0x52b086(0x284));(!_0x520f22||Date['now']()-0x927c0>_0x5bc6df[_0x52b086(0x530)](_0x520f22['get']('creation_time')))&&(_0x19680f[_0x52b086(0x217)](_0x1aa2cb,(_0x5bc6df[_0x52b086(0x128)](_0x37cb7b['title'])?'':'*'+_0x37cb7b[_0x52b086(0x126)]+'*\x0a')+_0x37cb7b[_0x52b086(0x48f)],[],!0x1,!0x1,0x0),_0x19844b('popup'+_0x37cb7b['id'],!0x0),this['history'][_0x52b086(0x33f)](_0x37cb7b['id']));}}else _0x19680f[_0x52b086(0x33c)](!0x1,{'id':_0x37cb7b['id'],'image':_0x37cb7b[_0x52b086(0x4c7)],'title':_0x37cb7b[_0x52b086(0x126)],'message':_0x37cb7b[_0x52b086(0x48f)]}),this[_0x52b086(0x30c)][_0x52b086(0x33f)](_0x37cb7b['id']);},0x3e8);break;case _0x5ae958(0x32d):_0x37cb7b['background']&&_0x756857['css'](_0x5ae958(0x2c0),_0x5ae958(0x183)+_0x37cb7b['background']+'\x22)'),_0x37cb7b[_0x5ae958(0x443)]&&_0x756857[_0x5ae958(0x5a7)]('.sb-brand\x20img')[_0x5ae958(0x566)](_0x5ae958(0x218),_0x37cb7b[_0x5ae958(0x443)]),_0x37cb7b['title']&&_0x756857[_0x5ae958(0x5a7)](_0x5ae958(0x61c))['html'](_0x37cb7b[_0x5ae958(0x126)]),_0x37cb7b['message']&&_0x756857['find'](_0x5ae958(0x111))[_0x5ae958(0x484)](_0x37cb7b[_0x5ae958(0x48f)]),_0x37cb7b['icon']&&_0x537b7d[_0x5ae958(0x5a7)]('.sb-chat-btn\x20.sb-icon')[_0x5ae958(0x566)](_0x5ae958(0x218),_0x37cb7b[_0x5ae958(0x1f1)]),(_0x37cb7b['color_1']||_0x37cb7b[_0x5ae958(0x1e9)]||_0x37cb7b[_0x5ae958(0x209)])&&_0x5bc6df[_0x5ae958(0x612)]({'function':_0x5ae958(0x3e9),'color_1':_0x37cb7b[_0x5ae958(0x3e6)],'color_2':_0x37cb7b[_0x5ae958(0x1e9)],'color_3':_0x37cb7b[_0x5ae958(0x209)]},_0x43d214=>{const _0x4dc840=_0x5ae958;_0x1e4743[_0x4dc840(0x56d)](_0x4dc840(0x5c2)+_0x43d214+_0x4dc840(0x616));}),this[_0x5ae958(0x30c)]['push'](_0x37cb7b['id']);break;case'more':let _0x2dfacb={};_0x37cb7b[_0x5ae958(0x364)]&&(_0x19680f['default_department']=_0x37cb7b[_0x5ae958(0x364)],_0x2dfacb={'function':_0x5ae958(0x221),'department':_0x37cb7b[_0x5ae958(0x364)]}),_0x37cb7b[_0x5ae958(0x494)]&&(_0x19680f[_0x5ae958(0x42d)]=_0x37cb7b[_0x5ae958(0x494)],_0x2dfacb={'function':'update-conversation-agent','agent_id':_0x37cb7b[_0x5ae958(0x494)]}),_0x37cb7b[_0x5ae958(0x133)]&&(_0x37cb7b[_0x5ae958(0x133)]=_0x37cb7b[_0x5ae958(0x133)][_0x5ae958(0x59a)](','),_0x19680f[_0x5ae958(0x5ab)]=_0x37cb7b[_0x5ae958(0x133)],_0x2dfacb={'function':'update-tags','tags':_0x37cb7b[_0x5ae958(0x133)],'add':!0x0}),_0x19680f[_0x5ae958(0x5b6)]['id']&&(_0x37cb7b[_0x5ae958(0x133)]||_0x37cb7b[_0x5ae958(0x494)]||_0x37cb7b[_0x5ae958(0x364)])&&(_0x2dfacb[_0x5ae958(0x53a)]=_0x19680f[_0x5ae958(0x5b6)]['id'],_0x5bc6df['ajax'](_0x2dfacb));}}},'flashNotification':function(){clearInterval(_0x53417e),_0x53417e=setInterval(function(){const _0x4d176b=_0x2301;document['title']=document[_0x4d176b(0x126)]==_0x435e4b?_0x66a1ca(_0x4d176b(0x479)):_0x435e4b;},0x7d0);},'calculateLabelDates':function(){const _0x4a6e43=_0x3c09f9;(_0x47b6a4||this['chat_open'])&&(_0x51c2c9=_0xb5e3a[_0x4a6e43(0x5a7)]('.sb-label-date'));},'calculateLabelDateFirst':function(){const _0x357208=_0x3c09f9;this[_0x357208(0x5b6)][_0x357208(0x1fb)][_0x357208(0x4fb)]||_0xb5e3a[_0x357208(0x56d)]('<div\x20class=\x22sb-label-date\x22><span>'+_0x66a1ca(_0x357208(0x11d))+_0x357208(0x34f));}};window['SBChat']=_0x19680f;var _0x3b9132={'rich_messsages':{'email':'','button':'','video':'','si':_0x3c09f9(0x36b),'no':_0x3c09f9(0x4e6),'image':'','chips':_0x3c09f9(0x1c8),'buttons':_0x3c09f9(0x3c3),'select':_0x3c09f9(0x108),'list':'<div\x20class=\x22sb-text-list\x22>[values]</div>','list-image':_0x3c09f9(0x2ab),'table':_0x3c09f9(0x15e),'inputs':_0x3c09f9(0x1b4),'rating':_0x3c09f9(0x1bd),'card':_0x3c09f9(0x58f),'share':'<div\x20class=\x22sb-social-buttons\x22>[settings]</div>','slider':_0x3c09f9(0x45d),'slider-images':'<div\x20class=\x22sb-slider\x20sb-slider-images\x22><div>[items]</div></div><div\x20class=\x22sb-slider-arrow\x20bi-chevron-left[class]\x22></div><div\x20class=\x22sb-slider-arrow\x20bi-chevron-right\x20sb-active[class]\x22></div>','phone':''},'cache':{},'generate':function(_0x3dc4d3,_0x4473c6,_0x44fc7b=''){const _0x3f363c=_0x3c09f9;let _0x1bcbb1,_0x46b6f2=!0x0,_0x18a0e6='id'in _0x3dc4d3?_0x3dc4d3['id']:_0x5bc6df[_0x3f363c(0x2ef)](),_0x34f864=new _0x494501({});_0x4473c6 in this['rich_messsages']?_0x1bcbb1=this[_0x3f363c(0x5e2)][_0x4473c6]:_0x4473c6 in this['cache']?_0x1bcbb1=this[_0x3f363c(0x3b0)][_0x4473c6]:_0x47b6a4||!_0x5bc6df[_0x3f363c(0x128)](_0x47fcfe)&&'rich-messages'in _0x47fcfe&&_0x47fcfe['rich-messages']['includes'](_0x4473c6)?('id'in _0x3dc4d3||(_0x18a0e6=_0x4473c6),_0x1bcbb1='<div\x20class=\x22sb-rich-loading\x20sb-loading\x22></div>',_0x5bc6df[_0x3f363c(0x612)]({'function':_0x3f363c(0x2b1),'name':_0x4473c6,'settings':_0x3dc4d3},_0x186c48=>{const _0x155080=_0x3f363c;_0x186c48=_0x34f864[_0x155080(0x132)](this[_0x155080(0x49f)](_0x186c48)),_0x155080(0x44e)==_0x4473c6&&(_0x186c48=this[_0x155080(0x44e)](_0x186c48)),_0x537b7d[_0x155080(0x5a7)](_0x155080(0x1ba)+_0x18a0e6+'\x22]')['html']('<div\x20class=\x22sb-content\x22>'+_0x186c48+'</div>'),this[_0x155080(0x3b0)][_0x4473c6]=_0x186c48,_0x19680f[_0x155080(0x5d7)](_0x19680f['dashboard']);}),_0x46b6f2=!0x1):_0x1bcbb1='['+_0x4473c6+']';let _0x25aa82='disabled'in _0x3dc4d3;if(_0x46b6f2){let _0x11d44a,_0x229018='',_0x421cd0=_0x5bc6df['get_value'](_0x5bc6df['admin_set'](_0x3f363c(0x19f))[_0x3f363c(0x3b8)]);switch(_0x4473c6){case _0x3f363c(0x131):_0x1bcbb1=_0x3dc4d3[_0x3f363c(0x366)]&&_0x3dc4d3[_0x3f363c(0x251)]?_0x3f363c(0x2b6)+_0x3dc4d3[_0x3f363c(0x366)][_0x3f363c(0x180)](/<i>/g,'_')[_0x3f363c(0x180)](/<\/i>/g,'_')+'\x22'+(_0x3f363c(0x17f)in _0x3dc4d3?_0x3f363c(0x4f1):'')+_0x3f363c(0x2c8)+(_0x3f363c(0x366)==_0x3dc4d3[_0x3f363c(0x251)]?'-text':'')+'\x22>'+_0x66a1ca(_0x3dc4d3[_0x3f363c(0x5de)])+_0x3f363c(0x3bd):_0x3dc4d3[_0x3f363c(0x60c)]&&_0x3dc4d3['no']?'si'===_0x3dc4d3['yes']&&'no'===_0x3dc4d3['no']?''+_0x3b9132[_0x3f363c(0x5e2)][_0x3f363c(0x60c)]+_0x3b9132[_0x3f363c(0x5e2)]['no']:_0x3f363c(0x60c)===_0x3dc4d3[_0x3f363c(0x60c)]&&'no'===_0x3dc4d3['no']?''+_0x3b9132['rich_messsages']['no']+_0x3b9132['rich_messsages'][_0x3f363c(0x60c)]:_0x3f363c(0x4f5)+_0x66a1ca(_0x3dc4d3['name'])+'</button>':_0x3f363c(0x4f5)+_0x66a1ca(_0x3dc4d3[_0x3f363c(0x5de)])+_0x3f363c(0x2dc);break;case _0x3f363c(0x182):_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)](_0x3f363c(0x30b),_0x66a1ca(_0x5bc6df[_0x3f363c(0x128)](_0x3dc4d3[_0x3f363c(0x5fb)])?_0x66a1ca(_0x421cd0):_0x3dc4d3[_0x3f363c(0x5fb)])[_0x3f363c(0x180)](/\n/g,_0x3f363c(0x3d1)))[_0x3f363c(0x180)]('[success-negative]',_0x5bc6df[_0x3f363c(0x128)](_0x3dc4d3['success-negative'])?'':_0x66a1ca(_0x3dc4d3['success-negative']))[_0x3f363c(0x180)](_0x3f363c(0x599),_0x66a1ca(_0x5bc6df[_0x3f363c(0x128)](_0x3dc4d3['label-positive'])?_0x3f363c(0x358):_0x3dc4d3['label-positive']))[_0x3f363c(0x180)](_0x3f363c(0x29d),_0x66a1ca(_0x5bc6df[_0x3f363c(0x128)](_0x3dc4d3[_0x3f363c(0x3db)])?_0x3f363c(0x58e):_0x3dc4d3[_0x3f363c(0x3db)]));break;case'email':let _0x5c4072=[],_0x36f2f6=_0x105d96()[_0x3f363c(0x59e)](_0x3f363c(0x18b)),_0x1fc7f5='#'==_0x105d96()['get']('last_name')['charAt'](0x0);_0x3f363c(0x4a7)==_0x3dc4d3[_0x3f363c(0x5de)]&&_0x5c4072[_0x3f363c(0x33f)](['first_name',_0x3f363c(0x4a7)==_0x3dc4d3['last-name']?_0x3f363c(0x60e):_0x3f363c(0x45f),_0x1fc7f5?'':_0x3f363c(0x4a7)==_0x3dc4d3[_0x3f363c(0x361)]?_0x105d96()[_0x3f363c(0x59e)](_0x3f363c(0x275)):_0x105d96()[_0x3f363c(0x5de)],_0x3f363c(0x454),!0x0]),_0x3f363c(0x4a7)==_0x3dc4d3[_0x3f363c(0x361)]&&_0x5c4072[_0x3f363c(0x33f)]([_0x3f363c(0x377),_0x3f363c(0x336),_0x1fc7f5?'':_0x105d96()[_0x3f363c(0x59e)](_0x3f363c(0x377)),_0x3f363c(0x454),!0x0]);for(var _0x45d5f1=0x0;_0x45d5f1<_0x5c4072[_0x3f363c(0x4fb)];_0x45d5f1++)_0x1bcbb1+=_0x3f363c(0x4c0)+_0x5c4072[_0x45d5f1][0x0]+'\x22\x20data-type=\x22text\x22\x20class=\x22sb-input\x20sb-input-text\x22><span\x20class=\x22'+(''==_0x5c4072[_0x45d5f1][0x2]?'':_0x3f363c(0x50a))+'\x22>'+_0x66a1ca(_0x5c4072[_0x45d5f1][0x1])+'</span><input\x20value=\x22'+_0x5c4072[_0x45d5f1][0x2]+_0x3f363c(0x529)+_0x5c4072[_0x45d5f1][0x3]+'\x22\x20'+(_0x5c4072[_0x45d5f1][0x4]?'required':'')+_0x3f363c(0x376);if(_0x3f363c(0x4a7)==_0x3dc4d3[_0x3f363c(0x2e3)]){let _0x1c134e=_0x105d96()['getExtra'](_0x3f363c(0x2e3)),_0x4a2688=_0x47b6a4?[]:_0x47fcfe[_0x3f363c(0x47b)],_0x412095='';if(0x1===_0x4a2688[_0x3f363c(0x4fb)])_0x412095=_0x3f363c(0x15c)+_0x4a2688[0x0]+'\x22>';else{for(var _0x45d5f1=0x0;_0x45d5f1<_0x4a2688[_0x3f363c(0x4fb)];_0x45d5f1++)_0x412095+='<option\x20value=\x22+'+_0x4a2688[_0x45d5f1]+_0x3f363c(0x4de)+_0x4a2688[_0x45d5f1]+_0x3f363c(0x4fd);_0x412095='<select\x20style=\x27color:black!important;\x27><option\x20value=\x22\x22>+00</option>'+_0x412095+_0x3f363c(0x534);}_0x1bcbb1+=_0x3f363c(0x1ae)+(''==_0x1c134e?'':_0x3f363c(0x50a))+'\x22>'+_0x66a1ca('Phone')+_0x3f363c(0x5c0)+_0x412095+_0x3f363c(0x400)+(_0x47b6a4?'':_0x1c134e)+_0x3f363c(0x387)+(_0x3f363c(0x27d)!=_0x3dc4d3['phone-required']?_0x3f363c(0x54e):'')+'></div>';}_0x1bcbb1+=_0x3f363c(0x5f6)+(''==_0x36f2f6?'':'sb-active\x20sb-filled')+'\x22>'+_0x66a1ca(_0x5bc6df[_0x3f363c(0x128)](_0x3dc4d3['placeholder'])?_0x3f363c(0x233):_0x3dc4d3[_0x3f363c(0x4e3)])+_0x3f363c(0x169)+_0x36f2f6+_0x3f363c(0x1ac);break;case _0x3f363c(0x417):_0x1bcbb1=_0x3f363c(0x1eb)+_0x3dc4d3['url']+'\x22></div>';break;case _0x3f363c(0x175):_0x1bcbb1=_0x3f363c(0x4d1)+(_0x3f363c(0x2bc)in _0x3dc4d3?_0x3f363c(0x53f)+_0x3dc4d3['height']+'\x22':'')+_0x3f363c(0x23c)+('youtube'==_0x3dc4d3[_0x3f363c(0x44d)]?_0x3f363c(0x426):_0x3f363c(0x334))+_0x3dc4d3['id']+_0x3f363c(0x1a3);break;case _0x3f363c(0x5d5):_0x11d44a=_0x3dc4d3['options'][_0x3f363c(0x59a)](',');for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a['length'];_0x45d5f1++)_0x229018+=_0x3f363c(0x319)+_0x5bc6df[_0x3f363c(0x296)](_0x11d44a[_0x45d5f1])+'\x22>'+_0x66a1ca(_0x11d44a[_0x45d5f1])+_0x3f363c(0x521);_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)](_0x3f363c(0x3a9),_0x229018);break;case _0x3f363c(0x4aa):case'buttons':_0x11d44a=_0x3dc4d3[_0x3f363c(0x386)][_0x3f363c(0x59a)](',');for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a[_0x3f363c(0x4fb)];_0x45d5f1++)_0x229018+=_0x3f363c(0x302)+_0x66a1ca(_0x11d44a[_0x45d5f1])+_0x3f363c(0x5b7);_0x1bcbb1=_0x1bcbb1['replace'](_0x3f363c(0x3a9),_0x229018);break;case'list':_0x11d44a=_0x3dc4d3[_0x3f363c(0x289)][_0x3f363c(0x59a)](',');let _0x12cb15=_0x3f363c(0x185)==_0x4473c6,_0x20f706=_0x12cb15&&_0x11d44a['length']&&_0x11d44a[0x0][_0x3f363c(0x57a)](':')>0x0;_0x12cb15&&!_0x20f706&&(_0x1bcbb1=_0x1bcbb1['replace'](_0x3f363c(0x19c),_0x3f363c(0x500)));for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a[_0x3f363c(0x4fb)];_0x45d5f1++)_0x229018+=_0x20f706?'<div><div>'+_0x66a1ca(_0x11d44a[_0x45d5f1]['split'](':')[0x0])+'</div><div>'+_0x66a1ca(_0x11d44a[_0x45d5f1][_0x3f363c(0x59a)](':')[0x1])+_0x3f363c(0x3fd):_0x3f363c(0x2e0)+_0x1ba0a2['trim'](_0x66a1ca(_0x11d44a[_0x45d5f1]))+_0x3f363c(0x5b7);_0x1bcbb1=_0x1bcbb1['replace'](_0x3f363c(0x138),_0x229018);break;case _0x3f363c(0x607):_0x11d44a=_0x3dc4d3[_0x3f363c(0x289)][_0x3f363c(0x59a)](',');for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a[_0x3f363c(0x4fb)];_0x45d5f1++){let _0x51c9e5=_0x11d44a[_0x45d5f1][_0x3f363c(0x180)]('://',_0x3f363c(0x115))[_0x3f363c(0x59a)](':');_0x229018+=_0x3f363c(0xf7)+_0x51c9e5[0x0]['replace'](_0x3f363c(0x115),'://')+_0x3f363c(0x5bf)+_0x51c9e5[0x1]+_0x3f363c(0x448)+_0x51c9e5[0x2]+_0x3f363c(0x3fd);}_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)](_0x3f363c(0x138),_0x229018);break;case _0x3f363c(0x196):_0x11d44a=_0x3dc4d3[_0x3f363c(0x171)][_0x3f363c(0x59a)](','),_0x229018+=_0x3f363c(0x351);for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a[_0x3f363c(0x4fb)];_0x45d5f1++)_0x229018+=_0x3f363c(0x309)+_0x11d44a[_0x45d5f1]+'</th>';_0x229018+=_0x3f363c(0x116),_0x1bcbb1=_0x1bcbb1['replace'](_0x3f363c(0x211),_0x229018),_0x229018='',_0x11d44a=_0x3dc4d3['values'][_0x3f363c(0x59a)](',');for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a[_0x3f363c(0x4fb)];_0x45d5f1++){let _0x153266=_0x11d44a[_0x45d5f1]['split'](':');_0x229018+=_0x3f363c(0x351);for(var _0x45d5f1=0x0;_0x45d5f1<_0x153266[_0x3f363c(0x4fb)];_0x45d5f1++)_0x229018+=_0x3f363c(0x28f)+_0x153266[_0x45d5f1]+_0x3f363c(0x3df);_0x229018+=_0x3f363c(0x116);}_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)](_0x3f363c(0x138),_0x229018);break;case _0x3f363c(0x27e):_0x11d44a=_0x3dc4d3['values'][_0x3f363c(0x59a)](',');for(var _0x45d5f1=0x0;_0x45d5f1<_0x11d44a[_0x3f363c(0x4fb)];_0x45d5f1++)_0x25aa82&&''==_0x11d44a[_0x45d5f1]||(_0x229018+=_0x3f363c(0x4c0)+_0x5bc6df[_0x3f363c(0x296)](_0x11d44a[_0x45d5f1])+_0x3f363c(0x3da)+_0x66a1ca(_0x11d44a[_0x45d5f1])+_0x3f363c(0x280));_0x229018+=_0x3f363c(0x302)+_0x66a1ca(_0x3f363c(0x131)in _0x3dc4d3?_0x3dc4d3['button']:_0x3f363c(0x112))+'</div>',_0x1bcbb1=_0x1bcbb1['replace'](_0x3f363c(0x138),_0x229018);break;case _0x3f363c(0x5d0):_0x229018=(_0x3f363c(0x417)in _0x3dc4d3?_0x3f363c(0x4e7)+_0x3dc4d3[_0x3f363c(0x417)]+_0x3f363c(0x3b6):'')+_0x3f363c(0x432)+_0x3dc4d3[_0x3f363c(0x171)]+'</div>'+('extra'in _0x3dc4d3?'<div\x20class=\x22sb-card-extra\x22>'+_0x3dc4d3['extra']+_0x3f363c(0x5b7):'')+(_0x3f363c(0x391)in _0x3dc4d3?_0x3f363c(0x352)+_0x3dc4d3[_0x3f363c(0x391)]+_0x3f363c(0x5b7):'')+(_0x3f363c(0x366)in _0x3dc4d3?'<a\x20class=\x22sb-card-btn\x22\x20href=\x22'+_0x3dc4d3['link']+'\x22'+(_0x3f363c(0x17f)in _0x3dc4d3?'\x20target=\x22_blank\x22':'')+'>'+_0x66a1ca(_0x3dc4d3[_0x3f363c(0x16a)])+_0x3f363c(0x3bd):''),_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)]('[settings]',_0x229018);break;case _0x3f363c(0x52f):let _0x3e9925=_0x3f363c(0x1bc)in _0x3dc4d3?_0x3dc4d3['channels'][_0x3f363c(0x180)](/ /g,'')[_0x3f363c(0x59a)](','):['fb','tw','li','wa','pi'],_0x5eb424='';for(var _0x45d5f1=0x0;_0x45d5f1<_0x3e9925[_0x3f363c(0x4fb)];_0x45d5f1++){switch(_0x3e9925[_0x45d5f1]){case'fb':_0x5eb424=_0x3f363c(0x5af);break;case'tw':_0x5eb424='twitter.com/intent/tweet?url=';break;case'li':_0x5eb424='www.linkedin.com/sharing/share-offsite/?url=';break;case'wa':_0x5eb424=_0x3f363c(0x4b9);break;case'pi':_0x5eb424=_0x3f363c(0x463);}_0x229018+='<div\x20class=\x22sb-'+_0x3e9925[_0x45d5f1]+'\x20sb-icon-social-'+_0x3e9925[_0x45d5f1]+_0x3f363c(0x3c8)+_0x5eb424+_0x3dc4d3['link']+_0x3f363c(0x481);}_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)](_0x3f363c(0x5ff),_0x229018);break;case'slider':let _0x46d6fd=0x0;for(var _0x45d5f1=0x1;_0x45d5f1<0x10;_0x45d5f1++)if(_0x3f363c(0x325)+_0x45d5f1 in _0x3dc4d3)_0x229018+=_0x3f363c(0x2e0)+(_0x3f363c(0x151)+_0x45d5f1 in _0x3dc4d3?_0x3f363c(0x4e7)+_0x3dc4d3['image-'+_0x45d5f1]+_0x3f363c(0x3b6):'')+_0x3f363c(0x432)+_0x3dc4d3[_0x3f363c(0x325)+_0x45d5f1]+_0x3f363c(0x5b7)+(_0x3f363c(0x265)+_0x45d5f1 in _0x3dc4d3?_0x3f363c(0x48a)+_0x3dc4d3[_0x3f363c(0x265)+_0x45d5f1]+'</div>':'')+(_0x3f363c(0x465)+_0x45d5f1 in _0x3dc4d3?_0x3f363c(0x352)+_0x3dc4d3[_0x3f363c(0x465)+_0x45d5f1]+'</div>':'')+(_0x3f363c(0x4ac)+_0x45d5f1 in _0x3dc4d3?'<a\x20class=\x22sb-card-btn\x22\x20href=\x22'+_0x3dc4d3[_0x3f363c(0x4ac)+_0x45d5f1]+'\x22'+(_0x3f363c(0x17f)in _0x3dc4d3?_0x3f363c(0x4f1):'')+'>'+_0x66a1ca(_0x3dc4d3[_0x3f363c(0x562)+_0x45d5f1])+_0x3f363c(0x3bd):'')+_0x3f363c(0x5b7),_0x46d6fd++;else break;_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)](_0x3f363c(0x21d),_0x229018)[_0x3f363c(0x180)](/\[class\]/g,0x1==_0x46d6fd?_0x3f363c(0x287):'');break;case _0x3f363c(0x35d):if(_0x3f363c(0x1c7)in _0x3dc4d3){let _0x2ecc35=_0x3dc4d3['images']['split'](',');for(var _0x45d5f1=0x0;_0x45d5f1<_0x2ecc35['length'];_0x45d5f1++)_0x229018+=_0x3f363c(0x237)+_0x2ecc35[_0x45d5f1]+_0x3f363c(0x5b3)+_0x2ecc35[_0x45d5f1]+_0x3f363c(0x3b6);_0x1bcbb1=_0x1bcbb1['replace'](/\[class\]/g,0x1==_0x2ecc35[_0x3f363c(0x4fb)]?_0x3f363c(0x287):'');}_0x1bcbb1=_0x1bcbb1[_0x3f363c(0x180)]('[items]',_0x229018);break;default:_0x1bcbb1='['+_0x4473c6+']';}}return'<div\x20id=\x22'+_0x18a0e6+_0x3f363c(0xfc)+_0x4473c6+'\x22'+(_0x25aa82?_0x3f363c(0x157):'')+(_0x3f363c(0x26a)in _0x3dc4d3?_0x3f363c(0x213)+_0x3dc4d3[_0x3f363c(0x26a)]+'\x22':'')+_0x3f363c(0x5d1)+_0x4473c6+'\x20'+_0x44fc7b+'\x22>'+(_0x3f363c(0x126)in _0x3dc4d3?_0x3f363c(0x5c6)+_0x34f864[_0x3f363c(0x132)](_0x66a1ca(_0x3dc4d3[_0x3f363c(0x126)]))+_0x3f363c(0x5b7):'')+(_0x3f363c(0x48f)in _0x3dc4d3?_0x3f363c(0x490)+_0x34f864['render'](_0x66a1ca(_0x3dc4d3[_0x3f363c(0x48f)]))+_0x3f363c(0x5b7):'')+(_0x3f363c(0x13e)+_0x1bcbb1+'</div><div\x20data-success=\x22'+(_0x3f363c(0x1fa)in _0x3dc4d3?_0x3dc4d3['success']['replace'](/"/g,''):'')+_0x3f363c(0x3ca));},'submit':function(_0x1dbb4d,_0x11ee1f,_0x4167d5){const _0x3fce03=_0x3c09f9;var _0x454359;if(!_0x47b6a4&&(_0x454359=_0x4167d5,!_0x1ba0a2(_0x454359)['sbLoading']()&&(_0x1ba0a2(_0x454359)['sbLoading'](!0x0),0x1))&&!this['is_busy']){let _0x45d306='',_0x195a7e='',_0x54dae4={},_0x36400d=_0x1ba0a2(_0x1dbb4d)[_0x3fce03(0x5a7)](_0x3fce03(0x369))[_0x3fce03(0x4fb)]?_0x1ba0a2(_0x1dbb4d)[_0x3fce03(0x5a7)](_0x3fce03(0x369))[_0x3fce03(0x566)](_0x3fce03(0x2f3)):'',_0xbbd53e=_0x1ba0a2(_0x1dbb4d)[_0x3fce03(0x492)]('.sb-rich-message')['attr']('id'),_0x24f4f3=_0x1ba0a2(_0x1dbb4d)[_0x3fce03(0x492)]('[data-id]')[_0x3fce03(0x566)]('data-id'),_0x2789f8='',_0x3a3f4c={'rich-messages':{}},_0x1a5665=!0x1==_0x105d96()?{'profile_image':['',''],'first_name':['',''],'last_name':['',''],'email':['',''],'password':['',''],'user_type':['','']}:{'profile_image':[_0x105d96()['image'],''],'first_name':[_0x105d96()[_0x3fce03(0x59e)]('first_name'),''],'last_name':[_0x105d96()[_0x3fce03(0x59e)]('last_name'),''],'email':[_0x105d96()['get'](_0x3fce03(0x18b)),''],'password':['',''],'user_type':['','']},_0x1d05de={},_0x30a6d2=_0x1ba0a2(_0x4167d5),_0x280c29='',_0x5b3783=!0x1,_0x2be357=!0x1!==_0x19680f[_0x3fce03(0x5b6)],_0x594adc={},_0x271989={};if(_0x5bc6df['null'](_0x24f4f3))_0x24f4f3=-0x1;else{let _0x1ba339=_0x19680f[_0x3fce03(0x5b6)][_0x3fce03(0x259)](_0x24f4f3);_0x2789f8=_0x1ba339['message'],_0x3fce03(0x561)in(_0x3a3f4c=_0x1ba339['payload']())||(_0x3a3f4c[_0x3fce03(0x561)]={});}switch(_0x1ba0a2(_0x4167d5)[_0x3fce03(0x1c6)](_0x3fce03(0x1cb))||_0x1ba0a2(_0x4167d5)[_0x3fce03(0x1c6)](_0x3fce03(0x45a))||_0x1ba0a2(_0x4167d5)[_0x3fce03(0x1c6)](_0x3fce03(0x23e))||(_0x30a6d2=_0x1ba0a2(_0x4167d5)[_0x3fce03(0x492)](_0x3fce03(0x317))),_0x1ba0a2(_0x1dbb4d)['find'](_0x3fce03(0x1c3))[_0x3fce03(0x484)]('')['sbActive'](!0x1),_0x11ee1f){case _0x3fce03(0x18b):let _0x4283e3=_0x3fce03(0x377)in _0x1d05de;_0x3fce03(0x275)in(_0x1d05de=_0xc0a6f0[_0x3fce03(0x557)](_0x1dbb4d))&&(_0x1a5665[_0x3fce03(0x574)]=['user',''],_0x4283e3||(_0x1a5665[_0x3fce03(0x377)]=['',''])),_0x3fce03(0x2e3)in _0x1d05de&&(_0x594adc={'phone':[_0x1d05de[_0x3fce03(0x2e3)][0x0],_0x3fce03(0x438)]}),_0x1ba0a2[_0x3fce03(0x3aa)](_0x1a5665,_0x1d05de),_0x45d306=_0x3fce03(0x354),_0x36400d&&(_0x36400d=_0x66a1ca(_0x36400d)[_0x3fce03(0x180)](_0x3fce03(0x340),_0x1a5665[_0x3fce03(0x18b)][0x0])[_0x3fce03(0x180)](_0x3fce03(0x38e),_0x1a5665[_0x3fce03(0x275)][0x0]+(_0x4283e3?'\x20'+_0x1a5665[_0x3fce03(0x377)][0x0]:''))),_0x3a3f4c['rich-messages'][_0xbbd53e]={'type':_0x11ee1f,'result':_0x1d05de},_0x3a3f4c[_0x3fce03(0x47c)]=_0x3fce03(0x271),_0x54dae4={'function':_0x3fce03(0x4ef),'settings':_0x1a5665,'settings_extra':_0x594adc,'payload':_0x3a3f4c},_0x5b3783={'settings':_0x1a5665,'settings_extra':_0x594adc};break;case _0x3fce03(0x47f):if(_0x594adc=_0xc0a6f0[_0x3fce03(0x557)](_0x1dbb4d[_0x3fce03(0x5a7)](_0x3fce03(0x5fc))),_0x1ba0a2['extend'](_0x1a5665,_0xc0a6f0['getAll'](_0x1dbb4d['find'](_0x3fce03(0x2c4)))),_0x271989=_0x1ba0a2[_0x3fce03(0x3aa)]({},_0x1a5665),_0x36400d&&(_0x36400d=_0x66a1ca(_0x36400d)),_0x47fcfe[_0x3fce03(0x50b)]){for(var _0x107ff5 in(_0x36400d+=_0x3fce03(0x563),_0x1a5665)){let _0x458b5d=_0x1a5665[_0x107ff5][0x0][_0x3fce03(0x180)](/:|,/g,'');_0x458b5d&&(_0x3fce03(0x4c7)==_0x107ff5&&(_0x458b5d=_0x458b5d[_0x3fce03(0x380)](_0x458b5d[_0x3fce03(0x1af)]('/')+0x1)),('password'==_0x107ff5||_0x3fce03(0x2ca)==_0x107ff5)&&(_0x458b5d=_0x3fce03(0x22c),_0x271989[_0x107ff5]=_0x3fce03(0x22c)),_0x36400d+=''==_0x1a5665[_0x107ff5][0x1]?'':_0x66a1ca(_0x1a5665[_0x107ff5][0x1][_0x3fce03(0x180)](/:|,/g,''))+':'+_0x458b5d+',');}for(var _0x107ff5 in _0x594adc)_0x594adc[_0x107ff5][0x0]&&(_0x36400d+=_0x66a1ca(_0x594adc[_0x107ff5][0x1][_0x3fce03(0x180)](/:|,/g,''))+':'+_0x594adc[_0x107ff5][0x0][_0x3fce03(0x180)](/:|,/g,'')+',');_0x36400d=_0x36400d[_0x3fce03(0x1a2)](0x0,-0x1)+'\x22]';}_0x1a5665[_0x3fce03(0x574)]=['user',''],_0x3a3f4c[_0x3fce03(0x561)][_0xbbd53e]={'type':_0x11ee1f,'result':{'user':_0x271989,'extra':_0x594adc}},_0x3a3f4c[_0x3fce03(0x47c)]=_0x3fce03(0x271),_0x54dae4={'function':_0x105d96()?_0x3fce03(0x4ef):'add-user-and-login','settings':_0x1a5665,'settings_extra':_0x594adc,'payload':_0x3a3f4c},_0x45d306=_0xc0a6f0['getRegistrationErrorMessage'](_0x1dbb4d),_0x5b3783={'settings':_0x1a5665,'settings_extra':_0x594adc};break;case _0x3fce03(0x182):let _0x11d4db=_0x1ba0a2(_0x4167d5)['attr'](_0x3fce03(0x24e)),_0x362e55=_0x19680f[_0x3fce03(0x5b6)][_0x3fce03(0x4f8)](!0x1,!0x0);_0x36400d=''+_0x66a1ca(''==_0x36400d?_0x66a1ca(_0x3fce03(0x540)):_0x36400d),_0x1d05de={'conversation_id':_0x19680f[_0x3fce03(0x5b6)]['id'],'agent_id':_0x362e55?_0x362e55[_0x3fce03(0x59e)](_0x3fce03(0x4c6)):_0x1aa2cb,'user_id':_0x105d96()['id'],'message':_0x1dbb4d[_0x3fce03(0x5a7)](_0x3fce03(0x12e))[_0x3fce03(0xf3)](),'rating':_0x3fce03(0x485)==_0x11d4db?0x1:-0x1},_0x3a3f4c[_0x3fce03(0x561)][_0xbbd53e]={'type':_0x11ee1f,'result':_0x1d05de},_0x54dae4={'function':_0x3fce03(0x244),'payload':_0x3a3f4c,'settings':_0x1d05de},_0x280c29=_0x11d4db;break;case'chips':case _0x3fce03(0x5d5):case'buttons':_0x1d05de=_0x5bc6df['escape'](_0x1ba0a2(_0x4167d5)[_0x3fce03(0x484)]()),_0x36400d=''==_0x36400d?_0x36400d:_0x66a1ca(_0x36400d)+('\x20*'+_0x1d05de+'*'),_0x3a3f4c[_0x3fce03(0x561)][_0xbbd53e]={'type':_0x11ee1f,'result':_0x1d05de},_0x54dae4={'function':_0x3fce03(0x483),'payload':_0x3a3f4c},_0x280c29=_0x1d05de,_0x3fce03(0x4aa)==_0x11ee1f&&(_0x19680f[_0x3fce03(0x217)](_0x105d96()['id'],_0x1d05de,[],!0x1,{'id':_0xbbd53e,'event':_0x3fce03(0x202),'result':_0x1d05de},'sb-human-takeover'==_0xbbd53e&&0x0==_0x30a6d2[_0x3fce03(0x4a4)]()&&0x2),'sb-human-takeover'==_0xbbd53e&&0x0==_0x1ba0a2(_0x4167d5)['index']()&&_0x17de24[_0x3fce03(0x5e4)][_0x3fce03(0x52d)](),_0x1ba0a2(_0x4167d5)[_0x3fce03(0x492)](_0x3fce03(0x4d4))['remove']());break;case _0x3fce03(0x27e):if(_0x1d05de=_0xc0a6f0[_0x3fce03(0x557)](_0x1dbb4d),_0x45d306=_0x3fce03(0x3e1),_0x36400d){for(var _0x107ff5 in(_0x36400d=_0x66a1ca(_0x36400d)+_0x3fce03(0x444),_0x1d05de))_0x36400d+=_0x66a1ca(_0x1d05de[_0x107ff5][0x1][_0x3fce03(0x180)](/:|,/g,''))+':'+_0x1d05de[_0x107ff5][0x0]['replace'](/:|,/g,'')+',';_0x36400d=_0x36400d[_0x3fce03(0x1a2)](0x0,-0x1)+'\x22]';}_0x3a3f4c['rich-messages'][_0xbbd53e]={'type':_0x11ee1f,'result':_0x1d05de},_0x54dae4={'function':'update-message','payload':_0x3a3f4c},_0x5b3783={'settings':_0x1d05de};}if(_0x195a7e=(_0x195a7e=_0x2789f8[_0x3fce03(0x380)](_0x2789f8[_0x3fce03(0x57a)]('['+_0x11ee1f)))[_0x3fce03(0x380)](0x0,_0x195a7e[_0x3fce03(0x57a)](']')+0x1),_0x45d306&&_0xc0a6f0[_0x3fce03(0x2ea)](_0x1dbb4d))return _0xc0a6f0[_0x3fce03(0x383)](_0x1dbb4d,_0x45d306),_0x30a6d2['sbLoading'](!0x1),(_0x19680f['dashboard']||_0x2be357&&_0x19680f[_0x3fce03(0x5b6)][_0x3fce03(0x602)]()['id']==_0x24f4f3)&&_0x19680f[_0x3fce03(0x5d7)](),!0x1;if(!_0x36400d&&_0x3fce03(0x47f)!=_0x11ee1f){let _0x2976f5=this[_0x3fce03(0x2b3)](_0x195a7e),_0x126bc1='title'in _0x2976f5[0x1]?_0x3fce03(0x305)+_0x2976f5[0x1][_0x3fce03(0x126)]+'\x22':'',_0x4c12bc=_0x3fce03(0x48f)in _0x2976f5[0x1]?_0x3fce03(0x21c)+_0x2976f5[0x1][_0x3fce03(0x48f)]+'\x22':'',_0x3f422d='';if([_0x3fce03(0x27e),'email']['includes'](_0x11ee1f)){for(var _0x107ff5 in _0x1d05de)_0x3f422d+=_0x1d05de[_0x107ff5][0x0]+',';_0x3f422d=_0x3fce03(0x1d4)+_0x3f422d['slice'](0x0,-0x1)+'\x22';}else _0x3f422d='options=\x22'+_0x1d05de+'\x22';_0x36400d='['+(_0x3fce03(0x18b)==_0x11ee1f?_0x3fce03(0x27e):_0x11ee1f)+'\x20'+_0x126bc1+'\x20'+_0x4c12bc+'\x20'+_0x3f422d+_0x3fce03(0x5d3);}-0x1!=_0x24f4f3&&_0x1ba0a2[_0x3fce03(0x3aa)](_0x54dae4,{'message_id':_0x24f4f3,'message':_0x2789f8?_0x2789f8['replace'](_0x195a7e,_0x36400d):_0x36400d,'payload':_0x3a3f4c}),_0x5bc6df[_0x3fce03(0x612)](_0x54dae4,_0x422577=>{const _0x1ec308=_0x3fce03;if(!0x1==_0x422577||_0x5bc6df[_0x1ec308(0x1e1)](_0x422577))_0xc0a6f0[_0x1ec308(0x383)](_0x1dbb4d,_0xc0a6f0[_0x1ec308(0x187)](_0x422577,_0x1ec308(0x4a8))),_0x19680f[_0x1ec308(0x55f)]&&_0x19680f[_0x1ec308(0x5d7)](),_0x30a6d2['sbLoading'](!0x1);else{switch(_0x11ee1f){case'email':for(var _0x3e205e in _0x1a5665)_0x105d96()[_0x1ec308(0x144)](_0x3e205e,_0x1a5665[_0x3e205e][0x0]);for(var _0x3e205e in _0x594adc)_0x105d96()['setExtra'](_0x3e205e,_0x594adc[_0x3e205e][0x0]);_0x5bc6df[_0x1ec308(0x3a7)](_0x422577[0x1]),_0x1ec308(0x5e7)==_0xbbd53e&&_0x5bc6df[_0x1ec308(0x612)]({'function':_0x1ec308(0x3e0),'email':_0x105d96()['get'](_0x1ec308(0x18b))}),_0x19680f['automations'][_0x1ec308(0x24f)](),_0x5bc6df['event'](_0x1ec308(0x4cc),{'id':_0xbbd53e,'name':_0x105d96()['name'],'email':_0x105d96()['get'](_0x1ec308(0x18b))});break;case _0x1ec308(0x47f):if(_0x5bc6df[_0x1ec308(0x3a7)](_0x422577[0x1]),_0x1a5665['id']=[_0x422577[0x0]['id']],_0x105d96()){for(var _0x3e205e in _0x1a5665)_0x105d96()[_0x1ec308(0x144)](_0x3e205e,_0x1a5665[_0x3e205e][0x0]);for(var _0x3e205e in _0x594adc)_0x105d96()[_0x1ec308(0x5d6)](_0x3e205e,_0x594adc[_0x3e205e][0x0]);_0x19680f[_0x1ec308(0x575)][_0x1ec308(0x24f)]();}else{for(var _0x3e205e in(_0x105d96(new _0x4692ba(_0x422577[0x0])),_0x594adc))_0x105d96()[_0x1ec308(0x5d6)](_0x3e205e,_0x594adc[_0x3e205e][0x0]);_0x6e0d8d[_0x1ec308(0x459)](),_0x19680f['initChat'](),_0x47fcfe[_0x1ec308(0x425)]&&_0x537b7d['find'](_0x1ec308(0x367))[_0x1ec308(0x4fb)]||!_0x36400d||_0x19680f[_0x1ec308(0x217)](_0x1aa2cb,_0x36400d,[],!0x1,!0x1,0x3);}_0x19680f['dashboard']&&(_0x537b7d['removeClass'](_0x1ec308(0x2a4)),_0x1ba0a2(_0x1dbb4d)['remove'](),_0x19680f[_0x1ec308(0x546)]()||_0x19680f[_0x1ec308(0x141)]()),delete this[_0x1ec308(0x3b0)][_0x1ec308(0x47f)],setTimeout(()=>{const _0x37689f=_0x1ec308;_0x5bc6df['event'](_0x37689f(0x2fc),{'id':_0xbbd53e,'conversation_id':!!_0x19680f[_0x37689f(0x5b6)]&&_0x19680f[_0x37689f(0x5b6)]['id'],'user':_0x1a5665,'extra':_0x3a3f4c[_0x37689f(0x561)][_0xbbd53e][_0x37689f(0x14a)][_0x37689f(0x55d)]});},0x1388);}-0x1==_0x24f4f3?_0x1ba0a2(_0x4167d5)[_0x1ec308(0x492)]('.sb-rich-message')[_0x1ec308(0x484)](_0x36400d):'type'in _0x3a3f4c&&'close-message'==_0x3a3f4c[_0x1ec308(0x44d)]||_0x4cf858||_0x19680f[_0x1ec308(0x53c)](0x2),['login',_0x1ec308(0x4aa),_0x1ec308(0x182)][_0x1ec308(0x27a)](_0x11ee1f)||!_0x47fcfe[_0x1ec308(0x22b)]&&['email','registration'][_0x1ec308(0x27a)](_0x11ee1f)||_0x17de24[_0x1ec308(0x5e4)]['message'](''+_0xbbd53e+(_0x280c29?'|'+_0x280c29:''),[],!0x1,_0x5b3783),_0x47fcfe[_0x1ec308(0x2f0)]&&(!_0x4cf858||_0x17de24['dialogflow'][_0x1ec308(0x242)]())&&_0x19680f['slackMessage'](_0x105d96()['id'],_0x105d96()[_0x1ec308(0x5de)],_0x105d96()[_0x1ec308(0x417)],_0x36400d),_0x6e0d8d[_0x1ec308(0x40d)]&&_0x19680f['update'](),_0x1ec308(0x47f)!=_0x11ee1f&&_0x1ec308(0x18b)!=_0x11ee1f&&_0x5bc6df[_0x1ec308(0x47c)]('SBRichMessageSubmit',{'result':_0x422577,'data':_0x3a3f4c[_0x1ec308(0x561)][_0xbbd53e],'id':_0xbbd53e});}});}},'shortcode':function(_0x2050a9){const _0x3969fd=_0x3c09f9;if(0x0>_0x2050a9['indexOf']('\x20'))return[_0x2050a9['slice'](0x1,-0x1),{}];let _0x25bb3c={},_0x49e372=_0x2050a9[_0x3969fd(0x380)](0x1,_0x2050a9['indexOf']('\x20')-0x1),_0x286f8c=(_0x2050a9=_0x2050a9['slice'](0x1,-0x1)[_0x3969fd(0x380)](_0x49e372[_0x3969fd(0x4fb)]+0x1))['split']('\x22\x20');for(var _0x1131b2=0x0;_0x1131b2<_0x286f8c['length'];_0x1131b2++)if(_0x286f8c[_0x1131b2][_0x3969fd(0x27a)]('=')){let _0x58e6e5=[_0x286f8c[_0x1131b2][_0x3969fd(0x380)](0x0,_0x286f8c[_0x1131b2]['indexOf']('=')),_0x286f8c[_0x1131b2][_0x3969fd(0x380)](_0x286f8c[_0x1131b2][_0x3969fd(0x57a)]('=')+0x2)];_0x25bb3c[_0x1ba0a2[_0x3969fd(0x605)](_0x58e6e5[0x0])]=_0x58e6e5[0x1][_0x3969fd(0x180)](/"/g,'');}return[_0x49e372,_0x25bb3c];},'initInputs':function(_0x55ae98){const _0xa60af9=_0x3c09f9;return(_0x55ae98=_0x1ba0a2(_0x1ba0a2['parseHTML'](_0xa60af9(0x2e0)+_0x55ae98+_0xa60af9(0x5b7))))[_0xa60af9(0x5a7)]('.sb-input\x20input')[_0xa60af9(0x471)](function(){const _0x536ba1=_0xa60af9;_0x1ba0a2(this)[_0x536ba1(0xf3)]()&&_0x1ba0a2(this)[_0x536ba1(0x424)]()['addClass'](_0x536ba1(0x50a));}),_0x55ae98[_0xa60af9(0x484)]();},'timetable':function(_0x1ff448){const _0x4335e7=_0x3c09f9;let _0xb76873=_0x1ba0a2(_0x1ba0a2[_0x4335e7(0x2eb)](_0x4335e7(0x2e0)+_0x1ff448+'</div>')),_0x14e0af=_0xb76873[_0x4335e7(0x5a7)]('[data-offset]')['attr'](_0x4335e7(0x473));_0x14e0af=_0x5bc6df[_0x4335e7(0x128)](_0x14e0af)?0x0:parseInt(_0x14e0af);let _0x1bdb39='';return _0xb76873[_0x4335e7(0x5a7)](_0x4335e7(0x36c))['each'](function(){const _0x1fdc79=_0x4335e7;let _0x2b3b1b=_0x1ba0a2(this)[_0x1fdc79(0x566)]('data-time')[_0x1fdc79(0x59a)]('|');for(var _0x354614=0x0;_0x354614<_0x2b3b1b[_0x1fdc79(0x4fb)];_0x354614++){if('closed'==_0x2b3b1b[_0x354614]){_0x1bdb39+=_0x1fdc79(0x30e);break;}if(_0x2b3b1b[_0x354614]){let _0xfe89bf=_0x2b3b1b[_0x354614][_0x1fdc79(0x59a)](':');_0x1bdb39+=_0x5bc6df['convertUTCDateToLocalDate'](_0x1fdc79(0x4c3)+_0xfe89bf[0x0]+':'+_0xfe89bf[0x1],_0x14e0af)[_0x1fdc79(0x1dd)]([],{'hour':_0x1fdc79(0x32f),'minute':_0x1fdc79(0x32f)})+(0x0==_0x354614||0x2==_0x354614?_0x1fdc79(0x315):0x1==_0x354614&&_0x2b3b1b[_0x354614+0x1]?'\x0a':'');}}_0x1bdb39+='\x0a';}),_0x1bdb39+=_0x4335e7(0x19b)+Intl[_0x4335e7(0x1f6)]()[_0x4335e7(0x1f2)]()[_0x4335e7(0x370)];},'sliderChange':function(_0x255e5a,_0x14b99c=_0x3c09f9(0x401)){const _0x319e4e=_0x3c09f9;let _0x4c02e0=_0xb5e3a['find']('#'+_0x255e5a);if(_0x4c02e0[_0x319e4e(0x4fb)]&&!_0x4c02e0['hasClass']('sb-moving')){let _0x2035c4=_0x4c02e0['find'](_0x319e4e(0x342)),_0x23fc3e=_0x2035c4['eq'](0x0),_0x2eb66f=Math['ceil'](_0x23fc3e[_0x319e4e(0x492)](_0x319e4e(0x513))[_0x319e4e(0x34c)]()),_0x2717d8='right'==_0x14b99c?-0x1:0x1,_0x3a2f91=parseFloat(parseFloat(parseFloat(_0x23fc3e[_0x319e4e(0x130)](_0x319e4e(0x4b0)))+_0x2eb66f*_0x2717d8)[_0x319e4e(0x3c2)](0x2))+-0.5*_0x2717d8,_0x2de520=-(_0x2eb66f*(_0x2035c4[_0x319e4e(0x4fb)]-0x1)*0x1);_0x3a2f91<0x1&&_0x3a2f91>=_0x2de520&&(_0x23fc3e['css'](_0x319e4e(0x4b0),_0x3a2f91+'px'),_0x4c02e0[_0x319e4e(0x588)](_0x319e4e(0x256)),setTimeout(()=>{const _0x2f8451=_0x319e4e;_0x4c02e0[_0x2f8451(0x414)](_0x2f8451(0x256));},0x4b0)),_0x4c02e0[_0x319e4e(0x5a7)](_0x319e4e(0x1ef))[_0x319e4e(0x120)](!(_0x2de520>_0x3a2f91-0xf&&_0x2de520<_0x3a2f91+0xf)),_0x4c02e0[_0x319e4e(0x5a7)](_0x319e4e(0x238))['sbActive'](_0x3a2f91<-0xa);}}},_0xc0a6f0={'getAll':function(_0xc2d6ed){const _0x41bbed=_0x3c09f9;let _0x350723={};return _0x1ba0a2(_0xc2d6ed)[_0x41bbed(0x5a7)]('.sb-input[id]')[_0x41bbed(0x471)]((_0x5196fc,_0x2f3f28)=>{const _0x196509=_0x41bbed;_0x350723[_0x1ba0a2(_0x2f3f28)[_0x196509(0x566)]('id')]=this[_0x196509(0x59e)](_0x2f3f28);}),_0x350723;},'get':function(_0xb757b3){const _0x1a3b35=_0x3c09f9;let _0x2ae5ff=(_0xb757b3=_0x1ba0a2(_0xb757b3))['data'](_0x1a3b35(0x44d)),_0x3bd4da=_0x66a1ca(_0x5bc6df[_0x1a3b35(0x601)](_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x3c1))[_0x1a3b35(0x484)]()));switch(_0x2ae5ff){case _0x1a3b35(0x417):let _0x7e1f76=_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x281))['attr'](_0x1a3b35(0x617));return[_0x5bc6df[_0x1a3b35(0x128)](_0x7e1f76)?'':_0x7e1f76,_0x3bd4da];case _0x1a3b35(0x5d5):return[_0x5bc6df['escape'](_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x5d5))[_0x1a3b35(0xf3)]()),_0x3bd4da];case _0x1a3b35(0x3d6):let _0x3bb65b=_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x477)),_0x5487b9=_0x3bb65b[_0x1a3b35(0xf3)]();return[_0x5bc6df[_0x1a3b35(0x601)]((_0x3bb65b['is'](_0x1a3b35(0x5d5))||_0x3bb65b['is'](_0x1a3b35(0x1b3))?_0x5487b9:_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x5fd))[_0x1a3b35(0x484)]())+_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x1c0))[_0x1a3b35(0xf3)]()),_0x3bd4da];default:let _0x1c4a77=_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x1b3));return[_0x5bc6df[_0x1a3b35(0x601)](_0x1c4a77[_0x1a3b35(0x4fb)]?_0x1c4a77[_0x1a3b35(0xf3)]():_0xb757b3[_0x1a3b35(0x5a7)](_0x1a3b35(0x573))[_0x1a3b35(0x566)](_0x1a3b35(0x617))),_0x3bd4da];}},'set':function(_0x545afd,_0x534aab){const _0x781ef6=_0x3c09f9;if((_0x545afd=_0x1ba0a2(_0x545afd))[_0x781ef6(0x4fb)]){let _0x7d82af=_0x545afd[_0x781ef6(0x1c4)]('type');switch(_0x7d82af){case'image':''==_0x534aab?_0x545afd[_0x781ef6(0x5a7)](_0x781ef6(0x281))[_0x781ef6(0x188)]('data-value')[_0x781ef6(0x188)](_0x781ef6(0x251)):_0x545afd['find']('.image')[_0x781ef6(0x566)](_0x781ef6(0x617),_0x534aab)['css'](_0x781ef6(0x2c0),_0x781ef6(0x183)+_0x534aab+'\x22)');break;case'select':_0x545afd[_0x781ef6(0x5a7)](_0x781ef6(0x5d5))[_0x781ef6(0xf3)](_0x534aab);break;default:_0x545afd[_0x781ef6(0x5a7)]('input,textarea')[_0x781ef6(0xf3)](_0x534aab);}return!0x0;}return!0x1;},'clear':function(_0x540c9d){const _0x114cfa=_0x3c09f9;_0x1ba0a2(_0x540c9d)[_0x114cfa(0x5a7)](_0x114cfa(0x2cb))[_0x114cfa(0x471)]((_0x28f917,_0xb7ea93)=>{const _0x24960d=_0x114cfa;this[_0x24960d(0x144)](_0xb7ea93,''),_0x1ba0a2(_0xb7ea93)[_0x24960d(0x5a7)](_0x24960d(0x5cc))[_0x24960d(0x414)](_0x24960d(0x489));}),this[_0x114cfa(0x144)](_0x1ba0a2(_0x540c9d)['find']('#user_type'),_0x114cfa(0x611));},'errors':function(_0x568ce1){const _0xb5e1e1=_0x3c09f9;let _0x2e80f2=!0x1,_0xb549c5=_0x1ba0a2(_0x568ce1)[_0xb5e1e1(0x5a7)](_0xb5e1e1(0x5cc))[_0xb5e1e1(0x414)]('sb-error');return _0xb549c5['each'](function(_0x265844){const _0x57b30d=_0xb5e1e1;let _0x2284f2=_0x1ba0a2[_0x57b30d(0x605)](_0x1ba0a2(this)[_0x57b30d(0xf3)]()),_0x2c19c0=_0x1ba0a2(this)['attr']('type'),_0x2fdd02=_0x1ba0a2(this)[_0x57b30d(0x166)](_0x57b30d(0x54e));(_0x2fdd02&&''==_0x2284f2||(_0x2fdd02||_0x2284f2)&&(_0x57b30d(0x301)==_0x2c19c0&&(_0x2284f2[_0x57b30d(0x4fb)]<0x8||_0xb549c5[_0x57b30d(0x4fb)]>_0x265844+0x1&&'password'==_0xb549c5['eq'](_0x265844+0x1)[_0x57b30d(0x566)](_0x57b30d(0x44d))&&_0xb549c5['eq'](_0x265844+0x1)[_0x57b30d(0xf3)]()!=_0x2284f2)||'email'==_0x2c19c0&&(0x0>_0x2284f2[_0x57b30d(0x57a)]('@')||0x0>_0x2284f2['indexOf']('.')||/;|:|\/|\\|,|#|"|!|=|\+|\*|{|}|[|]|£|\$|€|~|'|>|<|\^|&/['test'](_0x2284f2))||'tel'==_0x2c19c0&&_0x2284f2&&(''==_0x1ba0a2(this)['parent']()[_0x57b30d(0x5a7)](_0x57b30d(0x5d5))[_0x57b30d(0xf3)]()||isNaN(_0x2284f2)||_0x2284f2[_0x57b30d(0x27a)]('+')||_0x2284f2[_0x57b30d(0x4fb)]<0x5)))&&(_0x2e80f2=!0x0,_0x1ba0a2(this)[_0x57b30d(0x588)]('sb-error'));}),(_0xb549c5=_0x1ba0a2(_0x568ce1)[_0xb5e1e1(0x5a7)](_0xb5e1e1(0x178))[_0xb5e1e1(0x414)](_0xb5e1e1(0x489)))[_0xb5e1e1(0x471)](function(){const _0x2f6575=_0xb5e1e1;_0x5bc6df['null'](_0x1ba0a2(this)[_0x2f6575(0x566)](_0x2f6575(0x617)))&&(_0x1ba0a2(this)[_0x2f6575(0x588)](_0x2f6575(0x489)),_0x2e80f2=!0x0);}),_0x2e80f2;},'showErrorMessage':function(_0x937667,_0x23c9d2){const _0x563ce9=_0x3c09f9;_0x1ba0a2(_0x937667)[_0x563ce9(0x5a7)]('.sb-info')[_0x563ce9(0x484)](_0x66a1ca(_0x23c9d2))['sbActive'](!0x0),clearTimeout(_0x5da94a),_0x5da94a=setTimeout(function(){const _0x282b43=_0x563ce9;_0x1ba0a2(_0x937667)[_0x282b43(0x5a7)](_0x282b43(0x1c3))['sbActive'](!0x1);},0x9c4);},'showSuccessMessage':function(_0xe6ef4f,_0x55005a){const _0x521d5f=_0x3c09f9;_0x1ba0a2(_0xe6ef4f)[_0x521d5f(0x5a7)](_0x521d5f(0x1c3))[_0x521d5f(0x20b)](),_0x1ba0a2(_0xe6ef4f)['addClass'](_0x521d5f(0xed))['find']('.sb-content')[_0x521d5f(0x484)](_0x521d5f(0x490)+_0x55005a+_0x521d5f(0x5b7));},'getRegistrationErrorMessage'(_0x385cb2,_0x5a4727=_0x3c09f9(0xf2)){const _0x22f2fe=_0x3c09f9;if(_0x22f2fe(0x4a8)==_0x5a4727)return _0x5bc6df['errorValidation'](_0x385cb2,_0x22f2fe(0x139))?'This\x20email\x20is\x20already\x20in\x20use.\x20Please\x20use\x20another\x20email.':_0x5bc6df[_0x22f2fe(0x1e1)](_0x385cb2,'duplicate-phone')?'This\x20phone\x20number\x20is\x20already\x20in\x20use.\x20Please\x20use\x20another\x20number.':_0x22f2fe(0x423);let _0x2b4964=_0x1ba0a2(_0x385cb2)['find'](_0x22f2fe(0x323))['length']?_0x22f2fe(0x1bb):_0x22f2fe(0x45f),_0x1a7668=_0x1ba0a2(_0x385cb2)[_0x22f2fe(0x5a7)](_0x22f2fe(0x411))['length']?_0x22f2fe(0x508):'',_0x3bea2a=_0x1ba0a2(_0x385cb2)[_0x22f2fe(0x5a7)](_0x22f2fe(0x61f))[_0x22f2fe(0x4fb)]?_0x22f2fe(0x28b):'',_0xde537=_0x1ba0a2(_0x385cb2)[_0x22f2fe(0x5a7)](_0x22f2fe(0x219))['length']?_0x22f2fe(0x466):'';return''+_0x2b4964+_0x3bea2a+_0x1a7668+_0xde537+'\x20'+(_0x3bea2a+_0x1a7668+_0xde537==''?'is':_0x22f2fe(0x409))+_0x22f2fe(0x495);}};window[_0x3c09f9(0x12d)]=_0xc0a6f0;var _0x17de24={'login':function(){const _0x216a67=_0x3c09f9;return this['is']('wp')&&typeof SB_WP_ACTIVE_USER!=_0x339924&&'wp'==_0x47fcfe[_0x216a67(0x2c2)]?[[SB_WP_ACTIVE_USER,typeof SB_WP_AVATAR!=_0x339924?SB_WP_AVATAR:''],'wp']:typeof SB_PERFEX_ACTIVE_USER!=_0x339924?[[SB_PERFEX_ACTIVE_USER,SB_PERFEX_CONTACT_ID],'perfex']:typeof SB_WHMCS_ACTIVE_USER!=_0x339924?[SB_WHMCS_ACTIVE_USER,'whmcs']:typeof SB_AECOMMERCE_ACTIVE_USER!=_0x339924?[SB_AECOMMERCE_ACTIVE_USER,_0x216a67(0x106)]:typeof SB_DEFAULT_USER!=_0x339924&&[SB_DEFAULT_USER,'default'];},'is':function(_0x4d926b){const _0x3eef47=_0x3c09f9;return _0x47b6a4?SBAdmin[_0x3eef47(0x254)]['is'](_0x4d926b):_0x3eef47(0x2db)==_0x4d926b||'wp'==_0x4d926b?_0x47fcfe['wp']:_0x4d926b in _0x47fcfe&&_0x47fcfe[_0x4d926b];},'wordpress':{'ajax':function(_0x1db6de,_0x50403c,_0x16535b=!0x1){const _0x5c39f2=_0x3c09f9;typeof SB_WP_AJAX_URL!=_0x339924&&_0x1ba0a2['ajax']({'method':_0x5c39f2(0x44b),'url':SB_WP_AJAX_URL,'data':_0x1ba0a2[_0x5c39f2(0x3aa)]({'action':_0x5c39f2(0x216),'type':_0x1db6de},_0x50403c)})[_0x5c39f2(0xff)](_0x1343a5=>{_0x16535b&&_0x16535b(_0x1343a5);});}},'dialogflow':{'token':_0x19844b('dialogflow-token'),'typing_enabled':!0x1,'project_id':!0x1,'message':function(_0x20fabd='',_0x1e35cd=[],_0x597525=!0x1,_0x487791=!0x1){const _0x2c4313=_0x3c09f9;if(this['active']()){let _0x501911=_0x17de24['dialogflow'][_0x2c4313(0x242)]();(!_0x501911||this[_0x2c4313(0x4b1)])&&(_0x5da94a=setTimeout(()=>{const _0x1aefc4=_0x2c4313;_0x19680f['typing'](-0x1,_0x1aefc4(0x459)),setTimeout(()=>{const _0x383390=_0x1aefc4;_0x19680f[_0x383390(0x398)](-0x1,'stop');},0x2710);},0x3e8)),setTimeout(()=>{const _0x133e8e=_0x2c4313;_0x5bc6df[_0x133e8e(0x612)]({'function':'dialogflow-message','conversation_id':!!_0x19680f[_0x133e8e(0x5b6)]&&_0x19680f[_0x133e8e(0x5b6)]['id'],'message':_0x20fabd,'attachments':_0x1e35cd,'parameters':_0x487791,'token':this[_0x133e8e(0x60a)],'dialogflow_language':_0x19844b(_0x133e8e(0x16e))?_0x19844b(_0x133e8e(0x16e)):SB_LANG,'project_id':this[_0x133e8e(0x1d8)]},_0x4fd3c0=>{const _0x41f3e6=_0x133e8e;if(!0x1!==_0x4fd3c0){if(_0x41f3e6(0x606)in _0x4fd3c0)return _0x19680f[_0x41f3e6(0x45c)](),_0x19680f['followUp'](),this[_0x41f3e6(0x40d)](!0x1);if(_0x41f3e6(0x583)in _0x4fd3c0&&!_0x19844b(_0x41f3e6(0x16e))&&_0x19844b(_0x41f3e6(0x16e),[_0x4fd3c0[_0x41f3e6(0x583)]]),!_0x5bc6df[_0x41f3e6(0x1e1)](_0x4fd3c0)){let _0x130702=_0x41f3e6(0x4eb)in _0x4fd3c0['response']&&_0x4fd3c0[_0x41f3e6(0x4a8)][_0x41f3e6(0x4eb)],_0x126b58=_0x130702&&(_0x41f3e6(0x5b1)==_0x130702[_0x41f3e6(0x304)]||_0x41f3e6(0x26b)in _0x130702&&_0x41f3e6(0x4b2)==_0x130702[_0x41f3e6(0x26b)]['matchType']),_0x51379f=_0x41f3e6(0x1fb)in _0x4fd3c0&&Array[_0x41f3e6(0x1e3)](_0x4fd3c0[_0x41f3e6(0x1fb)])?_0x4fd3c0[_0x41f3e6(0x1fb)]:[];if(_0x19680f['typing'](-0x1,_0x41f3e6(0x2a0)),clearTimeout(_0x5da94a),this[_0x41f3e6(0x60a)]!=_0x4fd3c0[_0x41f3e6(0x60a)]&&(this[_0x41f3e6(0x60a)]=_0x4fd3c0[_0x41f3e6(0x60a)],_0x19844b(_0x41f3e6(0x17d),_0x4fd3c0['token'])),_0x126b58?_0x501911&&(this[_0x41f3e6(0x4b1)]=!0x1):this['typing_enabled']=!0x0,_0x130702){if(_0x41f3e6(0x304)in _0x130702){let _0x16092c=_0x130702[_0x41f3e6(0x304)];_0x41f3e6(0x5f7)==_0x16092c&&this[_0x41f3e6(0x40d)](!0x1),_0x5bc6df['event'](_0x41f3e6(0x4f7),_0x16092c);}for(var _0x2f465e=0x0;_0x2f465e<_0x51379f[_0x41f3e6(0x4fb)];_0x2f465e++){if(_0x41f3e6(0x102)in _0x51379f[_0x2f465e]){let _0x2c886b=['human-takeover',_0x41f3e6(0x1d1),_0x41f3e6(0x3b3),_0x41f3e6(0x364),'agent',_0x41f3e6(0x33b),_0x41f3e6(0x457),'rich-message'],_0x271a83=_0x51379f[_0x2f465e]['payload'];if(_0x5bc6df[_0x41f3e6(0x128)](_0x271a83)&&(_0x271a83=[]),_0x2c886b[0x0]in _0x271a83&&!0x0===_0x271a83[_0x2c886b[0x0]]&&this['humanTakeover'](),_0x2c886b[0x1]in _0x271a83&&setTimeout(function(){const _0x29b8b9=_0x41f3e6;_0x29b8b9(0x577)in _0x271a83&&_0x271a83[_0x29b8b9(0x577)]?window['open'](_0x271a83[_0x2c886b[0x1]]):document['location']=_0x271a83[_0x2c886b[0x1]];},0x1f4),_0x2c886b[0x4]in _0x271a83&&_0x19680f['showArticles'](_0x271a83[_0x2c886b[0x4]]),_0x2c886b[0x5]in _0x271a83&&_0x271a83[_0x2c886b[0x5]]&&_0x5bc6df[_0x41f3e6(0x612)]({'function':_0x41f3e6(0x3b3),'conversation_id':_0x19680f['conversation']['id'],'type':_0x41f3e6(0x290)},_0x468cda=>{const _0x2d0298=_0x41f3e6;_0x2d0298(0x18b)==_0x271a83[_0x2c886b[0x5]]&&_0x105d96()['get'](_0x2d0298(0x18b))?_0x19680f[_0x2d0298(0x49d)]('message'in _0x271a83?_0x271a83['message']:'',[[_0x468cda,_0x468cda]],!0x0):window[_0x2d0298(0x341)](_0x468cda);}),_0x2c886b[0x6]in _0x271a83&&_0x5bc6df['ajax']({'function':_0x41f3e6(0x221),'conversation_id':_0x19680f['conversation']['id'],'department':_0x271a83[_0x2c886b[0x6]],'message':_0x19680f[_0x41f3e6(0x5b6)][_0x41f3e6(0x4f8)]()['message']}),_0x2c886b[0x7]in _0x271a83&&_0x5bc6df[_0x41f3e6(0x612)]({'function':_0x41f3e6(0x10d),'conversation_id':_0x19680f[_0x41f3e6(0x5b6)]['id'],'agent_id':_0x271a83[_0x2c886b[0x7]],'message':_0x19680f['conversation'][_0x41f3e6(0x4f8)]()['message']}),_0x2c886b[0x8]in _0x271a83){let _0x4241a6=_0x271a83[_0x2c886b[0x8]];_0x19680f[_0x41f3e6(0x49d)](_0x4241a6[_0x41f3e6(0x48f)],_0x4241a6[_0x41f3e6(0x610)],_0x41f3e6(0x12f)==_0x4241a6['recipient']);}_0x2c886b[0x9]in _0x271a83&&(this[_0x41f3e6(0x40d)](!0x1),_0x5bc6df[_0x41f3e6(0x210)](_0x41f3e6(0x547),!0x0,0x12c,'set',!0x0)),_0x2c886b[0xa]in _0x271a83&&_0x19680f['sendMessage'](_0x1aa2cb,_0x271a83[_0x2c886b[0xa]]),_0x5bc6df[_0x41f3e6(0x47c)](_0x41f3e6(0x1d6),_0x271a83);}!_0x19844b(_0x41f3e6(0x16e))&&'languageCode'in _0x130702&&(!SB_LANG||_0x130702['languageCode']!=SB_LANG[0x0])&&_0x19844b(_0x41f3e6(0x16e),[_0x130702[_0x41f3e6(0x41f)]]);}if(_0x41f3e6(0x3b1)in _0x130702){let _0x43c52d=_0x130702['diagnosticInfo'];_0x41f3e6(0x5c5)in _0x43c52d&&_0x43c52d['end_conversation']&&this[_0x41f3e6(0x40d)](!0x1);}}_0x5bc6df[_0x41f3e6(0x47c)](_0x41f3e6(0x270),{'response':_0x4fd3c0,'message':_0x20fabd});}}});},!0x1!==_0x597525?_0x597525:0x0==_0x47fcfe[_0x2c4313(0x422)]?0x7d0:parseInt(_0x47fcfe[_0x2c4313(0x422)]));}},'active':function(_0x3cb435=!0x0){const _0x573f29=_0x3c09f9;let _0x409836=_0x573f29(0x472)+_0x19680f[_0x573f29(0x5b6)]['id'];return!0x1===_0x3cb435?(_0x5bc6df[_0x573f29(0x4b5)](_0x409836),!0x1):(_0x573f29(0x572)==_0x3cb435&&(_0x5bc6df[_0x573f29(0x210)](_0x573f29(0x547),0x0,0x0,'delete'),_0x5bc6df['storage'](_0x409836,'')),_0x47fcfe['dialogflow-active']&&!_0x47b6a4&&!_0x5bc6df[_0x573f29(0x210)](_0x573f29(0x547))&&(_0x5bc6df[_0x573f29(0x4b5)](_0x409836,0xf0)||!_0x19680f[_0x573f29(0x56e)])&&(!_0x47fcfe['bot-office-hours']||!_0x47fcfe['office-hours']));},'welcome':function(_0x2b61f2=!0x1,_0x3d8f28=!0x1){const _0x48319e=_0x3c09f9;_0x5bc6df[_0x48319e(0x612)]({'function':'dialogflow-message','message':'','conversation_id':_0x19680f[_0x48319e(0x5b6)]['id'],'token':this[_0x48319e(0x60a)],'event':'Welcome','dialogflow_language':_0x19844b(_0x48319e(0x16e))?_0x19844b(_0x48319e(0x16e)):SB_LANG},()=>{const _0x33815b=_0x48319e;_0x2b61f2&&_0x19680f['start'](),_0x3d8f28&&_0x19680f[_0x33815b(0x593)][_0x33815b(0x40b)]();});},'humanTakeover':function(){const _0x356d70=_0x3c09f9;_0x5bc6df[_0x356d70(0x612)]({'function':_0x356d70(0x20f),'conversation_id':_0x19680f[_0x356d70(0x5b6)]['id']},()=>{const _0x40f9fe=_0x356d70;_0x19680f[_0x40f9fe(0x45c)](),_0x19680f[_0x40f9fe(0x5db)](),this['active'](!0x1),_0x47fcfe['queue-human-takeover']&&(_0x47fcfe[_0x40f9fe(0x619)]=!0x0,_0x19680f[_0x40f9fe(0x619)](_0x19680f[_0x40f9fe(0x5b6)]['id']));});},'humanTakeoverActive':function(){const _0x1ba76a=_0x3c09f9;return!_0x5bc6df[_0x1ba76a(0x4b5)]('human-takeover-'+(_0x19680f[_0x1ba76a(0x5b6)]?_0x19680f[_0x1ba76a(0x5b6)]['id']:_0x19844b('open-conversation')),0xf0);},'translate':function(_0x460abb,_0x4ce111,_0x1e4b89){const _0x15aff6=_0x3c09f9;_0x5bc6df[_0x15aff6(0x612)]({'function':_0x15aff6(0x291),'strings':_0x460abb,'language_code':_0x4ce111,'token':this[_0x15aff6(0x60a)]},_0x208ff7=>{this['token']=_0x208ff7[0x1],_0x1e4b89(_0x208ff7[0x0]);});}}};function _0x216eb9(){const _0x3e0773=_0x3c09f9;function _0x2983d5(){setTimeout(()=>{const _0x512149=_0x2301;_0x1ba0a2(_0x512149(0x591))['removeClass'](_0x512149(0x46b));},0x1f4);}(_0x537b7d=_0x1ba0a2(_0x3e0773(0x468)))[_0x3e0773(0x4fb)]&&typeof SB_AJAX_URL!=_0x339924?(_0xb5e3a=_0x537b7d['find'](_0x3e0773(0x5c4)),_0xb73fc7=(_0x27fc27=_0x537b7d[_0x3e0773(0x5a7)]('.sb-editor'))[_0x3e0773(0x5a7)](_0x3e0773(0x12e)),_0x4641e6=_0x537b7d['find'](_0x47b6a4||_0x94a56c?_0x3e0773(0x5c4):_0x3e0773(0x38d)),_0x2af748=_0x537b7d[_0x3e0773(0x5a7)]('.sb-label-date-top'),_0x756857=_0x4641e6['find'](_0x3e0773(0x31b)),_0x56692c=_0x27fc27[_0x3e0773(0x5a7)](_0x3e0773(0x101)),_0x23928b=_0x94a56c?_0x537b7d[_0x3e0773(0x5a7)](_0x3e0773(0x4d2)):null,_0x19680f['enabledAutoExpand'](),_0x19680f[_0x3e0773(0x593)]=_0x537b7d[_0x3e0773(0x5a7)](_0x3e0773(0x5df))['get'](0x0),_0x19680f[_0x3e0773(0x3cd)]=_0x537b7d[_0x3e0773(0x5a7)](_0x3e0773(0x1b0))['get'](0x0),_0x5bc6df[_0x3e0773(0x210)](_0x3e0773(0x355),'ok',0x1,'set'),'ok'!=_0x5bc6df[_0x3e0773(0x210)](_0x3e0773(0x355))?(_0x41c3fa=!0x1,console[_0x3e0773(0x1b1)](_0x3e0773(0x2b8))):_0x5bc6df['cookie']('sb-check',!0x1,!0x1,!0x1),_0x47b6a4?_0x5bc6df[_0x3e0773(0x47c)](_0x3e0773(0x1b7)):(_0x5bc6df[_0x3e0773(0x612)]({'function':_0x3e0773(0x124),'current_url':window[_0x3e0773(0x33a)][_0x3e0773(0x511)]},_0x467b2d=>{const _0x1ee34a=_0x3e0773;_0x47fcfe=_0x467b2d,typeof SB_LOCAL_SETTINGS!=_0x339924&&_0x1ba0a2[_0x1ee34a(0x3aa)](_0x47fcfe,SB_LOCAL_SETTINGS),_0x1aa2cb=_0x47fcfe[_0x1ee34a(0x1a6)],_0x4cf858=_0x47fcfe[_0x1ee34a(0x20f)],_0x59812c=_0x47fcfe[_0x1ee34a(0x5e9)],_0x6e0d8d[_0x1ee34a(0x40d)]=_0x47fcfe[_0x1ee34a(0x40f)],typeof SB_REGISTRATION_REQUIRED!=_0x339924&&(_0x47fcfe['registration-required']=SB_REGISTRATION_REQUIRED,_0x47fcfe['tickets-registration-required']=SB_REGISTRATION_REQUIRED),typeof SB_ARTICLES_PAGE!=_0x339924&&SB_ARTICLES_PAGE&&_0x19680f[_0x1ee34a(0x5fa)](),(!_0x94a56c||!_0x47fcfe[_0x1ee34a(0x60d)])&&(_0x94a56c&&!_0x47fcfe[_0x1ee34a(0x60d)]||!_0x47fcfe[_0x1ee34a(0x25c)]&&(!_0x47fcfe[_0x1ee34a(0x10a)]||_0x59812c)&&(!_0x47fcfe[_0x1ee34a(0x1a1)]||_0x47fcfe[_0x1ee34a(0x53e)])&&(!_0x47fcfe[_0x1ee34a(0x517)]||_0x17de24[_0x1ee34a(0x36f)]()))&&_0x19680f[_0x1ee34a(0x61d)](),_0x47fcfe[_0x1ee34a(0x249)]&&setTimeout(function(){const _0xd486e3=_0x1ee34a;_0x5bc6df[_0xd486e3(0x612)]({'function':_0xd486e3(0x184)});},0x2710),_0x47fcfe[_0x1ee34a(0x362)]&&setTimeout(function(){const _0x352358=_0x1ee34a;_0x5bc6df[_0x352358(0x612)]({'function':'email-piping'});},0x1f40),_0x47fcfe[_0x1ee34a(0x5b2)]&&_0x6e0d8d[_0x1ee34a(0x46e)](),_0x94a56c&&(_0x47fcfe[_0x1ee34a(0x2a9)]&&(_0x19680f[_0x1ee34a(0x475)]=_0x47fcfe[_0x1ee34a(0x2a9)]),_0x47fcfe[_0x1ee34a(0x456)]&&(_0x47fcfe['dialogflow-active']=!0x1)),_0x5bc6df['event'](_0x1ee34a(0x1b7));}),_0x19680f[_0x3e0773(0x593)]&&(_0x19680f[_0x3e0773(0x593)][_0x3e0773(0x49c)]=0.6),_0x19680f[_0x3e0773(0x3cd)]&&(_0x19680f[_0x3e0773(0x3cd)]['volume']=0.6)),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x37e),_0x3e0773(0x12e),function(_0x5f5c74){const _0x3c9202=_0x3e0773;if(0xd==_0x5f5c74[_0x3c9202(0x53b)]&&(!_0x94a56c||_0x47fcfe[_0x3c9202(0x5ae)])&&(!_0x47b6a4||!_0x5f5c74['ctrlKey']&&!_0x5f5c74['shiftKey']))return _0x19680f[_0x3c9202(0x3f8)](),_0x5f5c74['preventDefault'],!0x1;_0x47b6a4&&0xd==_0x5f5c74[_0x3c9202(0x53b)]&&_0x5f5c74[_0x3c9202(0x3d8)]&&_0x19680f[_0x3c9202(0x5e1)]('\x0a');}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x37e),'.sb-dashboard-articles\x20input',function(_0x4a8ceb){const _0x74f24a=_0x3e0773;0xd==_0x4a8ceb[_0x74f24a(0x53b)]&&_0x1ba0a2(this)[_0x74f24a(0x548)]()[_0x74f24a(0x10b)]();}),typeof SB_DEFAULT_DEPARTMENT!==_0x339924&&(_0x19680f[_0x3e0773(0x475)]=SB_DEFAULT_DEPARTMENT),typeof SB_DEFAULT_AGENT!==_0x339924&&(_0x19680f['default_agent']=SB_DEFAULT_AGENT),typeof SB_DIALOGFLOW_TAGS!==_0x339924&&(_0x19680f[_0x3e0773(0x5ab)]=SB_DEFAULT_TAGS),typeof SB_DIALOGFLOW_AGENT!==_0x339924&&(_0x17de24[_0x3e0773(0x5e4)][_0x3e0773(0x1d8)]=SB_DIALOGFLOW_AGENT)):_0x5bc6df[_0x3e0773(0x47c)](_0x3e0773(0x1b7)),document['addEventListener'](_0x3e0773(0x343),function(){_0x5bc6df['visibilityChange'](document['visibilityState']);},!0x1),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),function(){const _0x551632=_0x3e0773;_0x19680f['tab_active']||_0x5bc6df[_0x551632(0x371)]();}),_0x1e4743=_0x537b7d,_0x47b6a4&&(_0x537b7d=_0x537b7d[_0x3e0773(0x5a7)](_0x3e0773(0x240))),_0x1ba0a2(_0x4641e6)['on'](_0x3e0773(0x36e),function(){const _0x28f91b=_0x3e0773;let _0x15429c=_0x4641e6[_0x28f91b(0x316)](),_0x1a2b63=_0x51c2c9[_0x28f91b(0x4fb)];if(_0x19680f[_0x28f91b(0x43a)](),_0x40fff8&&(_0x2af748[_0x28f91b(0x120)](!0x0),clearTimeout(_0x1d6b39[0x0]),_0x1d6b39[0x0]=setTimeout(()=>{const _0x3e1aec=_0x28f91b;_0x2af748[_0x3e1aec(0x120)](!0x1);},0x5dc)),_0x1a2b63){if(_0x19680f[_0x28f91b(0x4f2)]())_0x2af748[_0x28f91b(0x484)](_0x1ba0a2(_0x51c2c9[_0x1a2b63-0x1])['html']());else for(var _0x31cf9c=0x0;_0x31cf9c<_0x1a2b63;_0x31cf9c++){let _0x588d18=_0x51c2c9[_0x31cf9c]['getBoundingClientRect']()[_0x28f91b(0x25f)];if(_0x588d18>0x64&&_0x588d18<0x96){let _0x527c09=_0x1ba0a2(_0x51c2c9[_0x592400[0x0]>_0x15429c&&_0x31cf9c>0x0?_0x31cf9c-0x1:_0x31cf9c])['html']();_0x527c09!=_0x592400[0x1]&&(_0x2af748[_0x28f91b(0x484)](_0x527c09),_0x592400[0x1]=_0x527c09);break;}}}_0x592400[0x0]=_0x15429c;}),_0x1ba0a2(_0xb5e3a)['on'](_0x3e0773(0x10b),_0x3e0773(0x3ed),function(){const _0x5abda6=_0x3e0773;let _0xe487d9=_0x1ba0a2(this)[_0x5abda6(0x38a)]()[_0x5abda6(0x5a7)](_0x5abda6(0x416)),_0x179cc6=_0x1ba0a2(_0xe487d9)['sbActive']();_0x5bc6df[_0x5abda6(0x59d)](),!_0x179cc6&&(_0x1ba0a2(_0xe487d9)['sbActive'](!0x0),_0x5bc6df['deselectAll'](),_0x47b6a4&&(SBAdmin[_0x5abda6(0x1ea)]=_0xe487d9));}),_0x324bc9&&(_0x1ba0a2(_0x27fc27)['on']('click',_0x3e0773(0x390),function(){const _0x46ce42=_0x3e0773;_0x537b7d['addClass'](_0x46ce42(0x14c)),_0x1ba0a2(this)['find'](_0x46ce42(0x12e))[_0x46ce42(0x164)](),_0x19680f[_0x46ce42(0x4f2)]()&&(_0x19680f[_0x46ce42(0x5d7)](),setTimeout(()=>{const _0x97ea7a=_0x46ce42;_0x19680f[_0x97ea7a(0x5d7)]();},0xc8));}),_0x1ba0a2(_0x27fc27)['on']('focusout',_0x3e0773(0x390),function(){setTimeout(()=>{const _0x7b2744=_0x2301;_0x537b7d[_0x7b2744(0x414)]('sb-header-hidden');},0x12c);}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x10b),_0x3e0773(0x32a),function(){_0xb73fc7['blur']();}),window[_0x3e0773(0x507)](_0x3e0773(0x2ed),function(){const _0x737afe=_0x3e0773;_0x19680f[_0x737afe(0x2d9)]&&_0x19680f[_0x737afe(0x341)](!0x1);})),_0x1ba0a2(_0xb5e3a)['on'](_0x3e0773(0x10b),_0x3e0773(0x3ef),function(){const _0x22295d=_0x3e0773;_0x1ba0a2(this)[_0x22295d(0x38a)]()['sbActive'](!0x1);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x4b6),function(){const _0x2a93ed=_0x3e0773;let _0x38c226=new _0x494501();_0x3656d1+=0x1e,console[_0x2a93ed(0x5d4)]('set',_0x47fcfe),_0x38c226[_0x2a93ed(0x600)](_0x3656d1),_0x1ba0a2(this)[_0x2a93ed(0x454)](''),_0x1ba0a2(this)[_0x2a93ed(0x199)](!0x0),_0x1ba0a2(this)[_0x2a93ed(0x566)]('id',''),_0x105d96()[_0x2a93ed(0xfb)](_0x19680f[_0x2a93ed(0x5b6)]['id'],_0x4d737e=>{const _0x1f92d9=_0x2a93ed;_0x1ba0a2(this)[_0x1f92d9(0x199)](!0x1),_0x1ba0a2(this)['html'](_0x1f92d9(0x3fe)),_0x1ba0a2(this)['attr']('id',_0x1f92d9(0x18e)),_0x19680f[_0x1f92d9(0x590)](_0x4d737e['messages']);},_0x38c226[_0x2a93ed(0x375)]()),_0x288bd4<=_0x38c226['getLoad']()&&_0x1ba0a2(_0x2a93ed(0x1f0))[_0x2a93ed(0x1aa)]();}),_0x1ba0a2(_0x27fc27)['on']('click',_0x3e0773(0x32a),function(){const _0x4bd721=_0x3e0773;_0x19680f[_0x4bd721(0x3f8)]();}),_0x1ba0a2('body')['on']('click',_0x3e0773(0x24d),function(){const _0x9e8d99=_0x3e0773;_0x19680f[_0x9e8d99(0x341)](!_0x19680f[_0x9e8d99(0x2d9)]);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x48d),function(){const _0x3a254=_0x3e0773;_0x19680f[_0x3a254(0x3e2)](),_0x4641e6[_0x3a254(0x5a7)]('\x20>\x20.sb-panel-articles\x20>\x20.sb-article')[_0x3a254(0x4fb)]&&_0x19680f['showArticles'](),_0x19844b(_0x3a254(0x3af),0x0),_0x580b82=!0x1;}),_0x1ba0a2(_0x3e0773(0x113))['on'](_0x3e0773(0x3f8),function(_0x3c5919){const _0x225b55=_0x3e0773;_0x3c5919[_0x225b55(0x54a)]();let _0x20f7ad=new Metatemplate()[_0x225b55(0x102)](_0x225b55(0x113)),_0x3fe3c3={'type':_0x20f7ad[_0x225b55(0x44d)],'to':_0x105d96()['getExtra'](_0x225b55(0x2e3))[_0x225b55(0x37a)],'template_name':_0x20f7ad[_0x225b55(0x4ee)],'language':_0x20f7ad['language'],'variables':_0x20f7ad[_0x225b55(0x5e5)],'image_url':_0x20f7ad[_0x225b55(0x2e6)]};console[_0x225b55(0x5d4)](_0x225b55(0x4e0),_0x3fe3c3);let _0x1166ba=_0x1ba0a2(_0x225b55(0x26f));_0x1166ba['sbLoading'](!0x0),_0x5bc6df[_0x225b55(0x612)]({'function':_0x225b55(0x34d),'payload':_0x3fe3c3},_0x2d2a99=>{const _0x5a4cbe=_0x225b55;_0x1166ba[_0x5a4cbe(0x199)](!0x1),_0x2d2a99?.['error']&&_0x2d2a99[_0x5a4cbe(0x247)]['message']?_0xc0a6f0[_0x5a4cbe(0x383)](_0x1ba0a2('.sb-admin')[_0x5a4cbe(0x5a7)]('.sb-send-template-box'),_0x2d2a99['error'][_0x5a4cbe(0x48f)]):_0x2d2a99&&(_0x19680f[_0x5a4cbe(0x217)](-0x1,_0x5a4cbe(0x435)+_0x20f7ad[_0x5a4cbe(0x3f6)],!0x1),_0x19680f['showResponse'](''+_0x20f7ad[_0x5a4cbe(0x3f6)]),_0x1ba0a2(_0x47b6a4?_0x1e4743:_0x537b7d)[_0x5a4cbe(0x5a7)](_0x5a4cbe(0x1cd))[_0x5a4cbe(0x120)](!0x1)),console[_0x5a4cbe(0x5d4)](_0x5a4cbe(0x1ce),_0x2d2a99);});}),_0x5bc6df[_0x3e0773(0x4dc)](),_0x1ba0a2(_0x537b7d)['on']('click',_0x3e0773(0x37d),function(){const _0x3e0204=_0x3e0773;_0x19680f['openConversation'](_0x1ba0a2(this)[_0x3e0204(0x566)](_0x3e0204(0x464)));}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x45e),function(){const _0x3754ef=_0x3e0773;let _0x2a3fbd=_0x1ba0a2(this)[_0x3754ef(0x1c4)]('id');_0x5bc6df[_0x3754ef(0x128)](_0x2a3fbd)||(_0x1ba0a2(this)[_0x3754ef(0x38a)]()[_0x3754ef(0x1c6)](_0x3754ef(0x56a))?_0x19680f['default_department']=parseInt(_0x2a3fbd):_0x19680f[_0x3754ef(0x42d)]=parseInt(_0x2a3fbd)),_0x580b82=_0x3754ef(0x19e),_0x19680f['clear'](),_0x19680f[_0x3754ef(0x141)]();}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x399),function(){const _0xefaf51=_0x3e0773;_0x537b7d['find'](_0xefaf51(0x2b0))['removeClass'](_0xefaf51(0x3ad));}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x10b),_0x3e0773(0x331),function(){const _0x3c0bf4=_0x3e0773;_0x19680f[_0x3c0bf4(0x4fa)]||(_0x27fc27[_0x3c0bf4(0x5a7)]('.sb-upload-files')[_0x3c0bf4(0xf3)]('')[_0x3c0bf4(0x10b)](),_0x27fc27[_0x3c0bf4(0x5a7)]('.bi-arrow-up-circle-fill')[_0x3c0bf4(0x414)](_0x3c0bf4(0x46b)),console[_0x3c0bf4(0x5d4)](_0x3c0bf4(0x474)));}),_0x1ba0a2(_0x27fc27)['on']('click',_0x3e0773(0x1ec),function(_0x5456eb){const _0xdd1be1=_0x3e0773;return _0x1ba0a2(this)['parent']()[_0xdd1be1(0x20b)](),''==_0xb73fc7[_0xdd1be1(0xf3)]()&&0x0==_0x27fc27[_0xdd1be1(0x5a7)](_0xdd1be1(0x34a))[_0xdd1be1(0x4fb)]&&_0x19680f[_0xdd1be1(0x104)](!0x1),_0x5456eb[_0xdd1be1(0x54a)](),!0x1;}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x436),_0x3e0773(0x135),function(_0x1bd3a2){const _0x3c83e6=_0x3e0773;_0x19680f['busy'](!0x0),_0x1ba0a2(this)[_0x3c83e6(0x21b)](function(_0x19533b){_0x19680f['uploadResponse'](_0x19533b);}),_0x5bc6df['event'](_0x3c83e6(0x57b));}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x578),function(_0x349adf){const _0x37c046=_0x3e0773;_0x1ba0a2(this)[_0x37c046(0x588)]('sb-drag'),clearTimeout(_0x5da94a),_0x349adf[_0x37c046(0x54a)](),_0x349adf['stopPropagation'](),_0x2983d5();}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x288),function(_0x1ca7ac){const _0x1c2cf8=_0x3e0773;_0x5da94a=setTimeout(()=>{const _0x3817ca=_0x2301;_0x1ba0a2(this)['removeClass'](_0x3817ca(0x5f2)),_0x2983d5();},0xc8),_0x1ca7ac[_0x1c2cf8(0x54a)](),_0x1ca7ac[_0x1c2cf8(0x346)]();}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x1d2),function(_0x3004f2){const _0x507d7d=_0x3e0773;let _0x191db1=_0x3004f2[_0x507d7d(0x24b)][_0x507d7d(0x3b5)]['files'];if(_0x3004f2[_0x507d7d(0x54a)](),_0x3004f2[_0x507d7d(0x346)](),_0x191db1[_0x507d7d(0x4fb)]>0x0)for(var _0x35b1b2=0x0;_0x35b1b2<_0x191db1[_0x507d7d(0x4fb)];++_0x35b1b2){let _0x1d4f00=new FormData();_0x1d4f00[_0x507d7d(0x56d)](_0x507d7d(0x56b),_0x191db1[_0x35b1b2]),_0x5bc6df[_0x507d7d(0x44f)](_0x1d4f00,function(_0x3330fb){const _0x35c5dd=_0x507d7d;_0x19680f[_0x35c5dd(0x58b)](_0x3330fb);});}return _0x1ba0a2(this)[_0x507d7d(0x414)](_0x507d7d(0x5f2)),!0x1;}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),'.sb-btn-all-articles:not([onclick])',function(){_0x19680f['showArticles']();}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x447),function(){_0x19680f['showArticles'](_0x1ba0a2(this)['attr']('data-id'));}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x3e3),function(){const _0x710874=_0x3e0773;_0x19680f[_0x710874(0x613)](_0x1ba0a2(this)['parent']()['find']('input')[_0x710874(0xf3)](),this,_0x1ba0a2(this)['parent']()[_0x710874(0x548)]());}),_0x1ba0a2(_0x1e4743)['on'](_0x3e0773(0x10b),'.sb-article\x20[data-rating]',function(){const _0x568156=_0x3e0773;_0x19680f[_0x568156(0x3f2)](this);}),_0x1ba0a2(_0xb5e3a)['on'](_0x3e0773(0x10b),_0x3e0773(0x22e),function(_0x3b7508){const _0x4c8784=_0x3e0773;let _0x1c0d13=_0x1ba0a2(this)['attr'](_0x4c8784(0x511));if(0x0===_0x1c0d13[_0x4c8784(0x57a)]('#')&&0x0===_0x1c0d13[_0x4c8784(0x57a)](_0x4c8784(0x39b)))return _0x19680f[_0x4c8784(0x2f2)](_0x1c0d13[_0x4c8784(0x180)]('#article-','')),_0x3b7508[_0x4c8784(0x54a)](),!0x1;}),_0x1ba0a2(_0x1e4743)['on'](_0x3e0773(0x10b),_0x3e0773(0x306),function(){const _0x5f1895=_0x3e0773;return _0x1e4743[_0x5f1895(0x5a7)](_0x5f1895(0x51f))[_0x5f1895(0x120)](!0x1),_0x47b6a4&&(SBAdmin[_0x5f1895(0x1ea)]=!0x1),!0x1;}),_0x1ba0a2(_0x537b7d)['on']('click',_0x3e0773(0x307),function(){const _0x1a7f63=_0x3e0773;_0x5bc6df[_0x1a7f63(0x1d9)](_0x1ba0a2(this)[_0x1a7f63(0x484)]());}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x20d),function(){const _0x159c27=_0x3e0773;_0x5bc6df[_0x159c27(0x1d9)]('<img\x20loading=\x22lazy\x22\x20src=\x22'+_0x1ba0a2(this)['attr'](_0x159c27(0x617))+_0x159c27(0x3d5));}),_0x1ba0a2(_0x537b7d)['on']('click','.sb-image',function(){const _0x52e702=_0x3e0773;_0x5bc6df[_0x52e702(0x1d9)](_0x1ba0a2(this)[_0x52e702(0x484)]());}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x20d),function(){const _0x5f5a60=_0x3e0773;_0x5bc6df[_0x5f5a60(0x1d9)](_0x5f5a60(0x3be)+_0x1ba0a2(this)['attr']('data-value')+_0x5f5a60(0x3d5));}),_0x1ba0a2(document)['on']('SBConversationLoaded',function(){const _0x3a7fd0=_0x3e0773;_0x19844b(_0x3a7fd0(0x619))&&_0x19680f[_0x3a7fd0(0x619)](_0x19844b('queue'));}),_0x1ba0a2(_0x27fc27)['on'](_0x3e0773(0x10b),_0x3e0773(0x186),function(){const _0x190735=_0x3e0773;_0x19680f[_0x190735(0x378)](this);}),_0x1ba0a2(_0x56692c)['on']('click','.sb-emoji-list\x20li',function(_0x5c8c17){const _0x29c983=_0x3e0773;_0x19680f[_0x29c983(0x615)](_0x1ba0a2(this)['html']()),_0x324bc9&&clearTimeout(_0x5da94a);}),_0x1ba0a2(_0x56692c)['find'](_0x3e0773(0x11b))['on'](_0x3e0773(0x261),function(_0x33c42e){_0x5da94a=setTimeout(()=>{const _0x1fb1fb=_0x2301;_0x19680f[_0x1fb1fb(0x397)](_0x33c42e);},0x32);}),_0x1ba0a2(_0x56692c)[_0x3e0773(0x5a7)]('.sb-emoji-list')['on']('mousewheel\x20DOMMouseScroll',function(_0x19098a){const _0x17bc59=_0x3e0773;_0x19680f[_0x17bc59(0x397)](_0x19098a);}),_0x1ba0a2(_0x56692c)[_0x3e0773(0x5a7)](_0x3e0773(0x11b))['on']('touchstart',function(_0x45e626){const _0x14c231=_0x3e0773;_0x19680f['emoji_options']['touch']=_0x45e626[_0x14c231(0x24b)][_0x14c231(0x5e0)][0x0][_0x14c231(0x156)];},{'passive':!0x0}),_0x1ba0a2(_0x56692c)['on'](_0x3e0773(0x10b),'.sb-emoji-bar\x20>\x20div',function(){_0x19680f['clickEmojiBar'](this);}),_0x1ba0a2(_0x56692c)['on'](_0x3e0773(0x10b),_0x3e0773(0x510),function(){const _0x35991d=_0x3e0773;_0x19680f[_0x35991d(0x32e)](_0x1ba0a2(this)[_0x35991d(0x1c4)]('value'));}),_0x1ba0a2(_0x56692c)['find']('.sb-search-btn\x20input')['on'](_0x3e0773(0x5f1),function(){const _0xa54f88=_0x3e0773;_0x19680f[_0xa54f88(0x3bf)](_0x1ba0a2(this)[_0xa54f88(0xf3)]());}),_0x1ba0a2(_0xb73fc7)['on'](_0x3e0773(0x1e0),function(){const _0x35edb6=_0x3e0773;_0x19680f[_0x35edb6(0x2f8)](this);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),'.sb-privacy\x20.sb-approve',function(){const _0x45ed44=_0x3e0773;_0x19844b('privacy-approved',!0x0),_0x1ba0a2(this)[_0x45ed44(0x492)]('.sb-privacy')[_0x45ed44(0x20b)](),_0x537b7d[_0x45ed44(0x414)](_0x45ed44(0x2a4)),_0x756857[_0x45ed44(0x5a7)](_0x45ed44(0x5d9))[_0x45ed44(0x130)]({'opacity':0x1,'top':0x0}),_0x19680f[_0x45ed44(0x61d)](),_0x94a56c?SBTickets[_0x45ed44(0x3c9)]('new-ticket'):_0x19680f[_0x45ed44(0x546)]()||_0x19680f[_0x45ed44(0x141)]();}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x2e5),function(){const _0x118a52=_0x3e0773;let _0x29f119=_0x1ba0a2(this)['closest'](_0x118a52(0x260));_0x1ba0a2(_0x29f119)[_0x118a52(0x5a7)](_0x118a52(0x111))[_0x118a52(0x484)](_0x1ba0a2(_0x29f119)[_0x118a52(0x566)](_0x118a52(0x3a4))),_0x1ba0a2(_0x29f119)[_0x118a52(0x5a7)](_0x118a52(0x3c7))[_0x118a52(0x20b)](),_0x19680f[_0x118a52(0x5d7)](!0x0);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),'.sb-popup-message\x20.bi-x-lg',function(){const _0x4c0671=_0x3e0773;_0x19680f[_0x4c0671(0x33c)](!0x0);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x458),function(){const _0x27e605=_0x3e0773;let _0x2e87e8=_0x1ba0a2(this)[_0x27e605(0x492)](_0x27e605(0x12a));_0x2e87e8[0x0]['hasAttribute'](_0x27e605(0x1e7))||_0x3b9132[_0x27e605(0x3f8)](_0x2e87e8,_0x2e87e8['attr'](_0x27e605(0x3fa)),this);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x1b8),function(){const _0x298550=_0x3e0773;_0x1ba0a2(this)[_0x298550(0x120)](!0x0),_0x1ba0a2(this)[_0x298550(0x424)]()[_0x298550(0x164)]();}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x604),'.sb-rich-message\x20.sb-input\x20input,.sb-rich-message\x20.sb-input\x20select',function(_0x497711){const _0x393fbd=_0x3e0773;switch(_0x497711[_0x393fbd(0x44d)]){case'focusin':case'focus':_0x1ba0a2(this)['siblings']()[_0x393fbd(0x120)](!0x0);break;case _0x393fbd(0x4e5):''==_0x1ba0a2(this)[_0x393fbd(0xf3)]()?_0x1ba0a2(this)[_0x393fbd(0x424)]()[_0x393fbd(0x120)](!0x1):_0x1ba0a2(this)[_0x393fbd(0x424)]()[_0x393fbd(0x588)](_0x393fbd(0x2a7));break;case _0x393fbd(0x10b):_0x1ba0a2(this)[_0x393fbd(0x424)]()[_0x393fbd(0x414)](_0x393fbd(0x4a9));}}),_0x1ba0a2(_0x537b7d)['on']('click','.sb-slider-arrow',function(){const _0x746059=_0x3e0773;_0x3b9132['sliderChange'](_0x1ba0a2(this)[_0x746059(0x492)](_0x746059(0x374))[_0x746059(0x566)]('id'),_0x1ba0a2(this)[_0x746059(0x1c6)](_0x746059(0x18d))?_0x746059(0x4b3):_0x746059(0x401));}),_0x1ba0a2(_0x537b7d)['on']('change','.sb-rich-message\x20[data-type=\x22select\x22]\x20select',function(){_0x1ba0a2(this)['siblings']()['sbActive'](!0x0);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),'[data-type=\x22select-input\x22]\x20>\x20div',function(){const _0x228c22=_0x3e0773;_0x1ba0a2(this)['prev']()[_0x228c22(0x120)](!0x0),_0x1ba0a2(this)[_0x228c22(0x548)]()[_0x228c22(0x588)](_0x228c22(0x13a));}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x4e5),_0x3e0773(0x3e4),function(){const _0x4b2f63=_0x3e0773;let _0x1c83c4=_0x1ba0a2(this)['closest'](_0x4b2f63(0x223));_0x1c83c4['find']('input[type=\x22tel\x22]')[_0x4b2f63(0xf3)]()+_0x1c83c4[_0x4b2f63(0x5a7)](_0x4b2f63(0x5d5))[_0x4b2f63(0xf3)]()==''&&_0x1c83c4['find'](_0x4b2f63(0x201))[_0x4b2f63(0x120)](!0x1),_0x1c83c4['find'](_0x4b2f63(0x524))[_0x4b2f63(0x414)](_0x4b2f63(0x13a));}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x5bb),function(){const _0x307511=_0x3e0773;let _0x46abb9=_0x537b7d[_0x307511(0x1c6)](_0x307511(0x2a4));_0x1ba0a2(this)['closest']('.sb-rich-registration')[_0x307511(0x541)](_0x3b9132[_0x307511(0x33e)]({},_0x307511(0x36f),_0x46abb9?_0x307511(0x55c):'')),_0x19680f[_0x307511(0x5d7)](_0x46abb9);}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x519),function(){const _0xe9caa9=_0x3e0773;if(_0x47fcfe['registration-link'])document['location']=_0x47fcfe['registration-link'];else{let _0x4736d1=_0x537b7d[_0xe9caa9(0x1c6)]('sb-init-form-active');_0x1ba0a2(this)[_0xe9caa9(0x492)](_0xe9caa9(0x396))[_0xe9caa9(0x541)](_0x3b9132[_0xe9caa9(0x33e)]({},_0xe9caa9(0x47f),_0x4736d1?_0xe9caa9(0x55c):'')),_0x19680f[_0xe9caa9(0x5d7)](_0x4736d1);}}),_0x1ba0a2(_0x537b7d)['on']('click','.sb-rich-login\x20.sb-submit-login',function(){_0x5bc6df['loginForm'](this,!0x1,_0x5028c7=>{const _0x1c9f99=_0x2301;let _0xaf295f=_0x1ba0a2(this)[_0x1c9f99(0x492)](_0x1c9f99(0x396));if(_0x105d96(new _0x4692ba(_0x5028c7[0x0])),_0xaf295f[_0x1c9f99(0x1c6)]('sb-init-form'))_0x537b7d['removeClass'](_0x1c9f99(0x2a4)),_0xaf295f['remove'](),_0x580b82=_0x1c9f99(0x3af),_0x19680f['initChat'](),_0x6e0d8d['start'](),_0x19680f[_0x1c9f99(0x546)]()||_0x19680f[_0x1c9f99(0x141)]();else{_0xaf295f=_0xaf295f[_0x1c9f99(0x492)](_0x1c9f99(0x22d));let _0x1fd0ac=_0x19680f['conversation'][_0x1c9f99(0x259)](_0xaf295f[_0x1c9f99(0x566)]('data-id')),_0x54e55d=_0x66a1ca('Logged\x20in\x20as')+'\x20*'+_0x105d96()['name']+'*';_0x1fd0ac[_0x1c9f99(0x144)](_0x1c9f99(0x48f),_0x54e55d),_0x19680f[_0x1c9f99(0x579)](_0x1fd0ac['id'],_0x54e55d),_0xaf295f[_0x1c9f99(0x541)](_0x1fd0ac['getCode']()),_0x6e0d8d['started']=!0x1,_0x6e0d8d['start']();}});}),_0x1ba0a2(_0xb5e3a)['on'](_0x3e0773(0x10b),_0x3e0773(0x181),function(){const _0x526d91=_0x3e0773;_0x5bc6df[_0x526d91(0x35c)](_0x1ba0a2(this)[_0x526d91(0x566)]('data-link'));}),_0x1ba0a2(_0x537b7d)['on'](_0x3e0773(0x10b),_0x3e0773(0x350),function(){_0x19680f['closeChat']();}),_0x1ba0a2(_0x1e4743)['on']('click',_0x3e0773(0x121),function(){const _0x26fc50=_0x3e0773;let _0x474191=_0x1ba0a2(this)['parent'](),_0x36fb6b=_0x1ba0a2(_0x474191)[_0x26fc50(0x120)]();_0x36fb6b&&(setTimeout(()=>{const _0x287646=_0x26fc50;_0x1ba0a2(_0x474191)[_0x287646(0x5a7)](_0x287646(0x1b3))[_0x287646(0xf3)]('');},0x32),setTimeout(()=>{const _0x36e285=_0x26fc50;_0x1ba0a2(_0x474191)[_0x36e285(0x5a7)](_0x36e285(0x1b3))[_0x36e285(0x200)]('change');},0x226)),_0x1ba0a2(_0x474191)[_0x26fc50(0x120)](!_0x36fb6b),_0x1ba0a2(_0x474191)[_0x26fc50(0x5a7)](_0x26fc50(0x1b3))[_0x26fc50(0x164)](),_0x1e4743[_0x26fc50(0x5a7)](_0x26fc50(0x2a5))['sbActive'](!0x1);}),_0x1ba0a2(_0x1e4743)['on'](_0x3e0773(0x10b),_0x3e0773(0x192),function(){const _0x440821=_0x3e0773;let _0x451b2b=_0x1ba0a2(this)[_0x440821(0x5a7)]('ul'),_0x5ecf57=_0x451b2b[_0x440821(0x1c6)]('sb-active');_0x1ba0a2(_0x1e4743)[_0x440821(0x5a7)](_0x440821(0x2a5))['sbActive'](!0x1),_0x451b2b[_0x440821(0x565)](_0x440821(0x31e),!_0x5ecf57),_0x47b6a4&&(SBAdmin[_0x440821(0x1ea)]=!_0x5ecf57&&this);}),_0x1ba0a2(_0x1e4743)['on']('click',_0x3e0773(0x510),function(){const _0x51b4ac=_0x3e0773;let _0x70fe75=_0x1ba0a2(this)['closest'](_0x51b4ac(0x192)),_0x46bd97=_0x1ba0a2(this)[_0x51b4ac(0x1c4)]('value');var _0xc33554=_0x1ba0a2(_0x70fe75)['find'](_0x51b4ac(0x2c1)+_0x46bd97+'\x22]');_0x1ba0a2(_0x70fe75)['find']('li')[_0x51b4ac(0x120)](!0x1),_0x1ba0a2(_0x70fe75)[_0x51b4ac(0x5a7)]('p')['attr'](_0x51b4ac(0x617),_0x46bd97)[_0x51b4ac(0x484)](_0x1ba0a2(_0xc33554)[_0x51b4ac(0x484)]()),_0x1ba0a2(_0xc33554)['sbActive'](!0x0);}),_0x1ba0a2(_0x1e4743)['on'](_0x3e0773(0x10b),_0x3e0773(0x5a9),function(){const _0x440465=_0x3e0773;_0x438150=_0x1ba0a2(this)[_0x440465(0x38a)](),_0x27fc27['find'](_0x440465(0x135))[_0x440465(0x10b)]();}),_0x1ba0a2(_0x1e4743)['on']('click',_0x3e0773(0x1f8),function(_0x1a93e0){const _0x2345e7=_0x3e0773;return _0x1ba0a2(this)[_0x2345e7(0x38a)]()[_0x2345e7(0x188)]('data-value')[_0x2345e7(0x130)](_0x2345e7(0x2c0),''),_0x1a93e0['preventDefault'](),!0x1;});let _0x1eebb0=!0x1;function _0x3adc45(_0x54fef2,_0x5340be,_0x1e3139=!0x1,_0xb1ffc9='',_0x52b654='',_0x35d7f3=!0x1){const _0x4eff69=_0x3e0773;let _0x1bb9fc=_0x1e4743['find'](_0x4eff69(0x493))[_0x4eff69(0x566)](_0x4eff69(0x3fa),_0x5340be),_0x20d872=_0x1bb9fc[_0x4eff69(0x5a7)]('p');_0x1bb9fc[_0x4eff69(0x566)]('id',_0xb1ffc9)[_0x4eff69(0x565)](_0x4eff69(0x38b),_0x35d7f3)[_0x4eff69(0x130)](_0x4eff69(0x2bc),_0x35d7f3?parseInt(_0x1ba0a2(window)[_0x4eff69(0x2bc)]())-0xc8+'px':''),_0x1bb9fc[_0x4eff69(0x5a7)](_0x4eff69(0x61c))['html'](_0x52b654),_0x20d872[_0x4eff69(0x484)]((_0x4eff69(0x2a6)==_0x5340be?_0x66a1ca(_0x4eff69(0x165))+'\x20':'')+_0x66a1ca(_0x54fef2)),_0x1bb9fc['sbActive'](!0x0)[_0x4eff69(0x130)]({'margin-top':-(_0x1bb9fc[_0x4eff69(0x586)]()/0x2)+'px','margin-left':-(_0x1bb9fc['outerWidth']()/0x2)+'px'}),_0x1eebb0=_0x1e3139,setTimeout(()=>{SBAdmin['open_popup']=_0x1bb9fc;},0x1f4);}_0x1ba0a2(_0x1e4743)['on'](_0x3e0773(0x10b),_0x3e0773(0x39e),function(_0x708f2d){const _0x5825b0=_0x3e0773;_0x708f2d[_0x5825b0(0x54a)]();let _0x5072a0=_0x1ba0a2(this)[_0x5825b0(0x492)](_0x5825b0(0x3ac))['attr'](_0x5825b0(0x239)),_0x281f47=_0x1ba0a2(this)['attr'](_0x5825b0(0x511));if(!_0x5072a0){let _0x259bad=_0x281f47[_0x5825b0(0x26b)](/\/\?q=([\d\.\-]+),([\d\.\-]+)/);_0x259bad&&_0x259bad[_0x5825b0(0x4fb)]>=0x3&&(_0x5072a0=_0x259bad[0x1]+','+_0x259bad[0x2]);}if(_0x5072a0){let _0x3d552b=_0x5825b0(0x318)+_0x5072a0+_0x5825b0(0x3ae);_0x1ba0a2(this)['closest'](_0x5825b0(0x3f7))[_0x5825b0(0x484)](_0x3d552b);}else window[_0x5825b0(0x341)](_0x281f47,'_blank');});}window[_0x3c09f9(0x3dc)]=_0x17de24,_0x1ba0a2(document)[_0x3c09f9(0x388)](function(){const _0x253f1b=_0x3c09f9;if((_0x537b7d=_0x1ba0a2(_0x253f1b(0x418)))[_0x253f1b(0x4fb)]){_0x47b6a4=!0x0,_0x216eb9();return;}let _0x4d47cf,_0x44b007,_0x1caf63=!0x1;if(typeof SB_INIT_URL!=_0x339924)0x0>SB_INIT_URL[_0x253f1b(0x57a)]('.js')&&(SB_INIT_URL+=_0x253f1b(0x2aa)),_0x4d47cf=SB_INIT_URL;else{let _0x2cfe8b=document[_0x253f1b(0x143)](_0x253f1b(0x224)),_0x3efc5d=['min/main.js'];for(var _0x4d059c=0x0;_0x4d059c<_0x2cfe8b[_0x253f1b(0x4fb)];_0x4d059c++){let _0x4c9c17=_0x2cfe8b[_0x4d059c]['src'];if(_0x253f1b(0x61b)==_0x2cfe8b[_0x4d059c]['id']){_0x4d47cf=_0x4c9c17,_0x1caf63=_0x1caf63||_0x4d47cf[_0x253f1b(0x27a)](_0x253f1b(0x2e9));break;}for(var _0x20582b=0x0;_0x20582b<_0x3efc5d[_0x253f1b(0x4fb)];_0x20582b++)if(_0x4c9c17[_0x253f1b(0x27a)]('/c/js/'+_0x3efc5d[_0x20582b])){_0x4d47cf=_0x4c9c17,_0x1caf63=_0x1caf63||_0x4d47cf[_0x253f1b(0x27a)](_0x253f1b(0x2e9));break;}}}let _0x1bbb21=_0x5bc6df['getURL'](!0x1,_0x4d47cf);if(_0x253f1b(0x1cc)in _0x1bbb21&&(_0x4d47cf=_0x1bbb21[_0x253f1b(0x1cc)]),typeof SB_DISABLED!=_0x339924&&SB_DISABLED)return;if(_0x1caf63){_0x216eb9();return;}(typeof SB_TICKETS!=_0x339924||_0x253f1b(0x2f4)in _0x1bbb21&&_0x253f1b(0x35f)==_0x1bbb21['mode'])&&(_0x94a56c=!0x0,_0x1bbb21[_0x253f1b(0x2f4)]=_0x253f1b(0x35f)),_0x253f1b(0x5eb)in _0x1bbb21&&(_0x48d357=_0x1bbb21['cloud']);let _0x4e008a=_0x4d47cf[_0x253f1b(0x1af)]('main.js'),_0x1f0a18=(_0x44b007=_0x4d47cf[_0x253f1b(0x380)](0x0,_0x4d47cf['lastIndexOf'](_0x253f1b(0x5ac))>0x0?_0x4d47cf[_0x253f1b(0x1af)](_0x253f1b(0x5ac))-0x4:_0x4e008a-0x8))+_0x253f1b(0x460)+(_0x253f1b(0x231)in _0x1bbb21?_0x253f1b(0x5f5)+_0x1bbb21[_0x253f1b(0x231)]:'')+(_0x253f1b(0x2f4)in _0x1bbb21?_0x253f1b(0x23d)+_0x1bbb21[_0x253f1b(0x2f4)]:'')+(_0x48d357?_0x253f1b(0x486)+_0x48d357:'');_0x5bc6df['cors'](_0x253f1b(0x3d4),_0x1f0a18[_0x253f1b(0x180)]('.php&',_0x253f1b(0x5dc)),_0x5101b5=>{const _0xc1c553=_0x253f1b;let _0x56656d=_0xc1c553(0x327);_0x94a56c&&_0x1ba0a2(_0xc1c553(0x158))['length']&&(_0x56656d=_0xc1c553(0x158)),_0x1ba0a2(_0x56656d)['append'](_0x5101b5),_0x5bc6df['loadResource'](_0x44b007+_0xc1c553(0x1a0)+(_0x94a56c?_0xc1c553(0x35f):_0xc1c553(0x36d))+'.css'),_0x94a56c?_0x1ba0a2[_0xc1c553(0x2de)](_0x44b007+_0xc1c553(0xf0)+(_0x4e008a?_0xc1c553(0x4b7):'')+'.js?v='+_0x1eaa6b,()=>{_0x216eb9();}):_0x216eb9();});});}(jQuery);var selectedSource='tk';function updateSource(_0x3fb3d0){const _0x2b512c=_0x2301;selectedSource=_0x3fb3d0,console['log'](_0x2b512c(0x147),selectedSource);}let isSpeechSynthesisActive=!0x1,utterance=null;function readText(_0x21533b){const _0x23f62a=_0x2301;isSpeechSynthesisActive||((utterance=new SpeechSynthesisUtterance(_0x21533b))[_0x23f62a(0x231)]=_0x23f62a(0x30d),utterance[_0x23f62a(0x4a1)]=0x1,utterance[_0x23f62a(0x552)]=1.2,utterance[_0x23f62a(0x177)]=function(){isSpeechSynthesisActive=!0x0;},utterance[_0x23f62a(0x4e9)]=function(){isSpeechSynthesisActive=!0x1;},window[_0x23f62a(0x15b)][_0x23f62a(0x25a)](utterance));}$(document)['on'](_0x32fb60(0x10b),'.sb-menu\x20li[data-value=\x22read-text\x22]',function(_0x3baa84){const _0xe286c=_0x32fb60;_0x3baa84['stopPropagation']();let _0x60619d=$(this)[_0xe286c(0x492)]('.sb-shadow-conversation')['data']('id');readText($(_0xe286c(0x19d)+_0x60619d+_0xe286c(0x308))['text']());}),window[_0x32fb60(0x507)](_0x32fb60(0x450),function(_0x6314){const _0x329241=_0x32fb60;window[_0x329241(0x15b)][_0x329241(0x3d9)](),isSpeechSynthesisActive=!0x1;}),$(document)['on'](_0x32fb60(0x10b),function(_0x283e03){const _0x84c19c=_0x32fb60;window[_0x84c19c(0x15b)][_0x84c19c(0x3d9)](),isSpeechSynthesisActive=!0x1;});
+/*
+ * ==========================================================
+ * PHP UI MAIN SCRIPT
+ * ==========================================================
+ *
+ */
+
+"use strict";
+
+(function ($) {
+  var version = "2.28";
+  var main;
+  var global;
+  var upload_target;
+  var admin = false;
+  var tickets = false;
+  var timeout = false;
+  var timeout_label_date = [false, false];
+  var interval = false;
+  var timeout_debounce = [];
+  var previous_search;
+  var sb_current_user = false;
+  var chat;
+  var chat_editor;
+  var chat_textarea;
+  var chat_header;
+  var chat_status;
+  var chat_emoji;
+  var chat_scroll_area;
+  var label_date;
+  var label_date_items = false;
+  var label_date_show = false;
+  var label_date_history = [9999999, ""];
+  var document_title = document.title;
+  var CHAT_SETTINGS = {};
+  var ADMIN_SETTINGS;
+  var mobile = $(window).width() < 555;
+  var today = new Date();
+  var bot_id;
+  var force_action = "";
+  var dialogflow_human_takeover;
+  var agents_online = false;
+  var ND = "undefined";
+  var cookies_supported = true;
+  var utc_offset = new Date().getTimezoneOffset() * 60000;
+  var cloud_data = false;
+  // var articles_page = false;
+  var load_more = 30;
+  var total_more;
+
+  /*
+   * ----------------------------------------------------------
+   * EXTERNAL PLUGINS
+   * ----------------------------------------------------------
+   */
+
+  // Auto Expand Scroll Area |
+  $.fn.extend({
+    manualExpandTextarea: function () {
+      var t = this[0];
+      (t.style.height = "auto"), (t.style.maxHeight = "25px");
+      window.getComputedStyle(t);
+      (t.style.height = (t.scrollHeight > 35 ? 100 : t.scrollHeight) + "px"),
+        (t.style.maxHeight = ""),
+        $(t).trigger("textareaChanged");
+    },
+    autoExpandTextarea: function () {
+      var t = this[0];
+      t.addEventListener(
+        "input",
+        function (e) {
+          $(t).manualExpandTextarea();
+        },
+        !1
+      );
+    },
+  });
+
+  // autolink-js
+  // 	(function() {
+  // 		var t = [].slice;
+  // 		String.prototype.autoLink = function() {
+  // 			var n, a, r, i, c, e, l;
+  // 			return e = /(^|[\s\n]|<[A-Za-z]*\/?>)((?:https?|ftp):\/\/[\-A-Z0-9+\u0026\u2019@#\/%?=()~_|!:,.;]*[\-A-Z0-9+\u0026@#\/%=~()_|])/gi, 0 < (c = 1 <= arguments.length ? t.call(arguments, 0) : []).length ? (i = c[0], n = i.callback, r = function() {
+  // 				var t;
+  // 				for (a in t = [], i) l = i[a], "callback" !== a && t.push(" " + a + "='" + l + "'");
+  // 				return t
+  // 			}().join(""), this.replace(e, function(t, a, i) {
+  // 				return "" + a + (("function" == typeof n ? n(i) : void 0) || "<a href='" + i + "'" + r + ">" + i + "</a>")
+  // 			})) : this.replace(e, "$1<a href='$2'>$2</a>")
+  // 		}
+  // 	}).call(this);
+
+  (function () {
+    // Define the autoLink function as a prototype of the String object
+    String.prototype.autoLink = function () {
+      // Initialize variables
+      var match, // Temporary variable to store matches
+        options, // Options for customizing link behavior
+        linkAttributes, // Attributes for the generated link
+        regex; // Regular expression for matching URLs
+
+      // Regular expression for matching URLs in the text
+      regex =
+        /(^|[\s\n]|<[A-Za-z]*\/?>)((?:https?|ftp):\/\/[\-A-Z0-9+\u0026\u2019@#\/%?=()~_|!:,.;]*[\-A-Z0-9+\u0026@#\/%=~()_|]+)/gi;
+
+      // Check if custom options are provided
+      options = arguments.length > 0 ? [].slice.call(arguments, 0)[0] : {};
+
+      // Extract link attributes from options, if provided
+      linkAttributes = (function () {
+        var attributes = [];
+        for (var key in options) {
+          if (key !== "callback") {
+            attributes.push(" " + key + "='" + options[key] + "'");
+          }
+        }
+        return attributes.join("");
+      })();
+
+      // Replace URLs in the text with clickable links
+      return this.replace(regex, function (match, prefix, url) {
+        // If the URL matches a Google Maps URL
+        if (url.match(/maps.google.com/g)) {
+          // Extract latitude and longitude from the URL
+          var matches = url.match(/q=([\d.-]+),([\d.-]+)/);
+          if (matches) {
+            var latitude = matches[1];
+            var longitude = matches[2];
+            // Generate an iframe for embedding the map
+            return (
+              "<iframe width='270' height='270' frameborder='0'  style='margin:0px -21px -4px -7px; border-radius:4px; border: 0; width: auto;' src='https://maps.google.com/maps?q=" +
+              latitude +
+              "," +
+              longitude +
+              "&amp;output=embed'></iframe>"
+            );
+          } else {
+            // If latitude and longitude are not found, use default values
+            return "<iframe width='270' height='270' frameborder='0' style='border:0;' src='https://maps.google.com/maps?q=-00.000000,-00.000000&amp;output=embed'></iframe>";
+          }
+        } else {
+          // If the URL is not a Google Maps URL, create a clickable link
+          // Call the custom callback function if provided, otherwise create a standard link
+          return (
+            prefix + // Add the prefix (space, newline, or HTML tag) before the link
+            (typeof options.callback === "function"
+              ? options.callback(url)
+              : "") + // Custom callback function result or empty string
+            "<a href='" +
+            url +
+            "'" +
+            linkAttributes +
+            ">" +
+            url +
+            "</a>" + // Clickable link
+            (typeof options.callback === "function" ? "" : " ") // Add space after the link if no custom callback function is provided
+          );
+        }
+      });
+    };
+  }).call(this);
+
+  /*
+   * ----------------------------------------------------------
+   * # FUNCTIONS
+   * ----------------------------------------------------------
+   */
+
+  var SBF = {
+    // Main Ajax function
+
+    ajax: function (data, onSuccess = false) {
+      data["login-cookie"] = this.loginCookie();
+      if (!("user_id" in data) && activeUser()) {
+        data["user_id"] = activeUser().id;
+      }
+      if (!("language" in data) && typeof SB_LANG != ND) {
+        data["language"] = SB_LANG;
+      }
+      if (cloud_data) {
+        data["cloud"] = cloud_data;
+      }
+      $.ajax({
+        method: "POST",
+        url: SB_AJAX_URL,
+        data: data,
+      }).done((response) => {
+        let result;
+        if (Array.isArray(response)) {
+          result = response;
+        } else {
+          try {
+            result = JSON.parse(response);
+          } catch (e) {
+            SBChat.is_busy_update = false;
+            SBChat.busy(false);
+            SBF.error(
+              response.length > 500
+                ? response.substr(0, 500) +
+                    "... Check the console for more details."
+                : response,
+              `SBF.ajax.${data["function"]}`
+            );
+            return;
+          }
+        }
+        if (result[0] == "success") {
+          if (onSuccess) onSuccess(result[1]);
+        } else if (SBF.errorValidation(result)) {
+          if (onSuccess) onSuccess(result);
+        } else {
+          if (admin && result[1] == "security-error") {
+            setTimeout(() => {
+              SBF.reset();
+            }, 1000);
+          }
+          SBChat.is_busy_update = false;
+          SBChat.busy(false);
+          SBF.error(
+            result[1] +
+              (SBF.null(result[2]) ? "" : "\nFunction name: " + result[2]) +
+              (SBF.null(result[3])
+                ? ""
+                : "\nError message: " +
+                  (typeof result[3] == "string"
+                    ? result[3]
+                    : "error" in result[3] && "message" in result[3]["error"]
+                    ? `${result[3]["error"]["message"]} in function '${result[3]["error"]["function"]}'`
+                    : result[3])),
+            `SBF.ajax.${data["function"]}`
+          );
+        }
+      });
+    },
+
+    // Cors function
+    cors: function (method = "GET", url, onSuccess) {
+      let xhr = new XMLHttpRequest();
+      if ("withCredentials" in xhr) {
+        xhr.open(method, url, true);
+      } else if (typeof XDomainRequest != ND) {
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+      } else {
+        return false;
+      }
+      xhr.onload = function () {
+        onSuccess(xhr.responseText);
+      };
+      xhr.onerror = function () {
+        return false;
+      };
+      xhr.send();
+    },
+    // Uploads
+    upload: function (form, onSuccess) {
+      if (cloud_data) form.append("cloud", cloud_data); //added from old
+
+      jQuery.ajax({
+        url: STMBX_URL + "/include/upload.php",
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form,
+        type: "POST",
+        success: function (response) {
+          onSuccess(response);
+        },
+      });
+    },
+    //link hostname get
+    getHostname: function (url) {
+      return new URL(url).hostname.replace("www.", "");
+    },
+    //text limit set
+    limitText: function (text, limit) {
+      let setimit = text != null ? text.slice(0, limit) : "";
+      return setimit.length > limit - 1 ? setimit + "..." : setimit;
+    },
+
+    // UTC Time
+    UTC: function (datetime) {
+      return new Date(datetime).getTime() - utc_offset;
+    },
+
+    // Check if a variable is null or empty
+    null: function (obj) {
+      if (
+        typeof obj !== ND &&
+        obj !== null &&
+        obj !== "null" &&
+        obj !== false &&
+        (obj.length > 0 || typeof obj == "number" || typeof obj.length == ND) &&
+        obj !== ND
+      )
+        return false;
+      else return true;
+    },
+
+    // Deactivate and hide the elements
+    deactivateAll: function () {
+      global
+        .find(".sb-popup, .sb-tooltip, .sb-list .sb-menu, .sb-select ul")
+        .sbActive(false);
+    },
+
+    // Deselect the content of the target
+    deselectAll: function () {
+      if (window.getSelection) {
+        window.getSelection().removeAllRanges();
+      } else if (document.selection) {
+        document.selection.empty();
+      }
+    },
+
+    // Get URL parameters
+    getURL: function (name = false, url = false) {
+      if (url == false) {
+        url = location.search;
+      }
+      if (name == false) {
+        var c = url.split("?").pop().split("&");
+        var p = {};
+        for (var i = 0; i < c.length; i++) {
+          var d = c[i].split("=");
+          p[d[0]] = SBF.escape(d[1]);
+        }
+        return p;
+      }
+      if (url.indexOf("?") > 0) {
+        url = url.substr(0, url.indexOf("?"));
+      }
+      return SBF.escape(
+        decodeURIComponent(
+          (new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(
+            url
+          ) || [, ""])[1].replace(/\+/g, "%20") || ""
+        )
+      );
+    },
+
+    URL: function () {
+      return window.location.href.substr(0, window.location.href.indexOf("?"));
+    },
+
+    // Convert a string to slug and inverse
+    stringToSlug: function (string) {
+      string = string.trim();
+      string = string.toLowerCase();
+      var from = "åàáãäâèéëêìíïîòóöôùúüûñç·/_,:;";
+      var to = "aaaaaaeeeeiiiioooouuuunc------";
+      for (var i = 0, l = from.length; i < l; i++) {
+        string = string.replace(new RegExp(from.charAt(i), "g"), to.charAt(i));
+      }
+      return string
+        .replace(/[^a-z0-9 -]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-+/, "")
+        .replace(/-+$/, "")
+        .replace(/ /g, "");
+    },
+
+    slugToString: function (string) {
+      string = string.replace(/_/g, " ").replace(/-/g, " ");
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+
+    // Random string
+    random: function () {
+      let chars =
+        "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let result = "";
+      for (var i = 5; i > 0; --i)
+        result += chars[Math.floor(Math.random() * 62)];
+      return result;
+    },
+
+    // Check if a user type is an agent
+    isAgent: function (user_type) {
+      return user_type == "agent" || user_type == "admin" || user_type == "bot";
+    },
+
+    // Get cors elapsed of a given date from now
+    beautifyTime: function (datetime, extended = false, future = false) {
+      let date;
+      if (datetime == "0000-00-00 00:00:00") return "";
+      if (datetime.indexOf("-") > 0) {
+        let arr = datetime.split(/[- :]/);
+        date = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
+      } else {
+        let arr = datetime.split(/[. :]/);
+        date = new Date(arr[2], arr[1] - 1, arr[0], arr[3], arr[4], arr[5]);
+      }
+      let date_string = new Date(
+        Date.UTC(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate(),
+          date.getHours(),
+          date.getMinutes(),
+          date.getSeconds()
+        )
+      );
+      let diff_days =
+        Math.round((new Date() - date_string) / (1000 * 60 * 60 * 24)) *
+        (future ? -1 : 1);
+      let days = [
+        sb_("Sunday"),
+        sb_("Monday"),
+        sb_("Tuesday"),
+        sb_("Wednesday"),
+        sb_("Thursday"),
+        sb_("Friday"),
+        sb_("Saturday"),
+      ];
+      let time = date_string.toLocaleTimeString(navigator.language, {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false, // Force 24-hour format
+      });
+      if (diff_days < 1) {
+        return extended
+          ? `<span>${sb_("Today")}</span> <span>${time}</span>`
+          : `<span style="text-transform: uppercase;" data-today>${time}</span>`;
+      } else if (diff_days < 3) {
+        return `<span>${days[date_string.getDay()]}</span>${
+          extended ? ` <span>${time}</span>` : ""
+        }`;
+      } else {
+        return `<span>${date_string.toLocaleDateString()}</span>${
+          extended ? ` <span>${time}</span>` : ""
+        }`;
+      }
+    },
+
+    // Get the unix timestamp value of a data string with format yyyy-mm-dd hh:mm:ss
+    unix: function (datetime) {
+      let arr = datetime.split(/[- :]/);
+      return Date.UTC(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
+    },
+
+    // Generate a string containing the agent location and time
+    getLocationTimeString: function (details, onSuccess) {
+      if ("timezone" in details) {
+        let location = {};
+        location["timezone"] = details["timezone"]["value"];
+        location["country"] =
+          "country" in details
+            ? details["country"]["value"]
+            : location["timezone"].split("/")[0].replace(/_/g, " ");
+        location["city"] =
+          "city" in details
+            ? details["city"]["value"]
+            : location["timezone"].split("/")[1].replace(/_/g, " ");
+        SBF.cors(
+          "GET",
+          "https://worldtimeapi.org/api/timezone/" + location["timezone"],
+          function (response) {
+            response = JSON.parse(response);
+            if (SBF.null(response) || !SBF.null(response["error"])) {
+              SBF.error(response, "SBF.getLocationTimeString()");
+              onSuccess(responseonSuccess);
+            } else {
+              let datetime = response["datetime"].replace("T", " ");
+              onSuccess(
+                `${new Date(
+                  datetime.substr(0, datetime.indexOf("."))
+                ).toLocaleString([], {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })} ${sb_("in")} ${location["city"] ? location["city"] : ""}${
+                  location["country"] ? ", " + location["country"] : ""
+                }`
+              );
+            }
+          }
+        );
+      }
+    },
+
+    // Date string
+    dateDB: function (date) {
+      if (date == "now") {
+        date = new Date().toISOString().replace("T", " ");
+        if (date.indexOf(".") > 0) {
+          date = date.substr(0, date.indexOf("."));
+        }
+        return date;
+      } else {
+        return `${date.getFullYear()}-${
+          date.getMonth() + 1
+        }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+      }
+    },
+
+    localTime: function (utc, zone) {
+      return utc != false
+        ? SBF.getTimezoneOffset(zone) == new Date().getTimezoneOffset()
+          ? utc
+          : moment(utc).format("MM/DD/YYYY hh:mm A")
+        : "";
+    },
+    getTimezoneOffset: function (timezone) {
+      let dt = new Date();
+      let zonetime = dt.toLocaleString("en-US", {
+        timeZone: timezone,
+      });
+      let adjDate = new Date(zonetime);
+      let noSecs = new Date(dt.getTime());
+      let diff = Math.round((adjDate.getTime() - noSecs.getTime()) / 60000);
+      return dt.getTimezoneOffset() - diff;
+    },
+
+    //Set and get users last activity
+    updateUsersActivity: function (user_id, return_user_id, onSuccess) {
+      if (SBPusher.active) {
+        onSuccess(
+          SBPusher.online_ids.includes(return_user_id) ? "online" : "offline"
+        );
+      } else {
+        SBF.ajax(
+          {
+            function: "update-users-last-activity",
+            user_id: user_id,
+            return_user_id: return_user_id,
+            // check_slack: !admin && CHAT_SETTINGS["slack-active"],
+          },
+          (response) => {
+            if (response === "online") {
+              onSuccess("online");
+            } else {
+              onSuccess("offline");
+            }
+          }
+        );
+      }
+    },
+
+    // Search functions
+    search: function (search, searchFunction) {
+      search = search.toLowerCase();
+      if (search == previous_search) {
+        global.find(".sb-search-btn i").sbLoading(false);
+        return;
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        previous_search = search;
+        searchFunction();
+      }, 200);
+    },
+
+    searchClear: function (icon, onSuccess) {
+      let search = $(icon).next().val();
+      if (search) {
+        $(icon).next().val("");
+        onSuccess();
+      }
+    },
+
+    // Routin.bot error js reporting
+    error: function (message, function_name) {
+      if (admin && SBAdmin.is_logout) return;
+      if (message instanceof Error) message = message.message;
+      if (message[message.length - 1] == ".") message = message.slice(0, -1);
+      if (message.includes("Routin.bot error"))
+        message = message.replace("Routin.bot error ", "").replace("]:", "]");
+      if (
+        admin &&
+        message &&
+        !function_name.includes("update-users-last-activity") &&
+        !function_name.startsWith("security-error")
+      )
+        SBAdmin.dialog(
+          `[Error] [${function_name}] ${message}. Check the console for more details.`,
+          "info"
+        );
+      global.find(".sb-loading").sbLoading(false);
+      SBF.event("SBError", {
+        message: message,
+        function_name: function_name,
+      });
+      throw new Error(`Routin.bot error [${function_name}]: ${message}.`);
+    },
+
+    errorValidation: function (response, code = true) {
+      return (
+        Array.isArray(response) &&
+        response[0] === "validation-error" &&
+        (code === true || response[1] == code)
+      );
+    },
+
+    // Login
+    loginForm: function (button, area = false, onSuccess = false) {
+      button = $(button);
+      if (!button.sbLoading()) {
+        if (area === false) area = button.closest(".sb-rich-login");
+        else area = $(area);
+        let email = $.trim(area.find("#email input").val());
+        let password = $.trim(area.find("#password input").val());
+        if (email == "" || password == "") {
+          area
+            .find(".sb-info")
+            .html(sb_("Please insert email and password."))
+            .sbActive(true);
+        } else {
+          SBF.ajax(
+            {
+              function: "login",
+              email: email,
+              password: password,
+            },
+            (response) => {
+              if (response && Array.isArray(response)) {
+                if (!admin && this.isAgent(response[0]["user_type"])) {
+                  SBForm.showErrorMessage(
+                    area,
+                    "You cannot sign in as an agent."
+                  );
+                  SBChat.scrollBottom();
+                } else {
+                  let user = new SBUser(response[0]);
+                  user.set(
+                    "conversation_id",
+                    SBChat.conversation ? SBChat.conversation.id : false
+                  );
+                  this.loginCookie(response[1]);
+                  this.event("SBLoginForm", user);
+                  if (onSuccess) onSuccess(response);
+                  // readText("");
+                }
+              } else {
+                area
+                  .find(".sb-info")
+                  .html(sb_("Invalid email or password."))
+                  .sbActive(true);
+
+                if (!admin) SBChat.scrollBottom();
+              }
+
+              button.sbLoading(false);
+            }
+          );
+          area.find(".sb-info").html("").sbActive(false);
+          button.sbLoading(true);
+        }
+      }
+    },
+
+    // Set the login cookie
+    loginCookie: function (value = false) {
+      if (value === false)
+        return this.cookie("sb-login")
+          ? this.cookie("sb-login")
+          : storage("login");
+      if (CHAT_SETTINGS.cloud) {
+        storage("login", value);
+      } else {
+        this.cookie("sb-login", value, 2, "set"); // xxx xxx
+      }
+    },
+
+    // Login
+    login: function (
+      email = "",
+      password = "",
+      user_id = "",
+      token = "",
+      onSuccess = false
+    ) {
+      SBF.ajax(
+        {
+          function: "login",
+          email: email,
+          password: password,
+          user_id: user_id,
+          token: token,
+        },
+        (response) => {
+          if (response != false && Array.isArray(response)) {
+            this.loginCookie(response[1]);
+            if (onSuccess) onSuccess(response);
+            return true;
+          } else {
+            return false;
+          }
+        }
+      );
+    },
+
+    // Logout
+    logout: function (reload = true) {
+      SBChat.stopRealTime();
+      this.cookie("sb-login", "", "", false);
+      storage("open-conversation", "");
+      storage("login", "");
+      SBChat.conversations = false;
+      activeUser(false);
+      if (typeof sb_beams_client !== ND) {
+        sb_beams_client.stop();
+      }
+      SBF.ajax(
+        {
+          function: "logout",
+        },
+        () => {
+          SBF.event("SBLogout");
+          if (reload) {
+            setTimeout(() => {
+              location.reload();
+            }, 500);
+          }
+        }
+      );
+    },
+
+    // Return the active user
+    activeUser: function () {
+      return activeUser();
+    },
+    //reply message replace
+    getReply: function (message) {
+      const pattern = new RegExp("^([{,+,0-9,}]+[@s.whatsapp.net])");
+      const reply = pattern.test(message);
+      return reply;
+    },
+     // Get the active user
+    getActiveUser: function (database = false, onSuccess) {
+      let app_login = SBApps.login();
+      if (
+        !app_login &&
+        (storage("wp-login") ||
+          storage("whmcs-login") ||
+          storage("perfex-login") ||
+          storage("aecommerce-login"))
+      ) {
+        this.cookie("sb-login", "", "", "delete");
+        activeUser(false);
+        storage("login", "");
+   
+      }
+      SBF.ajax(
+        {
+          function: "get-active-user",
+          db: database,
+          login_app: JSON.stringify(app_login),
+          user_token: SBF.getURL("token"),
+        },
+        (response) => {
+          if (!response) {
+            onSuccess();
+            return false;
+          } else {
+            if ("cookie" in response) SBF.loginCookie(response["cookie"]);
+            if ("user_type" in response) {
+              if (!admin && SBF.isAgent(response["user_type"])) {
+                let message =
+                  "Cierra sesión o utiliza otro navegador para  ver el botón de chat o iniciar sesión como usuario registrado. Puedes deslogearte escribiendo SBF.reset() en la consola del navegador.";
+                if (!storage("double-login-alert")) {
+                  storage("double-login-alert", true);
+                  alert(message);
+                }
+                console.warn("Routin.bot: " + message);
+                SBF.event("SBDoubleLoginError");
+              } else {
+                activeUser(
+                  new SBUser(
+                    response,
+                    "phone" in response
+                      ? {
+                          phone: response.phone,
+                        }
+                      : {}
+                  )
+                );
+                SBPusher.start();
+                if (app_login) {
+                  storage(app_login[1] + "-login", true);
+                }
+                onSuccess();
+                SBF.event("SBActiveUserLoaded", response);
+              }
+            }
+          }
+        }
+      );
+    },
+
+    // Clean
+    reset: function () {
+      // let cookies = ["sb-login", "sb-dialogflow-disabled"];
+      let cookies = ["sb-login", "sb-cloud", "sb-dialogflow-disabled"];
+
+      for (var i = 0; i < cookies.length; i++) {
+        this.cookie(cookies[i], "", 0, false);
+      }
+      try {
+        localStorage.removeItem("routin-storage");
+      } catch (e) {}
+      this.logout();
+    },
+
+    // Lightbox
+    lightbox: function (content) {
+      let lightbox = $(admin ? global : main).find(".sb-lightbox-media");
+      lightbox.sbActive(true).find(" > div").html(content);
+      if (admin) SBAdmin.open_popup = lightbox;
+    },
+
+    // Manage the local storage
+    storage: function (key, value = ND) {
+      try {
+        if (typeof localStorage == ND) return false;
+      } catch (e) {
+        return false;
+      }
+      let settings = localStorage.getItem("routin-storage");
+      if (settings === null) {
+        settings = {};
+      } else {
+        settings = JSON.parse(settings);
+      }
+      if (value === ND) {
+        return key in settings ? settings[key] : false;
+      } else {
+        if (!value) {
+          delete settings[key];
+        } else {
+          settings[key] = value;
+        }
+        localStorage.setItem("routin-storage", JSON.stringify(settings));
+      }
+    },
+
+    // Save the current time or check if the saved time is older than now plus the given hours
+    storageTime: function (key, hours = false) {
+      if (hours === false) {
+        storage(key, today.getTime());
+      } else {
+        return (
+          storage(key) == false ||
+          today.getTime() - storage(key) > 3600000 * hours
+        );
+      }
+    },
+
+    // Set or get a cookie
+    cookie: function (
+      name,
+      value = false,
+      expiration_days = false,
+      action = "get",
+      seconds = false
+    ) {
+      let cookie_https =
+        location.protocol == "https:" ? "SameSite=None;Secure;" : "";
+      let settings = window[admin ? "SB_ADMIN_SETTINGS" : "CHAT_SETTINGS"];
+      let domain =
+        settings && settings["cookie-domain"]
+          ? "domain=" + settings["cookie-domain"] + ";"
+          : "";
+      if (action == "get") {
+        if (!cookies_supported) {
+          return this.storage(name);
+        }
+        let cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i];
+          while (cookie.charAt(0) == " ") {
+            cookie = cookie.substring(1);
+          }
+          if (cookie.indexOf(name) == 0) {
+            let value = cookie.substring(name.length + 1, cookie.length);
+            return this.null(value) ? false : value;
+          }
+        }
+        return false;
+      } else if (action == "set") {
+        if (!cookies_supported) {
+          this.storage(name, value);
+        } else {
+          let date = new Date();
+          date.setTime(
+            date.getTime() + expiration_days * (seconds ? 1 : 86400) * 1000
+          );
+          document.cookie =
+            name +
+            "=" +
+            value +
+            ";expires=" +
+            date.toUTCString() +
+            ";path=/;" +
+            cookie_https +
+            domain;
+        }
+      } else if (this.cookie(name)) {
+        if (!cookies_supported) {
+          this.storage(name, "");
+        } else {
+          document.cookie =
+            name +
+            "=" +
+            value +
+            ";expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/;" +
+            cookie_https +
+            domain;
+        }
+      }
+    },
+
+    // Return a front setting
+    setting: function (key) {
+      return typeof CHAT_SETTINGS !== ND && key in CHAT_SETTINGS
+        ? CHAT_SETTINGS[key]
+        : false;
+    },
+    get_select_setting: function () {
+      const getsetting = [
+        {
+          name: "rate-and-review",
+          id: "rate-review",
+          type: "one",
+        },
+        {
+          name: "label-names",
+          id: "label-names",
+          type: "one",
+        },
+        {
+          name: "whatsapp-cloud",
+          id: "cloud-active",
+          type: "one",
+        },
+      ];
+      if (chat_editor) {
+        SBF.ajax(
+          {
+            function: "get-select-setting",
+            setting: getsetting,
+          },
+          (response) => {
+            ADMIN_SETTINGS = response;
+            let test = SBF.admin_set("rate-and-review");
+          }
+        );
+      }
+    },
+
+    //Return a admin setting
+    // 		admin_set: function(key = false) {
+    // 			return key ? ((Object.keys( ADMIN_SETTINGS).length!==0) && ADMIN_SETTINGS.hasOwnProperty(key) ? ADMIN_SETTINGS[key] : false) : ADMIN_SETTINGS;
+    // 		},
+
+    //Return a admin setting (edited)
+    admin_set: function (key = false) {
+      if (!ADMIN_SETTINGS) return false; // add this line to check if ADMIN_SETTINGS is defined
+      return key
+        ? Object.keys(ADMIN_SETTINGS).length !== 0 &&
+          ADMIN_SETTINGS.hasOwnProperty(key)
+          ? ADMIN_SETTINGS[key]
+          : false
+        : ADMIN_SETTINGS;
+    },
+
+    //Return a object setting value
+    get_value: function (value) {
+      return value instanceof Array && value.length > 0 ? value[0] : value;
+    },
+    // Return the shortcode array
+    shortcode: function (shortcode) {
+      return SBRichMessages.shortcode(shortcode);
+    },
+
+    // Events and webhooks
+    event: function (name, parameters) {
+      $(document).trigger(name, parameters);
+      let webhooks = admin
+        ? typeof SB_ADMIN_SETTINGS === ND
+          ? false
+          : SB_ADMIN_SETTINGS["webhooks"]
+        : CHAT_SETTINGS["webhooks"];
+      let webhooks_list = {
+        SBSMSSent: "sms-sent",
+        SBLoginForm: "login",
+        SBRegistrationForm: "registration",
+        SBUserDeleted: "user-deleted",
+        SBEmailSent: "email-sent",
+        SBNewMessagesReceived: "new-message",
+        SBNewConversationReceived: "new-conversation",
+        SBActiveConversationStatusUpdated: "conversation-status-updated",
+        // SBSlackMessageSent: "slack-message-sent",
+        SBMessageDeleted: "message-deleted",
+        SBRichMessageSubmit: "rich-message",
+        SBNewEmailAddress: "new-email-address",
+      };
+      if (webhooks && name in webhooks_list) {
+        if (webhooks !== true) {
+          if (!Array.isArray(webhooks))
+            webhooks = webhooks.replace(/ /g, "").split(",");
+          if (!webhooks.includes(webhooks_list[name])) return;
+        }
+        SBF.ajax({
+          function: "webhooks",
+          function_name: name,
+          parameters: parameters,
+        });
+      }
+    },
+
+    // Translate a string
+    translate: function (string) {
+      if (
+        (!admin && SBF.null(CHAT_SETTINGS)) ||
+        (admin && typeof SB_TRANSLATIONS === ND)
+      )
+        return string;
+      let translations = admin
+        ? SB_TRANSLATIONS
+        : CHAT_SETTINGS["translations"];
+      if (translations && string in translations) {
+        return translations[string] == "" ? string : translations[string];
+      } else {
+        return string;
+      }
+    },
+
+    // Escape a string
+    escape: function (string) {
+      if (!string) return string;
+      return string
+        .replaceAll("<script", "&lt;script")
+        .replaceAll("</script", "&lt;/script")
+        .replaceAll("javascript:", "")
+        .replaceAll("onclick=", "")
+        .replaceAll("onerror=", "");
+    },
+
+    // Visibility change function
+    visibilityChange: function (visibility = "") {
+      if (visibility == "hidden") {
+        if (!admin) {
+          SBChat.stopRealTime();
+        }
+        SBChat.tab_active = false;
+      } else {
+        if (activeUser() && !admin) {
+          SBChat.startRealTime();
+        }
+        SBChat.tab_active = true;
+        clearInterval(interval);
+        document.title = document_title;
+      }
+    },
+
+    // Convert a settings string to an Array
+    settingsStringToArray: function (string) {
+      if (this.null(string)) return [];
+      let result = [];
+      string = string.split(",");
+      for (var i = 0; i < string.length; i++) {
+        let values = string[i].split(":");
+        result[values[0]] =
+          values[1] == "false" ? false : values[1] == "true" ? true : values[1];
+      }
+      return result;
+    },
+
+    // Open a browser window
+    openWindow: function (link, width = 550, height = 350) {
+      let left = screen.width / 2 - width / 2;
+      let top = screen.height / 2 - height / 2;
+      window.open(
+        link,
+        "targetWindow",
+        "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=" +
+          width +
+          ",height=" +
+          height +
+          ", top=" +
+          top +
+          ", left=" +
+          left
+      );
+      return false;
+    },
+
+    // Convert a date to local time
+    convertUTCDateToLocalDate: function (date, UTCoffset = 0) {
+      date = new Date(date); // Y/m/d H:i:s
+      date = new Date(date.getTime() + UTCoffset * 3600000);
+      return new Date(date.getTime() + utc_offset * -1);
+    },
+
+    // Load a js or css file
+    loadResource: function (url, script = false) {
+      let head = document.getElementsByTagName("head")[0];
+      let resource = document.createElement(script ? "script" : "link");
+      if (script) {
+        resource.src = url + "?v=" + version;
+      } else {
+        resource.id = "routin";
+        resource.rel = "stylesheet";
+        resource.type = "text/css";
+        resource.href = url + "?v=" + version;
+        resource.media = "all";
+      }
+      head.appendChild(resource);
+    },
+
+    uploadResponse: function (response) {
+      response = JSON.parse(response);
+      if (response[0] == "success") {
+        if (response[1] == "extension_error") {
+          let message =
+            "The file you are trying to upload has an extension that is not allowed.";
+          if (admin) SBAdmin.dialog(message, "info");
+          else alert(message);
+        } else if ($(upload_target).hasClass("sb-input-image")) {
+          $(upload_target)
+            .find(".image")
+            .attr("data-value", "")
+            .css("background-image", "");
+          setTimeout(() => {
+            $(upload_target)
+              .find(".image")
+              .attr("data-value", response[1])
+              .css(
+                "background-image",
+                `url("${response[1]}?v=${SBF.random()}")`
+              )
+              .append('<i class="bi-x-lg"></i>');
+            upload_target = false;
+          }, 500);
+        } else {
+          //   let name = response[1].substr(response[1].lastIndexOf("/") + 1);
+          //   chat_editor
+          //     .find(".sb-attachments")
+          //     .append(
+          //       `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}"><i class="bi-x-lg"></i>${name}</div>`
+          //     );
+          //   SBChat.activateBar();
+          // }
+
+          let name = response[1].substr(response[1].lastIndexOf("/") + 1);
+          let attachmentElement = "";
+
+          // Check if response[1] is a valid image URL
+          const isImageURL = /\.(jpg|jpeg|png|gif|bmp|)$/.test(
+            response[1].toLowerCase()
+          );
+
+          // Check if response[1] is a valid audio URL
+          const isAudioURL = /\.(mp3|ogg)$/.test(response[1].toLowerCase());
+
+          // Check if response[1] is a valid Office format URL
+          const isOfficeURL = /\.(docx|pptx|xlsx|doc|ppt|xls)$/.test(
+            response[1].toLowerCase()
+          );
+
+          // Conditionally construct HTML
+          if (isImageURL) {
+            attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
+                                    <img style="border-radius: .4rem; width: 33px; vertical-align: middle;object-fit:cover;" src="${response[1]}" width="30" height="30">
+                                     ${name}<i class="bi-x-lg"></i>
+                                  </div>`;
+          } else if (isAudioURL) {
+            attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
+              response[1]
+            }" data-id="${response[2]}">
+                                    <audio controls style="max-width: 100%; max-height: 33px; border-radius: var(--chat-rounded-size-6);">
+                                      <source src="${
+                                        response[1]
+                                      }" type="audio/${response[1]
+              .split(".")
+              .pop()}">
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                    <i class="bi-x-lg"></i>
+                                  </div>`;
+          } else if (isOfficeURL) {
+            // For Office formats, use doc.png as a placeholder image
+            attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
+                                    <i class="bi bi-file-earmark-text-fill" style="font-size:1.89rem; color: var(--chat-text-primary)"></i>
+                                     <i class="bi-x-lg"></i>
+                                  </div>`;
+          } else {
+            attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
+                                     ${name}<i class="bi-x-lg"></i>
+                                  </div>`;
+          }
+
+          chat_editor.find(".sb-attachments").append(attachmentElement);
+          SBChat.activateBar();
+        }
+      } else {
+        SBF.error(response[1], "sb-upload-files.change");
+      }
+      this.busy = function (status) {
+        // code to set busy status of the current object
+      };
+    },
+    // Debounce
+    debounce: function (bounceFunction, id, interval = 500) {
+      if (!(id in timeout_debounce)) {
+        timeout_debounce[id] = true;
+        bounceFunction();
+        setTimeout(() => {
+          delete timeout_debounce[id];
+        }, interval);
+      }
+    },
+  };
+
+  /*
+   * ----------------------------------------------------------
+   * # PUSHER
+   * ----------------------------------------------------------
+   */
+
+  var SBPusher = {
+    channels: {},
+    channels_presence: [],
+    active: false,
+    pusher: false,
+    started: false,
+    pusher_beams: false,
+    initialized: false,
+    online_ids: [],
+    init_push_notifications: false,
+    sw: false,
+
+    // Initialize Pusher
+    init: function (onSuccess = false) {
+      if (SBPusher.active) {
+        if (this.pusher) {
+          return onSuccess ? onSuccess() : true;
+        } else if (onSuccess) {
+          $(window).one("SBPusherInit", () => {
+            onSuccess();
+          });
+        } else return;
+        this.initialized = true;
+        $.getScript("https://js.pusher.com/7.0/pusher.min.js", () => {
+          this.pusher = new Pusher(
+            admin
+              ? SB_ADMIN_SETTINGS["pusher-key"]
+              : CHAT_SETTINGS["pusher-key"],
+            {
+              cluster: admin
+                ? SB_ADMIN_SETTINGS["pusher-cluster"]
+                : CHAT_SETTINGS["pusher-cluster"],
+              authEndpoint: STMBX_URL + "/include/pusher.php",
+              auth: {
+                params: {
+                  login: SBF.loginCookie(),
+                },
+              },
+            }
+          );
+          SBF.event("SBPusherInit");
+        });
+      }
+    },
+
+    // Initialize Push notifications
+    initPushNotifications: function () {
+      if (activeUser() || admin) {
+        $.getScript(
+          "https://js.pusher.com/beams/1.0/push-notifications-cdn.js",
+          () => {
+            window.navigator.serviceWorker.ready.then(
+              (serviceWorkerRegistration) => {
+                this.pusher_beams = new PusherPushNotifications.Client({
+                  instanceId: admin
+                    ? SB_ADMIN_SETTINGS["push-notifications-id"]
+                    : CHAT_SETTINGS["push-notifications-id"],
+                  serviceWorkerRegistration: serviceWorkerRegistration,
+                });
+                this.pusher_beams
+                  .start()
+                  .then((beamsClient) => beamsClient.getDeviceId())
+                  .then((deviceId) =>
+                    console.log(
+                      "Successfully registered with Beams. Device ID:",
+                      deviceId
+                    )
+                  )
+                  .then(() =>
+                    this.pusher_beams.setDeviceInterests(
+                      admin
+                        ? [SB_ACTIVE_AGENT["id"], "agents"]
+                        : [activeUser().id, "users"]
+                    )
+                  )
+                  .catch(console.error);
+                this.init_push_notifications = false;
+              }
+            );
+          }
+        );
+      }
+    },
+
+    // Initialize service worker
+    initServiceWorker: function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register(
+            admin || typeof SB_CLOUD_SW != "undefined"
+              ? STMBX_URL + "/sw.js?v=" + version
+              : CHAT_SETTINGS["push-notifications-url"] + "?v=" + version
+          )
+          .then((registration) => {
+            registration.update();
+            this.sw = registration;
+          })
+          .catch(function (error) {
+            console.warn(error);
+          });
+        navigator.serviceWorker.onmessage = function (e) {
+          if (admin) {
+            if (e.data.conversation_id) {
+              SBAdmin.conversations.openConversation(
+                e.data.conversation_id,
+                e.data.user_id
+              );
+              SBAdmin.conversations.update();
+            } else if (e.data.user_id) {
+              SBAdmin.profile.show(e.data.user_id);
+              SBChat.audio.play();
+            }
+          } else if (e.data == "sb-open-chat") {
+            SBChat.open();
+          }
+        };
+      }
+    },
+
+    // Start Pusher and Push notifications
+    start: function () {
+      if (!admin && !this.started && activeUser()) {
+        if (this.active) {
+          this.init(() => {
+            this.event("client-typing", (response) => {
+              if (
+                response.user_id == SBChat.agent_id &&
+                SBChat.conversation &&
+                response.conversation_id == SBChat.conversation.id
+              ) {
+                SBChat.typing(-1, "start");
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                  SBChat.typing(-1, "stop");
+                }, 1000);
+              }
+            });
+            this.event("new-message", (response) => {
+              if (
+                response &&
+                activeUser() &&
+                !SBF.null(response.conversation_id) &&
+                !activeUser().getConversationByID(response.conversation_id) &&
+                (!SBChat.conversation ||
+                  SBChat.conversation.id != response.conversation_id)
+              ) {
+                SBChat.updateConversations();
+              } else {
+                SBChat.update();
+              }
+            });
+
+            this.presence(1, () => {
+              this.started = true;
+              SBChat.automations.run_all();
+            });
+          });
+        }
+        if (CHAT_SETTINGS["push-notifications"]) {
+          if (typeof Notification != ND && Notification.permission == "granted")
+            this.initPushNotifications();
+          else this.init_push_notifications = true;
+        }
+      }
+    },
+
+    // Subscribe to a channel
+    subscribe: function (channel_name, onSuccess = false) {
+      if (!this.pusher)
+        return this.init(() => {
+          this.subscribe(channel_name, onSuccess);
+        });
+      channel_name = this.cloudChannelRename(channel_name);
+      let channel = this.pusher.subscribe(channel_name);
+      channel.bind("pusher:subscription_error", (error) => {
+        return console.log(error);
+      });
+      channel.bind("pusher:subscription_succeeded", () => {
+        this.channels[channel_name] = channel;
+        if (onSuccess) onSuccess();
+      });
+    },
+
+    // Add event listener for a channel
+    event: function (
+      event,
+      callback,
+      channel = "private-user-" + activeUser().id
+    ) {
+      if (!this.pusher)
+        return this.init(() => {
+          this.event(event, callback, channel);
+        });
+      let channel_original = channel;
+      channel = this.cloudChannelRename(channel);
+      if (channel in this.channels) {
+        this.channels[channel].unbind(event);
+        this.channels[channel].bind(event, (data) => {
+          callback(data);
+        });
+      } else
+        this.subscribe(channel_original, () => {
+          this.event(event, callback, channel_original);
+        });
+    },
+
+    // Trigger an event
+    trigger: function (
+      event,
+      data = {},
+      channel = "private-user-" + activeUser().id
+    ) {
+      if (event.indexOf("client-") == 0) {
+        return this.channels[this.cloudChannelRename(channel)].trigger(
+          event,
+          data
+        );
+      } else {
+        SBF.ajax(
+          {
+            function: "pusher-trigger",
+            channel: channel,
+            event: event,
+            data: data,
+          },
+          (response) => {
+            return response;
+          }
+        );
+      }
+    },
+
+    // Presence
+    presence: function (index = 1, onSuccess) {
+      if (!this.pusher)
+        return this.init(() => {
+          this.presence();
+        });
+      let channel = this.pusher.subscribe(
+        this.cloudChannelRename("presence-" + index)
+      );
+      channel.bind("pusher:subscription_succeeded", (members) => {
+        if (members.count > 98) return this.subscribe(index + 1);
+        members.each((member) => {
+          if (this.presenceCheck(member)) {
+            this.online_ids.push(member.id);
+          }
+        });
+        SBChat.updateUsersActivity();
+        if (onSuccess) onSuccess();
+      });
+      channel.bind("pusher:subscription_error", (error) => {
+        return console.log(error);
+      });
+      channel.bind("pusher:member_added", (member) => {
+        if (this.presenceCheck(member)) {
+          this.presenceAdd(member.id);
+        }
+        if (admin) SBAdmin.users.onlineUserNotification(member);
+      });
+      channel.bind("pusher:member_removed", (member) => {
+        this.presenceRemove(member.id);
+      });
+      this.channels_presence.push(channel);
+      // if (!admin && CHAT_SETTINGS["slack-active"]) {
+      //   this.event("add-user-presence", (response) => {
+      //     this.presenceAdd(response.agent_id);
+      //   });
+      //   SBF.ajax(
+      //     {
+      //       function: "slack-presence",
+      //       list: true,
+      //     },
+      //     (response) => {
+      //       for (var i = 0; i < response.length; i++) {
+      //         this.presenceAdd(response[i]);
+      //       }
+      //       SBChat.updateUsersActivity();
+      //     }
+      //   );
+      // }
+    },
+
+    presenceCheck: function (member) {
+      let agent = SBF.isAgent(member.info.user_type);
+      return (
+        ((admin && !agent) || (!admin && agent)) &&
+        !this.online_ids.includes(member.id)
+      );
+    },
+
+    presenceAdd: function (user_id) {
+      if (typeof user_id != ND && !this.online_ids.includes(user_id)) {
+        this.online_ids.push(user_id);
+        this.presenceUpdateAdmin(user_id);
+        SBChat.updateUsersActivity();
+      }
+    },
+
+    presenceRemove: function (user_id) {
+      if (typeof user_id == ND) return;
+      let index = this.online_ids.indexOf(user_id);
+      if (index !== -1) {
+        this.online_ids.splice(index, 1);
+        this.presenceUpdateAdmin(user_id);
+        SBChat.updateUsersActivity();
+      } else if (admin) {
+        global.find(`.sb-conversation-busy[data-agent="${user_id}"]`).remove();
+      }
+    },
+
+    presenceUnsubscribe: function () {
+      for (var i = 0; i < this.channels_presence.length; i++) {
+        this.channels_presence[i].unsubscribe(
+          this.cloudChannelRename("presence-" + (i + 1))
+        );
+      }
+    },
+
+    presenceUpdateAdmin: function (user_id) {
+      if (admin) {
+        if (global.find(".sb-area-users.sb-active").length)
+          SBAdmin.users.update();
+        if (activeUser() && activeUser().id == user_id)
+          SBAdmin.users.updateUsersActivity();
+      }
+    },
+
+    pushNotification: function (message) {
+      let icon = admin ? SB_ACTIVE_AGENT["profile_image"] : activeUser().image;
+      SBF.ajax(
+        {
+          function: "push-notification",
+          title: admin ? SB_ACTIVE_AGENT["full_name"] : activeUser().name,
+          message: new SBMessage().strip(message),
+          icon:
+            icon.indexOf("user.svg") > 0
+              ? CHAT_SETTINGS["notifications-icon"]
+              : icon,
+          interests: SBChat.getRecipientUserID(),
+          conversation_id:
+            SBChat.conversation == false ? false : SBChat.conversation.id,
+        },
+        (response) => {
+          return response;
+        }
+      );
+    },
+
+    cloudChannelRename: function (channel) {
+      return CHAT_SETTINGS.cloud || (admin && SB_ADMIN_SETTINGS.cloud)
+        ? channel +
+            "-" +
+            (admin
+              ? SB_ADMIN_SETTINGS.cloud.cloud_user_id
+              : CHAT_SETTINGS.cloud.cloud_user_id)
+        : channel;
+    },
+  };
+
+  /*
+   * ----------------------------------------------------------
+   * GLOBAL FUNCTIONS
+   * ----------------------------------------------------------
+   */
+
+  window.SBF = SBF;
+  window.SBPusher = SBPusher;
+  window.sb_current_user = sb_current_user;
+
+  /*
+   * ----------------------------------------------------------
+   * JQUERY FUNCTIONS
+   * ----------------------------------------------------------
+   */
+
+  // Check if active
+  $.fn.sbActive = function (show = -1) {
+    if (show === -1) return $(this).hasClass("sb-active");
+    $(this).setClass("sb-active", show);
+    return this;
+  };
+
+  // Loading check, set and unset
+  $.fn.sbLoading = function (value = "check") {
+    if (value == "check") {
+      return $(this).hasClass("sb-loading");
+    } else {
+      $(this).setClass("sb-loading", value);
+    }
+    return this;
+  };
+
+  // Popup
+  $.fn.sbTogglePopup = function (button = false) {
+    let showed = true;
+    if (admin) SBAdmin.open_popup = false;
+    if ($(this).sbActive()) {
+      $(this).sbActive(false);
+      global.removeClass("sb-popup-active");
+      showed = false;
+    } else {
+      global.addClass("sb-popup-active");
+      global.find(".sb-popup").sbActive(false);
+      if (button) {
+        $(this).css("left", "325.6px"); // Fixed left position
+        $(this).sbActive(true);
+      }
+      if (admin) {
+        setTimeout(() => {
+          SBAdmin.open_popup = this;
+        }, 500);
+      }
+      SBF.deselectAll();
+    }
+    return showed;
+  };
+  
+
+  // Uploader
+  $.fn.sbUploadFiles = function (onSuccess) {
+    let files = $(this).prop("files");
+    for (var i = 0; i < files.length; i++) {
+      let file = files[i];
+      let form = new FormData();
+      form.append("file", file);
+      SBF.upload(form, onSuccess);
+    }
+    $(this).value = "";
+  };
+
+  // Set profile box
+  $.fn.setProfile = function (name = false, profile_image = false) {
+    if (SBF.null(name)) name = activeUser() ? activeUser().name : "";
+    if (SBF.null(profile_image))
+      profile_image = activeUser()
+        ? activeUser().image
+        : STMBX_URL + "/media/user.svg";
+    $(this).find("img").attr("src", profile_image);
+    $(this).find(".sb-name").html(name);
+    return this;
+  };
+
+  // Add or remove a class
+  $.fn.setClass = function (class_name, add = true) {
+    if (add) {
+      $(this).addClass(class_name);
+    } else {
+      $(this).removeClass(class_name);
+    }
+    return this;
+  };
+
+  /*
+   * ----------------------------------------------------------
+   * CLASSIC FUNCTIONS
+   * ----------------------------------------------------------
+   */
+
+  // Delta value
+  function sbDelta(e) {
+    let delta = e.originalEvent.wheelDelta;
+    if (typeof delta == ND) {
+      delta = e.originalEvent.deltaY;
+    }
+    if (typeof delta == ND) {
+      delta = e.originalEvent.detail * -1;
+    }
+    return delta;
+  }
+
+  // Check if an elemen is loading and set it status to loading
+  function loading(element) {
+    if ($(element).sbLoading()) return true;
+    else $(element).sbLoading(true);
+    return false;
+  }
+
+  // Shortcut for local storage function
+  function storage(key, value = ND) {
+    return SBF.storage(key, value);
+  }
+
+  // Routin.bot js translations
+  function sb_(string) {
+    return SBF.translate(string);
+  }
+
+  // Access the global user variable
+  function activeUser(value = -1) {
+    if (value === -1) {
+      return window.sb_current_user;
+    } else {
+      window.sb_current_user = value;
+    }
+  }
+
+  /*
+   * ----------------------------------------------------------
+   * # USER
+   * ----------------------------------------------------------
+   */
+
+  class SBUser {
+    constructor(details = {}, extra = {}) {
+      this.details = details;
+      this.extra = extra;
+      this.conversations = [];
+      this.processArray(details);
+    }
+
+    get id() {
+      return this.get("id") == "" ? this.get("user_id") : this.get("id");
+    }
+
+    get type() {
+      return this.get("user_type");
+    }
+
+    get name() {
+      return "first_name" in this.details
+        ? this.details["first_name"] +
+            (this.details["last_name"] ? " " + this.details["last_name"] : "")
+        : "";
+    }
+
+    get nameBeautified() {
+      return "last_name" in this.details &&
+        this.details["last_name"].charAt(0) != "#"
+        ? this.name
+        : CHAT_SETTINGS["visitor-default-name"];
+    }
+
+    get image() {
+      return this.get("profile_image");
+    }
+
+    get language() {
+      let language = this.getExtra("language");
+      if (!language) language = this.getExtra("browser_language");
+      return !language ? "" : language["value"].toLowerCase();
+    }
+
+    get(id) {
+      if (id in this.details && !SBF.null(this.details[id]))
+        return this.details[id];
+      else return "";
+    }
+
+    getExtra(id) {
+      if (id in this.extra && !SBF.null(this.extra[id])) return this.extra[id];
+      else return "";
+    }
+
+    set(id, value) {
+      this.details[id] = value;
+    }
+
+    setExtra(id, value) {
+      this.extra[id] = value;
+    }
+
+    // Initialization
+    processArray(details) {
+      if (details && "details" in details) {
+        for (var i = 0; i < details["details"].length; i++) {
+          this.setExtra(details["details"][i]["slug"], details["details"][i]);
+        }
+        delete details["details"];
+        this.details = details;
+      }
+    }
+
+    // Update the user details and extra details
+    update(onSuccess) {
+      if (this.id) {
+        SBF.ajax(
+          {
+            function: "get-user",
+            user_id: this.id,
+            extra: true,
+          },
+          (response) => {
+            this.processArray(response);
+            onSuccess();
+          }
+        );
+      } else {
+        SBF.error("Missing user ID", "SBUser.update");
+      }
+    }
+
+    // Get user conversations
+    getConversations(onSuccess = false, exclude_id) {
+      if (this.id) {
+        SBF.ajax(
+          {
+            function: "get-user-conversations",
+            user_id: this.id,
+            exclude_id: exclude_id,
+            agent: SBF.isAgent(this.type),
+          },
+          (response) => {
+            let conversations = [];
+            for (var i = 0; i < response.length; i++) {
+              let status = response[i]["conversation_status_code"];
+              if (status != 3 || !CHAT_SETTINGS["close-chat"]) {
+                let conversation = new SBConversation(
+                  [new SBMessage(response[i])],
+                  {
+                    id: response[i]["conversation_id"],
+                    conversation_status_code: status,
+                    department: response[i]["department"],
+                    agent_id: response[i]["agent_id"],
+                    title: response[i]["title"],
+                  }
+                );
+                conversations.push(conversation);
+              }
+            }
+            this.conversations = conversations;
+            if (onSuccess) onSuccess(conversations);
+          }
+        );
+      } else {
+        SBF.error("Missing user ID", "SBUser.getConversations");
+      }
+    }
+
+    // Get conversations code
+    getConversationsCode(conversations = false) {
+      let code = "";
+      let active_conversation_id = SBChat.conversation
+        ? SBChat.conversation.id
+        : -1;
+      if (!conversations) conversations = this.conversations;
+      for (var i = 0; i < conversations.length; i++) {
+        if (conversations[i] instanceof SBConversation) {
+          code += `<li ${
+            active_conversation_id == conversations[i].id
+              ? 'class="sb-active" '
+              : ""
+          }data-conversation-status="${conversations[i].get(
+            "conversation_status_code"
+          )}" data-conversation-id="${
+            conversations[i].id
+          }" data-department="${conversations[i].get(
+            "department"
+          )}">${conversations[i].getCode()}</li>`;
+        } else {
+          SBF.error(
+            "Conversation not of type SBConversation",
+            "SBUser.getConversationsCode"
+          );
+        }
+      }
+      return code;
+    }
+
+    // Get single conversation
+    getFullConversation(
+      conversation_id = false,
+      onSuccess = false,
+      load_chat = 30,
+      limit = 30
+    ) {
+      if (conversation_id !== false) {
+        SBF.ajax(
+          {
+            function: "get-conversation",
+            conversation_id: conversation_id,
+            load_chat: load_chat,
+            limit: limit,
+          },
+          (response) => {
+            let messages = [];
+            if (response) {
+              if (response === "agent-not-authorized") {
+                window.location.href = SBF.URL();
+                return;
+              }
+              for (var i = 0; i < response["messages"].length; i++) {
+                total_more = response["total_rows"];
+                if (total_more <= load_more) {
+                  setTimeout(
+                    () => $(".sb-conversation").find(".load-more").hide(),
+                    300
+                  );
+                }
+                response["messages"][i]["total_rows"] = response["total_rows"];
+                messages.push(new SBMessage(response["messages"][i]));
+              }
+            }
+            if (onSuccess)
+              onSuccess(
+                new SBConversation(
+                  messages,
+                  response ? response["details"] : false
+                )
+              );
+          }
+        );
+      } else {
+        SBF.error("Missing conversation ID", "SBUser.getFullConversation");
+      }
+    }
+
+    getConversationByID(conversation_id, index = false) {
+      for (var i = 0; i < this.conversations.length; i++) {
+        if (this.conversations[i].id == conversation_id) {
+          return index ? i : this.conversations[i];
+        }
+      }
+      return false;
+    }
+
+    // Add a new conversation
+    addConversation(conversation) {
+      if (conversation instanceof SBConversation) {
+        let conversation_id = conversation.id;
+        let is_new = true;
+        for (var i = 0; i < this.conversations.length; i++) {
+          if (this.conversations[i].id == conversation_id) {
+            this.conversations[i] = conversation;
+            is_new = false;
+            break;
+          }
+        }
+        if (is_new) {
+          this.conversations.unshift(conversation);
+        }
+        return is_new;
+      } else {
+        SBF.error(
+          "Conversation not of type SBConversation",
+          "SBUser.addConversation"
+        );
+      }
+    }
+
+    // Remove a conversation
+    removeConversation(conversation_id) {
+      let index = this.getConversationByID(conversation_id, true);
+      if (index !== false) this.conversations.splice(index, 1);
+    }
+
+    // Get the last conversation
+    getLastConversation() {
+      return this.isConversationsEmpty()
+        ? false
+        : this.conversations[this.conversations.length - 1];
+    }
+
+    // Check if the conversation array is empty
+    isConversationsEmpty() {
+      return this.conversations.length == 0;
+    }
+
+    // Check if the extra array is empty
+    isExtraEmpty() {
+      return (
+        Object.keys(this.extra).length === 0 &&
+        this.extra.constructor === Object
+      );
+    }
+
+    // Delete the user
+    delete(onSuccess) {
+      if (this.id) {
+        SBF.ajax(
+          {
+            function: "delete-user",
+            user_id: this.id,
+          },
+          () => {
+            SBF.event("SBUserDeleted", this.id);
+            console.log("delte user");
+            onSuccess();
+            return true;
+          }
+        );
+      } else {
+        SBF.error("Missing user ID", "SBUser.delete");
+      }
+    }
+  }
+  window.SBUser = SBUser;
+
+  /*
+   * ----------------------------------------------------------
+   * # MESSAGE
+   * ----------------------------------------------------------
+   */
+
+  class SBMessage {
+    constructor(details = {}) {
+      this.details = details;
+      this.linksData = "";
+      if ("first_name" in this.details) {
+        this.details["full_name"] =
+          this.details["first_name"] + " " + this.details["last_name"];
+      }
+      if (details.message_status_code) {
+        details.status_code = details.message_status_code;
+      }
+      delete details.message_status_code;
+      delete details.source;
+      delete details.extra;
+      delete details.title;
+      delete details.tags;
+      delete details.labels;
+      delete details.agent_id;
+      delete details.department;
+      let payload = this.get("payload");
+      if (payload) {
+        try {
+          var json = JSON.parse(this.get("payload").replace("\\'", "'"));
+          if (json && typeof json === "object") {
+            payload = json;
+          } else {
+            payload = {};
+          }
+        } catch (e) {
+          payload = {};
+        }
+      } else {
+        payload = {};
+      }
+      this.set("payload", payload);
+    }
+
+    get id() {
+      return this.get("id");
+    }
+
+    get attachments() {
+      return !SBF.null(this.details["attachments"])
+        ? JSON.parse(this.details["attachments"])
+        : [];
+    }
+
+    get message() {
+      return this.get("message");
+    }
+
+    get(id) {
+      if (id in this.details && !SBF.null(this.details[id]))
+        return this.details[id];
+      else return "";
+    }
+
+    set(id, value) {
+      this.details[id] = value;
+    }
+
+    payload(key = false, value = false) {
+      let payload = this.get("payload");
+      if (key !== false && value !== false) {
+        payload[key] = value;
+        this.set("payload", payload);
+      } else if (key !== false) {
+        return key in payload
+          ? payload.key
+          : "id" in payload && payload.id == key
+          ? payload
+          : false;
+      }
+      return payload;
+    }
+
+    //load more limit set message
+    getLoad() {
+      return load_more;
+    }
+    setLoad(load) {
+      load_more = load;
+    }
+
+    //Parse message to links data
+    getCode(translation = false) {
+      //this.hideLoad();
+      let agent = SBF.isAgent(this.details["user_type"]);
+      let admin_menu = admin ? SBAdmin.conversations.messageMenu(agent) : "";
+      let message = translation
+        ? this.get("translation")
+        : !this.message && "preview" in this.payload
+        ? this.payload.preview
+        : this.message;
+      let attachments = this.attachments;
+      let attachments_code = "";
+      let media_code = "";
+      let thumb =
+        (admin && SB_ADMIN_SETTINGS["show-profile-images"]) ||
+        (!admin &&
+          ((agent && !CHAT_SETTINGS["hide-agents-thumb"]) ||
+            (!agent && CHAT_SETTINGS["display-users-thumb"])))
+          ? `<div class="sb-thumb"><img loading="lazy" src="${this.details["profile_image"]}"><div class="sb-tooltip"><div>${this.details["full_name"]}</div></div></div>`
+          : "";
+      let css =
+      (!agent ? "" : "sb-right") + (thumb == "" ? "" : " sb-thumb-active");
+
+      let type = "";
+      if (!message && !attachments.length) return "";
+
+      var location = "";
+      const payload = this.payload();
+      if (payload.latitude && payload.longitude) {
+        var location = `${payload.latitude},${payload.longitude}`;
+      }
+
+      // Rich Messages
+      let pattern = new RegExp("^([{,+0-9]+[@s.whatsapp.net])");
+      let reply = pattern.test(message);
+      if (agent && !reply) {
+        let shortcodes = message.match(/\[.+?\]/g) || [];
+        let rich = false;
+        let count = shortcodes.length;
+        for (var i = 0; i < count; i++) {
+          let settings = SBRichMessages.shortcode(shortcodes[i]);
+          let rich_message = SBRichMessages.generate(settings[1], settings[0]);
+          if (rich_message) {
+            if (message.charAt(0) != "[") {
+              rich_message = rich_message.replace(
+                "sb-rich-message",
+                "sb-rich-message sb-margin-top"
+              );
+            }
+            if (message.charAt(message.length - 1) != "]") {
+              rich_message = rich_message.replace(
+                "sb-rich-message",
+                "sb-rich-message sb-margin-bottom"
+              );
+            }
+            message = message.replace(shortcodes[i], "{{RM}}");
+            message = this.render(message).replace("{{RM}}", rich_message);
+            rich = true;
+            type = `data-type="${settings[0]}"`;
+          }
+        }
+        if (rich) {
+          css += " sb-rich-cnt";
+          if (count > 1) {
+            type = 'data-type="multiple"';
+          }
+        }
+        if (!count) message = this.render(message);
+      } else message = this.render(message);
+
+      // Attachments
+      if (attachments.length) {
+        attachments_code =
+          '<div style="padding-top: 0px" class="sb-message-attachments">';
+        for (var i = 0; i < attachments.length; i++) {
+          let url = attachments[i][1];
+          if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
+            let imgStyle = url.includes(".webp")
+              ? "box-shadow:none;width: 100px;"
+              : "width: auto; height: auto;";
+            media_code += `<div style="display:flex;margin-bottom: 6px;flex-wrap: wrap;flex-direction: column;" class="sb-image${
+              url.includes(".png") ? " sb-image-png" : ""
+            }"><img style="object-fit: cover; border-radius: 8px; ${imgStyle}" loading="lazy" src="${url}" /></div>`;
+          } else if (
+            attachments.toString().substr(attachments.length - 4) === "oga" ||
+            attachments.toString().substr(attachments.length - 4) === "mp3" ||
+            attachments.toString().substr(attachments.length - 4) === "ogg" ||
+            attachments.toString().substr(attachments.length - 4) === "amr"
+          ) {
+            media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
+          } else if (
+            attachments.toString().substr(attachments.length - 4) === "mp4"
+          ) {
+            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+          } else {
+            media_code += `${
+              url
+                ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
+                : " "
+            }`;
+          }
+        }
+        attachments_code += "</div>";
+      }
+
+      //   if (attachments.length) {
+      //     attachments_code = '<div style="padding-top: 0px" class="sb-message-attachments">';
+      //     for (var i = 0; i < attachments.length; i++) {
+      //         let url = attachments[i][1];
+      //         if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
+      //             // Code for image attachments
+      //         } else if (attachments[i][1].endsWith(".pdf") && window.innerWidth > 555) {
+      //             // Code for PDF attachments and screen width greater than 555 pixels
+      //             media_code += `<embed src="${url}" type="application/pdf" style="width:100%;height:500px;" />`;
+      //         } else if (
+      //             attachments.toString().substr(attachments.length - 4) === "oga" ||
+      //             attachments.toString().substr(attachments.length - 4) === "mp3" ||
+      //             attachments.toString().substr(attachments.length - 4) === "ogg" ||
+      //             attachments.toString().substr(attachments.length - 4) === "amr"
+      //         ) {
+      //             // Code for audio attachments
+      //             media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
+      //         } else if (
+      //             attachments.toString().substr(attachments.length - 4) === "mp4"
+      //         ) {
+      //             // Code for video attachments
+      //             media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+      //         } else {
+      //             // Code for other file types
+      //             media_code += `${
+      //               url
+      //                 ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
+      //                 : " "
+      //             }`;
+      //         }
+      //     }
+      //     attachments_code += "</div>";
+      // }
+
+      var code = "";
+      if (message.includes("〚")) {
+        var name = activeUser().name;
+        var telf = activeUser().getExtra("phone").value;
+        var tel = Number(telf);
+        var alt = "";
+
+        if (tel > 0) {
+          if (message.includes(telf)) {
+            message = message.replace(telf, name);
+          } else {
+            var ind = message.indexOf("}");
+            message = message.substring(ind + 1);
+            alt = "alt";
+            message = message;
+          }
+        } else {
+          telf = $(document).find(
+            "body > div > main > div.sb-active.sb-area-conversations > div > div.sb-user-details.sb-top > div.sb-scroll-area > div.sb-profile-list.sb-profile-list-conversation > ul > li:nth-child(8) > label"
+          ).innerText;
+          if (message.includes(telf)) {
+            message = message.replace(telf, name);
+          } else {
+            var ind = message.indexOf("}");
+            message = message.substring(ind + 1);
+            alt = "alt";
+            message = message;
+          }
+        }
+
+        // Replace the placeholder with the proper div and ID
+        message = message.replace(/<br\s*\/?>/, "");
+
+        message = message.replace(
+          "〚",
+          alt == "alt"
+            ? `<div id='sb-reply-to-alt'><strong id='sb-reply-top-name-alt'>Tú</strong><br>`
+            : `<div id='sb-reply-to'><strong id='sb-reply-top-name'>${name}</strong><br>`
+        );
+        message = message.replace(
+          "〛",
+          `</div><p style='padding: 0px 4px; margin:0px; cursor:pointer;'>`
+        );
+        message = message.replace(/\|(?=\n)/, `</div>`);
+        message = message.replace(/<p\s*\/?>\s*<p\s*\/?>/g, "");
+        message = message.replace("{", "");
+        message = message.replace("@s.whatsapp.net}", "");
+
+        // Ensure the name is not displayed at the top of the message
+        if (message.startsWith(name)) {
+          message = message.substring(name.length).trim();
+        }
+
+        // Convert dashes with space to bullets
+
+        code = `<div data-id="${
+          this.details["id"]
+        }" ${type} class="sb-shadow-conversation ${css}">${thumb}
+              <div class="sb-cnt" style="min-width:80px; max-width:100%; padding:4px 4px;">
+                <div class="sb-message" data-value="${
+                  this.linksData
+                    ? encodeURI(this.linksData.message)
+                    : encodeURI(message)
+                }">
+                  ${media_code}
+                  <div style="max-width:30rem; margin:0px; text-align:start; cursor:pointer;" class="readThis">
+                    ${
+                      this.linksData
+                        ? this.linksData.message
+                        : message.replace(/\|/g, " ")
+                    }
+                  </div>
+                </div>
+                ${attachments_code}
+                <div class="menu-bubble">
+                  <div class="events"></div>
+                  <div class="sb-time">
+                    ${SBF.beautifyTime(this.details["creation_time"], true)}
+                  </div>
+                </div>
+              </div>
+              ${admin_menu}
+            </div>`;
+      } else {
+        // MESSAGE CREATION CHAT
+        code = `<div data-id="${
+          this.details["id"]
+        }" ${type}  class="sb-shadow-conversation ${css}"  style="transition: 0.3s all">${thumb}
+        <div class="server-response"> <i class="bi-check2-all"></i></div>
+				  <div class="sb-cnt" style="width:fit-content;margin:6px;">
+                 
+				  <div class="sb-message" data-value="${
+            this.linksData
+              ? encodeURIComponent(this.linksData.message)
+              : encodeURIComponent(message)
+          }">
+				  ${media_code}
+				 
+				  <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
+					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
+				  </div>
+				</div>
+				${attachments_code}<div class="menu-bubble"><div class="sb-time">${SBF.beautifyTime(
+          this.details["creation_time"],
+          true
+        )}</div></div>
+				  </div>
+				  ${admin_menu}
+				</div>
+			
+			  `;
+      }
+      return code;
+    }
+
+    // RENDER BUBBLE MESSAGE
+
+    render(message = false) {
+      if (message === false) message = "" + this.details["message"];
+      let len = message.length;
+
+      message =
+        message.replace(
+          /- /g,
+          '<li style="margin-left:5px;margin-right:0px">'
+        ) + "</li>";
+
+      // Breakline
+
+      message = message.replace(/(?:\r\n|\r|\n)/g, "<br>");
+
+      // Code block
+      let codes = message.match(/```([\s\S]+?)```/g) || [];
+      for (var i = 0; i < codes.length; i++) {
+        let codePlaceholder = `{{code_placeholder_${i}}}`;
+        message = message.replace(codes[i], codePlaceholder);
+      }
+
+      // Inline code blocks with single backticks
+      let inlineCodes = message.match(/`([^`]+)`/g) || [];
+      for (var i = 0; i < inlineCodes.length; i++) {
+        let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
+        message = message.replace(inlineCodes[i], codePlaceholder);
+      }
+
+      // Bold (requires spaces around asterisks)
+      message = message.replace(
+        /(?<!\*)\*(.*?)\*(?!\*)/g,
+        "<strong>$1</strong>"
+      );
+
+      // Italic (requires spaces around underscores)
+      message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
+
+      // Strikethrough (handles cases with or without spaces around tildes)
+      message = message.replace(
+        /(<li>\s*)?~([^~]+)~/g,
+        function (match, liPrefix, content) {
+          if (liPrefix) {
+            return `<li>${liPrefix}<del>${content}</del>`;
+          } else {
+            return `<del>${content}</del>`;
+          }
+        }
+      );
+
+      // // Unicode
+      // let false_positives = ["cede", "ubbed", "U4BEae", "UEDC72", "EAuEACd", "udada", "ucced"];
+      // for (var i = 0; i < false_positives.length; i++) {
+      //   message = message.replaceAll(false_positives[i], `SBR${i}`);
+      // }
+      // message = message.replace(/u([0-9a-f]{4,5})/im, "&#x$1;");
+      // for (var i = 0; i < false_positives.length; i++) {
+      //   message = message.replaceAll(`SBR${i}`, false_positives[i]);
+      // }
+
+      // Single emoji
+      if (
+        ((len == 6 || len == 5) && message.startsWith("&#x")) ||
+        (len < 3 &&
+          message.match(
+            /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/
+          ))
+      ) {
+        message = `<span class="emoji-large">${message}</span>`;
+      }
+
+      // Links
+      if (message.includes("http")) {
+        message = message.autoLink({ target: "_blank" });
+      }
+
+      // Inline code block restore
+      for (var i = 0; i < inlineCodes.length; i++) {
+        let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
+        message = message.replace(
+          codePlaceholder,
+          `<p style="font-family: monospace;">${inlineCodes[i].substring(
+            1,
+            inlineCodes[i].length - 1
+          )}</p>`
+        );
+      }
+
+      // Code block restore
+      for (var i = 0; i < codes.length; i++) {
+        let codePlaceholder = `{{code_placeholder_${i}}}`;
+        message = message.replace(
+          codePlaceholder,
+          `<code>${codes[i].substring(3, codes[i].length - 3)}</code>`
+        );
+      }
+
+      return message.replace(/&amp;lt;/g, "&lt;");
+    }
+
+    strip(message = false) {
+      if (message === false) message = "" + this.details["message"];
+
+      let regex = /https:\/\/maps\.google\.com\/.*\b/g;
+      message = message.replace(
+        regex,
+        (match) =>
+          `<i class="bi-send" style="vertical-align:middle;padding-left:10px;"></i> <span style="color: #2196F3;">${sb_(
+            "Location"
+          )}</span>`
+      );
+
+  // // Encode the message to handle special characters and ensure URL integrity
+  // message = encodeURIComponent(message);
+
+  return  message;
+}
+  }
+
+  window.SBMessage = SBMessage;
+
+  /*
+   * ----------------------------------------------------------
+   * # CONVERSATION
+   * ----------------------------------------------------------
+   */
+
+  class SBConversation {
+    constructor(messages, details) {
+      this.details = SBF.null(details) ? {} : details;
+      if (Array.isArray(messages)) {
+        this.messages = [];
+        if (messages.length) {
+          if (messages[0] instanceof SBMessage) {
+            this.messages = messages;
+          } else {
+            SBF.error(
+              "Messages not of type SBMessage",
+              "SBConversation.constructor"
+            );
+          }
+        }
+      } else {
+        SBF.error(
+          "Message array not of type Array",
+          "SBConversation.constructor"
+        );
+      }
+    }
+
+    get id() {
+      return this.get("id") == ""
+        ? this.get("conversation_id")
+        : this.get("id");
+    }
+
+    get(id) {
+      if (id in this.details && !SBF.null(this.details[id])) {
+        return this.details[id];
+      }
+      if (id == "title") {
+        if (!SBF.null(this.details["first_name"])) {
+          return this.details["first_name"] + " " + this.details["last_name"];
+        } else if (this.messages.length) {
+          return this.messages[0].get("full_name");
+        }
+      }
+      return "";
+    }
+
+    set(id, value) {
+      this.details[id] = value;
+    }
+
+    getMessage(id) {
+      for (var i = 0; i < this.messages.length; i++) {
+        if (this.messages[i].id == id) {
+          this.messages[i].set("index", i);
+          return this.messages[i];
+        }
+      }
+      return false;
+    }
+
+    getLastMessage() {
+      let index = this.messages.length - 1;
+      for (var i = index; i > -1; i--) {
+        if (this.messages[i].message || this.messages[i].attachments.length)
+          return this.messages[i];
+      }
+      return false;
+    }
+
+    getLastUserMessage(index = false, agent = false) {
+      if (index === false) index = this.messages.length - 1;
+      for (var i = index; i > -1; i--) {
+        let message = this.messages[i];
+        let user_type = message.get("user_type");
+        if (!message.message && !message.attachments.length) continue;
+        if (
+          (!agent && !SBF.isAgent(user_type)) ||
+          (agent === true && (user_type == "agent" || user_type == "admin")) ||
+          (agent == "bot" && user_type == "bot") ||
+          (agent == "no-bot" && user_type != "bot") ||
+          (agent == "all" && SBF.isAgent(user_type))
+        ) {
+          this.messages[i].set("index", i - 1);
+          return this.messages[i];
+        }
+      }
+      return false;
+    }
+
+    getUserMessages(user_type = "user") {
+      let results = [];
+      let checks =
+        user_type == "user"
+          ? ["visitor", "lead", "user"]
+          : user_type == "agents"
+          ? ["agent", "admin"]
+          : ["bot"];
+      for (var i = 0; i < this.messages.length; i++) {
+        if (checks.includes(this.messages[i].get("user_type"))) {
+          results.push(this.messages[i]);
+        }
+      }
+      return results;
+    }
+
+    updateMessage(id, message) {
+      if (message instanceof SBMessage) {
+        for (var i = 0; i < this.messages.length; i++) {
+          if (this.messages[i].id == id) {
+            this.messages[i] = message;
+            return true;
+          }
+        }
+      } else {
+        SBF.error(
+          "Message not of type SBMessage",
+          "SBConversation.updateMessage"
+        );
+      }
+      return false;
+    }
+
+    addMessages(messages) {
+      if (Array.isArray(messages)) {
+        for (var i = 0; i < messages.length; i++) {
+          if (messages[i] instanceof SBMessage) {
+            this.messages.push(messages[i]);
+          }
+        }
+      } else {
+        if (messages instanceof SBMessage) {
+          this.messages.push(messages);
+        } else {
+          SBF.error(
+            "Messages not of type SBMessage",
+            "SBConversation.addMessages()"
+          );
+        }
+      }
+      return this;
+    }
+
+    getCode() {
+      let count = this.messages.length;
+      if (count) {
+        let message = this.messages[count - 1];
+        let text = message.message;
+        if (text.indexOf("[") !== false) {
+          let shortcodes = text.match(/\[.+?\]/g) || [];
+          if (shortcodes.length) {
+            let shortcode = SBRichMessages.shortcode(shortcodes[0]);
+            text = text.replace(
+              shortcodes[0],
+              sb_(
+                SBF.null(shortcode[1]["message"])
+                  ? SBF.null(shortcode[1]["title"])
+                    ? ""
+                    : shortcode[1]["title"]
+                  : shortcode[1]["message"]
+              )
+            );
+          }
+        }
+        if (SBF.getReply(text)) {
+          const ind = text.indexOf("}");
+          text = text.substring(ind + 1);
+        }
+        let title = this.get("title");
+        if (
+          !title ||
+          (tickets && CHAT_SETTINGS["tickets-conversations-title-user"])
+        )
+          title = SBF.isAgent(message.get("user_type"))
+            ? message.get("full_name")
+            : sb_("You");
+        return `<div class="sb-conversation-item" data-user-id="${message.get(
+          "user_id"
+        )}"><img loading="lazy" src="${message.get(
+          "profile_image"
+        )}"><div><span class="sb-name">${title}</span><span class="sb-time">${SBF.beautifyTime(
+          message.get("creation_time")
+        )}</span></div><div class="sb-message">${
+          text.length > 114 ? text.substr(0, 114) + " ..." : text
+        }</div></div>`;
+      }
+      return "";
+    }
+
+    deleteMessage(id) {
+      for (var i = 0; i < this.messages.length; i++) {
+        if (this.messages[i].id == id) {
+          this.messages.splice(i, 1);
+          return true;
+        }
+      }
+      return false;
+    }
+
+    searchMessages(search, exact_match = false) {
+      let results = [];
+      for (var i = 0; i < this.messages.length; i++) {
+        let message = this.messages[i].message;
+        if (
+          (exact_match && message == search) ||
+          (!exact_match && message.includes(search))
+        ) {
+          results.push[messages[i]];
+        }
+      }
+      return results;
+    }
+
+    getAttachments() {
+      let list = [];
+      for (var i = 0; i < this.messages.length; i++) {
+        let attachments = this.messages[i].attachments;
+        for (var j = 0; j < attachments.length; j++) {
+          let link = attachments[j][1];
+          list.push([
+            attachments[j][0],
+            link,
+            link.substr(link.lastIndexOf(".") + 1),
+            this.messages[i].id,
+          ]);
+        }
+      }
+      return list;
+    }
+  }
+  window.SBConversation = SBConversation;
+
+  /*
+   * ----------------------------------------------------------
+   * # CHAT
+   * ----------------------------------------------------------
+   */
+
+  var SBChat = {
+    // Variables
+    rich_messages_list: [
+      "chips",
+      "buttons",
+      "select",
+      "inputs",
+      "table",
+      "list",
+    ],
+    emoji_options: {
+      range: 0,
+      range_limit: 47,
+      list: [],
+      list_now: [],
+      touch: false,
+    },
+    initialized: false,
+    editor_listening: false,
+    conversation: false,
+    load_message: [],
+    is_busy: false,
+    is_busy_update: false,
+    is_busy_populate: false,
+    chat_open: false,
+    real_time: false,
+    agent_id: -1,
+    agent_online: false,
+    user_online: false,
+    expanded: false,
+    main_header: true,
+    start_header: false,
+    desktop_notifications: false,
+    flash_notifications: false,
+    id_last_message: 0,
+    id_last_message_conversation: 0,
+    datetime_last_message_conversation: "2000-01-01 00:00:00",
+    audio: false,
+    audio_out: false,
+    tab_active: true,
+    notifications: [],
+    typing_settings: {
+      typing: false,
+      sent: false,
+      timeout: false,
+    },
+    email_sent: false,
+    dashboard: false,
+    articles: false,
+    articles_categories: false,
+    // slack_channel: [-1, -1],
+    skip: false,
+    queue_interval: false,
+    departments: false,
+    default_department: null,
+    default_agent: null,
+    default_tags: null,
+    offline_message_set: false,
+
+    // Update the UI to display the active agent of the conversation
+    setActiveAgent: function (agent_id) {
+      let admin = $(".sb-admin");
+      let conversations_area = admin.find(".sb-area-conversations");
+      let select = conversations_area.find("#conversation-agent");
+      let li = select.find(`[data-id="${agent_id}"]`);
+      SBChat.conversation.set("agent_id", agent_id);
+
+      select
+        .find(" > p")
+        .attr("data-value", li.data("value"))
+        .html(li.html())
+        .next()
+        .sbActive(false);
+      if (
+        SB_ACTIVE_AGENT["user_type"] == "agent" &&
+        (!SB_ADMIN_SETTINGS["assign-conversation-to-agent"] || agent_id)
+      ) {
+        conversations_admin_list_ul
+          .find(`[data-conversation-id="${SBChat.conversation.id}"]`)
+          .remove();
+        SBConversations.clickFirst();
+      }
+      if (agent_id)
+        SBChat.showResponse("Agent assigned. The agent has been notified.");
+    },
+
+    // Update the agent assignged to a conversation
+    assignAgent: function (conversation_id, agent_id, onSuccess = false) {
+      SBF.ajax(
+        {
+          function: "update-conversation-agent",
+          conversation_id: conversation_id,
+          agent_id: agent_id,
+          message: SBChat.conversation.getLastMessage().message,
+        },
+        (response) => {
+          if (onSuccess) onSuccess(response);
+        }
+      );
+    },
+    // Update the agent assignged to a conversation
+    assignAgent: function (conversation_id, agent_id, onSuccess = false) {
+      SBF.ajax(
+        {
+          function: "update-conversation-agent",
+          conversation_id: conversation_id,
+          agent_id: agent_id,
+          message: SBChat.conversation.getLastMessage().message,
+        },
+        (response) => {
+          if (onSuccess) onSuccess(response);
+        }
+      );
+    },
+    // Display the bottom card information box
+    showResponse: function (text, type = false) {
+      let admin = $(".sb-admin");
+      let conversations_area = admin.find(".sb-area-conversations");
+      var card = admin.find(".sb-info-card");
+      if (!type) {
+        card.removeClass(
+          "sb-info-card-error sb-info-card-warning sb-info-card-info"
+        );
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          card.sbActive(false);
+        }, 5000);
+      } else if (type == "error") {
+        card.addClass("sb-info-card-error");
+      } else {
+        card.addClass("sb-info-card-info");
+      }
+      card.html(`<h3>${sb_(text)}</h3>`).sbActive(true);
+    },
+    // Send a message
+    sendMessage: function (
+      user_id = -1,
+      message = "",
+      attachments = [],
+      onSuccess = false,
+      payload = false,
+      conversation_status_code = false
+    ) {
+      let is_dialogflow_human_takeover =
+        dialogflow_human_takeover && SBApps.dialogflow.active();
+      let is_return = false;
+
+      //assign agent id
+      if (SBChat.conversation.id != undefined) {
+        activeUser().getFullConversation(SBChat.conversation.id, (response) => {
+          if (response.details["agent_id"] != SB_ACTIVE_AGENT["id"]) {
+            SBChat.assignAgent(
+              SBChat.conversation.id,
+              SB_ACTIVE_AGENT["id"],
+              () => {
+                SBChat.setActiveAgent(SB_ACTIVE_AGENT["id"]);
+              }
+            );
+          }
+        });
+      }
+
+      // Check settings and contents
+      if (!activeUser() && !admin) {
+        this.addUserAndLogin(() => {
+          return this.sendMessage(
+            user_id,
+            message,
+            attachments,
+            onSuccess,
+            payload
+          );
+        }, true);
+        return;
+      }
+      if (!this.conversation) {
+        let last_conversation = admin
+          ? false
+          : activeUser().getLastConversation();
+
+        if (
+          last_conversation &&
+          force_action != "new-conversation" &&
+          (!SBChat.default_department ||
+            SBChat.default_department == last_conversation.get("department")) &&
+          (!SBChat.default_agent ||
+            SBChat.default_agent == last_conversation.get("agent_id"))
+        ) {
+          this.openConversation(last_conversation.id);
+          this.setConversation(last_conversation);
+          force_action = false;
+        } else {
+          this.newConversation(
+            conversation_status_code,
+            user_id,
+            "",
+            [],
+            admin && SB_ACTIVE_AGENT["department"]
+              ? SB_ACTIVE_AGENT["department"]
+              : null,
+            null,
+            () => {
+              return this.sendMessage(
+                user_id,
+                message,
+                attachments,
+                onSuccess,
+                payload
+              );
+            }
+          );
+          return;
+        }
+      }
+      this.calculateLabelDateFirst();
+      if (user_id == -1)
+        user_id = admin ? SB_ACTIVE_AGENT["id"] : activeUser().id;
+      let is_user = user_id != bot_id;
+      if (!message && !attachments.length) {
+        var message = chat_textarea.val().trim();
+        chat_editor.find(".sb-attachments > div").each(function () {
+          attachments.push([
+            $(this).attr("data-name"),
+            $(this).attr("data-value"),
+            $(this).attr("data-id"),
+          ]);
+        });
+        if (admin && SBAdmin.must_translate) {
+          SBApps.dialogflow.translate(
+            [message],
+            activeUser().language,
+            (response) => {
+              if (response.length) {
+                if (payload) {
+                  payload["original-message"] = message;
+                } else {
+                  payload = {
+                    "original-message": message,
+                  };
+                }
+                if (response[0].translatedText)
+                  message = response[0].translatedText;
+              }
+
+              this.sendMessage(
+                user_id,
+                message,
+                attachments,
+                onSuccess,
+                payload,
+                conversation_status_code
+              );
+            }
+          );
+          is_return = true;
+        }
+      }
+      this.busy(true);
+      if (is_user) {
+        chat_textarea.val("").css("height", "");
+        chat_editor.find(".sb-attachments").html("");
+      }
+      this.activateBar(false);
+
+      if (is_return) return;
+      if (conversation_status_code === false && user_id == bot_id) {
+        conversation_status_code = "skip";
+      }
+      if (!admin && is_user && !is_dialogflow_human_takeover) {
+        conversation_status_code = 2;
+      }
+
+      // Send message
+      if (message || attachments.length || payload) {
+        let message_response = {
+          user_id: user_id,
+          user: activeUser(),
+          conversation_id: this.conversation.id,
+          conversation: this.conversation,
+          conversation_status_code: conversation_status_code,
+          message: message, // render whatsapp name
+          attachments: attachments,
+        };
+
+        SBF.ajax(
+          {
+            function: "send-message",
+            user_id: user_id,
+            conversation_id: this.conversation.id,
+            message: message, //render only in chat onveersation
+            attachments: attachments,
+            conversation_status_code: conversation_status_code,
+            queue: !admin && CHAT_SETTINGS["queue"] && is_user,
+            payload: payload,
+            recipient_id: admin ? activeUser().id : false,
+          },
+          (response) => {
+            // Update the dashboard conversations area
+            if (!admin && user_id == bot_id) {
+              if (this.dashboard) {
+                this.updateConversations();
+              } else if (!this.chat_open) {
+                this.updateNotifications("add", this.conversation.id);
+              }
+            }
+
+            // Update the chat current conversation
+            if (
+              (admin && !this.user_online) ||
+              (!admin && !this.agent_online)
+            ) {
+              this.update();
+            }
+
+            // Follow up and offline messages
+            if (!admin && is_user && !dialogflow_human_takeover) {
+              this.followUp();
+              this.offlineMessage();
+            }
+
+            // Dialogflow
+            if (
+              !admin &&
+              is_user &&
+              (!payload ||
+                (payload["id"] != "sb-human-takeover" &&
+                  SBF.null(payload["skip-dialogflow"])))
+            ) {
+              SBApps.dialogflow.message(message, attachments);
+            }
+
+            // Language detection
+            if (
+              is_user &&
+              CHAT_SETTINGS["language-detection"] &&
+              this.conversation &&
+              message.split(" ").length > 1 &&
+              !SBF.storage("language-detection-completed")
+            ) {
+              SBF.ajax({
+                function: "google-language-detection-update-user",
+                user_id: user_id,
+                string: message,
+                token: SBApps.dialogflow.token,
+              });
+              SBF.storage("language-detection-completed", true);
+            }
+
+            // Articles
+            if (
+              this.articles &&
+              !admin &&
+              CHAT_SETTINGS["articles"] &&
+              !CHAT_SETTINGS["office-hours"] &&
+              !this.isInitDashboard()
+            ) {
+              setTimeout(() => {
+                if (this.conversation) {
+                  this.sendMessage(bot_id, "[articles]");
+                  this.scrollBottom();
+                  this.articles = false;
+                }
+              }, 5000);
+            }
+
+            // Queue
+            if (response["queue"]) {
+              this.queue(this.conversation.id);
+            }
+
+            // Events
+            message_response["message_id"] = response.id;
+            SBF.event("SBMessageSent", message_response);
+            if (tickets) SBTickets.onMessageSent();
+            if (onSuccess) onSuccess(message_response);
+            if (response.notifications.length)
+              SBF.event("SBNotificationsSent", response.notifications);
+
+            // Miscellaneous
+            if (this.skip) this.skip = false;
+            this.busy(false);
+          }
+        );
+
+        // Display the message as sending in progress
+        if (is_user) {
+          message = SBF.escape(message);
+          chat.append(
+            new SBMessage({
+              id: "sending",
+              profile_image: admin
+                ? SB_ACTIVE_AGENT["profile_image"]
+                : activeUser().image,
+              full_name: activeUser().name,
+              creation_time: "0000-00-00 00:00:00",
+              message: message,
+              user_type: admin ? "agent" : "user",
+            })
+              .getCode()
+              .replace(
+                '<div class="sb-time"></div>',
+                `<div class="sb-time">${sb_("Sending")}<i></i></div>`
+              )
+          );
+          if (!this.dashboard) this.scrollBottom();
+        }
+
+        // Sounds
+        if (
+          (this.audio &&
+            !admin &&
+            this.chat_open &&
+            is_user &&
+            ["a", "aa"].includes(CHAT_SETTINGS["chat-sound"])) ||
+          (admin && SB_ADMIN_SETTINGS["sounds"] == "a")
+        ) {
+          this.audio_out.play();
+        }
+      } else this.busy(false);
+    },
+
+    // [Deprecated] This function will be removed soon
+    sendBotMessage: function (message = "", attachments = []) {
+      return SBApps.dialogflow.message(message, attachments);
+    },
+
+    // Update message
+    updateMessage: function (message_id, message = "") {
+      SBF.ajax({
+        function: "update-message",
+        message_id: message_id,
+        message: message,
+      });
+    },
+
+    // Email notifications
+    sendEmail: function (message, attachments, send_to_active_user = false) {
+      let recipient_id = send_to_active_user
+        ? activeUser().id
+        : this.getRecipientUserID();
+      if (!admin && !isNaN(recipient_id) && this.agent_online) {
+        return false;
+      }
+      SBF.ajax(
+        {
+          function: "create-email",
+          recipient_id: recipient_id,
+          sender_name: admin
+            ? send_to_active_user
+              ? SB_ACTIVE_AGENT["full_name"]
+              : activeUser().name
+            : send_to_active_user
+            ? CHAT_SETTINGS["bot-name"]
+            : activeUser().name,
+          sender_profile_image: admin
+            ? send_to_active_user
+              ? SB_ACTIVE_AGENT["profile_image"]
+              : activeUser().name
+            : send_to_active_user
+            ? CHAT_SETTINGS["bot-image"]
+            : activeUser().image,
+          message: message,
+          attachments: attachments,
+          department: this.conversation
+            ? this.conversation.get("department")
+            : false,
+          conversation_id: this.conversation ? this.conversation.id : false,
+        },
+        () => {
+          SBF.event("SBEmailSent", {
+            recipient_id: recipient_id,
+            message: message,
+            attachments: attachments,
+          });
+        }
+      );
+    },
+
+    // SMS notifications
+    sendSMS: function (message) {
+      let recipient_id = this.getRecipientUserID();
+      if (!admin && !isNaN(recipient_id) && this.agent_online) return false;
+      SBF.ajax(
+        {
+          function: "send-sms",
+          to: recipient_id,
+          message: message,
+          conversation_id: this.conversation ? this.conversation.id : false,
+        },
+        (response) => {
+          if (response["status"] == "sent" || response["status"] == "queued") {
+            SBF.event("SBSMSSent", {
+              recipient_id: this.getRecipientUserID(),
+              message: message,
+              response: response,
+            });
+          } else if (response.message) {
+            SBF.error(response.message, "SBChat.sendSMS");
+          }
+        }
+      );
+    },
+
+    // Desktop notifications
+    desktopNotification: function (
+      title,
+      message,
+      icon,
+      conversation_id = false,
+      user_id = false
+    ) {
+      if (Notification.permission !== "granted") {
+        Notification.requestPermission();
+      } else {
+        let formattedMessage = message
+          .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
+          .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
+          .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
+          .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
+          .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
+          .replace(/^([{,+,0-9,}]+[@s.whatsapp.net])/g, "\u200E$1"); // Replace the given pattern
+
+        if (!formattedMessage) {
+          formattedMessage = "📄";
+        }
+
+        let notify = SBPusher.sw.showNotification(title, {
+          body: new SBMessage().strip(formattedMessage),
+          icon:
+            icon.indexOf("user.svg") > 0
+              ? CHAT_SETTINGS["notifications-icon"]
+              : icon,
+        });
+        notify.onclick = () => {
+          if (admin) {
+            if (conversation_id) {
+              SBAdmin.conversations.openConversation(
+                conversation_id,
+                user_id == false ? activeUser().id : user_id
+              );
+              SBAdmin.conversations.update();
+            } else if (user_id) {
+              SBAdmin.profile.show(user_id);
+            }
+          } else {
+            this.start();
+          }
+          window.focus();
+        };
+      }
+    },
+
+    //alert update note
+    updateNote: function (conversation_id, note_id, status, onSuccess = false) {
+      SBF.ajax(
+        {
+          function: "update-note",
+          conversation_id: conversation_id,
+          note_id: note_id,
+          status: status,
+        },
+        (response) => {
+          this.busy = false;
+          if (onSuccess) onSuccess(response);
+        }
+      );
+    },
+
+    // Returns the recipient user ID
+    getRecipientUserID: function () {
+      return admin
+        ? activeUser().id
+        : this.lastAgent(false)
+        ? this.lastAgent(false)["user_id"]
+        : SBF.null(this.conversation.get("agent_id"))
+        ? SBF.null(this.conversation.get("department"))
+          ? "agents"
+          : "department-" + this.conversation.get("department")
+        : this.conversation.get("agent_id");
+    },
+
+    // Editor submit message
+    submit: function () {
+      if (!this.is_busy) {
+        this.sendMessage();
+        if (CHAT_SETTINGS["cron-email-piping-active"]) {
+          setInterval(function () {
+            SBF.ajax({
+              function: "email-piping",
+            });
+          }, 60000);
+          CHAT_SETTINGS["cron-email-piping-active"] = false;
+        }
+        if (SBPusher.init_push_notifications) {
+          SBPusher.initPushNotifications();
+        }
+      }
+    },
+
+    // Initialize the chat
+    initChat: function () {
+      if (admin) return;
+      SBF.getActiveUser(true, () => {
+        let active = activeUser() !== false;
+        let user_type = active ? activeUser().type : false;
+        if (
+          !tickets &&
+          CHAT_SETTINGS["popup"]["active"] &&
+          !storage("popup") &&
+          (!mobile || !CHAT_SETTINGS["popup-mobile-hidden"])
+        ) {
+          this.popup();
+        }
+        SBChat.automations.run_all();
+        if (
+          !tickets &&
+          CHAT_SETTINGS["privacy"] &&
+          !CHAT_SETTINGS["registration-required"] &&
+          !storage("privacy-approved")
+        ) {
+          this.privacy();
+          return;
+        }
+        if (
+          typeof Notification !== ND &&
+          !CHAT_SETTINGS["push-notifications-users"] &&
+          (CHAT_SETTINGS["desktop-notifications"] == "all" ||
+            CHAT_SETTINGS["desktop-notifications"] == "users" ||
+            (admin && CHAT_SETTINGS["desktop-notifications"] == "agents"))
+        ) {
+          this.desktop_notifications = true;
+        }
+        if (
+          CHAT_SETTINGS["flash-notifications"] == "all" ||
+          CHAT_SETTINGS["flash-notifications"] == "users" ||
+          (admin && CHAT_SETTINGS["flash-notifications"] == "agents")
+        ) {
+          this.flash_notifications = true;
+        }
+        if (this.registration(true) && !tickets) {
+          this.registration();
+          if (!active && CHAT_SETTINGS["visitors-registration"]) {
+            this.addUserAndLogin();
+          }
+          return;
+        }
+        if (
+          !active &&
+          (CHAT_SETTINGS["visitors-registration"] ||
+            CHAT_SETTINGS["subscribe"] ||
+            tickets) &&
+          (!tickets || !CHAT_SETTINGS["tickets-registration-required"])
+        ) {
+          this.addUserAndLogin(() => {
+            this.welcome();
+            // this.subscribe();
+            // // SBApps.woocommerce.waitingList();
+            this.finalizeInit();
+          });
+        } else if (!this.conversation && active) {
+          this.populateConversations();
+        } else {
+          this.finalizeInit();
+        }
+        if (
+          CHAT_SETTINGS["header-name"] &&
+          active &&
+          user_type == "user" &&
+          !tickets
+        ) {
+          chat_header
+            .find(".sb-title")
+            .html(`${sb_("Hello")} ${activeUser().nameBeautified}!`);
+        }
+        // this.welcome();
+        // this.subscribe();
+        if (!SBPusher.active) {
+          setInterval(() => {
+            this.updateConversations();
+            this.updateUsersActivity();
+          }, 10200);
+        }
+        // SBApps.woocommerce.waitingList();
+        this.scrollBottom(true);
+      });
+    },
+
+    finalizeInit: function () {
+      if (!this.initialized) {
+        main.attr("style", "");
+        if (!admin && !tickets) {
+          if (this.isInitDashboard()) {
+            this.showDashboard();
+          }
+          if (!mobile && window.innerHeight < 760) {
+            main
+              .find(" > .sb-body")
+              .css("max-height", window.innerHeight - 130 + "px");
+          }
+        }
+        this.initialized = true;
+        if (!admin) {
+          if (activeUser() && !this.registration(true)) {
+            if (storage("open-conversation"))
+              this.openConversation(storage("open-conversation"));
+            if (SBF.getURL("conversation"))
+              this.openConversation(SBF.getURL("conversation"));
+          }
+          if (
+            (!this.chat_open &&
+              ((!mobile && storage("chat-open")) ||
+                SBF.getURL("chat") == "open")) ||
+            SBF.getURL("conversation")
+          ) {
+            setTimeout(() => {
+              this.start();
+            }, 500);
+          }
+          // if (CHAT_SETTINGS["woocommerce-returning-visitor"]) {
+          //   if (storage("returning-visitor") === false) {
+          //     SBF.storageTime("returning-visitor");
+          //   } else if (
+          //     SBF.storageTime("returning-visitor", 24) &&
+          //     !storage("returning-visitor-processed")
+          //   ) {
+          //     setTimeout(() => {
+          //       SBF.ajax(
+          //         {
+          //           function: "woocommerce-returning-visitor",
+          //         },
+          //         () => {
+          //           storage("returning-visitor-processed", true);
+          //         }
+          //       );
+          //     }, 15000);
+          //   }
+          // }
+          if (CHAT_SETTINGS["timetable-type"]) SBChat.offlineMessage();
+          if (
+            CHAT_SETTINGS["queue-human-takeover"] &&
+            SBApps.dialogflow.humanTakeoverActive()
+          ) {
+            CHAT_SETTINGS["queue"] = true;
+          }
+        }
+        if (tickets) SBTickets.init();
+        SBF.event("SBInit");
+      }
+    },
+
+    // Initialize the chat settings and open the chat
+    start: function () {
+      if (this.initialized) {
+        this.populate();
+        // this.Loadmore();
+        this.headerAgent();
+        this.updateUsersActivity();
+        this.startRealTime();
+        this.chat_open = true;
+        this.popup(true);
+        if (this.conversation)
+          this.updateNotifications("remove", this.conversation.id);
+        main.sbActive(true);
+        $("body").addClass("sb-chat-open");
+        if (CHAT_SETTINGS["welcome-trigger"] == "open") {
+          // this.welcome();
+        }
+        this.calculateLabelDates();
+      }
+    },
+
+    // Open or close the chat
+    open: function (open = true) {
+      if (open && !this.chat_open) {
+        this.start();
+        this.chat_open = true;
+        this.startRealTime();
+        main.sbActive(true);
+        $("body").addClass("sb-chat-open");
+        storage("chat-open", true);
+        if (mobile)
+          history.pushState(
+            {
+              "chat-open": true,
+            },
+            "",
+            ""
+          );
+        SBF.event("SBChatOpen");
+      } else if (!open && this.chat_open) {
+        main.sbActive(false);
+        this.stopRealTime();
+        this.chat_open = false;
+        storage("chat-open", false);
+        $("body").removeClass("sb-chat-open");
+        SBF.event("SBChatClose");
+      }
+    },
+
+    // Get a full conversation and display it in the chat
+    openConversation: function (conversation_id) {
+      activeUser().getFullConversation(conversation_id, (response) => {
+        if (!response["id"]) {
+          storage("open-conversation", "");
+          return false;
+        }
+        this.setConversation(response);
+        this.hideDashboard();
+        this.populate();
+        this.main_header = false;
+        if (storage("queue") == conversation_id) {
+          this.queue(conversation_id);
+        }
+        if (this.chat_open || tickets) {
+          this.updateNotifications("remove", conversation_id);
+        }
+        if (tickets) SBTickets.activateConversation(response);
+        storage("open-conversation", conversation_id);
+        SBF.event("SBConversationOpen", response);
+      });
+    },
+
+    //load more message add show
+    loadUpdate: function (response) {
+      let count = response.length;
+      let code = "";
+      let id_check = [];
+      let last_date = false;
+
+      // Load More messages
+      this.calculateLabelDateFirst();
+      for (var i = 0; i < count; i++) {
+        if (!id_check.includes(response[i].details["id"])) {
+          let message = new SBMessage(response[i].details);
+          let payload = message.payload();
+          let current_date = SBF.beautifyTime(message.get("creation_time"));
+          if (current_date != last_date) {
+            code += `<div class="sb-label-date">${current_date}</div>`;
+            last_date = current_date;
+          }
+          code += message.getCode();
+          id_check.push(message.id);
+        }
+      }
+      $(".sb-list .sb-label-date:nth-child(2)").after(code);
+      $(".sb-list .sb-label-date:nth-child(2)").remove();
+      if (!this.dashboard) {
+        this.calculateLabelDates();
+      }
+    },
+    // Update the active conversation with the latest messages
+    update: function () {
+      if (this.conversation) {
+        if (this.is_busy_update) return;
+        let last_message = this.conversation.getLastMessage();
+        let is_update = false;
+        SBF.ajax(
+          {
+            function: "get-new-messages",
+            conversation_id: this.conversation.id,
+            datetime: this.datetime_last_message_conversation,
+            last_id: this.id_last_message_conversation,
+          },
+          (response) => {
+            let count = response.length;
+            this.is_busy_update = false;
+
+            if (this.conversation) {
+              if (
+                Array.isArray(response) &&
+                count > 0 &&
+                (!last_message ||
+                  last_message.id != response[count - 1]["id"] ||
+                  last_message.message != response[count - 1]["message"] ||
+                  last_message.payload != response[count - 1]["payload"] ||
+                  last_message.attachments !=
+                    response[count - 1]["attachments"])
+              ) {
+                let code = "";
+                let messages = [];
+                let id_check = [];
+                let dialogflow_activation = false;
+
+                // Generate and add the new messages
+                this.calculateLabelDateFirst();
+                for (var i = 0; i < count; i++) {
+                  if (!id_check.includes(response[i]["id"])) {
+                    let message = new SBMessage(response[i]);
+                    let payload = message.payload();
+                    this.id_last_message_conversation = message.id;
+                    this.datetime_last_message_conversation =
+                      message.get("creation_time");
+
+                    // Payload
+                    if (!["boolean", "string"].includes(typeof payload)) {
+                      if ("event" in payload) {
+                        let event = payload["event"];
+                        if (
+                          (event == "delete-message" &&
+                            this.conversation.getMessage(message.id) !==
+                              false) ||
+                          (!admin &&
+                            message.message == "" &&
+                            !message.attachments.length)
+                        ) {
+                          this.deleteMessage(message.id);
+                        }
+                        // if (event == "woocommerce-update-cart" && !admin) {
+                        //   SBApps.woocommerce.updateCart(
+                        //     payload["action"],
+                        //     payload["id"]
+                        //   );
+                        // }
+                        if (
+                          !SBApps.dialogflow.active() &&
+                          (event == "conversation-status-update-3" ||
+                            event == "conversation-status-update-4" ||
+                            event == "activate-bot")
+                        ) {
+                          SBApps.dialogflow.active("activate");
+                          dialogflow_activation = true;
+                        }
+                        if (
+                          CHAT_SETTINGS["close-chat"] &&
+                          event == "conversation-status-update-3"
+                        ) {
+                          this.closeChat(false);
+                          return;
+                        }
+                      }
+                      if (
+                        "human-takeover" in payload &&
+                        CHAT_SETTINGS["queue-human-takeover"]
+                      ) {
+                        CHAT_SETTINGS["queue"] = true;
+                        SBChat.queue(SBChat.conversation.id);
+                      }
+                    }
+
+                    // Message creator for chat
+                    if (this.conversation.getMessage(response[i]["id"])) {
+                      this.conversation.updateMessage(message.id, message);
+                      chat
+                        .find(`[data-id="${message.id}"]`)
+                        .replaceWith(message.getCode());
+                      is_update = true;
+                    } else {
+                      this.conversation.addMessages(message);
+                      //  	let rating = $(element).attr('data-rating');
+                      let agent = SBChat.conversation.getLastUserMessage(
+                        false,
+                        true
+                      );
+                      if (
+                        agent &&
+                        message.details.user_id != agent?.get("user_id") &&
+                        agent?.get("message") == "[rating]"
+                      ) {
+                        const rating =
+                          message.details.message == 1
+                            ? "positive"
+                            : "negative";
+                        const feedback = SBF.get_value(
+                          SBF.admin_set("rate-and-review")["rate-reply"]
+                        );
+                        var settings = {
+                          conversation_id: SBChat.conversation.id,
+                          agent_id: agent ? agent.get("user_id") : bot_id,
+                          user_id: activeUser().id,
+                          source: this.conversation.get("source"),
+                          message: message.details.message,
+                          rating: rating == "positive" ? 1 : -1,
+                        };
+                        let payload = {
+                          "rich-messages": {},
+                        };
+                        let rich_id = SBF.random() + message.details.id;
+                        payload["rich-messages"][rich_id] = {
+                          type: "rating",
+                          result: settings,
+                        };
+                        let parameters = {
+                          function: "set-rating",
+                          payload: payload,
+                          settings: settings,
+                          message_id: agent.id,
+                          message: feedback,
+                        };
+                        if (
+                          message.details.message == 1 ||
+                          message.details.message == 2
+                        ) {
+                          SBF.ajax(parameters, (response) => {
+                            this.conversation.get("source") != "tk"
+                              ? SBChat.sendMessage(
+                                  SB_ACTIVE_AGENT["id"],
+                                  feedback
+                                )
+                              : "";
+                          });
+                        }
+                      }
+                      code += message.getCode();
+                    }
+                    messages.push(message);
+                    id_check.push(message.id);
+                  }
+                }
+                chat.append(code);
+
+                // Update status code
+                let last_message = this.conversation.getLastMessage();
+                let user_type = last_message.get("user_type");
+                let is_agent = SBF.isAgent(user_type);
+                if (!admin && is_agent && user_type != "bot") {
+                  if (this.chat_open) {
+                    if (last_message.message.indexOf("sb-rich-success") == -1)
+                      this.setConversationStatus(0);
+                    if (CHAT_SETTINGS["follow"]["active"])
+                      clearTimeout(timeout);
+                  }
+                  if (!dialogflow_activation) SBApps.dialogflow.active(false);
+                }
+
+                // Queue
+                if (
+                  storage("queue") == this.conversation.id &&
+                  is_agent &&
+                  user_type != "bot"
+                ) {
+                  this.queue("clear");
+                }
+
+                // Miscellaneous
+                chat.find('[data-id="sending"]').remove();
+                this.headerAgent();
+                if (!this.dashboard && !is_update) {
+                  this.scrollBottom();
+                  setTimeout(() => {
+                    this.scrollBottom();
+                  }, 300);
+                }
+                if (this.dashboard || !this.chat_open) {
+                  this.updateNotifications("add", this.conversation.id);
+                }
+                this.typing(-1, "stop");
+                this.busy(false);
+                if (
+                  this.audio &&
+                  (count != 1 ||
+                    !(
+                      SBF.null(messages[0].message) &&
+                      SBF.null(messages[0].attachments)
+                    )) &&
+                  ((!admin &&
+                    this.chat_open &&
+                    (is_agent || user_type == "bot") &&
+                    ["aa", "ia"].includes(CHAT_SETTINGS["chat-sound"])) ||
+                    (admin &&
+                      !SBF.isAgent(user_type) &&
+                      ["a", "i", "ic"].includes(SB_ADMIN_SETTINGS["sounds"])))
+                ) {
+                  this.audio.play();
+                }
+                SBF.event("SBNewMessagesReceived", messages);
+                if (tickets) SBTickets.onNewMessageReceived(messages[0]);
+              }
+            }
+          }
+        );
+        this.is_busy_update = true;
+        setTimeout(() => {
+          this.is_busy_update = false;
+        }, 5000);
+      } else {
+        this.updateConversations();
+      }
+    },
+
+    // Update the user conversations list with the latest conversations and messages
+    updateConversations: function () {
+      if (activeUser()) {
+        SBF.ajax(
+          {
+            function: "get-new-user-conversations",
+            datetime: this.id_last_message,
+          },
+          (response) => {
+            if (response.length) {
+              this.id_last_message = response[0]["id"];
+              for (var i = 0; i < response.length; i++) {
+                let conversation_id = response[i]["conversation_id"];
+                let message = new SBMessage(response[i]);
+                let status_code = response[i]["conversation_status_code"];
+                let conversation = new SBConversation([message], {
+                  id: conversation_id,
+                  conversation_status_code: status_code,
+                  department: response[i]["department"],
+                  title: response[i]["title"],
+                });
+                let is_new = activeUser().addConversation(conversation);
+
+                // Red notifications
+                if (
+                  response[i]["user_id"] != activeUser().id &&
+                  (this.conversation.id != conversation_id || !this.chat_open)
+                ) {
+                  this.updateNotifications("add", conversation_id);
+                  if (CHAT_SETTINGS["auto-open"]) {
+                    this.start();
+                  }
+                }
+
+                // Payload
+                let payload = message.payload();
+                if (typeof payload !== "boolean" && "event" in payload) {
+                  let event = payload["event"];
+                  if (event == "open-chat") {
+                    if (mobile) {
+                      this.open(false);
+                    } else {
+                      if (
+                        this.conversation.id != conversation_id ||
+                        this.dashboard
+                      ) {
+                        this.openConversation(conversation_id);
+                      }
+                      setTimeout(() => {
+                        this.open();
+                      }, 500);
+                    }
+                  }
+                  if (message.message == "" && !message.attachments.length) {
+                    continue;
+                  }
+                }
+
+                if (!this.tab_active) {
+                  // Desktop notifications
+                  if (this.desktop_notifications) {
+                    SBChat.desktopNotification(
+                      message.get("full_name"),
+                      message.message,
+                      message.get("profile_image")
+                    );
+                  }
+
+                  // Tab Flash notifications
+                  if (this.flash_notifications) {
+                    this.flashNotification();
+                  }
+
+                  // Sound notifications
+                  if (
+                    this.audio &&
+                    ["a", "aa", "i"].includes(CHAT_SETTINGS["chat-sound"]) &&
+                    (!this.chat_open || !this.tab_active || this.dashboard) &&
+                    !(
+                      SBF.null(message.message) && SBF.null(message.attachments)
+                    )
+                  ) {
+                    this.audio.play();
+                  }
+                }
+                if (is_new) {
+                  SBF.event("SBNewConversationReceived", conversation);
+                  if (tickets)
+                    SBTickets.onNewConversationReceived(conversation);
+                }
+              }
+              main
+                .find(".sb-user-conversations")
+                .html(activeUser().getConversationsCode());
+              main
+                .find(".sb-dashboard-conversations")
+                .setClass(
+                  "sb-conversations-hidden",
+                  main.find(".sb-user-conversations > li").length > 3
+                );
+            }
+          }
+        );
+      }
+    },
+
+    // Generate the conversation code and display it
+    populate: function () {
+      if (this.conversation) {
+        let code = "";
+        let notify = chat.find(" > .sb-notify-message");
+        let last_date = false;
+        for (var i = 0; i < this.conversation.messages.length; i++) {
+          let message = this.conversation.messages[i];
+          let current_date = SBF.beautifyTime(message.get("creation_time"));
+          if (current_date != last_date) {
+            code += `<div class="sb-label-date">${current_date}</div>`;
+            last_date = current_date;
+          }
+          code += message.getCode();
+        }
+        chat.html((notify.length ? notify[0].outerHTML : "") + code);
+        if (!this.dashboard) {
+          this.scrollBottom();
+          this.calculateLabelDates();
+        }
+      } else if (activeUser() && !activeUser().isConversationsEmpty()) {
+        if (CHAT_SETTINGS["disable-dashboard"])
+          this.openConversation(activeUser().conversations[0].id);
+        else this.showDashboard();
+      }
+    },
+
+    // Populate the dashboard with all conversations
+    populateConversations: function (onSuccess = false) {
+      if (!this.is_busy_populate && activeUser()) {
+        this.is_busy_populate = true;
+        setTimeout(() => {
+          this.is_busy_populate = false;
+        }, 5000);
+        activeUser().getConversations((response) => {
+          let count = response.length;
+
+          if (count) {
+            let now = Date.now();
+            this.id_last_message = response[0]["messages"][0].id;
+            for (var i = 0; i < count; i++) {
+              if (
+                response[i].get("conversation_status_code") == 1 &&
+                (!this.conversation || this.conversation.id != response[i].id)
+              ) {
+                this.updateNotifications("add", response[i].id);
+              }
+              if (
+                now - SBF.UTC(response[i]["messages"][0].get("creation_time")) <
+                6000
+              )
+                this.open();
+            }
+            main.removeClass("sb-no-conversations");
+            main
+              .find(".sb-user-conversations")
+              .html(activeUser().getConversationsCode());
+            main
+              .find(".sb-dashboard-conversations")
+              .setClass(
+                "sb-conversations-hidden",
+                main.find(".sb-user-conversations > li").length > 3
+              );
+          }
+          if (
+            (!this.initialized || force_action == "open-conversation") &&
+            count == 1 &&
+            !this.isInitDashboard() &&
+            !storage("open-conversation")
+          ) {
+            this.openConversation(activeUser().conversations[0].id);
+            if (force_action == "open-conversation") force_action = "";
+          }
+          if (onSuccess) {
+            onSuccess(response);
+          }
+          this.finalizeInit();
+        });
+      }
+    },
+
+    // Create a new conversation and optionally send the first message
+    newConversation: function (
+      status_code,
+      user_id = -1,
+      message = "",
+      attachments = [],
+      department = null,
+      agent_id = null,
+      onSuccess = false,
+      source = selectedSource
+    ) {
+      if (activeUser()) {
+        SBF.ajax(
+          {
+            function: "new-conversation",
+            status_code: status_code,
+            title: tickets ? main.find(".sb-ticket-title input").val() : null,
+            department: SBF.null(department)
+              ? this.default_department
+              : department,
+            agent_id: SBF.null(agent_id) ? this.default_agent : agent_id,
+            tags: this.default_tags,
+            source: source,
+          },
+          (response) => {
+            if (SBF.errorValidation(response, "user-not-found")) {
+              this.addUserAndLogin(() => {
+                this.newConversation(
+                  status_code,
+                  user_id,
+                  message,
+                  attachments,
+                  department,
+                  agent_id,
+                  onSuccess
+                );
+              });
+              return;
+            }
+            let conversation = new SBConversation([], response["details"]);
+            this.setConversation(conversation);
+            this.sendMessage(user_id, message, attachments);
+            // if (user_id != bot_id) {
+            //   setTimeout(() => {
+            //     this.queue(conversation.id);
+            //   }, 1000);
+            // }
+            activeUser().conversations.push(conversation);
+            if (onSuccess) onSuccess(conversation);
+          }
+        );
+        // } else {
+        //   SBF.error("activeUser() not setted", "SBChat.newConversation");
+      }
+    },
+
+    // Set an existing conversation as active conversation
+    setConversation: function (conversation) {
+      if (conversation instanceof SBConversation) {
+        this.conversation = conversation;
+        this.id_last_message_conversation = !this.conversation.getLastMessage()
+          ? 0
+          : this.conversation.getLastMessage().id;
+        this.datetime_last_message_conversation =
+          this.conversation.getLastMessage() == false
+            ? "2000-01-01 00:00:00"
+            : this.conversation.getLastMessage().get("creation_time");
+        if (conversation.id != this.conversation.id) {
+          this.queue(conversation.id);
+        }
+        storage("open-conversation", conversation.id);
+        SBF.event("SBActiveConversationChanged", conversation);
+      } else {
+        SBF.error("Value not of type SBConversation", "SBChat.setConversation");
+      }
+      //alert set get notes
+      //SBF.startAlarm(SBChat.conversation.id)
+    },
+
+    // Manage all the queue functionalities 31/marzo
+    // 		queue: function(conversation_id) {
+    // 			if (conversation_id == 'clear') {
+    // 				main.removeClass('sb-notify-active sb-queue-active');
+    // 				chat.find(' > .sb-notify-message').remove();
+    // 				clearInterval(this.queue_interval);
+    // 				this.queue_interval = false;
+    // 				storage('queue', '');
+    // 				return;
+    // 			}
+    // 			if (!admin && CHAT_SETTINGS['queue']) {
+    // 				SBF.ajax({
+    // 					function: 'queue',
+    // 					conversation_id: conversation_id,
+    // 					department: this.conversation.get('department')
+    // 				}, (response) => {
+    // 					chat.find(' > .sb-notify-message').remove();
+    // 					let position = response[0];
+    // 					if (position == 0) {
+    // 						this.queue('clear');
+    // 					} else {
+    // 						let time = (!CHAT_SETTINGS['queue-response-time'] ? 5 : parseInt(CHAT_SETTINGS['queue-response-time'])) * position;
+    // 						let text = sb_(!CHAT_SETTINGS['queue-message'] ? 'Please wait for an agent. You are number {position} in the queue. Your waiting time is approximately {minutes} minutes.' : CHAT_SETTINGS['queue-message']).replace('{position}', '<b>' + position + '</b>').replace('{minutes}', '<b>' + time + '</b>');
+    // 						if (response[1]) chat.prepend(`<div class="sb-notify-message sb-rich-cnt"><div class="sb-cnt"><div class="sb-message">${text}</div></div></div>`);
+    // 						if (this.queue_interval === false) {
+    // 							this.queue_interval = setInterval(() => {
+    // 								this.queue(conversation_id)
+    // 							}, 10100);
+    // 							if (response[1]) main.addClass('sb-notify-active sb-queue-active');
+    // 							storage('queue', conversation_id);
+    // 						}
+    // 					}
+    // 					SBF.event('SBQueueUpdate', position);
+    // 				});
+    // 			}
+    // 		},
+
+    // Get the departments details and generate the department code
+    getDepartmentCode(department_id, onSuccess) {
+      if (this.departments) {
+        if (department_id == "all") {
+          let code = "";
+          for (var key in this.departments) {
+            this.getDepartmentCode(this.departments[key]["id"], (response) => {
+              code += response;
+            });
+          }
+          onSuccess(code);
+        } else {
+          onSuccess(
+            `<div data-color="${this.departments[department_id]["color"]}">${
+              this.departments[department_id]["image"] == ""
+                ? `<span></span>`
+                : `<img loading="lazy" src="${this.departments[department_id]["image"]}" />`
+            }<div>${this.departments[department_id]["name"]}<div></div>`
+          );
+        }
+      } else {
+        SBF.ajax(
+          {
+            function: "get-departments",
+          },
+          (response) => {
+            if (response) {
+              this.departments = response;
+              this.getDepartmentCode(department_id, onSuccess);
+            }
+          }
+        );
+      }
+    },
+
+    // Start and stop the real time check of new messages
+    startRealTime: function () {
+      if (SBPusher.active) return;
+      this.stopRealTime();
+      this.real_time = setInterval(() => {
+        this.update();
+        this.typing(
+          admin ? (activeUser() ? activeUser().id : -1) : this.agent_id,
+          "check"
+        );
+      }, 1000);
+    },
+
+    stopRealTime: function () {
+      clearInterval(this.real_time);
+    },
+
+    // Check if the agent is online and set the online status of the active user
+    updateUsersActivity: function () {
+      if (activeUser()) {
+        SBF.updateUsersActivity(activeUser().id, this.agent_id, (response) => {
+          if (!this.typing_settings["typing"]) {
+            if (response == "online" || this.agent_id == bot_id) {
+              $(chat_status).addClass("sb-status-online").html(sb_("Online"));
+              this.agent_online = this.agent_id != bot_id;
+            } else {
+              $(chat_status).removeClass("sb-status-online").html(sb_("Away"));
+              this.agent_online = false;
+            }
+          }
+        });
+      }
+    },
+
+    // Show the loading icon and put the chat in busy mode
+    busy: function (value) {
+      chat_editor.find(".sb-loader").sbActive(value);
+      this.is_busy = value;
+      SBF.event("SBBusy", value);
+    },
+
+    // Manage the agent header
+    headerAgent: function () {
+      if (
+        !admin &&
+        !tickets &&
+        !this.dashboard &&
+        this.conversation &&
+        (this.agent_id == -1 ||
+          (this.conversation.getLastMessage() &&
+            SBF.isAgent(this.conversation.getLastMessage().get("user_type")) &&
+            this.conversation.getLastMessage().get("user_id") != this.agent_id))
+      ) {
+        let agent = this.lastAgent();
+        if (agent) {
+          this.agent_id = agent["user_id"];
+          this.headerReset();
+          chat_header
+            .addClass("sb-header-agent")
+            .attr("data-agent-id", this.agent_id)
+            .html(
+              `<div class="sb-dashboard-btn bi-chevron-left"></div><div class="sb-profile"><img loading="lazy" src="${
+                agent["profile_image"]
+              }" /><div><span class="sb-name">${
+                agent["full_name"]
+              }</span><span class="sb-status">${sb_(
+                "Away"
+              )}</span></div><i class="sb-icon bi-x-lg ${
+                !mobile && CHAT_SETTINGS["close-chat"]
+                  ? "sb-close-chat"
+                  : "sb-responsive-close-btn"
+              }"></i></div><div class="sb-label-date-top"></div>`
+            );
+          chat_status = chat_header.find(".sb-status");
+          this.updateUsersActivity();
+          label_date = chat_header.find(".sb-label-date-top");
+          if (SBF.storageTime("header-animation", 1)) {
+            this.headerAnimation();
+          }
+        }
+      }
+    },
+
+    headerReset: function () {
+      if (this.start_header == false) {
+        this.start_header = [chat_header.html(), chat_header.attr("class")];
+      }
+      chat_header.removeClass(
+        "sb-header-main sb-header-brand sb-header-agent sb-header-minimal"
+      );
+      this.main_header = false;
+    },
+
+    headerAnimation: function () {
+      chat_header.addClass("sb-header-animation");
+      setTimeout(() => {
+        chat_header.removeClass("sb-header-animation");
+      }, 8000);
+      SBF.storageTime("header-animation");
+    },
+
+    // Return the last agent of the active conversation
+    lastAgent: function (bot = true) {
+      let agent = false;
+      if (this.conversation) {
+        let message = this.conversation.getLastUserMessage(
+          false,
+          bot ? "all" : true
+        );
+        if (message) {
+          agent = {
+            user_id: message.get("user_id"),
+            full_name: message.get("full_name"),
+            profile_image: message.get("profile_image"),
+          };
+        }
+      }
+      return agent;
+    },
+
+    // Scroll the chat to the bottom
+    scrollBottom: function (top = false) {
+      label_date_show = false;
+      setTimeout(() => {
+        label_date_show = true;
+      }, 1000);
+      // delay to scroll bottom on new messages
+      setTimeout(() => {
+        chat_scroll_area.scrollTop(top ? 0 : chat_scroll_area[0].scrollHeight);
+        this.scrollHeader();
+      }, 300);
+    },
+
+    // scrollBottom: function () {
+    //   var scrollPosition = chat_scroll_area.scrollTop();
+    //   var isScrolledBelowThreshold =
+    //     chat_scroll_area[0].scrollHeight -
+    //       scrollPosition -
+    //       chat_scroll_area.innerHeight() <
+    //     1000;
+
+    //   if (isScrolledBelowThreshold) {
+    //     label_date_show = false;
+    //     setTimeout(() => {
+    //       label_date_show = true;
+    //     }, 1000);
+    //     setTimeout(() => {
+    //       chat_scroll_area.scrollTop(chat_scroll_area[0].scrollHeight);
+    //       this.scrollHeader();
+    //     }, 200);
+    //   } else if (label_date_show !== true) {
+    //     label_date_show = true;
+    //   }
+    // },
+
+    // Check if the chat is at bottom
+    isBottom: function () {
+      return (
+        chat_scroll_area[0].scrollTop ===
+        chat_scroll_area[0].scrollHeight - chat_scroll_area[0].offsetHeight
+      );
+    },
+
+    // Dashboard header animation
+    scrollHeader: function () {
+      if (this.main_header && this.dashboard) {
+        let scroll = chat_scroll_area.scrollTop();
+        if (scroll > -1 && scroll < 1000) {
+          chat_header.find(".sb-content").css({
+            opacity: 1 - scroll / 500,
+            top: (scroll / 10) * -1 + "px",
+          });
+        }
+      }
+    },
+
+    // Display the dashboard area
+    showDashboard: function () {
+      if (!admin && !tickets) {
+        main.addClass("sb-dashboard-active");
+        chat_header.removeClass("sb-header-agent");
+        this.hidePanel();
+        if (this.start_header)
+          chat_header.html(this.start_header[0]).addClass(this.start_header[1]);
+        chat_scroll_area.find(" > div").sbActive(false);
+        main.find(".sb-dashboard").sbActive(true);
+        this.populateConversations();
+        this.conversation = false;
+        this.agent_id = -1;
+        this.stopRealTime();
+        this.dashboard = true;
+        this.main_header = true;
+        this.scrollBottom(true);
+        SBF.event("SBDashboard");
+      }
+    },
+
+    // Hide the dashboard area
+    hideDashboard: function () {
+      if (!admin && !tickets) {
+        chat.sbActive(true);
+        main
+          .removeClass("sb-dashboard-active")
+          .find(".sb-dashboard")
+          .sbActive(false);
+        this.dashboard = false;
+        this.headerAgent();
+        this.scrollHeader(0);
+        if (this.chat_open) {
+          this.startRealTime();
+        }
+        SBF.event("SBDashboardClosed");
+      }
+    },
+
+    // Show a chat panel
+    showPanel: function (name, title) {
+      if (tickets) return SBTickets.showPanel(name, title);
+      let panel = chat_scroll_area.find(" > .sb-panel-" + name);
+      if (panel.length) {
+        chat_scroll_area.find(" > div").sbActive(false);
+        panel.sbActive(true);
+        if (!this.start_header)
+          this.start_header = [chat_header.html(), chat_header.attr("class")];
+        chat_header
+          .attr("class", "sb-header sb-header-panel")
+          .html(
+            `${sb_(title)}<div class="sb-dashboard-btn bi-x-lg"></div>`
+          );
+        main.addClass("sb-panel-active");
+        this.dashboard = true;
+      }
+      SBF.event("SBPanelActive", name);
+    },
+
+    hidePanel: function () {
+      main.removeClass("sb-panel-active");
+      chat_header.removeClass("sb-header-panel");
+    },
+
+    // Clear the conversation area and the active conversation
+    clear: function () {
+      this.conversation = false;
+      chat.html("");
+    },
+
+    // Update the red notification counter of the chat
+    updateNotifications: function (action = "add", conversation_id) {
+      if (action == "add" && !this.notifications.includes(conversation_id)) {
+        this.notifications.push(conversation_id);
+        if (
+          !this.dashboard &&
+          this.conversation &&
+          this.conversation.id != conversation_id
+        )
+          this.headerAnimation();
+      }
+      if (action == "remove") {
+        for (var i = 0; i < this.notifications.length; i++) {
+          if (this.notifications[i] == conversation_id) {
+            this.notifications.splice(i, 1);
+            if (
+              this.conversation.get("conversation_status_code") != 0 &&
+              ["1", "2", 1, 2].includes(
+                this.conversation.get("conversation_status_code")
+              )
+            ) {
+              this.setConversationStatus(0);
+            }
+            break;
+          }
+        }
+      }
+      let count = this.notifications.length;
+      main
+        .find(".sb-chat-btn span")
+        .attr("data-count", count)
+        .html(count > -1 ? count : 0);
+      SBF.event("SBNotificationsUpdate", {
+        action: action,
+        conversation_id: conversation_id,
+      });
+    },
+
+    // Set the active conversation status
+    setConversationStatus: function (status_code) {
+      if (this.conversation) {
+        SBF.ajax(
+          {
+            function: "update-conversation-status",
+            conversation_id: this.conversation.id,
+            status_code: status_code,
+          },
+          () => {
+            this.conversation.set("conversation_status_code", status_code);
+            SBF.event("SBActiveConversationStatusUpdated", {
+              conversation_id: this.conversation.id,
+              status_code: status_code,
+            });
+          }
+        );
+        return true;
+      }
+      return false;
+    },
+
+    // Typing status
+    typing: function (user_id = -1, action = "check") {
+      if (this.conversation) {
+        let valid = this.agent_online || (admin && this.user_online);
+        if (
+          action == "check" &&
+          !SBPusher.active &&
+          user_id != -1 &&
+          user_id != bot_id &&
+          valid
+        ) {
+          SBF.ajax(
+            {
+              function: "is-typing",
+              user_id: user_id,
+              conversation_id: this.conversation.id,
+            },
+            (response) => {
+              if (response && !this.typing_settings["typing"]) {
+                this.typing(-1, "start");
+              } else if (!response && this.typing_settings["typing"]) {
+                this.typing(-1, "stop");
+              }
+            }
+          );
+        } else if (action == "set" && valid) {
+          let source = this.conversation.get("source");
+          if (source) {
+            source =
+              source == "fb"
+                ? [
+                    source,
+                    activeUser().getExtra("facebook-id")["value"],
+                    this.conversation.get("extra"),
+                  ]
+                : source == "tw"
+                ? [source, activeUser().getExtra("twitter-id")["value"]]
+                : false;
+          }
+          if (SBPusher.active) {
+            SBF.debounce(() => {
+              SBPusher.trigger("client-typing", {
+                user_id: admin ? SB_ACTIVE_AGENT["id"] : activeUser().id,
+                conversation_id: this.conversation.id,
+              });
+              if (source)
+                SBF.ajax({
+                  function: "set-typing",
+                  source: source,
+                });
+            }, "#2");
+          } else {
+            if (!this.typing_settings["sent"]) {
+              this.typing_settings["sent"] = true;
+              SBF.ajax({
+                function: "set-typing",
+                user_id: user_id,
+                conversation_id: this.conversation.id,
+                source: source,
+              });
+              this.typing(user_id, "set");
+            } else {
+              clearTimeout(this.typing_settings["timeout"]);
+              this.typing_settings["timeout"] = setTimeout(() => {
+                SBF.ajax(
+                  {
+                    function: "set-typing",
+                    user_id: user_id,
+                    conversation_id: -1,
+                  },
+                  () => {
+                    this.typing_settings["sent"] = false;
+                  }
+                );
+              }, 2000);
+            }
+          }
+        } else if (action == "start" || action == "stop") {
+          let start = action == "start";
+          if (!admin && chat_status) {
+            if (start) {
+              $(chat_status).addClass("sb-status-typing").html(sb_("Typing"));
+            } else {
+              let online = this.agent_online || this.agent_id == bot_id;
+              $(chat_status)
+                .removeClass("sb-status-typing")
+                .html(sb_(online ? "Online" : "Away"));
+              if (online) $(chat_status).addClass("sb-status-online");
+            }
+          }
+          this.typing_settings["typing"] = start;
+          SBF.event("SBTyping", start);
+        }
+      }
+    },
+
+    // Emoji
+    categoryEmoji: function (category) {
+      let list = this.emoji_options["list"];
+      if (category == "all") {
+        this.emoji_options["list_now"] = list;
+      } else {
+        this.emoji_options["list_now"] = [];
+        for (var i = 0; i < list.length; i++) {
+          if (list[i]["category"].startsWith(category)) {
+            this.emoji_options["list_now"].push(list[i]);
+          }
+        }
+      }
+      this.emoji_options["range"] = 0;
+      this.populateEmoji(0);
+      this.populateEmojiBar();
+    },
+
+    mouseWheelEmoji: function (e) {
+      let range = this.emoji_options["range"];
+      if (
+        sbDelta(e) > 0 ||
+        (mobile &&
+          typeof e.originalEvent.changedTouches !== ND &&
+          this.emoji_options["touch"] <
+            e.originalEvent.changedTouches[0].clientY)
+      ) {
+        range -= range < 1 ? 0 : 1;
+      } else {
+        range += range > this.emoji_options["range_limit"] ? 0 : 1;
+      }
+      chat_emoji
+        .find(".sb-emoji-bar > div")
+        .sbActive(false)
+        .eq(range)
+        .sbActive(true);
+      this.emoji_options["range"] = range;
+      this.populateEmoji(range);
+      e.preventDefault();
+    },
+
+    insertEmoji: function (emoji) {
+      if (emoji.indexOf(".svg") > 0) {
+        emoji = $.parseHTML(emoji)[0]["alt"];
+      }
+      this.insertText(emoji);
+      chat_emoji.sbTogglePopup();
+    },
+
+    showEmoji: function (button) {
+      if (chat_emoji.sbTogglePopup(button)) {
+        if (!admin) {
+          chat_emoji.css({
+            left: chat_editor.offset().left + (tickets ? 68 : 20),
+            top:
+              chat_editor.offset().top -
+              window.scrollY -
+              (tickets ? chat_editor.height() - 330 : 304),
+          });
+        }
+        if (chat_emoji.find(".sb-emoji-list > ul").html() == "") {
+          jQuery
+            .ajax({
+              method: "POST",
+              url: SB_AJAX_URL,
+              data: {
+                function: "emoji",
+              },
+            })
+            .done((response) => {
+              this.emoji_options["list"] = JSON.parse(response);
+              this.emoji_options["list_now"] = this.emoji_options["list"];
+              this.populateEmoji(0);
+              this.populateEmojiBar();
+            });
+        }
+        SBF.deselectAll();
+      }
+    },
+
+    populateEmoji: function (range) {
+      let code = "";
+      let per_page = mobile ? 42 : 48;
+      let limit = range * per_page + per_page;
+      let list_now = this.emoji_options["list_now"];
+      if (limit > list_now.length) limit = list_now.length;
+      this.emoji_options["range_limit"] = list_now.length / per_page - 1;
+      this.emoji_options["range"] = range;
+      for (var i = range * per_page; i < limit; i++) {
+        code += `<li>${list_now[i]["char"]}</li>`;
+      }
+      chat_emoji.find(".sb-emoji-list").html(`<ul>${code}</ul>`);
+    },
+
+    populateEmojiBar: function () {
+      let code = '<div class="sb-active"></div>';
+      let per_page = mobile ? 42 : 49;
+      for (
+        var i = 0;
+        i < this.emoji_options["list_now"].length / per_page - 1;
+        i++
+      ) {
+        code += "<div></div>";
+      }
+      this.emoji_options["range"] = 0;
+      chat_emoji.find(".sb-emoji-bar").html(code);
+    },
+
+    clickEmojiBar: function (item) {
+      let range = $(item).index();
+      this.populateEmoji(range);
+      this.emoji_options["range"] = range;
+      chat_emoji
+        .find(".sb-emoji-bar > div")
+        .sbActive(false)
+        .eq(range)
+        .sbActive(true);
+    },
+
+    searchEmoji: function (search) {
+      SBF.search(search, () => {
+        if (search.length > 1) {
+          let list = this.emoji_options["list"];
+          let list_now = [];
+          for (var i = 0; i < list.length; i++) {
+            if (
+              list[i]["category"].toLowerCase().includes(search) ||
+              list[i]["name"].toLowerCase().includes(search)
+            ) {
+              list_now.push(list[i]);
+            }
+          }
+          this.emoji_options["list_now"] = list_now;
+        } else {
+          this.emoji_options["list_now"] = this.emoji_options["list"];
+        }
+        this.emoji_options["range"] = 0;
+        this.populateEmoji(0);
+        this.populateEmojiBar();
+      });
+    },
+
+    // Editor methods
+    textareaChange: function (textarea) {
+      let value = $(textarea).val();
+
+      // Saved replies
+      if (admin) {
+        SBAdmin.conversations.savedReplies(textarea, value);
+      }
+
+      // Typing
+      if (value) {
+        this.typing(
+          admin && !SBPusher.active ? SB_ACTIVE_AGENT["id"] : activeUser().id,
+          "set"
+        );
+        this.activateBar();
+      } else {
+        this.activateBar(false);
+      }
+    },
+
+    insertText: function (text) {
+      let textarea = $(chat_textarea.get(0));
+      let index = 0;
+      if (this.dashboard) return false;
+      if ("selectionStart" in textarea.get(0)) {
+        index = textarea.get(0).selectionStart;
+      } else if ("selection" in document) {
+        textarea.focus();
+        let selection = document.selection.createRange();
+        var selection_length = document.selection.createRange().text.length;
+        selection.moveStart("character", -textarea.value.length);
+        index = selection.text.length - selection_length;
+      }
+      textarea.val(
+        textarea.val().substr(0, index) + text + textarea.val().substr(index)
+      );
+      textarea.focus();
+      textarea.manualExpandTextarea();
+      this.activateBar();
+    },
+
+    enabledAutoExpand: function () {
+      if (chat_textarea.length) chat_textarea.autoExpandTextarea();
+    },
+
+    // Privacy message
+    privacy: function () {
+      SBF.ajax(
+        {
+          function: "get-block-setting",
+          value: "privacy",
+        },
+        (response) => {
+          chat_scroll_area.append(
+            `<div class="sb-privacy sb-init-form" data-decline="${response["decline"]}"><div class="sb-title">${response["title"]}</div><div class="sb-text">${response["message"]}</div>` +
+              (response["link"]
+                ? `<a target="_blank" href="${response["link"]}">${response["link-name"]}</a>`
+                : "") +
+              `<div class="sb-buttons"><a class="sb-btn sb-approve">${response["btn-approve"]}</a><a class="sb-btn sb-decline">${response["btn-decline"]}</a></div></div>`
+          );
+          this.finalizeInit();
+          SBF.event("SBPrivacy");
+        }
+      );
+      if (!this.dashboard) this.showDashboard();
+      this.dashboard = true;
+      main.addClass("sb-init-form-active");
+    },
+
+    // Popup message
+    popup: function (close = false, content = false) {
+      if (close) {
+        let popup = main.find(".sb-popup-message");
+        let id = popup.attr("data-id");
+        storage("popup" + (SBF.null(id) ? "" : id), true);
+        popup.remove();
+        return;
+      }
+      setTimeout(() => {
+        if (!this.chat_open) {
+          if (content == false) content = CHAT_SETTINGS["popup"];
+          main.find(".sb-popup-message").remove();
+          main.append(
+            `<div data-id="${
+              "id" in content ? content["id"] : ""
+            }" class="sb-popup-message">` +
+              ("image" in content && content["image"]
+                ? `<img loading="lazy" src="${content["image"]}" />`
+                : "") +
+              ("title" in content && content["title"]
+                ? `<div class="sb-top">${content["title"]}</div>`
+                : "") +
+              `<div class="sb-text">${content["message"]}</div><div class="bi-x-lg"></div></div>`
+          );
+          SBF.event("SBPopup", content);
+        }
+      }, 1000);
+    },
+
+    // Follow up message
+    followUp: function () {
+      if (this.followUpCheck()) {
+        if (timeout) clearTimeout(timeout);
+        timeout = setTimeout(
+          () => {
+            if (this.followUpCheck()) {
+              let settings = CHAT_SETTINGS["follow"];
+              this.sendMessage(
+                bot_id,
+                `[email id="sb-follow-up-form" title="${settings["title"]}" message="${settings["message"]}" placeholder="${settings["placeholder"]}" name="${settings["name"]}" last-name="${settings["last-name"]}" phone="${settings["phone"]}" phone-required="${settings["phone-required"]}" success="${settings["success"]}"]`
+              );
+              this.scrollBottom();
+              SBF.storageTime("email");
+              SBF.event("SBFollowUp");
+            }
+          },
+          SBF.null(CHAT_SETTINGS["follow"]["delay"])
+            ? CHAT_SETTINGS["office-hours"] || agents_online
+              ? 15000
+              : SBApps.dialogflow.active()
+              ? 8000
+              : 5000
+            : parseInt(CHAT_SETTINGS["follow"]["delay"])
+        );
+      }
+    },
+
+    followUpCheck: function () {
+      return (
+        !admin &&
+        this.conversation &&
+        CHAT_SETTINGS["follow"]["active"] &&
+        activeUser() &&
+        !activeUser().get("email") &&
+        SBF.storageTime("email", 24) &&
+        (CHAT_SETTINGS["office-hours"] ||
+          !CHAT_SETTINGS["follow"]["disable-office-hours"])
+      );
+    },
+
+    // Welcome message
+    welcome: function () {
+      if (
+        (CHAT_SETTINGS["welcome-trigger"] != "open" || this.chat_open) &&
+        (CHAT_SETTINGS["office-hours"] ||
+          !CHAT_SETTINGS["welcome-disable-office-hours"]) &&
+        CHAT_SETTINGS["welcome"] &&
+        !storage("welcome") &&
+        activeUser()
+      ) {
+        SBF.ajax(
+          {
+            function: "get-block-setting",
+            value: "welcome",
+          },
+          (response) => {
+            setTimeout(() => {
+              if (CHAT_SETTINGS["dialogflow-welcome"]) {
+                if (this.conversation === false) {
+                  this.newConversation(3, -1, "", [], null, null, function () {
+                    SBApps.dialogflow.welcome(
+                      response["open"],
+                      response["sound"]
+                    );
+                  });
+                } else {
+                  SBApps.dialogflow.welcome(
+                    response["open"],
+                    response["sound"]
+                  );
+                }
+              }
+              {
+                this.sendMessage(
+                  bot_id,
+                  response["message"],
+                  [],
+                  false,
+                  false,
+                  3
+                );
+                if (response["open"]) {
+                  this.start();
+                }
+                if (response["sound"]) {
+                  this.audio.play();
+                }
+              }
+              this.skip = true;
+              SBF.event("SBWelcomeMessage");
+            }, parseInt(tickets ? 0 : CHAT_SETTINGS["welcome-delay"]));
+            storage("welcome", true);
+          }
+        );
+      }
+    },
+
+    // Subscribe message
+    // subscribe: function () {
+    //   if (
+    //     CHAT_SETTINGS["subscribe"] &&
+    //     !storage("subscribe") &&
+    //     activeUser() &&
+    //     SBF.null(activeUser().get("email")) &&
+    //     activeUser()
+    //   ) {
+    //     setTimeout(() => {
+    //       SBF.ajax(
+    //         {
+    //           function: "get-block-setting",
+    //           value: "subscribe",
+    //         },
+    //         (response) => {
+    //           this.sendMessage(
+    //             bot_id,
+    //             response["message"],
+    //             [],
+    //             false,
+    //             {
+    //               event: "open-chat",
+    //             },
+    //             3
+    //           );
+    //           if (response["sound"] && this.audio) {
+    //             this.audio.play();
+    //           }
+    //           this.skip = true;
+    //           storage("subscribe", true);
+    //         }
+    //       );
+    //     }, parseInt(CHAT_SETTINGS["subscribe-delay"]));
+    //   }
+    // },
+
+    // Offline timetable message
+    offlineMessage: function () {
+      if (
+        !admin &&
+        !this.offline_message_set &&
+        CHAT_SETTINGS["timetable"] &&
+        (!CHAT_SETTINGS["office-hours"] ||
+          (!agents_online && !CHAT_SETTINGS["timetable-disable-agents"])) &&
+        SBF.storageTime("timetable", 1)
+      ) {
+        let message = CHAT_SETTINGS["timetable-message"];
+        switch (CHAT_SETTINGS["timetable-type"]) {
+          case "header":
+            if (message[0]) chat_header.find(".sb-title").html(message[0]);
+            chat_header.find(".sb-text").html(message[1]);
+            this.offline_message_set = true;
+            break;
+          case "info":
+            chat.prepend(
+              `<div class="sb-notify-message sb-rich-cnt">
+              <div class="server-response"> <i class="bi-check2-all"></i></div>
+              <div class="sb-cnt"><div class="sb-message">${
+                message[0] ? `<strong>${message[0]}</strong> ` : ""
+              }${message[1]}</div></div></div>`
+            );
+            main.addClass("sb-notify-active");
+            this.offline_message_set = true;
+            break;
+          default:
+            setTimeout(() => {
+              if (this.conversation) {
+                this.sendMessage(
+                  bot_id,
+                  CHAT_SETTINGS["timetable-hide"]
+                    ? `${message[0] ? `*${message[0]}*\n` : ""}${message[1]}`
+                    : "[timetable]"
+                );
+                this.scrollBottom();
+                this.offline_message_set = true;
+                SBF.storageTime("timetable");
+              }
+            }, 5000);
+        }
+      }
+    },
+
+    // Delete message
+    deleteMessage: function (message_id) {
+      SBF.ajax(
+        {
+          function: "delete-message",
+          message_id: message_id,
+        },
+        () => {
+          if (this.conversation) this.conversation.deleteMessage(message_id);
+          chat.find(`[data-id="${message_id}"]`).remove();
+          this.update();
+          console.log("chat", message_id);
+          SBF.event("SBMessageDeleted", message_id);
+        }
+      );
+    },
+
+    // Registration form
+    registration: function (
+      check = false,
+      type = CHAT_SETTINGS["registration-required"]
+    ) {
+      if (check)
+        return (
+          CHAT_SETTINGS["registration-required"] &&
+          (!CHAT_SETTINGS["registration-offline"] || !agents_online) &&
+          (!CHAT_SETTINGS["registration-timetable"] ||
+            !CHAT_SETTINGS["office-hours"]) &&
+          (activeUser() === false ||
+            ["visitor", "lead"].includes(activeUser().type))
+        );
+      chat_scroll_area.append(
+        SBRichMessages.generate(
+          {},
+          CHAT_SETTINGS["registration-link"] ? "login" : type,
+          "sb-init-form"
+        )
+      );
+      if (!this.dashboard) this.showDashboard();
+      this.dashboard = true;
+      this.finalizeInit();
+      main.addClass("sb-init-form-active");
+    },
+
+    // Display the send button
+    activateBar: function (show = true) {
+      chat_editor.find(".sb-bar").sbActive(show);
+    },
+
+    // Shortcut for add user and login function
+    addUserAndLogin: function (onSuccess = false, lead = false) {
+      let settings = typeof SB_DEFAULT_USER != ND ? SB_DEFAULT_USER : {};
+      settings.user_type = lead ? "lead" : "visitor";
+      SBF.ajax(
+        {
+          function: "add-user-and-login",
+          settings: settings,
+          settings_extra: settings.extra,
+        },
+        (response) => {
+          SBF.loginCookie(response[1]);
+          activeUser(new SBUser(response[0]));
+          SBPusher.start();
+          if (!SBPusher.active) SBChat.automations.run_all();
+          if (onSuccess) {
+            onSuccess(response);
+          }
+        }
+      );
+    },
+
+    // Check if the dashboard must be showed
+    isInitDashboard: function () {
+      return (
+        CHAT_SETTINGS["init-dashboard"] ||
+        (activeUser() && activeUser().conversations.length > 1)
+      );
+    },
+
+    // Upload response
+    uploadResponse: function (response) {
+      response = JSON.parse(response);
+      if (response[0] == "success") {
+        if (response[1] == "extension_error") {
+          let message =
+            "The file you are trying to upload has an extension that is not allowed.";
+          if (admin) SBAdmin.dialog(message, "info");
+          else alert(message);
+        } else if ($(upload_target).hasClass("sb-input-image")) {
+          $(upload_target)
+            .find(".image")
+            .attr("data-value", "")
+            .css("background-image", "");
+          setTimeout(() => {
+            $(upload_target)
+              .find(".image")
+              .attr("data-value", response[1])
+              .css(
+                "background-image",
+                `url("${response[1]}?v=${SBF.random()}")`
+              )
+              .append('<i class="bi-x-lg"></i>');
+            upload_target = false;
+          }, 500);
+        } else {
+          let name = response[1].substr(response[1].lastIndexOf("/") + 1);
+          let attachmentElement = "";
+
+          // Check if response[1] is a valid image URL
+          const isImageURL = /\.(jpg|jpeg|png|)$/.test(
+            response[1].toLowerCase()
+          );
+
+          // Check if response[1] is a valid audio URL
+          const isAudioURL = /\.(mp3|ogg)$/.test(response[1].toLowerCase());
+
+          // Check if response[1] is a valid Office format URL
+          const isOfficeURL = /\.(docx|pptx|xlsx|doc|ppt|xls)$/.test(
+            response[1].toLowerCase()
+          );
+
+          // Conditionally construct HTML
+          if (isImageURL) {
+            attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
+                                <img style="border-radius: .4rem; width: 33px; vertical-align: middle;object-fit:cover;" src="${response[1]}" width="30" height="30">
+                                <i class="bi-x-lg"></i>
+                              </div>`;
+          } else if (isAudioURL) {
+            attachmentElement = `<div style="display:flex;flex-direction:row;align-items: center;" data-name="${name}" data-value="${
+              response[1]
+            }" data-id="${response[2]}">
+                                <audio controls style="max-width: 100%; max-height: 33px; border-radius: var(--chat-rounded-size-6);">
+                                  <source src="${
+                                    response[1]
+                                  }" type="audio/${response[1]
+              .split(".")
+              .pop()}">
+                                  Your browser does not support the audio element.
+                                </audio>
+                                <i class="bi-x-lg"></i>
+                              </div>`;
+          } else if (isOfficeURL) {
+            // For Office formats, use doc.png as a placeholder image
+            attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
+                                <i class="bi bi-file-earmark-text-fill" style="font-size:1.8rem"></i>
+                                 <i class="bi-x-lg"></i>
+                              </div>`;
+          } else {
+            attachmentElement = `<div data-name="${name}" data-value="${response[1]}" data-id="${response[2]}">
+          <i class="bi bi-file-earmark-text-fill" style="font-size:1.89rem; color: var(--chat-text-primary)"></i>
+           <i class="bi-x-lg"></i>
+        </div`;
+          }
+
+          chat_editor.find(".sb-attachments").append(attachmentElement);
+          SBChat.activateBar();
+        }
+      } else {
+        SBF.error(response[1], "sb-upload-files.change");
+      }
+      this.busy(false);
+    },
+
+    // Archive a conversation and close it
+    closeChat: function (ajax = true) {
+      let id = this.conversation.id;
+      SBChat.clear();
+      if (ajax) {
+        SBF.ajax(
+          {
+            function: "update-conversation-status",
+            conversation_id: id,
+            status_code: 3,
+          },
+          () => {
+            close();
+          }
+        );
+      } else {
+        close();
+      }
+
+      function close() {
+        main.find(`li[data-conversation-id="${id}"]`).remove();
+        force_action = "new-conversation";
+        SBChat.clear();
+        storage("open-conversation", "");
+        activeUser().removeConversation(id);
+        if (!CHAT_SETTINGS["disable-dashboard"]) {
+          SBChat.showDashboard();
+        }
+      }
+    },
+
+    // Automations
+    automations: {
+      history: [],
+      busy: [],
+      scroll_position_intervals: {},
+      timeout_queue: [],
+
+      run_all: function () {
+        let automations = CHAT_SETTINGS["automations"];
+        for (var i = 0; i < automations.length; i++) {
+          let automation = automations[i];
+          let conditions = automation.conditions;
+          let count = conditions.length;
+          let valid = count == 0;
+          let browsing_time = false;
+          let scroll_position = false;
+          let server_conditions = false;
+          for (var j = 0; j < conditions.length; j++) {
+            let criteria = conditions[j][1];
+            valid = false;
+            switch (conditions[j][0]) {
+              case "browsing_time":
+                valid = true;
+                browsing_time = criteria;
+                break;
+              case "scroll_position":
+                valid = true;
+                scroll_position = criteria;
+                break;
+              case "include_urls":
+              case "exclude_urls":
+              case "referring":
+                let url =
+                  conditions[j][0] == "referring"
+                    ? document.referrer
+                    : window.location.href;
+                let checks = conditions[j][2].split(",");
+                let include = conditions[j][0] != "exclude_urls";
+                if (!include) valid = true;
+                url = url
+                  .replace("https://", "")
+                  .replace("http://", "")
+                  .replace("www.", "");
+                for (var y = 0; y < checks.length; y++) {
+                  checks[y] = $.trim(
+                    checks[y]
+                      .replace("https://", "")
+                      .replace("http://", "")
+                      .replace("www.", "")
+                  );
+                  if (
+                    (criteria == "contains" && url.indexOf(checks[y]) != -1) ||
+                    (criteria == "does-not-contain" &&
+                      url.indexOf(checks[y]) == -1) ||
+                    (criteria == "is-exactly" && checks[y] == url) ||
+                    (criteria == "is-not" && checks[y] != url)
+                  ) {
+                    valid = include;
+                    break;
+                  }
+                }
+                break;
+              case "custom_variable":
+                let variable = criteria.split("=");
+                if (
+                  variable[0] in window &&
+                  window[variable[0]] == variable[1]
+                ) {
+                  valid = true;
+                }
+                break;
+              case "returning_visitor":
+              case "user_type":
+              case "cities":
+              case "languages":
+              case "countries":
+                valid = activeUser();
+                server_conditions = true;
+                break;
+              case "user_phone":
+                valid =
+                  activeUser() && !SBF.null(activeUser().getExtra("phone"));
+                break;
+              case "user_email":
+                valid = activeUser() && !SBF.null(activeUser().get("email"));
+                break;
+              default:
+                valid = true;
+            }
+            if (!valid) break;
+          }
+          if (
+            ["messages", "emails", "sms"].includes(automation.type) &&
+            !activeUser()
+          )
+            valid = false;
+          if (valid) {
+            if (server_conditions) {
+              if (!(automation.id in this.busy)) {
+                SBF.ajax(
+                  {
+                    function: "automations-validate",
+                    automation: automation,
+                  },
+                  (response) => {
+                    if (response !== false) {
+                      this.run_all_final(
+                        automation,
+                        scroll_position,
+                        browsing_time
+                      );
+                    }
+                    delete this.busy[automation.id];
+                  }
+                );
+                this.busy[automation.id] = true;
+              }
+            } else {
+              this.run_all_final(automation, scroll_position, browsing_time);
+            }
+          }
+        }
+      },
+
+      run_all_final: function (automation, scroll_position, browsing_time) {
+        if (scroll_position) {
+          this.scroll_position_intervals[automation.id] = setInterval(() => {
+            if ($(window).scrollTop() > parseInt(scroll_position)) {
+              if (browsing_time)
+                setTimeout(() => {
+                  this.run(automation);
+                }, parseInt(browsing_time) * 1000);
+              else this.run(automation);
+              clearInterval(this.scroll_position_intervals[automation.id]);
+            }
+          }, 1000);
+        } else if (browsing_time) {
+          if (!this.timeout_queue.includes(automation.id)) {
+            setTimeout(() => {
+              this.run(automation);
+            }, parseInt(browsing_time) * 1000);
+            this.timeout_queue.push(automation.id);
+          }
+        } else this.run(automation);
+      },
+
+      run: function (automation) {
+        if (this.history.includes(automation.id)) return;
+        switch (automation.type) {
+          case "messages":
+          case "emails":
+          case "sms":
+            if (
+              (!SBPusher.active || SBPusher.started) &&
+              !(automation.id in this.busy)
+            ) {
+              if (automation.type == "messages" && SBChat.chat_open) {
+                let last_message = SBChat.conversation
+                  ? SBChat.conversation.getLastUserMessage(false, "no-bot")
+                  : false;
+                if (
+                  last_message &&
+                  Date.now() - 600000 <
+                    SBF.unix(last_message.get("creation_time"))
+                )
+                  return;
+              }
+              SBF.ajax(
+                {
+                  function: "automations-run",
+                  automation: automation,
+                },
+                (response) => {
+                  if (response !== false) {
+                    this.history.push(automation.id);
+                    if (automation.type == "messages" && !SBPusher.active)
+                      SBChat.updateConversations();
+                  }
+                  delete this.busy[automation.id];
+                }
+              );
+              this.busy[automation.id] = true;
+            }
+            break;
+          case "popups":
+            if (!storage("popup" + automation.id)) {
+              setTimeout(() => {
+                if (!SBChat.chat_open) {
+                  SBChat.popup(false, {
+                    id: automation.id,
+                    image: automation.profile_image,
+                    title: automation.title,
+                    message: automation.message,
+                  });
+                  this.history.push(automation.id);
+                } else if (automation.fallback) {
+                  let last_message = SBChat.conversation
+                    ? SBChat.conversation.getLastUserMessage(false, "no-bot")
+                    : false;
+                  if (
+                    !last_message ||
+                    Date.now() - 600000 >
+                      SBF.unix(last_message.get("creation_time"))
+                  ) {
+                    SBChat.sendMessage(
+                      bot_id,
+                      (SBF.null(automation.title)
+                        ? ""
+                        : `*${automation.title}*\n`) + automation.message,
+                      [],
+                      false,
+                      false,
+                      0
+                    );
+                    storage("popup" + automation.id, true);
+                    this.history.push(automation.id);
+                  }
+                }
+              }, 1000);
+            }
+            break;
+          case "design":
+            if (automation.background) {
+              chat_header.css(
+                "background-image",
+                `url("${automation.background}")`
+              );
+            }
+            if (automation.brand) {
+              chat_header.find(".sb-brand img").attr("src", automation.brand);
+            }
+            if (automation.title) {
+              chat_header.find(".sb-title").html(automation.title);
+            }
+            if (automation.message) {
+              chat_header.find(".sb-text").html(automation.message);
+            }
+            if (automation.icon) {
+              main.find(".sb-chat-btn .sb-icon").attr("src", automation.icon);
+            }
+            if (
+              automation.color_1 ||
+              automation.color_2 ||
+              automation.color_3
+            ) {
+              SBF.ajax(
+                {
+                  function: "chat-css",
+                  color_1: automation.color_1,
+                  color_2: automation.color_2,
+                  color_3: automation.color_3,
+                },
+                (response) => {
+                  global.append(`<style>${response}</style>`);
+                }
+              );
+            }
+            this.history.push(automation.id);
+            break;
+          case "more":
+            let parameters = {};
+            if (automation.department) {
+              SBChat.default_department = automation.department;
+              parameters = {
+                function: "update-conversation-department",
+                department: automation.department,
+              };
+            }
+            if (automation.agent) {
+              SBChat.default_agent = automation.agent;
+              parameters = {
+                function: "update-conversation-agent",
+                agent_id: automation.agent,
+              };
+            }
+            if (automation.tags) {
+              automation.tags = automation.tags.split(",");
+              SBChat.default_tags = automation.tags;
+              parameters = {
+                function: "update-tags",
+                tags: automation.tags,
+                add: true,
+              };
+            }
+            if (
+              SBChat.conversation.id &&
+              (automation.tags || automation.agent || automation.department)
+            ) {
+              parameters.conversation_id = SBChat.conversation.id;
+              SBF.ajax(parameters);
+            }
+            break;
+        }
+      },
+    },
+
+    // More
+    flashNotification: function () {
+      clearInterval(interval);
+      interval = setInterval(function () {
+        document.title =
+          document.title == document_title
+            ? sb_("New message...")
+            : document_title;
+      }, 2000);
+    },
+
+    calculateLabelDates: function () {
+      if (admin || this.chat_open)
+        label_date_items = chat.find(".sb-label-date");
+    },
+
+    calculateLabelDateFirst: function () {
+      if (!this.conversation.messages.length)
+        chat.append(
+          `<div class="sb-label-date"><span>${sb_("Today")}</span></div>`
+        );
+    },
+  };
+  window.SBChat = SBChat;
+
+  /*
+   * ----------------------------------------------------------
+   * # RICH MESSAGES
+   * ----------------------------------------------------------
+   */
+
+  var SBRichMessages = {
+    rich_messsages: {
+      email: "",
+      button: "",
+      video: "",
+      si: '<div class="sb-btn">Sí</div>',
+      no: '<div class="sb-btn">No</div>',
+      image: "",
+      chips: '<div style="margin: 8px;" class="sb-buttons">[options]</div>',
+      buttons: '<div class="sb-buttons">[options]</div>',
+      select: '<div class="sb-select"><p></p><ul>[options]</ul></div>',
+      list: '<div class="sb-text-list">[values]</div>',
+      "list-image": '<div class="sb-image-list">[values]</div>',
+      table: "<table><tbody>[header][values]</tbody></table>",
+      inputs: '<div class="sb-form">[values]</div>',
+      rating: `<div class="sb-rating"><span>[label]</span></div>`,
+      card: '<div class="sb-card">[settings]</div>',
+      share: '<div class="sb-social-buttons">[settings]</div>',
+      slider:
+        '<div class="sb-slider"><div>[items]</div></div><div class="sb-slider-arrow bi-chevron-left[class]"></div><div class="sb-slider-arrow bi-chevron-right sb-active[class]"></div>',
+      "slider-images":
+        '<div class="sb-slider sb-slider-images"><div>[items]</div></div><div class="sb-slider-arrow bi-chevron-left[class]"></div><div class="sb-slider-arrow bi-chevron-right sb-active[class]"></div>',
+      phone: "",
+    },
+    cache: {},
+
+    generate: function (settings, name, css = "") {
+      let content;
+      let next = true;
+      let id = "id" in settings ? settings["id"] : SBF.random();
+      let render = new SBMessage({});
+
+      // Check if the rich message exist
+      if (name in this.rich_messsages) {
+        content = this.rich_messsages[name];
+      } else if (name in this.cache) {
+        content = this.cache[name];
+      } else if (
+        admin ||
+        (!SBF.null(CHAT_SETTINGS) &&
+          "rich-messages" in CHAT_SETTINGS &&
+          CHAT_SETTINGS["rich-messages"].includes(name))
+      ) {
+        if (!("id" in settings)) id = name;
+        content = '<div class="sb-rich-loading sb-loading"></div>';
+        SBF.ajax(
+          {
+            function: "get-rich-message",
+            name: name,
+            settings: settings,
+          },
+          (response) => {
+            response = render.render(this.initInputs(response));
+            if (name == "timetable") response = this.timetable(response);
+            main
+              .find(`.sb-rich-message[id="${id}"]`)
+              .html(`<div class="sb-content">${response}</div>`);
+            this.cache[name] = response;
+            SBChat.scrollBottom(SBChat.dashboard);
+          }
+        );
+        next = false;
+      } else {
+        content = `[${name}]`;
+      }
+
+      // Generate the rich message
+      let disabled = "disabled" in settings;
+      if (next) {
+        let options;
+        let code = "";
+        let rate = SBF.get_value(
+          SBF.admin_set("rate-and-review")["rate-review"]
+        );
+        switch (name) {
+          case "button":
+            content =
+              settings.link && settings.style
+                ? `<a href="${settings.link
+                    .replace(/<i>/g, "_")
+                    .replace(/<\/i>/g, "_")}"${
+                    "target" in settings ? ' target="_blank"' : ""
+                  } class="sb-rich-btn sb-btn${
+                    settings.style == "link" ? "-text" : ""
+                  }">${sb_(settings.name)}</a>`
+                : settings.yes && settings.no
+                ? settings.yes === "si" && settings.no === "no"
+                  ? `${SBRichMessages.rich_messsages.yes}${SBRichMessages.rich_messsages.no}`
+                  : settings.yes === "yes" && settings.no === "no"
+                  ? `${SBRichMessages.rich_messsages.no}${SBRichMessages.rich_messsages.yes}`
+                  : `<button class="sb-rich-btn sb-btn">${sb_(
+                      settings.name
+                    )}</button>`
+                : `<button class="sb-rich-btn sb-btn">${sb_(
+                    settings.name
+                  )}</button>`;
+            break;
+
+          case "rating":
+            content = content
+              .replace(
+                "[label]",
+                sb_(
+                  SBF.null(settings["label"]) ? sb_(rate) : settings["label"]
+                ).replace(/\n/g, "<br>")
+              )
+              .replace(
+                "[success-negative]",
+                SBF.null(settings["success-negative"])
+                  ? ""
+                  : sb_(settings["success-negative"])
+              )
+              .replace(
+                "[positive]",
+                sb_(
+                  SBF.null(settings["label-positive"])
+                    ? "Helpful"
+                    : settings["label-positive"]
+                )
+              )
+              .replace(
+                "[negative]",
+                sb_(
+                  SBF.null(settings["label-negative"])
+                    ? "Not helpful"
+                    : settings["label-negative"]
+                )
+              );
+            break;
+
+          case "email":
+            let inputs = [];
+            let email = activeUser().get("email");
+            let default_name = activeUser().get("last_name").charAt(0) == "#";
+            if (settings["name"] == "true")
+              inputs.push([
+                "first_name",
+                settings["last-name"] == "true" ? "First name" : "Name",
+                default_name
+                  ? ""
+                  : settings["last-name"] == "true"
+                  ? activeUser().get("first_name")
+                  : activeUser().name,
+                "text",
+                true,
+              ]);
+            if (settings["last-name"] == "true")
+              inputs.push([
+                "last_name",
+                "Last name",
+                default_name ? "" : activeUser().get("last_name"),
+                "text",
+                true,
+              ]);
+            for (var i = 0; i < inputs.length; i++) {
+              content += `<div id="${
+                inputs[i][0]
+              }" data-type="text" class="sb-input sb-input-text"><span class="${
+                inputs[i][2] == "" ? "" : "sb-active sb-filled"
+              }">${sb_(inputs[i][1])}</span><input value="${
+                inputs[i][2]
+              }" autocomplete="false" type="${inputs[i][3]}" ${
+                inputs[i][4] ? "required" : ""
+              }></div>`;
+            }
+            if (settings["phone"] == "true") {
+              let phone = activeUser().getExtra("phone");
+              let phone_codes = admin ? [] : CHAT_SETTINGS["phone-codes"];
+              let select = "";
+              let single = phone_codes.length === 1;
+              if (single) {
+                select = `<input disabled value="${phone_codes[0]}">`;
+              } else {
+                for (var i = 0; i < phone_codes.length; i++) {
+                  select += `<option value="+${phone_codes[i]}">+${phone_codes[i]}</option>`;
+                }
+                select = `<select style='color:black!important;'><option value="">+00</option>${select}</select>`;
+              }
+              content += `<div id="phone" data-type="select-input" class="sb-input sb-input-select-input"><span class="${
+                phone == "" ? "" : "sb-active sb-filled"
+              }">${sb_("Phone")}</span><div>${select}</div><input value="${
+                admin ? "" : phone
+              }" pattern="[0-9]+" autocomplete="false" type="tel" ${
+                settings["phone-required"] != "false" ? "required" : ""
+              }></div>`;
+            }
+            content += `<div id="email" data-type="email" class="sb-input sb-input-btn"><span class="${
+              email == "" ? "" : "sb-active sb-filled"
+            }">${sb_(
+              SBF.null(settings.placeholder) ? "Email" : settings["placeholder"]
+            )}</span><input value="${email}" autocomplete="off" type="email" required><div class="sb-submit bi-chevron-right"></div></div>`;
+            break;
+
+          case "image":
+            content = `<div class="sb-image"><img loading="lazy" src="${settings["url"]}"></div>`;
+            break;
+
+          case "video":
+            content = `<iframe loading="lazy"${
+              "height" in settings ? ` height="${settings["height"]}"` : ""
+            } src="${
+              settings["type"] == "youtube"
+                ? "//www.youtube.com/embed/"
+                : "//player.vimeo.com/video/"
+            }${settings["id"]}" allowfullscreen></iframe>`;
+            break;
+
+          case "select":
+            options = settings["options"].split(",");
+            for (var i = 0; i < options.length; i++) {
+              code += `<li data-value="${SBF.stringToSlug(options[i])}">${sb_(
+                options[i]
+              )}</li>`;
+            }
+            content = content.replace("[options]", code);
+            break;
+
+          case "chips":
+          case "buttons":
+            options = settings["options"].split(",");
+            for (var i = 0; i < options.length; i++) {
+              code += `<div class="sb-btn sb-submit">${sb_(options[i])}</div>`;
+            }
+            content = content.replace("[options]", code);
+            break;
+
+          case "list":
+            options = settings["values"].split(",");
+            let list = name == "list";
+            let list_double =
+              list && options.length && options[0].indexOf(":") > 0;
+            if (list && !list_double) {
+              content = content.replace(
+                "sb-text-list",
+                "sb-text-list sb-text-list-single"
+              );
+            }
+            for (var i = 0; i < options.length; i++) {
+              code += list_double
+                ? `<div><div>${sb_(options[i].split(":")[0])}</div><div>${sb_(
+                    options[i].split(":")[1]
+                  )}</div></div>`
+                : `<div>${$.trim(sb_(options[i]))}</div>`;
+            }
+            content = content.replace("[values]", code);
+            break;
+
+          case "list-image":
+            options = settings["values"].split(",");
+            for (var i = 0; i < options.length; i++) {
+              let item = options[i].replace("://", "///").split(":");
+              code += `<div><div class="sb-thumb" style="background-image:url('${item[0].replace(
+                "///",
+                "://"
+              )}')"></div><div class="sb-list-title">${item[1]}</div><div>${
+                item[2]
+              }</div></div>`;
+            }
+            content = content.replace("[values]", code);
+            break;
+
+          case "table":
+            options = settings["header"].split(",");
+            code += "<tr>";
+            for (var i = 0; i < options.length; i++) {
+              code += `<th>${options[i]}</th>`;
+            }
+            code += "</tr>";
+            content = content.replace("[header]", code);
+            code = "";
+            options = settings["values"].split(",");
+            for (var i = 0; i < options.length; i++) {
+              let tds = options[i].split(":");
+              code += "<tr>";
+              for (var i = 0; i < tds.length; i++) {
+                code += `<td>${tds[i]}</td>`;
+              }
+              code += "</tr>";
+            }
+            content = content.replace("[values]", code);
+            break;
+
+          case "inputs":
+            options = settings["values"].split(",");
+            for (var i = 0; i < options.length; i++) {
+              if (disabled && options[i] == "") continue;
+              code += `<div id="${SBF.stringToSlug(
+                options[i]
+              )}" data-type="text" class="sb-input sb-input-text"><span>${sb_(
+                options[i]
+              )}</span><input autocomplete="false" type="text" required></div>`;
+            }
+            code +=
+              '<div class="sb-btn sb-submit">' +
+              sb_("button" in settings ? settings["button"] : "Send now") +
+              "</div>";
+            content = content.replace("[values]", code);
+            break;
+
+          case "card":
+            code = `${
+              "image" in settings
+                ? `<div class="sb-card-img" style="background-image:url('${settings["image"]}')"></div>`
+                : ""
+            }<div class="sb-card-header">${settings["header"]}</div>${
+              "extra" in settings
+                ? `<div class="sb-card-extra">${settings["extra"]}</div>`
+                : ""
+            }${
+              "description" in settings
+                ? `<div class="sb-card-description">${settings["description"]}</div>`
+                : ""
+            }${
+              "link" in settings
+                ? `<a class="sb-card-btn" href="${settings["link"]}"${
+                    "target" in settings ? ' target="_blank"' : ""
+                  }>${sb_(settings["link-text"])}</a>`
+                : ""
+            }`;
+            content = content.replace("[settings]", code);
+            break;
+
+          case "share":
+            let channels =
+              "channels" in settings
+                ? settings["channels"].replace(/ /g, "").split(",")
+                : ["fb", "tw", "li", "wa", "pi"];
+            let link = "";
+            for (var i = 0; i < channels.length; i++) {
+              switch (channels[i]) {
+                case "fb":
+                  link = "www.facebook.com/sharer.php?u=";
+                  break;
+                case "tw":
+                  link = "twitter.com/intent/tweet?url=";
+                  break;
+                case "li":
+                  link = "www.linkedin.com/sharing/share-offsite/?url=";
+                  break;
+                case "wa":
+                  link = "web.whatsapp.com/send?text=";
+                  break;
+                case "pi":
+                  link = "www.pinterest.com/pin/create/button/?url=";
+                  break;
+              }
+              code += `<div class="sb-${channels[i]} sb-icon-social-${channels[i]}" data-link="https://${link}${settings["link"]}"></div>`;
+            }
+            content = content.replace("[settings]", code);
+            break;
+
+          case "slider":
+            let count = 0;
+            for (var i = 1; i < 16; i++) {
+              if ("header-" + i in settings) {
+                code += `<div>${
+                  "image-" + i in settings
+                    ? `<div class="sb-card-img" style="background-image:url('${
+                        settings["image-" + i]
+                      }')"></div>`
+                    : ""
+                }<div class="sb-card-header">${settings["header-" + i]}</div>${
+                  "extra-" + i in settings
+                    ? `<div class="sb-card-extra">${
+                        settings["extra-" + i]
+                      }</div>`
+                    : ""
+                }${
+                  "description-" + i in settings
+                    ? `<div class="sb-card-description">${
+                        settings["description-" + i]
+                      }</div>`
+                    : ""
+                }${
+                  "link-" + i in settings
+                    ? `<a class="sb-card-btn" href="${settings["link-" + i]}"${
+                        "target" in settings ? ' target="_blank"' : ""
+                      }>${sb_(settings["link-text-" + i])}</a>`
+                    : ""
+                }</div>`;
+                count++;
+              } else {
+                break;
+              }
+            }
+            content = content
+              .replace("[items]", code)
+              .replace(/\[class\]/g, count == 1 ? " sb-hide" : "");
+            break;
+
+          case "slider-images":
+            if ("images" in settings) {
+              let images = settings["images"].split(",");
+              for (var i = 0; i < images.length; i++) {
+                code += `<div class="sb-card-img" data-value="${images[i]}" style="background-image:url('${images[i]}')"></div>`;
+              }
+              content = content.replace(
+                /\[class\]/g,
+                images.length == 1 ? " sb-hide" : ""
+              );
+            }
+            content = content.replace("[items]", code);
+            break;
+          default:
+            content = `[${name}]`; // Placeholder text for unmatched rich message names
+            break;
+        }
+      }
+      return (
+        `<div id="${id}" data-type="${name}"${
+          disabled ? 'disabled="true"' : ""
+        }${
+          "settings" in settings
+            ? ` data-settings="${settings["settings"]}"`
+            : ""
+        } class="sb-rich-message sb-rich-${name} ${css}">` +
+        ("title" in settings
+          ? `<div class="sb-top">s${render.render(
+              sb_(settings["title"])
+            )}</div>`
+          : "") +
+        ("message" in settings
+          ? `<div class="sb-text">${render.render(
+              sb_(settings["message"])
+            )}</div>`
+          : "") +
+        `<div class="sb-content">${content}</div><div data-success="${
+          "success" in settings ? settings["success"].replace(/"/g, "") : ""
+        }" class="sb-info"></div></div>`
+      );
+    },
+
+    // Function of built-in rich messages
+    submit: function (area, type, element) {
+      if (!admin && !loading(element) && !this.is_busy) {
+        let error = "";
+        let shortcode = "";
+        let parameters = {};
+        let success = $(area).find("[data-success]").length
+          ? $(area).find("[data-success]").attr("data-success")
+          : "";
+        let rich_message_id = $(area).closest(".sb-rich-message").attr("id");
+        let message_id = $(area).closest("[data-id]").attr("data-id");
+        let message = "";
+        let payload = {
+          "rich-messages": {},
+        };
+        let user_settings =
+          activeUser() == false
+            ? {
+                profile_image: ["", ""],
+                first_name: ["", ""],
+                last_name: ["", ""],
+                email: ["", ""],
+                password: ["", ""],
+                user_type: ["", ""],
+              }
+            : {
+                profile_image: [activeUser().image, ""],
+                first_name: [activeUser().get("first_name"), ""],
+                last_name: [activeUser().get("last_name"), ""],
+                email: [activeUser().get("email"), ""],
+                password: ["", ""],
+                user_type: ["", ""],
+              };
+        let settings = {};
+        let input = $(element);
+        let dialogflow_response = "";
+        let dialogflow_parameters = false;
+        let active_conversation = SBChat.conversation !== false;
+        let settings_extra = {};
+        let payload_settings = {};
+
+        if (SBF.null(message_id)) {
+          message_id = -1;
+        } else {
+          let item = SBChat.conversation.getMessage(message_id);
+          message = item.message;
+          payload = item.payload();
+          if (!("rich-messages" in payload)) {
+            payload["rich-messages"] = {};
+          }
+        }
+        if (
+          !$(element).hasClass("sb-btn") &&
+          !$(element).hasClass("sb-select") &&
+          !$(element).hasClass("sb-submit")
+        ) {
+          input = $(element).closest(".sb-btn,.sb-select");
+        }
+        $(area).find(".sb-info").html("").sbActive(false);
+
+        switch (type) {
+          case "email":
+            let is_last_name = "last_name" in settings;
+            settings = SBForm.getAll(area);
+            if ("first_name" in settings) {
+              user_settings["user_type"] = ["user", ""];
+              if (!is_last_name) user_settings["last_name"] = ["", ""];
+            }
+            if ("phone" in settings) {
+              settings_extra = {
+                phone: [settings["phone"][0], "Phone"],
+              };
+            }
+            $.extend(user_settings, settings);
+            error =
+              "Please fill in all required fields and make sure the email is valid.";
+            if (success)
+              success = sb_(success)
+                .replace("{user_email}", user_settings["email"][0])
+                .replace(
+                  "{user_name_}",
+                  user_settings["first_name"][0] +
+                    (is_last_name ? " " + user_settings["last_name"][0] : "")
+                );
+            payload["rich-messages"][rich_message_id] = {
+              type: type,
+              result: settings,
+            };
+            payload["event"] = "update-user";
+            parameters = {
+              function: "update-user-and-message",
+              settings: user_settings,
+              settings_extra: settings_extra,
+              payload: payload,
+            };
+            dialogflow_parameters = {
+              settings: user_settings,
+              settings_extra: settings_extra,
+            };
+            break;
+          case "registration":
+            settings_extra = SBForm.getAll(area.find(".sb-form-extra"));
+            $.extend(user_settings, SBForm.getAll(area.find(".sb-form-main")));
+            payload_settings = $.extend({}, user_settings);
+            if (success) {
+              success = sb_(success);
+            }
+            if (CHAT_SETTINGS["registration-details"]) {
+              success += '[list values="';
+              for (var key in user_settings) {
+                let value = user_settings[key][0].replace(/:|,/g, "");
+                if (value) {
+                  if (key == "profile_image") {
+                    value = value.substr(value.lastIndexOf("/") + 1);
+                  }
+                  if (key == "password" || key == "password-check") {
+                    value = "********";
+                    payload_settings[key] = "********";
+                  }
+                  success +=
+                    user_settings[key][1] == ""
+                      ? ""
+                      : `${sb_(
+                          user_settings[key][1].replace(/:|,/g, "")
+                        )}:${value},`;
+                }
+              }
+              for (var key in settings_extra) {
+                if (settings_extra[key][0]) {
+                  success += `${sb_(
+                    settings_extra[key][1].replace(/:|,/g, "")
+                  )}:${settings_extra[key][0].replace(/:|,/g, "")},`;
+                }
+              }
+              success = success.slice(0, -1) + '"]';
+            }
+            user_settings["user_type"] = ["user", ""];
+            payload["rich-messages"][rich_message_id] = {
+              type: type,
+              result: {
+                user: payload_settings,
+                extra: settings_extra,
+              },
+            };
+            payload["event"] = "update-user";
+            parameters = {
+              function: activeUser()
+                ? "update-user-and-message"
+                : "add-user-and-login",
+              settings: user_settings,
+              settings_extra: settings_extra,
+              payload: payload,
+            };
+            error = SBForm.getRegistrationErrorMessage(area);
+            dialogflow_parameters = {
+              settings: user_settings,
+              settings_extra: settings_extra,
+            };
+            break;
+          case "rating":
+            let rating = $(element).attr("data-rating");
+            let agent = SBChat.conversation.getLastUserMessage(false, true);
+            success = `${sb_(
+              success == "" ? sb_("Thank you for your feedback!") : success
+            )}`;
+            settings = {
+              conversation_id: SBChat.conversation.id,
+              agent_id: agent ? agent.get("user_id") : bot_id,
+              user_id: activeUser().id,
+              message: area.find("textarea").val(),
+              rating: rating == "positive" ? 1 : -1,
+            };
+            payload["rich-messages"][rich_message_id] = {
+              type: type,
+              result: settings,
+            };
+            parameters = {
+              function: "set-rating",
+              payload: payload,
+              settings: settings,
+            };
+            dialogflow_response = rating;
+            break;
+          case "chips":
+          case "select":
+          case "buttons":
+            settings = SBF.escape($(element).html());
+            success = success == "" ? success : sb_(success) + ` *${settings}*`;
+            payload["rich-messages"][rich_message_id] = {
+              type: type,
+              result: settings,
+            };
+            parameters = {
+              function: "update-message",
+              payload: payload,
+            };
+            dialogflow_response = settings;
+            if (type == "chips") {
+              SBChat.sendMessage(
+                activeUser().id,
+                settings,
+                [],
+                false,
+                {
+                  id: rich_message_id,
+                  event: "chips-click",
+                  result: settings,
+                },
+                rich_message_id == "sb-human-takeover" && input.index() == 0
+                  ? 2
+                  : false
+              );
+              if (
+                rich_message_id == "sb-human-takeover" &&
+                $(element).index() == 0
+              ) {
+                SBApps.dialogflow.humanTakeover();
+              }
+              $(element).closest(".sb-content").remove();
+            }
+            break;
+          case "inputs":
+            settings = SBForm.getAll(area);
+            error = "All fields are required.";
+            if (success) {
+              success = sb_(success) + ' [list values="';
+              for (var key in settings) {
+                success += `${sb_(
+                  settings[key][1].replace(/:|,/g, "")
+                )}:${settings[key][0].replace(/:|,/g, "")},`;
+              }
+              success = success.slice(0, -1) + '"]';
+            }
+            payload["rich-messages"][rich_message_id] = {
+              type: type,
+              result: settings,
+            };
+            parameters = {
+              function: "update-message",
+              payload: payload,
+            };
+            dialogflow_parameters = {
+              settings: settings,
+            };
+            break;
+        }
+
+        shortcode = message.substr(message.indexOf("[" + type));
+        shortcode = shortcode.substr(0, shortcode.indexOf("]") + 1);
+
+        if (error && SBForm.errors(area)) {
+          SBForm.showErrorMessage(area, error);
+          input.sbLoading(false);
+          if (
+            SBChat.dashboard ||
+            (active_conversation &&
+              SBChat.conversation.getLastMessage().id == message_id)
+          ) {
+            SBChat.scrollBottom();
+          }
+          return false;
+        }
+        if (!success && type != "registration") {
+          let shortcode_settings = this.shortcode(shortcode);
+          let title =
+            "title" in shortcode_settings[1]
+              ? `title="${shortcode_settings[1]["title"]}"`
+              : "";
+          let message =
+            "message" in shortcode_settings[1]
+              ? `message="${shortcode_settings[1]["message"]}"`
+              : "";
+          let value = "";
+          if (["inputs", "email"].includes(type)) {
+            for (var key in settings) {
+              value += settings[key][0] + ",";
+            }
+            value = `values="${value.slice(0, -1)}"`;
+          } else {
+            value = `options="${settings}"`;
+          }
+          success = `[${
+            type == "email" ? "inputs" : type
+          } ${title} ${message} ${value} disabled="true"]`;
+        }
+        if (message_id != -1) {
+          $.extend(parameters, {
+            message_id: message_id,
+            message: message ? message.replace(shortcode, success) : success,
+            payload: payload,
+          });
+        }
+        SBF.ajax(parameters, (response) => {
+          if (response != false && !SBF.errorValidation(response)) {
+            switch (type) {
+              case "email":
+                for (var key in user_settings) {
+                  activeUser().set(key, user_settings[key][0]);
+                }
+                for (var key in settings_extra) {
+                  activeUser().setExtra(key, settings_extra[key][0]);
+                }
+                SBF.loginCookie(response[1]);
+                if (rich_message_id == "sb-subscribe-form") {
+                  SBF.ajax({
+                    function: "subscribe-email",
+                    email: activeUser().get("email"),
+                  });
+                }
+                SBChat.automations.run_all();
+                SBF.event("SBNewEmailAddress", {
+                  id: rich_message_id,
+                  name: activeUser().name,
+                  email: activeUser().get("email"),
+                });
+                break;
+              case "registration":
+                SBF.loginCookie(response[1]);
+                user_settings["id"] = [response[0].id];
+                if (!activeUser()) {
+                  activeUser(new SBUser(response[0]));
+                  for (var key in settings_extra) {
+                    activeUser().setExtra(key, settings_extra[key][0]);
+                  }
+                  SBPusher.start();
+                  SBChat.initChat();
+                  if (
+                    (!CHAT_SETTINGS["init-dashboard"] ||
+                      !main.find(".sb-departments-list").length) &&
+                    success
+                  )
+                    SBChat.sendMessage(bot_id, success, [], false, false, 3);
+                } else {
+                  for (var key in user_settings) {
+                    activeUser().set(key, user_settings[key][0]);
+                  }
+                  for (var key in settings_extra) {
+                    activeUser().setExtra(key, settings_extra[key][0]);
+                  }
+                  SBChat.automations.run_all();
+                }
+                if (SBChat.dashboard) {
+                  main.removeClass("sb-init-form-active");
+                  $(area).remove();
+                  if (!SBChat.isInitDashboard()) SBChat.hideDashboard();
+                }
+
+                delete this.cache["registration"];
+                setTimeout(() => {
+                  SBF.event("SBRegistrationForm", {
+                    id: rich_message_id,
+                    conversation_id: SBChat.conversation
+                      ? SBChat.conversation.id
+                      : false,
+                    user: user_settings,
+                    extra:
+                      payload["rich-messages"][rich_message_id]["result"][
+                        "extra"
+                      ],
+                  });
+                }, 5000);
+                break;
+            }
+            if (message_id == -1) {
+              $(element).closest(".sb-rich-message").html(success);
+            } else if (
+              (!("type" in payload) || payload["type"] != "close-message") &&
+              !dialogflow_human_takeover
+            ) {
+              SBChat.setConversationStatus(2);
+            }
+            if (
+              !["login", "chips", "rating"].includes(type) &&
+              (CHAT_SETTINGS["dialogflow-send-user-details"] ||
+                !["email", "registration"].includes(type))
+            ) {
+              SBApps.dialogflow.message(
+                `${rich_message_id}${
+                  dialogflow_response ? "|" + dialogflow_response : ""
+                }`,
+                [],
+                false,
+                dialogflow_parameters
+              );
+            }
+            if (
+              CHAT_SETTINGS["slack-active"] &&
+              (!dialogflow_human_takeover ||
+                SBApps.dialogflow.humanTakeoverActive())
+            ) {
+              SBChat.slackMessage(
+                activeUser().id,
+                activeUser().name,
+                activeUser().image,
+                success
+              );
+            }
+            if (SBPusher.active) SBChat.update();
+            if (type != "registration" && type != "email")
+              SBF.event("SBRichMessageSubmit", {
+                result: response,
+                data: payload["rich-messages"][rich_message_id],
+                id: rich_message_id,
+              });
+          } else {
+            SBForm.showErrorMessage(
+              area,
+              SBForm.getRegistrationErrorMessage(response, "response")
+            );
+            if (SBChat.dashboard) {
+              SBChat.scrollBottom();
+            }
+            input.sbLoading(false);
+          }
+        });
+      }
+    },
+
+    // Return the shortcode name and the shortcode settings
+    shortcode: function (shortcode) {
+      if (shortcode.indexOf(" ") < 0) {
+        return [shortcode.slice(1, -1), {}];
+      }
+      let result = {};
+      let shortcode_name = shortcode.substr(1, shortcode.indexOf(" ") - 1);
+      shortcode = shortcode.slice(1, -1).substr(shortcode_name.length + 1);
+      let settings = shortcode.split('" ');
+      for (var i = 0; i < settings.length; i++) {
+        if (settings[i].includes("=")) {
+          let item = [
+            settings[i].substr(0, settings[i].indexOf("=")),
+            settings[i].substr(settings[i].indexOf("=") + 2),
+          ];
+          result[$.trim(item[0])] = item[1].replace(/"/g, "");
+        }
+      }
+      return [shortcode_name, result];
+    },
+
+    // Init the rich message inputs
+    initInputs: function (code) {
+      code = $($.parseHTML("<div>" + code + "</div>"));
+      code.find(".sb-input input").each(function () {
+        if ($(this).val()) {
+          $(this).siblings().addClass("sb-active sb-filled");
+        }
+      });
+      return code.html();
+    },
+
+    timetable: function (code) {
+      let table = $($.parseHTML(`<div>${code}</div>`));
+      let offset = table.find("[data-offset]").attr("data-offset");
+      offset = SBF.null(offset) ? 0 : parseInt(offset);
+      let text = "";
+      table.find("[data-time]").each(function () {
+        let times = $(this).attr("data-time").split("|");
+        for (var i = 0; i < times.length; i++) {
+          if (times[i] == "closed") {
+            text += "Closed";
+            break;
+          } else if (times[i]) {
+            let hm = times[i].split(":");
+            let time = SBF.convertUTCDateToLocalDate(
+              `01/01/2000 ${hm[0]}:${hm[1]}`,
+              offset
+            );
+            text +=
+              time.toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              }) +
+              (i == 0 || i == 2
+                ? " (to) "
+                : i == 1 && times[i + 1]
+                ? "\n"
+                : "");
+          }
+        }
+        text += "\n";
+      });
+      text += "Time zone " + Intl.DateTimeFormat().resolvedOptions().timeZone;
+      return text;
+    },
+
+    // Slider
+    sliderChange: function (id, direction = "left") {
+      let slider = chat.find(`#${id}`);
+      if (slider.length && !slider.hasClass("sb-moving")) {
+        let items = slider.find(".sb-slider > div > div");
+        let item = items.eq(0);
+        let width = Math.ceil(item.closest(".sb-slider").width());
+        let negative = direction == "right" ? -1 : 1;
+        let margin =
+          parseFloat(
+            parseFloat(
+              parseFloat(item.css("margin-left")) + width * negative
+            ).toFixed(2)
+          ) +
+          -0.5 * negative;
+        let check = width * (items.length - 1) * -1;
+        if (margin < 1 && margin >= check) {
+          item.css("margin-left", margin + "px");
+          slider.addClass("sb-moving");
+          setTimeout(() => {
+            slider.removeClass("sb-moving");
+          }, 1200);
+        }
+        slider
+          .find(".bi-chevron-right")
+          .sbActive(!(check > margin - 15 && check < margin + 15));
+        slider.find(".bi-chevron-left").sbActive(margin < -10);
+      }
+    },
+  };
+
+  /*
+   * ----------------------------------------------------------
+   * FORM METHODS
+   * ----------------------------------------------------------
+   */
+
+  var SBForm = {
+    // Get all settings
+    getAll: function (area) {
+      let settings = {};
+      $(area)
+        .find(".sb-input[id]")
+        .each((i, element) => {
+          settings[$(element).attr("id")] = this.get(element);
+        });
+      return settings;
+    },
+
+    // Get a single setting
+    get: function (input) {
+      input = $(input);
+      let type = input.data("type");
+      let name = sb_(SBF.escape(input.find(" > span").html()));
+      switch (type) {
+        case "image":
+          let url = input.find(".image").attr("data-value");
+          return [SBF.null(url) ? "" : url, name];
+        case "select":
+          return [SBF.escape(input.find("select").val()), name];
+        case "select-input":
+          let select = input.find("select,input[disabled]");
+          let prepend = select.val();
+          return [
+            SBF.escape(
+              (select.is("select") || select.is("input")
+                ? prepend
+                : input.find("> div").html()) +
+                input.find('input[type="tel"]').val()
+            ),
+            name,
+          ];
+        default:
+          let target = input.find("input");
+          return [
+            SBF.escape(
+              target.length
+                ? target.val()
+                : input.find("[data-value]").attr("data-value")
+            ),
+            name,
+          ];
+      }
+    },
+
+    // Set a single setting
+    set: function (item, value) {
+      item = $(item);
+      if (item.length) {
+        let type = item.data("type");
+        switch (type) {
+          case "image":
+            if (value == "") {
+              item.find(".image").removeAttr("data-value").removeAttr("style");
+            } else {
+              item
+                .find(".image")
+                .attr("data-value", value)
+                .css("background-image", `url("${value}")`);
+            }
+            break;
+          case "select":
+            item.find("select").val(value);
+            break;
+          default:
+            item.find("input,textarea").val(value);
+            break;
+        }
+        return true;
+      }
+      return false;
+    },
+
+    // Clear all the input values
+    clear: function (area) {
+      $(area)
+        .find(".sb-input,.sb-input-setting")
+        .each((i, element) => {
+          this.set(element, "");
+          $(element).find("input, select, textarea").removeClass("sb-error");
+        });
+      this.set($(area).find("#user_type"), "lead");
+    },
+
+    // Check for errors on user input uLtUDvmLz@ZirfUT
+    errors: function (area) {
+      let errors = false;
+      let items = $(area)
+        .find("input, select, textarea")
+        .removeClass("sb-error");
+      items.each(function (i) {
+        let value = $.trim($(this).val());
+        let type = $(this).attr("type");
+        let required = $(this).prop("required");
+        if (
+          (required && value == "") ||
+          ((required || value) &&
+            ((type == "password" &&
+              (value.length < 8 ||
+                (items.length > i + 1 &&
+                  items.eq(i + 1).attr("type") == "password" &&
+                  items.eq(i + 1).val() != value))) ||
+              (type == "email" &&
+                (value.indexOf("@") < 0 ||
+                  value.indexOf(".") < 0 ||
+                  /;|:|\/|\\|,|#|"|!|=|\+|\*|{|}|[|]|£|\$|€|~|'|>|<|\^|&/.test(
+                    value
+                  ))) ||
+              (type == "tel" &&
+                value &&
+                ($(this).parent().find("select").val() == "" ||
+                  isNaN(value) ||
+                  value.includes("+") ||
+                  value.length < 5))))
+        ) {
+          errors = true;
+          $(this).addClass("sb-error");
+        }
+      });
+      items = $(area).find("[data-required]").removeClass("sb-error");
+      items.each(function () {
+        if (SBF.null($(this).attr("data-value"))) {
+          $(this).addClass("sb-error");
+          errors = true;
+        }
+      });
+      return errors;
+    },
+
+    // Display a error message
+    showErrorMessage: function (area, message) {
+      $(area).find(".sb-info").html(sb_(message)).sbActive(true);
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        $(area).find(".sb-info").sbActive(false);
+      }, 2500);
+    },
+
+    // Display a success message
+    showSuccessMessage: function (area, message) {
+      $(area).find(".sb-info").remove();
+      $(area)
+        .addClass("sb-success")
+        .find(".sb-content")
+        .html(`<div class="sb-text">${message}</div>`);
+    },
+
+    // Return the registration error message
+    getRegistrationErrorMessage(area_or_response, type = "validation") {
+      if (type == "response")
+        return SBF.errorValidation(area_or_response, "duplicate-email")
+          ? "This email is already in use. Please use another email."
+          : SBF.errorValidation(area_or_response, "duplicate-phone")
+          ? "This phone number is already in use. Please use another number."
+          : "Error. Please check your information and try again.";
+      let name = $(area_or_response).find("#last_name").length
+        ? "First name, last name"
+        : "Name";
+      let phone = $(area_or_response).find("#phone [required]").length
+        ? ", phone number"
+        : "";
+      let email = $(area_or_response).find("#email").length ? ", email" : "";
+      let password = $(area_or_response).find("#password").length
+        ? ", and a password (8 character minimum)"
+        : "";
+      return `${name}${email}${phone}${password} ${
+        email + phone + password == "" ? "is" : "are"
+      } required.`;
+    },
+  };
+  window.SBForm = SBForm;
+
+  /*
+   * ----------------------------------------------------------
+   * # APPS
+   * ----------------------------------------------------------
+   */
+
+  var SBApps = {
+    // Get the login data
+    login: function () {
+      if (
+        this.is("wp") &&
+        typeof SB_WP_ACTIVE_USER != ND &&
+        CHAT_SETTINGS["wp-users-system"] == "wp"
+      ) {
+        return [
+          [SB_WP_ACTIVE_USER, typeof SB_WP_AVATAR != ND ? SB_WP_AVATAR : ""],
+          "wp",
+        ];
+      }
+      if (typeof SB_PERFEX_ACTIVE_USER != ND) {
+        return [[SB_PERFEX_ACTIVE_USER, SB_PERFEX_CONTACT_ID], "perfex"];
+      }
+      if (typeof SB_WHMCS_ACTIVE_USER != ND) {
+        return [SB_WHMCS_ACTIVE_USER, "whmcs"];
+      }
+      if (typeof SB_AECOMMERCE_ACTIVE_USER != ND) {
+        return [SB_AECOMMERCE_ACTIVE_USER, "aecommerce"];
+      }
+      if (typeof SB_DEFAULT_USER != ND) {
+        return [SB_DEFAULT_USER, "default"];
+      }
+      return false;
+    },
+
+    // Check if an app is installed and active
+    is: function (name) {
+      if (admin) return SBAdmin.apps.is(name);
+      if (name == "wordpress" || name == "wp") return CHAT_SETTINGS["wp"];
+      return name in CHAT_SETTINGS ? CHAT_SETTINGS[name] : false;
+    },
+
+    wordpress: {
+      // Ajax
+      ajax: function (action, data, onSuccess = false) {
+        if (typeof SB_WP_AJAX_URL == ND) return;
+        $.ajax({
+          method: "POST",
+          url: SB_WP_AJAX_URL,
+          data: $.extend(
+            {
+              action: "sb_wp_ajax",
+              type: action,
+            },
+            data
+          ),
+        }).done((response) => {
+          if (onSuccess) {
+            onSuccess(response);
+          }
+        });
+      },
+    },
+
+    dialogflow: {
+      token: storage("dialogflow-token"),
+      typing_enabled: false,
+      project_id: false,
+
+      // Send a message to the bot and get the reply
+      message: function (
+        message = "",
+        attachments = [],
+        delay = false,
+        parameters = false
+      ) {
+        if (this.active()) {
+          let human_takeover_active = SBApps.dialogflow.humanTakeoverActive();
+          if (!human_takeover_active || this.typing_enabled) {
+            timeout = setTimeout(() => {
+              SBChat.typing(-1, "start");
+              setTimeout(() => {
+                SBChat.typing(-1, "stop");
+              }, 10000);
+            }, 1000);
+          }
+          setTimeout(
+            () => {
+              SBF.ajax(
+                {
+                  function: "dialogflow-message",
+                  conversation_id: SBChat.conversation
+                    ? SBChat.conversation.id
+                    : false,
+                  message: message,
+                  attachments: attachments,
+                  parameters: parameters,
+                  token: this.token,
+                  dialogflow_language: storage("dialogflow-language")
+                    ? storage("dialogflow-language")
+                    : SB_LANG,
+                  project_id: this.project_id,
+                },
+                (response) => {
+                  if (response === false) return;
+                  if ("human_takeover" in response) {
+                    SBChat.offlineMessage();
+                    SBChat.followUp();
+                    return this.active(false);
+                  }
+                  if (
+                    "language_detection" in response &&
+                    !storage("dialogflow-language")
+                  ) {
+                    storage("dialogflow-language", [
+                      response.language_detection,
+                    ]);
+                  }
+                  if (!SBF.errorValidation(response)) {
+                    let query_result =
+                      "queryResult" in response["response"]
+                        ? response["response"]["queryResult"]
+                        : false;
+                    let is_unknow =
+                      query_result &&
+                      (query_result["action"] == "input.unknown" ||
+                        ("match" in query_result &&
+                          query_result["match"]["matchType"] == "NO_MATCH"));
+                    let messages =
+                      "messages" in response &&
+                      Array.isArray(response["messages"])
+                        ? response["messages"]
+                        : [];
+                    SBChat.typing(-1, "stop");
+                    clearTimeout(timeout);
+                    if (this.token != response["token"]) {
+                      this.token = response["token"];
+                      storage("dialogflow-token", response["token"]);
+                    }
+                    if (is_unknow) {
+                      if (human_takeover_active) this.typing_enabled = false;
+                    } else this.typing_enabled = true;
+                    if (query_result) {
+                      // Actions
+                      if ("action" in query_result) {
+                        let action = query_result["action"];
+                        if (action == "end") {
+                          this.active(false);
+                        }
+                        SBF.event("SBBotAction", action);
+                      }
+
+                      // Payload
+                      for (var i = 0; i < messages.length; i++) {
+                        if ("payload" in messages[i]) {
+                          let payloads = [
+                            "human-takeover",
+                            "redirect",
+                            "transcript",
+                            "department",
+                            "agent",
+                            "send-email",
+                            "disable-bot",
+                            "rich-message",
+                          ];
+                          let payload = messages[i]["payload"];
+                          if (SBF.null(payload)) payload = [];
+                          if (
+                            payloads[0] in payload &&
+                            payload[payloads[0]] === true
+                          ) {
+                            this.humanTakeover();
+                          }
+                          if (payloads[1] in payload) {
+                            setTimeout(function () {
+                              "new-window" in payload && payload["new-window"]
+                                ? window.open(payload[payloads[1]])
+                                : (document.location = payload[payloads[1]]);
+                            }, 500);
+                          }
+
+                          if (payloads[4] in payload) {
+                            SBChat.showArticles(payload[payloads[4]]);
+                          }
+                          if (payloads[5] in payload && payload[payloads[5]]) {
+                            SBF.ajax(
+                              {
+                                function: "transcript",
+                                conversation_id: SBChat.conversation.id,
+                                type: "txt",
+                              },
+                              (response) => {
+                                if (
+                                  payload[payloads[5]] == "email" &&
+                                  activeUser().get("email")
+                                ) {
+                                  SBChat.sendEmail(
+                                    "message" in payload ? payload.message : "",
+                                    [[response, response]],
+                                    true
+                                  );
+                                } else window.open(response);
+                              }
+                            );
+                          }
+                          if (payloads[6] in payload) {
+                            SBF.ajax({
+                              function: "update-conversation-department",
+                              conversation_id: SBChat.conversation.id,
+                              department: payload[payloads[6]],
+                              message:
+                                SBChat.conversation.getLastUserMessage()
+                                  .message,
+                            });
+                          }
+                          if (payloads[7] in payload) {
+                            SBF.ajax({
+                              function: "update-conversation-agent",
+                              conversation_id: SBChat.conversation.id,
+                              agent_id: payload[payloads[7]],
+                              message:
+                                SBChat.conversation.getLastUserMessage()
+                                  .message,
+                            });
+                          }
+                          if (payloads[8] in payload) {
+                            let email = payload[payloads[8]];
+                            SBChat.sendEmail(
+                              email.message,
+                              email.attachments,
+                              email.recipient == "active_user"
+                            );
+                          }
+                          if (payloads[9] in payload) {
+                            this.active(false);
+                            SBF.cookie(
+                              "sb-dialogflow-disabled",
+                              true,
+                              300,
+                              "set",
+                              true
+                            );
+                          }
+                          if (payloads[10] in payload) {
+                            SBChat.sendMessage(bot_id, payload[payloads[10]]);
+                          }
+                          SBF.event("SBBotPayload", payload);
+                        }
+
+                        // More
+                        if (
+                          !storage("dialogflow-language") &&
+                          "languageCode" in query_result &&
+                          (!SB_LANG || query_result.languageCode != SB_LANG[0])
+                        ) {
+                          storage("dialogflow-language", [
+                            query_result.languageCode,
+                          ]);
+                        }
+                      }
+
+                      // Diagnostic info
+                      if ("diagnosticInfo" in query_result) {
+                        let info = query_result["diagnosticInfo"];
+
+                        // End conversation
+                        if (
+                          "end_conversation" in info &&
+                          info["end_conversation"]
+                        ) {
+                          this.active(false);
+                        }
+                      }
+                    }
+
+                    // Slack
+                    // if (CHAT_SETTINGS['slack-active'] && messages && (!dialogflow_human_takeover || human_takeover_active)) {
+                    // 	for (var i = 0; i < messages.length; i++) {
+                    // 		SBChat.slackMessage(activeUser().id, CHAT_SETTINGS['bot-name'], CHAT_SETTINGS['bot-image'], messages[i]['message'], messages[i]['attachments']);
+                    // 	}
+                    // }
+
+                    SBF.event("SBBotMessage", {
+                      response: response,
+                      message: message,
+                    });
+                  }
+                }
+              );
+            },
+            delay !== false
+              ? delay
+              : CHAT_SETTINGS["bot-delay"] == 0
+              ? 2000
+              : parseInt(CHAT_SETTINGS["bot-delay"])
+          );
+        }
+      },
+
+      // Check if Dialogflow is active or deactivate it
+      active: function (active = true) {
+        let name = "human-takeover-" + SBChat.conversation.id;
+        if (active === false) {
+          SBF.storageTime(name);
+          return false;
+        }
+        if (active == "activate") {
+          SBF.cookie("sb-dialogflow-disabled", 0, 0, "delete");
+          SBF.storage(name, "");
+        }
+        return (
+          CHAT_SETTINGS["dialogflow-active"] &&
+          !admin &&
+          !SBF.cookie("sb-dialogflow-disabled") &&
+          (SBF.storageTime(name, 240) || !SBChat.agent_online) &&
+          (!CHAT_SETTINGS["bot-office-hours"] || !CHAT_SETTINGS["office-hours"])
+        );
+      },
+
+      // Trigger the welcome Intent
+      welcome: function (open = false, sound = false) {
+        SBF.ajax(
+          {
+            function: "dialogflow-message",
+            message: "",
+            conversation_id: SBChat.conversation.id,
+            token: this.token,
+            event: "Welcome",
+            dialogflow_language: storage("dialogflow-language")
+              ? storage("dialogflow-language")
+              : SB_LANG,
+          },
+          () => {
+            if (open) SBChat.start();
+            if (sound) SBChat.audio.play();
+          }
+        );
+      },
+
+      // Start the human takeover process
+      humanTakeover: function () {
+        SBF.ajax(
+          {
+            function: "dialogflow-human-takeover",
+            conversation_id: SBChat.conversation.id,
+          },
+          () => {
+            SBChat.offlineMessage();
+            SBChat.followUp();
+            this.active(false);
+            if (CHAT_SETTINGS["queue-human-takeover"]) {
+              CHAT_SETTINGS["queue"] = true;
+              SBChat.queue(SBChat.conversation.id);
+            }
+          }
+        );
+      },
+
+      // Check if human takeover is active
+      humanTakeoverActive: function () {
+        return !SBF.storageTime(
+          "human-takeover-" +
+            (SBChat.conversation
+              ? SBChat.conversation.id
+              : storage("open-conversation")),
+          240
+        );
+      },
+
+      // Translate a string
+      translate: function (strings, language_code, onSuccess) {
+        SBF.ajax(
+          {
+            function: "google-translate",
+            strings: strings,
+            language_code: language_code,
+            token: this.token,
+          },
+          (response) => {
+            this.token = response[1];
+            onSuccess(response[0]);
+          }
+        );
+      },
+    },
+  };
+  window.SBApps = SBApps;
+
+  /*
+   * ----------------------------------------------------------
+   * # INIT
+   * ----------------------------------------------------------
+   */
+
+  $(document).ready(function () {
+    main = $(".sb-admin, .sb-admin-start");
+    if (main.length) {
+      admin = true;
+      initialize();
+      return;
+    }
+    let url_full;
+    let url;
+    let init = false;
+    if (typeof SB_INIT_URL != ND) {
+      if (SB_INIT_URL.indexOf(".js") < 0) {
+        SB_INIT_URL += "/js/min/main.js";
+      }
+      url_full = SB_INIT_URL;
+    } else {
+      let scripts = document.getElementsByTagName("script");
+      let checks = ["min/main.js"];
+
+      for (var i = 0; i < scripts.length; i++) {
+        let source = scripts[i].src;
+
+        if (scripts[i].id == "routin") {
+          url_full = source;
+          init = init ? init : url_full.includes("init.");
+          break;
+        } else {
+          for (var j = 0; j < checks.length; j++) {
+            if (source.includes("/c/js/" + checks[j])) {
+              url_full = source;
+              init = init ? init : url_full.includes("init.");
+              break;
+            }
+          }
+        }
+      }
+    }
+    let parameters = SBF.getURL(false, url_full);
+    if ("url" in parameters) {
+      url_full = parameters["url"];
+    }
+    if (typeof SB_DISABLED != ND && SB_DISABLED) {
+      return;
+    }
+    if (init) {
+      initialize();
+      return;
+    }
+    if (
+      typeof SB_TICKETS != ND ||
+      ("mode" in parameters && parameters["mode"] == "tickets")
+    ) {
+      tickets = true;
+      parameters["mode"] = "tickets";
+    }
+    if ("cloud" in parameters) {
+      cloud_data = parameters["cloud"];
+    }
+    let min = url_full.lastIndexOf("main.js");
+    url = url_full.substr(
+      0,
+      url_full.lastIndexOf("main.js") > 0
+        ? url_full.lastIndexOf("main.js") - 4
+        : min - 8
+    );
+    let url_chat =
+      url +
+      "/include/init.php" +
+      ("lang" in parameters ? "?lang=" + parameters["lang"] : "") +
+      ("mode" in parameters ? "&mode=" + parameters["mode"] : "") +
+      (cloud_data ? "&cloud=" + cloud_data : "");
+    SBF.cors("GET", url_chat.replace(".php&", ".php?"), (response) => {
+      let target = "body";
+      if (tickets && $("#sb-tickets").length) {
+        target = "#sb-tickets";
+      }
+      $(target).append(response);
+      SBF.loadResource(url + "/css/" + (tickets ? "tickets" : "main") + ".css");
+      if (tickets) {
+        $.getScript(
+          url +
+            "/apps/tickets/tickets" +
+            (min ? ".min" : "") +
+            ".js?v=" +
+            version,
+          () => {
+            initialize();
+          }
+        );
+      } else initialize();
+    });
+  });
+
+  function initialize() {
+    main = $(".sb-admin, .sb-chat, .sb-tickets");
+
+    // Initalize the chat and the user
+    if (main.length && typeof SB_AJAX_URL != ND) {
+      chat = main.find(".sb-list");
+      chat_editor = main.find(".sb-editor");
+      chat_textarea = chat_editor.find("textarea");
+      chat_scroll_area = main.find(
+        admin || tickets ? ".sb-list" : "> div > .sb-scroll-area"
+      );
+      label_date = main.find(".sb-label-date-top");
+      chat_header = chat_scroll_area.find(".sb-header");
+      chat_emoji = chat_editor.find(".sb-emoji");
+      chat_status = tickets ? main.find(".sb-profile-agent .sb-status") : null;
+      SBChat.enabledAutoExpand();
+      SBChat.audio = main.find("#sb-audio").get(0);
+      SBChat.audio_out = main.find("#sb-audio-out").get(0);
+
+      // Check if cookies works
+      SBF.cookie("sb-check", "ok", 1, "set");
+      if (SBF.cookie("sb-check") != "ok") {
+        cookies_supported = false;
+        console.warn("Routin.bot: cookies not available.");
+      } else {
+        SBF.cookie("sb-check", false, false, false);
+      }
+      if (!admin) {
+        SBF.ajax(
+          {
+            function: "get-front-settings",
+            current_url: window.location.href,
+          },
+          (response) => {
+            CHAT_SETTINGS = response;
+            if (typeof SB_LOCAL_SETTINGS != ND) {
+              $.extend(CHAT_SETTINGS, SB_LOCAL_SETTINGS);
+            }
+            bot_id = CHAT_SETTINGS["bot-id"];
+            dialogflow_human_takeover =
+              CHAT_SETTINGS["dialogflow-human-takeover"];
+            agents_online = CHAT_SETTINGS["agents-online"];
+            SBPusher.active = CHAT_SETTINGS["pusher"];
+            if (typeof SB_REGISTRATION_REQUIRED != ND) {
+              CHAT_SETTINGS["registration-required"] = SB_REGISTRATION_REQUIRED;
+              CHAT_SETTINGS["tickets-registration-required"] =
+                SB_REGISTRATION_REQUIRED;
+            }
+            if (typeof SB_ARTICLES_PAGE != ND && SB_ARTICLES_PAGE) {
+              SBChat.initArticlesPage();
+            }
+            if (
+              (!tickets || !CHAT_SETTINGS["tickets-manual-init"]) &&
+              ((tickets && !CHAT_SETTINGS["tickets-manual-init"]) ||
+                (!CHAT_SETTINGS["chat-manual-init"] &&
+                  (!CHAT_SETTINGS["disable-offline"] || agents_online) &&
+                  (!CHAT_SETTINGS["disable-office-hours"] ||
+                    CHAT_SETTINGS["office-hours"]) &&
+                  (!CHAT_SETTINGS["chat-login-init"] || SBApps.login())))
+            ) {
+              SBChat.initChat();
+            }
+            if (CHAT_SETTINGS["cron"]) {
+              setTimeout(function () {
+                SBF.ajax({
+                  function: "cron-jobs",
+                });
+              }, 10000);
+            }
+            if (CHAT_SETTINGS["cron-email-piping"]) {
+              setTimeout(function () {
+                SBF.ajax({
+                  function: "email-piping",
+                });
+              }, 8000);
+            }
+            if (CHAT_SETTINGS["push-notifications-users"]) {
+              SBPusher.initServiceWorker();
+            }
+            if (tickets) {
+              if (CHAT_SETTINGS["tickets-default-department"])
+                SBChat.default_department =
+                  CHAT_SETTINGS["tickets-default-department"];
+              if (CHAT_SETTINGS["dialogflow-disable-tickets"])
+                CHAT_SETTINGS["dialogflow-active"] = false;
+            }
+
+            SBF.event("SBReady");
+          }
+        );
+        if (SBChat.audio) SBChat.audio.volume = 0.6;
+        if (SBChat.audio_out) SBChat.audio_out.volume = 0.6;
+      } else {
+        SBF.event("SBReady");
+      }
+      $(chat_editor).on("keydown", "textarea", function (e) {
+        if (
+          e.which == 13 &&
+          (!tickets || CHAT_SETTINGS["tickets-enter-button"]) &&
+          (!admin || (!e.ctrlKey && !e.shiftKey))
+        ) {
+          SBChat.submit();
+          e.preventDefault;
+          return false;
+        }
+        if (admin && e.which == 13 && e.ctrlKey) {
+          SBChat.insertText("\n");
+        }
+      });
+      $(main).on("keydown", ".sb-dashboard-articles input", function (e) {
+        if (e.which == 13) $(this).next().click();
+      });
+      if (typeof SB_DEFAULT_DEPARTMENT !== ND) {
+        SBChat.default_department = SB_DEFAULT_DEPARTMENT;
+      }
+      if (typeof SB_DEFAULT_AGENT !== ND) {
+        SBChat.default_agent = SB_DEFAULT_AGENT;
+      }
+      if (typeof SB_DIALOGFLOW_TAGS !== ND) {
+        SBChat.default_tags = SB_DEFAULT_TAGS;
+      }
+      if (typeof SB_DIALOGFLOW_AGENT !== ND) {
+        SBApps.dialogflow.project_id = SB_DIALOGFLOW_AGENT;
+      }
+    } else {
+      SBF.event("SBReady");
+    }
+    // Disable real-time if browser tab not active
+    document.addEventListener(
+      "visibilitychange",
+      function () {
+        SBF.visibilityChange(document.visibilityState);
+      },
+      false
+    );
+
+    $(main).on("click", function () {
+      if (!SBChat.tab_active) {
+        SBF.visibilityChange();
+      }
+    });
+
+    // Set the global container for both admin and front
+    global = main;
+    if (admin) {
+      main = main.find(".sb-conversation");
+    }
+
+    // Scroll detection
+    $(chat_scroll_area).on("scroll", function () {
+      let scroll = chat_scroll_area.scrollTop();
+      let count = label_date_items.length;
+      SBChat.scrollHeader();
+      if (label_date_show) {
+        label_date.sbActive(true);
+        clearTimeout(timeout_label_date[0]);
+        timeout_label_date[0] = setTimeout(() => {
+          label_date.sbActive(false);
+        }, 1500);
+      }
+      if (count) {
+        if (SBChat.isBottom()) {
+          label_date.html($(label_date_items[count - 1]).html());
+        } else {
+          for (var i = 0; i < count; i++) {
+            let top = label_date_items[i].getBoundingClientRect().top;
+            if (top > 100 && top < 150) {
+              let label = $(
+                label_date_items[
+                  label_date_history[0] > scroll && i > 0 ? i - 1 : i
+                ]
+              ).html();
+              if (label != label_date_history[1]) {
+                label_date.html(label);
+                label_date_history[1] = label;
+              }
+              break;
+            }
+          }
+        }
+      }
+      label_date_history[0] = scroll;
+    });
+
+    // Show the message menu
+    $(chat).on("click", ".sb-menu-btn", function () {
+      let menu = $(this).parent().find(".sb-menu");
+      let active = $(menu).sbActive();
+      SBF.deactivateAll();
+      if (!active) {
+        $(menu).sbActive(true);
+        SBF.deselectAll();
+        if (admin) SBAdmin.open_popup = menu;
+      }
+    });
+
+    // Mobile
+    if (mobile) {
+      $(chat_editor).on("click", ".sb-textarea", function () {
+        main.addClass("sb-header-hidden");
+        $(this).find("textarea").focus();
+        if (SBChat.isBottom()) {
+          SBChat.scrollBottom();
+          setTimeout(() => {
+            SBChat.scrollBottom();
+          }, 200);
+        }
+      });
+
+      $(chat_editor).on("focusout", ".sb-textarea", function () {
+        setTimeout(() => {
+          main.removeClass("sb-header-hidden");
+        }, 300);
+      });
+
+      $(chat_editor).on("click", ".sb-submit", function () {
+        chat_textarea.blur();
+      });
+
+      window.addEventListener("popstate", function () {
+        if (SBChat.chat_open) SBChat.open(false);
+      });
+    }
+
+    // Hide the message menu
+    $(chat).on("click", ".sb-menu li", function () {
+      $(this).parent().sbActive(false);
+    });
+    $(main).on("click", "#load-more", function () {
+      let loadmore = new SBMessage();
+      load_more += 30;
+      console.log("set", CHAT_SETTINGS);
+      loadmore.setLoad(load_more);
+      $(this).text("");
+      $(this).sbLoading(true);
+      $(this).attr("id", "");
+      activeUser().getFullConversation(
+        SBChat.conversation.id,
+        (response) => {
+          $(this).sbLoading(false);
+          $(this).html(
+            '<i style="font-size:1.2rem" class="bi-arrow-up-circle"></i>'
+          );
+          $(this).attr("id", "load-more");
+          SBChat.loadUpdate(response.messages);
+        },
+        loadmore.getLoad()
+      );
+      if (total_more <= loadmore.getLoad()) {
+        $(".load-more").hide();
+        // console.log("load new", total_more, loadmore.getLoad());
+      }
+    });
+    //rate and review was moved to test
+    // Send a message
+    $(chat_editor).on("click", ".sb-submit", function () {
+      SBChat.submit();
+    });
+
+    // Open the chat
+    $("body").on(
+      "click",
+      ".sb-chat-btn,.sb-responsive-close-btn,#sb-open-chat,.sb-open-chat",
+      function () {
+        SBChat.open(!SBChat.chat_open);
+      }
+    );
+
+    // Show the dashboard
+    $(main).on("click", ".sb-dashboard-btn", function () {
+      SBChat.showDashboard();
+      if (chat_scroll_area.find(" > .sb-panel-articles > .sb-article").length)
+        SBChat.showArticles();
+      storage("open-conversation", 0);
+      force_action = false;
+    });
+// Send whatsapp template
+$("#template-form").on("submit", function (e) {
+  e.preventDefault();
+  const template = new Metatemplate().payload("#template-form");
+
+  const payload = {
+      type: template.type,
+      to: activeUser().getExtra("phone").value,
+      template_name: template.template_name,
+      language: template.language,
+      variables: template.variables,
+      image_url: template.image_url,
+  };
+  console.log("Payload:", payload);
+
+  const submit = $("#send-meta-template");
+
+  submit.sbLoading(true);
+  SBF.ajax(
+      {
+          function: "whatsapp-send-meta-template",
+          payload: payload,
+      },
+      (response) => {
+          submit.sbLoading(false);
+          if (response?.error && response.error.message) {
+              SBForm.showErrorMessage(
+                  $(".sb-admin").find(".sb-send-template-box"),
+                  response.error.message
+              );
+          } else if (response) {
+              SBChat.sendMessage(
+                  -1,
+                  `*Plantilla WhatsApp*, {agent_name} \n\n ${template.BodyTemplate}`,
+                  false
+              );
+              SBChat.showResponse(`${template.BodyTemplate}`);
+              $(admin ? global : main)
+                  .find(
+                      ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
+                  )
+                  .sbActive(false);
+          }
+          console.log("temp", response);
+      }
+  );
+});
+
+
+
+    //rate and review
+    SBF.get_select_setting();
+
+    // Open a conversation from the dashboard
+    $(main).on("click", ".sb-user-conversations li", function () {
+      SBChat.openConversation($(this).attr("data-conversation-id"));
+    });
+
+    // Start a new conversation from the dashboard
+    $(main).on(
+      "click",
+      ".sb-btn-new-conversation,.sb-departments-list > div,.sb-agents-list > div",
+      function () {
+        let id = $(this).data("id");
+        if (!SBF.null(id)) {
+          if ($(this).parent().hasClass("sb-departments-list")) {
+            SBChat.default_department = parseInt(id);
+          } else {
+            SBChat.default_agent = parseInt(id);
+          }
+        }
+        force_action = "new-conversation";
+        SBChat.clear();
+        SBChat.hideDashboard();
+      }
+    );
+
+    // Displays all conversations in the dashboard
+    $(main).on("click", ".sb-btn-all-conversations", function () {
+      main
+        .find(".sb-dashboard-conversations")
+        .removeClass("sb-conversations-hidden");
+    });
+
+  // Events uploader
+  $(chat_editor).on("click", ".bi-folder", function () {
+    if (!SBChat.is_busy) {
+      chat_editor.find(".sb-upload-files").val("").click();
+      chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+
+      console.log("to upload file");
+    }
+  });
+
+  $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
+    $(this).parent().remove();
+    if (
+      chat_textarea.val() == "" &&
+      chat_editor.find(".sb-attachments > div").length == 0
+    ) {
+      SBChat.activateBar(false);
+    }
+    e.preventDefault();
+    return false;
+  });
+
+  $(chat_editor).on("change", ".sb-upload-files", function (data) {
+    SBChat.busy(true);
+    $(this).sbUploadFiles(function (response) {
+      SBChat.uploadResponse(response);
+    });
+
+    SBF.event("SBAttachments");
+  });
+
+  $(chat_editor).on("dragover", function (e) {
+    $(this).addClass("sb-drag");
+    clearTimeout(timeout);
+    e.preventDefault();
+    e.stopPropagation();
+    // Show the send icon after a timeout
+    showSendIconAfterTimeout();
+  });
+
+  $(chat_editor).on("dragleave", function (e) {
+    timeout = setTimeout(() => {
+      $(this).removeClass("sb-drag");
+      // Show the send icon after a timeout
+      showSendIconAfterTimeout();
+    }, 200);
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+  $(chat_editor).on("drop", function (e) {
+    let files = e.originalEvent.dataTransfer.files;
+    e.preventDefault();
+    e.stopPropagation();
+    if (files.length > 0) {
+      for (var i = 0; i < files.length; ++i) {
+        let form = new FormData();
+        form.append("file", files[i]);
+        SBF.upload(form, function (response) {
+          SBChat.uploadResponse(response);
+        });
+      }
+    }
+    $(this).removeClass("sb-drag");
+    return false;
+  });
+
+  // Function to show the send icon after a timeout
+  function showSendIconAfterTimeout() {
+    setTimeout(() => {
+      $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+    }, 500); // Adjust the timeout duration as needed
+  }
+
+  // Articles
+  $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
+    SBChat.showArticles();
+  });
+
+  $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
+    SBChat.showArticles($(this).attr("data-id"));
+  });
+
+  $(main).on(
+    "click",
+    ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
+    function () {
+      SBChat.searchArticles(
+        $(this).parent().find("input").val(),
+        this,
+        $(this).parent().next()
+      );
+    }
+  );
+
+  $(global).on("click", ".sb-article [data-rating]", function () {
+    SBChat.articleRatingOnClick(this);
+    });
+
+    $(chat).on("click", ".sb-rich-button a", function (e) {
+      let link = $(this).attr("href");
+      if (link.indexOf("#") === 0) {
+        if (link.indexOf("#article-") === 0) {
+          SBChat.showArticles(link.replace("#article-", ""));
+          e.preventDefault();
+          return false;
+        }
+      }
+    });
+
+    // Lightbox
+    $(global).on("click", ".sb-lightbox-media > i", function () {
+      global.find(".sb-lightbox-media").sbActive(false);
+      if (admin) SBAdmin.open_popup = false;
+      return false;
+    });
+
+    $(main).on("click", ".sb-image", function () {
+      SBF.lightbox($(this).html());
+    });
+
+    $(main).on("click", ".sb-slider-images .sb-card-img", function () {
+      SBF.lightbox(
+        `<img loading="lazy" src="${$(this).attr("data-value")}" />`
+      );
+    });
+
+    $(main).on("click", ".sb-image", function () {
+      SBF.lightbox($(this).html());
+    });
+
+    $(main).on("click", ".sb-slider-images .sb-card-img", function () {
+      SBF.lightbox(
+        `<img loading="lazy" src="${$(this).attr("data-value")}" />`
+      );
+    });
+
+    // Event: on conversation loaded
+    $(document).on("SBConversationLoaded", function () {
+      if (storage("queue")) {
+        SBChat.queue(storage("queue"));
+      }
+    });
+
+    // Events emoji
+    $(chat_editor).on("click", ".bi-emoji-grin", function () {
+      SBChat.showEmoji(this);
+    });
+
+    $(chat_emoji).on("click", ".sb-emoji-list li", function (e) {
+      SBChat.insertEmoji($(this).html());
+      if (mobile) clearTimeout(timeout);
+    });
+
+    $(chat_emoji)
+      .find(".sb-emoji-list")
+      .on("touchend", function (e) {
+        timeout = setTimeout(() => {
+          SBChat.mouseWheelEmoji(e);
+        }, 50);
+      });
+
+    $(chat_emoji)
+      .find(".sb-emoji-list")
+      .on("mousewheel DOMMouseScroll", function (e) {
+        SBChat.mouseWheelEmoji(e);
+      });
+
+    // $(chat_emoji)
+    //   .find(".sb-emoji-list")
+    //   .on("touchstart", function (e) {
+    //     SBChat.emoji_options["touch"] = e.originalEvent.touches[0].clientY;
+    //   });
+
+    $(chat_emoji)
+      .find(".sb-emoji-list")
+      .on(
+        "touchstart",
+        function (e) {
+          SBChat.emoji_options["touch"] = e.originalEvent.touches[0].clientY;
+        },
+        { passive: true }
+      );
+
+    $(chat_emoji).on("click", ".sb-emoji-bar > div", function () {
+      SBChat.clickEmojiBar(this);
+    });
+
+    $(chat_emoji).on("click", ".sb-select li", function () {
+      SBChat.categoryEmoji($(this).data("value"));
+    });
+
+    $(chat_emoji)
+      .find(".sb-search-btn input")
+      .on("change keyup paste", function () {
+        SBChat.searchEmoji($(this).val());
+      });
+
+    // Textarea
+    $(chat_textarea).on("keyup", function () {
+      SBChat.textareaChange(this);
+    });
+
+    // Privacy message
+    $(main).on("click", ".sb-privacy .sb-approve", function () {
+      storage("privacy-approved", true);
+      $(this).closest(".sb-privacy").remove();
+      main.removeClass("sb-init-form-active");
+      chat_header.find(" > div").css({
+        opacity: 1,
+        top: 0,
+      });
+      SBChat.initChat();
+      if (tickets) {
+        SBTickets.showPanel("new-ticket");
+      } else if (!SBChat.isInitDashboard()) {
+        SBChat.hideDashboard();
+      }
+    });
+
+    $(main).on("click", ".sb-privacy .sb-decline", function () {
+      let privacy = $(this).closest(".sb-privacy");
+      $(privacy).find(".sb-text").html($(privacy).attr("data-decline"));
+      $(privacy).find(".sb-decline").remove();
+      SBChat.scrollBottom(true);
+    });
+
+    // Popup message
+    $(main).on("click", ".sb-popup-message .bi-x-lg", function () {
+      SBChat.popup(true);
+    });
+
+    // Rich messages and inputs
+    $(main).on(
+      "click",
+      ".sb-rich-message .sb-submit,.sb-rich-message .sb-select ul li",
+      function () {
+        let message = $(this).closest(".sb-rich-message");
+        if (!message[0].hasAttribute("disabled")) {
+          SBRichMessages.submit(message, message.attr("data-type"), this);
+        }
+      }
+    );
+
+    $(main).on("click", ".sb-rich-message .sb-input > span", function () {
+      $(this).sbActive(true);
+      $(this).siblings().focus();
+    });
+
+    $(main).on(
+      "focus focusout click",
+      ".sb-rich-message .sb-input input,.sb-rich-message .sb-input select",
+      function (e) {
+        switch (e.type) {
+          case "focusin":
+          case "focus":
+            $(this).siblings().sbActive(true);
+            break;
+          case "focusout":
+            if ($(this).val() == "") {
+              $(this).siblings().sbActive(false);
+            } else {
+              $(this).siblings().addClass("sb-filled sb-active");
+            }
+            break;
+          case "click":
+            $(this).siblings().removeClass("sb-filled");
+            break;
+        }
+      }
+    );
+
+    $(main).on("click", ".sb-slider-arrow", function () {
+      SBRichMessages.sliderChange(
+        $(this).closest("[id]").attr("id"),
+        $(this).hasClass("bi-chevron-right") ? "right" : "left"
+      );
+    });
+
+    $(main).on(
+      "change",
+      '.sb-rich-message [data-type="select"] select',
+      function () {
+        $(this).siblings().sbActive(true);
+      }
+    );
+
+    $(main).on("click", '[data-type="select-input"] > div', function () {
+      $(this).prev().sbActive(true);
+      $(this).next().addClass("sb-focus");
+    });
+
+    $(main).on(
+      "focusout",
+      '[data-type="select-input"] input,[data-type="select-input"] select',
+      function () {
+        let cnt = $(this).closest(".sb-input");
+        if (
+          cnt.find('input[type="tel"]').val() + cnt.find("select").val() ==
+          ""
+        ) {
+          cnt.find("span").sbActive(false);
+        }
+        cnt.find(".sb-focus").removeClass("sb-focus");
+      }
+    );
+
+    // Registration and Login
+    $(main).on("click", ".sb-rich-registration .sb-login-area", function () {
+      let init = main.hasClass("sb-init-form-active");
+      $(this)
+        .closest(".sb-rich-registration")
+        .replaceWith(
+          SBRichMessages.generate({}, "login", init ? "sb-init-form" : "")
+        );
+      SBChat.scrollBottom(init);
+    });
+
+    $(main).on("click", ".sb-rich-login .sb-registration-area", function () {
+      if (CHAT_SETTINGS["registration-link"]) {
+        document.location = CHAT_SETTINGS["registration-link"];
+      } else {
+        let init = main.hasClass("sb-init-form-active");
+        $(this)
+          .closest(".sb-rich-login")
+          .replaceWith(
+            SBRichMessages.generate(
+              {},
+              "registration",
+              init ? "sb-init-form" : ""
+            )
+          );
+        SBChat.scrollBottom(init);
+      }
+    });
+
+    $(main).on("click", ".sb-rich-login .sb-submit-login", function () {
+      SBF.loginForm(this, false, (response) => {
+        let area = $(this).closest(".sb-rich-login");
+        activeUser(new SBUser(response[0]));
+        if (area.hasClass("sb-init-form")) {
+          main.removeClass("sb-init-form-active");
+          area.remove();
+          force_action = "open-conversation";
+          SBChat.initChat();
+          SBPusher.start();
+          if (!SBChat.isInitDashboard()) {
+            SBChat.hideDashboard();
+          }
+        } else {
+          area = area.closest("[data-id]");
+          let message = SBChat.conversation.getMessage(area.attr("data-id"));
+          let text = `${sb_("Logged in as")} *${activeUser().name}*`;
+          message.set("message", text);
+          SBChat.updateMessage(message.id, text);
+          area.replaceWith(message.getCode());
+          SBPusher.started = false;
+          SBPusher.start();
+        }
+      });
+    });
+
+    // Social share buttons
+    $(chat).on("click", ".sb-social-buttons div", function () {
+      SBF.openWindow($(this).attr("data-link"));
+    });
+
+    // Archive chat
+    $(main).on("click", ".sb-close-chat", function () {
+      SBChat.closeChat();
+    });
+
+    // $(chat).on("click", "#sb-waiting-list .sb-submit", function () {
+    //   if ($(this).index() == 0) {
+    //     setTimeout(() => {
+    //       SBApps.woocommerce.waitingList("submit");
+    //     }, 1000);
+    //   }
+    // });
+
+    // $(document).on("SBNewEmailAddress", function (e, response) {
+    //   if (response["id"] == "sb-waiting-list-email") {
+    //     SBApps.woocommerce.waitingList("submit");
+    //   }
+    // });
+
+    /*
+     * ----------------------------------------------------------
+     * COMPONENTS
+     * ----------------------------------------------------------
+     */
+
+    // Search
+    $(global).on("click", ".sb-search-btn > i", function () {
+      let parent = $(this).parent();
+      let active = $(parent).sbActive();
+      if (active) {
+        setTimeout(() => {
+          $(parent).find("input").val("");
+        }, 50);
+        setTimeout(() => {
+          $(parent).find("input").trigger("change");
+        }, 550);
+      }
+      $(parent).sbActive(!active);
+      $(parent).find("input").focus();
+      global.find(".sb-select ul").sbActive(false);
+    });
+
+    // Select
+    $(global).on("click", ".sb-select", function () {
+      let ul = $(this).find("ul");
+      let active = ul.hasClass("sb-active");
+      $(global).find(".sb-select ul").sbActive(false);
+      ul.setClass("sb-active", !active);
+      if (admin) SBAdmin.open_popup = active ? false : this;
+    });
+
+
+    /**inbox loader**/
+    $(global).on("click", ".sb-select li", function () {
+      let select = $(this).closest(".sb-select");
+      let value = $(this).data("value");
+      var item = $(select).find(`[data-value="${value}"]`);
+      $(select).find("li").sbActive(false);
+      $(select).find("p").attr("data-value", value).html($(item).html());
+      $(item).sbActive(true);
+    });
+
+    // Image uploader
+    $(global).on("click", ".sb-input-image .image", function () {
+      upload_target = $(this).parent();
+      chat_editor.find(".sb-upload-files").click();
+    });
+
+    $(global).on(
+      "click",
+      ".sb-input-image .image > .bi-x-lg",
+      function (e) {
+        $(this).parent().removeAttr("data-value").css("background-image", "");
+        e.preventDefault();
+        return false;
+      }
+    );
+
+    let alertOnConfirmation = false;
+
+    function dialog(
+      text,
+      type,
+      onConfirm = false,
+      id = "",
+      title = "",
+      scroll = false
+    ) {
+      let box = global.find(".sb-dialog-box").attr("data-type", type);
+      let p = box.find("p");
+      box
+        .attr("id", id)
+        .setClass("sb-scroll-area", scroll)
+        .css("height", scroll ? parseInt($(window).height()) - 200 + "px" : "");
+      box.find(".sb-title").html(title);
+      p.html((type == "alert" ? sb_("Are you sure?") + " " : "") + sb_(text));
+      box.sbActive(true).css({
+        "margin-top": box.outerHeight() / -2 + "px",
+        "margin-left": box.outerWidth() / -2 + "px",
+      });
+      alertOnConfirmation = onConfirm;
+      setTimeout(() => {
+        SBAdmin.open_popup = box;
+      }, 500);
+    }
+
+    // LOADER EXTRA
+
+    // $(document).ready(function () {
+    //   let sbConversations = $("#sb-conversations, #theme-toggle");
+    //   sbConversations.click(function () {
+    //     $("body").append(
+    //       "<div id='overlay'><img style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);animation: fade-in 9s'></div>"
+    //     );
+    //     $("#overlay").fadeIn("slow"); // Changed ".overlay" to "#overlay"
+    //     $(document).ready(function () {
+    //       setTimeout(function () {
+    //         if ($("#overlay").length > 0) $("#overlay").fadeOut("slow"); // Changed ".overlay" to "#overlay"
+    //         window.location.href = "admin.php?conversation=";
+    //       }, 100);
+    //     });
+    //   });
+    // });
+
+    
+    
+
+    // CONTEXTUAL BLOCKED
+    // $(document).on("contextmenu",function(e){
+    //     return false;
+    // });
+
+    // LISTENER
+    $(global).on(
+      "click",
+      '.sb-message.sb-location, .sb-message p a[href^="https://maps.google.com/"]',
+      function (e) {
+        e.preventDefault();
+        let location = $(this).closest(".sb-location").attr("data-location");
+        let url = $(this).attr("href");
+
+        if (!location) {
+          const matches = url.match(/\/\?q=([\d\.\-]+),([\d\.\-]+)/);
+          if (matches && matches.length >= 3) {
+            location = matches[1] + "," + matches[2];
+          }
+        }
+        if (location) {
+          const iframe =
+            '<iframe src="https://maps.google.com/maps?q=' +
+            location +
+            '&output=embed"></iframe>';
+          $(this).closest(".sb-message").html(iframe);
+        } else {
+          window.open(url, "_blank");
+        }
+      }
+    );
+  }
+})(jQuery);
+
+// newConversation source inyector
+var selectedSource = "tk";
+function updateSource(value) {
+  selectedSource = value;
+  console.log("Selected Source:", selectedSource);
+}
+let isSpeechSynthesisActive = false;
+let utterance = null; // Declare utterance globally to access it from the event listener
+
+// Function to read text
+function readText(text) {
+  if (!isSpeechSynthesisActive) {
+    // Check if speech synthesis is not active
+    let lang = "es-US";
+    let rate = 1;
+    let pitch = 1.2;
+
+    utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang;
+    utterance.rate = rate;
+    utterance.pitch = pitch;
+
+    utterance.onstart = function () {
+      isSpeechSynthesisActive = true; // Set flag to true when speech synthesis starts
+    };
+
+    utterance.onend = function () {
+      isSpeechSynthesisActive = false; // Set flag to false when speech synthesis ends
+    };
+
+    window.speechSynthesis.speak(utterance);
+  }
+}
+
+$(document).on(
+  "click",
+  '.sb-menu li[data-value="read-text"]',
+  function (event) {
+    event.stopPropagation();
+    let dataId = $(this).closest(".sb-shadow-conversation").data("id");
+    let textToRead = $(
+      '.sb-shadow-conversation[data-id="' + dataId + '"] .sb-message'
+    ).text();
+
+    readText(textToRead); // Call readText function with the extracted text
+  }
+);
+
+// Event listener for beforeunload event
+window.addEventListener("beforeunload", function (event) {
+  window.speechSynthesis.cancel();
+  isSpeechSynthesisActive = false; // Reset flag on page unload
+});
+
+$(document).on("click", function (event) {
+  window.speechSynthesis.cancel();
+  isSpeechSynthesisActive = false; // Reset flag on document click
+});
+
+

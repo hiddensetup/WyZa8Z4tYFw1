@@ -399,7 +399,7 @@
       var closerToTop = rect.top < window.innerHeight / 2;
   
       // Determine the anchor position based on the element's position
-      var anchor = closerToTop ? "s" : "w";
+      var anchor = closerToTop ? "n" : "w";
   
       // Initialize the tooltip with the determined anchor position
       $(this).miniTip({
@@ -2858,7 +2858,7 @@
                 tagsDetailsDiv.append(`<div>
 								<h4 class="title-tags tags-${tag_key}">
 									<div>
-										<i class="sb-icon bi-crosshair tags-${tag_key}"></i>
+										<i class="sb-icon bi-kanban-fill tags-${tag_key}"></i>
 									</div>
 									<div class="white-title-elements">
 										${tag_key.toUpperCase()}(${tagData.length})
@@ -4708,7 +4708,7 @@ if (scroll) {
       </small>
 			<div class="sb-profile client-status"><img class="client-icon-status sb-icon tags-${
         conversation["label"]
-      } bi-crosshair loading="lazy" src="${
+      } bi-kanban-fill loading="lazy" src="${
         conversation["profile_image"]
       }">
     
@@ -5620,12 +5620,12 @@ $("#change-conversation-source").change(function (e) {
     // change icon of source type
     if (e.target.value !== "Unknown") {
       const name = e.target.options[e.target.selectedIndex].text;
-      let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
+      let labcolor = `sb-icon bi-kanban-fill tags-${e.target.value}`;
       $('.sb-profile-list [data-id="conversation-label"] i').attr(
         "class",
         labcolor
       );
-      $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+      $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
         "class",
         labcolor
       );
@@ -5638,12 +5638,12 @@ $("#change-conversation-source").change(function (e) {
 //   $("#CstBtn a").click(function (e) {
 //     const label = $(this).attr("id");
 //     const name = sb_(SBF.admin_set("label-names")[label] + " ");
-//     let labcolor = `sb-icon bi-crosshair tags-${label}`;
+//     let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
 //     $('.sb-profile-list [data-id="conversation-label"] i').attr(
 //       "class",
 //       labcolor
 //     );
-//     $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+//     $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
 //       "class",
 //       labcolor
 //     );
@@ -5689,9 +5689,9 @@ $("#change-conversation-source").change(function (e) {
 $("#CstBtn a").click(function (e) {
   const label = $(this).attr("id");
   const name = sb_(SBF.admin_set("label-names")[label] + " ");
-  let labcolor = `sb-icon bi-crosshair tags-${label}`;
+  let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
   $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
-  $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr("class", labcolor);
+  $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
   $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
   SBProfile.updateLabelUI(label, name, labcolor); // Update UI
   SBProfile.updateLabel(label);
@@ -5700,7 +5700,7 @@ $("#CstBtn a").click(function (e) {
 // Update label UI
 updateLabelUI: function(label, name, labcolor) {
   // Update label name and color in UI
-  $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr("class", labcolor);
+  $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
   $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
 },
 
@@ -5883,7 +5883,7 @@ updateLabel: function (label) {
           }
 
           // Determine the class based on the selected value
-          let selectedClass = `class="sb-icon bi-crosshair tags-${bgselect}"`;
+          let selectedClass = `class="sb-icon bi-kanban-fill tags-${bgselect}"`;
 
           value = `<select style="background: transparent; border-color: transparent;" id="change-conversation-labels">
 								<option value='unknown'>${sb_("Client status")}</option> ${optlist} </select>`;
@@ -6902,7 +6902,7 @@ updateLabel: function (label) {
       }
     );
 
-    $(conversations_area).on("click", ".bi-envelope-arrow-up", function () {
+    $(conversations_area).on("click", "#load-saved-replies", function () {
       saved_replies.sbTogglePopup(this);
     });
 
@@ -6932,7 +6932,7 @@ updateLabel: function (label) {
       });
     });
 
-    $(conversations_area).on("click", ".bi-crosshair", function () {
+    $(conversations_area).on("click", "#set-status", function () {
       chat_status.sbTogglePopup(this);
     });
 

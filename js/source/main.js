@@ -7453,7 +7453,7 @@ $("#template-form").on("submit", function (e) {
     });
 
   // Events uploader
-  $(chat_editor).on("click", ".bi-paperclip", function () {
+  $(chat_editor).on("click", "#upload-files", function () {
     if (!SBChat.is_busy) {
       chat_editor.find(".sb-upload-files").val("").click();
       chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
