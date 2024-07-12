@@ -4519,6 +4519,7 @@ if (scroll) {
 
     // Return the conversation code of the left conversations list
     getListCode: function (conversation, status) {
+      
       if (conversation instanceof SBConversation) {
         const lastMessage = conversation.getLastMessage();
         conversation = {
@@ -4677,6 +4678,8 @@ if (scroll) {
                 ? "+" + (voiceFiles.length - 1)
                 : voiceFiles.length);
           }
+
+            // Check if message contains {agent_name} and make it bold if it does
 
           // Combine the messages
           if (mediaMessage || docMessage || voiceMessage) {

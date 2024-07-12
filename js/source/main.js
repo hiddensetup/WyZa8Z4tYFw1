@@ -3388,7 +3388,7 @@
             .find(".sb-title")
             .html(`${sb_("Hello")} ${activeUser().nameBeautified}!`);
         }
-        this.welcome();
+        // this.welcome();
         // this.subscribe();
         if (!SBPusher.active) {
           setInterval(() => {
