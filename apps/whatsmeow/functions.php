@@ -1,21 +1,17 @@
 <?php
 define('SB_WHATSMEOW', 'Go');
 
-// Define a list of blacklisted numbers
-$blacklist = ['5491165900208', '5491126415491', '34660172262', '50761519259', '5491140908465','525574957250']; // Example blacklisted numbers
-
-function sb_waweb_send_message($to, $message = '', $attachments = [])
+function sb_whatsmeow_send_message($to, $message = '', $attachments = [])
 {
-    if (empty($message) && empty($attachments)) return json_encode(['status' => 'error', 'message' => 'Message and attachments are empty']);
 
-    $to = trim(str_replace('+', '', $to));
-    
-    // Check if the recipient's number is blacklisted
-    global $blacklist;
-    if (in_array($to, $blacklist)) {
-        return json_encode(['status' => 'blacklisted', 'message' => 'Recipient is blacklisted.']);
+    // Check if the message contains "~Registro de contacto"
+    if (strpos($message, '*~Registro de contacto*') !== false) {
+        return ['success' => false, 'error' => 'Template sent'];
     }
 
+    if (empty($message) && empty($attachments)) return false;
+
+    $to = trim(str_replace('+', '', $to));
     $user = sb_get_user_by('phone', $to);
     $response = false;
     $merge_field = false;
