@@ -3836,7 +3836,7 @@ BODY
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
         appearance: none !important;
-        width: 37px !important;
+        width: 33px !important;
         height: 17px !important;
         background-color: var(--chat-input-search-responsive) !important;
         border-radius: 24px !important;
@@ -3851,8 +3851,8 @@ BODY
     .switch-toggle:before {
         content: "";
         position: absolute !important;
-        width: 19px;
-        height: 19px;
+        width: 15px;
+        height: 15px;
         background: var(--chat-input-toggle-color) !important;
         border-radius: 24px !important;
         top: 0px !important;
@@ -3944,7 +3944,6 @@ BODY
         animation: fade-in .3s ease-in;
         -webkit-animation: fade-in .3s ease-in;
         font-weight: 400;
-        padding: 10px 10px;
 
         &:focus {
             border: 0.5px solid var(--chat-border-color);
