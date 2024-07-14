@@ -4082,69 +4082,81 @@ if (scroll) {
       this.openConversation(conversation_id, user_id, scroll);
     },
 
-    // Populate conversations
-    populateList: function (response) {
-      let code = "";
-      conversations = [];
-      let conversionlist = response;
-      //console.log(response);
-      conversionlist = conversionlist.sort(function (a, b) {
-        return (
-          new Date(b.creation_time).getTime() -
-          new Date(a.creation_time).getTime()
-        );
-      });
+   // Populate conversations
+populateList: function (response) {
+  let code = "";
+  conversations = [];
+  let conversionlist = response;
 
-      for (var i = 0; i < conversionlist.length; i++) {
-        code += this.getListCode(conversionlist[i]);
-        conversations.push(conversionlist[i]);
-      }
-      if (code == "") {
-        code = `<p class="sb-no-results">${sb_("No conversations found.")}</p>`;
-      }
+  // Sort conversations by creation time in descending order
+  conversionlist = conversionlist.sort(function (a, b) {
+    return (
+      new Date(b.creation_time).getTime() -
+      new Date(a.creation_time).getTime()
+    );
+  });
 
-      conversations_admin_list_ul.html(code);
-      conversations_admin_list_ul.css("position", "relative");
-      conversations_admin_list_ul.css("bottom", "15px");
-      this.positionList();
-      this.updateMenu();
+  // Generate HTML code for conversations
+  for (var i = 0; i < conversionlist.length; i++) {
+    code += this.getListCode(conversionlist[i]);
+    conversations.push(conversionlist[i]);
+  }
 
-      SBF.event("SBAdminConversationsLoaded", {
-        conversations: response,
-      });
-    },
+  // Handle no results scenario
+  if (conversionlist.length === 0) {
+    code = `<p class="sb-no-results">${sb_("No conversations found.")}</p>`;
+  }
 
+  // Update the HTML content and apply styles
+  conversations_admin_list_ul.html(code);
+  conversations_admin_list_ul.css({
+    "position": "relative",
+    "bottom": "15px"
+  });
 
-    positionList() {
-      let chat_list = Array.from(document.querySelectorAll("ul.sorting-by-last-message li"));
-      let totalHeight = 0;
-    
-      // Sort the chat_list array based on data-time attribute
-      chat_list.sort((a, b) => {
-        let timeA = parseInt(a.getAttribute("data-time"));
-        let timeB = parseInt(b.getAttribute("data-time"));
-        return timeB - timeA; // Sort in descending order (latest first)
-      });
-    
-      // Reorder the DOM elements and apply styles
-      chat_list.forEach((list, index) => {
-        let conversationHeight = list.offsetHeight;
-        let conversation_id = list.getAttribute("data-conversation-id");
-        this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
-    
-        let order_css = `
-          position: relative;
-          width: -webkit-fill-available;
-          width: -moz-available;
-          order: ${index}; // Use flexbox order for positioning
-        `;
-    
-        list.style = order_css;
-        totalHeight += conversationHeight;
-    
-        // Move the element to the end of the list, it will be ordered by the 'order' property
-        list.parentNode.appendChild(list);
-      });
+  // Position and style the list items
+  this.positionList();
+  this.updateMenu();
+
+  // Emit event for conversations loaded
+  SBF.event("SBAdminConversationsLoaded", {
+    conversations: response,
+  });
+},
+
+// Position the list of conversations
+positionList() {
+  let chat_list = Array.from(document.querySelectorAll("ul.sorting-by-last-message li"));
+  let totalHeight = 0;
+
+  // Sort the chat_list array based on data-time attribute
+  chat_list.sort((a, b) => {
+    let timeA = parseInt(a.getAttribute("data-time"));
+    let timeB = parseInt(b.getAttribute("data-time"));
+    return timeB - timeA; // Sort in descending order (latest first)
+  });
+
+  // Reorder the DOM elements and apply styles
+  chat_list.forEach((list, index) => {
+    let conversationHeight = list.offsetHeight;
+    let conversation_id = list.getAttribute("data-conversation-id");
+    this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
+
+ 
+    // Apply CSS styles for positioning
+    list.style.cssText = `
+      position: relative;
+      width: -webkit-fill-available;
+      width: -moz-available;
+      order: ${index}; // Use flexbox order for positioning
+    `;
+
+    totalHeight += conversationHeight;
+
+    // Move the element to the end of the list, it will be ordered by the 'order' property
+    list.parentNode.appendChild(list);
+  });
+
     
       // Set the parent ul to use flexbox
       let parentUl = document.querySelector("ul.sorting-by-last-message");
@@ -4313,12 +4325,15 @@ if (scroll) {
                       let formattedMessage = (
                         "preview" in payload ? payload.preview : "notfimy"
                       )
+                      
+                        .replace(/@s\.whatsapp\.net/g, '')
                         .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
                         .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
                         .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
                         .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
                         .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
-                        .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E"); // custom replacement for ⟦ ⟧
+                        .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E") // custom replacement for ⟦ ⟧
+                        .replace(/\{agent_name\}/g, '<i class="bi-people-fill"></i>')
 
                       SBChat.desktopNotification(
                         user_details[0],
@@ -4393,80 +4408,43 @@ if (scroll) {
         }
       }
     },
-
-    // // Update the top left filter and inbox counter
-    // updateMenu: function () {
-    //   let count = conversations_admin_list_ul.find(
-    //     '[data-conversation-status="2"]'
-    //   ).length;
-    //   let item = conversations_filters.eq(0);
-    //   let span = item.find(" > p span");
-    //   if (count == 100 || this.menu_count_ajax) {
-    //     let status_code = item.find("li.sb-active").data("value");
-    //     this.menu_count_ajax = true;
-    //     SBF.ajax(
-    //       {
-    //         function: "count-conversations",
-    //         status_code: status_code == 0 ? 2 : status_code,
-    //       },
-    //       (response) => {
-    //         span.html(`(${response})`);
-    //       }
-    //     );
-    //   } else {
-    //     span.html(`<small class="notif">${count}</small>`);
-    //   }
-    // },
-
+    
     updateMenu: function () {
-      let count = conversations_admin_list_ul.find('[data-conversation-status="2"]').length;
-      let item = conversations_filters.eq(0);
-      let anchorTag = item.find(" > a");
-      let span = anchorTag.find(" > p span");
-      
-      let existingFloatingElement = document.getElementById('floatingElement');
+      const count = conversations_admin_list_ul.find('[data-conversation-status="2"]').length;
+      const item = conversations_filters.eq(0);
+      const anchorTag = item.find(" > a");
+      const span = anchorTag.find(" > p span");
       
       if (count == 100 || this.menu_count_ajax) {
-        let status_code = item.find("li.sb-active").data("value");
-        this.menu_count_ajax = true;
-        SBF.ajax(
-          {
-            function: "count-conversations",
-            status_code: status_code == 0 ? 2 : status_code,
-          },
-          (response) => {
-            span.html(`(${response})`);
-          }
-        );
+          const status_code = item.find("li.sb-active").data("value");
+          this.menu_count_ajax = true;
+          SBF.ajax(
+              {
+                  function: "count-conversations",
+                  status_code: status_code == 0 ? 2 : status_code,
+              },
+              (response) => span.html(`(${response})`)
+          );
       } else {
-        if (!existingFloatingElement) {
-          let floatingElement = document.createElement('div');
-          floatingElement.id = 'floatingElement';
-          floatingElement.style.cssText = 'position: relative; top: 10px; margin: auto; display: flex; justify-content: center; z-index: 33;';
+          let floatingElement = document.getElementById('floatingElement');
           
-          let notifElement = document.createElement('small');
-          notifElement.className = 'notif';
-          notifElement.style.cssText = 'font-size: medium; padding: 6px 10px; border-radius: 30px;';
-          notifElement.textContent = count;
+          if (!floatingElement) {
+              floatingElement = document.createElement('div');
+              floatingElement.id = 'floatingElement';
+              floatingElement.style.cssText = 'position: relative; top: 10px; margin: auto; display: flex; justify-content: center; z-index: 33;';
+              
+              const notifElement = document.createElement('small');
+              notifElement.className = 'notif';
+              notifElement.style.cssText = 'font-size: medium; padding: 6px 10px; border-radius: 30px;';
+              
+              floatingElement.appendChild(notifElement);
+              document.getElementById('sb-conversations').appendChild(floatingElement);
+          }
           
-          floatingElement.appendChild(notifElement);
-          
-          document.getElementById('sb-conversations').appendChild(floatingElement);
-        } else {
-          let notifElement = existingFloatingElement.querySelector('.notif');
-          notifElement.textContent = count;
-        }
-        
-        // Modificar la visibilidad del div que contiene el elemento notif
-        let divInsideAnchor = document.getElementById('sb-conversations').querySelector('div');
-        if (count === 0) {
-          divInsideAnchor.style.visibility = 'hidden';
-        } else {
-          divInsideAnchor.style.visibility = 'visible';
-        }
+          floatingElement.querySelector('.notif').textContent = count;
+          floatingElement.style.visibility = count === 0 ? 'hidden' : 'visible';
       }
-    },
-    
+  },
 
     messageMenu: function (agent) {
       let readTextOption = `<li style="padding: 6px 15px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
@@ -4519,236 +4497,97 @@ if (scroll) {
 
     // Return the conversation code of the left conversations list
     getListCode: function (conversation, status) {
-      
       if (conversation instanceof SBConversation) {
-        const lastMessage = conversation.getLastMessage();
-        conversation = {
-          message: lastMessage.message,
-          attachments: lastMessage.attachments,
-          user_id: conversation.get("user_id"),
-          conversation_id: conversation.id,
-          conversation_status_code: conversation.get("conversation_status_code"),
-          conversation_source: conversation.get("source"),
-          label: conversation.get("label"),
-          profile_image: conversation.get("profile_image"),
-          first_name: conversation.get("first_name"),
-          last_name: conversation.get("last_name"),
-          creation_time: conversation.get("creation_time"),
-          payload: conversation.get("payload"),
-        };
+          const lastMessage = conversation.getLastMessage();
+          conversation = {
+              ...conversation,
+              ...lastMessage
+          };
       }
-
-      // MESSAGE SPLIT BY WORDS IN LEFT BAR
-
+  
       let message = conversation.message;
-      let truncatedWords = [];
+  
+      // Consolidated message cleaning
+      message = message
+          .replace(/- /g, "• ")
+          .replace(/[\[\]"\,}]/g, "")
+          .replace(/[{,+0-9]+@s\.whatsapp\.net/g, "")
+          .replace(/\{agent_name\}/g, '<i class="bi-people-fill"></i>')
+          .replace(/\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g, '<i class="bi-file-text" data-options="$1" data-message="$2"></i>')
+          .replace(/\[card[^\]]*\]/g, '<i class="bi-file-text"></i>')
+          .replace(/〚/g, "")
+.replace(/〛/g, " ↪️ ")
+// Replace single asterisks for bold
+.replace(/(\*[^*]+\*)/g, function(match) {
+    return `<strong>${match.slice(1, -1)}</strong>`
+})
+// Replace single underscores for italic
+.replace(/(_[^_]+_)/g, function(match) {
+    return `<em>${match.slice(1, -1)}</em>`
+})
+// Replace single backticks for code
+.replace(/(`[^`]+`)/g, function(match) {
+    return `<code>${match.slice(1, -1)}</code>`
+})
+// Replace single tildes for strikethrough
+.replace(/~([^~]+)~/g, function(match) {
+    return `<del>${match.slice(1, -1)}</del>`
+})
 
-      message = message.replace(/- /g, "• ");
-
-      // Remove specified symbols from the message, including '}'
-      message = message.replace(/[\[\]"\,}]/g, "");
-
-      // Remove symbols and words matching the pattern [{,+,0-9]+@s.whatsapp.net}]
-      const pattern = /[{,+0-9]+@s\.whatsapp\.net/g;
-      message = message.replace(pattern, "");
-
-      // Replace [buttons options="..." message="..."] with <i class="bi-file-text"></i> preserving dynamic content
-      message = message.replace(
-        /\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g,
-        '<i class="bi-file-text" data-options="$1" data-message="$2"></i>'
-      );
-
-      // Replace [card image="" header="" description="" link="" link-text=" " extra="" target=""] with <i class="bi-file-text"></i>, including '}'
-      message = message.replace(
-        /\[card[^\]]*\]/g,
-        '<i class="bi-file-text"></i>'
-      );
-
-      // Replace the symbols 〚 and 〛 with <i class="bi-pencil-square"></i>
-      message = message.replace(/〚/g, "").replace(/〛/g, " ↪️ ");
-
-      const MAX_CHARACTERS = 40;
-      const MAX_WORDS = 5;
-
-      if (message.length > MAX_CHARACTERS) {
-        const words = message.split(" ");
-        let currentLength = 0;
-        let wordCount = 0;
-
-        for (const word of words) {
-          if (
-            wordCount >= MAX_WORDS ||
-            currentLength + word.length + 1 > MAX_CHARACTERS
-          ) {
-            break;
-          }
-          truncatedWords.push(word);
-          currentLength += word.length + 1; // Add 1 for the space
-          wordCount++;
-        }
-
-        message = truncatedWords.join(" ") + "...";
+          .replace(/(\*[^*]+\*)/g, function(match) {
+            return `<strong>${match.slice(1, -1)}</strong>`;
+        })
+      // Truncate message if necessary
+      if (message.length > 40) {
+          const words = message.split(" ");
+          message = words.slice(0, 5).join(" ") + (words.length > 5 ? "..." : "");
       }
-
-      const labelname = [conversation.label];
-      const cloud_active = SBF.admin_set("whatsapp-cloud")["cloud-active"];
-
-      const reply = pattern.test(message);
-      if (reply) {
-        truncatedWords = message.replace(/^.*?]/, "");
+  
+      // Attachments handling
+      if (!message && conversation.attachments) {
+          const files = JSON.parse(conversation.attachments);
+          const mediaFiles = files.filter(file => /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file));
+          const docFiles = files.filter(file => /\.(docx?|xlsx?|pdf)\b/g.test(file));
+          const voiceFiles = files.filter(file => /\.(mp3|ogg)\b/g.test(file));
+  
+          const mediaMessage = mediaFiles.length > 0 ? `<i class="bi-box"></i> ${sb_("Media")}: ${mediaFiles.length > 1 ? `+${mediaFiles.length - 1}` : mediaFiles.length}` : "";
+          const docMessage = docFiles.length > 0 ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${docFiles.length > 1 ? `+${docFiles.length - 1}` : docFiles.length}` : "";
+          const voiceMessage = voiceFiles.length > 0 ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${voiceFiles.length > 1 ? `+${voiceFiles.length - 1}` : voiceFiles.length}` : "";
+  
+          message = [mediaMessage, docMessage, voiceMessage].filter(Boolean).join(" ");
       }
-
-      let strip = new SBMessage();
-      let is_title = !SBF.null(conversation.title);
-
-      if (conversation.payload.includes("preview")) {
-        const payload = JSON.parse(conversation.payload.replace("\\'", "'"));
-        if (payload && "preview" in payload) {
-          message = payload.preview;
-        }
-      }
-
-      const formatSymbols = {
-        "*": "strong",
-        "~": "s",
-        "```": "code",
-      };
-
-      Object.keys(formatSymbols).forEach((symbol) => {
-        const regex = new RegExp(`\\${symbol}(.*?)\\${symbol}`, "g");
-        if (message.includes(symbol)) {
-          message = message.replace(
-            regex,
-            (match, content) =>
-              `<${formatSymbols[symbol]}>${content}</${formatSymbols[symbol]}>`
-          );
-        }
-      });
-
-      if (SBF.null(status)) {
-        status = conversation.conversation_status_code;
-      }
-
-      //Conversation List Attachments Received
-
-      if (!message && !SBF.null(conversation.attachments)) {
-        const files = JSON.parse(conversation.attachments);
-        if (Array.isArray(files)) {
-          const mediaRegex = /\.(jpg|jpeg|png|webp|mp4)\b/g;
-          const docRegex = /\.(docx?|xlsx?|pdf)\b/g;
-          const voiceRegex = /\.(mp3|ogg)\b/g;
-
-          const mediaFiles = files.filter((file) => mediaRegex.test(file));
-          const docFiles = files.filter((file) => docRegex.test(file));
-          const voiceFiles = files.filter((file) => voiceRegex.test(file));
-
-          let mediaMessage = "";
-          let docMessage = "";
-          let voiceMessage = "";
-
-          if (mediaFiles.length > 0) {
-            mediaMessage =
-              `<i class="bi-box"></i>` +
-              " " +
-              sb_("Media") +
-              ": " +
-              (mediaFiles.length > 1
-                ? "+" + (mediaFiles.length - 1)
-                : mediaFiles.length);
-          }
-
-          if (docFiles.length > 0) {
-            docMessage =
-              `<i class="bi-file-text"></i>` +
-              " " +
-              sb_("Doc") +
-              ": " +
-              (docFiles.length > 1
-                ? "+" + (docFiles.length - 1)
-                : docFiles.length);
-          }
-
-          if (voiceFiles.length > 0) {
-            voiceMessage =
-              `<i class="bi-mic-fill vertical-align"></i>` +
-              " " +
-              sb_("Voice") +
-              ": " +
-              (voiceFiles.length > 1
-                ? "+" + (voiceFiles.length - 1)
-                : voiceFiles.length);
-          }
-
-            // Check if message contains {agent_name} and make it bold if it does
-
-          // Combine the messages
-          if (mediaMessage || docMessage || voiceMessage) {
-            message = [mediaMessage, docMessage, voiceMessage]
-              .filter(Boolean)
-              .join(" ");
-          }
-        }
-      }
-
+  
+      const formattedMessage = new SBMessage().strip(message).replace(/_/g, " ");
+      const isTitle = !SBF.null(conversation.title);
       
-
-      let order_css = `
-			 `;
-      return `<li style="${order_css}" data-user-id="${
-        conversation["user_id"]
-      }" data-conversation-id="${
-        conversation["conversation_id"]
-      }"  data-time="${new Date(
-        conversation["creation_time"]
-      ).getTime()}" data-conversation-status="${status}"${
-        !SBF.null(conversation["conversation_source"])
-          ? ` data-conversation-source="${conversation["conversation_source"]}"`
-          : ""
-      }>
-			<small class="source-conversation-icon"><img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
-        conversation["conversation_source"]
-      }.svg">
-      </small>
-			<div class="sb-profile client-status"><img class="client-icon-status sb-icon tags-${
-        conversation["label"]
-      } bi-kanban-fill loading="lazy" src="${
-        conversation["profile_image"]
-      }">
-    
-			<h3 class="sb-name${is_title ? " sb-custom-name" : ""}">${
-        is_title
-          ? conversation.title
-          : conversation["first_name"] + " " + conversation["last_name"]
-      } </h3>
-			<div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">${SBF.beautifyTime(
-        conversation["creation_time"]
-      )}</div>
-			</div>
-			<div>
-			<a class="phone-number" style="color:inherit">${conversation.phone}</a>
-			</div>
-			<p class="message-received" style="max-width:calc(100% - 145px);">${strip
-        .strip(message)
-        .replace(/_/g, " ")}</p>
-			<div class="conversation-bar">
-
-			<div class="no-read-icon sb-hide" style="margin: 0px 1px;">
-				<svg width="20" height="20" viewBox="0 0 24.5 24.5" data-name="Flat Color"
-					xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
-					<circle cx="12" cy="12" r="10" class="check-circle" />
-					<path
-						d="M11 16a1 1 0 0 1-.71-.29l-3-3a1 1 0 1 1 1.42-1.42l2.29 2.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5A1 1 0 0 1 11 16Z"
-						class="check-inside" />
-				</svg>
-			</div>
-		</div>
-		</div>
-		</li> 
-		`;
-
-
-
-    },
+      return `
+          <li data-user-id="${conversation.user_id}" data-conversation-id="${conversation.conversation_id}" data-time="${new Date(conversation.creation_time).getTime()}" data-conversation-status="${status}" ${conversation.conversation_source ? `data-conversation-source="${conversation.conversation_source}"` : ""}>
+              <small class="source-conversation-icon">
+                  <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${conversation.conversation_source}.svg">
+              </small>
+              <div class="sb-profile client-status">
+                  <img class="client-icon-status sb-icon tags-${conversation.label} bi-kanban-fill loading="lazy" src="${conversation.profile_image}">
+                  <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${isTitle ? conversation.title : `${conversation.first_name} ${conversation.last_name}`}</h3>
+                  <div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">
+                      ${SBF.beautifyTime(conversation.creation_time)}
+                  </div>
+              </div>
+              <div>
+                  <a class="phone-number" style="color:inherit">${conversation.phone}</a>
+              </div>
+              <p class="message-received" style="max-width:calc(100% - 145px);">${formattedMessage}</p>
+              <div class="conversation-bar">
+                  <div class="no-read-icon sb-hide" style="margin: 0px 1px;">
+                      <svg width="20" height="20" viewBox="0 0 24.5 24.5" xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
+                          <circle cx="12" cy="12" r="10" class="check-circle"/>
+                          <path d="M11 16a1 1 0 0 1-.71-.29l-3-3a1 1 0 1 1 1.42-1.42l2.29 2.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5A1 1 0 0 1 11 16Z" class="check-inside"/>
+                      </svg>
+                  </div>
+              </div>
+          </li>
+      `;
+  },
+  
 
 
     newMsgTop(user = false, status) {
@@ -7751,6 +7590,7 @@ $(conversations_area).on("click", "#conversation-agent li", function (e) {
             
             // Refresh the conversation list to reflect the new order
             SBConversations.update();
+            // SBConversations.positionList();
             SBConversations.updateMenu();
 
             // Update the conversation details panel if it's open
@@ -10442,6 +10282,8 @@ window.addEventListener("load", function () {
   // Initialize the loading animation
   initLoadingAnimation();
 });
+
+
 
 
 /*

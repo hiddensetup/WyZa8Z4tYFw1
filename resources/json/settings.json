@@ -1,6 +1,24 @@
 {
-  "messages": [
-    {}
+  "saved-replies": [
+    {
+      "type": "repeater",
+      "id": "saved-replies",
+      "title": "Saved replies",
+      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
+      "help": "https://linktr.ee/routinbot",
+      "items": [
+        {
+          "type": "text",
+          "name": "Name",
+          "id": "reply-name"
+        },
+        {
+          "type": "textarea",
+          "name": "Saved reply",
+          "id": "reply-text"
+        }
+      ]
+    }
   ],
   "automatica": [
     {
@@ -83,21 +101,26 @@
       ]
     },
     {
-      "type": "repeater",
-      "id": "saved-replies",
-      "title": "Saved replies",
-      "content": "Add and manage saved replies that can be used by agents in the chat editor. Saved replies can be printed by typing # followed by the reply name plus space.",
+      "type": "multi-input",
+      "id": "close-message",
+      "title": "Close message",
+      "content": "This function allows an automatic message to be sent to the user when an agent archives a conversation. When the conversation is archived, the function triggers the message to be sent to the user, which could include a polite thank you note or any other custom message that the organization wishes to convey. This feature helps to maintain good communication and relationship with customers, even after a conversation has ended, and it can be useful for providing additional information or offering further assistance if needed.",
       "help": "https://linktr.ee/routinbot",
-      "items": [
+      "value": [
         {
-          "type": "text",
-          "name": "Name",
-          "id": "reply-name"
+          "type": "checkbox",
+          "id": "close-active",
+          "title": "Active"
+        },
+        {
+          "type": "checkbox",
+          "id": "close-transcript",
+          "title": "Send transcript to user's email"
         },
         {
           "type": "textarea",
-          "name": "Saved reply",
-          "id": "reply-text"
+          "id": "close-msg",
+          "title": "Message"
         }
       ]
     },
@@ -187,6 +210,25 @@
     },
     {
       "type": "multi-input",
+      "id": "rate-and-review",
+      "title": "Rate and review question",
+      "content": "This function is activated by writing <b>[rating]</b> in the message to be sent or by using the 👍 button. The message received by the customer can be: <br><br><br><b>How would you rate the service received from agent {agent_name}?</b><br><br><b>1. </b>Positive, it was very helpful. <br><b>2. </b>Negative. <br><br> This way, the customer selects an option, and the rating will appear in the reports section as a positive or negative rating.",
+      "help": "https://linktr.ee/routinbot",
+      "value": [
+        {
+          "type": "textarea",
+          "id": "rate-review",
+          "title": "Enter feedback question and feeback options with numbers"
+        },
+        {
+          "type": "textarea",
+          "id": "rate-reply",
+          "title": "thank you message"
+        }
+      ]
+    },
+    {
+      "type": "multi-input",
       "id": "supervisor",
       "title": "Supervisor",
       "content": "Set which actions to allow supervisors.",
@@ -259,49 +301,6 @@
       "content": "Delete all leads and all messages and conversations linked to them.",
       "button-text": "Delete leads",
       "button-url": "#"
-    },
-    {
-      "type": "multi-input",
-      "id": "rate-and-review",
-      "title": "Rate and review question",
-      "content": "This function is activated by writing <b>[rating]</b> in the message to be sent or by using the 👍 button. The message received by the customer can be: <br><br><br><b>How would you rate the service received from agent {agent_name}?</b><br><br><b>1. </b>Positive, it was very helpful. <br><b>2. </b>Negative. <br><br> This way, the customer selects an option, and the rating will appear in the reports section as a positive or negative rating.",
-      "help": "https://linktr.ee/routinbot",
-      "value": [
-        {
-          "type": "textarea",
-          "id": "rate-review",
-          "title": "Enter feedback question and feeback options with numbers"
-        },
-        {
-          "type": "textarea",
-          "id": "rate-reply",
-          "title": "thank you message"
-        }
-      ]
-    },
-    {
-      "type": "multi-input",
-      "id": "close-message",
-      "title": "Close message",
-      "content": "This function allows an automatic message to be sent to the user when an agent archives a conversation. When the conversation is archived, the function triggers the message to be sent to the user, which could include a polite thank you note or any other custom message that the organization wishes to convey. This feature helps to maintain good communication and relationship with customers, even after a conversation has ended, and it can be useful for providing additional information or offering further assistance if needed.",
-      "help": "https://linktr.ee/routinbot",
-      "value": [
-        {
-          "type": "checkbox",
-          "id": "close-active",
-          "title": "Active"
-        },
-        {
-          "type": "checkbox",
-          "id": "close-transcript",
-          "title": "Send transcript to user's email"
-        },
-        {
-          "type": "textarea",
-          "id": "close-msg",
-          "title": "Message"
-        }
-      ]
     }
   ],
   "notifications": [
@@ -999,8 +998,10 @@
       "id": "visitor-autodata",
       "title": "Full visitor details",
       "content": "Save useful information like user country and language also for visitors."
-    },
-    {
+    }
+  ],
+  "form": [
+      {
       "type": "select",
       "id": "registration-required",
       "title": "Require registration",
@@ -2159,6 +2160,7 @@
       "title": "Allow duplicate emails and phone numbers",
       "content": "Allow registration with an email and a phone number already registered."
     }
+    
   ],
   "design": [
     {

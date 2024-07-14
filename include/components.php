@@ -845,152 +845,110 @@ function sb_send_template_box()
 
 
 
-        // Function to check if there are active WhatsApp conversation items and return the first one
+
+        // Utility function to delay execution for a given time
+        const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+        // Function to get the first active WhatsApp conversation item
         async function getFirstActiveWAConversationItem() {
-            await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
-
-            const conversationItem = document.querySelector(
-                "li.sb-active[data-conversation-source='wa']",
-            );
-            return conversationItem;
+            await delay(1000); // Wait for 1 second
+            return document.querySelector("li.sb-active[data-conversation-source='wa']");
         }
 
-        // Execute the following code asynchronously onload
-        window.onload = async () => {
-            const conversationItem = await getFirstActiveWAConversationItem();
-
-            // Toggle visibility of the menu bar and floating text based on the presence of active WhatsApp conversations
-            if (conversationItem) {
-                setTimeout(() => toggleMenuBarAndFloatingText(false), 600); // Adding a slight delay after confirming WhatsApp conversations
-            } else {
-                toggleMenuBarAndFloatingText(true);
+        // Function to set visibility of elements
+        function setVisibility(selector, visible) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.style.visibility = visible ? "visible" : "hidden";
             }
-        };
-
-        // Function to toggle visibility of the menu bar and floating text
-        async function toggleMenuBarAndFloatingText(visible) {
-            await new Promise((resolve) => setTimeout(resolve, 0)); // Wait for the next tick
-
-            const menuBar = document.querySelector(".sb-show-menu-bar");
-            menuBar.style.visibility = visible ? "visible" : "hidden";
-
-            const floatingText = document.getElementById("floatingText");
-            floatingText.style.display = visible ? "none" : "block";
         }
 
-        // Add click event listener to the document to handle clicks on conversation items
-        document.addEventListener("click", handleConversationClick);
+        // Function to set display of elements
+        function setDisplay(selector, display) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.style.display = display ? "block" : "none";
+            }
+        }
 
-        // Function to handle click on conversation items
+        // Function to handle visibility based on active WhatsApp conversation
+        async function handleActiveConversation(visible) {
+            await delay(0); // Wait for the next tick
+            setVisibility(".sb-show-menu-bar", visible);
+            setDisplay("#floatingText", !visible);
+            // Ensure sb-bar visibility is handled correctly
+            setVisibility(".sb-bar", visible);
+        }
+
+        // Function to handle clicks on conversation items
         async function handleConversationClick(event) {
-            // Exclude clicks on ul.sb-menu elements
             if (event.target.closest("div.sb-header")) return;
 
-            // Hide the floating text and menu bar initially
-            toggleElementsVisibility();
+            // Always hide elements initially
+            setDisplay("#floatingText", false);
+            setVisibility(".sb-bar", false);
+            setVisibility(".sb-show-menu-bar", false);
 
-            const conversationItem = event.target.closest(
-                "li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]",
-            );
-            if (!conversationItem) return; // Exit if clicked outside the conversation item
-
-            const source = conversationItem.dataset.conversationSource;
-            const status = conversationItem.dataset.conversationStatus;
-
-            // Toggle visibility of the menu bar and floating text based on the conversation source and status
-            if (source === "wa" && !isNaN(status)) {
-                await toggleMenuBarAndFloatingText(false);
+            const conversationItem = event.target.closest("li[data-conversation-source='wa']");
+            if (conversationItem && conversationItem.classList.contains("sb-active")) {
+                await handleActiveConversation(false);
+            } else {
+                await handleActiveConversation(true); // Show elements if no active conversation
             }
         }
 
-
-        // Function to toggle visibility of floating text, sb-bar, and container
-        function toggleElementsVisibility() {
-            // Get references to the floatingText, sb-bar, and container elements
-            const floatingText = document.getElementById("floatingText");
-            const sbBar = document.querySelector(".sb-bar");
-            const container = document.querySelector(".sb-show-menu-bar");
-
-            // Toggle visibility of floating text
-            floatingText.style.display = "none";
-            // Make sb-bar visible
-            sbBar.style.visibility = "visible";
-            // Remove hidden style from container
-            container.style.visibility = "visible";
-        }
-
-        // Add click event listener to the floatingText element
-        floatingText.addEventListener("click", toggleElementsVisibility);
-
-        // Function to toggle visibility of the WhatsApp button
+        // Function to toggle the WhatsApp button visibility
         function toggleWhatsAppButton(visible) {
-            const whatsAppButton = document.querySelector(".api-whatsapp-button");
-            if (whatsAppButton) {
-                whatsAppButton.style.display = visible ? "inherit" : "none"; // Fix: Use the 'visible' argument to set visibility
-            }
+            setVisibility(".api-whatsapp-button", visible);
         }
-        
-        // Function to check if there are active WhatsApp conversation items and toggle the WhatsApp button accordingly
+
+        // Function to check and toggle WhatsApp button based on active conversation
         function checkActiveWAConversation() {
-            const conversationItem = document.querySelector(
-                "li.sb-active[data-conversation-source='wa']",
-            );
-            toggleWhatsAppButton(conversationItem !== null);
+            const hasActiveConversation = !!document.querySelector("li.sb-active[data-conversation-source='wa']");
+            toggleWhatsAppButton(hasActiveConversation);
         }
 
-        // Add click event listener to the menu-plus element to toggle the WhatsApp button
-        document
-            .querySelector(".menu-plus.bi-plus-lg")
-            .addEventListener("click", function() {
-                const conversationItem = document.querySelector(
-                    "li.sb-active[data-conversation-source='wa']",
-                );
-                if (conversationItem) {
-                    toggleWhatsAppButton(true);
-                } else {
-                    toggleWhatsAppButton(false);
-                }
-            });
-
-        // Add click event listener to the floatingText element to hide the WhatsApp button
-        document.getElementById("floatingText").addEventListener("click", function() {
-            toggleWhatsAppButton(false);
-        });
-
-        // Execute the following code when the DOM content is loaded
-        document.addEventListener("DOMContentLoaded", function() {
-            // Check initially on page load
+        // Event listener for DOM content loaded
+        document.addEventListener("DOMContentLoaded", async () => {
             checkActiveWAConversation();
+
+            const conversationItem = await getFirstActiveWAConversationItem();
+            await handleActiveConversation(!conversationItem);
+
+            document.addEventListener("click", handleConversationClick);
+            document.getElementById("floatingText").addEventListener("click", () => toggleWhatsAppButton(false));
+            document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click", checkActiveWAConversation);
         });
 
-        //DONT TOUCH THIS CODE BELOW
 
-        // Get references to the elements
-        const sbIconDrag = document.querySelector(".menu-plus");
-        const sbBarIcons = document.querySelector(".sb-bar-icons");
+const sbIconDrag = document.querySelector(".menu-plus"),
+    sbBarIcons = document.querySelector(".sb-bar-icons"),
+    loadSavedReplies = document.getElementById("load-saved-replies"),
+    setStatus = document.getElementById("set-status");
 
-        // Function to toggle the visibility of sb-bar-icons
-        function toggleSbBarIcons() {
-            sbBarIcons.classList.toggle("sb-hide");
-        }
+// Function to toggle the visibility of sbBarIcons
+function toggleSbBarIcons() {
+    sbBarIcons.classList.toggle("sb-hide");
+}
 
-        // Add a click event listener to menu-plus to toggle the visibility
-        sbIconDrag.addEventListener("click", toggleSbBarIcons);
+// Function to check if the click is inside the specified elements
+function isClickInside(t) {
+    return sbBarIcons.contains(t) || t === loadSavedReplies || t === setStatus;
+}
 
-        // Add a click event listener to sb-list and textarea to hide sb-bar-icons
-        document.querySelector(".sb-list").addEventListener("click", function() {
-            sbBarIcons.classList.add("sb-hide");
-        });
+// Event listener for sbIconDrag click
+sbIconDrag.addEventListener("click", function(t) {
+    t.stopPropagation();
+    toggleSbBarIcons();
+});
 
-        document
-            .querySelector(".sorting-by-last-message")
-            .addEventListener("click", function() {
-                sbBarIcons.classList.add("sb-hide");
-            });
+// Event listener for document click to hide sbBarIcons if click is outside
+document.addEventListener("click", function(t) {
+    if (!isClickInside(t.target) && !sbIconDrag.contains(t.target)) {
+        sbBarIcons.classList.add("sb-hide");
+    }
+});
 
-        document.querySelector("textarea").addEventListener("click", function() {
-            sbBarIcons.classList.add("sb-hide");
-        });
     </script>
 <?php } ?>
 
@@ -1351,6 +1309,13 @@ function sb_component_admin()
 
                             </div>
                             <div class="sb-list"></div>
+                            <div class=" api-cloud-notif" id="floatingText">
+                                <p><i class="bi-info-circle-fill"></i>
+                                Estás usando la API de WhatsApp Business Cloud de Meta. <strong>Tienes 1000 conversaciones gratuitas. </strong> Las conversaciones que inicie un cliente duran 24 horas. Si quieres seguir hablando después de 24 horas, debes enviar una plantilla; de lo contrario, el mensaje no llegará. Si el cliente te escribe después de 24 horas, obtienes otras 24 horas para chatear con él. <strong>Puedes presionar el
+                                <i class="bi bi-plus-square-dotted"></i> y <i class="bi bi-wind"></i> para enviar una plantilla.</strong>
+                                    <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> Más información</a>.
+                                </p>
+                            </div>
 
                             <?php sb_component_editor(true); ?>
                             <div class="sb-no-conversation-message">
@@ -1605,7 +1570,9 @@ function sb_component_admin()
                                     <li id="tab-automatica">
                                         <i class="bi-robot"></i> <?php sb_e('Automática') ?>
                                     </li>
-
+                                    <li id="tab-saved-replies">
+                                        <i class="bi-envelope-open"></i> <?php sb_e('Respuestas Rápidas') ?>
+                                    </li>
                                     <li id="tab-notifications">
                                         <i class="bi-app-indicator"></i> <?php sb_e('Notifications') ?>
                                     </li>
@@ -1628,6 +1595,9 @@ function sb_component_admin()
                                     <li id="tab-chat">
                                         <i class="bi-chat-text"></i> <?php sb_e('Chat') ?>
                                     </li>
+                                    <li id="tab-form">
+                                        <i class="bi-person-vcard"></i> <?php sb_e('Form') ?>
+                                    </li>
                                     <li id="tab-design">
                                         <i class="bi-paint-bucket"></i> <?php sb_e('Design') ?>
                                     </li>
@@ -1643,6 +1613,9 @@ function sb_component_admin()
                                     <?php sb_populate_settings('automatica', $sb_settings) ?>
                                 </div>
                                 <div>
+                                    <?php sb_populate_settings('saved-replies', $sb_settings) ?>
+                                </div>
+                                <div>
                                     <?php sb_populate_settings('notifications', $sb_settings) ?>
                                 </div>
                                 <div>
@@ -1654,6 +1627,9 @@ function sb_component_admin()
                                 <?php sb_apps_area($apps) ?>
                                 <div>
                                     <?php sb_populate_settings('chat', $sb_settings) ?>
+                                </div>
+                                <div>
+                                    <?php sb_populate_settings('form', $sb_settings) ?>
                                 </div>
                                 <div>
                                     <?php sb_populate_settings('design', $sb_settings) ?>

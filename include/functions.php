@@ -9496,7 +9496,7 @@ function sb_component_editor($admin = false)
 
             <div id="load-saved-replies">
                 <i class="bi bi-envelope-fill"></i>
-                <span><?php sb_e("Load a saved reply"); ?></span>
+                <span><?php sb_e("Saved Replies"); ?></span>
             </div>
             <div class="api-whatsapp-button" id="open-modal-button">
                 <i class="bi bi-wind wind-whatsapp-color"></i>
@@ -9506,9 +9506,9 @@ function sb_component_editor($admin = false)
 
         </div>
 
-        <div class=" api-cloud-notif" id="floatingText">
-            <small><i class="bi-info-circle-fill"></i> WhatsApp Business API permite conversar durante 24 horas desde que te escriben o cuando un cliente responde una de tus plantillas de mensaje. Para conocer más puedes ver <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> más detalles sobre WhatsApp Business</a>.<br><br></small>
-        </div>
+        
+
+       
 
         <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
 

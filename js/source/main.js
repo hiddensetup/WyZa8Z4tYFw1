@@ -2191,7 +2191,7 @@
           } else if (
             attachments.toString().substr(attachments.length - 4) === "mp4"
           ) {
-            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);min-width:150px"><source src="${url}"  type="video/mp4"></video></a>`;
           } else {
             media_code += `${
               url
@@ -2239,11 +2239,11 @@
 
       var code = "";
       if (message.includes("〚")) {
-        var name = activeUser().name;
         var telf = activeUser().getExtra("phone").value;
         var tel = Number(telf);
         var alt = "";
 
+      
         if (tel > 0) {
           if (message.includes(telf)) {
             message = message.replace(telf, name);
@@ -2266,15 +2266,15 @@
             message = message;
           }
         }
-
+      
         // Replace the placeholder with the proper div and ID
         message = message.replace(/<br\s*\/?>/, "");
-
+      
         message = message.replace(
           "〚",
           alt == "alt"
-            ? `<div id='sb-reply-to-alt'><strong id='sb-reply-top-name-alt'>Tú</strong><br>`
-            : `<div id='sb-reply-to'><strong id='sb-reply-top-name'>${name}</strong><br>`
+            ? `<div id='sb-reply-to-alt'>`
+            : `<div id='sb-reply-to'>`
         );
         message = message.replace(
           "〛",
@@ -2283,15 +2283,15 @@
         message = message.replace(/\|(?=\n)/, `</div>`);
         message = message.replace(/<p\s*\/?>\s*<p\s*\/?>/g, "");
         message = message.replace("{", "");
+        message = message.replace("}", "");
         message = message.replace("@s.whatsapp.net}", "");
-
+      
         // Ensure the name is not displayed at the top of the message
         if (message.startsWith(name)) {
           message = message.substring(name.length).trim();
         }
-
+      
         // Convert dashes with space to bullets
-
         code = `<div data-id="${
           this.details["id"]
         }" ${type} class="sb-shadow-conversation ${css}">${thumb}
@@ -2326,30 +2326,30 @@
           this.details["id"]
         }" ${type}  class="sb-shadow-conversation ${css}"  style="transition: 0.3s all">${thumb}
         <div class="server-response"> <i class="bi-check2-all"></i></div>
-				  <div class="sb-cnt" style="width:fit-content;margin:6px;">
-                 
-				  <div class="sb-message" data-value="${
-            this.linksData
-              ? encodeURIComponent(this.linksData.message)
-              : encodeURIComponent(message)
-          }">
-				  ${media_code}
-				 
-				  <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
-					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
-				  </div>
-				</div>
-				${attachments_code}<div class="menu-bubble"><div class="sb-time">${SBF.beautifyTime(
-          this.details["creation_time"],
-          true
-        )}</div></div>
-				  </div>
-				  ${admin_menu}
-				</div>
-			
-			  `;
+        <div class="sb-cnt" style="width:fit-content;margin:6px;">
+             
+        <div class="sb-message" data-value="${
+          this.linksData
+            ? encodeURIComponent(this.linksData.message)
+            : encodeURIComponent(message)
+        }">
+        ${media_code}
+       
+        <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
+          ${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
+        </div>
+      </div>
+      ${attachments_code}<div class="menu-bubble"><div class="sb-time">${SBF.beautifyTime(
+        this.details["creation_time"],
+        true
+      )}</div></div>
+        </div>
+        ${admin_menu}
+      </div>
+      `;
       }
       return code;
+      
     }
 
     // RENDER BUBBLE MESSAGE
@@ -2387,6 +2387,12 @@
         /(?<!\*)\*(.*?)\*(?!\*)/g,
         "<strong>$1</strong>"
       );
+
+      message = message.replace(/@s\.whatsapp\.net/g, '')
+      message = message.replace("[\"", "<div class='group-chat-reply'>")
+      message = message.replace("\"]", "</div>")
+
+
 
       // Italic (requires spaces around underscores)
       message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
@@ -5005,6 +5011,8 @@
       chat_editor.find(".sb-bar").sbActive(show);
     },
 
+    
+
     // Shortcut for add user and login function
     addUserAndLogin: function (onSuccess = false, lead = false) {
       let settings = typeof SB_DEFAULT_USER != ND ? SB_DEFAULT_USER : {};
@@ -5026,6 +5034,8 @@
         }
       );
     },
+
+    
 
     // Check if the dashboard must be showed
     isInitDashboard: function () {
