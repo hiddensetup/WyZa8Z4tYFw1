@@ -1868,68 +1868,115 @@ TABLE
         // border-right: 0.5px solid var(--chat-border-color);
         // box-shadow: 0 1px 5px -1px rgb(0 0 0 / 30%);
 
-        >.sb-admin-nav {
-            >img {
-                height: 35px;
-                margin: 18px 18px;
-            }
+       >.sb-admin-nav {
+  >img {
+    height: 35px;
+    margin: 18px 18px;
+  }
 
-            >div {
-                padding: 5px 0;
+  >div {
+    padding: 5px 0;
 
-                >a {
-                    height: 50px;
-                    display: block;
-                    cursor: pointer;
-                    position: relative;
-                    width: 20px;
-                    padding: 5px 20px;
-                    // color: var(--chat-btn-translucid-color);
+    >a {
+      height: 50px;
+      display: block;
+      cursor: pointer;
+      position: relative;
+      width: 20px;
+      padding: 5px 20px;
+      // color: var(--chat-btn-translucid-color);
 
+      &:active,
+      &:hover {
+        transition: var(--transition-2);
+        -webkit-transition: var(--transition-2);
+      }
 
-                    &:active,
-                    &:hover {
-                        transition: var(--transition-2);
-                        -webkit-transition: var(--transition-2);
-                    }
+      &:before {
+        content: "";
+        position: absolute;
+        font-size: var(--chat-text-size-1-2);
+        line-height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-family: "bootstrap-icons";
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+      }
 
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        font-size: var(--chat-text-size-1-2);
-                        line-height: 50px;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        font-family: "bootstrap-icons";
-                        font-style: normal !important;
-                        font-weight: normal !important;
-                        font-variant: normal !important;
-                        text-transform: none !important;
-                    }
+      &.sb-active {
+        color: var(--chat-text-theme-button);
+        opacity: 1 !important;
+        background: var(--chat-text-theme-background);
+      }
 
-                    &.sb-active {
-                        color: var(--chat-text-theme-button);
-                        opacity: 1 !important;
-                        background: var(--chat-text-theme-background);
-                    }
+      &:hover .routin-left-tooltip {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+>.sb-admin-nav {
 
-                    &:hover span {
-                        transition-delay: .1s;
-                        visibility: visible;
-                        opacity: 1;
-                        left: 66px;
-                        background-color: var(--chat-tooltip-background);
-                        color: var(--chat-text-tooltip);
-                        margin: 6px 0;
-                        border-radius: var(--chat-rounded-size-8);
-
-
-                    }
-                }
-            }
+    >img {
+      height: 35px;
+      margin: 18px 18px;
+    }
+  
+    >div {
+      padding: 5px 0;
+  
+      >a {
+        height: 50px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 20px;
+        padding: 5px 20px;
+        // color: var(--chat-btn-translucid-color);
+  
+        &:active,
+        &:hover {
+          transition: var(--transition-2);
+          -webkit-transition: var(--transition-2);
         }
+  
+        &:before {
+          content: "";
+          position: absolute;
+          font-size: var(--chat-text-size-1-2);
+          line-height: 50px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          font-family: "bootstrap-icons";
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+        }
+  
+        &.sb-active {
+          color: var(--chat-text-theme-button);
+          opacity: 1 !important;
+          background: var(--chat-text-theme-background);
+        }
+  
+        &:hover .routin-left-tooltip {
+          display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
 
-        >.sb-admin-nav>div>a>span,
+
+
+
         >.sb-admin-nav-right .sb-account>div {
             margin: 1px;
             font-size: var(--chat-text-size-1-0);
@@ -1937,13 +1984,13 @@ TABLE
             font-weight: 600;
             padding: 5px 12px;
             text-align: center;
-            letter-spacing: 0.5px;
-            //color: rgb(40, 40, 40);
+            letter-spacing: .5px;
             position: absolute;
-            left: 75px;
+            left: 55px;
             z-index: 9999995;
             opacity: 0;
             visibility: hidden;
+            bottom: 15px;
         }
 
         >.sb-admin-nav-right {
@@ -2121,6 +2168,7 @@ TABLE
     }
 }
 
+  
 /*
 
 BODY
@@ -3122,7 +3170,7 @@ BODY
             //margin-right: 0px;
 
             i {
-                font-size: var(--chat-text-size-1-4);
+                font-size: var(--chat-text-size-1-1);
             }
         }
 
@@ -3131,7 +3179,7 @@ BODY
             //margin-right: 0px;
 
             i {
-                font-size: var(--chat-text-size-1-4);
+                font-size: var(--chat-text-size-1-1);
             }
         }
 

@@ -99,206 +99,7 @@
     "NA",
 ];
 
-  /*
-   * ----------------------------------------------------------
-   * External plugins
-   * ----------------------------------------------------------
-   */
-
-  // miniTip 1.5.3 | (c) 2011, James Simpson | Dual licensed under the MIT and GPL
-  $.fn.miniTip = function (t) {
-    var e = $.extend(
-      {
-        title: "",
-        content: !1,
-        delay: 100,
-        anchor: "n",
-        event: "hover",
-        fadeIn: 100,
-        fadeOut: 300,
-        aHide: !0,
-        maxW: "250px",
-        offset: 4,
-        stemOff: 0,
-        doHide: !1,
-      },
-      t
-    );
-    0 == admin.find("#miniTip").length &&
-      admin.append('<div id="miniTip" class="sb-tooltip"><div></div></div>');
-    var n = admin.find("#miniTip"),
-      o = n.find("div");
-    return e.doHide
-      ? (n.stop(!0, !0).fadeOut(e.fadeOut), !1)
-      : this.each(function () {
-          var t = $(this),
-            i = e.content ? e.content : t.attr("title");
-          if ("" != i && void 0 !== i) {
-            window.delay = !1;
-            var r = !1,
-              a = !0;
-            e.content || t.removeAttr("title"),
-              "hover" == e.event
-                ? (t.hover(
-                    function () {
-                      n.removeAttr("click"), (a = !0), c.call(this);
-                    },
-                    function () {
-                      (a = !1), s();
-                    }
-                  ),
-                  e.aHide ||
-                    n.hover(
-                      function () {
-                        r = !0;
-                      },
-                      function () {
-                        (r = !1),
-                          setTimeout(function () {
-                            a || n.attr("click") || s();
-                          }, 20);
-                      }
-                    ))
-                : "click" == e.event &&
-                  ((e.aHide = !0),
-                  t.click(function () {
-                    return (
-                      n.attr("click", "t"),
-                      n.data("last_target") !== t
-                        ? c.call(this)
-                        : "none" == n.css("display")
-                        ? c.call(this)
-                        : s(),
-                      n.data("last_target", t),
-                      $("html")
-                        .unbind("click")
-                        .click(function (t) {
-                          "block" != n.css("display") ||
-                            $(t.target).closest("#miniTip").length ||
-                            ($("html").unbind("click"), s());
-                        }),
-                      !1
-                    );
-                  }));
-            var c = function () {
-                e.show && e.show.call(this, e),
-                  e.content && "" != e.content && (i = e.content),
-                  o.html(i),
-                  e.render && e.render(n),
-                  n.hide().width("").width(n.width()).css("max-width", e.maxW);
-                var r = t.is("area");
-                if (r) {
-                  var a,
-                    c = [],
-                    s = [],
-                    d = t.attr("coords").split(",");
-                  function f(t, e) {
-                    return t - e;
-                  }
-                  for (a = 0; a < d.length; a++) c.push(d[a++]), s.push(d[a]);
-                  var h = $(
-                      "img[usemap=\\#" + t.parent().attr("name") + "]"
-                    ).offset(),
-                    l =
-                      parseInt(h.left, 10) +
-                      parseInt(
-                        (parseInt(c.sort(f)[0], 10) +
-                          parseInt(c.sort(f)[c.length - 1], 10)) /
-                          2,
-                        10
-                      ),
-                    u =
-                      parseInt(h.top, 10) +
-                      parseInt(
-                        (parseInt(s.sort(f)[0], 10) +
-                          parseInt(s.sort(f)[s.length - 1], 10)) /
-                          2,
-                        10
-                      );
-                } else
-                  (u = parseInt(t.offset().top, 10)),
-                    (l = parseInt(t.offset().left, 10));
-                var _ = r ? 0 : parseInt(t.outerWidth(), 10),
-                  p = r ? 0 : parseInt(t.outerHeight(), 10),
-                  v = n.outerWidth(),
-                  m = n.outerHeight(),
-                  g = Math.round(l + Math.round((_ - v) / 2)),
-                  b = Math.round(u + p + e.offset + 8),
-                  w =
-                    Math.round(v - 16) / 2 -
-                    parseInt(n.css("borderLeftWidth"), 10),
-                  H = 0,
-                  W =
-                    l + _ + v + e.offset + 8 > parseInt($(window).width(), 10),
-                  k = v + e.offset + 8 > l,
-                  T = m + e.offset + 8 > u - $(window).scrollTop(),
-                  x =
-                    u + p + m + e.offset + 8 >
-                    parseInt($(window).height() + $(window).scrollTop(), 10),
-                  y = e.anchor;
-                k || ("e" == e.anchor && !W)
-                  ? ("w" != e.anchor && "e" != e.anchor) ||
-                    ((y = "e"),
-                    (H = Math.round(
-                      m / 2 - 8 - parseInt(n.css("borderRightWidth"), 10)
-                    )),
-                    (w = -8 - parseInt(n.css("borderRightWidth"), 10)),
-                    (g = l + _ + e.offset + 8),
-                    (b = Math.round(u + p / 2 - m / 2)))
-                  : (W || ("w" == e.anchor && !k)) &&
-                    (("w" != e.anchor && "e" != e.anchor) ||
-                      ((y = "w"),
-                      (H = Math.round(
-                        m / 2 - 8 - parseInt(n.css("borderLeftWidth"), 10)
-                      )),
-                      (w = v - parseInt(n.css("borderLeftWidth"), 10)),
-                      (g = l - v - e.offset - 8),
-                      (b = Math.round(u + p / 2 - m / 2)))),
-                  x || ("n" == e.anchor && !T)
-                    ? ("n" != e.anchor && "s" != e.anchor) ||
-                      ((y = "n"),
-                      (H = m - parseInt(n.css("borderTopWidth"), 10)),
-                      (b = u - (m + e.offset + 8)))
-                    : (T || ("s" == e.anchor && !x)) &&
-                      (("n" != e.anchor && "s" != e.anchor) ||
-                        ((y = "s"),
-                        (H = -8 - parseInt(n.css("borderBottomWidth"), 10)),
-                        (b = u + p + e.offset + 8))),
-                  "n" == e.anchor || "s" == e.anchor
-                    ? v / 2 > l
-                      ? ((g = g < 0 ? w + g : w), (w = 0))
-                      : l + v / 2 > parseInt($(window).width(), 10) &&
-                        ((g -= w), (w *= 2))
-                    : T
-                    ? ((b += H), (H = 0))
-                    : x && ((b -= H), (H *= 2)),
-                  delay && clearTimeout(delay),
-                  (delay = setTimeout(function () {
-                    n.css({ "margin-left": g + "px", "margin-top": b + "px" })
-                      .stop(!0, !0)
-                      .fadeIn(e.fadeIn);
-                  }, e.delay)),
-                  n.attr("class", "sb-tooltip " + y);
-              },
-              s = function () {
-                ((e.aHide || r) && !e.aHide) ||
-                  (delay && clearTimeout(delay),
-                  (delay = setTimeout(function () {
-                    d();
-                  }, e.delay)));
-              },
-              d = function () {
-                (e.aHide || r) && !e.aHide
-                  ? setTimeout(function () {
-                      s();
-                    }, 200)
-                  : (n.stop(!0, !0).fadeOut(e.fadeOut),
-                    e.hide && e.hide.call(this));
-              };
-          }
-        });
-  };
-
+ 
   /*
    * ----------------------------------------------------------
    * # Functions
@@ -391,24 +192,24 @@
     return this;
   };
 
-  $.fn.sbInitTooltips = function () {
-    return $(this).find("[data-sb-tooltip]").each(function () {
-      // Get the position of the element relative to the viewport
-      var rect = this.getBoundingClientRect();
-      // Check if the element is closer to the top or bottom of the viewport
-      var closerToTop = rect.top < window.innerHeight / 2;
+  // $.fn.sbInitTooltips = function () {
+  //   return $(this).find("[data-sb-tooltip]").each(function () {
+  //     // Get the position of the element relative to the viewport
+  //     var rect = this.getBoundingClientRect();
+  //     // Check if the element is closer to the top or bottom of the viewport
+  //     var closerToTop = rect.top < window.innerHeight / 2;
   
-      // Determine the anchor position based on the element's position
-      var anchor = closerToTop ? "n" : "w";
+  //     // Determine the anchor position based on the element's position
+  //     var anchor = closerToTop ? "n" : "w";
   
-      // Initialize the tooltip with the determined anchor position
-      $(this).miniTip({
-        content: $(this).attr("data-sb-tooltip"),
-        anchor: anchor, // Use the determined anchor position
-        delay: 100,
-      });
-    });
-  };
+  //     // Initialize the tooltip with the determined anchor position
+  //     $(this).miniTip({
+  //       content: $(this).attr("data-sb-tooltip"),
+  //       anchor: anchor, // Use the determined anchor position
+  //       delay: 100,
+  //     });
+  //   });
+  // };
   
 
   // Display the bottom card information box
@@ -3837,9 +3638,11 @@ let iconClass = screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
 let htmlContent = `
     <span style="padding-right:5px;" class="open-profile-name">
         <img src="${profileImage}" class="top-image-profile">
+        <span class="routin-top-content">Editar</span>
     </span> 
     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
     <span class="additional-info">${phoneNumber ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>` : ''}</span>
+
 `;
 
 // Set the HTML content
@@ -4490,7 +4293,7 @@ positionList() {
           sb_(unread ? "Mark as read" : "Mark as unread")
         )
         .parent()
-        .sbInitTooltips()
+        // .sbInitTooltips()
         .find("i")
         .attr("class", unread ? "bi-check-lg" : "bi-check-all");
     },
@@ -9318,52 +9121,65 @@ function handlewawebButtonClick(event, action) {
     });
 
   /*
-     * ----------------------------------------------------------
-     * Recording MP3 for chat
-     * ----------------------------------------------------------
-     */
+ * ----------------------------------------------------------
+ * Recording MP3 for chat
+ * ----------------------------------------------------------
+ */
 
+document.addEventListener("DOMContentLoaded", () => {
   const recButton = document.getElementById("recordButton");
   const stopButton = document.getElementById("stopButton");
   const sending = document.querySelector(".bi-arrow-up-circle-fill");
-  const textArea = document.querySelector(".sb-textarea>textarea");
+  const textArea = document.querySelector(".sb-textarea > textarea");
+  const sbTextArea = document.querySelector(".sb-textarea");
+  const micIcon = document.querySelector(".bi-mic-fill");
+
+  let isTextAreaVisible = true;
+
+  const toggleTextAreaVisibility = () => {
+    isTextAreaVisible = !isTextAreaVisible;
+    sbTextArea.style.visibility = isTextAreaVisible ? "visible" : "hidden";
+  };
+
+  const showTextArea = () => {
+    isTextAreaVisible = true;
+    sbTextArea.style.visibility = "visible";
+  };
 
   sending.addEventListener("click", () => {
-    recButton.classList.remove("sb-hide");
-    setTimeout(() => {
-      sending.classList.add("sb-hide");
-    }, 10);
+    recButton.style.visibility = "visible";
+    sending.style.visibility = "hidden";
+    showTextArea();
+    micIcon.style.visibility = "visible";
   });
 
   textArea.addEventListener("input", () => {
     if (textArea.value.trim() === "") {
-      sending.classList.add("sb-hide");
-      recButton.classList.remove("sb-hide");
-
+      sending.style.visibility = "hidden";
+      recButton.style.visibility = "visible";
     } else {
-      sending.classList.remove("sb-hide");
-      recButton.classList.add("sb-hide");
+      sending.style.visibility = "visible";
+      recButton.style.visibility = "hidden";
     }
+    showTextArea();
   });
 
   recButton.addEventListener("click", () => {
-    document.querySelector(".bi-mic-fill").classList.add("sb-hide");
-    // Show the send icon after a timeout
-    showSendIconAfterTimeout();
+    micIcon.style.visibility = "hidden";
+    toggleTextAreaVisibility();
+    setTimeout(() => {
+      sending.style.visibility = "visible";
+    }, 500);
   });
 
   stopButton.addEventListener("click", () => {
-    document.querySelector(".bi-mic-fill").classList.remove("sb-hide");
-    // Show the send icon after a timeout
-    showSendIconAfterTimeout();
-  });
-
-  // Function to show the send icon after a timeout
-  function showSendIconAfterTimeout() {
+    micIcon.style.visibility = "visible";
+    showTextArea();
     setTimeout(() => {
-      document.querySelector(".bi-arrow-up-circle-fill").classList.remove("sb-hide");
-    }, 500); // Adjust the timeout duration as needed
-  }
+      sending.style.visibility = "visible";
+    }, 500);
+  });
+});
 
 
     /*
@@ -9533,18 +9349,18 @@ function handlewawebButtonClick(event, action) {
           t.find(".sb-scroll-area").scrollTop(0);
       }
     );
-    $(admin).sbInitTooltips(),
-      $(admin).on("click", '[data-button="toggle"]', function () {
-        let s = admin.find("." + $(this).data("show")),
-          i = admin.find("." + $(this).data("hide"));
-        s.addClass("sb-show-animation").show(),
-          i.hide(),
-          (SBAdmin.open_popup =
-            !!(s.hasClass("sb-lightbox") || s.hasClass("sb-popup")) && s);
-      }),
-      $(admin).on("click", ".sb-info-card", function () {
-        $(this).sbActive(!1);
-      });
+    // $(admin).sbInitTooltips(),
+    //   $(admin).on("click", '[data-button="toggle"]', function () {
+    //     let s = admin.find("." + $(this).data("show")),
+    //       i = admin.find("." + $(this).data("hide"));
+    //     s.addClass("sb-show-animation").show(),
+    //       i.hide(),
+    //       (SBAdmin.open_popup =
+    //         !!(s.hasClass("sb-lightbox") || s.hasClass("sb-popup")) && s);
+    //   }),
+    //   $(admin).on("click", ".sb-info-card", function () {
+    //     $(this).sbActive(!1);
+    //   });
     $(admin).on(
       "change",
       ".sb-upload-form-admin .sb-upload-files",

@@ -56,20 +56,20 @@ function Metatemplate() {
     const addVariable = this.selectQuery(".AddVariableButton");
     const bodyTemplateInput = this.selectQuery(".BodyTemplate");
     const languageSelect = this.selectQuery(".Language");
-    const imageUrlInput = this.selectQuery(".ImageUrl");
+    const imageUrlInput = this.selectQuery(".ImageUrl"); // Image URL input
     const buttonsDiv = this.selectQuery(".Buttons");
     const footerTemplateInput = this.selectQuery(".FooterTemplate"); // New line for footer text input
 
 
     // Create an img element to display the image
-    const imageDisplay = document.createElement("img");
-    imageDisplay.style.maxWidth = "38px"; // Set the size of the image square
-    imageDisplay.style.height = "38px"; // Ensure it is a square
-    imageDisplay.style.objectFit = "cover"; // Ensure the image covers the square without distortion
-    imageDisplay.style.borderRadius = "8px 0px 0px 8px"; // Apply border-radius
-    imageDisplay.style.border = ".8px solid var(--chat-border-color)"; // Apply border
-    imageDisplay.style.padding = "0.58px"; // Apply padding
-    imageUrlInput.insertAdjacentElement("beforebegin", imageDisplay);
+    // const imageDisplay = document.createElement("img");
+    // imageDisplay.style.maxWidth = "38px"; // Set the size of the image square
+    // imageDisplay.style.height = "38px"; // Ensure it is a square
+    // imageDisplay.style.objectFit = "cover"; // Ensure the image covers the square without distortion
+    // imageDisplay.style.borderRadius = "8px 0px 0px 8px"; // Apply border-radius
+    // imageDisplay.style.border = ".8px solid var(--chat-border-color)"; // Apply border
+    // imageDisplay.style.padding = "0.58px"; // Apply padding
+    // imageUrlInput.insertAdjacentElement("beforebegin", imageDisplay);
 
     let loadedTemplates = {};
 
@@ -115,100 +115,100 @@ function Metatemplate() {
     function loadTemplates() {
       const xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-          const templatesData = JSON.parse(this.responseText).data;
+          if (this.readyState === 4 && this.status === 200) {
+              const templatesData = JSON.parse(this.responseText).data;
 
-          // Clear existing options
-          loadedTemplateSelect.innerHTML = "";
+              // Clear existing options
+              loadedTemplateSelect.innerHTML = "";
 
-          // Populate the LoadedTemplate select with options from meta_templates.json
-          templatesData.forEach((template) => {
-            const option = document.createElement("option");
-            option.value = template.name;
-            option.textContent = template.name; // Display template name
-            loadedTemplateSelect.appendChild(option);
-          });
+              // Populate the LoadedTemplate select with options from meta_templates.json
+              templatesData.forEach((template) => {
+                  const option = document.createElement("option");
+                  option.value = template.name;
+                  option.textContent = template.name; // Display template name
+                  loadedTemplateSelect.appendChild(option);
+              });
 
-          // Trigger change event to initialize the textarea with the first template's body
-          if (templatesData.length > 0) {
-            const firstTemplateName = templatesData[0].name;
-            loadedTemplateSelect.value = firstTemplateName;
-            loadedTemplateSelect.dispatchEvent(new Event("change"));
+              // Trigger change event to initialize the textarea with the first template's body
+              if (templatesData.length > 0) {
+                  const firstTemplateName = templatesData[0].name;
+                  loadedTemplateSelect.value = firstTemplateName;
+                  loadedTemplateSelect.dispatchEvent(new Event("change"));
+              }
           }
-        }
       };
       xhttp.open("GET", "uploads/meta_templates.json", true);
       xhttp.send();
-    }
+  }
 
-    loadedTemplateSelect.addEventListener("change", function () {
+  loadedTemplateSelect.addEventListener("change", function () {
       const selectedTemplateName = this.value;
       const xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-          const selectedTemplateData = JSON.parse(this.responseText).data;
-          const selectedTemplate = selectedTemplateData.find(
-            (template) => template.name === selectedTemplateName
-          );
-          if (selectedTemplate) {
-            const firstBodyComponent = selectedTemplate.components.find(
-              (component) => component.type === "BODY"
-            );
-            const text = firstBodyComponent ? firstBodyComponent.text : "";
-            bodyTemplateInput.value = text;
-            languageSelect.value = selectedTemplate.language;
+          if (this.readyState === 4 && this.status === 200) {
+              const selectedTemplateData = JSON.parse(this.responseText).data;
+              const selectedTemplate = selectedTemplateData.find(
+                  (template) => template.name === selectedTemplateName
+              );
+              if (selectedTemplate) {
+                  const firstBodyComponent = selectedTemplate.components.find(
+                      (component) => component.type === "BODY"
+                  );
+                  const text = firstBodyComponent ? firstBodyComponent.text : "";
+                  bodyTemplateInput.value = text;
+                  languageSelect.value = selectedTemplate.language;
 
-            // Check for header component with image
-            const headerComponent = selectedTemplate.components.find(
-              (component) =>
-                component.type === "HEADER" && component.format === "IMAGE"
-            );
-            if (
-              headerComponent &&
-              headerComponent.example &&
-              headerComponent.example.header_handle
-            ) {
-              imageDisplay.src = headerComponent.example.header_handle[0];
-              imageUrlInput.value = "";
-            } else {
-              imageDisplay.src = "";
-              imageUrlInput.value = "";
-            }
+                  // Check for header component with image
+                  const headerComponent = selectedTemplate.components.find(
+                      (component) =>
+                          component.type === "HEADER" && component.format === "IMAGE"
+                  );
+                  if (
+                      headerComponent &&
+                      headerComponent.example &&
+                      headerComponent.example.header_handle
+                  ) {
+                      // No longer using imageDisplay
+                      imageUrlInput.value = "";
+                  } else {
+                      // No longer using imageDisplay
+                      imageUrlInput.value = "";
+                  }
 
-            // Clear existing button inputs
-            buttonsDiv.innerHTML = "";
+                  // Clear existing button inputs
+                  buttonsDiv.innerHTML = "";
 
-            // Populate button values
-            const buttonsComponents = selectedTemplate.components.filter(
-              (component) => component.type === "BUTTONS" && component.buttons
-            );
-            buttonsComponents.forEach((buttonsComponent) => {
-              if (buttonsComponent.buttons) {
-                buttonsComponent.buttons.forEach((button, index) => {
-                  const buttonElement = document.createElement("p");
-                  buttonElement.className = `api-dynamic-button Button${index}`;
-                  buttonElement.name = `Button${index}Text`;
-                  buttonElement.textContent = button.text;
-                  buttonsDiv.appendChild(buttonElement);
-                });
+                  // Populate button values
+                  const buttonsComponents = selectedTemplate.components.filter(
+                      (component) => component.type === "BUTTONS" && component.buttons
+                  );
+                  buttonsComponents.forEach((buttonsComponent) => {
+                      if (buttonsComponent.buttons) {
+                          buttonsComponent.buttons.forEach((button, index) => {
+                              const buttonElement = document.createElement("p");
+                              buttonElement.className = `api-dynamic-button Button${index}`;
+                              buttonElement.name = `Button${index}Text`;
+                              buttonElement.textContent = button.text;
+                              buttonsDiv.appendChild(buttonElement);
+                          });
+                      }
+                  });
+
+                  // Populate footer text if it exists
+                  const footerComponent = selectedTemplate.components.find(
+                      (component) => component.type === "FOOTER"
+                  );
+                  if (footerComponent) {
+                      footerTemplateInput.textContent = footerComponent.text; // Update footer text content
+                  } else {
+                      footerTemplateInput.textContent = "";
+                  }
               }
-            });
-
-            // Populate footer text if it exists
-            const footerComponent = selectedTemplate.components.find(
-              (component) => component.type === "FOOTER"
-            );
-            if (footerComponent) {
-              footerTemplateInput.textContent = footerComponent.text; // Update footer text content
-            } else {
-              footerTemplateInput.textContent = "";
-            }
           }
-        }
       };
       xhttp.open("GET", "uploads/meta_templates.json", true);
       xhttp.send();
-    });
+  });
 
     bodyTemplateInput.addEventListener("blur", function (event) {
       const currentTemplate = bodyTemplateInput.value;

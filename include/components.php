@@ -613,7 +613,7 @@ function sb_direct_message_box()
                 <form id="user-template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
                     <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
                         <div class="api-bubble-container">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:240px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height: auto!important;box-sizing: border-box;min-height: 10px;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
 
@@ -634,7 +634,7 @@ function sb_direct_message_box()
                             </select>
                             <!-- Add this new input for Image URL -->
                             <div style="display:flex"">
-                            <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                            <input type=" text" class="ImageUrl" name="ImageUrl" style="width: -webkit-fill-available;margin-left: -1px;border-radius: var(--chat-rounded-size-6);" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
                             </div>
                             <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
                                 <div class='variables'>
@@ -705,7 +705,7 @@ function sb_send_template_box()
                 <form id="template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
                     <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
                         <div class="api-bubble-container">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:240px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height: auto!important;box-sizing: border-box;min-height: 10px;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
                         </div>
@@ -726,7 +726,7 @@ function sb_send_template_box()
                             </select>
                             <!-- Add this new input for Image URL -->
                             <div style="display:flex"">
-                                    <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                                    <input type=" text" class="ImageUrl" name="ImageUrl" style="width: -webkit-fill-available;margin-left: -1px;border-radius: var(--chat-rounded-size-6);" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
                             </div>
                             <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
                                 <div class='variables'>
@@ -755,12 +755,10 @@ function sb_send_template_box()
 
     </div>
     <script>
-        const meta = new Metatemplate;
+        const meta = new Metatemplate();
         meta.init("#template-form");
 
-
-
-        const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
+        const themeToggleBtns = document.querySelectorAll(".themeToggleBtn");
         const htmlTag = document.documentElement;
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
@@ -770,72 +768,69 @@ function sb_send_template_box()
             let newThemeColor;
 
             switch (currentTheme) {
-                case 'dark':
-                    newTheme = 'light';
-                    newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                case "dark":
+                    newTheme = "light";
+                    newThemeColor = "white";
+                    htmlTag.classList.remove("dark");
                     break;
-                case 'light':
-                    newTheme = 'app';
-                    newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                case "light":
+                    newTheme = "app";
+                    newThemeColor = "white";
+                    htmlTag.classList.remove("dark");
                     break;
-                case 'app':
-                    newTheme = 'routin';
-                    newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                case "app":
+                    newTheme = "routin";
+                    newThemeColor = "white";
+                    htmlTag.classList.remove("dark");
                     break;
-                case 'routin':
-                    newTheme = 'steambox';
-                    newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                case "routin":
+                    newTheme = "steambox";
+                    newThemeColor = "white";
+                    htmlTag.classList.remove("dark");
                     break;
-                case 'steambox':
+                case "steambox":
                 default:
-                    newTheme = 'dark';
-                    newThemeColor = '#181620';
-                    htmlTag.classList.add('dark');
+                    newTheme = "dark";
+                    newThemeColor = "#181620";
+                    htmlTag.classList.add("dark");
                     break;
             }
 
             htmlTag.dataset.theme = newTheme;
             metaThemeColor.content = newThemeColor;
-            localStorage.setItem('theme', newTheme);
+            localStorage.setItem("theme", newTheme);
         };
 
-        const storedTheme = localStorage.getItem('theme');
+        const storedTheme = localStorage.getItem("theme");
         if (storedTheme) {
             htmlTag.dataset.theme = storedTheme;
             switch (storedTheme) {
-                case 'light':
-                    metaThemeColor.content = 'white';
+                case "light":
+                    metaThemeColor.content = "white";
                     break;
-                case 'app':
-                    metaThemeColor.content = 'white';
+                case "app":
+                    metaThemeColor.content = "white";
                     break;
-                case 'routin':
-                    metaThemeColor.content = 'white';
+                case "routin":
+                    metaThemeColor.content = "white";
                     break;
-                case 'steambox':
-                    metaThemeColor.content = 'white';
+                case "steambox":
+                    metaThemeColor.content = "white";
                     break;
-                case 'dark':
+                case "dark":
                 default:
-                    metaThemeColor.content = '#181620';
-                    htmlTag.classList.add('dark');
+                    metaThemeColor.content = "#181620";
+                    htmlTag.classList.add("dark");
                     break;
             }
         } else {
-            htmlTag.dataset.theme = 'light';
-            metaThemeColor.content = 'white';
+            htmlTag.dataset.theme = "light";
+            metaThemeColor.content = "white";
         }
 
-        themeToggleBtns.forEach(btn => {
-            btn.addEventListener('click', updateTheme);
+        themeToggleBtns.forEach((btn) => {
+            btn.addEventListener("click", updateTheme);
         });
-
-
-
 
         // Rating
         const sendRatingButton = document.getElementById("send-rating-button");
@@ -843,11 +838,8 @@ function sb_send_template_box()
             SBChat.sendMessage(-1, "[rating]");
         });
 
-
-
-
         // Utility function to delay execution for a given time
-        const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+        const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
         // Function to get the first active WhatsApp conversation item
         async function getFirstActiveWAConversationItem() {
@@ -855,100 +847,113 @@ function sb_send_template_box()
             return document.querySelector("li.sb-active[data-conversation-source='wa']");
         }
 
-        // Function to set visibility of elements
-        function setVisibility(selector, visible) {
+        // Function to set element visibility
+        function setElementVisibility(selector, visible) {
             const element = document.querySelector(selector);
             if (element) {
-                element.style.visibility = visible ? "visible" : "hidden";
+                element.style.display = visible ? "block" : "none";
             }
         }
 
-        // Function to set display of elements
-        function setDisplay(selector, display) {
-            const element = document.querySelector(selector);
-            if (element) {
-                element.style.display = display ? "block" : "none";
+        // Function to toggle the WhatsApp button visibility based on active WhatsApp conversation
+        function toggleWhatsAppButton(visible) {
+            const button = document.querySelector(".api-whatsapp-button");
+            if (button) {
+                if (visible) {
+                    button.classList.remove("sb-hide");
+                } else {
+                    button.classList.add("sb-hide");
+                }
             }
         }
 
         // Function to handle visibility based on active WhatsApp conversation
         async function handleActiveConversation(visible) {
-            await delay(0); // Wait for the next tick
-            setVisibility(".sb-show-menu-bar", visible);
-            setDisplay("#floatingText", !visible);
-            // Ensure sb-bar visibility is handled correctly
-            setVisibility(".sb-bar", visible);
+            setElementVisibility("#floatingText", !visible);
+            // Update WhatsApp button based on whether there is an active WhatsApp conversation
+            toggleWhatsAppButton(visible);
         }
 
         // Function to handle clicks on conversation items
         async function handleConversationClick(event) {
             if (event.target.closest("div.sb-header")) return;
 
-            // Always hide elements initially
-            setDisplay("#floatingText", false);
-            setVisibility(".sb-bar", false);
-            setVisibility(".sb-show-menu-bar", false);
-
-            const conversationItem = event.target.closest("li[data-conversation-source='wa']");
+            const conversationItem = event.target.closest(
+                "li[data-conversation-source='wa']"
+            );
             if (conversationItem && conversationItem.classList.contains("sb-active")) {
-                await handleActiveConversation(false);
+                await handleActiveConversation(false); // Hide floatingText for active conversation
             } else {
-                await handleActiveConversation(true); // Show elements if no active conversation
+                await handleActiveConversation(true); // Show floatingText if no active conversation
             }
-        }
-
-        // Function to toggle the WhatsApp button visibility
-        function toggleWhatsAppButton(visible) {
-            setVisibility(".api-whatsapp-button", visible);
         }
 
         // Function to check and toggle WhatsApp button based on active conversation
         function checkActiveWAConversation() {
-            const hasActiveConversation = !!document.querySelector("li.sb-active[data-conversation-source='wa']");
-            toggleWhatsAppButton(hasActiveConversation);
+            const hasActiveConversation = !!document.querySelector(
+                "li.sb-active[data-conversation-source='wa']"
+            );
+            setElementVisibility("#floatingText", !hasActiveConversation);
+            toggleWhatsAppButton(hasActiveConversation); // Ensure WhatsApp button is correctly toggled
         }
 
         // Event listener for DOM content loaded
         document.addEventListener("DOMContentLoaded", async () => {
-            checkActiveWAConversation();
+            // Check active conversation immediately, no async delay needed here
+            checkActiveWAConversation(); // Ensure initial check for active conversations
 
+            // Handle active conversation state
             const conversationItem = await getFirstActiveWAConversationItem();
             await handleActiveConversation(!conversationItem);
 
+            // Event listeners
             document.addEventListener("click", handleConversationClick);
-            document.getElementById("floatingText").addEventListener("click", () => toggleWhatsAppButton(false));
-            document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click", checkActiveWAConversation);
+            document
+                .getElementById("floatingText")
+                .addEventListener("click", () =>
+                    setElementVisibility("#floatingText", false)
+                );
+            document
+                .querySelector(".menu-plus.bi-plus-lg")
+                .addEventListener("click", () => {
+                    // Only handle button visibility based on immediate DOM state
+                    const conversationItem = document.querySelector(
+                        "li.sb-active[data-conversation-source='wa']"
+                    );
+                    if (!conversationItem) {
+                        setElementVisibility("#floatingText", false);
+                        toggleWhatsAppButton(false); // Restore sb-hide if no active WhatsApp conversation
+                    }
+                });
         });
 
+        const sbIconDrag = document.querySelector(".menu-plus"),
+            sbBarIcons = document.querySelector(".sb-bar-icons"),
+            loadSavedReplies = document.getElementById("load-saved-replies"),
+            setStatus = document.getElementById("set-status");
 
-const sbIconDrag = document.querySelector(".menu-plus"),
-    sbBarIcons = document.querySelector(".sb-bar-icons"),
-    loadSavedReplies = document.getElementById("load-saved-replies"),
-    setStatus = document.getElementById("set-status");
+        // Function to toggle the visibility of sbBarIcons
+        function toggleSbBarIcons() {
+            sbBarIcons.classList.toggle("sb-hide");
+        }
 
-// Function to toggle the visibility of sbBarIcons
-function toggleSbBarIcons() {
-    sbBarIcons.classList.toggle("sb-hide");
-}
+        // Function to check if the click is inside the specified elements
+        function isClickInside(t) {
+            return sbBarIcons.contains(t) || t === loadSavedReplies || t === setStatus;
+        }
 
-// Function to check if the click is inside the specified elements
-function isClickInside(t) {
-    return sbBarIcons.contains(t) || t === loadSavedReplies || t === setStatus;
-}
+        // Event listener for sbIconDrag click
+        sbIconDrag.addEventListener("click", function(t) {
+            t.stopPropagation();
+            toggleSbBarIcons();
+        });
 
-// Event listener for sbIconDrag click
-sbIconDrag.addEventListener("click", function(t) {
-    t.stopPropagation();
-    toggleSbBarIcons();
-});
-
-// Event listener for document click to hide sbBarIcons if click is outside
-document.addEventListener("click", function(t) {
-    if (!isClickInside(t.target) && !sbIconDrag.contains(t.target)) {
-        sbBarIcons.classList.add("sb-hide");
-    }
-});
-
+        // Event listener for document click to hide sbBarIcons if click is outside
+        document.addEventListener("click", function(t) {
+            if (!isClickInside(t.target) && !sbIconDrag.contains(t.target)) {
+                sbBarIcons.classList.add("sb-hide");
+            }
+        });
     </script>
 <?php } ?>
 
@@ -1173,14 +1178,14 @@ function sb_component_admin()
                     ?>
                     <div>
                         <a id="sb-conversations" class="sb-active bi-chat-left-dots">
-                            <span>
+                            <span class="routin-left-tooltip">
                                 <?php sb_e('Conversations') ?>
                             </span>
                         </a>
                         <?php
-                        if ($active_areas['users']) echo '<a id="sb-users" class="bi-people" ><span>' . sb_('Users') . '</span></a>';
-                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-chart"><span>' . sb_('Reports') . '</span></a>';
-                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear-fill"><span>' . sb_('Settings') . '</span></a>';
+                        if ($active_areas['users']) echo '<a id="sb-users" class="bi-people" ><span class="routin-left-tooltip">' . sb_('Users') . '</span></a>';
+                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-chart"><span class="routin-left-tooltip">' . sb_('Reports') . '</span></a>';
+                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear-fill"><span class="routin-left-tooltip">' . sb_('Settings') . '</span></a>';
 
                         ?>
                     </div>
@@ -1264,46 +1269,71 @@ function sb_component_admin()
                             <div class="sb-top">
                                 <i class="sb-btn-back bi-chevron-left"></i>
                                 <div class="sb-labels"></div>
-                                <a></a>
+
+                                <a class="routin-top-tip"></a>
+
                                 <div class="sb-menu-mobile sb-menu-top extra-background-color">
                                     <i class="bi-three-dots-vertical bkg-color-menu"></i>
                                     <ul class="ul-nav-top-mobile">
-                                        <li>
-                                            <a data-value="Details" class="sb-btn-icon open-profile" data-sb-tooltip="<?php sb_e('Details') ?>">
-                                                <i class="bi-info-square"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details open-profile">
+                                                <i class="i-details bi-info-circle"></i>
+                                                <span>
+                                                    <?php sb_e('Details') ?>
+                                                </span>
                                             </a>
                                         </li>
                                         <?php
                                         if ($is_admin || sb_get_setting('agents-delete') || sb_get_multi_setting('agents', 'agents-delete-conversation') || ($supervisor && $supervisor['supervisor-delete-conversation'])) {
-                                            echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="bi-robot"></i></a></li>';
+                                            echo '<li class="li-data-content">
+        <a class="a-details" data-value="delete">
+        <i class="i-details bi-robot"></i>
+            <span>
+                ' . sb_('Delete conversation') . '
+            </span>
+        </a>
+    </li>';
                                         }
                                         ?>
-                                        <!-- <li>
-                                            <a data-value="transcript" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Transcript') ?>" data-action="<?php echo sb_get_multi_setting('transcript', 'transcript-action') ?>">
-                                                <i class="bi-arrow-down-circle"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a data-value="archive" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Archive conversation') ?>">
-                                                <i class="bi-archive"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details" data-value="archive">
+                                                <i class="i-details bi-archive"></i>
+                                                <span>
+                                                    <?php sb_e('Archive conversation') ?>
+                                                </span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="read" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Mark as read') ?>">
-                                                <i class="bi-check-lg-circle"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details" data-value="read">
+                                                <i class="i-details bi-check-all"></i>
+                                                <span>
+                                                    <?php sb_e('Mark as read') ?>
+                                                </span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="inbox" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send to inbox') ?>">
-                                                <i class="bi-arrow-up-left-circle-fill"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details" data-value="inbox">
+                                                <i class="i-details bi-arrow-up-left-circle-fill"></i>
+                                                <span>
+                                                    <?php sb_e('Send to inbox') ?>
+                                                </span>
                                             </a>
                                         </li>
                                         <?php
                                         if ($is_admin || sb_get_setting('agents-delete') || sb_get_multi_setting('agents', 'agents-delete-conversation') || ($supervisor && $supervisor['supervisor-delete-conversation'])) {
-                                            echo '<li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="bi-trash"></i></a></li>';
+                                            echo '<li class="li-data-content">
+        <a class="a-details" data-value="empty-trash">
+        <i class="i-details bi-trash"></i>
+            <span>
+                ' . sb_('Empty trash') . '
+            </span>
+        </a>
+    </li>';
                                         }
                                         ?>
                                     </ul>
+
+
                                 </div>
                                 <div class="sb-label-date-top"></div>
 
@@ -1311,8 +1341,8 @@ function sb_component_admin()
                             <div class="sb-list"></div>
                             <div class=" api-cloud-notif" id="floatingText">
                                 <p><i class="bi-info-circle-fill"></i>
-                                Estás usando la API de WhatsApp Business Cloud de Meta. <strong>Tienes 1000 conversaciones gratuitas. </strong> Las conversaciones que inicie un cliente duran 24 horas. Si quieres seguir hablando después de 24 horas, debes enviar una plantilla; de lo contrario, el mensaje no llegará. Si el cliente te escribe después de 24 horas, obtienes otras 24 horas para chatear con él. <strong>Puedes presionar el
-                                <i class="bi bi-plus-square-dotted"></i> y <i class="bi bi-wind"></i> para enviar una plantilla.</strong>
+                                    Estás usando la API de WhatsApp Business Cloud de Meta. <strong>Tienes 1000 conversaciones gratuitas. </strong> Las conversaciones que inicie un cliente duran 24 horas. Si quieres seguir hablando después de 24 horas, debes enviar una plantilla; de lo contrario, el mensaje no llegará. Si el cliente te escribe después de 24 horas, obtienes otras 24 horas para chatear con él. <strong>Puedes presionar el
+                                        <i class="bi bi-plus-square-dotted"></i> y <i class="bi bi-wind"></i> para enviar una plantilla.</strong>
                                     <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> Más información</a>.
                                 </p>
                             </div>
@@ -1453,6 +1483,7 @@ function sb_component_admin()
                                     <ul id="hideOnSearchClick">
                                         <?php if ($supervisor || $is_admin) { ?>
                                             <li>
+
                                                 <a class="sb-btn-icon sb-new-user" data-sb-tooltip="<?= sb_('Add user') ?>">
                                                     <i class="bi-person-circle"></i>
                                                 </a>

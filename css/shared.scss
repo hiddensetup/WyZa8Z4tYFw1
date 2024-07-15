@@ -967,9 +967,10 @@ div ul.sb-menu,
   padding: 20px 10px;
   border-radius: var(--chat-rounded-size-7);
   width: calc(100% - 20px) !important;
-  border: 0.5px solid var(--chat-border-color);
+  border: .5px solid var(--chat-border-color);
   background: var(--chat-background-image);
   background-color: var(--chat-conversation-background);
+  background-blend-mode: soft-light;
 }
 
 /*
@@ -1797,6 +1798,7 @@ div ul.sb-menu,
       padding: 0 5px 0 5px;
       z-index: 0;
     }
+    
   }
 
   #stop {
@@ -1855,12 +1857,12 @@ div ul.sb-menu,
 
   .sb-loader {
     position: absolute;
-    width: 35px;
-    left: 0;
+    width: 40px;
+    left: 24px;
     right: 0;
     top: 0px;
     display: none;
-    padding: 2px;
+    padding: 0px;
 
     &.sb-active {
       display: block;
@@ -1872,6 +1874,144 @@ div ul.sb-menu,
   display: none;
 }
 
+.sb-invisible {
+  visibility: hidden;
+}
+
+.li-data-content {
+  display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    >a, a:hover, &:active {
+    scale: 1!important;
+    width: 100%;
+}    
+}
+.a-details, .i-details {
+  font-size: var(--chat-text-size-1-0)!important;
+}
+
+
+
+
+/* General Tooltip Styles */
+.routin-left-tooltip,
+.routin-right-tooltip,
+.routin-bottom-content,
+.routin-top-content {
+  position: absolute;
+  transition: opacity .15s, visibility .15s;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--chat-tooltip-background);
+  color: var(--chat-text-tooltip) !important;
+  margin: 6px 0;
+  width: max-content;
+  padding: var(--chat-spacing-size-1-0) !important;
+  font-size: var(--chat-text-size-8);
+  border-radius: var(--chat-rounded-size-5) !important;
+  line-height: 0 !important;
+  font-weight: normal;
+}
+
+/* Left Tooltip */
+.routin-left-tooltip {
+  left: 75px;
+  bottom: 10px;
+}
+
+/* Right Tooltip */
+.routin-right-tooltip {
+  left: -75px;
+  bottom: 10px;
+}
+
+/* Adding the spike (arrow) for left tooltip */
+.routin-left-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: -16px;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--chat-tooltip-background) transparent transparent transparent;
+  transform: rotate(90deg);
+}
+
+/* Bottom Tooltip */
+.routin-bottom-content {
+  bottom: 40px;
+  left: -45px;
+}
+
+/* Adding the spike (arrow) for bottom tooltip */
+.routin-bottom-content::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: var(--chat-tooltip-background) transparent transparent transparent;
+}
+
+/* Top Tooltip */
+.routin-top-content {
+  display: none; /* Ensure the tooltip starts hidden */
+  position: absolute;
+  transition: opacity .2s, visibility .2s;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--chat-tooltip-background);
+  color: var(--chat-text-tooltip) !important;
+  margin: 6px 0;
+  top: 50px;
+  left: 19px;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: var(--chat-spacing-size-1-0) !important;
+  font-size: var(--chat-text-size-8);
+  border-radius: var(--chat-rounded-size-5);
+  line-height: 0;
+  font-weight: normal;
+}
+
+/* Adding the spike (arrow) for top tooltip */
+.routin-top-content::after {
+  content: "";
+  position: absolute;
+  bottom: 32px;
+  left: 25px;
+  transform: translateX(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: var(--chat-tooltip-background) transparent transparent transparent;
+  transform: rotate(180deg);
+}
+
+/* Hover Effects */
+.routin-bottom-tip:hover .routin-bottom-content,
+.routin-top-tip:hover .routin-top-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Ensure the tooltip is positioned relative to the tip */
+.routin-bottom-tip,
+.routin-top-tip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hover effect for top image profile */
+.top-image-profile:hover + .routin-top-content {
+  display: block; /* Show the tooltip on hover */
+  visibility: visible;
+  opacity: 1;
+}
 
 
 .flex-align-center-relative {
@@ -4742,7 +4882,7 @@ div {
   display: block;
   visibility: visible;
   font-size: .8em;
-  bottom: 10px;
+  bottom: 70px;
   width: 92.8%;
   z-index: 99;
   overflow: scroll;

@@ -9498,11 +9498,10 @@ function sb_component_editor($admin = false)
                 <i class="bi bi-envelope-fill"></i>
                 <span><?php sb_e("Saved Replies"); ?></span>
             </div>
-            <div class="api-whatsapp-button" id="open-modal-button">
+            <div class="api-whatsapp-button sb-hide" id="open-modal-button">
                 <i class="bi bi-wind wind-whatsapp-color"></i>
                 <span><?php sb_e("Templates"); ?></span>
             </div>
-            <!-- <div class="bi bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div> -->
 
         </div>
 
@@ -9510,11 +9509,12 @@ function sb_component_editor($admin = false)
 
        
 
-        <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
+        <div class="sb-show-menu-bar flex-align-center-relative">
 
             <div class="menu-plus bi-plus-lg"></div>
-            <div style="padding:0px!important" data-sb-tooltip="Mostrar nombre" class="sb-setting">
+            <div class="routin-bottom-tip sb-setting">
                 <input type="checkbox" id="agentNameToggle" class="switch-toggle">
+                <p class="routin-bottom-content">Mostrar nombre</p>
             </div>
             <div style="min-height: 35px;" class="sb-textarea">
                 <?php
@@ -9535,9 +9535,9 @@ function sb_component_editor($admin = false)
                 </div>
                 <div class="bi-emoji-grin"></div>
 
-                <div id='recordButton' class="bi-mic-fill start stop-time" data-sb-tooltip=""></div>
-                <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
-                <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
+                <div id='recordButton' class="bi-mic-fill start stop-time" ></div>
+                <div id='stopButton' disabled class="bi-record-fill time" ></div>
+                <div class="bi-arrow-up-circle-fill sb-submit"></div>
                 <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
 
             </div>
