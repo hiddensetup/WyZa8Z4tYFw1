@@ -3033,7 +3033,8 @@
         SBF.error("User not of type SBUser", "SBUsers.getRow");
         return false;
       }
-      // this.update();
+      this.update();
+
 
     },
 
@@ -3880,92 +3881,108 @@ if (scroll) {
       }
     },
 
-    // [Deprecated] this method is obsolete and it will be removed soon
-    populate: function (conversation_id, user_id, scroll) {
+
+
+
+
+
+
+
+     // [Deprecated] this method is obsolete and it will be removed soon
+     populate: function (conversation_id, user_id, scroll) {
       this.openConversation(conversation_id, user_id, scroll);
     },
 
-   // Populate conversations
-populateList: function (response) {
-  let code = "";
-  conversations = [];
-  let conversionlist = response;
+    // Populate conversations
+    populateList: function (response) {
+      let code = "";
+      conversations = [];
+      let conversionlist = response;
+      //console.log(response);
+      conversionlist = conversionlist.sort(function (a, b) {
+        return (
+          new Date(b.creation_time).getTime() -
+          new Date(a.creation_time).getTime()
+        );
+      });
 
-  // Sort conversations by creation time in descending order
-  conversionlist = conversionlist.sort(function (a, b) {
-    return (
-      new Date(b.creation_time).getTime() -
-      new Date(a.creation_time).getTime()
-    );
-  });
+      for (var i = 0; i < conversionlist.length; i++) {
+        code += this.getListCode(conversionlist[i]);
+        conversations.push(conversionlist[i]);
+      }
+      if (code == "") {
+        code = `<p class="sb-no-results">${sb_("No conversations found.")}</p>`;
+      }
 
-  // Generate HTML code for conversations
-  for (var i = 0; i < conversionlist.length; i++) {
-    code += this.getListCode(conversionlist[i]);
-    conversations.push(conversionlist[i]);
-  }
+      conversations_admin_list_ul.html(code);
+      conversations_admin_list_ul.css("position", "relative");
+      conversations_admin_list_ul.css("bottom", "15px");
+      SBConversations.positionList();
+      this.updateMenu();
 
-  // Handle no results scenario
-  if (conversionlist.length === 0) {
-    code = `<p class="sb-no-results">${sb_("No conversations found.")}</p>`;
-  }
+      SBF.event("SBAdminConversationsLoaded", {
+        conversations: response,
+      });
+    },
 
-  // Update the HTML content and apply styles
-  conversations_admin_list_ul.html(code);
-  conversations_admin_list_ul.css({
-    "position": "relative",
-    "bottom": "15px"
-  });
+    // positionList() {
+    // 	let chat_list = document.querySelectorAll('ul.sorting-by-last-message li');
+    // 	let totalHeight = 0;
 
-  // Position and style the list items
-  this.positionList();
-  this.updateMenu();
+    // 	chat_list.forEach((list, index) => {
+    // 		let conversationHeight = list.offsetHeight;
+    // 		let conversation_id = list.getAttribute('data-conversation-id');
+    // 		this.chat_tops[0][conversation_id] = list.getAttribute('data-time');
+    // 		let y_pos = totalHeight;
+    // 		let order_css = `border-bottom: 1px solid rgb(122 122 122 / 27%); z-index:${parseInt(chat_list.length) - index};position:absolute;width:-webkit-fill-available;width:-moz-available;transform:translateY(${y_pos}px);`;
+    // 		list.style = order_css;
+    // 		totalHeight += conversationHeight;
+    // 	});
 
-  // Emit event for conversations loaded
-  SBF.event("SBAdminConversationsLoaded", {
-    conversations: response,
-  });
+    // },
+
+    // positionList() {
+    //   let chat_list = document.querySelectorAll(
+    //     "ul.sorting-by-last-message li"
+    //   );
+    //   let totalHeight = 0;
+
+    //   chat_list.forEach((list, index) => {
+    //     let conversationHeight = list.offsetHeight;
+    //     let conversation_id = list.getAttribute("data-conversation-id");
+    //     this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
+
+    //     let order_css = `
+		// 		position:relative;
+		// 		width: -webkit-fill-available;
+		// 		width: -moz-available;
+		// 	  `;
+
+    //     list.style = order_css;
+    //     totalHeight += conversationHeight;
+    //   });
+    // },
+
+positionList() {
+    let chat_list = document.querySelectorAll("ul.sorting-by-last-message li");
+    
+    // Sort the chat list based on the data-time attribute
+    let sortedList = Array.from(chat_list).sort((a, b) => {
+        return new Date(b.getAttribute("data-time")).getTime() - new Date(a.getAttribute("data-time")).getTime();
+    });
+    
+    // Reorder the DOM elements
+    sortedList.forEach((item, index) => {
+        item.style.order = index;
+    });
+    
+    // Update the parent container to use flexbox
+    let parentContainer = document.querySelector("ul.sorting-by-last-message");
+    parentContainer.style.display = "flex";
+    parentContainer.style.flexDirection = "column";
+
 },
 
-// Position the list of conversations
-positionList() {
-  let chat_list = Array.from(document.querySelectorAll("ul.sorting-by-last-message li"));
-  let totalHeight = 0;
-
-  // Sort the chat_list array based on data-time attribute
-  chat_list.sort((a, b) => {
-    let timeA = parseInt(a.getAttribute("data-time"));
-    let timeB = parseInt(b.getAttribute("data-time"));
-    return timeB - timeA; // Sort in descending order (latest first)
-  });
-
-  // Reorder the DOM elements and apply styles
-  chat_list.forEach((list, index) => {
-    let conversationHeight = list.offsetHeight;
-    let conversation_id = list.getAttribute("data-conversation-id");
-    this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
-
- 
-    // Apply CSS styles for positioning
-    list.style.cssText = `
-      position: relative;
-      width: -webkit-fill-available;
-      width: -moz-available;
-      order: ${index}; // Use flexbox order for positioning
-    `;
-
-    totalHeight += conversationHeight;
-
-    // Move the element to the end of the list, it will be ordered by the 'order' property
-    list.parentNode.appendChild(list);
-  });
-
-    
-      // Set the parent ul to use flexbox
-      let parentUl = document.querySelector("ul.sorting-by-last-message");
-      parentUl.style.display = "flex";
-      parentUl.style.flexDirection = "column";
-    },
 
     // Update the left conversations list with new conversations or messages
     update: function () {
@@ -3992,6 +4009,8 @@ positionList() {
               let scroll_to_conversation = false;
               let id_check = [];
               this.datetime_last_conversation = response[0]["creation_time"];
+              SBUsers.populate(response); //(person in list)
+              SBUsers.updateMenu(); //(numbers) monday 15 jul
 
               for (var i = 0; i < response.length; i++) {
                 if (!id_check.includes(response[i]["conversation_id"])) {
@@ -4108,7 +4127,14 @@ positionList() {
                   }
                   if (item.message != "" || item.attachments != "") {
                     SBConversations.newMsgTop(response[i], "add");
-                  }
+                    
+                    // Update the data-time attribute of the conversation item
+                    let conversationItem = conversations_admin_list_ul.find(`[data-conversation-id="${conversation_id}"]`);
+                    conversationItem.attr("data-time", item["creation_time"]);
+                    
+                    // Call positionList to reorder the conversations
+                    this.positionList();
+                }
 
                   // Desktop, flash, sounds notifications
                   if (
@@ -4128,15 +4154,12 @@ positionList() {
                       let formattedMessage = (
                         "preview" in payload ? payload.preview : "notfimy"
                       )
-                      
-                        .replace(/@s\.whatsapp\.net/g, '')
                         .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
                         .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
                         .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
                         .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
                         .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
-                        .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E") // custom replacement for ⟦ ⟧
-                        .replace(/\{agent_name\}/g, '<i class="bi-people-fill"></i>')
+                        .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E"); // custom replacement for ⟦ ⟧
 
                       SBChat.desktopNotification(
                         user_details[0],
@@ -4171,8 +4194,6 @@ positionList() {
               if (scroll_to_conversation) {
                 this.scrollTo();
               }
-            
-              this.positionList();
               this.updateMenu();
             }
           }
@@ -4211,7 +4232,7 @@ positionList() {
         }
       }
     },
-    
+
     updateMenu: function () {
       const count = conversations_admin_list_ul.find('[data-conversation-status="2"]').length;
       const item = conversations_filters.eq(0);
