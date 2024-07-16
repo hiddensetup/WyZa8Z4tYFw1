@@ -97,7 +97,207 @@
     "VIP",
     "Descartado",
     "NA",
-  ];
+];
+
+  // /*
+  //  * ----------------------------------------------------------
+  //  * External plugins
+  //  * ----------------------------------------------------------
+  //  */
+
+  // // miniTip 1.5.3 | (c) 2011, James Simpson | Dual licensed under the MIT and GPL
+  // $.fn.miniTip = function (t) {
+  //   var e = $.extend(
+  //     {
+  //       title: "",
+  //       content: !1,
+  //       delay: 100,
+  //       anchor: "n",
+  //       event: "hover",
+  //       fadeIn: 100,
+  //       fadeOut: 300,
+  //       aHide: !0,
+  //       maxW: "250px",
+  //       offset: 4,
+  //       stemOff: 0,
+  //       doHide: !1,
+  //     },
+  //     t
+  //   );
+  //   0 == admin.find("#miniTip").length &&
+  //     admin.append('<div id="miniTip" class="sb-tooltip"><div></div></div>');
+  //   var n = admin.find("#miniTip"),
+  //     o = n.find("div");
+  //   return e.doHide
+  //     ? (n.stop(!0, !0).fadeOut(e.fadeOut), !1)
+  //     : this.each(function () {
+  //         var t = $(this),
+  //           i = e.content ? e.content : t.attr("title");
+  //         if ("" != i && void 0 !== i) {
+  //           window.delay = !1;
+  //           var r = !1,
+  //             a = !0;
+  //           e.content || t.removeAttr("title"),
+  //             "hover" == e.event
+  //               ? (t.hover(
+  //                   function () {
+  //                     n.removeAttr("click"), (a = !0), c.call(this);
+  //                   },
+  //                   function () {
+  //                     (a = !1), s();
+  //                   }
+  //                 ),
+  //                 e.aHide ||
+  //                   n.hover(
+  //                     function () {
+  //                       r = !0;
+  //                     },
+  //                     function () {
+  //                       (r = !1),
+  //                         setTimeout(function () {
+  //                           a || n.attr("click") || s();
+  //                         }, 20);
+  //                     }
+  //                   ))
+  //               : "click" == e.event &&
+  //                 ((e.aHide = !0),
+  //                 t.click(function () {
+  //                   return (
+  //                     n.attr("click", "t"),
+  //                     n.data("last_target") !== t
+  //                       ? c.call(this)
+  //                       : "none" == n.css("display")
+  //                       ? c.call(this)
+  //                       : s(),
+  //                     n.data("last_target", t),
+  //                     $("html")
+  //                       .unbind("click")
+  //                       .click(function (t) {
+  //                         "block" != n.css("display") ||
+  //                           $(t.target).closest("#miniTip").length ||
+  //                           ($("html").unbind("click"), s());
+  //                       }),
+  //                     !1
+  //                   );
+  //                 }));
+  //           var c = function () {
+  //               e.show && e.show.call(this, e),
+  //                 e.content && "" != e.content && (i = e.content),
+  //                 o.html(i),
+  //                 e.render && e.render(n),
+  //                 n.hide().width("").width(n.width()).css("max-width", e.maxW);
+  //               var r = t.is("area");
+  //               if (r) {
+  //                 var a,
+  //                   c = [],
+  //                   s = [],
+  //                   d = t.attr("coords").split(",");
+  //                 function f(t, e) {
+  //                   return t - e;
+  //                 }
+  //                 for (a = 0; a < d.length; a++) c.push(d[a++]), s.push(d[a]);
+  //                 var h = $(
+  //                     "img[usemap=\\#" + t.parent().attr("name") + "]"
+  //                   ).offset(),
+  //                   l =
+  //                     parseInt(h.left, 10) +
+  //                     parseInt(
+  //                       (parseInt(c.sort(f)[0], 10) +
+  //                         parseInt(c.sort(f)[c.length - 1], 10)) /
+  //                         2,
+  //                       10
+  //                     ),
+  //                   u =
+  //                     parseInt(h.top, 10) +
+  //                     parseInt(
+  //                       (parseInt(s.sort(f)[0], 10) +
+  //                         parseInt(s.sort(f)[s.length - 1], 10)) /
+  //                         2,
+  //                       10
+  //                     );
+  //               } else
+  //                 (u = parseInt(t.offset().top, 10)),
+  //                   (l = parseInt(t.offset().left, 10));
+  //               var _ = r ? 0 : parseInt(t.outerWidth(), 10),
+  //                 p = r ? 0 : parseInt(t.outerHeight(), 10),
+  //                 v = n.outerWidth(),
+  //                 m = n.outerHeight(),
+  //                 g = Math.round(l + Math.round((_ - v) / 2)),
+  //                 b = Math.round(u + p + e.offset + 8),
+  //                 w =
+  //                   Math.round(v - 16) / 2 -
+  //                   parseInt(n.css("borderLeftWidth"), 10),
+  //                 H = 0,
+  //                 W =
+  //                   l + _ + v + e.offset + 8 > parseInt($(window).width(), 10),
+  //                 k = v + e.offset + 8 > l,
+  //                 T = m + e.offset + 8 > u - $(window).scrollTop(),
+  //                 x =
+  //                   u + p + m + e.offset + 8 >
+  //                   parseInt($(window).height() + $(window).scrollTop(), 10),
+  //                 y = e.anchor;
+  //               k || ("e" == e.anchor && !W)
+  //                 ? ("w" != e.anchor && "e" != e.anchor) ||
+  //                   ((y = "e"),
+  //                   (H = Math.round(
+  //                     m / 2 - 8 - parseInt(n.css("borderRightWidth"), 10)
+  //                   )),
+  //                   (w = -8 - parseInt(n.css("borderRightWidth"), 10)),
+  //                   (g = l + _ + e.offset + 8),
+  //                   (b = Math.round(u + p / 2 - m / 2)))
+  //                 : (W || ("w" == e.anchor && !k)) &&
+  //                   (("w" != e.anchor && "e" != e.anchor) ||
+  //                     ((y = "w"),
+  //                     (H = Math.round(
+  //                       m / 2 - 8 - parseInt(n.css("borderLeftWidth"), 10)
+  //                     )),
+  //                     (w = v - parseInt(n.css("borderLeftWidth"), 10)),
+  //                     (g = l - v - e.offset - 8),
+  //                     (b = Math.round(u + p / 2 - m / 2)))),
+  //                 x || ("n" == e.anchor && !T)
+  //                   ? ("n" != e.anchor && "s" != e.anchor) ||
+  //                     ((y = "n"),
+  //                     (H = m - parseInt(n.css("borderTopWidth"), 10)),
+  //                     (b = u - (m + e.offset + 8)))
+  //                   : (T || ("s" == e.anchor && !x)) &&
+  //                     (("n" != e.anchor && "s" != e.anchor) ||
+  //                       ((y = "s"),
+  //                       (H = -8 - parseInt(n.css("borderBottomWidth"), 10)),
+  //                       (b = u + p + e.offset + 8))),
+  //                 "n" == e.anchor || "s" == e.anchor
+  //                   ? v / 2 > l
+  //                     ? ((g = g < 0 ? w + g : w), (w = 0))
+  //                     : l + v / 2 > parseInt($(window).width(), 10) &&
+  //                       ((g -= w), (w *= 2))
+  //                   : T
+  //                   ? ((b += H), (H = 0))
+  //                   : x && ((b -= H), (H *= 2)),
+  //                 delay && clearTimeout(delay),
+  //                 (delay = setTimeout(function () {
+  //                   n.css({ "margin-left": g + "px", "margin-top": b + "px" })
+  //                     .stop(!0, !0)
+  //                     .fadeIn(e.fadeIn);
+  //                 }, e.delay)),
+  //                 n.attr("class", "sb-tooltip " + y);
+  //             },
+  //             s = function () {
+  //               ((e.aHide || r) && !e.aHide) ||
+  //                 (delay && clearTimeout(delay),
+  //                 (delay = setTimeout(function () {
+  //                   d();
+  //                 }, e.delay)));
+  //             },
+  //             d = function () {
+  //               (e.aHide || r) && !e.aHide
+  //                 ? setTimeout(function () {
+  //                     s();
+  //                   }, 200)
+  //                 : (n.stop(!0, !0).fadeOut(e.fadeOut),
+  //                   e.hide && e.hide.call(this));
+  //             };
+  //         }
+  //       });
+  // };
 
   /*
    * ----------------------------------------------------------
@@ -128,7 +328,7 @@
             "Add translation"
           )}" class="bi-plus-lg"></i></div>`
       ),
-      e.sbInitTooltips(),
+      // e.sbInitTooltips(),
       this
     );
   };
@@ -191,24 +391,25 @@
     return this;
   };
 
-  // $.fn.sbInitTooltips = function () {
-  //   return $(this).find("[data-sb-tooltip]").each(function () {
-  //     // Get the position of the element relative to the viewport
-  //     var rect = this.getBoundingClientRect();
-  //     // Check if the element is closer to the top or bottom of the viewport
-  //     var closerToTop = rect.top < window.innerHeight / 2;
-
-  //     // Determine the anchor position based on the element's position
-  //     var anchor = closerToTop ? "n" : "w";
-
-  //     // Initialize the tooltip with the determined anchor position
-  //     $(this).miniTip({
-  //       content: $(this).attr("data-sb-tooltip"),
-  //       anchor: anchor, // Use the determined anchor position
-  //       delay: 100,
-  //     });
-  //   });
-  // };
+  $.fn.sbInitTooltips = function () {
+    return $(this).find("[data-sb-tooltip]").each(function () {
+      // Get the position of the element relative to the viewport
+      var rect = this.getBoundingClientRect();
+      // Check if the element is closer to the top or bottom of the viewport
+      var closerToTop = rect.top < window.innerHeight / 2;
+  
+      // Determine the anchor position based on the element's position
+      var anchor = closerToTop ? "n" : "w";
+  
+      // Initialize the tooltip with the determined anchor position
+      $(this).miniTip({
+        content: $(this).attr("data-sb-tooltip"),
+        anchor: anchor, // Use the determined anchor position
+        delay: 100,
+      });
+    });
+  };
+  
 
   // Display the bottom card information box
   function showResponse(text, type = false) {
@@ -900,6 +1101,8 @@
           : false;
       },
     },
+
+    
 
     whatsapp: {
       check: function (conversation) {
@@ -2861,20 +3064,23 @@
       users_pagination = 1;
       users_pagination_count = 1;
       SBF.ajax(
-        {
-          function: "get-users",
-          sorting: this.sorting,
-          user_types: this.user_types,
-          search: this.search_query,
-          extra: this.table_extra,
-        },
-        (response) => {
-          this.populate(response);
-          this.loading(false);
-          console.log("Sorting completed successfully:", response); // Add this line to log the response
-        }
+          {
+              function: "get-users",
+              sorting: this.sorting,
+              user_types: this.user_types,
+              search: this.search_query,
+              extra: this.table_extra,
+          },
+          (response) => {
+              this.populate(response);
+              this.loading(false);
+              console.log("Sorting completed successfully:", response); // Add this line to log the response
+          }
       );
-    },
+  },
+  
+  
+  
 
     // Search users
     search: function (input) {
@@ -2897,6 +3103,7 @@
             users_table_menu.find("li").sbActive(false).eq(0).sbActive(true);
           }
         );
+
       });
     },
 
@@ -3031,38 +3238,37 @@
       this.update();
     },
 
-    updateRow: function (user) {
-      let row = users_table.find(`[data-user-id="${user.id}"]`);
-      if (row.length) {
-        let menu_active = users_table_menu.find(".sb-active").data("type");
-        if (
-          menu_active !== user.type &&
-          !(user.type === "admin" && menu_active === "agent") &&
-          menu_active !== "all"
-        ) {
-          let counter = admin.find(
-            `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
-          );
-          let count = parseInt(counter.attr("data-count"));
-          counter.html(count + 1).attr("data-count", count + 1);
-          row.remove();
-        } else {
-          let newRow = this.getRow(user); // Get updated row HTML
-          row.replaceWith(newRow); // Replace row in table
-          this.updateTagsLabel(user); // Update tags label
-        }
-      } else {
-        users_table.find("tbody").append(this.getRow(user));
-      }
-    },
+  updateRow: function (user) {
+  let row = users_table.find(`[data-user-id="${user.id}"]`);
+  if (row.length) {
+    let menu_active = users_table_menu.find(".sb-active").data("type");
+    if (
+      menu_active !== user.type &&
+      !(user.type === "admin" && menu_active === "agent") &&
+      menu_active !== "all"
+    ) {
+      let counter = admin.find(
+        `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
+      );
+      let count = parseInt(counter.attr("data-count"));
+      counter.html(count + 1).attr("data-count", count + 1);
+      row.remove();
+    } else {
+      let newRow = this.getRow(user); // Get updated row HTML
+      row.replaceWith(newRow); // Replace row in table
+      this.updateTagsLabel(user); // Update tags label
+    }
+  } else {
+    users_table.find("tbody").append(this.getRow(user));
+  }
+},
 
-    // Update tags label
-    updateTagsLabel: function (user) {
-      // Update tags label class with user's label
-      $(`[data-user-id="${user.id}"] .sb-tags`)
-        .removeClass()
-        .addClass(`sb-tags tags-${user.details.label}`);
-    },
+// Update tags label
+updateTagsLabel: function(user) {
+  // Update tags label class with user's label
+  $(`[data-user-id="${user.id}"] .sb-tags`).removeClass().addClass(`sb-tags tags-${user.details.label}`);
+},
+
 
     // Update users table menu
     updateMenu: function (action = "all", type = false) {
@@ -3929,43 +4135,7 @@
       });
     },
 
-    // positionList() {
-    // 	let chat_list = document.querySelectorAll('ul.sorting-by-last-message li');
-    // 	let totalHeight = 0;
-
-    // 	chat_list.forEach((list, index) => {
-    // 		let conversationHeight = list.offsetHeight;
-    // 		let conversation_id = list.getAttribute('data-conversation-id');
-    // 		this.chat_tops[0][conversation_id] = list.getAttribute('data-time');
-    // 		let y_pos = totalHeight;
-    // 		let order_css = `border-bottom: 1px solid rgb(122 122 122 / 27%); z-index:${parseInt(chat_list.length) - index};position:absolute;width:-webkit-fill-available;width:-moz-available;transform:translateY(${y_pos}px);`;
-    // 		list.style = order_css;
-    // 		totalHeight += conversationHeight;
-    // 	});
-
-    // },
-
-    // positionList() {
-    //   let chat_list = document.querySelectorAll(
-    //     "ul.sorting-by-last-message li"
-    //   );
-    //   let totalHeight = 0;
-
-    //   chat_list.forEach((list, index) => {
-    //     let conversationHeight = list.offsetHeight;
-    //     let conversation_id = list.getAttribute("data-conversation-id");
-    //     this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
-
-    //     let order_css = `
-    // 		position:relative;
-    // 		width: -webkit-fill-available;
-    // 		width: -moz-available;
-    // 	  `;
-
-    //     list.style = order_css;
-    //     totalHeight += conversationHeight;
-    //   });
-    // },
+ 
 
     positionList() {
       let chat_list = document.querySelectorAll(
@@ -4018,7 +4188,7 @@
               let scroll_to_conversation = false;
               let id_check = [];
               this.datetime_last_conversation = response[0]["creation_time"];
-              SBUsers.populate(response); //(person in list)
+              // SBUsers.populate(response); //(person in list)
               SBUsers.updateMenu(); //(numbers) monday 15 jul
 
               for (var i = 0; i < response.length; i++) {
@@ -4145,6 +4315,8 @@
 
                     // Call positionList to reorder the conversations
                     this.positionList();
+                    SBUsers.populate(response); //(person in list moved here)
+
                   }
 
                   // Desktop, flash, sounds notifications
@@ -4199,6 +4371,7 @@
               if (scroll_to_conversation) {
                 this.scrollTo();
               }
+              
               this.updateMenu();
             }
           }
@@ -4281,6 +4454,9 @@
       }
     },
 
+
+
+    
     messageMenu: function (agent) {
       let readTextOption = `<li style="padding: 6px 15px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_(
         "Leer"
@@ -4359,99 +4535,130 @@
         message = words.slice(0, 5).join(" ") + (words.length > 5 ? "..." : "");
       }
 
-      // Attachments handling
-      if (!message && conversation.attachments) {
-        const files = JSON.parse(conversation.attachments);
-        const mediaFiles = files.filter((file) =>
-          /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file)
-        );
-        const docFiles = files.filter((file) =>
-          /\.(docx?|xlsx?|pdf)\b/g.test(file)
-        );
-        const voiceFiles = files.filter((file) => /\.(mp3|ogg)\b/g.test(file));
+     // Attachments handling
+if (!message && conversation.attachments) {
+  const files = JSON.parse(conversation.attachments);
+  const mediaFiles = files.filter((file) =>
+    /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file)
+  );
+  const docFiles = files.filter((file) =>
+    /\.(docx?|xlsx?|pdf)\b/g.test(file)
+  );
+  const voiceFiles = files.filter((file) => /\.(mp3|ogg)\b/g.test(file));
 
-        const mediaMessage =
-          mediaFiles.length > 0
-            ? `<i class="bi-box"></i> ${sb_("Media")}: ${
-                mediaFiles.length > 1
-                  ? `+${mediaFiles.length - 1}`
-                  : mediaFiles.length
-              }`
-            : "";
-        const docMessage =
-          docFiles.length > 0
-            ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${
-                docFiles.length > 1
-                  ? `+${docFiles.length - 1}`
-                  : docFiles.length
-              }`
-            : "";
-        const voiceMessage =
-          voiceFiles.length > 0
-            ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${
-                voiceFiles.length > 1
-                  ? `+${voiceFiles.length - 1}`
-                  : voiceFiles.length
-              }`
-            : "";
+  const mediaMessage =
+    mediaFiles.length > 0
+      ? `<i class="bi-box"></i> ${sb_("Media")}: ${
+          mediaFiles.length > 1
+            ? `+${mediaFiles.length - 1}`
+            : mediaFiles.length
+        }`
+      : "";
+  const docMessage =
+    docFiles.length > 0
+      ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${
+          docFiles.length > 1
+            ? `+${docFiles.length - 1}`
+            : docFiles.length
+        }`
+      : "";
+  const voiceMessage =
+    voiceFiles.length > 0
+      ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${
+          voiceFiles.length > 1
+            ? `+${voiceFiles.length - 1}`
+            : voiceFiles.length
+        }`
+      : "";
 
-        message = [mediaMessage, docMessage, voiceMessage]
-          .filter(Boolean)
-          .join(" ");
-      }
+  message = [mediaMessage, docMessage, voiceMessage]
+    .filter(Boolean)
+    .join(" ");
+}
 
-      const formattedMessage = new SBMessage()
-        .strip(message)
-        .replace(/_/g, " ");
-        
-      const isTitle = !SBF.null(conversation.title);
+// Handle conversation.payload for preview
+if (conversation.payload.includes("preview")) {
+  const payload = JSON.parse(conversation.payload.replace("\\'", "'"));
+  if (payload && "preview" in payload) {
+    message = payload.preview;
+  }
+}
 
-      return `
-          <li data-user-id="${conversation.user_id}" data-conversation-id="${
-        conversation.conversation_id
-      }" data-time="${new Date(
-        conversation.creation_time
-      ).getTime()}" data-conversation-status="${status}" ${
-        conversation.conversation_source
-          ? `data-conversation-source="${conversation.conversation_source}"`
-          : ""
-      }>
-              <small class="source-conversation-icon">
-                  <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
-                    conversation.conversation_source
-                  }.svg">
-              </small>
-              <div class="sb-profile client-status">
-                  <img class="client-icon-status sb-icon tags-${
-                    conversation.label
-                  } bi-kanban-fill loading="lazy" src="${
-        conversation.profile_image
-      }">
-                  <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${
-        isTitle
-          ? conversation.title
-          : `${conversation.first_name} ${conversation.last_name}`
-      }</h3>
-                  <div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">
-                      ${SBF.beautifyTime(conversation.creation_time)}
-                  </div>
-              </div>
-              <div>
-                  <a class="phone-number" style="color:inherit">${
-                    conversation.phone
-                  }</a>
-              </div>
-              <p class="message-received" style="max-width:calc(100% - 145px);">${formattedMessage}</p>
-              <div class="conversation-bar">
-                  <div class="no-read-icon sb-hide" style="margin: 0px 1px;">
-                      <svg width="20" height="20" viewBox="0 0 24.5 24.5" xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
-                          <circle cx="12" cy="12" r="10" class="check-circle"/>
-                          <path d="M11 16a1 1 0 0 1-.71-.29l-3-3a1 1 0 1 1 1.42-1.42l2.29 2.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5A1 1 0 0 1 11 16Z" class="check-inside"/>
-                      </svg>
-                  </div>
-              </div>
-          </li>
-      `;
+// Format message symbols
+const formatSymbols = {
+  "*": "strong",
+  "~": "s",
+  "```": "code",
+};
+
+Object.keys(formatSymbols).forEach((symbol) => {
+  const regex = new RegExp(`\\${symbol}(.*?)\\${symbol}`, "g");
+  if (message.includes(symbol)) {
+    message = message.replace(
+      regex,
+      (match, content) =>
+        `<${formatSymbols[symbol]}>${content}</${formatSymbols[symbol]}>`
+    );
+  }
+});
+
+// Handle status
+if (SBF.null(status)) {
+  status = conversation.conversation_status_code;
+}
+
+const formattedMessage = new SBMessage()
+  .strip(message)
+  .replace(/_/g, " ");
+
+const isTitle = !SBF.null(conversation.title);
+
+return `
+    <li data-user-id="${conversation.user_id}" data-conversation-id="${
+  conversation.conversation_id
+}" data-time="${new Date(
+  conversation.creation_time
+).getTime()}" data-conversation-status="${status}" ${
+  conversation.conversation_source
+    ? `data-conversation-source="${conversation.conversation_source}"`
+    : ""
+}>
+        <small class="source-conversation-icon">
+            <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
+              conversation.conversation_source
+            }.svg">
+        </small>
+        <div class="sb-profile client-status">
+            <img class="client-icon-status sb-icon tags-${
+              conversation.label
+            } bi-kanban-fill loading="lazy" src="${
+  conversation.profile_image
+}">
+            <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${
+  isTitle
+    ? conversation.title
+    : `${conversation.first_name} ${conversation.last_name}`
+}</h3>
+            <div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">
+                ${SBF.beautifyTime(conversation.creation_time)}
+            </div>
+        </div>
+        <div>
+            <a class="phone-number" style="color:inherit">${
+              conversation.phone
+            }</a>
+        </div>
+        <p class="message-received" style="max-width:calc(100% - 145px);">${formattedMessage}</p>
+        <div class="conversation-bar">
+            <div class="no-read-icon sb-hide" style="margin: 0px 1px;">
+                <svg width="20" height="20" viewBox="0 0 24.5 24.5" xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
+                    <circle cx="12" cy="12" r="10" class="check-circle"/>
+                    
+                </svg>
+            </div>
+        </div>
+    </li>
+`;
     },
 
     newMsgTop(user = false, status) {
@@ -9423,22 +9630,22 @@
     //   $(admin).on("click", ".sb-info-card", function () {
     //     $(this).sbActive(!1);
     //   });
-    $(admin).on(
-      "change",
-      ".sb-upload-form-admin .sb-upload-files",
-      function (a) {
-        $(this).sbUploadFiles(function (a) {
-          "success" == (a = JSON.parse(a))[0]
-            ? ("upload-image" ==
-                $(upload_target).closest("[data-type]").data("type") &&
-                $(upload_target)
-                  .attr("data-value", a[1])
-                  .css("background-image", `url("${a[1]}")`),
-              upload_on_success && upload_on_success(a[1]))
-            : console.log(a[1]);
-        });
-      }
-    );
+    // $(admin).on(
+    //   "change",
+    //   ".sb-upload-form-admin .sb-upload-files",
+    //   function (a) {
+    //     $(this).sbUploadFiles(function (a) {
+    //       "success" == (a = JSON.parse(a))[0]
+    //         ? ("upload-image" ==
+    //             $(upload_target).closest("[data-type]").data("type") &&
+    //             $(upload_target)
+    //               .attr("data-value", a[1])
+    //               .css("background-image", `url("${a[1]}")`),
+    //           upload_on_success && upload_on_success(a[1]))
+    //         : console.log(a[1]);
+    //     });
+    //   }
+    // );
     $(admin).on("click", ".sb-accordion > div > span", function (i) {
       let s = $(this).parent(),
         t = $(s).sbActive();

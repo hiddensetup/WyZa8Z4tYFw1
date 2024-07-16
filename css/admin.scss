@@ -2653,6 +2653,7 @@ BODY
                         // line-height: 2;
                         padding: 0px;
                         font-size: var(--chat-text-size-1-0);
+                        animation: scale-down .1 ease-in-out;
 
                         &:active,
                         &:hover {
