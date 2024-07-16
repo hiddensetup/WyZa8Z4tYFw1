@@ -7,6 +7,45 @@
 
 "use strict";
 
+// PROCESADOR DE MENSAJES SIMBOLOS
+function processMessage(message) {
+  return (
+    message
+      .replace(/- /g, "• ")
+      .replace(/[\[\]"\,}]/g, "")
+      .replace(/@s\.whatsapp\.net/g, "")
+      .replace('["', "<div class='group-chat-reply'>")
+      .replace('"]', "</div>")
+      .replace("→Forwarded←", '<i class="bi bi-arrow-right-square"></i> ')
+      .replace(/\{agent_name\}/g, '<i class="bi-people-fill"></i>')
+      .replace(
+        /\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g,
+        '<i class="bi-file-text" data-options="$1" data-message="$2"></i>'
+      )
+      .replace(/\[card[^\]]*\]/g, '<i class="bi-file-text"></i>')
+      .replace(/〚/g, " ")
+      .replace(/〛/g, " ")
+      // Replace single underscores for italic
+      .replace(/(_[^_]+_)/g, function (match) {
+        return `<em>${match.slice(1, -1)}</em>`;
+      })
+      // Replace single backticks for code
+      .replace(/(`[^`]+`)/g, function (match) {
+        return `<code>${match.slice(1, -1)}</code>`;
+      })
+      // Replace single tildes for strikethrough
+      .replace(/~([^~]+)~/g, function (match) {
+        return `<del>${match.slice(1, -1)}</del>`;
+      })
+      // Replace single asterisks for bold
+      .replace(/(\*[^*]+\*)/g, function (match) {
+        return `<strong>${match.slice(1, -1)}</strong>`;
+      })
+      // Custom replacement for ⟦ ⟧
+      .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E")
+  );
+}
+
 (function ($) {
   var version = "2.28";
   var main;
@@ -727,7 +766,7 @@
       const reply = pattern.test(message);
       return reply;
     },
-     // Get the active user
+    // Get the active user
     getActiveUser: function (database = false, onSuccess) {
       let app_login = SBApps.login();
       if (
@@ -740,7 +779,6 @@
         this.cookie("sb-login", "", "", "delete");
         activeUser(false);
         storage("login", "");
-   
       }
       SBF.ajax(
         {
@@ -1637,7 +1675,6 @@
     }
     return showed;
   };
-  
 
   // Uploader
   $.fn.sbUploadFiles = function (onSuccess) {
@@ -2243,7 +2280,6 @@
         var tel = Number(telf);
         var alt = "";
 
-      
         if (tel > 0) {
           if (message.includes(telf)) {
             message = message.replace(telf, name);
@@ -2266,15 +2302,13 @@
             message = message;
           }
         }
-      
+
         // Replace the placeholder with the proper div and ID
         message = message.replace(/<br\s*\/?>/, "");
-      
+
         message = message.replace(
           "〚",
-          alt == "alt"
-            ? `<div id='sb-reply-to-alt'>`
-            : `<div id='sb-reply-to'>`
+          alt == "alt" ? `<div id='sb-reply-to-alt'>` : `<div id='sb-reply-to'>`
         );
         message = message.replace(
           "〛",
@@ -2285,12 +2319,16 @@
         message = message.replace("{", "");
         message = message.replace("}", "");
         message = message.replace("@s.whatsapp.net}", "");
-      
+        message = message.replace(
+          "→Forwarded←",
+          '<i class="bi bi-arrow-right-square"></i> '
+        );
+
         // Ensure the name is not displayed at the top of the message
         if (message.startsWith(name)) {
           message = message.substring(name.length).trim();
         }
-      
+
         // Convert dashes with space to bullets
         code = `<div data-id="${
           this.details["id"]
@@ -2322,38 +2360,33 @@
             </div>`;
       } else {
         // MESSAGE CREATION CHAT
-        code = `<div data-id="${
-          this.details["id"]
-        }" ${type}  class="sb-shadow-conversation ${css}"  style="transition: 0.3s all">${thumb}
-        <div class="server-response"> <i class="bi-check2-all"></i></div>
-        <div class="sb-cnt" style="width:fit-content;margin:6px;">
-             
-        <div class="sb-message" data-value="${
-          this.linksData
-            ? encodeURIComponent(this.linksData.message)
-            : encodeURIComponent(message)
-        }">
-        ${media_code}
-       
-        <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
-          ${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
-        </div>
-      </div>
-      ${attachments_code}<div class="menu-bubble"><div class="sb-time">${SBF.beautifyTime(
-        this.details["creation_time"],
-        true
-      )}</div></div>
-        </div>
-        ${admin_menu}
-      </div>
-      `;
-      }
+        code = `
+              <div data-id="${this.details["id"]}" ${type} class="sb-shadow-conversation ${css}" style="transition: 0.3s all">
+                ${thumb}
+                  <div class="server-response">
+                    <i class="bi-check2-all"></i>
+                  </div>
+                  <div class="sb-cnt" style="width:fit-content;margin:6px;">
+                        <div class="sb-message" data-value="${this.linksData}">
+                            ${media_code}
+                            <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
+                            ${this.linksData? this.linksData.message : message.replace(/\|/g, " ")}
+                            </div>
+                        </div>
+                        ${attachments_code}
+                        <div class="menu-bubble">
+                            <div class="sb-time">
+                                ${SBF.beautifyTime(this.details["creation_time"],true)}
+                            </div>
+                        </div>
+                  </div>
+                  ${admin_menu}
+              </div>`;
+          }
       return code;
-      
     }
 
     // RENDER BUBBLE MESSAGE
-
     render(message = false) {
       if (message === false) message = "" + this.details["message"];
       let len = message.length;
@@ -2365,7 +2398,6 @@
         ) + "</li>";
 
       // Breakline
-
       message = message.replace(/(?:\r\n|\r|\n)/g, "<br>");
 
       // Code block
@@ -2381,23 +2413,20 @@
         let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
         message = message.replace(inlineCodes[i], codePlaceholder);
       }
-
-      // Bold (requires spaces around asterisks)
       message = message.replace(
         /(?<!\*)\*(.*?)\*(?!\*)/g,
         "<strong>$1</strong>"
       );
-
-      message = message.replace(/@s\.whatsapp\.net/g, '')
-      message = message.replace("[\"", "<div class='group-chat-reply'>")
-      message = message.replace("\"]", "</div>")
-
-
-
-      // Italic (requires spaces around underscores)
+      message = message.replace(/@s\.whatsapp\.net/g, "");
+      message = message.replace('["', "<div class='group-chat-reply'>");
+      message = message.replace('"]', "</div>");
+      message = message.replace(
+        "→",
+        '<small style="color:var(--chat-text-tertiary)"><i class="bi bi-arrow-right-square"></i> '
+      );
+      message = message.replace("←", "</small>");
+      message = message.replace("←", "</small>");
       message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
-
-      // Strikethrough (handles cases with or without spaces around tildes)
       message = message.replace(
         /(<li>\s*)?~([^~]+)~/g,
         function (match, liPrefix, content) {
@@ -2408,16 +2437,6 @@
           }
         }
       );
-
-      // // Unicode
-      // let false_positives = ["cede", "ubbed", "U4BEae", "UEDC72", "EAuEACd", "udada", "ucced"];
-      // for (var i = 0; i < false_positives.length; i++) {
-      //   message = message.replaceAll(false_positives[i], `SBR${i}`);
-      // }
-      // message = message.replace(/u([0-9a-f]{4,5})/im, "&#x$1;");
-      // for (var i = 0; i < false_positives.length; i++) {
-      //   message = message.replaceAll(`SBR${i}`, false_positives[i]);
-      // }
 
       // Single emoji
       if (
@@ -2432,7 +2451,9 @@
 
       // Links
       if (message.includes("http")) {
-        message = message.autoLink({ target: "_blank" });
+        message = message.autoLink({
+          target: "_blank",
+        });
       }
 
       // Inline code block restore
@@ -2471,11 +2492,8 @@
           )}</span>`
       );
 
-  // // Encode the message to handle special characters and ensure URL integrity
-  // message = encodeURIComponent(message);
-
-  return  message;
-}
+      return message;
+    }
   }
 
   window.SBMessage = SBMessage;
@@ -2626,10 +2644,15 @@
     }
 
     getCode() {
+      // LEFT CHAT LIST MESSAGES
       let count = this.messages.length;
       if (count) {
         let message = this.messages[count - 1];
         let text = message.message;
+
+        // Process the message with the helper function
+        text = processMessage(text);
+
         if (text.indexOf("[") !== false) {
           let shortcodes = text.match(/\[.+?\]/g) || [];
           if (shortcodes.length) {
@@ -3224,6 +3247,64 @@
     },
 
     // Desktop notifications
+    // desktopNotification: function (
+    //   title,
+    //   message,
+    //   icon,
+    //   conversation_id = false,
+    //   user_id = false
+    // ) {
+    //   if (Notification.permission !== "granted") {
+    //     Notification.requestPermission();
+    //   } else {
+    //     let formattedMessage = message
+    //       .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
+    //       .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
+    //       .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
+    //       .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
+    //       .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
+    //       .replace(/^([{,+,0-9,}]+[@s.whatsapp.net])/g, "\u200E$1") // Replace the given pattern
+    //       .replace('["', "<div class='group-chat-reply'>")
+    //       .replace('"]', "</div>")
+    //       .replace(
+    //         "→",
+    //         '<small style="color:var(--chat-text-tertiary)"><i class="bi bi-arrow-right-square"></i> '
+    //       )
+    //       .replace("←", "</small>")
+    //       .replace("←", "</small>");
+
+    //       //this code above format in chat conversation whatsapp web
+
+    //     if (!formattedMessage) {
+    //       formattedMessage = "📄";
+    //     }
+
+    //     let notify = SBPusher.sw.showNotification(title, {
+    //       body: new SBMessage().strip(formattedMessage),
+    //       icon:
+    //         icon.indexOf("user.svg") > 0
+    //           ? CHAT_SETTINGS["notifications-icon"]
+    //           : icon,
+    //     });
+    //     notify.onclick = () => {
+    //       if (admin) {
+    //         if (conversation_id) {
+    //           SBAdmin.conversations.openConversation(
+    //             conversation_id,
+    //             user_id == false ? activeUser().id : user_id
+    //           );
+    //           SBAdmin.conversations.update();
+    //         } else if (user_id) {
+    //           SBAdmin.profile.show(user_id);
+    //         }
+    //       } else {
+    //         this.start();
+    //       }
+    //       window.focus();
+    //     };
+    //   }
+    // },
+
     desktopNotification: function (
       title,
       message,
@@ -3234,13 +3315,8 @@
       if (Notification.permission !== "granted") {
         Notification.requestPermission();
       } else {
-        let formattedMessage = message
-          .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
-          .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
-          .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
-          .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
-          .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
-          .replace(/^([{,+,0-9,}]+[@s.whatsapp.net])/g, "\u200E$1"); // Replace the given pattern
+        // Use processMessage to format the message
+        let formattedMessage = processMessage(message);
 
         if (!formattedMessage) {
           formattedMessage = "📄";
@@ -4363,9 +4439,7 @@
           this.start_header = [chat_header.html(), chat_header.attr("class")];
         chat_header
           .attr("class", "sb-header sb-header-panel")
-          .html(
-            `${sb_(title)}<div class="sb-dashboard-btn bi-x-lg"></div>`
-          );
+          .html(`${sb_(title)}<div class="sb-dashboard-btn bi-x-lg"></div>`);
         main.addClass("sb-panel-active");
         this.dashboard = true;
       }
@@ -5011,8 +5085,6 @@
       chat_editor.find(".sb-bar").sbActive(show);
     },
 
-    
-
     // Shortcut for add user and login function
     addUserAndLogin: function (onSuccess = false, lead = false) {
       let settings = typeof SB_DEFAULT_USER != ND ? SB_DEFAULT_USER : {};
@@ -5034,8 +5106,6 @@
         }
       );
     },
-
-    
 
     // Check if the dashboard must be showed
     isInitDashboard: function () {
@@ -7378,55 +7448,53 @@
       storage("open-conversation", 0);
       force_action = false;
     });
-// Send whatsapp template
-$("#template-form").on("submit", function (e) {
-  e.preventDefault();
-  const template = new Metatemplate().payload("#template-form");
+    // Send whatsapp template
+    $("#template-form").on("submit", function (e) {
+      e.preventDefault();
+      const template = new Metatemplate().payload("#template-form");
 
-  const payload = {
-      type: template.type,
-      to: activeUser().getExtra("phone").value,
-      template_name: template.template_name,
-      language: template.language,
-      variables: template.variables,
-      image_url: template.image_url,
-  };
-  console.log("Payload:", payload);
+      const payload = {
+        type: template.type,
+        to: activeUser().getExtra("phone").value,
+        template_name: template.template_name,
+        language: template.language,
+        variables: template.variables,
+        image_url: template.image_url,
+      };
+      console.log("Payload:", payload);
 
-  const submit = $("#send-meta-template");
+      const submit = $("#send-meta-template");
 
-  submit.sbLoading(true);
-  SBF.ajax(
-      {
+      submit.sbLoading(true);
+      SBF.ajax(
+        {
           function: "whatsapp-send-meta-template",
           payload: payload,
-      },
-      (response) => {
+        },
+        (response) => {
           submit.sbLoading(false);
           if (response?.error && response.error.message) {
-              SBForm.showErrorMessage(
-                  $(".sb-admin").find(".sb-send-template-box"),
-                  response.error.message
-              );
+            SBForm.showErrorMessage(
+              $(".sb-admin").find(".sb-send-template-box"),
+              response.error.message
+            );
           } else if (response) {
-              SBChat.sendMessage(
-                  -1,
-                  `*Plantilla WhatsApp*, {agent_name} \n\n ${template.BodyTemplate}`,
-                  false
-              );
-              SBChat.showResponse(`${template.BodyTemplate}`);
-              $(admin ? global : main)
-                  .find(
-                      ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
-                  )
-                  .sbActive(false);
+            SBChat.sendMessage(
+              -1,
+              `*Plantilla WhatsApp*, {agent_name} \n\n ${template.BodyTemplate}`,
+              false
+            );
+            SBChat.showResponse(`${template.BodyTemplate}`);
+            $(admin ? global : main)
+              .find(
+                ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
+              )
+              .sbActive(false);
           }
           console.log("temp", response);
-      }
-  );
-});
-
-
+        }
+      );
+    });
 
     //rate and review
     SBF.get_select_setting();
@@ -7462,103 +7530,103 @@ $("#template-form").on("submit", function (e) {
         .removeClass("sb-conversations-hidden");
     });
 
-  // Events uploader
-  $(chat_editor).on("click", "#upload-files", function () {
-    if (!SBChat.is_busy) {
-      chat_editor.find(".sb-upload-files").val("").click();
-      chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+    // Events uploader
+    $(chat_editor).on("click", "#upload-files", function () {
+      if (!SBChat.is_busy) {
+        chat_editor.find(".sb-upload-files").val("").click();
+        chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
 
-      console.log("to upload file");
-    }
-  });
-
-  $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
-    $(this).parent().remove();
-    if (
-      chat_textarea.val() == "" &&
-      chat_editor.find(".sb-attachments > div").length == 0
-    ) {
-      SBChat.activateBar(false);
-    }
-    e.preventDefault();
-    return false;
-  });
-
-  $(chat_editor).on("change", ".sb-upload-files", function (data) {
-    SBChat.busy(true);
-    $(this).sbUploadFiles(function (response) {
-      SBChat.uploadResponse(response);
+        console.log("to upload file");
+      }
     });
 
-    SBF.event("SBAttachments");
-  });
+    $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
+      $(this).parent().remove();
+      if (
+        chat_textarea.val() == "" &&
+        chat_editor.find(".sb-attachments > div").length == 0
+      ) {
+        SBChat.activateBar(false);
+      }
+      e.preventDefault();
+      return false;
+    });
 
-  $(chat_editor).on("dragover", function (e) {
-    $(this).addClass("sb-drag");
-    clearTimeout(timeout);
-    e.preventDefault();
-    e.stopPropagation();
-    // Show the send icon after a timeout
-    showSendIconAfterTimeout();
-  });
+    $(chat_editor).on("change", ".sb-upload-files", function (data) {
+      SBChat.busy(true);
+      $(this).sbUploadFiles(function (response) {
+        SBChat.uploadResponse(response);
+      });
 
-  $(chat_editor).on("dragleave", function (e) {
-    timeout = setTimeout(() => {
-      $(this).removeClass("sb-drag");
+      SBF.event("SBAttachments");
+    });
+
+    $(chat_editor).on("dragover", function (e) {
+      $(this).addClass("sb-drag");
+      clearTimeout(timeout);
+      e.preventDefault();
+      e.stopPropagation();
       // Show the send icon after a timeout
       showSendIconAfterTimeout();
-    }, 200);
-    e.preventDefault();
-    e.stopPropagation();
-  });
+    });
 
-  $(chat_editor).on("drop", function (e) {
-    let files = e.originalEvent.dataTransfer.files;
-    e.preventDefault();
-    e.stopPropagation();
-    if (files.length > 0) {
-      for (var i = 0; i < files.length; ++i) {
-        let form = new FormData();
-        form.append("file", files[i]);
-        SBF.upload(form, function (response) {
-          SBChat.uploadResponse(response);
-        });
+    $(chat_editor).on("dragleave", function (e) {
+      timeout = setTimeout(() => {
+        $(this).removeClass("sb-drag");
+        // Show the send icon after a timeout
+        showSendIconAfterTimeout();
+      }, 200);
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    $(chat_editor).on("drop", function (e) {
+      let files = e.originalEvent.dataTransfer.files;
+      e.preventDefault();
+      e.stopPropagation();
+      if (files.length > 0) {
+        for (var i = 0; i < files.length; ++i) {
+          let form = new FormData();
+          form.append("file", files[i]);
+          SBF.upload(form, function (response) {
+            SBChat.uploadResponse(response);
+          });
+        }
       }
+      $(this).removeClass("sb-drag");
+      return false;
+    });
+
+    // Function to show the send icon after a timeout
+    function showSendIconAfterTimeout() {
+      setTimeout(() => {
+        $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+      }, 500); // Adjust the timeout duration as needed
     }
-    $(this).removeClass("sb-drag");
-    return false;
-  });
 
-  // Function to show the send icon after a timeout
-  function showSendIconAfterTimeout() {
-    setTimeout(() => {
-      $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
-    }, 500); // Adjust the timeout duration as needed
-  }
+    // Articles
+    $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
+      SBChat.showArticles();
+    });
 
-  // Articles
-  $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
-    SBChat.showArticles();
-  });
+    $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
+      SBChat.showArticles($(this).attr("data-id"));
+    });
 
-  $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
-    SBChat.showArticles($(this).attr("data-id"));
-  });
+    $(main).on(
+      "click",
+      ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
+      function () {
+        SBChat.searchArticles(
+          $(this).parent().find("input").val(),
+          this,
+          $(this).parent().next()
+        );
+      }
+    );
 
-  $(main).on(
-    "click",
-    ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
-    function () {
-      SBChat.searchArticles(
-        $(this).parent().find("input").val(),
-        this,
-        $(this).parent().next()
-      );
-    }
-  );
-
-  $(global).on("click", ".sb-article [data-rating]", function () {
-    SBChat.articleRatingOnClick(this);
+    $(global).on("click", ".sb-article [data-rating]", function () {
+      SBChat.articleRatingOnClick(this);
     });
 
     $(chat).on("click", ".sb-rich-button a", function (e) {
@@ -7880,7 +7948,6 @@ $("#template-form").on("submit", function (e) {
       if (admin) SBAdmin.open_popup = active ? false : this;
     });
 
-
     /**inbox loader**/
     $(global).on("click", ".sb-select li", function () {
       let select = $(this).closest(".sb-select");
@@ -7897,15 +7964,11 @@ $("#template-form").on("submit", function (e) {
       chat_editor.find(".sb-upload-files").click();
     });
 
-    $(global).on(
-      "click",
-      ".sb-input-image .image > .bi-x-lg",
-      function (e) {
-        $(this).parent().removeAttr("data-value").css("background-image", "");
-        e.preventDefault();
-        return false;
-      }
-    );
+    $(global).on("click", ".sb-input-image .image > .bi-x-lg", function (e) {
+      $(this).parent().removeAttr("data-value").css("background-image", "");
+      e.preventDefault();
+      return false;
+    });
 
     let alertOnConfirmation = false;
 
@@ -7952,9 +8015,6 @@ $("#template-form").on("submit", function (e) {
     //     });
     //   });
     // });
-
-    
-    
 
     // CONTEXTUAL BLOCKED
     // $(document).on("contextmenu",function(e){
@@ -8048,5 +8108,3 @@ $(document).on("click", function (event) {
   window.speechSynthesis.cancel();
   isSpeechSynthesisActive = false; // Reset flag on document click
 });
-
-

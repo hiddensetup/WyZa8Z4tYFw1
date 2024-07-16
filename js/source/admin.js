@@ -97,9 +97,8 @@
     "VIP",
     "Descartado",
     "NA",
-];
+  ];
 
- 
   /*
    * ----------------------------------------------------------
    * # Functions
@@ -198,10 +197,10 @@
   //     var rect = this.getBoundingClientRect();
   //     // Check if the element is closer to the top or bottom of the viewport
   //     var closerToTop = rect.top < window.innerHeight / 2;
-  
+
   //     // Determine the anchor position based on the element's position
   //     var anchor = closerToTop ? "n" : "w";
-  
+
   //     // Initialize the tooltip with the determined anchor position
   //     $(this).miniTip({
   //       content: $(this).attr("data-sb-tooltip"),
@@ -210,7 +209,6 @@
   //     });
   //   });
   // };
-  
 
   // Display the bottom card information box
   function showResponse(text, type = false) {
@@ -364,10 +362,12 @@
     window.history.pushState("", "", url_parameters);
   }
 
-      // Cloud
-      function cloudURL() {
-        return SB_ADMIN_SETTINGS.cloud ? ('&cloud=' + SB_ADMIN_SETTINGS.cloud.token) : '';
-    }
+  // Cloud
+  function cloudURL() {
+    return SB_ADMIN_SETTINGS.cloud
+      ? "&cloud=" + SB_ADMIN_SETTINGS.cloud.token
+      : "";
+  }
 
   // Strip URL
   function urlStrip(url) {
@@ -867,7 +867,6 @@
       },
     },
 
-
     waweb: {
       check: function (conversation) {
         return conversation.get("source") == "wx";
@@ -901,8 +900,6 @@
           : false;
       },
     },
-
-    
 
     whatsapp: {
       check: function (conversation) {
@@ -2864,23 +2861,20 @@
       users_pagination = 1;
       users_pagination_count = 1;
       SBF.ajax(
-          {
-              function: "get-users",
-              sorting: this.sorting,
-              user_types: this.user_types,
-              search: this.search_query,
-              extra: this.table_extra,
-          },
-          (response) => {
-              this.populate(response);
-              this.loading(false);
-              console.log("Sorting completed successfully:", response); // Add this line to log the response
-          }
+        {
+          function: "get-users",
+          sorting: this.sorting,
+          user_types: this.user_types,
+          search: this.search_query,
+          extra: this.table_extra,
+        },
+        (response) => {
+          this.populate(response);
+          this.loading(false);
+          console.log("Sorting completed successfully:", response); // Add this line to log the response
+        }
       );
-  },
-  
-  
-  
+    },
 
     // Search users
     search: function (input) {
@@ -2903,7 +2897,6 @@
             users_table_menu.find("li").sbActive(false).eq(0).sbActive(true);
           }
         );
-
       });
     },
 
@@ -3016,7 +3009,9 @@
           user.type
         }"><td><input type="checkbox" /></td><td class="sb-td-profile"><a class="sb-profile"><img loading="lazy" src="${
           user.image
-        }" class="sb-tags tags-${user.details.label}" style="max-width: 27px;max-height: 27px;padding: 2px;border:none;" /><span style="margin:0px 1px">${
+        }" class="sb-tags tags-${
+          user.details.label
+        }" style="max-width: 27px;max-height: 27px;padding: 2px;border:none;" /><span style="margin:0px 1px">${
           user.name.length > 25 ? user.name.slice(0, 25) + "..." : user.name
         }</span></a></td>${code}<td style="overflow: hidden;max-width: 80px;text-overflow: ellipsis;overflow-wrap: break-word;" class="sb-td-email"class="sb-td-email">${user.get(
           "email"
@@ -3034,41 +3029,40 @@
         return false;
       }
       this.update();
-
-
     },
 
-  updateRow: function (user) {
-  let row = users_table.find(`[data-user-id="${user.id}"]`);
-  if (row.length) {
-    let menu_active = users_table_menu.find(".sb-active").data("type");
-    if (
-      menu_active !== user.type &&
-      !(user.type === "admin" && menu_active === "agent") &&
-      menu_active !== "all"
-    ) {
-      let counter = admin.find(
-        `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
-      );
-      let count = parseInt(counter.attr("data-count"));
-      counter.html(count + 1).attr("data-count", count + 1);
-      row.remove();
-    } else {
-      let newRow = this.getRow(user); // Get updated row HTML
-      row.replaceWith(newRow); // Replace row in table
-      this.updateTagsLabel(user); // Update tags label
-    }
-  } else {
-    users_table.find("tbody").append(this.getRow(user));
-  }
-},
+    updateRow: function (user) {
+      let row = users_table.find(`[data-user-id="${user.id}"]`);
+      if (row.length) {
+        let menu_active = users_table_menu.find(".sb-active").data("type");
+        if (
+          menu_active !== user.type &&
+          !(user.type === "admin" && menu_active === "agent") &&
+          menu_active !== "all"
+        ) {
+          let counter = admin.find(
+            `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
+          );
+          let count = parseInt(counter.attr("data-count"));
+          counter.html(count + 1).attr("data-count", count + 1);
+          row.remove();
+        } else {
+          let newRow = this.getRow(user); // Get updated row HTML
+          row.replaceWith(newRow); // Replace row in table
+          this.updateTagsLabel(user); // Update tags label
+        }
+      } else {
+        users_table.find("tbody").append(this.getRow(user));
+      }
+    },
 
-// Update tags label
-updateTagsLabel: function(user) {
-  // Update tags label class with user's label
-  $(`[data-user-id="${user.id}"] .sb-tags`).removeClass().addClass(`sb-tags tags-${user.details.label}`);
-},
-
+    // Update tags label
+    updateTagsLabel: function (user) {
+      // Update tags label class with user's label
+      $(`[data-user-id="${user.id}"] .sb-tags`)
+        .removeClass()
+        .addClass(`sb-tags tags-${user.details.label}`);
+    },
 
     // Update users table menu
     updateMenu: function (action = "all", type = false) {
@@ -3476,203 +3470,215 @@ updateTagsLabel: function(user) {
               .find(".sb-active")
               .attr("data-value");
 
-              SBChat.setConversation(response);
-              SBChat.populate();
-  
-              this.setReadIcon(conversation_status_code);
-              conversations_area.find(".sb-conversation-busy").remove();
-              this.updateUserDetails();
+            SBChat.setConversation(response);
+            SBChat.populate();
 
-              // let phoneNumber = activeUser().getExtra("phone").value;
-              // let firstName = response.get("first_name");
-              
-              // // Construct the HTML with the phone number
-              // conversations_area.find(".sb-top > a").html(phoneNumber);
-              
-              // // Toggle between phone number and first name when clicked
-              // conversations_area.find(".sb-top > a").on("click", function() {
-              //     if ($(this).text() === phoneNumber) {
-              //         $(this).text(firstName);
-              //     } else {
-              //         $(this).text(phoneNumber);
-              //     }
-              // });
-                        
-              // let profileImage = response.get("profile_image");
-              // let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
-              // let phoneNumber = activeUser().getExtra("phone").value;
-              // let label = response.get("label");
-              
-              // // Construct the HTML with the profile image and first name
-              // let htmlContent = `<span class="open-profile-name"><img src="${profileImage}" alt="Profile Image" style="width: 2.3rem; vertical-align: bottom; border-radius: 50%; padding-right: 5px;"></span> <span>${firstName}</span>`;
-              
-              // // Set the HTML content
-              // conversations_area.find(".sb-top > a").html(htmlContent);
-              
-              // // Define the toggle states based on data availability
-              // let toggleStates = [];
-              // if (phoneNumber) toggleStates.push(phoneNumber);
-              // if (label) toggleStates.push(label);
-              // toggleStates.push(firstName);
-              
-              // // Keep track of the current toggle state
-              // let currentStateIndex = 0;
-              
-              // // Handle clicking on the profile image
-              // conversations_area.find(".open-profile-name").on("click", function() {
-              //     SBProfile.showEdit(activeUser());
-              // });
-              
-              // // Handle clicking on the first name
-              // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-              //     if (toggleStates.length > 1) {
-              //         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
-              //         $(this).text(toggleStates[currentStateIndex]);
-              //     }
-              // });
-              
-//               let profileImage = response.get("profile_image");
-// let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
-// let phoneNumber = activeUser().getExtra("phone").value;
-// let label = response.get("label");
+            this.setReadIcon(conversation_status_code);
+            conversations_area.find(".sb-conversation-busy").remove();
+            this.updateUserDetails();
 
-// // Construct the HTML with the profile image and first name
-// let htmlContent = `<span style="padding-right:5px;" class="open-profile-name"><img src="${profileImage}" class="top-image-profile"></span> <span>${firstName}</span>`;
+            // let phoneNumber = activeUser().getExtra("phone").value;
+            // let firstName = response.get("first_name");
 
-// // Set the HTML content
-// conversations_area.find(".sb-top > a").html(htmlContent);
+            // // Construct the HTML with the phone number
+            // conversations_area.find(".sb-top > a").html(phoneNumber);
 
-// // Define the toggle states based on data availability
-// let toggleStates = [];
-// if (phoneNumber) toggleStates.push(`<i style="font-size:1rem" class="bi bi-telephone-fill"></i> ${phoneNumber}`);
-// if (label) toggleStates.push(`<i style="font-size:1rem" class="bi bi-chevron-compact-right"></i> ${label}`);
-// toggleStates.push(firstName);
+            // // Toggle between phone number and first name when clicked
+            // conversations_area.find(".sb-top > a").on("click", function() {
+            //     if ($(this).text() === phoneNumber) {
+            //         $(this).text(firstName);
+            //     } else {
+            //         $(this).text(phoneNumber);
+            //     }
+            // });
 
-// // Keep track of the current toggle state
-// let currentStateIndex = 0;
+            // let profileImage = response.get("profile_image");
+            // let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
+            // let phoneNumber = activeUser().getExtra("phone").value;
+            // let label = response.get("label");
 
-// // Handle clicking on the profile image
-// conversations_area.find(".open-profile-name").on("click", function() {
-//     SBProfile.showEdit(activeUser());
+            // // Construct the HTML with the profile image and first name
+            // let htmlContent = `<span class="open-profile-name"><img src="${profileImage}" alt="Profile Image" style="width: 2.3rem; vertical-align: bottom; border-radius: 50%; padding-right: 5px;"></span> <span>${firstName}</span>`;
 
-// });
+            // // Set the HTML content
+            // conversations_area.find(".sb-top > a").html(htmlContent);
 
-// // Handle clicking on the first name
-// conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-//     if (toggleStates.length > 1) {
-//         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
-//         $(this).html(toggleStates[currentStateIndex]);
-//     }
-// });
+            // // Define the toggle states based on data availability
+            // let toggleStates = [];
+            // if (phoneNumber) toggleStates.push(phoneNumber);
+            // if (label) toggleStates.push(label);
+            // toggleStates.push(firstName);
 
+            // // Keep track of the current toggle state
+            // let currentStateIndex = 0;
 
-// let profileImage = response.get("profile_image");
-// let originalTitle = response.get("first_name");
-// let screenWidth = $(window).width();
-// let firstName;
+            // // Handle clicking on the profile image
+            // conversations_area.find(".open-profile-name").on("click", function() {
+            //     SBProfile.showEdit(activeUser());
+            // });
 
-// // Determine the character limit based on screen width
-// if (screenWidth < 555) {
-//     firstName = originalTitle.length > 20 ? originalTitle.slice(0, 20) + "..." : originalTitle;
-// } else {
-//     firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
-// }
+            // // Handle clicking on the first name
+            // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+            //     if (toggleStates.length > 1) {
+            //         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
+            //         $(this).text(toggleStates[currentStateIndex]);
+            //     }
+            // });
 
-// let phoneNumber = activeUser().getExtra("phone").value;
+            //               let profileImage = response.get("profile_image");
+            // let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
+            // let phoneNumber = activeUser().getExtra("phone").value;
+            // let label = response.get("label");
 
-// // Construct the HTML with the profile image and first name
-// let htmlContent = `
-//     <span style="padding-right:5px;" class="open-profile-name">
-//         <img src="${profileImage}" class="top-image-profile">
-//     </span> 
-//     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
-// `;
+            // // Construct the HTML with the profile image and first name
+            // let htmlContent = `<span style="padding-right:5px;" class="open-profile-name"><img src="${profileImage}" class="top-image-profile"></span> <span>${firstName}</span>`;
 
-// // Set the HTML content
-// conversations_area.find(".sb-top > a").html(htmlContent);
+            // // Set the HTML content
+            // conversations_area.find(".sb-top > a").html(htmlContent);
 
-// // Define the toggle state for phone number
-// let toggleState = phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:60px" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : '';
+            // // Define the toggle states based on data availability
+            // let toggleStates = [];
+            // if (phoneNumber) toggleStates.push(`<i style="font-size:1rem" class="bi bi-telephone-fill"></i> ${phoneNumber}`);
+            // if (label) toggleStates.push(`<i style="font-size:1rem" class="bi bi-chevron-compact-right"></i> ${label}`);
+            // toggleStates.push(firstName);
 
-// // Keep track of whether additional information is currently shown
-// let isAdditionalInfoShown = false;
+            // // Keep track of the current toggle state
+            // let currentStateIndex = 0;
 
-// // Handle clicking on the profile image
-// conversations_area.find(".open-profile-name").on("click", function() {
-//     SBProfile.showEdit(activeUser());
-// });
+            // // Handle clicking on the profile image
+            // conversations_area.find(".open-profile-name").on("click", function() {
+            //     SBProfile.showEdit(activeUser());
 
-// // Handle clicking on the first name
-// conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-//     let currentSpan = $(this).next(".additional-info");
-//     if (!isAdditionalInfoShown) {
-//         if (currentSpan.length === 0) {
-//             currentSpan = $(`<span class="additional-info">${toggleState}</span>`);
-//             $(this).after(currentSpan);
-//         } else {
-//             currentSpan.html(toggleState);
-//         }
-//         isAdditionalInfoShown = true;
-//     } else {
-//         currentSpan.remove();
-//         isAdditionalInfoShown = false;
-//     }
-// });
-let profileImage = response.get("profile_image");
-let originalTitle = response.get("first_name");
-let screenWidth = $(window).width();
-let firstName;
+            // });
 
-// Determine the character limit based on screen width
-if (screenWidth < 555) {
-    firstName = originalTitle.length > 18 ? originalTitle.slice(0, 18) + "..." : originalTitle;
-} else {
-    firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
-}
+            // // Handle clicking on the first name
+            // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+            //     if (toggleStates.length > 1) {
+            //         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
+            //         $(this).html(toggleStates[currentStateIndex]);
+            //     }
+            // });
 
-let phoneNumber = activeUser().getExtra("phone").value;
+            // let profileImage = response.get("profile_image");
+            // let originalTitle = response.get("first_name");
+            // let screenWidth = $(window).width();
+            // let firstName;
 
-// Determine which icon to use based on screen width
-let iconClass = screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
+            // // Determine the character limit based on screen width
+            // if (screenWidth < 555) {
+            //     firstName = originalTitle.length > 20 ? originalTitle.slice(0, 20) + "..." : originalTitle;
+            // } else {
+            //     firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
+            // }
 
-// Construct the HTML with the profile image, first name, and icon
-let htmlContent = `
+            // let phoneNumber = activeUser().getExtra("phone").value;
+
+            // // Construct the HTML with the profile image and first name
+            // let htmlContent = `
+            //     <span style="padding-right:5px;" class="open-profile-name">
+            //         <img src="${profileImage}" class="top-image-profile">
+            //     </span>
+            //     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
+            // `;
+
+            // // Set the HTML content
+            // conversations_area.find(".sb-top > a").html(htmlContent);
+
+            // // Define the toggle state for phone number
+            // let toggleState = phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:60px" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : '';
+
+            // // Keep track of whether additional information is currently shown
+            // let isAdditionalInfoShown = false;
+
+            // // Handle clicking on the profile image
+            // conversations_area.find(".open-profile-name").on("click", function() {
+            //     SBProfile.showEdit(activeUser());
+            // });
+
+            // // Handle clicking on the first name
+            // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
+            //     let currentSpan = $(this).next(".additional-info");
+            //     if (!isAdditionalInfoShown) {
+            //         if (currentSpan.length === 0) {
+            //             currentSpan = $(`<span class="additional-info">${toggleState}</span>`);
+            //             $(this).after(currentSpan);
+            //         } else {
+            //             currentSpan.html(toggleState);
+            //         }
+            //         isAdditionalInfoShown = true;
+            //     } else {
+            //         currentSpan.remove();
+            //         isAdditionalInfoShown = false;
+            //     }
+            // });
+            let profileImage = response.get("profile_image");
+            let originalTitle = response.get("first_name");
+            let screenWidth = $(window).width();
+            let firstName;
+
+            // Determine the character limit based on screen width
+            if (screenWidth < 555) {
+              firstName =
+                originalTitle.length > 18
+                  ? originalTitle.slice(0, 18) + "..."
+                  : originalTitle;
+            } else {
+              firstName =
+                originalTitle.length > 27
+                  ? originalTitle.slice(0, 27) + "..."
+                  : originalTitle;
+            }
+
+            let phoneNumber = activeUser().getExtra("phone").value;
+
+            // Determine which icon to use based on screen width
+            let iconClass =
+              screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
+
+            // Construct the HTML with the profile image, first name, and icon
+            let htmlContent = `
     <span style="padding-right:5px;" class="open-profile-name">
         <img src="${profileImage}" class="top-image-profile">
         <span class="routin-top-content">Editar</span>
     </span> 
     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
-    <span class="additional-info">${phoneNumber ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>` : ''}</span>
+    <span class="additional-info">${
+      phoneNumber
+        ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>`
+        : ""
+    }</span>
 
 `;
 
-// Set the HTML content
-conversations_area.find(".sb-top > a").html(htmlContent);
+            // Set the HTML content
+            conversations_area.find(".sb-top > a").html(htmlContent);
 
-// Keep track of whether additional information is currently shown
-let isAdditionalInfoShown = false;
+            // Keep track of whether additional information is currently shown
+            let isAdditionalInfoShown = false;
 
-// Handle clicking on the profile image or the first name
-conversations_area.find(".sb-top > a > span").on("click", function() {
-    // Toggle additional info
-    let currentSpan = $(this).next(".additional-info");
-    if (!isAdditionalInfoShown) {
-        currentSpan.show();
-    } else {
-        currentSpan.hide();
-    }
-    isAdditionalInfoShown = !isAdditionalInfoShown;
-});
+            // Handle clicking on the profile image or the first name
+            conversations_area
+              .find(".sb-top > a > span")
+              .on("click", function () {
+                // Toggle additional info
+                let currentSpan = $(this).next(".additional-info");
+                if (!isAdditionalInfoShown) {
+                  currentSpan.show();
+                } else {
+                  currentSpan.hide();
+                }
+                isAdditionalInfoShown = !isAdditionalInfoShown;
+              });
 
-// Handle clicking on the profile image
-conversations_area.find(".open-profile-name").on("click", function() {
-    SBProfile.showEdit(activeUser());
-});
+            // Handle clicking on the profile image
+            conversations_area
+              .find(".open-profile-name")
+              .on("click", function () {
+                SBProfile.showEdit(activeUser());
+              });
 
-
-    $(".sb-list").prepend(
-        '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
-    
+            $(".sb-list").prepend(
+              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
             );
 
             // Automatic translation
@@ -3754,44 +3760,47 @@ conversations_area.find(".open-profile-name").on("click", function() {
                 .html(item.html());
             }
 
-        // Activate conversation
-if ([1, 2].includes(conversation_status_code)) {
-  conversation_status_code = 0;
-} else if (conversation_status_code === 6) {
-  // Keep status 6 as is for assigned conversations
-}
+            // Activate conversation
+            if ([1, 2].includes(conversation_status_code)) {
+              conversation_status_code = 0;
+            } else if (conversation_status_code === 6) {
+              // Keep status 6 as is for assigned conversations
+            }
 
-if (
-  (select_status_code != conversation_status_code && select_status_code != 6) &&
-  !$(conversations_admin_list).find(".sb-search-btn").sbActive()
-) {
-  select.find(`[data-value="${conversation_status_code}"]`).click();
-  select.find("ul").sbActive(false);
-}
+            if (
+              select_status_code != conversation_status_code &&
+              select_status_code != 6 &&
+              !$(conversations_admin_list).find(".sb-search-btn").sbActive()
+            ) {
+              select.find(`[data-value="${conversation_status_code}"]`).click();
+              select.find("ul").sbActive(false);
+            }
 
-if (responsive) {
-  this.mobileOpenConversation();
-}
+            if (responsive) {
+              this.mobileOpenConversation();
+            }
 
-if (
-  !conversation.length &&
-  (select_status_code == conversation_status_code ||
-  (select_status_code == 0 && (conversation_status_code == 1 || conversation_status_code == 6)) ||
-  (select_status_code == 6 && conversation_status_code == 0))
-) {
-  conversations_admin_list_ul.prepend(
-      SBConversations.getListCode(response).replace(
-          "<li",
-          '<li class="sb-active"'
-      )
-  );
-}
+            if (
+              !conversation.length &&
+              (select_status_code == conversation_status_code ||
+                (select_status_code == 0 &&
+                  (conversation_status_code == 1 ||
+                    conversation_status_code == 6)) ||
+                (select_status_code == 6 && conversation_status_code == 0))
+            ) {
+              conversations_admin_list_ul.prepend(
+                SBConversations.getListCode(response).replace(
+                  "<li",
+                  '<li class="sb-active"'
+                )
+              );
+            }
 
-conversation.sbActive(true);
+            conversation.sbActive(true);
 
-if (scroll) {
-  this.scrollTo();
-}
+            if (scroll) {
+              this.scrollTo();
+            }
 
             // Check if another agent has the conversation open
             let busy = response.get("busy");
@@ -3840,7 +3849,9 @@ if (scroll) {
                       .find(".sb-profile-list > ul")
                       .append(
                         `<li data-id="rating"><i class="sb-icon bi-${
-                          rich_message.result.rating == 1 ? "hand-thumbs-up-fill" : "hand-thumbs-down-fill"
+                          rich_message.result.rating == 1
+                            ? "hand-thumbs-up-fill"
+                            : "hand-thumbs-down-fill"
                         }"></i><span>${sb_("User rating")}</span></li>`
                       );
                     // <label>${sb_(rich_message.result.rating == 1 ? 'Helpful' : 'Not helpful')}</label>
@@ -3881,15 +3892,8 @@ if (scroll) {
       }
     },
 
-
-
-
-
-
-
-
-     // [Deprecated] this method is obsolete and it will be removed soon
-     populate: function (conversation_id, user_id, scroll) {
+    // [Deprecated] this method is obsolete and it will be removed soon
+    populate: function (conversation_id, user_id, scroll) {
       this.openConversation(conversation_id, user_id, scroll);
     },
 
@@ -3953,36 +3957,41 @@ if (scroll) {
     //     this.chat_tops[0][conversation_id] = list.getAttribute("data-time");
 
     //     let order_css = `
-		// 		position:relative;
-		// 		width: -webkit-fill-available;
-		// 		width: -moz-available;
-		// 	  `;
+    // 		position:relative;
+    // 		width: -webkit-fill-available;
+    // 		width: -moz-available;
+    // 	  `;
 
     //     list.style = order_css;
     //     totalHeight += conversationHeight;
     //   });
     // },
 
-positionList() {
-    let chat_list = document.querySelectorAll("ul.sorting-by-last-message li");
-    
-    // Sort the chat list based on the data-time attribute
-    let sortedList = Array.from(chat_list).sort((a, b) => {
-        return new Date(b.getAttribute("data-time")).getTime() - new Date(a.getAttribute("data-time")).getTime();
-    });
-    
-    // Reorder the DOM elements
-    sortedList.forEach((item, index) => {
+    positionList() {
+      let chat_list = document.querySelectorAll(
+        "ul.sorting-by-last-message li"
+      );
+
+      // Sort the chat list based on the data-time attribute
+      let sortedList = Array.from(chat_list).sort((a, b) => {
+        return (
+          new Date(b.getAttribute("data-time")).getTime() -
+          new Date(a.getAttribute("data-time")).getTime()
+        );
+      });
+
+      // Reorder the DOM elements
+      sortedList.forEach((item, index) => {
         item.style.order = index;
-    });
-    
-    // Update the parent container to use flexbox
-    let parentContainer = document.querySelector("ul.sorting-by-last-message");
-    parentContainer.style.display = "flex";
-    parentContainer.style.flexDirection = "column";
+      });
 
-},
-
+      // Update the parent container to use flexbox
+      let parentContainer = document.querySelector(
+        "ul.sorting-by-last-message"
+      );
+      parentContainer.style.display = "flex";
+      parentContainer.style.flexDirection = "column";
+    },
 
     // Update the left conversations list with new conversations or messages
     update: function () {
@@ -4036,7 +4045,7 @@ positionList() {
 
                   // Truncate the message to prevent displaying long messages
                   let message = item["message"];
-                  
+
                   const MAX_CHARACTERS = 40; // Set the maximum number of characters for the message
                   if (message.length > MAX_CHARACTERS) {
                     const truncatedMessage =
@@ -4127,14 +4136,16 @@ positionList() {
                   }
                   if (item.message != "" || item.attachments != "") {
                     SBConversations.newMsgTop(response[i], "add");
-                    
+
                     // Update the data-time attribute of the conversation item
-                    let conversationItem = conversations_admin_list_ul.find(`[data-conversation-id="${conversation_id}"]`);
+                    let conversationItem = conversations_admin_list_ul.find(
+                      `[data-conversation-id="${conversation_id}"]`
+                    );
                     conversationItem.attr("data-time", item["creation_time"]);
-                    
+
                     // Call positionList to reorder the conversations
                     this.positionList();
-                }
+                  }
 
                   // Desktop, flash, sounds notifications
                   if (
@@ -4151,16 +4162,10 @@ positionList() {
                         item["first_name"] + " " + item["last_name"],
                         SBUsers.userProfileImage(item["profile_image"]),
                       ];
-                      let formattedMessage = (
-                        "preview" in payload ? payload.preview : "notfimy"
-                      )
-                        .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
-                        .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
-                        .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
-                        .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
-                        .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
-                        .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E"); // custom replacement for ⟦ ⟧
-
+                      
+                      let messageToProcess = "preview" in payload ? payload.preview : "notfimy";
+                      let formattedMessage = processMessage(messageToProcess);
+                                    
                       SBChat.desktopNotification(
                         user_details[0],
                         formattedMessage,
@@ -4234,44 +4239,52 @@ positionList() {
     },
 
     updateMenu: function () {
-      const count = conversations_admin_list_ul.find('[data-conversation-status="2"]').length;
+      const count = conversations_admin_list_ul.find(
+        '[data-conversation-status="2"]'
+      ).length;
       const item = conversations_filters.eq(0);
       const anchorTag = item.find(" > a");
       const span = anchorTag.find(" > p span");
-      
+
       if (count == 100 || this.menu_count_ajax) {
-          const status_code = item.find("li.sb-active").data("value");
-          this.menu_count_ajax = true;
-          SBF.ajax(
-              {
-                  function: "count-conversations",
-                  status_code: status_code == 0 ? 2 : status_code,
-              },
-              (response) => span.html(`(${response})`)
-          );
+        const status_code = item.find("li.sb-active").data("value");
+        this.menu_count_ajax = true;
+        SBF.ajax(
+          {
+            function: "count-conversations",
+            status_code: status_code == 0 ? 2 : status_code,
+          },
+          (response) => span.html(`(${response})`)
+        );
       } else {
-          let floatingElement = document.getElementById('floatingElement');
-          
-          if (!floatingElement) {
-              floatingElement = document.createElement('div');
-              floatingElement.id = 'floatingElement';
-              floatingElement.style.cssText = 'position: relative; top: 10px; margin: auto; display: flex; justify-content: center; z-index: 33;';
-              
-              const notifElement = document.createElement('small');
-              notifElement.className = 'notif';
-              notifElement.style.cssText = 'font-size: medium; padding: 6px 10px; border-radius: 30px;';
-              
-              floatingElement.appendChild(notifElement);
-              document.getElementById('sb-conversations').appendChild(floatingElement);
-          }
-          
-          floatingElement.querySelector('.notif').textContent = count;
-          floatingElement.style.visibility = count === 0 ? 'hidden' : 'visible';
+        let floatingElement = document.getElementById("floatingElement");
+
+        if (!floatingElement) {
+          floatingElement = document.createElement("div");
+          floatingElement.id = "floatingElement";
+          floatingElement.style.cssText =
+            "position: relative; top: 10px; margin: auto; display: flex; justify-content: center; z-index: 33;";
+
+          const notifElement = document.createElement("small");
+          notifElement.className = "notif";
+          notifElement.style.cssText =
+            "font-size: medium; padding: 6px 10px; border-radius: 30px;";
+
+          floatingElement.appendChild(notifElement);
+          document
+            .getElementById("sb-conversations")
+            .appendChild(floatingElement);
+        }
+
+        floatingElement.querySelector(".notif").textContent = count;
+        floatingElement.style.visibility = count === 0 ? "hidden" : "visible";
       }
-  },
+    },
 
     messageMenu: function (agent) {
-      let readTextOption = `<li style="padding: 6px 15px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_("Leer")}</li>`;
+      let readTextOption = `<li style="padding: 6px 15px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_(
+        "Leer"
+      )}</li>`;
       return `
 				<i class="sb-menu-btn bi-three-dots"></i>
 				<ul style="right: 0rem;padding: .4rem;" class="message-menu sb-menu">
@@ -4293,15 +4306,21 @@ positionList() {
     // Update the users details of the conversations area
     updateUserDetails() {
       if (!activeUser()) return;
-      var $anchorTag = $('.sb-top > a');
+      var $anchorTag = $(".sb-top > a");
       var originalTitle = activeUser().name;
-      var firstName = originalTitle.length > 15 ? originalTitle.slice(0, 15) + "..." : originalTitle;
-      var $secondSpan = $anchorTag.find('span').eq(1); // Select the second <span> element
+      var firstName =
+        originalTitle.length > 15
+          ? originalTitle.slice(0, 15) + "..."
+          : originalTitle;
+      var $secondSpan = $anchorTag.find("span").eq(1); // Select the second <span> element
       $secondSpan.html(firstName); // Update its content
       conversations_area.find(".sb-user-details .sb-profile").setProfile();
-      SBProfile.populate(activeUser(), conversations_area.find(".sb-profile-list"));
-  },
-  
+      SBProfile.populate(
+        activeUser(),
+        conversations_area.find(".sb-profile-list")
+      );
+    },
+
     // Set the read status icon
     setReadIcon(conversation_status_code) {
       let unread = conversation_status_code == 2;
@@ -4322,82 +4341,105 @@ positionList() {
     // Return the conversation code of the left conversations list
     getListCode: function (conversation, status) {
       if (conversation instanceof SBConversation) {
-          const lastMessage = conversation.getLastMessage();
-          conversation = {
-              ...conversation,
-              ...lastMessage
-          };
+        const lastMessage = conversation.getLastMessage();
+        conversation = {
+          ...conversation,
+          ...lastMessage,
+        };
       }
-  
+      
       let message = conversation.message;
-  
-      // Consolidated message cleaning
-      message = message
-          .replace(/- /g, "• ")
-          .replace(/[\[\]"\,}]/g, "")
-          .replace(/[{,+0-9]+@s\.whatsapp\.net/g, "")
-          .replace(/\{agent_name\}/g, '<i class="bi-people-fill"></i>')
-          .replace(/\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g, '<i class="bi-file-text" data-options="$1" data-message="$2"></i>')
-          .replace(/\[card[^\]]*\]/g, '<i class="bi-file-text"></i>')
-          .replace(/〚/g, "")
-.replace(/〛/g, " ↪️ ")
-// Replace single asterisks for bold
-.replace(/(\*[^*]+\*)/g, function(match) {
-    return `<strong>${match.slice(1, -1)}</strong>`
-})
-// Replace single underscores for italic
-.replace(/(_[^_]+_)/g, function(match) {
-    return `<em>${match.slice(1, -1)}</em>`
-})
-// Replace single backticks for code
-.replace(/(`[^`]+`)/g, function(match) {
-    return `<code>${match.slice(1, -1)}</code>`
-})
-// Replace single tildes for strikethrough
-.replace(/~([^~]+)~/g, function(match) {
-    return `<del>${match.slice(1, -1)}</del>`
-})
-
-          .replace(/(\*[^*]+\*)/g, function(match) {
-            return `<strong>${match.slice(1, -1)}</strong>`;
-        })
+      
+      // Apply the processMessage function
+      message = processMessage(message);
+      
       // Truncate message if necessary
       if (message.length > 40) {
-          const words = message.split(" ");
-          message = words.slice(0, 5).join(" ") + (words.length > 5 ? "..." : "");
+        const words = message.split(" ");
+        message = words.slice(0, 5).join(" ") + (words.length > 5 ? "..." : "");
       }
-  
+
       // Attachments handling
       if (!message && conversation.attachments) {
-          const files = JSON.parse(conversation.attachments);
-          const mediaFiles = files.filter(file => /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file));
-          const docFiles = files.filter(file => /\.(docx?|xlsx?|pdf)\b/g.test(file));
-          const voiceFiles = files.filter(file => /\.(mp3|ogg)\b/g.test(file));
-  
-          const mediaMessage = mediaFiles.length > 0 ? `<i class="bi-box"></i> ${sb_("Media")}: ${mediaFiles.length > 1 ? `+${mediaFiles.length - 1}` : mediaFiles.length}` : "";
-          const docMessage = docFiles.length > 0 ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${docFiles.length > 1 ? `+${docFiles.length - 1}` : docFiles.length}` : "";
-          const voiceMessage = voiceFiles.length > 0 ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${voiceFiles.length > 1 ? `+${voiceFiles.length - 1}` : voiceFiles.length}` : "";
-  
-          message = [mediaMessage, docMessage, voiceMessage].filter(Boolean).join(" ");
+        const files = JSON.parse(conversation.attachments);
+        const mediaFiles = files.filter((file) =>
+          /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file)
+        );
+        const docFiles = files.filter((file) =>
+          /\.(docx?|xlsx?|pdf)\b/g.test(file)
+        );
+        const voiceFiles = files.filter((file) => /\.(mp3|ogg)\b/g.test(file));
+
+        const mediaMessage =
+          mediaFiles.length > 0
+            ? `<i class="bi-box"></i> ${sb_("Media")}: ${
+                mediaFiles.length > 1
+                  ? `+${mediaFiles.length - 1}`
+                  : mediaFiles.length
+              }`
+            : "";
+        const docMessage =
+          docFiles.length > 0
+            ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${
+                docFiles.length > 1
+                  ? `+${docFiles.length - 1}`
+                  : docFiles.length
+              }`
+            : "";
+        const voiceMessage =
+          voiceFiles.length > 0
+            ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${
+                voiceFiles.length > 1
+                  ? `+${voiceFiles.length - 1}`
+                  : voiceFiles.length
+              }`
+            : "";
+
+        message = [mediaMessage, docMessage, voiceMessage]
+          .filter(Boolean)
+          .join(" ");
       }
-  
-      const formattedMessage = new SBMessage().strip(message).replace(/_/g, " ");
+
+      const formattedMessage = new SBMessage()
+        .strip(message)
+        .replace(/_/g, " ");
+        
       const isTitle = !SBF.null(conversation.title);
-      
+
       return `
-          <li data-user-id="${conversation.user_id}" data-conversation-id="${conversation.conversation_id}" data-time="${new Date(conversation.creation_time).getTime()}" data-conversation-status="${status}" ${conversation.conversation_source ? `data-conversation-source="${conversation.conversation_source}"` : ""}>
+          <li data-user-id="${conversation.user_id}" data-conversation-id="${
+        conversation.conversation_id
+      }" data-time="${new Date(
+        conversation.creation_time
+      ).getTime()}" data-conversation-status="${status}" ${
+        conversation.conversation_source
+          ? `data-conversation-source="${conversation.conversation_source}"`
+          : ""
+      }>
               <small class="source-conversation-icon">
-                  <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${conversation.conversation_source}.svg">
+                  <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
+                    conversation.conversation_source
+                  }.svg">
               </small>
               <div class="sb-profile client-status">
-                  <img class="client-icon-status sb-icon tags-${conversation.label} bi-kanban-fill loading="lazy" src="${conversation.profile_image}">
-                  <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${isTitle ? conversation.title : `${conversation.first_name} ${conversation.last_name}`}</h3>
+                  <img class="client-icon-status sb-icon tags-${
+                    conversation.label
+                  } bi-kanban-fill loading="lazy" src="${
+        conversation.profile_image
+      }">
+                  <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${
+        isTitle
+          ? conversation.title
+          : `${conversation.first_name} ${conversation.last_name}`
+      }</h3>
                   <div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">
                       ${SBF.beautifyTime(conversation.creation_time)}
                   </div>
               </div>
               <div>
-                  <a class="phone-number" style="color:inherit">${conversation.phone}</a>
+                  <a class="phone-number" style="color:inherit">${
+                    conversation.phone
+                  }</a>
               </div>
               <p class="message-received" style="max-width:calc(100% - 145px);">${formattedMessage}</p>
               <div class="conversation-bar">
@@ -4410,9 +4452,7 @@ positionList() {
               </div>
           </li>
       `;
-  },
-  
-
+    },
 
     newMsgTop(user = false, status) {
       const chat_list = document.querySelectorAll(
@@ -5137,272 +5177,278 @@ positionList() {
       }
     },
 
-
     // Populate profile
-populate: function (user, profile_area) {
-  let exclude = ["first_name", "last_name", "password", "profile_image"];
-  let code = "";
-  if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
-    var source = SBChat.conversation.get("source");
-    var label = SBChat.conversation.get("label");
-    code = this.profileRow(
-      "conversation-id",
-      SBChat.conversation.id,
-      sb_("Conversation ID")
-    );
-    if (!SBF.null(label)) {
-      code += this.profileRow(
-        "conversation-label",
-        label,
-        sb_("Client status")
-      );
-    } else {
-      code += this.profileRow(
-        "conversation-label",
-        "Unknown",
-        sb_("Label")
-      );
-    }
-    if (!SBF.null(source)) {
-      // Mapping object for source labels
-      const sourceLabels = {
-        fb: "Facebook",
-        ww: "Whatsmeow",
-        wx: "waweb",        
-        wa: "WhatsApp",
-        tm: "Text message",
-        ig: "Instagram",
-        tg: "Telegram",
-        tk: "Tickets",
-        wc: "WeChat",
-        em: "Email",
-        tw: "Twitter",
-        bm: "Google"
-      };
-
-      // Get the label directly from the mapping object
-      const sourceLabel = sourceLabels[source] || source;
-      code += this.profileRow(
-        "conversation-source",
-        sourceLabel,
-        sb_("Source")
-      );
-    } else {
-      code += this.profileRow("conversation-source", "Unknown");
-    }
-  }
-  if (SB_ACTIVE_AGENT["user_type"] != "admin") {
-    exclude.push("token");
-  }
-  for (var key in user.details) {
-    if (!exclude.includes(key)) {
-      code += this.profileRow(key, user.get(key));
-    }
-  }
-  if (user.isExtraEmpty()) {
-    SBF.ajax(
-      {
-        function: "get-user-extra",
-        user_id: user.id,
-      },
-      (response) => {
-        //added ↓
-        for (var i = 1; i < response.length; i++) {
-          let slug = response[i]["slug"];
-          user.setExtra(slug, response[i]);
+    populate: function (user, profile_area) {
+      let exclude = ["first_name", "last_name", "password", "profile_image"];
+      let code = "";
+      if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
+        var source = SBChat.conversation.get("source");
+        var label = SBChat.conversation.get("label");
+        code = this.profileRow(
+          "conversation-id",
+          SBChat.conversation.id,
+          sb_("Conversation ID")
+        );
+        if (!SBF.null(label)) {
           code += this.profileRow(
-            slug,
-            response[i].value,
-            response[i]["name"]
+            "conversation-label",
+            label,
+            sb_("Client status")
+          );
+        } else {
+          code += this.profileRow(
+            "conversation-label",
+            "Unknown",
+            sb_("Label")
           );
         }
-        profile_area.html(`<ul>${code}</ul>`);
+        if (!SBF.null(source)) {
+          // Mapping object for source labels
+          const sourceLabels = {
+            fb: "Facebook",
+            ww: "Whatsmeow",
+            wx: "waweb",
+            wa: "WhatsApp",
+            tm: "Text message",
+            ig: "Instagram",
+            tg: "Telegram",
+            tk: "Tickets",
+            wc: "WeChat",
+            em: "Email",
+            tw: "Twitter",
+            bm: "Google",
+          };
+
+          // Get the label directly from the mapping object
+          const sourceLabel = sourceLabels[source] || source;
+          code += this.profileRow(
+            "conversation-source",
+            sourceLabel,
+            sb_("Source")
+          );
+        } else {
+          code += this.profileRow("conversation-source", "Unknown");
+        }
+      }
+      if (SB_ACTIVE_AGENT["user_type"] != "admin") {
+        exclude.push("token");
+      }
+      for (var key in user.details) {
+        if (!exclude.includes(key)) {
+          code += this.profileRow(key, user.get(key));
+        }
+      }
+      if (user.isExtraEmpty()) {
+        SBF.ajax(
+          {
+            function: "get-user-extra",
+            user_id: user.id,
+          },
+          (response) => {
+            //added ↓
+            for (var i = 1; i < response.length; i++) {
+              let slug = response[i]["slug"];
+              user.setExtra(slug, response[i]);
+              code += this.profileRow(
+                slug,
+                response[i].value,
+                response[i]["name"]
+              );
+            }
+            profile_area.html(`<ul>${code}</ul>`);
+            collapse(profile_area, 56);
+          }
+        );
+      } else {
+        for (var key in user.extra) {
+          let info = user.getExtra(key);
+          code += this.profileRow(key, info.value, info["name"]);
+        }
+        profile_area.html(
+          `<h3 class="sb-user-details-info">${sb_(
+            "User information"
+          )}</h3><ul>${code}</ul>`
+        );
         collapse(profile_area, 56);
       }
-    );
-  } else {
-    for (var key in user.extra) {
-      let info = user.getExtra(key);
-      code += this.profileRow(key, info.value, info["name"]);
-    }
-    profile_area.html(
-      `<h3 class="sb-user-details-info">${sb_(
-        "User information"
-      )}</h3><ul>${code}</ul>`
-    );
-    collapse(profile_area, 56);
-  }
 
-  // Listen for change_conversation_source
-$("#change-conversation-source").change(function (e) {
-  // Save the selected value before updating options
-  const selectedValue = e.target.value;
+      // Listen for change_conversation_source
+      $("#change-conversation-source").change(function (e) {
+        // Save the selected value before updating options
+        const selectedValue = e.target.value;
 
-  // Construct the URL using the selected source code
-  const url = `${STMBX_URL}/media/apps/${selectedValue}.svg`;
+        // Construct the URL using the selected source code
+        const url = `${STMBX_URL}/media/apps/${selectedValue}.svg`;
 
-  // Update the image source with the selected source
-  $("#conversation-source-icon").attr("src", url);
+        // Update the image source with the selected source
+        $("#conversation-source-icon").attr("src", url);
 
-  // Send an AJAX request to update the conversation source on the server
-  SBF.ajax(
-    {
-      function: "update-conversation-source",
-      conversation_id: SBChat.conversation.id,
-      source: selectedValue, // Use the saved selected value
+        // Send an AJAX request to update the conversation source on the server
+        SBF.ajax(
+          {
+            function: "update-conversation-source",
+            conversation_id: SBChat.conversation.id,
+            source: selectedValue, // Use the saved selected value
+          },
+          (response) => {
+            showResponse("Required reload");
+            SBChat.update();
+            // Set the selected value back after updating options
+            $("#change-conversation-source").val(selectedValue);
+          }
+        );
+
+        // Update the source icon directly without reloading
+        const iconClass = `sb-icon bi-${selectedValue}`;
+        $('.sb-profile-list [data-id="conversation-source"] i').attr(
+          "class",
+          iconClass
+        );
+      });
+
+      // $("#change-conversation-source").change(function (e) {
+      //     // change icon of source type
+      //     if (e.target.value !== "Unknown") {
+      //         const name = e.target.options[e.target.selectedIndex].text
+      //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
+      //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
+      //     }
+
+      //     SBF.ajax({
+      //         function: 'update-conversation-source',
+      //         conversation_id: SBChat.conversation.id,
+      //         source: e.target.value
+      //     }, (response) => {
+      //         showResponse('Reload to change the conversation source');
+      //     });
+      // });
+
+      $("#change-conversation-labels").change(function (e) {
+        // change icon of source type
+        if (e.target.value !== "Unknown") {
+          const name = e.target.options[e.target.selectedIndex].text;
+          let labcolor = `sb-icon bi-kanban-fill tags-${e.target.value}`;
+          $('.sb-profile-list [data-id="conversation-label"] i').attr(
+            "class",
+            labcolor
+          );
+          $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
+            "class",
+            labcolor
+          );
+          $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+        }
+        SBProfile.updateLabel(e.target.value);
+      });
+
+      //change label
+      //   $("#CstBtn a").click(function (e) {
+      //     const label = $(this).attr("id");
+      //     const name = sb_(SBF.admin_set("label-names")[label] + " ");
+      //     let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
+      //     $('.sb-profile-list [data-id="conversation-label"] i').attr(
+      //       "class",
+      //       labcolor
+      //     );
+      //     $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
+      //       "class",
+      //       labcolor
+      //     );
+      //     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+      //     SBProfile.updateLabel(label);
+      //   });
+      // },
+
+      //     getLabel: function (label) {
+      //       SBF.ajax(
+      //         {
+      //           function: "get-clientStatus-conversations",
+      //           conversation_id: SBChat.conversation.id,
+      //           label: label,
+      //         },
+      //         (response) => {
+      //           if (SBReports.active_report == "status-client") {
+      //             SBReports.initReport("status-client");
+      //           }
+      //         }
+      //       );
+      //     },
+
+      //     updateLabel: function (label) {
+      //       SBF.ajax(
+      //         {
+      //           function: "update-clientStatus-conversations",
+      //           conversation_id: SBChat.conversation.id,
+      //           label: label,
+      //         },
+      //         (response) => {
+      //           if (SBReports.active_report == "status-client") {
+      //             SBReports.initReport("status-client");
+      //           }
+
+      //         }
+      //       );
+      //     },
+
+      // Change label
+      $("#CstBtn a").click(function (e) {
+        const label = $(this).attr("id");
+        const name = sb_(SBF.admin_set("label-names")[label] + " ");
+        let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
+        $('.sb-profile-list [data-id="conversation-label"] i').attr(
+          "class",
+          labcolor
+        );
+        $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
+          "class",
+          labcolor
+        );
+        $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+        SBProfile.updateLabelUI(label, name, labcolor); // Update UI
+        SBProfile.updateLabel(label);
+      });
     },
-    (response) => {
-      showResponse("Required reload");
-      SBChat.update();
-      // Set the selected value back after updating options
-      $("#change-conversation-source").val(selectedValue);
-    }
-  );
-
-  // Update the source icon directly without reloading
-  const iconClass = `sb-icon bi-${selectedValue}`;
-  $('.sb-profile-list [data-id="conversation-source"] i').attr("class", iconClass);
-});
-
-
-  // $("#change-conversation-source").change(function (e) {
-  //     // change icon of source type
-  //     if (e.target.value !== "Unknown") {
-  //         const name = e.target.options[e.target.selectedIndex].text
-  //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
-  //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
-  //     }
-
-  //     SBF.ajax({
-  //         function: 'update-conversation-source',
-  //         conversation_id: SBChat.conversation.id,
-  //         source: e.target.value
-  //     }, (response) => {
-  //         showResponse('Reload to change the conversation source');
-  //     });
-  // });
-
-  $("#change-conversation-labels").change(function (e) {
-    // change icon of source type
-    if (e.target.value !== "Unknown") {
-      const name = e.target.options[e.target.selectedIndex].text;
-      let labcolor = `sb-icon bi-kanban-fill tags-${e.target.value}`;
-      $('.sb-profile-list [data-id="conversation-label"] i').attr(
-        "class",
-        labcolor
-      );
+    // Update label UI
+    updateLabelUI: function (label, name, labcolor) {
+      // Update label name and color in UI
       $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
         "class",
         labcolor
       );
       $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-    }
-    SBProfile.updateLabel(e.target.value);
-  });
-
-  //change label
-//   $("#CstBtn a").click(function (e) {
-//     const label = $(this).attr("id");
-//     const name = sb_(SBF.admin_set("label-names")[label] + " ");
-//     let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
-//     $('.sb-profile-list [data-id="conversation-label"] i').attr(
-//       "class",
-//       labcolor
-//     );
-//     $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
-//       "class",
-//       labcolor
-//     );
-//     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-//     SBProfile.updateLabel(label);
-//   });
-// },
-
-
-//     getLabel: function (label) {
-//       SBF.ajax(
-//         {
-//           function: "get-clientStatus-conversations",
-//           conversation_id: SBChat.conversation.id,
-//           label: label,
-//         },
-//         (response) => {
-//           if (SBReports.active_report == "status-client") {
-//             SBReports.initReport("status-client");
-//           }
-//         }
-//       );
-//     },
-
-//     updateLabel: function (label) {
-//       SBF.ajax(
-//         {
-//           function: "update-clientStatus-conversations",
-//           conversation_id: SBChat.conversation.id,
-//           label: label,
-//         },
-//         (response) => {
-//           if (SBReports.active_report == "status-client") {
-//             SBReports.initReport("status-client");
-//           }
-         
-//         }
-//       );
-//     },
-
-
-// Change label
-$("#CstBtn a").click(function (e) {
-  const label = $(this).attr("id");
-  const name = sb_(SBF.admin_set("label-names")[label] + " ");
-  let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
-  $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
-  $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
-  $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-  SBProfile.updateLabelUI(label, name, labcolor); // Update UI
-  SBProfile.updateLabel(label);
-});
-},
-// Update label UI
-updateLabelUI: function(label, name, labcolor) {
-  // Update label name and color in UI
-  $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
-  $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-},
-
-// Get label
-getLabel: function (label) {
-  SBF.ajax(
-    {
-      function: "get-clientStatus-conversations",
-      conversation_id: SBChat.conversation.id,
-      label: label,
     },
-    (response) => {
-      if (SBReports.active_report == "status-client") {
-        SBReports.initReport("status-client");
-      }
-    }
-  );
-},
 
-// Update label
-updateLabel: function (label) {
-  SBF.ajax(
-    {
-      function: "update-clientStatus-conversations",
-      conversation_id: SBChat.conversation.id,
-      label: label,
+    // Get label
+    getLabel: function (label) {
+      SBF.ajax(
+        {
+          function: "get-clientStatus-conversations",
+          conversation_id: SBChat.conversation.id,
+          label: label,
+        },
+        (response) => {
+          if (SBReports.active_report == "status-client") {
+            SBReports.initReport("status-client");
+          }
+        }
+      );
     },
-    (response) => {
-      if (SBReports.active_report == "status-client") {
-        SBReports.initReport("status-client");
-      }
 
-    }
-  );
-},
-
+    // Update label
+    updateLabel: function (label) {
+      SBF.ajax(
+        {
+          function: "update-clientStatus-conversations",
+          conversation_id: SBChat.conversation.id,
+          label: label,
+        },
+        (response) => {
+          if (SBReports.active_report == "status-client") {
+            SBReports.initReport("status-client");
+          }
+        }
+      );
+    },
 
     profileRow: function (key, value, name = key) {
       if (value == "") return "";
@@ -5427,8 +5473,6 @@ updateLabel: function (label) {
         os: "person-workspace",
         current_url: "radar",
         timezone: "clock",
-
-        
       };
 
       //added ↑
@@ -6135,41 +6179,40 @@ updateLabel: function (label) {
           scrolls["last"] = scroll;
         });
 
-        $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
-          if ($(this).parent().sbActive()) {
-              // If the search or filter button is active
-              $(".sb-top").css("top", "+=0px"); // Add 75px to top position
-              if ($(this).parent().hasClass("sb-filter-btn")) {
-                  $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
-              }
-              // Change the icon to bi-arrow-right-circle
-              if ($(this).hasClass("bi-search")) {
-                  $(this).removeClass("bi-search").addClass("bi-x-lg");
-              } else if ($(this).hasClass("bi-x-lg")) {
-                  $(this).removeClass("bi-x-lg").addClass("bi-filter");
-              } else if ($(this).hasClass("bi-filter")) {
-                  $(this).removeClass("bi-filter").addClass("bi-filter-circle");
-              }
-          } else {
-              // If the search or filter button is not active
-              scrolls["always_hidden"] = false;
-              if (conversations_admin_list_ul.parent().scrollTop() < 10) {
-                  admin.removeClass("sb-header-hidden");
-                  if ($(this).parent().hasClass("sb-filter-btn")) {
-                      $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
-                  }
-                  // Change the icon back to bi-search
-                  if ($(this).hasClass("bi-filter-circle")) {
-                      $(this).removeClass("bi-filter-circle").addClass("bi-filter");
-                  } else if ($(this).hasClass("bi-filter")) {
-                      $(this).removeClass("bi-filter").addClass("bi-x-lg");
-                  } else if ($(this).hasClass("bi-x-lg")) {
-                      $(this).removeClass("bi-x-lg").addClass("bi-search");
-                  }
-              }
+      $(admin).on("click", ".sb-search-btn i, .sb-filter-btn i", function () {
+        if ($(this).parent().sbActive()) {
+          // If the search or filter button is active
+          $(".sb-top").css("top", "+=0px"); // Add 75px to top position
+          if ($(this).parent().hasClass("sb-filter-btn")) {
+            $(".sb-search-btn, .inbox, .non-hover").addClass("sb-hide");
           }
+          // Change the icon to bi-arrow-right-circle
+          if ($(this).hasClass("bi-search")) {
+            $(this).removeClass("bi-search").addClass("bi-x-lg");
+          } else if ($(this).hasClass("bi-x-lg")) {
+            $(this).removeClass("bi-x-lg").addClass("bi-filter");
+          } else if ($(this).hasClass("bi-filter")) {
+            $(this).removeClass("bi-filter").addClass("bi-filter-circle");
+          }
+        } else {
+          // If the search or filter button is not active
+          scrolls["always_hidden"] = false;
+          if (conversations_admin_list_ul.parent().scrollTop() < 10) {
+            admin.removeClass("sb-header-hidden");
+            if ($(this).parent().hasClass("sb-filter-btn")) {
+              $(".sb-search-btn, .inbox, .non-hover").removeClass("sb-hide");
+            }
+            // Change the icon back to bi-search
+            if ($(this).hasClass("bi-filter-circle")) {
+              $(this).removeClass("bi-filter-circle").addClass("bi-filter");
+            } else if ($(this).hasClass("bi-filter")) {
+              $(this).removeClass("bi-filter").addClass("bi-x-lg");
+            } else if ($(this).hasClass("bi-x-lg")) {
+              $(this).removeClass("bi-x-lg").addClass("bi-search");
+            }
+          }
+        }
       });
-      
 
       $(admin).on("click", "#open-modal-button", function () {
         console.log("open", admin.find(".sb-send-template-box"));
@@ -6736,9 +6779,7 @@ updateLabel: function (label) {
 
             // Check if the response indicates success
             if (response && !response.error) {
-              showResponse(
-                "<i class='bi-wind'></i> Message ent successfully"
-              );
+              showResponse("<i class='bi-wind'></i> Message ent successfully");
             } else {
               showResponse(
                 "<i class='bi-send-exclamation'></i> Message could not be sent to API Cloud",
@@ -6828,7 +6869,7 @@ updateLabel: function (label) {
             // console.error("Error sending message to WhatsApp:", error);
           }
         );
-      }      
+      }
 
       if (SBApps.telegram.check(conversation)) {
         if (response.message == "[rating]") {
@@ -7051,38 +7092,33 @@ updateLabel: function (label) {
       }
     );
 
+    // This code handles click events on search buttons within the admin list.
+    // It triggers search functionality, toggles visibility of certain elements,
+    // and adjusts styling properties when search buttons are clicked.
 
- // This code handles click events on search buttons within the admin list.
-// It triggers search functionality, toggles visibility of certain elements,
-// and adjusts styling properties when search buttons are clicked.
+    $(conversations_area).on(
+      "click",
+      ".sb-admin-list .sb-search-btn i",
+      function () {
+        SBF.searchClear(this, () => {
+          SBConversations.search($(this).next());
+        });
+        $(".non-hover, .sb-filter-btn").toggleClass("sb-hide");
+        $("#hideOnSearchClick").toggleClass("sb-hide");
+      }
+    );
 
-$(conversations_area).on(
-  "click",
-  ".sb-admin-list .sb-search-btn i",
-  function () {
-    SBF.searchClear(this, () => {
-      SBConversations.search($(this).next());
+    $(".bi-search").click(function () {
+      $("#hideOnSearchClick li:first-child")
+        .toggleClass("sb-invisible")
+        .find("div")
+        .toggle();
+      $("#hideOnSearchClick li:nth-child(2)")
+        .toggleClass("sb-invisible")
+        .css("margin-right", function (index, value) {
+          return value === "80px" ? "0px" : "80px";
+        });
     });
-    $(".non-hover, .sb-filter-btn").toggleClass("sb-hide");
-    $("#hideOnSearchClick").toggleClass("sb-hide");
-  }
-);
-
-$(".bi-search").click(function () {
-  $("#hideOnSearchClick li:first-child").toggleClass("sb-invisible").find("div").toggle();
-  $("#hideOnSearchClick li:nth-child(2)").toggleClass("sb-invisible").css("margin-right", function(index, value) {
-    return value === '80px' ? '0px' : '80px';
-  });
-});
-
-
-
-
-
-
-
-
-
 
     // Conversations filter
     $(conversations_area).on(
@@ -7242,7 +7278,9 @@ $(".bi-search").click(function () {
         let source = $(this).find("option:selected").html().toLowerCase();
 
         if (
-          (source == "whatsapp" || source == "whatsmeow" || source == "waweb") &&
+          (source == "whatsapp" ||
+            source == "whatsmeow" ||
+            source == "waweb") &&
           activeUser().getExtra("phone")
         ) {
           // window.open('https://wa.me/' + SBApps.whatsapp.activeUserPhone());
@@ -7367,71 +7405,76 @@ $(".bi-search").click(function () {
       }
     );
 
-// Agent assignment
-$(conversations_area).on("click", "#conversation-agent li", function (e) {
-  let select = $(this).parent().parent();
-  let agent_id = $(this).data("id");
-  if (
-    agent_id == select.find(" > p").attr("data-value") ||
-    agent_id == SB_ACTIVE_AGENT["id"]
-  )
-    return true;
-  if (!SBChat.conversation) {
-    $(select).addClass("sb-active sb-responsive-absolute-position");
-    e.preventDefault();
-    return false;
-  }
-  if (!select.sbLoading()) {
-    dialog(
-      `${sb_("The new agent will be")} ${$(this).html()}.`,
-      "alert",
-      () => {
-        select.sbLoading(true);
-        SBConversations.assignAgent(
-          SBChat.conversation.id,
-          agent_id,
+    // Agent assignment
+    $(conversations_area).on("click", "#conversation-agent li", function (e) {
+      let select = $(this).parent().parent();
+      let agent_id = $(this).data("id");
+      if (
+        agent_id == select.find(" > p").attr("data-value") ||
+        agent_id == SB_ACTIVE_AGENT["id"]
+      )
+        return true;
+      if (!SBChat.conversation) {
+        $(select).addClass("sb-active sb-responsive-absolute-position");
+        e.preventDefault();
+        return false;
+      }
+      if (!select.sbLoading()) {
+        dialog(
+          `${sb_("The new agent will be")} ${$(this).html()}.`,
+          "alert",
           () => {
-            SBConversations.setActiveAgent(agent_id);
-            
-            // Update conversation status to 6 (assigned)
-            SBChat.conversation.set('conversation_status_code', 6);
-            
-            // Update UI to reflect the new status
-            let conversationItem = conversations_admin_list_ul.find(`[data-conversation-id="${SBChat.conversation.id}"]`);
-            conversationItem.attr('data-conversation-status', '6');
-            
-            // If there's a status indicator element, update it
-            let statusIndicator = conversationItem.find('.sb-status');
-            if (statusIndicator.length) {
-              statusIndicator.attr('data-sb-status', '6');
-            }
-            
-            // Update the status in the conversations array
-            let index = conversations.findIndex(c => c.id === SBChat.conversation.id);
-            if (index !== -1) {
-              conversations[index].conversation_status_code = 6;
-            }
-            
-            // Refresh the conversation list to reflect the new order
-            SBConversations.update();
-            // SBConversations.positionList();
-            SBConversations.updateMenu();
+            select.sbLoading(true);
+            SBConversations.assignAgent(
+              SBChat.conversation.id,
+              agent_id,
+              () => {
+                SBConversations.setActiveAgent(agent_id);
 
-            // Update the conversation details panel if it's open
-            if (conversations_area.find('.sb-conversation-details').sbActive()) {
-              SBConversations.updateConversationDetails();
-            }
-            
-            select.sbLoading(false);
+                // Update conversation status to 6 (assigned)
+                SBChat.conversation.set("conversation_status_code", 6);
+
+                // Update UI to reflect the new status
+                let conversationItem = conversations_admin_list_ul.find(
+                  `[data-conversation-id="${SBChat.conversation.id}"]`
+                );
+                conversationItem.attr("data-conversation-status", "6");
+
+                // If there's a status indicator element, update it
+                let statusIndicator = conversationItem.find(".sb-status");
+                if (statusIndicator.length) {
+                  statusIndicator.attr("data-sb-status", "6");
+                }
+
+                // Update the status in the conversations array
+                let index = conversations.findIndex(
+                  (c) => c.id === SBChat.conversation.id
+                );
+                if (index !== -1) {
+                  conversations[index].conversation_status_code = 6;
+                }
+
+                // Refresh the conversation list to reflect the new order
+                SBConversations.update();
+                // SBConversations.positionList();
+                SBConversations.updateMenu();
+
+                // Update the conversation details panel if it's open
+                if (
+                  conversations_area.find(".sb-conversation-details").sbActive()
+                ) {
+                  SBConversations.updateConversationDetails();
+                }
+
+                select.sbLoading(false);
+              }
+            );
           }
         );
       }
-    );
-  }
-  e.preventDefault();
-  return false;
-});
-
+      e.preventDefault();
+      return false;
+    });
 
     function loadDefaultDateTime(showAlert) {
       let now = moment();
@@ -8705,289 +8748,290 @@ $(conversations_area).on("click", "#conversation-agent li", function (e) {
     // 	return false;
     // });
 
+    // WHATSMEOW
+    function handleWhatsmeowButtonClick(event, action) {
+      event.preventDefault();
 
+      let inputSelector = "#whatsmeow-go-qr input";
+      let qrInput = settings_area.find(inputSelector).val();
+      let url =
+        action === "start"
+          ? "/include/get_ww.php?qrurl="
+          : "/include/reset_ww.php";
 
-// WHATSMEOW
-function handleWhatsmeowButtonClick(event, action) {
-  event.preventDefault();
+      if (action === "start") {
+        $("#qr_loading1").show();
 
-  let inputSelector = "#whatsmeow-go-qr input";
-  let qrInput = settings_area.find(inputSelector).val();
-  let url = action === "start" ? "/include/get_ww.php?qrurl=" : "/include/reset_ww.php";
-
-  if (action === "start") {
-      $("#qr_loading1").show();
-
-      fetch(STMBX_URL + url + qrInput)
+        fetch(STMBX_URL + url + qrInput)
           .then((response) => {
-              if (!response.ok) {
-                  throw new Error("Network response was not ok");
-              }
-              return response.text();
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.text();
           })
           .then((responseText) => {
-              try {
-                  let jsonResponse = JSON.parse(responseText);
-                  if (jsonResponse.error) {
-                      SBChat.showResponse(
-                          '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                          "warning"
-                      );
-                  } else if (jsonResponse.image) {
-                      let imageUrl = 'data:image/png;base64,' + jsonResponse.image;
-                      let qrImage = $("#qr_image1");
-
-                      if (qrImage.length) {
-                          qrImage.fadeOut(500, function () {
-                              $(this).attr("src", imageUrl).fadeIn(500);
-                          });
-                      } else {
-                          $("#whatsmeow-go .sb-setting-content").append(
-                              `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
-                          );
-                          $("#whatsmeow-go .sb-setting-content").append(
-                              '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
-                          );
-                      }
-
-                      $("#qr_loading1").hide();
-                  }
-              } catch (e) {
-                  if (e instanceof SyntaxError) {
-                      console.error("Response is not JSON, assuming it's an image blob.");
-                      fetch(STMBX_URL + url + qrInput)
-                          .then((response) => {
-                              if (!response.ok) {
-                                  throw new Error("Network response was not ok");
-                              }
-                              return response.blob();
-                          })
-                          .then((imageBlob) => {
-                              let imageUrl = URL.createObjectURL(imageBlob);
-                              let qrImage = $("#qr_image1");
-
-                              if (qrImage.length) {
-                                  qrImage.fadeOut(500, function () {
-                                      $(this).attr("src", imageUrl).fadeIn(500);
-                                  });
-                              } else {
-                                  $("#whatsmeow-go .sb-setting-content").append(
-                                      `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
-                                  );
-                                  $("#whatsmeow-go .sb-setting-content").append(
-                                      '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
-                                  );
-                              }
-                          })
-                          .catch((error) => {
-                              console.error("Error during fetch:", error);
-                              SBChat.showResponse(
-                                  '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                                  "error"
-                              );
-                          });
-
-                      return;
-                  } else {
-                      throw e;
-                  }
-              }
-          })
-          .catch((error) => {
-              console.error("Error during fetch:", error);
-              SBChat.showResponse(
+            try {
+              let jsonResponse = JSON.parse(responseText);
+              if (jsonResponse.error) {
+                SBChat.showResponse(
                   '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                  "error"
-              );
-          })
-          .finally(() => {
-              $("#qr_loading1").hide();
-          });
-  } else if (action === "restart") {
-      console.log("Restarting...");
+                  "warning"
+                );
+              } else if (jsonResponse.image) {
+                let imageUrl = "data:image/png;base64," + jsonResponse.image;
+                let qrImage = $("#qr_image1");
 
-      $.ajax({
-          url: url,
-          method: "GET",
-          data: { qrurl: qrInput },
-          dataType: "json",
-          success: function (response) {
-              console.log("Restart successful. Response:", response);
-              SBChat.showResponse(
-                  '<i style="var(--color-red)" class="bi bi-telephone-x"></i> Disconnecting from WhatsApp...'
-              );
-
-              let qrImage = $("#qr_image1");
-              if (qrImage.length) {
+                if (qrImage.length) {
                   qrImage.fadeOut(500, function () {
-                      $(this).remove();
+                    $(this).attr("src", imageUrl).fadeIn(500);
                   });
+                } else {
+                  $("#whatsmeow-go .sb-setting-content").append(
+                    `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
+                  );
+                  $("#whatsmeow-go .sb-setting-content").append(
+                    '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
+                  );
+                }
+
+                $("#qr_loading1").hide();
               }
-          },
-          error: function (xhr) {
-              console.error("Restart error. Response:", xhr.responseText);
-              SBChat.showResponse(
-                  '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                  "error"
-              );
-          },
-      });
-  }
+            } catch (e) {
+              if (e instanceof SyntaxError) {
+                console.error(
+                  "Response is not JSON, assuming it's an image blob."
+                );
+                fetch(STMBX_URL + url + qrInput)
+                  .then((response) => {
+                    if (!response.ok) {
+                      throw new Error("Network response was not ok");
+                    }
+                    return response.blob();
+                  })
+                  .then((imageBlob) => {
+                    let imageUrl = URL.createObjectURL(imageBlob);
+                    let qrImage = $("#qr_image1");
 
-  return false;
-}
-
-// Event handler for the start button
-$(settings_area).on(
-  "click",
-  "#whatsmeow-go-start .sb-btn",
-  function (event) {
-      handleWhatsmeowButtonClick(event, "start");
-  }
-);
-
-// Event handler for the restart button
-$(settings_area).on(
-  "click",
-  "#whatsmeow-go-restart .sb-btn",
-  function (event) {
-      handleWhatsmeowButtonClick(event, "restart");
-  }
-);
-
-
-//WAWEB
-function handlewawebButtonClick(event, action) {
-  event.preventDefault();
-
-  let inputSelector = "#waweb-go-qr input";
-  let qrInput = settings_area.find(inputSelector).val();
-  let url = action === "start" ? "/include/get_wx.php?qrurl=" : "/include/reset_wx.php";
-
-  if (action === "start") {
-      $("#qr_loading2").show();
-
-      fetch(STMBX_URL + url + qrInput)
-          .then((response) => {
-              if (!response.ok) {
-                  throw new Error("Network response was not ok");
-              }
-              return response.text();
-          })
-          .then((responseText) => {
-              try {
-                  let jsonResponse = JSON.parse(responseText);
-                  if (jsonResponse.error) {
-                      console.error("Error in JSON response:", jsonResponse.error);
-                      SBChat.showResponse(
-                          '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                          "warning"
+                    if (qrImage.length) {
+                      qrImage.fadeOut(500, function () {
+                        $(this).attr("src", imageUrl).fadeIn(500);
+                      });
+                    } else {
+                      $("#whatsmeow-go .sb-setting-content").append(
+                        `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image1" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading1').show();" />`
                       );
-                  } else if (jsonResponse.image) {
-                      let imageUrl = 'data:image/png;base64,' + jsonResponse.image;
-                      let qrImage = $("#qr_image2");
-
-                      if (qrImage.length) {
-                          qrImage.fadeOut(500, function () {
-                              $(this).attr("src", imageUrl).fadeIn(500);
-                          });
-                      } else {
-                          $("#waweb-go .sb-setting-content").append(
-                              `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading2').show();" />`
-                          );
-                          $("#waweb-go .sb-setting-content").append(
-                              '<div id="qr_loading2" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
-                          );
-                      }
-
-                      $("#qr_loading2").hide();
-                  }
-              } catch (e) {
-                  console.error("Error parsing JSON response:", e);
-                  SBChat.showResponse(
+                      $("#whatsmeow-go .sb-setting-content").append(
+                        '<div id="qr_loading1" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
+                      );
+                    }
+                  })
+                  .catch((error) => {
+                    console.error("Error during fetch:", error);
+                    SBChat.showResponse(
                       '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
                       "error"
-                  );
+                    );
+                  });
+
+                return;
+              } else {
+                throw e;
               }
+            }
           })
           .catch((error) => {
-              console.error("Error during fetch:", error);
-              SBChat.showResponse(
-                  '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                  "error"
-              );
+            console.error("Error during fetch:", error);
+            SBChat.showResponse(
+              '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+              "error"
+            );
           })
           .finally(() => {
-              $("#qr_loading2").hide();
+            $("#qr_loading1").hide();
           });
-  } else if (action === "restart") {
-      $.ajax({
+      } else if (action === "restart") {
+        console.log("Restarting...");
+
+        $.ajax({
           url: url,
           method: "GET",
           data: { qrurl: qrInput },
           dataType: "json",
           success: function (response) {
-              console.log("Restart successful. Response:", response);
-              SBChat.showResponse(
-                  '<i style="var(--color-red)" class="bi bi-telephone-x"></i> Disconnecting from WhatsApp...'
-              );
+            console.log("Restart successful. Response:", response);
+            SBChat.showResponse(
+              '<i style="var(--color-red)" class="bi bi-telephone-x"></i> Disconnecting from WhatsApp...'
+            );
 
-              let qrImage = $("#qr_image2");
-              if (qrImage.length) {
-                  qrImage.fadeOut(500, function () {
-                      $(this).remove();
-                  });
-              }
+            let qrImage = $("#qr_image1");
+            if (qrImage.length) {
+              qrImage.fadeOut(500, function () {
+                $(this).remove();
+              });
+            }
           },
           error: function (xhr) {
-              console.error("Restart error. Response:", xhr.responseText);
-              SBChat.showResponse(
-                  '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
-                  "error"
-              );
+            console.error("Restart error. Response:", xhr.responseText);
+            SBChat.showResponse(
+              '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+              "error"
+            );
           },
-      });
-  }
+        });
+      }
 
-  return false;
-}
-
-
+      return false;
+    }
 
     // Event handler for the start button
     $(settings_area).on(
       "click",
-      "#waweb-go-start .sb-btn",
+      "#whatsmeow-go-start .sb-btn",
       function (event) {
-        handlewawebButtonClick(event, "start");
+        handleWhatsmeowButtonClick(event, "start");
       }
     );
 
     // Event handler for the restart button
     $(settings_area).on(
       "click",
-      "#waweb-go-restart .sb-btn",
+      "#whatsmeow-go-restart .sb-btn",
       function (event) {
-        handlewawebButtonClick(event, "restart");
+        handleWhatsmeowButtonClick(event, "restart");
       }
     );
 
-    $(document).ready(function(){
-      $(document).on("click", '#get-templates-api .sb-btn', function(event){
-          event.preventDefault();
-          $.ajax({
-              type: "GET",
-              url: STMBX_URL + '/include/templates.php',
-              success: function(data){
-                  dialog("Meta's WhatsApp Business API Cloud templates loaded successfully.","info");
-              },
-              error: function(xhr, status, error){
-                  dialog("Meta Business Manager configuration incomplete. Please provide the Business Manager User ID, save, and retry.", "info");
+    //WAWEB
+    function handlewawebButtonClick(event, action) {
+      event.preventDefault();
+
+      let inputSelector = "#waweb-go-qr input";
+      let qrInput = settings_area.find(inputSelector).val();
+      let url =
+        action === "start"
+          ? "/include/get_wx.php?qrurl="
+          : "/include/reset_wx.php";
+
+      if (action === "start") {
+        $("#qr_loading2").show();
+
+        fetch(STMBX_URL + url + qrInput)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.text();
+          })
+          .then((responseText) => {
+            try {
+              let jsonResponse = JSON.parse(responseText);
+              if (jsonResponse.error) {
+                console.error("Error in JSON response:", jsonResponse.error);
+                SBChat.showResponse(
+                  '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+                  "warning"
+                );
+              } else if (jsonResponse.image) {
+                let imageUrl = "data:image/png;base64," + jsonResponse.image;
+                let qrImage = $("#qr_image2");
+
+                if (qrImage.length) {
+                  qrImage.fadeOut(500, function () {
+                    $(this).attr("src", imageUrl).fadeIn(500);
+                  });
+                } else {
+                  $("#waweb-go .sb-setting-content").append(
+                    `<img style="max-width: 90%; margin: 10px; border: 4px solid white; border-radius: 15px;" id="qr_image2" src="${imageUrl}" onerror="this.style.display='none';$('#qr_loading2').show();" />`
+                  );
+                  $("#waweb-go .sb-setting-content").append(
+                    '<div id="qr_loading2" style="display: none; width: 90%; height: 40px; margin: 10px; border-radius: 8px;"><div style="position: relative; top: 50%; transform: translateY(-50%); text-align: center; color: white; font-size: var(--chat-text-size-7);">Loading...</div></div>'
+                  );
+                }
+
+                $("#qr_loading2").hide();
               }
+            } catch (e) {
+              console.error("Error parsing JSON response:", e);
+              SBChat.showResponse(
+                '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+                "error"
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Error during fetch:", error);
+            SBChat.showResponse(
+              '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+              "error"
+            );
+          })
+          .finally(() => {
+            $("#qr_loading2").hide();
           });
+      } else if (action === "restart") {
+        $.ajax({
+          url: url,
+          method: "GET",
+          data: { qrurl: qrInput },
+          dataType: "json",
+          success: function (response) {
+            console.log("Restart successful. Response:", response);
+            SBChat.showResponse(
+              '<i style="var(--color-red)" class="bi bi-telephone-x"></i> Disconnecting from WhatsApp...'
+            );
+
+            let qrImage = $("#qr_image2");
+            if (qrImage.length) {
+              qrImage.fadeOut(500, function () {
+                $(this).remove();
+              });
+            }
+          },
+          error: function (xhr) {
+            console.error("Restart error. Response:", xhr.responseText);
+            SBChat.showResponse(
+              '<i class="bi bi-emoji-dizzy-fill"></i> WhatsApp is unresponsive',
+              "error"
+            );
+          },
+        });
+      }
+
+      return false;
+    }
+
+    // Event handler for the start button
+    $(settings_area).on("click", "#waweb-go-start .sb-btn", function (event) {
+      handlewawebButtonClick(event, "start");
+    });
+
+    // Event handler for the restart button
+    $(settings_area).on("click", "#waweb-go-restart .sb-btn", function (event) {
+      handlewawebButtonClick(event, "restart");
+    });
+
+    $(document).ready(function () {
+      $(document).on("click", "#get-templates-api .sb-btn", function (event) {
+        event.preventDefault();
+        $.ajax({
+          type: "GET",
+          url: STMBX_URL + "/include/templates.php",
+          success: function (data) {
+            dialog(
+              "Meta's WhatsApp Business API Cloud templates loaded successfully.",
+              "info"
+            );
+          },
+          error: function (xhr, status, error) {
+            dialog(
+              "Meta Business Manager configuration incomplete. Please provide the Business Manager User ID, save, and retry.",
+              "info"
+            );
+          },
+        });
       });
-  });
-  
+    });
+
     $(settings_area).on(
       "click",
       "#whatsapp-twilio-btn .sb-btn, #sms-btn .sb-btn, #wechat-btn .sb-btn, #twitter-callback .sb-btn, #gbm-webhook .sb-btn",
@@ -9141,67 +9185,66 @@ function handlewawebButtonClick(event, action) {
       });
     });
 
-  /*
- * ----------------------------------------------------------
- * Recording MP3 for chat
- * ----------------------------------------------------------
- */
+    /*
+     * ----------------------------------------------------------
+     * Recording MP3 for chat
+     * ----------------------------------------------------------
+     */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const recButton = document.getElementById("recordButton");
-  const stopButton = document.getElementById("stopButton");
-  const sending = document.querySelector(".bi-arrow-up-circle-fill");
-  const textArea = document.querySelector(".sb-textarea > textarea");
-  const sbTextArea = document.querySelector(".sb-textarea");
-  const micIcon = document.querySelector(".bi-mic-fill");
+    document.addEventListener("DOMContentLoaded", () => {
+      const recButton = document.getElementById("recordButton");
+      const stopButton = document.getElementById("stopButton");
+      const sending = document.querySelector(".bi-arrow-up-circle-fill");
+      const textArea = document.querySelector(".sb-textarea > textarea");
+      const sbTextArea = document.querySelector(".sb-textarea");
+      const micIcon = document.querySelector(".bi-mic-fill");
 
-  let isTextAreaVisible = true;
+      let isTextAreaVisible = true;
 
-  const toggleTextAreaVisibility = () => {
-    isTextAreaVisible = !isTextAreaVisible;
-    sbTextArea.style.visibility = isTextAreaVisible ? "visible" : "hidden";
-  };
+      const toggleTextAreaVisibility = () => {
+        isTextAreaVisible = !isTextAreaVisible;
+        sbTextArea.style.visibility = isTextAreaVisible ? "visible" : "hidden";
+      };
 
-  const showTextArea = () => {
-    isTextAreaVisible = true;
-    sbTextArea.style.visibility = "visible";
-  };
+      const showTextArea = () => {
+        isTextAreaVisible = true;
+        sbTextArea.style.visibility = "visible";
+      };
 
-  sending.addEventListener("click", () => {
-    recButton.style.visibility = "visible";
-    sending.style.visibility = "hidden";
-    showTextArea();
-    micIcon.style.visibility = "visible";
-  });
+      sending.addEventListener("click", () => {
+        recButton.style.visibility = "visible";
+        sending.style.visibility = "hidden";
+        showTextArea();
+        micIcon.style.visibility = "visible";
+      });
 
-  textArea.addEventListener("input", () => {
-    if (textArea.value.trim() === "") {
-      sending.style.visibility = "hidden";
-      recButton.style.visibility = "visible";
-    } else {
-      sending.style.visibility = "visible";
-      recButton.style.visibility = "hidden";
-    }
-    showTextArea();
-  });
+      textArea.addEventListener("input", () => {
+        if (textArea.value.trim() === "") {
+          sending.style.visibility = "hidden";
+          recButton.style.visibility = "visible";
+        } else {
+          sending.style.visibility = "visible";
+          recButton.style.visibility = "hidden";
+        }
+        showTextArea();
+      });
 
-  recButton.addEventListener("click", () => {
-    micIcon.style.visibility = "hidden";
-    toggleTextAreaVisibility();
-    setTimeout(() => {
-      sending.style.visibility = "visible";
-    }, 500);
-  });
+      recButton.addEventListener("click", () => {
+        micIcon.style.visibility = "hidden";
+        toggleTextAreaVisibility();
+        setTimeout(() => {
+          sending.style.visibility = "visible";
+        }, 500);
+      });
 
-  stopButton.addEventListener("click", () => {
-    micIcon.style.visibility = "visible";
-    showTextArea();
-    setTimeout(() => {
-      sending.style.visibility = "visible";
-    }, 500);
-  });
-});
-
+      stopButton.addEventListener("click", () => {
+        micIcon.style.visibility = "visible";
+        showTextArea();
+        setTimeout(() => {
+          sending.style.visibility = "visible";
+        }, 500);
+      });
+    });
 
     /*
      * ----------------------------------------------------------
@@ -9229,8 +9272,6 @@ document.addEventListener("DOMContentLoaded", () => {
         reports_area.find("#" + SBF.getURL("report")).click();
       }, 500);
     }
-
-   
 
     /*
      * ----------------------------------------------------------
@@ -10089,8 +10130,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * ----------------------------------------------------------
  */
 
-
- // Function to hide the overlay and fade in the content
+// Function to hide the overlay and fade in the content
 function showContent() {
   const overlay = document.getElementById("overlay");
   const html = document.documentElement;
@@ -10119,9 +10159,6 @@ window.addEventListener("load", function () {
   // Initialize the loading animation
   initLoadingAnimation();
 });
-
-
-
 
 /*
  * ----------------------------------------------------------
