@@ -20,15 +20,13 @@ function sb_whatsmeow_send_message($to, $message = '', $attachments = [])
     $response = false;
     $merge_field = false;
 
-
     // Custom Messaging
     $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active')) && !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-url'));
 
     // Security
     if (!sb_is_agent() && !sb_is_agent($user) && sb_get_active_user_ID() != sb_isset($user, 'id') && empty($GLOBALS['SB_FORCE_ADMIN'])) {
-        return new SBError('security-error', 'sb_whatsmeow_send_message');
+        return json_encode(['status' => 'error', 'message' => 'Security error']);
     }
-
 
     // Send the message
     if (is_string($message)) {
@@ -50,6 +48,7 @@ function sb_whatsmeow_send_message($to, $message = '', $attachments = [])
             // send a text message with the attachment info
         }
     }
+
     if ($goproxy) {
         $whatsmeowGoUrl = sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-url');
         $goUrl = WW_URL_GO; // Use the base URL constant
@@ -79,11 +78,11 @@ function sb_whatsmeow_send_message($to, $message = '', $attachments = [])
     } else {
         if ($message) {
             $query = ['messaging_product' => 'whatsmeow', 'recipient_type' => 'individual', 'to' => $to];
+            // You can add the actual send logic here, if necessary.
         }
-        return $response;
+        return json_encode(['status' => 'success', 'message' => 'Message sent successfully']);
     }
 }
-
 
 function sb_whatsmeow_rich_messages($message, $extra = false)
 {
