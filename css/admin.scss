@@ -227,7 +227,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .sb-admin li {
-    margin: 0px;
+    margin: 1px 0px;
 }
 
 .sb-title {
@@ -3167,7 +3167,8 @@ BODY
         }
 
         [data-value="read"] {
-            color: var(--color-red);
+            color: var(--blue-root-color-aqua);
+
             //margin-right: 0px;
 
             i {
@@ -3176,7 +3177,7 @@ BODY
         }
 
         [data-value="unread"] {
-            color: var(--blue-root-color-aqua);
+            color: var(--color-red);
             //margin-right: 0px;
 
             i {
@@ -6870,7 +6871,7 @@ grammarly-editor-plugin {
                     position: absolute;
                     animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
                     -webkit-animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
-                    padding: var(--chat-spacing-size-8);
+                    padding: var(--chat-spacing-size-6);
                 }
             }
         }

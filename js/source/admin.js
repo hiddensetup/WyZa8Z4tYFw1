@@ -4182,7 +4182,6 @@
               let scroll_to_conversation = false;
               let id_check = [];
               this.datetime_last_conversation = response[0]["creation_time"];
-              // SBUsers.populate(response); //(person in list)
               SBUsers.updateMenu(); //(numbers) monday 15 jul
 
               for (var i = 0; i < response.length; i++) {
@@ -4309,7 +4308,7 @@
 
                     // Call positionList to reorder the conversations
                     this.positionList();
-                    SBUsers.populate(response); //(person in list moved here)
+                    SBUsers.update(); //(update user list in users section)
                   }
 
                   // Desktop, flash, sounds notifications
@@ -4405,6 +4404,7 @@
       }
     },
 
+    //function updates a menu or notification element with the count of conversations 
     updateMenu: function () {
       const count = conversations_admin_list_ul.find(
         '[data-conversation-status="2"]'
@@ -5496,9 +5496,13 @@
           },
           (response) => {
             showResponse("Required reload");
-            SBChat.update();
+           
+
             // Set the selected value back after updating options
             $("#change-conversation-source").val(selectedValue);
+             SBConversations.update(); // revisar switch
+            //  SBUsers.updateMenu();
+
           }
         );
 
@@ -6723,8 +6727,8 @@
               status_code: status_code,
             },
             () => {
-              // Update conversation status in the UI
-              if ([0, 3, 4, 6].includes(status_code)) {
+              // Update conversation status in the UI //removed 6 to test
+              if ([0, 3, 4].includes(status_code)) {
                 for (var i = 0; i < conversations.length; i++) {
                   if (conversations[i]["conversation_id"] == conversation_id) {
                     conversations[i]["conversation_status_code"] = status_code;
@@ -9654,22 +9658,22 @@
     //   $(admin).on("click", ".sb-info-card", function () {
     //     $(this).sbActive(!1);
     //   });
-    // $(admin).on(
-    //   "change",
-    //   ".sb-upload-form-admin .sb-upload-files",
-    //   function (a) {
-    //     $(this).sbUploadFiles(function (a) {
-    //       "success" == (a = JSON.parse(a))[0]
-    //         ? ("upload-image" ==
-    //             $(upload_target).closest("[data-type]").data("type") &&
-    //             $(upload_target)
-    //               .attr("data-value", a[1])
-    //               .css("background-image", `url("${a[1]}")`),
-    //           upload_on_success && upload_on_success(a[1]))
-    //         : console.log(a[1]);
-    //     });
-    //   }
-    // );
+    $(admin).on(
+      "change",
+      ".sb-upload-form-admin .sb-upload-files",
+      function (a) {
+        $(this).sbUploadFiles(function (a) {
+          "success" == (a = JSON.parse(a))[0]
+            ? ("upload-image" ==
+                $(upload_target).closest("[data-type]").data("type") &&
+                $(upload_target)
+                  .attr("data-value", a[1])
+                  .css("background-image", `url("${a[1]}")`),
+              upload_on_success && upload_on_success(a[1]))
+            : console.log(a[1]);
+        });
+      }
+    );
     $(admin).on("click", ".sb-accordion > div > span", function (i) {
       let s = $(this).parent(),
         t = $(s).sbActive();

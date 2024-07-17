@@ -1,7 +1,6 @@
 <?php
 file_put_contents("api.txt", print_r($_POST, true), FILE_APPEND);
 
-
 $raw = file_get_contents('php://input');
 flush();
 if (function_exists('fastcgi_finish_request')) {
@@ -17,28 +16,39 @@ try {
 
         $response = $_POST;
 
-        if (empty($response['Conversation']) && empty($_FILES["attachment"])) {
+        if (empty($response['Conversation']) && empty($_FILES["attachment"]) && empty($response['reactionMessage'])) {
             die();
         }
-
 
         $GLOBALS['SB_FORCE_ADMIN'] = true;
 
         $adminPhone      = sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-phone');
         $phone           = '+' . api_whatsmeow_parse_phone($response['Chat']);
-        $senderPhone = '+' . api_whatsmeow_parse_phone($response['Sender']);
-        $isAdmnAnswer =  false;
+        $senderPhone     = '+' . api_whatsmeow_parse_phone($response['Sender']);
+        $isAdminAnswer   = false;
         $user_id         = false;
         $conversation_id = false;
+
         if ($senderPhone == $adminPhone) {
             $isAdminAnswer = true;
-            $phone         = '+' . api_whatsmeow_parse_phone($response['Chat']);
+            $phone = '+' . api_whatsmeow_parse_phone($response['Chat']);
         }
 
-        $user            = sb_get_user_by('phone', $phone);
-        $department      = sb_get_setting('whatsmeow-department');
-        $payload = array('isGroup' => !empty($_POST['isGroup']) ? true : false,);
-        $message         = $response['Conversation'] != '' ? $response['Conversation'] : $response['Caption'];
+        $user       = sb_get_user_by('phone', $phone);
+        $department = sb_get_setting('whatsmeow-department');
+        $payload    = array('isGroup' => !empty($_POST['isGroup']) ? true : false,);
+
+        // Determine message content
+        $message = '';
+        if (!empty($response['Conversation'])) {
+            $message = $response['Conversation'];
+        } elseif (!empty($response['Caption'])) {
+            $message = $response['Caption'];
+        } elseif (!empty($response['reactionMessage']['text'])) {
+            $message = $response['reactionMessage']['text'];
+        }
+
+
 
         if ($isAdminAnswer && !$user) {
             die();
@@ -61,9 +71,8 @@ try {
         $GLOBALS['SB_LOGIN'] = $user;
 
         if (!$conversation_id) {
-            $conversation_id = sb_isset(sb_new_conversation($user_id, 2, '', $department, -1, 'ww'), 'details', [])['id'];
+            $conversation_id = sb_isset(sb_new_conversation($user_id, 2, '', $department, -1, 'wx'), 'details', [])['id'];
         }
-
 
         // Attachments
         $attachments = [];
@@ -89,10 +98,9 @@ try {
         // Send message
         $response = sb_send_message($isAdminAnswer ? 1 : $user_id, $conversation_id, $message, $attachments, 2, $payload);
 
-
         if (!$isAdminAnswer) {
             // Dialogflow, Notifications, Bot messages
-            $response_external = sb_messaging_platforms_functions($conversation_id, $message, $attachments, $user, ['source' => 'ww', 'platform_value' => $phone]);
+            $response_external = sb_messaging_platforms_functions($conversation_id, $message, $attachments, $user, ['source' => 'wx', 'platform_value' => $phone]);
 
             // Queue
             if (sb_get_multi_setting('queue', 'queue-active')) {
@@ -110,13 +118,10 @@ try {
     var_dump($e);
 }
 
-
 function sb_whatsmeow_get_conversation_id($user_id)
 {
-    return sb_isset(sb_db_get('SELECT id FROM sb_conversations WHERE source = "ww" AND user_id = ' . $user_id . ' ORDER BY id DESC LIMIT 1'), 'id');
+    return sb_isset(sb_db_get('SELECT id FROM sb_conversations WHERE source = "wx" AND user_id = ' . $user_id . ' ORDER BY id DESC LIMIT 1'), 'id');
 }
-
-
 
 function api_whatsmeow_parse_phone($jid)
 {
@@ -142,6 +147,5 @@ function api_whatsmeow_parse_phone($jid)
 
     return false;
 }
-
 
 die();
