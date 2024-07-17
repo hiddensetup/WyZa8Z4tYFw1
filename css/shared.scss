@@ -2024,8 +2024,8 @@ div ul.sb-menu,
   box-shadow: var(--box-shadow-bubble-chat);
   border-radius: var(--chat-rounded-size-5);
   margin: 0 !important;
-  color: var(--chat-text-theme-button);
-  background: var(--chat-text-theme-background);
+  color: var(--chat-text-notification);
+  background-color: var(--chat-background-notification);
 
   &:hover, &:active {
     cursor: pointer;
