@@ -1307,7 +1307,7 @@ function sb_component_admin()
                                             <a class="a-details" data-value="read">
                                                 <i class="i-details bi-check-all"></i>
                                                 <span>
-                                                    <?php sb_e('Mark as read') ?>
+                                                    <?php sb_e('Mark as unread') ?>
                                                 </span>
                                             </a>
                                         </li>
@@ -1482,51 +1482,61 @@ function sb_component_admin()
                                     <i class="bi-three-dots-vertical"></i>
                                     <ul id="hideOnSearchClick">
                                         <?php if ($supervisor || $is_admin) { ?>
-                                            <li>
-
-                                                <a class="sb-btn-icon sb-new-user" data-sb-tooltip="<?= sb_('Add user') ?>">
+                                            <li class="flex-add-users">
+                                                <a class="routin-users-top-tip sb-new-user">
                                                     <i class="bi-person-circle"></i>
+                                                    <span class="routin-users-top-content"><?= sb_('Add user') ?></span>
                                                 </a>
                                             </li>
                                         <?php } ?>
-                                        <li>
+                                        <li class="flex-buttons-users transition-opacity">
                                             <div style="display: none;">
                                                 <input type="file" id="csvimport" name="csv" class="form-control" required>
                                             </div>
-                                            <a data-value="csvimport" id="csv_contacts" class="not-show-small-screen sb-btn-icon" data-sb-tooltip="<?= sb_('Upload CSV') ?>">
+                                            <a data-value="csvimport" id="csv_contacts" class="routin-buttons-top-tip not-show-small-screen">
                                                 <i class="bi-filetype-csv"></i>
+                                                <span class="routin-buttons-top-content"><?= sb_('Upload CSV') ?></span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
+                                        <li class="flex-buttons-users transition-opacity">
+                                            <a data-value="email" class="routin-buttons-top-tip data-sb-tooltip="<?php sb_e('Send email') ?>">
                                                 <i class="bi-envelope-at"></i>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Send email') ?></span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="message" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Broadcast message') ?>">
+                                        <li class="flex-buttons-users transition-opacity">
+                                            <a data-value="message" class="routin-buttons-top-tip">
                                                 <i class="bi-megaphone"></i>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Broadcast message') ?></span>
+
                                             </a>
                                         </li>
-                                        <?php if (sb_is_agent() && $is_admin) { ?>
-                                            <li>
-                                                <a data-value="csv" class="sb-btn-icon bi-google" data-sb-tooltip="<?= sb_('Download CSV') ?>">
+                                        <!-- <?php if (sb_is_agent() && $is_admin) { ?>
+                                            <li class="flex-buttons-users transition-opacity">
+                                                <a data-value="csv" class="routin-buttons-top-tip bi-google">
+                                                <span class="routin-buttons-top-content"><?= sb_('Download CSV') ?></span>
+
                                                 </a>
                                             </li>
-                                        <?php } ?>
-                                        <li>
-                                            <a style="display: none;" class="sb-btn-icon">
+                                        <?php } ?> -->
+                                        <!-- <li class="flex-buttons-users transition-opacity">
+                                            <a style="display: none;" class="routin-buttons-top-tip">
                                                 <i class="bi-chat-text"></i>
+                                                <spanclass="routin-buttons-top-content">Does nothing</span>
+
                                             </a>
-                                        </li>
-                                        <li>
-                                            <a data-value="delete" class="sb-btn-icon sb-btn-red" data-sb-tooltip="<?php sb_e('Delete users') ?>" style="display: none;">
+                                        </li> -->
+                                        <li class="flex-buttons-users transition-opacity">
+                                            <a data-value="delete" class="routin-buttons-top-tip" style="display: none;">
                                                 <i class="bi-trash"></i>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Delete users') ?></span>
                                             </a>
                                         </li>
                                         <?php if ($sms) { ?>
-                                            <li>
-                                                <a data-value="sms" class="sb-btn-icon" data-sb-tooltip="<?= sb_('Send text message') ?>">
+                                            <li class="flex-buttons-users transition-opacity">
+                                                <a data-value="sms" class="routin-buttons-top-tip">
                                                     <i class="bi-chat-square-dots"></i>
+                                                    <span class="routin-buttons-top-content"><?= sb_('Send text message') ?></span>
                                                 </a>
                                             </li>
                                         <?php } ?>

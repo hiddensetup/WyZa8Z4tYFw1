@@ -97,7 +97,7 @@
     "VIP",
     "Descartado",
     "NA",
-];
+  ];
 
   // /*
   //  * ----------------------------------------------------------
@@ -392,24 +392,25 @@
   };
 
   $.fn.sbInitTooltips = function () {
-    return $(this).find("[data-sb-tooltip]").each(function () {
-      // Get the position of the element relative to the viewport
-      var rect = this.getBoundingClientRect();
-      // Check if the element is closer to the top or bottom of the viewport
-      var closerToTop = rect.top < window.innerHeight / 2;
-  
-      // Determine the anchor position based on the element's position
-      var anchor = closerToTop ? "n" : "w";
-  
-      // Initialize the tooltip with the determined anchor position
-      $(this).miniTip({
-        content: $(this).attr("data-sb-tooltip"),
-        anchor: anchor, // Use the determined anchor position
-        delay: 100,
+    return $(this)
+      .find("[data-sb-tooltip]")
+      .each(function () {
+        // Get the position of the element relative to the viewport
+        var rect = this.getBoundingClientRect();
+        // Check if the element is closer to the top or bottom of the viewport
+        var closerToTop = rect.top < window.innerHeight / 2;
+
+        // Determine the anchor position based on the element's position
+        var anchor = closerToTop ? "n" : "w";
+
+        // Initialize the tooltip with the determined anchor position
+        $(this).miniTip({
+          content: $(this).attr("data-sb-tooltip"),
+          anchor: anchor, // Use the determined anchor position
+          delay: 100,
+        });
       });
-    });
   };
-  
 
   // Display the bottom card information box
   function showResponse(text, type = false) {
@@ -1101,8 +1102,6 @@
           : false;
       },
     },
-
-    
 
     whatsapp: {
       check: function (conversation) {
@@ -3064,23 +3063,20 @@
       users_pagination = 1;
       users_pagination_count = 1;
       SBF.ajax(
-          {
-              function: "get-users",
-              sorting: this.sorting,
-              user_types: this.user_types,
-              search: this.search_query,
-              extra: this.table_extra,
-          },
-          (response) => {
-              this.populate(response);
-              this.loading(false);
-              console.log("Sorting completed successfully:", response); // Add this line to log the response
-          }
+        {
+          function: "get-users",
+          sorting: this.sorting,
+          user_types: this.user_types,
+          search: this.search_query,
+          extra: this.table_extra,
+        },
+        (response) => {
+          this.populate(response);
+          this.loading(false);
+          console.log("Sorting completed successfully:", response); // Add this line to log the response
+        }
       );
-  },
-  
-  
-  
+    },
 
     // Search users
     search: function (input) {
@@ -3103,7 +3099,6 @@
             users_table_menu.find("li").sbActive(false).eq(0).sbActive(true);
           }
         );
-
       });
     },
 
@@ -3238,37 +3233,38 @@
       this.update();
     },
 
-  updateRow: function (user) {
-  let row = users_table.find(`[data-user-id="${user.id}"]`);
-  if (row.length) {
-    let menu_active = users_table_menu.find(".sb-active").data("type");
-    if (
-      menu_active !== user.type &&
-      !(user.type === "admin" && menu_active === "agent") &&
-      menu_active !== "all"
-    ) {
-      let counter = admin.find(
-        `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
-      );
-      let count = parseInt(counter.attr("data-count"));
-      counter.html(count + 1).attr("data-count", count + 1);
-      row.remove();
-    } else {
-      let newRow = this.getRow(user); // Get updated row HTML
-      row.replaceWith(newRow); // Replace row in table
-      this.updateTagsLabel(user); // Update tags label
-    }
-  } else {
-    users_table.find("tbody").append(this.getRow(user));
-  }
-},
+    updateRow: function (user) {
+      let row = users_table.find(`[data-user-id="${user.id}"]`);
+      if (row.length) {
+        let menu_active = users_table_menu.find(".sb-active").data("type");
+        if (
+          menu_active !== user.type &&
+          !(user.type === "admin" && menu_active === "agent") &&
+          menu_active !== "all"
+        ) {
+          let counter = admin.find(
+            `[data-type="${user.type === "admin" ? "agent" : user.type}"] span`
+          );
+          let count = parseInt(counter.attr("data-count"));
+          counter.html(count + 1).attr("data-count", count + 1);
+          row.remove();
+        } else {
+          let newRow = this.getRow(user); // Get updated row HTML
+          row.replaceWith(newRow); // Replace row in table
+          this.updateTagsLabel(user); // Update tags label
+        }
+      } else {
+        users_table.find("tbody").append(this.getRow(user));
+      }
+    },
 
-// Update tags label
-updateTagsLabel: function(user) {
-  // Update tags label class with user's label
-  $(`[data-user-id="${user.id}"] .sb-tags`).removeClass().addClass(`sb-tags tags-${user.details.label}`);
-},
-
+    // Update tags label
+    updateTagsLabel: function (user) {
+      // Update tags label class with user's label
+      $(`[data-user-id="${user.id}"] .sb-tags`)
+        .removeClass()
+        .addClass(`sb-tags tags-${user.details.label}`);
+    },
 
     // Update users table menu
     updateMenu: function (action = "all", type = false) {
@@ -4135,8 +4131,6 @@ updateTagsLabel: function(user) {
       });
     },
 
- 
-
     positionList() {
       let chat_list = document.querySelectorAll(
         "ul.sorting-by-last-message li"
@@ -4316,7 +4310,6 @@ updateTagsLabel: function(user) {
                     // Call positionList to reorder the conversations
                     this.positionList();
                     SBUsers.populate(response); //(person in list moved here)
-
                   }
 
                   // Desktop, flash, sounds notifications
@@ -4334,10 +4327,11 @@ updateTagsLabel: function(user) {
                         item["first_name"] + " " + item["last_name"],
                         SBUsers.userProfileImage(item["profile_image"]),
                       ];
-                      
-                      let messageToProcess = "preview" in payload ? payload.preview : "notfimy";
+
+                      let messageToProcess =
+                        "preview" in payload ? payload.preview : "notfimy";
                       let formattedMessage = processMessage(messageToProcess);
-                                    
+
                       SBChat.desktopNotification(
                         user_details[0],
                         formattedMessage,
@@ -4371,7 +4365,7 @@ updateTagsLabel: function(user) {
               if (scroll_to_conversation) {
                 this.scrollTo();
               }
-              
+
               this.updateMenu();
             }
           }
@@ -4454,9 +4448,6 @@ updateTagsLabel: function(user) {
       }
     },
 
-
-
-    
     messageMenu: function (agent) {
       let readTextOption = `<li style="padding: 6px 15px; line-height:20px" data-value="read-text"> <i class="bi-volume-up-fill"></i> ${sb_(
         "Leer"
@@ -4497,22 +4488,30 @@ updateTagsLabel: function(user) {
       );
     },
 
-    // Set the read status icon
+    
+
     setReadIcon(conversation_status_code) {
+      // Determine if the status is unread
       let unread = conversation_status_code == 2;
-      conversations_area
-        .find('.sb-top [data-value="read"],.sb-top [data-value="unread"]')
-        .sbActive([0, 1, 2].includes(parseInt(conversation_status_code)))
-        .attr("data-value", unread ? "read" : "unread")
-        .attr(
-          "data-sb-tooltip",
-          sb_(unread ? "Mark as read" : "Mark as unread")
-        )
-        .parent()
-        // .sbInitTooltips()
-        .find("i")
-        .attr("class", unread ? "bi-check-lg" : "bi-check-all");
-    },
+  
+      // Find the relevant element based on the data-value attribute
+      let $detailsLink = conversations_area
+          .find('.sb-top [data-value="read"], .sb-top [data-value="unread"]');
+      
+      // Set the attributes and text based on the unread status
+      $detailsLink
+          .sbActive([0, 1, 2].includes(parseInt(conversation_status_code)))
+          .attr("data-value", unread ? "read" : "unread")
+          .attr("data-sb-tooltip", sb_(unread ? "Mark as unread" : "Mark as read"))
+          .each(function() {
+              // Update the icon class
+              $(this).find("i").attr("class", unread ? "i-details bi-check-lg" : "i-details bi-check-all");
+              
+              // Update the text in the <span> tag
+              $(this).find("span").text(sb_(unread ? "Mark as unread" : "Mark as read"));
+          });
+  },
+
 
     // Return the conversation code of the left conversations list
     getListCode: function (conversation, status) {
@@ -4523,106 +4522,106 @@ updateTagsLabel: function(user) {
           ...lastMessage,
         };
       }
-      
+
       let message = conversation.message;
-      
+
       // Apply the processMessage function
       message = processMessage(message);
-      
+
       // Truncate message if necessary
       if (message.length > 40) {
         const words = message.split(" ");
         message = words.slice(0, 5).join(" ") + (words.length > 5 ? "..." : "");
       }
 
-     // Attachments handling
-if (!message && conversation.attachments) {
-  const files = JSON.parse(conversation.attachments);
-  const mediaFiles = files.filter((file) =>
-    /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file)
-  );
-  const docFiles = files.filter((file) =>
-    /\.(docx?|xlsx?|pdf)\b/g.test(file)
-  );
-  const voiceFiles = files.filter((file) => /\.(mp3|ogg)\b/g.test(file));
+      // Attachments handling
+      if (!message && conversation.attachments) {
+        const files = JSON.parse(conversation.attachments);
+        const mediaFiles = files.filter((file) =>
+          /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file)
+        );
+        const docFiles = files.filter((file) =>
+          /\.(docx?|xlsx?|pdf)\b/g.test(file)
+        );
+        const voiceFiles = files.filter((file) => /\.(mp3|ogg)\b/g.test(file));
 
-  const mediaMessage =
-    mediaFiles.length > 0
-      ? `<i class="bi-box"></i> ${sb_("Media")}: ${
-          mediaFiles.length > 1
-            ? `+${mediaFiles.length - 1}`
-            : mediaFiles.length
-        }`
-      : "";
-  const docMessage =
-    docFiles.length > 0
-      ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${
-          docFiles.length > 1
-            ? `+${docFiles.length - 1}`
-            : docFiles.length
-        }`
-      : "";
-  const voiceMessage =
-    voiceFiles.length > 0
-      ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${
-          voiceFiles.length > 1
-            ? `+${voiceFiles.length - 1}`
-            : voiceFiles.length
-        }`
-      : "";
+        const mediaMessage =
+          mediaFiles.length > 0
+            ? `<i class="bi-box"></i> ${sb_("Media")}: ${
+                mediaFiles.length > 1
+                  ? `+${mediaFiles.length - 1}`
+                  : mediaFiles.length
+              }`
+            : "";
+        const docMessage =
+          docFiles.length > 0
+            ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${
+                docFiles.length > 1
+                  ? `+${docFiles.length - 1}`
+                  : docFiles.length
+              }`
+            : "";
+        const voiceMessage =
+          voiceFiles.length > 0
+            ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${
+                voiceFiles.length > 1
+                  ? `+${voiceFiles.length - 1}`
+                  : voiceFiles.length
+              }`
+            : "";
 
-  message = [mediaMessage, docMessage, voiceMessage]
-    .filter(Boolean)
-    .join(" ");
-}
+        message = [mediaMessage, docMessage, voiceMessage]
+          .filter(Boolean)
+          .join(" ");
+      }
 
-// Handle conversation.payload for preview
-if (conversation.payload.includes("preview")) {
-  const payload = JSON.parse(conversation.payload.replace("\\'", "'"));
-  if (payload && "preview" in payload) {
-    message = payload.preview;
-  }
-}
+      // Handle conversation.payload for preview
+      if (conversation.payload.includes("preview")) {
+        const payload = JSON.parse(conversation.payload.replace("\\'", "'"));
+        if (payload && "preview" in payload) {
+          message = payload.preview;
+        }
+      }
 
-// Format message symbols
-const formatSymbols = {
-  "*": "strong",
-  "~": "s",
-  "```": "code",
-};
+      // Format message symbols
+      const formatSymbols = {
+        "*": "strong",
+        "~": "s",
+        "```": "code",
+      };
 
-Object.keys(formatSymbols).forEach((symbol) => {
-  const regex = new RegExp(`\\${symbol}(.*?)\\${symbol}`, "g");
-  if (message.includes(symbol)) {
-    message = message.replace(
-      regex,
-      (match, content) =>
-        `<${formatSymbols[symbol]}>${content}</${formatSymbols[symbol]}>`
-    );
-  }
-});
+      Object.keys(formatSymbols).forEach((symbol) => {
+        const regex = new RegExp(`\\${symbol}(.*?)\\${symbol}`, "g");
+        if (message.includes(symbol)) {
+          message = message.replace(
+            regex,
+            (match, content) =>
+              `<${formatSymbols[symbol]}>${content}</${formatSymbols[symbol]}>`
+          );
+        }
+      });
 
-// Handle status
-if (SBF.null(status)) {
-  status = conversation.conversation_status_code;
-}
+      // Handle status
+      if (SBF.null(status)) {
+        status = conversation.conversation_status_code;
+      }
 
-const formattedMessage = new SBMessage()
-  .strip(message)
-  .replace(/_/g, " ");
+      const formattedMessage = new SBMessage()
+        .strip(message)
+        .replace(/_/g, " ");
 
-const isTitle = !SBF.null(conversation.title);
+      const isTitle = !SBF.null(conversation.title);
 
-return `
+      return `
     <li data-user-id="${conversation.user_id}" data-conversation-id="${
-  conversation.conversation_id
-}" data-time="${new Date(
-  conversation.creation_time
-).getTime()}" data-conversation-status="${status}" ${
-  conversation.conversation_source
-    ? `data-conversation-source="${conversation.conversation_source}"`
-    : ""
-}>
+        conversation.conversation_id
+      }" data-time="${new Date(
+        conversation.creation_time
+      ).getTime()}" data-conversation-status="${status}" ${
+        conversation.conversation_source
+          ? `data-conversation-source="${conversation.conversation_source}"`
+          : ""
+      }>
         <small class="source-conversation-icon">
             <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
               conversation.conversation_source
@@ -4631,14 +4630,12 @@ return `
         <div class="sb-profile client-status">
             <img class="client-icon-status sb-icon tags-${
               conversation.label
-            } bi-kanban-fill loading="lazy" src="${
-  conversation.profile_image
-}">
+            } bi-kanban-fill loading="lazy" src="${conversation.profile_image}">
             <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${
-  isTitle
-    ? conversation.title
-    : `${conversation.first_name} ${conversation.last_name}`
-}</h3>
+        isTitle
+          ? conversation.title
+          : `${conversation.first_name} ${conversation.last_name}`
+      }</h3>
             <div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">
                 ${SBF.beautifyTime(conversation.creation_time)}
             </div>
@@ -6435,9 +6432,28 @@ return `
         SBConversations.mobileCloseConversation();
       });
 
-      if ($(window).width() < 555) {
-        $(users_table).find("th:first-child").html(sb_("Order by"));
-      }
+      $(document).ready(function() {
+        var $usersTable = $(users_table);
+        var $firstTh = $usersTable.find("th:first-child");
+        var $rows = $usersTable.find("tr");
+    
+        function updateTableStyles() {
+            if ($(window).width() < 555) {
+                $firstTh.addClass("sb-invisible");
+                $firstTh.css("margin", "-20px");  
+                $rows.addClass("sb-active");
+            } else {
+                $firstTh.removeClass("sb-invisible");
+                $firstTh.css("margin", "");  
+                $rows.removeClass("sb-active");
+            }
+        }
+    
+         updateTableStyles();
+    
+         $(window).resize(updateTableStyles);
+    });
+    
 
       $(users_table).on("click", "th:first-child", function () {
         $(this).parent().toggleClass("sb-active");
@@ -7315,15 +7331,23 @@ return `
       }
     );
 
+    // Add the transition-opacity class to the elements to enable smooth transitions
+    $(
+      "#hideOnSearchClick li:first-child, #hideOnSearchClick li:nth-child(2)"
+    ).addClass("transition-opacity");
+
     $(".bi-search").click(function () {
-      $("#hideOnSearchClick li:first-child")
-        .toggleClass("sb-invisible")
-        .find("div")
-        .toggle();
-      $("#hideOnSearchClick li:nth-child(2)")
+      var $firstChild = $("#hideOnSearchClick li:first-child");
+      var $secondChild = $("#hideOnSearchClick li:nth-child(2)");
+
+      // Toggle the opacity of the first child
+      $firstChild.css("opacity", $firstChild.css("opacity") == 0 ? 1 : 0);
+
+      // Toggle the visibility of the second child and adjust margin-right
+      $secondChild
         .toggleClass("sb-invisible")
         .css("margin-right", function (index, value) {
-          return value === "80px" ? "0px" : "80px";
+          return value === "-43px" ? "0px" : "-43px";
         });
     });
 

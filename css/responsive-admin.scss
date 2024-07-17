@@ -470,7 +470,7 @@ body {
 
     .sb-menu-mobile {
         height: 24px;
-        right: 5px !important;
+        right: 12px !important;
 
 
         >i {
@@ -491,7 +491,7 @@ body {
 main>div .sb-top-bar .sb-menu-mobile>ul {
     right: 10px;
     top: 16px;
-    width: 50px;
+    // width: 50px;
 }
 
 /*
@@ -923,7 +923,7 @@ a.sb-btn {
         position: absolute;
         bottom: auto !important;
         left: auto !important;
-        right: 5px !important;
+        right: 12px !important;
         padding: 0 !important;
         height: 56px;
         display: flex;
@@ -1008,6 +1008,50 @@ a.sb-btn {
     }
 
 
+.flex-add-users {
+    transition: var(--transition-2);
+}
+
+.flex-add-users {
+    margin-bottom: 10px!important;
+
+}
+.flex-add-users:active {
+    border-radius: 40px;
+    box-shadow: var(--box-shadow-bubble-chat);
+    background: var(--chat-btn-background)!important;
+    box-shadow: var(--chat-btn-ring-shadow) !important;
+    color: var(--chat-btn-text);
+  }
+
+  .flex-buttons-users:active {
+    border-radius: 40px;
+    // color: var(--chat-btn-text);
+  }
+
+  .routin-users-top-tip {
+    font-size: 33px;
+  
+    &:active {
+      scale: .8;
+
+      border-radius: 40px;
+    }
+  
+    > span {
+      display: block;
+    }
+  }
+
+  .routin-buttons-top-tip {
+    font-size: var(--chat-text-size-1-0);
+  
+  
+    > span {
+      display: block;
+    }
+  }
+  
     .sb-inner-tab {
         display: block;
 
@@ -1302,7 +1346,7 @@ a.sb-btn {
 
 .styling-caller {
     visibility: visible;
-    font-size: 1rem;
+    font-size: var(--chat-text-size-1-0);
     border-radius: 50%;
     padding: 2px 3px;
 

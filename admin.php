@@ -51,6 +51,7 @@ require('include/components.php');
   <link href="<?php echo sb_get_setting('manifest-url', $steambox_url . 'resources/pwa/manifest.json') ?>" rel="manifest">
   <link rel="shortcut icon" type="image/png" href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'icon.png') ?>" />
   <link href="<?php echo $steambox_url . 'css/responsive-admin.css' ?>" rel="stylesheet" media="(max-width:554px)">
+
 </head>
 
 <body>

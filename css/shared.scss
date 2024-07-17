@@ -1786,7 +1786,7 @@ div ul.sb-menu,
 
 
       >span {
-        font-size: 1rem;
+        font-size: var(--chat-text-size-1-0);
         color: var(--chat-text-primary)
       }
     }
@@ -1812,7 +1812,7 @@ div ul.sb-menu,
       background: var(--color-green);
       border-radius: 5px;
       padding: 2px 3px;
-      font-size: 1rem;
+      font-size: var(--chat-text-size-1-0);
     }
 
     .bi-mic-fill {
@@ -1999,6 +1999,10 @@ div ul.sb-menu,
   border-radius: var(--chat-rounded-size-5);
   line-height: 0;
   font-weight: normal;
+
+  &:hover {
+    scale:1!important
+  }
 }
 
 /* Adding the spike (arrow) for top tooltip */
@@ -2014,9 +2018,41 @@ div ul.sb-menu,
   transform: rotate(180deg);
 }
 
+.flex-add-users {
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow-bubble-chat);
+  border-radius: var(--chat-rounded-size-5);
+  margin: 0 !important;
+  color: var(--chat-text-theme-button);
+  background: var(--chat-text-theme-background);
+
+  &:hover, &:active {
+    cursor: pointer;
+    background: var(--chat-btn-background-active) !important;
+    color: var(--chat-btn-text-active) !important;
+    transition: box-shadow .2s ease;
+  }
+
+  &:active {
+    box-shadow: var(--chat-btn-ring-shadow) !important;
+
+  }
+}
+
+
+/* Bottom Tooltip */
+.routin-users-top-content {
+  top: 30px;
+  left: -50px;
+}
+
+
+
 /* Hover Effects */
 .routin-bottom-tip:hover .routin-bottom-content,
-.routin-top-tip:hover .routin-top-content {
+.routin-top-tip:hover .routin-top-content,
+.routin-users-top-tip:hover .routin-users-top-content {
   visibility: visible;
   opacity: 1;
 }
@@ -2027,6 +2063,7 @@ div ul.sb-menu,
   position: relative;
   display: inline-block;
 }
+
 
 /* Hover effect for top image profile */
 .top-image-profile:hover + .routin-top-content {
@@ -2040,6 +2077,61 @@ div ul.sb-menu,
   display: flex;
   align-items: center;
   position: relative;
+}
+
+
+.routin-users-top-tip {
+  font-size: 1.4rem;
+  padding: 7px 10px;
+  border-radius: var(--chat-rounded-size-5);
+  transition: all .1s ease;
+  display: flex;
+  align-items: center;
+  margin: 0!important;
+  cursor: pointer;
+  
+
+    >span {
+      font-size: var(--chat-text-size-1-0);
+      align-self: center;
+      margin-left: 5px;
+    }
+
+    &:hover, &:active {
+      scale: 1!important;
+      background: none!important;
+      
+
+    }
+}
+
+.routin-buttons-top-tip {
+  font-size: var(--chat-text-size-1-4);
+  padding: 7px 10px;
+  border-radius: var(--chat-rounded-size-5);
+  transition: all .1s ease;
+  display: flex;
+  align-items: center;
+  margin: 0!important;
+  cursor: pointer;
+  
+
+    >span {
+      font-size: var(--chat-text-size-1-0);
+      align-self: center;
+      margin-left: 5px;
+      display: none;
+    }
+
+    &:hover {
+      background: var(--chat-background-menu-selected);
+      transition: box-shadow .2s ease;
+    }
+  
+    &:active {
+      box-shadow: var(--chat-btn-ring-shadow) !important;
+  
+    }
 }
 
 /*
@@ -3108,7 +3200,7 @@ a.sb-btn {
     height: auto;
     font-size: var(--chat-text-size-1-0);
     line-height: 40px;
-    padding: 2px 30px 0 15px !important;
+    padding: 0px 30px 0 15px !important;
     display: none;
     border-radius: var(--chat-rounded-size-6);
     background: var(--chat-input-search-responsive);
@@ -3333,7 +3425,7 @@ a.sb-btn {
 .sb-select {
   position: relative;
   font-size: var(--chat-text-size-9);
-  height: 35px;
+  height: 40px;
   line-height: 45px;
   font-weight: 800;
   max-width: 180px;

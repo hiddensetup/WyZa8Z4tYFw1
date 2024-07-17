@@ -6695,14 +6695,14 @@ grammarly-editor-plugin {
     .sb-menu-mobile {
         >ul {
             display: flex;
-            gap: .4em;
+            gap: var(--chat-spacing-size-8);
 
             li a {
                 margin: 0 3px;
 
                 &:active,
                 &:hover {
-                    scale: 1.1;
+                    scale: 1.05;
                     background: var(--chat-background-menu-selected);
                 }
             }
