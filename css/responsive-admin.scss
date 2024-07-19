@@ -519,7 +519,7 @@ div ul.sb-menu li,
 .sb-title {
     font-size: var(--chat-text-size-1-2);
     line-height: 47px;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
 }
 
 .sb-lightbox .sb-main>.sb-title+*,
@@ -963,7 +963,7 @@ a.sb-btn {
                     position: absolute;
                     animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
                     -webkit-animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
-                    padding: var(--chat-spacing-size-8);
+                    padding: var(--chat-spacing-size-7);
                 }
             }
         }
@@ -1013,7 +1013,7 @@ a.sb-btn {
 }
 
 .flex-add-users {
-    margin-bottom: 10px!important;
+    margin-bottom: 5px!important;
 
 }
 .flex-add-users:active {
@@ -1030,7 +1030,7 @@ a.sb-btn {
   }
 
   .routin-users-top-tip {
-    font-size: 33px;
+    font-size: var(--chat-text-size-1-0);
   
     &:active {
       scale: .8;
@@ -1045,6 +1045,7 @@ a.sb-btn {
 
   .routin-buttons-top-tip {
     font-size: var(--chat-text-size-1-0);
+    padding: 10px!important;
   
   
     > span {

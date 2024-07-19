@@ -1,20 +1,22 @@
 <?php
 define('SB_WAWEB', 'Go');
 
-// Define a list of blacklisted numbers
-$blacklist = ['120363296917461026', '5491126415491', '34660172262', '50761519259', '5491140908465','525574957250']; // Example blacklisted numbers
-
 function sb_waweb_send_message($to, $message = '', $attachments = [])
 {
     if (empty($message) && empty($attachments)) return json_encode(['status' => 'error', 'message' => 'Message and attachments are empty']);
 
     $to = trim(str_replace('+', '', $to));
-    
-    // Check if the recipient's number is blacklisted
-    global $blacklist;
-    if (in_array($to, $blacklist)) {
-        return json_encode(['status' => 'blacklisted', 'message' => 'Recipient is blacklisted.']);
-    }
+
+   
+        // Retrieve and process the blacklist
+        $blacklist_waweb_string = sb_get_setting('blacklist_waweb');
+        $blacklist_waweb = array_map('trim', explode(',', $blacklist_waweb_string)); 
+        
+
+        // Check if sender's phone is blacklist
+        if (in_array($to, $blacklist_waweb)) {
+            die(); 
+        }
 
     $user = sb_get_user_by('phone', $to);
     $response = false;
@@ -75,13 +77,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
             }
         }
         return $response;
-    } else {
-        if ($message) {
-            $query = ['messaging_product' => 'waweb', 'recipient_type' => 'individual', 'to' => $to];
-            // You can add the actual send logic here, if necessary.
-        }
-        return json_encode(['status' => 'success', 'message' => 'Message sent successfully']);
-    }
+    } 
 }
 
 function sb_waweb_rich_messages($message, $extra = false)

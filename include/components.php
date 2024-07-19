@@ -1507,7 +1507,7 @@ function sb_component_admin()
                                         <li class="flex-buttons-users transition-opacity">
                                             <a data-value="message" class="routin-buttons-top-tip">
                                                 <i class="bi-megaphone"></i>
-                                                <span class="routin-buttons-top-content"><?php sb_e('Broadcast message') ?></span>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Push messages') ?></span>
 
                                             </a>
                                         </li>

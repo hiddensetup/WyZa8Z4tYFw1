@@ -1,15 +1,18 @@
 <?php
-file_put_contents("api.txt", print_r($_POST, true), FILE_APPEND);
+file_put_contents("api.json", print_r($_POST, true), FILE_APPEND);
 
 $raw = file_get_contents('php://input');
+
 flush();
 if (function_exists('fastcgi_finish_request')) {
     fastcgi_finish_request();
+
 }
 
 try {
     if (!empty($_POST['Chat'])) {
         require('../../include/functions.php');
+
         if (empty(sb_get_multi_setting('waweb-go', 'waweb-go-active'))) {
             die();
         }
@@ -29,16 +32,27 @@ try {
         $user_id         = false;
         $conversation_id = false;
 
+
+        // Retrieve and process the blacklist
+        $blacklist_waweb_string = sb_get_setting('blacklist_waweb');
+        $blacklist_waweb = array_map('trim', explode(',', $blacklist_waweb_string)); 
+        
+
+        // Check if sender is admin
         if ($senderPhone == $adminPhone) {
             $isAdminAnswer = true;
             $phone = '+' . api_waweb_parse_phone($response['Chat']);
         }
 
+        // Check if sender's phone is blacklist
+        if (in_array($phone, $blacklist_waweb)) {
+            die(); 
+        }
+
         $user       = sb_get_user_by('phone', $phone);
         $department = sb_get_setting('waweb-department');
-        $payload    = array('isGroup' => !empty($_POST['isGroup']) ? true : false,);
+        $payload    = ['isGroup' => !empty($_POST['isGroup']) ? true : false];
 
-        // Determine message content
         $message = '';
         if (!empty($response['Conversation'])) {
             $message = $response['Conversation'];
@@ -48,11 +62,12 @@ try {
             $message = $response['reactionMessage']['text'];
         }
 
+        // If admin is answering and user doesn't exist, terminate
         if ($isAdminAnswer && !$user) {
             die();
         }
 
-        // User and conversation
+        // If user doesn't exist, create new user
         if (!$user) {
             $name          = trim($response['SenderName']);
             $space_in_name = strpos($name, ' ');
@@ -68,16 +83,15 @@ try {
 
         $GLOBALS['SB_LOGIN'] = $user;
 
+        // If conversation ID doesn't exist, create new conversation
         if (!$conversation_id) {
             $conversation_id = sb_isset(sb_new_conversation($user_id, 2, '', $department, -1, 'wx'), 'details', [])['id'];
         }
 
-        // Attachments
         $attachments = [];
+        // Process attachments if present
         if (isset($_FILES['attachment'])) {
-            if (0 < $_FILES['attachment']['error']) {
-                // skip upload
-            } else {
+            if ($_FILES['attachment']['error'] === UPLOAD_ERR_OK) {
                 $file_name      = $_FILES['attachment']['name'];
                 $directory_date = date('d-m-y');
                 $path           = '../../uploads/' . $directory_date;
@@ -89,61 +103,53 @@ try {
 
                 move_uploaded_file($_FILES['attachment']['tmp_name'], $path . '/' . $file_name);
 
-                array_push($attachments, [$file_name, $url . '/' . $file_name]);
+                $attachments[] = [$file_name, $url . '/' . $file_name];
             }
         }
 
         // Send message
         $response = sb_send_message($isAdminAnswer ? 1 : $user_id, $conversation_id, $message, $attachments, 2, $payload);
 
+        // If not admin answering, update user's last activity
         if (!$isAdminAnswer) {
-            // Dialogflow, Notifications, Bot messages
-            $response_external = sb_messaging_platforms_functions($conversation_id, $message, $attachments, $user, ['source' => 'wx', 'platform_value' => $phone]);
+            sb_messaging_platforms_functions($conversation_id, $message, $attachments, $user, ['source' => 'wx', 'platform_value' => $phone]);
 
-            // Queue
             if (sb_get_multi_setting('queue', 'queue-active')) {
                 sb_queue($conversation_id, $department, true);
             }
 
-            // Online status
             sb_update_users_last_activity($user_id);
         }
 
         $GLOBALS['SB_FORCE_ADMIN'] = false;
     }
+
     echo "api waweb";
 } catch (Throwable $e) {
     var_dump($e);
 }
 
+// Function to get conversation ID based on user ID
 function sb_waweb_get_conversation_id($user_id)
 {
     return sb_isset(sb_db_get('SELECT id FROM sb_conversations WHERE source = "wx" AND user_id = ' . $user_id . ' ORDER BY id DESC LIMIT 1'), 'id');
 }
 
+// Function to parse phone number
 function api_waweb_parse_phone($jid)
 {
-    // Split the string using either ':' or '@' as delimiters
     $phone_parts = preg_split('/[:@]/', $jid);
-
-    // Get the first part of the resulting array
     $phone = $phone_parts[0];
-
-    // Remove any non-numeric characters from the phone number
     $phone = preg_replace('/[^0-9]/', '', $phone);
-
-    // Check if the resulting phone number is not empty
     if (!empty($phone)) {
-        // Check if there is a second part (domain) in the array and if it's '@g.us'
         if (isset($phone_parts[1]) && $phone_parts[1] === 'g.us') {
-            // Concatenate the phone number with the domain
             return $phone . '@' . $phone_parts[1];
         } else {
             return $phone;
         }
     }
-
     return false;
 }
 
 die();
+?>

@@ -2,42 +2,52 @@
   {
     "type": "multi-input",
     "id": "whatsmeow-go",
-    "title": "WhatsApp <small style=\"color:var(--color-green);\">(new)</small>",
-    "content": "Link WhatsApp Business to Routin Cloud: $99/month, +$19/month for extra number.",
+    "title": "WhatsApp QR <small style=\"color:var(--color-green);\">(2)</small>",
+    "content": "Link your WhatsApp account to Routin Cloud using your phone number. This connection is secure and free of extra charge. You can also use our external API at https://routin.cloud",
     "help": "https://routin.cloud/",
     "value": [
       {
         "type": "text",
         "id": "whatsmeow-go-phone",
-        "title": "WhatsApp Phone Number"
+        "title": "Phone Number"
       },
+ 
       {
-        "type": "text",
-        "id": "whatsmeow-go-qr",
-        "title": "WhatsApp QR code link"
+        "type": "button",
+        "id": "whatsmeow-go-restart",
+        "button-text": "<i class=\"bi bi-qr-code\"></i> Generar conexión"
       },
       {
         "type": "button",
         "id": "whatsmeow-go-start",
-        "button-text": "Get the QR-Code"
-      },
-      {
-        "type": "text",
-        "id": "whatsmeow-go-url",
-        "title": "Auth Token"
-      },
-      {
-        "type": "button",
-        "id": "whatsmeow-go-restart",
-        "button-text": "Restart"
+        "button-text": "<i class=\"bi bi-window-x\"></i> Desconectar"
       },
       {
         "type": "checkbox",
         "id": "whatsmeow-go-active",
-        "title": "Active"
+        "title": "Deshabilitar"
+      },
+      {
+        "type": "text",
+        "id": "whatsmeow-go-url",
+        "title": "CLIENT TOKEN"
+      },
+
+      {
+        "type": "text",
+        "id": "whatsmeow-go-qr",
+        "title": "PORT"
       }
     ]
   },
+  {
+    "type": "textarea",
+    "id": "blacklist_whatsmeow",
+    "title": "Blacklist WhatsApp QR",
+    "content": "Block unwanted messages by entering phone numbers. This feature only blocks messages within our platform, not on WhatsApp or other messaging apps"
+   
+  },
+  
   {
     "type": "number",
     "id": "whatsmeow-department",

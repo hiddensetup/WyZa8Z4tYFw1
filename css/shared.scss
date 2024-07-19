@@ -1999,6 +1999,7 @@ div ul.sb-menu,
   border-radius: var(--chat-rounded-size-5);
   line-height: 0;
   font-weight: normal;
+  z-index: 5;
 
   &:hover {
     scale:1!important
@@ -2082,7 +2083,7 @@ div ul.sb-menu,
 
 .routin-users-top-tip {
   font-size: 1.4rem;
-  padding: 7px 10px;
+  padding: 10px!important;
   border-radius: var(--chat-rounded-size-5);
   transition: all .1s ease;
   display: flex;
@@ -2107,7 +2108,7 @@ div ul.sb-menu,
 
 .routin-buttons-top-tip {
   font-size: var(--chat-text-size-1-4);
-  padding: 7px 10px;
+  padding: 8px;
   border-radius: var(--chat-rounded-size-5);
   transition: all .1s ease;
   display: flex;

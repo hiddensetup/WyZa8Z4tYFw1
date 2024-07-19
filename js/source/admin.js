@@ -3656,10 +3656,7 @@
           });
         }
 
-        if (SB_ADMIN_SETTINGS["smart-reply"]) suggestions_area.html("");
-
-        // Open the conversation
-
+         // Open the conversation
         conversations_admin_list_ul.find("li").sbActive(false);
         conversation.sbActive(true);
         if (conversation_id != -1) {
@@ -3679,140 +3676,7 @@
             conversations_area.find(".sb-conversation-busy").remove();
             this.updateUserDetails();
 
-            // let phoneNumber = activeUser().getExtra("phone").value;
-            // let firstName = response.get("first_name");
-
-            // // Construct the HTML with the phone number
-            // conversations_area.find(".sb-top > a").html(phoneNumber);
-
-            // // Toggle between phone number and first name when clicked
-            // conversations_area.find(".sb-top > a").on("click", function() {
-            //     if ($(this).text() === phoneNumber) {
-            //         $(this).text(firstName);
-            //     } else {
-            //         $(this).text(phoneNumber);
-            //     }
-            // });
-
-            // let profileImage = response.get("profile_image");
-            // let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
-            // let phoneNumber = activeUser().getExtra("phone").value;
-            // let label = response.get("label");
-
-            // // Construct the HTML with the profile image and first name
-            // let htmlContent = `<span class="open-profile-name"><img src="${profileImage}" alt="Profile Image" style="width: 2.3rem; vertical-align: bottom; border-radius: 50%; padding-right: 5px;"></span> <span>${firstName}</span>`;
-
-            // // Set the HTML content
-            // conversations_area.find(".sb-top > a").html(htmlContent);
-
-            // // Define the toggle states based on data availability
-            // let toggleStates = [];
-            // if (phoneNumber) toggleStates.push(phoneNumber);
-            // if (label) toggleStates.push(label);
-            // toggleStates.push(firstName);
-
-            // // Keep track of the current toggle state
-            // let currentStateIndex = 0;
-
-            // // Handle clicking on the profile image
-            // conversations_area.find(".open-profile-name").on("click", function() {
-            //     SBProfile.showEdit(activeUser());
-            // });
-
-            // // Handle clicking on the first name
-            // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-            //     if (toggleStates.length > 1) {
-            //         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
-            //         $(this).text(toggleStates[currentStateIndex]);
-            //     }
-            // });
-
-            //               let profileImage = response.get("profile_image");
-            // let firstName = response.get("title").length > 27 ? response.get("title").slice(0, 27) + "..." : response.get("title");
-            // let phoneNumber = activeUser().getExtra("phone").value;
-            // let label = response.get("label");
-
-            // // Construct the HTML with the profile image and first name
-            // let htmlContent = `<span style="padding-right:5px;" class="open-profile-name"><img src="${profileImage}" class="top-image-profile"></span> <span>${firstName}</span>`;
-
-            // // Set the HTML content
-            // conversations_area.find(".sb-top > a").html(htmlContent);
-
-            // // Define the toggle states based on data availability
-            // let toggleStates = [];
-            // if (phoneNumber) toggleStates.push(`<i style="font-size:1rem" class="bi bi-telephone-fill"></i> ${phoneNumber}`);
-            // if (label) toggleStates.push(`<i style="font-size:1rem" class="bi bi-chevron-compact-right"></i> ${label}`);
-            // toggleStates.push(firstName);
-
-            // // Keep track of the current toggle state
-            // let currentStateIndex = 0;
-
-            // // Handle clicking on the profile image
-            // conversations_area.find(".open-profile-name").on("click", function() {
-            //     SBProfile.showEdit(activeUser());
-
-            // });
-
-            // // Handle clicking on the first name
-            // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-            //     if (toggleStates.length > 1) {
-            //         currentStateIndex = (currentStateIndex + 1) % toggleStates.length;
-            //         $(this).html(toggleStates[currentStateIndex]);
-            //     }
-            // });
-
-            // let profileImage = response.get("profile_image");
-            // let originalTitle = response.get("first_name");
-            // let screenWidth = $(window).width();
-            // let firstName;
-
-            // // Determine the character limit based on screen width
-            // if (screenWidth < 555) {
-            //     firstName = originalTitle.length > 20 ? originalTitle.slice(0, 20) + "..." : originalTitle;
-            // } else {
-            //     firstName = originalTitle.length > 27 ? originalTitle.slice(0, 27) + "..." : originalTitle;
-            // }
-
-            // let phoneNumber = activeUser().getExtra("phone").value;
-
-            // // Construct the HTML with the profile image and first name
-            // let htmlContent = `
-            //     <span style="padding-right:5px;" class="open-profile-name">
-            //         <img src="${profileImage}" class="top-image-profile">
-            //     </span>
-            //     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
-            // `;
-
-            // // Set the HTML content
-            // conversations_area.find(".sb-top > a").html(htmlContent);
-
-            // // Define the toggle state for phone number
-            // let toggleState = phoneNumber ? `<a style="color:var(--chat-text-primary);position:fixed;right:60px" href="tel:${phoneNumber}"><i class="bi bi-telephone-fill"></i></a>` : '';
-
-            // // Keep track of whether additional information is currently shown
-            // let isAdditionalInfoShown = false;
-
-            // // Handle clicking on the profile image
-            // conversations_area.find(".open-profile-name").on("click", function() {
-            //     SBProfile.showEdit(activeUser());
-            // });
-
-            // // Handle clicking on the first name
-            // conversations_area.find(".sb-top > a > span:not(.open-profile-name)").on("click", function() {
-            //     let currentSpan = $(this).next(".additional-info");
-            //     if (!isAdditionalInfoShown) {
-            //         if (currentSpan.length === 0) {
-            //             currentSpan = $(`<span class="additional-info">${toggleState}</span>`);
-            //             $(this).after(currentSpan);
-            //         } else {
-            //             currentSpan.html(toggleState);
-            //         }
-            //         isAdditionalInfoShown = true;
-            //     } else {
-            //         currentSpan.remove();
-            //         isAdditionalInfoShown = false;
-            //     }
-            // });
+           
             let profileImage = response.get("profile_image");
             let originalTitle = response.get("first_name");
             let screenWidth = $(window).width();
@@ -3848,17 +3712,13 @@
       phoneNumber
         ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>`
         : ""
-    }</span>
+    }
+    </span>`;
 
-`;
-
-            // Set the HTML content
             conversations_area.find(".sb-top > a").html(htmlContent);
 
-            // Keep track of whether additional information is currently shown
             let isAdditionalInfoShown = false;
 
-            // Handle clicking on the profile image or the first name
             conversations_area
               .find(".sb-top > a > span")
               .on("click", function () {
@@ -3873,16 +3733,21 @@
               });
 
             // Handle clicking on the profile image
-            conversations_area
-              .find(".open-profile-name")
-              .on("click", function () {
-                SBProfile.showEdit(activeUser());
-              });
+            // conversations_area
+            //   .find(".open-profile-name")
+            //   .on("click", function () {
+            //     SBProfile.showEdit(activeUser());
+                
+            //   });
 
             $(".sb-list").prepend(
               '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
             );
 
+
+        if (SB_ADMIN_SETTINGS["smart-reply"]) suggestions_area.html("");
+
+       
             // Automatic translation
             SBAdmin.must_translate =
               SB_ADMIN_SETTINGS["translation"] &&
@@ -4093,6 +3958,31 @@
           pushState("?conversation=" + conversation_id);
       }
     },
+    positionList() {
+      let chat_list = document.querySelectorAll(
+        "ul.sorting-by-last-message li"
+      );
+
+      // Sort the chat list based on the data-time attribute
+      let sortedList = Array.from(chat_list).sort((a, b) => {
+        return (
+          new Date(b.getAttribute("data-time")).getTime() -
+          new Date(a.getAttribute("data-time")).getTime()
+        );
+      });
+
+      // Reorder the DOM elements
+      sortedList.forEach((item, index) => {
+        item.style.order = index;
+      });
+
+      // Update the parent container to use flexbox
+      let parentContainer = document.querySelector(
+        "ul.sorting-by-last-message"
+      );
+      parentContainer.style.display = "flex";
+      parentContainer.style.flexDirection = "column";
+    },
 
     // [Deprecated] this method is obsolete and it will be removed soon
     populate: function (conversation_id, user_id, scroll) {
@@ -4129,32 +4019,6 @@
       SBF.event("SBAdminConversationsLoaded", {
         conversations: response,
       });
-    },
-
-    positionList() {
-      let chat_list = document.querySelectorAll(
-        "ul.sorting-by-last-message li"
-      );
-
-      // Sort the chat list based on the data-time attribute
-      let sortedList = Array.from(chat_list).sort((a, b) => {
-        return (
-          new Date(b.getAttribute("data-time")).getTime() -
-          new Date(a.getAttribute("data-time")).getTime()
-        );
-      });
-
-      // Reorder the DOM elements
-      sortedList.forEach((item, index) => {
-        item.style.order = index;
-      });
-
-      // Update the parent container to use flexbox
-      let parentContainer = document.querySelector(
-        "ul.sorting-by-last-message"
-      );
-      parentContainer.style.display = "flex";
-      parentContainer.style.flexDirection = "column";
     },
 
     // Update the left conversations list with new conversations or messages
@@ -4404,7 +4268,7 @@
       }
     },
 
-    //function updates a menu or notification element with the count of conversations 
+    //function updates a menu or notification element with the count of conversations
     updateMenu: function () {
       const count = conversations_admin_list_ul.find(
         '[data-conversation-status="2"]'
@@ -4488,30 +4352,38 @@
       );
     },
 
-    
-
     setReadIcon(conversation_status_code) {
       // Determine if the status is unread
       let unread = conversation_status_code == 2;
-  
+
       // Find the relevant element based on the data-value attribute
-      let $detailsLink = conversations_area
-          .find('.sb-top [data-value="read"], .sb-top [data-value="unread"]');
-      
+      let $detailsLink = conversations_area.find(
+        '.sb-top [data-value="read"], .sb-top [data-value="unread"]'
+      );
+
       // Set the attributes and text based on the unread status
       $detailsLink
-          .sbActive([0, 1, 2].includes(parseInt(conversation_status_code)))
-          .attr("data-value", unread ? "read" : "unread")
-          .attr("data-sb-tooltip", sb_(unread ? "Mark as unread" : "Mark as read"))
-          .each(function() {
-              // Update the icon class
-              $(this).find("i").attr("class", unread ? "i-details bi-check-lg" : "i-details bi-check-all");
-              
-              // Update the text in the <span> tag
-              $(this).find("span").text(sb_(unread ? "Mark as unread" : "Mark as read"));
-          });
-  },
+        .sbActive([0, 1, 2].includes(parseInt(conversation_status_code)))
+        .attr("data-value", unread ? "read" : "unread")
+        .attr(
+          "data-sb-tooltip",
+          sb_(unread ? "Mark as unread" : "Mark as read")
+        )
+        .each(function () {
+          // Update the icon class
+          $(this)
+            .find("i")
+            .attr(
+              "class",
+              unread ? "i-details bi-check-lg" : "i-details bi-check-all"
+            );
 
+          // Update the text in the <span> tag
+          $(this)
+            .find("span")
+            .text(sb_(unread ? "Mark as unread" : "Mark as read"));
+        });
+    },
 
     // Return the conversation code of the left conversations list
     getListCode: function (conversation, status) {
@@ -4619,16 +4491,16 @@
         conversation.creation_time
       ).getTime()}" data-conversation-status="${status}" ${
         conversation.conversation_source
-          ? `data-conversation-source="${conversation.conversation_source}"`
+          ? ` data-conversation-source="${conversation.conversation_source}"`
           : ""
       }>
-        <small class="source-conversation-icon">
+        <small style="visibility:hidden;" class="source-conversation-icon">
             <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
               conversation.conversation_source
             }.svg">
         </small>
         <div class="sb-profile client-status">
-            <img class="client-icon-status sb-icon tags-${
+            <img  class="client-icon-status sb-icon tags-${
               conversation.label
             } bi-kanban-fill loading="lazy" src="${conversation.profile_image}">
             <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${
@@ -5227,43 +5099,27 @@
    * # Profile
    * ----------------------------------------------------------
    */
-
   var SBProfile = {
-    // Get all profile settings
     getAll: function (profile_area) {
       return SBForm.getAll(profile_area);
     },
-
-    // Get a single setting
     get: function (input) {
       return SBForm.get(input);
     },
-
-    // Set a single setting
     set: function (item, value) {
       return SBForm.set(item, value);
     },
-
     getUserExtra: function (user_id) {
-      SBF.ajax(
-        {
-          function: "get-user-extra",
-          user_id: user_id,
-        },
-        (res) => {
-          this.getUserExtra(user_id, response);
-        }
-      );
+      SBF.ajax({
+        function: "get-user-extra",
+        user_id: user_id,
+      }, (res) => {
+        this.getUserExtra(user_id, response);
+      });
     },
-
-    // Display the user box
     show: function (user_id) {
       loadingGlobal();
-      activeUser(
-        new SBUser({
-          id: user_id,
-        })
-      );
+      activeUser(new SBUser({ id: user_id }));
       activeUser().update(() => {
         this.populate(activeUser(), profile_box.find(".sb-profile-list"));
         profile_box.find(".sb-profile").setProfile();
@@ -5272,142 +5128,74 @@
           if (SBF.isAgent(user_type)) {
             this.agentData();
           }
-          profile_box
-            .find(".sb-user-conversations")
-            .html(activeUser().getConversationsCode(response));
-          profile_box.find(".sb-top-bar [data-value]").sbActive(false);
+          profile_box.find(".sb-user-conversations").html(activeUser().getConversationsCode(response));
+          profile_box.find(".sb-top-bar [data-value]").sbActive(!1);
           if (!SBF.null(activeUser().get("email"))) {
-            profile_box.find(".sb-top-bar [data-value=email]").sbActive(true);
+            profile_box.find(".sb-top-bar [data-value=email]").sbActive(!0);
           }
-          if (activeUser().getExtra("phone") && SB_ADMIN_SETTINGS["sms"]) {
-            profile_box.find(".sb-top-bar [data-value=sms]").sbActive(true);
+          if (activeUser().getExtra("phone") && SB_ADMIN_SETTINGS.sms) {
+            profile_box.find(".sb-top-bar [data-value=sms]").sbActive(!0);
           }
           this.boxClasses(profile_box, user_type);
           profile_box.attr("data-user-id", activeUser().id).sbShowLightbox();
-          loadingGlobal(false, false);
-          SBF.event("SBProfileBoxOpened", {
-            user_id: user_id,
-          });
+          loadingGlobal(!1, !1);
+          SBF.event("SBProfileBoxOpened", { user_id: user_id });
         });
         users[user_id] = activeUser();
         if (SBF.getURL("user") != user_id) pushState("?user=" + user_id);
       });
     },
-
     showEdit: function (user) {
       if (user instanceof SBUser) {
         let password = profile_edit_box.find("#password input");
         let current_user_type = user.type;
         let select = profile_edit_box.find("#user_type select");
-
-        profile_edit_box
-          .removeClass("sb-user-new")
-          .attr("data-user-id", user.id);
-        profile_edit_box
-          .find(".sb-top-bar .sb-save")
-          .html(`<i class="bi-check-lg"></i>${sb_("Save changes")}`);
+        profile_edit_box.removeClass("sb-user-new").attr("data-user-id", user.id);
+        profile_edit_box.find(".sb-top-bar .sb-save").html(`<i class="bi-check-lg"></i>${sb_("Save changes")}`);
         profile_edit_box.find(".sb-profile").setProfile();
         profile_edit_box.find(".sb-custom-detail").remove();
-        profile_edit_box.find("input,select,textara").removeClass("sb-error");
-
-        // Custom details
+        profile_edit_box.find("input,select,textarea").removeClass("sb-error");
         let code = "";
-        let default_ids = profile_edit_box
-          .find(".sb-additional-details [id]")
-          .map(function () {
-            return this.id;
-          })
-          .get()
-          .concat([
-            "facebook-id",
-            "ip",
-            "os",
-            "current_url",
-            "country_code",
-            "browser_language",
-            "browser",
-          ]);
+        let default_ids = profile_edit_box.find(".sb-additional-details [id]").map(function () {
+          return this.id;
+        }).get().concat(["facebook-id", "ip", "os", "current_url", "country_code", "browser_language", "browser",]);
         for (var id in user.extra) {
           if (!default_ids.includes(id)) {
-            code += `<div id="${id}" data-type="text" class="sb-input sb-custom-detail"><span>${sb_(
-              user.extra[id].name
-            )}</span><input type="text"></div>`;
+            code += `<div id="${id}" data-type="text" class="sb-input sb-custom-detail"><span>${sb_(user.extra[id].name)}</span><input type="text"></div>`;
           }
         }
-        profile_edit_box
-          .find(".sb-additional-details .sb-edit-box")
-          .append(code);
-
-        // Set values
+        profile_edit_box.find(".sb-additional-details .sb-edit-box").append(code);
         this.populateEdit(user, profile_edit_box);
         this.updateRequiredFields(current_user_type);
-
-        // User type select
-        if (
-          SB_ACTIVE_AGENT["user_type"] == "admin" &&
-          SBF.isAgent(current_user_type)
-        ) {
-          select.html(
-            `<option value="agent">${sb_(
-              "Agent"
-            )}</option><option value="admin"${
-              current_user_type == "admin" ? " selected" : ""
-            }>${sb_("Admin")}</option>`
-          );
+        if (SB_ACTIVE_AGENT.user_type == "admin" && SBF.isAgent(current_user_type)) {
+          select.html(`<option value="agent">${sb_("Agent")}</option><option value="admin"${current_user_type == "admin" ? " selected" : ""}>${sb_("Admin")}</option>`);
         }
-
-        // Password
         if (password.val()) {
           password.val("********");
         }
-
-        // // Cloud
-        // if (SB_ADMIN_SETTINGS.cloud) {
-        //   profile_edit_box.setClass(
-        //     "sb-cloud-admin",
-        //     SB_ADMIN_SETTINGS.cloud.id == user.id
-        //   );
-        // }
-
-        // Show the edit box
         this.boxClasses(profile_edit_box, current_user_type);
         profile_edit_box.sbShowLightbox();
-        SBF.event("SBProfileEditBoxOpened", {
-          user_id: user.id,
-        });
+        SBF.event("SBProfileEditBoxOpened", { user_id: user.id });
       } else {
         SBF.error("User not of type SBUser", "SBUsers.showEdit");
-        return false;
+        return !1;
       }
     },
-
-    // Populate profile
     populate: function (user, profile_area) {
       let exclude = ["first_name", "last_name", "password", "profile_image"];
-      let code = "";
+      let phoneRow = ""; // Store phone row separately
+      let otherRows = ""; // Store other rows separately
+    
       if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
         var source = SBChat.conversation.get("source");
         var label = SBChat.conversation.get("label");
-        code = this.profileRow(
-          "conversation-id",
-          SBChat.conversation.id,
-          sb_("Conversation ID")
-        );
+        otherRows += this.profileRow("conversation-id", SBChat.conversation.id, sb_("Conversation ID"));
         if (!SBF.null(label)) {
-          code += this.profileRow(
-            "conversation-label",
-            label,
-            sb_("Client status")
-          );
+          otherRows += this.profileRow("conversation-label", label, sb_("Client status"), true); // Hide label span and icon
         } else {
-          code += this.profileRow(
-            "conversation-label",
-            "Unknown",
-            sb_("Label")
-          );
+          otherRows += this.profileRow("conversation-label", "Unknown", sb_("Label"), true); // Hide label span and icon
         }
         if (!SBF.null(source)) {
-          // Mapping object for source labels
           const sourceLabels = {
             fb: "Facebook",
             ww: "Whatsmeow",
@@ -5422,243 +5210,113 @@
             tw: "Twitter",
             bm: "Google",
           };
-
-          // Get the label directly from the mapping object
           const sourceLabel = sourceLabels[source] || source;
-          code += this.profileRow(
-            "conversation-source",
-            sourceLabel,
-            sb_("Source")
-          );
+          otherRows += this.profileRow("conversation-source", sourceLabel, sb_("Source"), true); // Hide source span and icon
         } else {
-          code += this.profileRow("conversation-source", "Unknown");
+          otherRows += this.profileRow("conversation-source", "Unknown", "", true); // Hide source span and icon
         }
       }
-      if (SB_ACTIVE_AGENT["user_type"] != "admin") {
+      if (SB_ACTIVE_AGENT.user_type != "admin") {
         exclude.push("token");
       }
       for (var key in user.details) {
         if (!exclude.includes(key)) {
-          code += this.profileRow(key, user.get(key));
+          otherRows += this.profileRow(key, user.get(key));
         }
       }
       if (user.isExtraEmpty()) {
-        SBF.ajax(
-          {
-            function: "get-user-extra",
-            user_id: user.id,
-          },
-          (response) => {
-            //added ↓
-            for (var i = 1; i < response.length; i++) {
-              let slug = response[i]["slug"];
-              user.setExtra(slug, response[i]);
-              code += this.profileRow(
-                slug,
-                response[i].value,
-                response[i]["name"]
-              );
-            }
-            profile_area.html(`<ul>${code}</ul>`);
-            collapse(profile_area, 56);
+        SBF.ajax({
+          function: "get-user-extra",
+          user_id: user.id,
+        }, (response) => {
+          for (var i = 1; i < response.length; i++) {
+            let slug = response[i].slug;
+            user.setExtra(slug, response[i]);
+            otherRows += this.profileRow(slug, response[i].value, response[i].name);
           }
-        );
+          // Insert phone row before other rows
+          profile_area.html(`<h3 class="sb-user-details-info">${sb_("User information")}</h3><ul>${phoneRow}${otherRows}</ul>`);
+          collapse(profile_area, 56);
+        });
       } else {
         for (var key in user.extra) {
           let info = user.getExtra(key);
-          code += this.profileRow(key, info.value, info["name"]);
+          if (key === "phone") {
+            phoneRow += this.profileRow(key, info.value, info.name); // Place phone row separately
+          } else {
+            otherRows += this.profileRow(key, info.value, info.name);
+          }
         }
-        profile_area.html(
-          `<h3 class="sb-user-details-info">${sb_(
-            "User information"
-          )}</h3><ul>${code}</ul>`
-        );
+        // Insert phone row before other rows
+        profile_area.html(`<h3 class="sb-user-details-info">${sb_("User information")}</h3><ul>${phoneRow}${otherRows}</ul>`);
         collapse(profile_area, 56);
       }
-
-      // Listen for change_conversation_source
       $("#change-conversation-source").change(function (e) {
-        // Save the selected value before updating options
         const selectedValue = e.target.value;
-
-        // Construct the URL using the selected source code
         const url = `${STMBX_URL}/media/apps/${selectedValue}.svg`;
-
-        // Update the image source with the selected source
         $("#conversation-source-icon").attr("src", url);
-
-        // Send an AJAX request to update the conversation source on the server
-        SBF.ajax(
-          {
-            function: "update-conversation-source",
-            conversation_id: SBChat.conversation.id,
-            source: selectedValue, // Use the saved selected value
-          },
-          (response) => {
-            showResponse("Required reload");
-           
-
-            // Set the selected value back after updating options
-            $("#change-conversation-source").val(selectedValue);
-             SBConversations.update(); // revisar switch
-            //  SBUsers.updateMenu();
-
-          }
-        );
-
-        // Update the source icon directly without reloading
+        SBF.ajax({
+          function: "update-conversation-source",
+          conversation_id: SBChat.conversation.id,
+          source: selectedValue,
+        }, (response) => {
+          showResponse("Required reload");
+          $("#change-conversation-source").val(selectedValue);
+          SBConversations.update();
+        });
         const iconClass = `sb-icon bi-${selectedValue}`;
-        $('.sb-profile-list [data-id="conversation-source"] i').attr(
-          "class",
-          iconClass
-        );
+        $('.sb-profile-list [data-id="conversation-source"] i').attr("class", iconClass);
       });
-
-      // $("#change-conversation-source").change(function (e) {
-      //     // change icon of source type
-      //     if (e.target.value !== "Unknown") {
-      //         const name = e.target.options[e.target.selectedIndex].text
-      //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
-      //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
-      //     }
-
-      //     SBF.ajax({
-      //         function: 'update-conversation-source',
-      //         conversation_id: SBChat.conversation.id,
-      //         source: e.target.value
-      //     }, (response) => {
-      //         showResponse('Reload to change the conversation source');
-      //     });
-      // });
-
       $("#change-conversation-labels").change(function (e) {
-        // change icon of source type
         if (e.target.value !== "Unknown") {
           const name = e.target.options[e.target.selectedIndex].text;
           let labcolor = `sb-icon bi-kanban-fill tags-${e.target.value}`;
-          $('.sb-profile-list [data-id="conversation-label"] i').attr(
-            "class",
-            labcolor
-          );
-          $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
-            "class",
-            labcolor
-          );
+          $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
+          $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
           $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
         }
         SBProfile.updateLabel(e.target.value);
       });
-
-      //change label
-      //   $("#CstBtn a").click(function (e) {
-      //     const label = $(this).attr("id");
-      //     const name = sb_(SBF.admin_set("label-names")[label] + " ");
-      //     let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
-      //     $('.sb-profile-list [data-id="conversation-label"] i').attr(
-      //       "class",
-      //       labcolor
-      //     );
-      //     $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
-      //       "class",
-      //       labcolor
-      //     );
-      //     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-      //     SBProfile.updateLabel(label);
-      //   });
-      // },
-
-      //     getLabel: function (label) {
-      //       SBF.ajax(
-      //         {
-      //           function: "get-clientStatus-conversations",
-      //           conversation_id: SBChat.conversation.id,
-      //           label: label,
-      //         },
-      //         (response) => {
-      //           if (SBReports.active_report == "status-client") {
-      //             SBReports.initReport("status-client");
-      //           }
-      //         }
-      //       );
-      //     },
-
-      //     updateLabel: function (label) {
-      //       SBF.ajax(
-      //         {
-      //           function: "update-clientStatus-conversations",
-      //           conversation_id: SBChat.conversation.id,
-      //           label: label,
-      //         },
-      //         (response) => {
-      //           if (SBReports.active_report == "status-client") {
-      //             SBReports.initReport("status-client");
-      //           }
-
-      //         }
-      //       );
-      //     },
-
-      // Change label
       $("#CstBtn a").click(function (e) {
         const label = $(this).attr("id");
         const name = sb_(SBF.admin_set("label-names")[label] + " ");
         let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
-        $('.sb-profile-list [data-id="conversation-label"] i').attr(
-          "class",
-          labcolor
-        );
-        $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
-          "class",
-          labcolor
-        );
+        $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
+        $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
         $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-        SBProfile.updateLabelUI(label, name, labcolor); // Update UI
+        SBProfile.updateLabelUI(label, name, labcolor);
         SBProfile.updateLabel(label);
       });
     },
-    // Update label UI
+    
     updateLabelUI: function (label, name, labcolor) {
-      // Update label name and color in UI
-      $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
-        "class",
-        labcolor
-      );
       $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+      $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
+      $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
     },
-
-    // Get label
     getLabel: function (label) {
-      SBF.ajax(
-        {
-          function: "get-clientStatus-conversations",
-          conversation_id: SBChat.conversation.id,
-          label: label,
-        },
-        (response) => {
-          if (SBReports.active_report == "status-client") {
-            SBReports.initReport("status-client");
-          }
+      SBF.ajax({
+        function: "get-clientStatus-conversations",
+        conversation_id: SBChat.conversation.id,
+        label: label,
+      }, (response) => {
+        if (SBReports.active_report == "status-client") {
+          SBReports.initReport("status-client");
         }
-      );
+      });
     },
-
-    // Update label
     updateLabel: function (label) {
-      SBF.ajax(
-        {
-          function: "update-clientStatus-conversations",
-          conversation_id: SBChat.conversation.id,
-          label: label,
-        },
-        (response) => {
-          if (SBReports.active_report == "status-client") {
-            SBReports.initReport("status-client");
-          }
+      SBF.ajax({
+        function: "update-clientStatus-conversations",
+        conversation_id: SBChat.conversation.id,
+        label: label,
+      }, (response) => {
+        if (SBReports.active_report == "status-client") {
+          SBReports.initReport("status-client");
         }
-      );
+      });
     },
-
-    profileRow: function (key, value, name = key) {
+    profileRow: function (key, value, name = key, hidden = false) {
       if (value == "") return "";
       let icons = {
         id: "person-vcard",
@@ -5682,13 +5340,9 @@
         current_url: "radar",
         timezone: "clock",
       };
-
-      //added ↑
-      let icon = `<i class="sb-icon bi-${
-        key in icons ? icons[key] : "app"
-      }"></i>`;
+      let icon = `<i class="sb-icon bi-${key in icons ? icons[key] : "app"}"></i>`;
       let lowercase;
-      let image = false;
+      let image = !1;
       switch (key) {
         case "last_activity":
         case "creation_time":
@@ -5720,12 +5374,7 @@
           lowercase = value.toLowerCase();
           if (lowercase.includes("windows")) {
             image = "windows";
-          } else if (
-            lowercase.includes("mac") ||
-            lowercase.includes("apple") ||
-            lowercase.includes("ipad") ||
-            lowercase.includes("iphone")
-          ) {
+          } else if (lowercase.includes("mac") || lowercase.includes("apple") || lowercase.includes("ipad") || lowercase.includes("iphone")) {
             image = "apple";
           } else if (lowercase.includes("android")) {
             image = "android";
@@ -5738,173 +5387,97 @@
         case "conversation-source":
         case "browser":
         case "os":
-        case "conversation-source":
           image = value.toLowerCase();
-          value = `<select disabled style="background: transparent;border-color: transparent;" id="change-conversation-source">
-                                <option  value="tk" ${
-                                  value == "Tickets" ? "selected" : ""
-                                } value>Live Chat</option>
-                                <option value="ww" ${
-                                  value == "Whatsmeow" ? "selected" : ""
-                                } value>WhatsApp QR</option>
-                                <option value="wx" ${
-                                  value == "waweb" ? "selected" : ""
-                                } value>WhatsApp Web</option>                                
-                                <option value="wa" ${
-                                  value == "WhatsApp" ? "selected" : ""
-                                } value>WhatsApp API</option>
-                                <option   hidden value="tg" ${
-                                  value == "Telegram" ? "selected" : ""
-                                } value>Telegram</option>
-                                <option  hidden value="bm" ${
-                                  value == "Google" ? "selected" : ""
-                                } value>Google</option>
-                                <option  hidden value="tm" ${
-                                  value == "Text message" ? "selected" : ""
-                                } value>Text message</option>
-                                <option hidden value="un" ${
-                                  value == "Unknown" ? "selected" : ""
-                                } value>Facebook</option>                                
-                                <option hidden value="ig" ${
-                                  value == "Instagram" ? "selected" : ""
-                                } value>Instagram</option>
-                                <option hidden value="wc" ${
-                                  value == "WeChat" ? "selected" : ""
-                                } value>WeChat</option>
-                                <option hidden value="em" ${
-                                  value == "Email" ? "selected" : ""
-                                } value>Email</option>
-                                <option  hidden value="tw" ${
-                                  value == "Twitter" ? "selected" : ""
-                                } value>Twitter</option>
-                             </select>`;
+          value = `<select disabled style="display:none; background: transparent; border-color: transparent;" id="change-conversation-source">
+            <option value="tk" ${value == "Tickets" ? "selected" : ""}>Live Chat</option>
+            <option value="ww" ${value == "Whatsmeow" ? "selected" : ""}>WhatsApp QR</option>
+            <option value="wx" ${value == "waweb" ? "selected" : ""}>WhatsApp Web</option>
+            <option value="wa" ${value == "WhatsApp" ? "selected" : ""}>WhatsApp API</option>
+            <option hidden value="tg" ${value == "Telegram" ? "selected" : ""}>Telegram</option>
+            <option hidden value="bm" ${value == "Google" ? "selected" : ""}>Google</option>
+            <option hidden value="tm" ${value == "Text message" ? "selected" : ""}>Text message</option>
+            <option hidden value="un" ${value == "Unknown" ? "selected" : ""}>Facebook</option>
+            <option hidden value="ig" ${value == "Instagram" ? "selected" : ""}>Instagram</option>
+            <option hidden value="wc" ${value == "WeChat" ? "selected" : ""}>WeChat</option>
+            <option hidden value="em" ${value == "Email" ? "selected" : ""}>Email</option>
+            <option hidden value="tw" ${value == "Twitter" ? "selected" : ""}>Twitter</option>
+          </select>`;
           if (image && value !== "Unknown") {
-            icon = `<img src="${STMBX_URL}/media/${
-              key == "conversation-source" ? "apps" : "devices"
-            }/${image}.svg" />`;
+            icon = `<img style="visibility:hidden;" src="${STMBX_URL}/media/${key == "conversation-source" ? "apps" : "devices"}/${image}.svg" />`;
           }
-          // console.log('ok');
-          // console.log(this);
-
           break;
         case "conversation-label":
           let bgselect = value;
           let labelset = clientStatus;
           let optlist = "";
-
           if (Array.isArray(labelset)) {
             labelset.forEach(function (label) {
-              optlist += `<option value="${label}" ${
-                value === label ? "selected" : ""
-              }>${sb_(SBF.get_value(label) + " ")}</option>`;
+              optlist += `<option value="${label}" ${value === label ? "selected" : ""}>${sb_(SBF.get_value(label) + " ")}</option>`;
             });
           }
-
-          // Determine the class based on the selected value
-          let selectedClass = `class="sb-icon bi-kanban-fill tags-${bgselect}"`;
-
-          value = `<select style="background: transparent; border-color: transparent;" id="change-conversation-labels">
-								<option value='unknown'>${sb_("Client status")}</option> ${optlist} </select>`;
+          let selectedClass = `class="sb-invisible sb-icon bi-kanban-fill tags-${bgselect}"`;
+          value = `<select style="visibility:hidden;background: transparent; border-color: transparent;" id="change-conversation-labels">
+            <option value='unknown'>${sb_("Client status")}</option> ${optlist} </select>`;
           icon = `<i ${selectedClass}></i>`;
+          break;
       }
-      return `<li data-id="${key}">${icon}<span>${sb_(
-        SBF.slugToString(name)
-      )}</span><label style="overflow-wrap: break-word">${value}</label></li>`;
+      let visibility = hidden ? 'style="visibility: hidden;"' : '';
+      return `<li data-id="${key}">${icon}<span ${visibility}>${sb_(SBF.slugToString(name))}</span><label style="overflow-wrap: break-word">${value}</label></li>`;
     },
-
-    // Populate profile edit box
     populateEdit: function (user, profile_edit_area) {
       profile_edit_area.find(".sb-details .sb-input").each((i, element) => {
         this.set(element, user.details[$(element).attr("id")]);
       });
-      profile_edit_area
-        .find(".sb-additional-details .sb-input")
-        .each((i, element) => {
-          let key = $(element).attr("id");
-          if (key in user.extra) {
-            this.set(element, user.extra[key].value);
-          } else {
-            this.set(element, "");
-          }
-        });
+      profile_edit_area.find(".sb-additional-details .sb-input").each((i, element) => {
+        let key = $(element).attr("id");
+        if (key in user.extra) {
+          this.set(element, user.extra[key].value);
+        } else {
+          this.set(element, "");
+        }
+      });
     },
-
-    // Clear the profile edit area
     clear: function (profile_edit_area) {
       SBForm.clear(profile_edit_area);
     },
-
-    // Check for errors on user input
     errors: function (profile_edit_area) {
       return SBForm.errors(profile_edit_area.find(".sb-details"));
     },
-
-    // Display a error message
     showErrorMessage: function (profile_edit_area, message) {
       SBForm.showErrorMessage(profile_edit_area, message);
     },
-
-    // Agents data area
     agentData: function () {
-      let code = `<div class="sb-title">${sb_(
-        "Feedback rating"
-      )}</div><div class="sb-rating-area sb-loading"></div>`;
+      let code = `<div class="sb-title">${sb_("Feedback rating")}</div><div class="sb-rating-area sb-loading"></div>`;
       let area = profile_box.find(".sb-agent-area");
       area.html(code);
-      SBF.ajax(
-        {
-          function: "get-rating",
-        },
-        (response) => {
-          if (response[0] == 0 && response[1] == 0) {
-            code = `<p class="sb-no-results">${sb_("No ratings yet.")}</p>`;
-          } else {
-            let total = response[0] + response[1];
-            let positive = (response[0] * 100) / total;
-            let negative = (response[1] * 100) / total;
-            code = `<div><div>${sb_("Helpful")}</div><span data-count="${
-              response[0]
-            }" style="width: ${Math.round(
-              positive * 2
-            )}px"></span><div>${positive.toFixed(
-              2
-            )} %</div></div><div><div>${sb_(
-              "Not helpful"
-            )}</div><span data-count="${
-              response[1]
-            }" style="width: ${Math.round(
-              negative * 2
-            )}px"></span><div>${negative.toFixed(
-              2
-            )} %</div></div><p class="sb-rating-count">${total} ${sb_(
-              "Ratings"
-            )}</p>`;
-          }
-          area.find(".sb-rating-area").html(code).sbLoading(false);
+      SBF.ajax({
+        function: "get-rating",
+      }, (response) => {
+        if (response[0] == 0 && response[1] == 0) {
+          code = `<p class="sb-no-results">${sb_("No ratings yet.")}</p>`;
+        } else {
+          let total = response[0] + response[1];
+          let positive = (response[0] * 100) / total;
+          let negative = (response[1] * 100) / total;
+          code = `<div><div>${sb_("Helpful")}</div><span data-count="${response[0]}" style="width: ${Math.round(positive * 2)}px"></span><div>${positive.toFixed(2)} %</div></div>
+          <div><div>${sb_("Not helpful")}</div><span data-count="${response[1]}" style="width: ${Math.round(negative * 2)}px"></span><div>${negative.toFixed(2)} %</div></div>
+          <p class="sb-rating-count">${total} ${sb_("Ratings")}</p>`;
         }
-      );
+        area.find(".sb-rating-area").html(code).sbLoading(!1);
+      });
     },
-
-    boxClasses: function (box, user_type = false) {
-      $(box)
-        .removeClass(
-          "sb-type-admin sb-type-agent sb-type-lead sb-type-user sb-type-visitor"
-        )
-        .addClass(
-          `${user_type != false ? `sb-type-${user_type}` : ""} sb-agent-${
-            SB_ACTIVE_AGENT["user_type"]
-          }`
-        );
+    boxClasses: function (box, user_type = !1) {
+      $(box).removeClass("sb-type-admin sb-type-agent sb-type-lead sb-type-user sb-type-visitor")
+        .addClass(`${user_type != false ? `sb-type-${user_type}` : ""} sb-agent-${SB_ACTIVE_AGENT["user_type"]}`);
     },
-
     updateRequiredFields: function (user_type) {
       let agent = SBF.isAgent(user_type);
       profile_edit_box.find("#password input").prop("required", agent);
-      profile_edit_box
-        .find("#email input")
-        .prop(agent || user_type == "user" || user_type == "lead");
+      profile_edit_box.find("#email input").prop(agent || user_type == "user" || user_type == "lead");
     },
   };
+
+  
 
   /*
    * ----------------------------------------------------------
@@ -6436,28 +6009,27 @@
         SBConversations.mobileCloseConversation();
       });
 
-      $(document).ready(function() {
+      $(document).ready(function () {
         var $usersTable = $(users_table);
         var $firstTh = $usersTable.find("th:first-child");
         var $rows = $usersTable.find("tr");
-    
+
         function updateTableStyles() {
-            if ($(window).width() < 555) {
-                $firstTh.addClass("sb-invisible");
-                $firstTh.css("margin", "-20px");  
-                $rows.addClass("sb-active");
-            } else {
-                $firstTh.removeClass("sb-invisible");
-                $firstTh.css("margin", "");  
-                $rows.removeClass("sb-active");
-            }
+          if ($(window).width() < 555) {
+            $firstTh.addClass("sb-invisible");
+            $firstTh.css("margin", "-20px");
+            $rows.addClass("sb-active");
+          } else {
+            $firstTh.removeClass("sb-invisible");
+            $firstTh.css("margin", "");
+            $rows.removeClass("sb-active");
+          }
         }
-    
-         updateTableStyles();
-    
-         $(window).resize(updateTableStyles);
-    });
-    
+
+        updateTableStyles();
+
+        $(window).resize(updateTableStyles);
+      });
 
       $(users_table).on("click", "th:first-child", function () {
         $(this).parent().toggleClass("sb-active");
@@ -7430,20 +7002,27 @@
       }
     );
 
-    // Display the user details box
     $(conversations_area).on(
       "click",
-      ".sb-user-details .sb-scroll-area div.sb-profile",
+      ".sb-user-details .sb-scroll-area div.sb-profile, .routin-top-tip",
       function () {
-        let user_id = conversations_admin_list_ul
-          .find(".sb-active")
-          .attr("data-user-id");
+        let user_id;
+        if ($(this).hasClass("sb-profile")) {
+          user_id = conversations_admin_list_ul
+            .find(".sb-active")
+            .attr("data-user-id");
+        } else if ($(this).hasClass("routin-top-tip")) {
+          // Logic specific to routin-top-tip element
+          user_id = $(this).attr("data-user-id");
+        }
+    
         if (activeUser().id != user_id) {
           activeUser(users[user_id]);
         }
         SBProfile.show(activeUser().id);
       }
     );
+    
     // custom to display location wa, tg, ww
     $(admin).on("click", '.sb-profile-list [data-id="location"]', function () {
       let location = $(this).find("label").html().replace(", ", "+");

@@ -1,13 +1,26 @@
 <?php
 define('SB_WHATSAPP', 'CLOUD');
 
-function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_number_id = false) //$payload
+function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_number_id = false)
 {
+    // Check for specific message content
     if (strpos($message, '*Plantilla WhatsApp*') !== false) {
         return ['success' => false, 'error' => ''];
     }
+
+    // Check if message or attachments are empty
     if (empty($message) && empty($attachments)) {
         return ['success' => false, 'error' => 'Message or attachments cannot be empty'];
+    }
+
+    // Retrieve and process the blacklist
+    $blacklist_api_cloud_string = sb_get_setting('blacklist_api_cloud');
+    $blacklist_api_cloud = array_map('trim', explode(',', $blacklist_api_cloud_string));
+
+    // Check if recipient's phone is in the blacklist
+    $to = trim(str_replace('+', '', $to));
+    if (in_array($to, $blacklist_api_cloud)) {
+        return ['success' => false, 'error' => 'This number is blacklisted'];
     }
 
     // Check if WhatsApp cloud is active
@@ -51,8 +64,6 @@ function sb_whatsapp_send_message($to, $message = '', $attachments = [], $phone_
             $response = $cloud_phone_id ? sb_whatsapp_cloud_curl("$cloud_phone_id/messages", $query, $phone_number_id) : sb_whatsapp_cloud_curl('messages', $query);
         }
     }
-
-    
 
     // // Log the response to a text file
     // $logFile = __DIR__ . '/response_log.txt';
