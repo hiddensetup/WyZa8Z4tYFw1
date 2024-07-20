@@ -4363,7 +4363,7 @@ if (conversation_id != -1) {
         .attr("data-value", unread ? "read" : "unread")
         .attr(
           "data-sb-tooltip",
-          sb_(unread ? "Mark as unread" : "Mark as read")
+          sb_(unread ? "Mark as read" : "Mark as unread")
         )
         .each(function () {
           // Update the icon class
@@ -4377,7 +4377,7 @@ if (conversation_id != -1) {
           // Update the text in the <span> tag
           $(this)
             .find("span")
-            .text(sb_(unread ? "Mark as unread" : "Mark as read"));
+            .text(sb_(unread ? "Mark as read" : "Mark as unread"));
         });
     },
 
@@ -5207,9 +5207,9 @@ if (conversation_id != -1) {
             bm: "Google",
           };
           const sourceLabel = sourceLabels[source] || source;
-          otherRows += this.profileRow("conversation-source", sourceLabel, sb_("Source"), true); // Hide source span and icon
+          otherRows += this.profileRow("conversation-source", sourceLabel, sb_("Source"), false); // Hide source span and icon
         } else {
-          otherRows += this.profileRow("conversation-source", "Unknown", "", true); // Hide source span and icon
+          otherRows += this.profileRow("conversation-source", "Unknown", "", false); // Hide source span and icon
         }
       }
       if (SB_ACTIVE_AGENT.user_type != "admin") {

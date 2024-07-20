@@ -1193,7 +1193,7 @@ function sb_component_admin()
                 </div>
 
                 <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
-                    <i style="padding:17px 0px;" class="bi-three-dots-vertical"></i>
+                    <i class="bi-three-dots-vertical bottom"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
@@ -1269,12 +1269,12 @@ function sb_component_admin()
                             <div class="sb-top">
                                 <i class="sb-btn-back bi-chevron-left"></i>
                                 <div class="sb-labels"></div>
-
-                                <a class="routin-top-tip"></a>
                                 <a class="routin-calls-chat"></a>
 
+                                <a class="routin-top-tip"></a>
+
                                 <div class="sb-menu-mobile sb-menu-top extra-background-color">
-                                    <i class="bi-three-dots-vertical bkg-color-menu"></i>
+                                    <i class="bi-three-dots-vertical top bkg-color-menu"></i>
                                     <ul class="ul-nav-top-mobile">
                                         <li class="li-data-content">
                                             <a class="a-details open-profile">

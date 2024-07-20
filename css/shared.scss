@@ -1892,6 +1892,14 @@ div ul.sb-menu,
   }
 }
 
+
+.routin-calls-chat {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+
+
 .sb-hide {
   display: none;
 }
@@ -1913,8 +1921,6 @@ div ul.sb-menu,
 .a-details, .i-details {
   font-size: var(--chat-text-size-1-0)!important;
 }
-
-
 
 
 /* General Tooltip Styles */
@@ -4651,7 +4657,7 @@ textarea::placeholder {
 
 .phone-number {
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   right: 13px;
   text-decoration: none;
   font-size: .6rem;

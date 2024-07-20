@@ -123,11 +123,12 @@ body {
 }
 
 .sb-admin {
-    width: 100%;
+    // width: 100%;
     padding: 0;
     // background: var(--chat-app-background);
     // -webkit-tap-highlight-color: var(--chat-app-background);
     user-select: auto;
+    left: 0;
     animation: fade-in .9s cubic-bezier(0.99, -0.62, 0, 0.87) !important;
 
 
@@ -429,7 +430,7 @@ body {
 }
 
 .additional-info {
-    position: fixed;
+    position: absolute;
     right: 45px;
     color: var(--chat-text-primary);
     z-index: 4;
@@ -658,7 +659,7 @@ a.sb-btn {
 */
 
 .sb-admin {
-    width: 100%;
+    // width: 100%;
     padding: 0 !important;
 
     >.sb-header {
@@ -666,8 +667,8 @@ a.sb-btn {
         // backdrop-filter: blur(100px);
         // -webkit-backdrop-filter: blur(100px);
         border-bottom: none;
-        width: 100%;
-        height: 60px;
+        width: auto;
+        height: auto;
         right: 0;
         top: auto;
         padding: 5px;
@@ -925,22 +926,28 @@ a.sb-btn {
         left: auto !important;
         right: 12px !important;
         padding: 0 !important;
-        height: 56px;
+        height: 50px;
         display: flex;
        justify-content: flex-end;
         z-index: 95;
         color: var(--chat-top-text-color);
         width: 30px !important;
 
-        >i {
+        >i, .top {
             display: block;
             width: 55px;
             cursor: pointer;
             text-align: center;
             font-size: 1.8rem;
             margin: auto;
-            margin: auto;
             padding: 0px 0px;
+
+        &i, .bottom {
+            margin: 10px auto;
+
+        }    
+
+
 
             // padding: 17px;
             // overflow: hidden;
@@ -1274,8 +1281,7 @@ a.sb-btn {
     min-height: 100%;
     border: none;
     border-radius: 0;
-    background: var(--chat-app-backdrop-a);
-    background-image: var(--chat-app-backdrop-b);
+    background: var(--chat-app-background);
 
 }
 
@@ -1893,10 +1899,11 @@ a.sb-btn {
 }
 
 .profile-log-background {
-    background: url(/media/whatsapp-bkg.png), var(--chat-conversation-background);
+    background: var(--chat-background-image);
+    background-color: var(--chat-conversation-background);
+    background-blend-mode: soft-light;
     padding: var(--chat-spacing-size-8);
     border-radius: var(--chat-rounded-size-8);
-    background-size: contain;
 }
 
 .sb-profile-edit-box,

@@ -31,7 +31,7 @@ body {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-    background: var(--chat-app-background);
+    background: var(--chat-text-theme-background);
 
 
 
@@ -1833,8 +1833,8 @@ TABLE
 
         i {
             z-index: 8;
-            top: 15px;
-            right: 20px;
+            top: 16px;
+            right: 24px;
             transform: scaleX(-1);
             //background-color: var(--background-conversation);
         }
@@ -1857,19 +1857,14 @@ TABLE
 
 .sb-admin {
     >.sb-header {
-        position: fixed;
+        position: absolute;
         width: 60px;
         top: 0;
-        left: 0;
+        left: -60px;
         bottom: 0;
         z-index: 9;
         background: var(--chat-background-menu-selected);
-
-        // background: var(--top-bar-mobile-color);
-
-        // border-right: 0.5px solid var(--chat-border-color);
-        // box-shadow: 0 1px 5px -1px rgb(0 0 0 / 30%);
-
+        border-left:.6px solid var(--chat-border-color);
        >.sb-admin-nav {
   >img {
     height: 35px;
@@ -2182,15 +2177,28 @@ BODY
 //filter: invert(100%) hue-rotate(3.33rad);}
 
 .sb-admin {
-    height: 100%;
-    width: calc(100% - 60px);
-    padding-left: 60px;
-    position: fixed;
+    height: 100vh; /* Use viewport height instead of percentage */
     font-size: var(--chat-text-size-9);
     line-height: 17px;
-    top: 0;
     z-index: 9;
-
+    max-width: 1440px;
+    
+    /* Center horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* Ensure the element takes up the full height of the viewport */
+    position: absolute;
+    top: 0;
+    left: 60px;
+    right: 0;
+    bottom: 0;
+    border-right: .6px solid var(--chat-border-color);
     &.sb-pwa {
         border-top: 0.5px solid transparent;
     }
@@ -2417,6 +2425,7 @@ BODY
         padding: 10px 0px 13px 0px;
         // padding: 16.5px 20px;
         // height: 75px;
+        height: 59px;
         //min-height: 75px;
         font-size: var(--chat-text-size-1-4);
         box-sizing: border-box;
@@ -3166,7 +3175,7 @@ BODY
         }
 
         [data-value="read"] {
-            color: var(--blue-root-color-aqua);
+            color: var(--color-red);
 
             //margin-right: 0px;
 
@@ -3176,7 +3185,7 @@ BODY
         }
 
         [data-value="unread"] {
-            color: var(--color-red);
+            color: inherit;
             //margin-right: 0px;
 
             i {
@@ -6576,7 +6585,7 @@ grammarly-editor-plugin {
         transition: var(--transition);
         -webkit-transition: var(--transition);
         position: absolute !important;
-        left: 70px;
+        left: 5px;
         z-index: 99;
         top: 10px;
 
@@ -6771,10 +6780,10 @@ grammarly-editor-plugin {
 
     .sb-area-conversations>.sb-btn-collapse {
         display: none;
-        position: fixed;
-        left: 70px;
+        position: absolute;
+        left: 10px;
         top: 11px;
-        transition: color 0.4s;
+        transition: color .4s;
         cursor: pointer;
         width: 30px;
         height: 30px;
@@ -6928,11 +6937,11 @@ grammarly-editor-plugin {
 
 
     .additional-info {
-        position: fixed;
+        position: absolute;
         right: 50px;
         color: var(--chat-text-primary);
         z-index: 2;
-        top: 10.5px;
+        top: 10px;
 
 
         .styling-caller {
@@ -6956,7 +6965,7 @@ grammarly-editor-plugin {
 
     .sb-board {
         >.sb-user-details {
-            position: fixed;
+            position: absolute;
             z-index: 5;
             top: 0;
             bottom: 0;
@@ -7120,7 +7129,7 @@ grammarly-editor-plugin {
 @media (min-width: 555px) and (max-width: 1024px) {
 
     .sb-admin>.sb-header {
-        border-right: .5px solid var(--chat-border-color);
+        // border-right: .5px solid var(--chat-border-color);
         transition: var(--transition);
         -webkit-transition: var(--transition);
     }
@@ -7133,10 +7142,10 @@ grammarly-editor-plugin {
 @media (min-width: 555px) and (max-width: 870px) {
 
 
-    .sb-admin>.sb-header {
-        border-right: 1px solid var(--chat-border-color);
+    // .sb-admin>.sb-header {
+    //     border-right: 1px solid var(--chat-border-color);
 
-    }
+    // }
 
     .sb-board {
         >.sb-admin-list {
@@ -7208,7 +7217,7 @@ grammarly-editor-plugin {
             background: transparent;
             border-radius: 20%;
             width: 35px;
-            left: 73px;
+            left: 10px;
         }
 
         &.bi-chevron-right {
