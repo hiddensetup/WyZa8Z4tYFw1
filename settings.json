@@ -1,0 +1,1062 @@
+{
+    "emails": {
+        "email-agent": [
+            {
+                "email-agent-subject": [
+                    "",
+                    "text"
+                ],
+                "email-agent-content": [
+                    "",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "email-user": [
+            {
+                "email-user-subject": [
+                    "",
+                    "text"
+                ],
+                "email-user-content": [
+                    "",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ]
+    },
+    "settings": {
+        "admin-title": [
+            "",
+            "text"
+        ],
+        "login-icon": [
+            "",
+            "upload-image"
+        ],
+        "rate-and-review": [
+            {
+                "rate-review": [
+                    "\u00bfC\u00f3mo calificar\u00edas la atenci\u00f3n recibida por parte del agente {agent_name}?\n\n1\ufe0f\u20e3 Satisfactoria: La atenci\u00f3n proporcionada por el agente fue efectiva y \u00fatil. El agente demostr\u00f3 competencia y amabilidad, y logr\u00f3 resolver mi consulta o problema de manera adecuada. La interacci\u00f3n cumpli\u00f3 con mis expectativas en cuanto a la calidad del servicio recibido.\n\n2\ufe0f\u20e3 Insatisfactoria: La atenci\u00f3n recibida no cumpli\u00f3 con mis expectativas. El agente no logr\u00f3 resolver mi consulta de manera efectiva, y la interacci\u00f3n dej\u00f3 aspectos importantes sin atender. La calidad del servicio fue menor a la esperada y no satisfizo mis necesidades de manera adecuada.\n\n",
+                    "textarea"
+                ],
+                "rate-reply": [
+                    "*\u00a1Gracias por tu participaci\u00f3n!*\n\nAgradecemos sinceramente que hayas tomado el tiempo para compartir tus comentarios sobre la atenci\u00f3n recibida por parte del agente {agent_name}. Tu opini\u00f3n es valiosa para nosotros y nos ayudar\u00e1 a mejorar la calidad de nuestro servicio.\n\nSi tienes alguna otra observaci\u00f3n o sugerencia adicional, no dudes en comunicarla. Estamos comprometidos en ofrecerte la mejor experiencia posible y tu feedback es fundamental para alcanzar ese objetivo.\n\n\u00a1Gracias por tu tiempo y colaboraci\u00f3n!",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "supervisor": [
+            {
+                "supervisor-id": [
+                    "",
+                    "text"
+                ],
+                "supervisor-users-area": [
+                    false,
+                    "checkbox"
+                ],
+                "supervisor-settings-area": [
+                    false,
+                    "checkbox"
+                ],
+                "supervisor-reports-area": [
+                    false,
+                    "checkbox"
+                ],
+                "supervisor-edit-user": [
+                    false,
+                    "checkbox"
+                ],
+                "supervisor-delete-conversation": [
+                    false,
+                    "checkbox"
+                ],
+                "supervisor-delete-message": [
+                    false,
+                    "checkbox"
+                ],
+                "supervisor-send-message": [
+                    false,
+                    "checkbox"
+                ]
+            },
+            "multi-input"
+        ],
+        "admin-auto-archive": [
+            false,
+            "checkbox"
+        ],
+        "disable-notes": [
+            false,
+            "checkbox"
+        ],
+        "disable-filters": [
+            true,
+            "checkbox"
+        ],
+        "bot-name": [
+            "Routin",
+            "text"
+        ],
+        "bot-image": [
+            "https:\/\/thispersondoesnotexist.com\/",
+            "upload-image"
+        ],
+        "welcome-message": [
+            {
+                "welcome-active": [
+                    false,
+                    "checkbox"
+                ],
+                "welcome-disable-office-hours": [
+                    true,
+                    "checkbox"
+                ],
+                "welcome-msg": [
+                    "\u00a1Hola! {user_name} \ud83d\udc4b\n\n\u2728 Bienvenido\/a a [Nombre de la Empresa] \u2728\n [image url=\"https:\/\/routin.cloud\/favicon.png\"] \n\n\ud83d\udd0d \u00bfEn qu\u00e9 podemos ayudarte hoy? Nuestro chatbot est\u00e1 aqu\u00ed para asistirte con cualquier consulta que tengas. Por favor, elige una de las siguientes opciones:\n\n- 1\ufe0f\u20e3  \ud83d\uded2 Consultas sobre Ventas: Pregunta sobre nuestros productos, precios o c\u00f3mo hacer una compra.\n- 2\ufe0f\u20e3 \ud83d\udee0\ufe0f Soporte T\u00e9cnico: Si necesitas ayuda con alg\u00fan problema t\u00e9cnico o tienes errores, este es el lugar.\n- 3\ufe0f\u20e3 \u2753 Consultas Generales: Para cualquier otra pregunta o informaci\u00f3n general.\n\ud83d\udcac Simplemente escribe una de las opciones arriba o tu consulta para comenzar.\n\n\u00a1Estamos aqu\u00ed para ayudarte! \ud83d\ude0a",
+                    "textarea"
+                ],
+                "json-flow": [
+                    "{\n  \"main_flow\": {\n   \"flow_1\": [\n      {\n        \"keywords\": [\"ventas\", \"compras\", \"producto\", \"precio\"],\n        \"bot_reply\": [\n          { \"message\": \"Gracias por tu inter\u00e9s en nuestros productos. \ud83d\uded2\", \"delay\": 500 },\n          { \"message\": \"Tu consulta ha sido redirigida al departamento de ventas. Uno de nuestros representantes te asistir\u00e1 pronto.\", \"delay\": 1000 }\n        ],\n        \"assign\": \"1\"\n      },\n      {\n        \"keywords\": [\"soporte t\u00e9cnico\", \"problemas\", \"errores\", \"asistencia t\u00e9cnica\"],\n        \"bot_reply\": [\n          { \"message\": \"Entendemos que necesitas soporte t\u00e9cnico. \ud83d\udee0\ufe0f\", \"delay\": 500 },\n          { \"message\": \"Tu consulta ha sido enviada al equipo de soporte t\u00e9cnico. Nos pondremos en contacto contigo para resolver el problema.\", \"delay\": 1000 }\n        ],\n        \"assign\": \"2\"\n      },\n      {\n        \"keywords\": [\"consultas generales\", \"ayuda\", \"soporte\", \"informaci\u00f3n\"],\n        \"bot_reply\": [\n          { \"message\": \"Hola, \u00bfc\u00f3mo puedo ayudarte hoy?\", \"delay\": 500 },\n          { \"message\": \"Tu consulta ha sido redirigida al departamento de consultas generales. Uno de nuestros agentes se pondr\u00e1 en contacto contigo pronto.\", \"delay\": 1000 }\n        ],\n        \"assign\": \"3\"\n      }\n    ]\n  }\n}",
+                    "textarea"
+                ],
+                "fallback-msg": [
+                    "*Bot*\nPor favor selecciona una opci\u00f3n del men\u00fa.",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "departments": [
+            [
+                {
+                    "department-name": "ventas",
+                    "department-color": "yellow",
+                    "department-image": "",
+                    "department-id": "1"
+                },
+                {
+                    "department-name": "soporte",
+                    "department-color": "red",
+                    "department-image": "",
+                    "department-id": "2"
+                },
+                {
+                    "department-name": "consultas",
+                    "department-color": "green",
+                    "department-image": "",
+                    "department-id": "3"
+                }
+            ],
+            "repeater"
+        ],
+        "close-message": [
+            {
+                "close-active": [
+                    true,
+                    "checkbox"
+                ],
+                "close-transcript": [
+                    false,
+                    "checkbox"
+                ],
+                "close-msg": [
+                    "Agradecemos que te hayas puesto en contacto con nosotros. Si necesitas m\u00e1s ayuda, no dudes en volver a escribir.\n\n\u00a1Hasta pronto! \ud83d\udc4b",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "agents": [
+            {
+                "agent-hide-conversations-routing": [
+                    false,
+                    "checkbox"
+                ]
+            },
+            "multi-input"
+        ],
+        "chat-timetable": [
+            {
+                "chat-timetable-active": [
+                    true,
+                    "checkbox"
+                ],
+                "chat-timetable-agents": [
+                    false,
+                    "checkbox"
+                ],
+                "chat-timetable-type": [
+                    "",
+                    "select"
+                ],
+                "chat-timetable-msg": [
+                    "Gracias por ponerte en contacto. Nuestro equipo est\u00e1 fuera de servicio en este momento, pero responderemos a tu mensaje lo antes posible durante el horario de atenci\u00f3n.\n\nHorario de Atenci\u00f3n: [Horario de atenci\u00f3n]\n\n\u00a1Gracias por tu paciencia! \ud83d\ude0a",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "timetable": [
+            {
+                "monday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "tuesday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "wednesday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "thursday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "friday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "saturday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ],
+                "sunday": [
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ],
+                    [
+                        "",
+                        ""
+                    ]
+                ]
+            },
+            "timetable"
+        ],
+        "timetable-utc": [
+            "",
+            "number"
+        ],
+        "saved-replies": [
+            [
+                {
+                    "reply-name": "info-demo",
+                    "reply-text": "*\u00bfQu\u00e9 es un CRM de WhatsApp multiagente?*\n [image url=\"https:\/\/routin.cloud\/favicon.png\"] \nUn CRM de WhatsApp multiagente es una herramienta que permite gestionar las conversaciones de WhatsApp de manera eficiente en un entorno colaborativo. Facilita la asignaci\u00f3n de mensajes a diferentes agentes, el seguimiento de conversaciones y la integraci\u00f3n de funciones de CRM para gestionar y analizar la comunicaci\u00f3n con los clientes."
+                }
+            ],
+            "repeater"
+        ],
+        "push-notifications": [
+            {
+                "push-notifications-active": [
+                    false,
+                    "checkbox"
+                ],
+                "push-notifications-users-active": [
+                    false,
+                    "checkbox"
+                ],
+                "push-notifications-id": [
+                    "",
+                    "text"
+                ],
+                "push-notifications-key": [
+                    "",
+                    "text"
+                ],
+                "push-notifications-sw-url": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "chat-sound-admin": [
+            "i",
+            "select"
+        ],
+        "desktop-notifications": [
+            "all",
+            "select"
+        ],
+        "flash-notifications": [
+            "all",
+            "select"
+        ],
+        "notifications-icon": [
+            "",
+            "upload-image"
+        ],
+        "notify-agent-email": [
+            false,
+            "checkbox"
+        ],
+        "notify-user-email": [
+            false,
+            "checkbox"
+        ],
+        "email-server": [
+            {
+                "email-server-host": [
+                    "",
+                    "text"
+                ],
+                "email-server-user": [
+                    "",
+                    "text"
+                ],
+                "email-server-password": [
+                    "",
+                    "text"
+                ],
+                "email-server-port": [
+                    "",
+                    "number"
+                ],
+                "email-server-from": [
+                    "",
+                    "text"
+                ],
+                "email-sender-name": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "email-piping": [
+            {
+                "email-piping-active": [
+                    false,
+                    "checkbox"
+                ],
+                "email-piping-host": [
+                    "",
+                    "text"
+                ],
+                "email-piping-user": [
+                    "",
+                    "text"
+                ],
+                "email-piping-password": [
+                    "",
+                    "text"
+                ],
+                "email-piping-port": [
+                    "110",
+                    "select"
+                ],
+                "email-piping-delimiter": [
+                    false,
+                    "checkbox"
+                ],
+                "email-piping-all": [
+                    false,
+                    "checkbox"
+                ],
+                "email-piping-disable-cron": [
+                    false,
+                    "checkbox"
+                ],
+                "email-piping-department": [
+                    "",
+                    "number"
+                ]
+            },
+            "multi-input"
+        ],
+        "pusher": [
+            {
+                "pusher-active": [
+                    false,
+                    "checkbox"
+                ],
+                "pusher-id": [
+                    "",
+                    "text"
+                ],
+                "pusher-key": [
+                    "",
+                    "text"
+                ],
+                "pusher-secret": [
+                    "",
+                    "text"
+                ],
+                "pusher-cluster": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "webhooks": [
+            {
+                "webhooks-active": [
+                    false,
+                    "checkbox"
+                ],
+                "webhooks-url": [
+                    "",
+                    "text"
+                ],
+                "webhooks-key": [
+                    "",
+                    "text"
+                ],
+                "webhooks-allowed": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "user-additional-fields": [
+            [],
+            "repeater"
+        ],
+        "user-table-extra-columns": [
+            [],
+            "repeater"
+        ],
+        "collapse": [
+            true,
+            "checkbox"
+        ],
+        "performance": [
+            {
+                "performance-reports": [
+                    true,
+                    "checkbox"
+                ]
+            },
+            "multi-input"
+        ],
+        "online-users-notification": [
+            true,
+            "checkbox"
+        ],
+        "disable-attachments": [
+            false,
+            "checkbox"
+        ],
+        "transcript": [
+            {
+                "transcript-type": [
+                    "csv",
+                    "select"
+                ],
+                "transcript-action": [
+                    "download",
+                    "select"
+                ],
+                "transcript-message": [
+                    "",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "whatsapp-cloud": [
+            {
+                "meta-user-id": [
+                    "",
+                    "text"
+                ],
+                "whatsapp-cloud-key": [
+                    "",
+                    "text"
+                ],
+                "whatsapp-cloud-token": [
+                    "",
+                    "text"
+                ],
+                "whatsapp-cloud-phone-id": [
+                    "",
+                    "text"
+                ],
+                "cloud-active": [
+                    false,
+                    "checkbox"
+                ]
+            },
+            "multi-input"
+        ],
+        "blacklist_api_cloud": [
+            "",
+            "textarea"
+        ],
+        "whatsapp-cloud-numbers": [
+            [],
+            "repeater"
+        ],
+        "whatsapp-template-cloud": [
+            {
+                "whatsapp-template-cloud-name": [
+                    "",
+                    "text"
+                ],
+                "whatsapp-template-cloud-languages": [
+                    "",
+                    "text"
+                ],
+                "whatsapp-template-cloud-parameters-body": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "whatsapp-department": [
+            "",
+            "number"
+        ],
+        "whatsmeow-go": [
+            {
+                "whatsmeow-go-phone": [
+                    "",
+                    "text"
+                ],
+                "whatsmeow-go-active": [
+                    true,
+                    "checkbox"
+                ],
+                "whatsmeow-go-url": [
+                    "EAApH1KmWEt0BO5M",
+                    "text"
+                ],
+                "whatsmeow-go-qr": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "blacklist_whatsmeow": [
+            "",
+            "textarea"
+        ],
+        "whatsmeow-department": [
+            "",
+            "number"
+        ],
+        "waweb-go": [
+            {
+                "waweb-go-phone": [
+                    "",
+                    "text"
+                ],
+                "waweb-go-active": [
+                    false,
+                    "checkbox"
+                ],
+                "waweb-go-url": [
+                    "EAApH1KmWEt0BO5M",
+                    "text"
+                ],
+                "waweb-go-qr": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "blacklist_waweb": [
+            "",
+            "textarea"
+        ],
+        "waweb-department": [
+            "",
+            "number"
+        ],
+        "telegram": [
+            {
+                "telegram-token": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "telegram-department": [
+            "",
+            "number"
+        ],
+        "gbm": [
+            {
+                "gbm-client-email": [
+                    "",
+                    "text"
+                ],
+                "gbm-private-key": [
+                    "",
+                    "text"
+                ],
+                "gbm-client-token": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "gbm-department": [
+            "",
+            "number"
+        ],
+        "twitter": [
+            {
+                "twitter-consumer-key": [
+                    "",
+                    "text"
+                ],
+                "twitter-consumer-secret": [
+                    "",
+                    "text"
+                ],
+                "twitter-access-token": [
+                    "",
+                    "text"
+                ],
+                "twitter-secret-token": [
+                    "",
+                    "text"
+                ],
+                "twitter-username": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "twitter-department": [
+            "",
+            "number"
+        ],
+        "front-auto-translations": [
+            false,
+            "checkbox"
+        ],
+        "popup-message": [
+            {
+                "popup-active": [
+                    true,
+                    "checkbox"
+                ],
+                "popup-mobile-hidden": [
+                    false,
+                    "checkbox"
+                ],
+                "popup-image": [
+                    "https:\/\/thispersondoesnotexist.com\/",
+                    "upload-image"
+                ],
+                "popup-title": [
+                    "",
+                    "text"
+                ],
+                "popup-msg": [
+                    "\u00a1Hola! \ud83d\udc4b \ud83d\udc40 \u00bfTienes alguna pregunta? Estamos aqu\u00ed para ayudarte.\n\n\ud83d\udcac \u00a1Inicia una conversaci\u00f3n con nuestro equipo ahora mismo! No importa si es una consulta r\u00e1pida o algo m\u00e1s detallado, estamos listos para asistirte en lo que necesites.\n\n",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "chat-sound": [
+            "a",
+            "select"
+        ],
+        "privacy": [
+            {
+                "privacy-active": [
+                    false,
+                    "checkbox"
+                ],
+                "privacy-title": [
+                    "",
+                    "text"
+                ],
+                "privacy-msg": [
+                    "",
+                    "textarea"
+                ],
+                "privacy-msg-decline": [
+                    "",
+                    "textarea"
+                ],
+                "privacy-link": [
+                    "",
+                    "text"
+                ],
+                "privacy-link-text": [
+                    "",
+                    "text"
+                ],
+                "privacy-btn-approve": [
+                    "",
+                    "text"
+                ],
+                "privacy-btn-decline": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "auto-open": [
+            false,
+            "checkbox"
+        ],
+        "force-one-conversation": [
+            false,
+            "checkbox"
+        ],
+        "init-dashboard": [
+            false,
+            "checkbox"
+        ],
+        "disable-dashboard": [
+            false,
+            "checkbox"
+        ],
+        "agents-menu": [
+            {
+                "agents-menu-active": [
+                    false,
+                    "checkbox"
+                ],
+                "agents-menu-title": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "chat-offline-disable": [
+            false,
+            "checkbox"
+        ],
+        "visitor-prefix": [
+            "",
+            "text"
+        ],
+        "visitor-default-name": [
+            "",
+            "text"
+        ],
+        "visitor-autodata": [
+            false,
+            "checkbox"
+        ],
+        "registration-required": [
+            "",
+            "select"
+        ],
+        "visitors-registration": [
+            false,
+            "checkbox"
+        ],
+        "registration-timetable": [
+            false,
+            "checkbox"
+        ],
+        "chat-timetable-disable": [
+            false,
+            "checkbox"
+        ],
+        "registration-offline": [
+            false,
+            "checkbox"
+        ],
+        "registration-link": [
+            "",
+            "text"
+        ],
+        "registration": [
+            {
+                "registration-title": [
+                    "",
+                    "text"
+                ],
+                "registration-msg": [
+                    "",
+                    "textarea"
+                ],
+                "registration-success": [
+                    "",
+                    "textarea"
+                ],
+                "registration-btn-text": [
+                    "",
+                    "text"
+                ],
+                "registration-terms-link": [
+                    "",
+                    "text"
+                ],
+                "registration-privacy-link": [
+                    "",
+                    "text"
+                ]
+            },
+            "multi-input"
+        ],
+        "login": [
+            {
+                "login-title": [
+                    "",
+                    "text"
+                ],
+                "login-msg": [
+                    "",
+                    "textarea"
+                ]
+            },
+            "multi-input"
+        ],
+        "registration-profile-img": [
+            false,
+            "checkbox"
+        ],
+        "registration-last-name": [
+            false,
+            "checkbox"
+        ],
+        "registration-password": [
+            false,
+            "checkbox"
+        ],
+        "registration-email-disable": [
+            false,
+            "checkbox"
+        ],
+        "registration-fields": [
+            {
+                "reg-phone": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-city": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-country": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-language": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-birthday": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-company": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-facebook": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-twitter": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-linkedin": [
+                    false,
+                    "checkbox"
+                ],
+                "reg-website": [
+                    false,
+                    "checkbox"
+                ]
+            },
+            "multi-input"
+        ],
+        "registration-phone-required": [
+            false,
+            "checkbox"
+        ],
+        "phone-code": [
+            "",
+            "select"
+        ],
+        "registration-user-details-success": [
+            false,
+            "checkbox"
+        ],
+        "registration-extra": [
+            false,
+            "checkbox"
+        ],
+        "duplicate-emails": [
+            false,
+            "checkbox"
+        ],
+        "show-profile-images-admin": [
+            true,
+            "checkbox"
+        ],
+        "color-1": [
+            "rgb(255, 255, 255)",
+            "color"
+        ],
+        "header-headline": [
+            "",
+            "text"
+        ],
+        "header-msg": [
+            "",
+            "text"
+        ],
+        "header-type": [
+            "minimal",
+            "select"
+        ],
+        "header-name": [
+            false,
+            "checkbox"
+        ],
+        "brand-img": [
+            "",
+            "upload-image"
+        ],
+        "chat-icon": [
+            "",
+            "upload-image"
+        ],
+        "chat-sb-icons": [
+            "button-chat-3.svg",
+            "select-images"
+        ],
+        "chat-button-offset": [
+            {
+                "chat-button-offset-top": [
+                    "",
+                    "number"
+                ],
+                "chat-button-offset-bottom": [
+                    "",
+                    "number"
+                ],
+                "chat-button-offset-right": [
+                    "",
+                    "number"
+                ],
+                "chat-button-offset-left": [
+                    "",
+                    "number"
+                ],
+                "chat-button-offset-mobile": [
+                    "all",
+                    "select"
+                ]
+            },
+            "multi-input"
+        ],
+        "chat-position": [
+            "right",
+            "select"
+        ]
+    }
+}

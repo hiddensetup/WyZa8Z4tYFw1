@@ -3656,58 +3656,60 @@
           });
         }
 
-         // Open the conversation
-        conversations_admin_list_ul.find("li").sbActive(false);
-        conversation.sbActive(true);
-        if (conversation_id != -1) {
-          activeUser().getFullConversation(conversation_id, (response) => {
-            let conversation_status_code = response.get(
-              "conversation_status_code"
-            );
-            let select = conversations_filters.eq(0);
-            let select_status_code = select
-              .find(".sb-active")
-              .attr("data-value");
+     // Open the conversation
+conversations_admin_list_ul.find("li").sbActive(false);
+conversation.sbActive(true);
+if (conversation_id != -1) {
+  activeUser().getFullConversation(conversation_id, (response) => {
+    let conversation_status_code = response.get(
+      "conversation_status_code"
+    );
+    let select = conversations_filters.eq(0);
+    let select_status_code = select
+      .find(".sb-active")
+      .attr("data-value");
 
-            SBChat.setConversation(response);
-            SBChat.populate();
+    SBChat.setConversation(response);
+    SBChat.populate();
 
-            this.setReadIcon(conversation_status_code);
-            conversations_area.find(".sb-conversation-busy").remove();
-            this.updateUserDetails();
+    this.setReadIcon(conversation_status_code);
+    conversations_area.find(".sb-conversation-busy").remove();
+    this.updateUserDetails();
 
-           
-            let profileImage = response.get("profile_image");
-            let originalTitle = response.get("first_name");
-            let screenWidth = $(window).width();
-            let firstName;
+    let profileImage = response.get("profile_image");
+    let originalTitle = response.get("first_name");
+    let screenWidth = $(window).width();
+    let firstName;
 
-            // Determine the character limit based on screen width
-            if (screenWidth < 555) {
-              firstName =
-                originalTitle.length > 18
-                  ? originalTitle.slice(0, 18) + "..."
-                  : originalTitle;
-            } else {
-              firstName =
-                originalTitle.length > 27
-                  ? originalTitle.slice(0, 27) + "..."
-                  : originalTitle;
-            }
+    // Determine the character limit based on screen width
+    if (screenWidth < 555) {
+      firstName =
+        originalTitle.length > 18
+          ? originalTitle.slice(0, 18) + "..."
+          : originalTitle;
+    } else {
+      firstName =
+        originalTitle.length > 27
+          ? originalTitle.slice(0, 27) + "..."
+          : originalTitle;
+    }
 
-            let phoneNumber = activeUser().getExtra("phone").value;
+    let phoneNumber = activeUser().getExtra("phone").value;
 
-            // Determine which icon to use based on screen width
-            let iconClass =
-              screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
+    // Determine which icon to use based on screen width
+    let iconClass =
+      screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
 
-            // Construct the HTML with the profile image, first name, and icon
-            let htmlContent = `
+    // Construct the HTML with the profile image and first name
+    let htmlContent = `
     <span style="padding-right:5px;" class="open-profile-name">
         <img src="${profileImage}" class="top-image-profile">
         <span class="routin-top-content">Editar</span>
     </span> 
-    <span style="margin: 0px 10px 0px 0px;">${firstName}</span>
+    <span style="margin: 0px 10px 0px 0px;">${firstName}</span>`;
+
+    // Construct the HTML for the icon
+    let iconContent = `
     <span class="additional-info">${
       phoneNumber
         ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>`
@@ -3715,35 +3717,29 @@
     }
     </span>`;
 
-            conversations_area.find(".sb-top > a").html(htmlContent);
+    // Insert the constructed HTML into the respective elements
+    conversations_area.find(".sb-top > a.routin-top-tip").html(htmlContent);
+    conversations_area.find(".sb-top > a.routin-calls-chat").html(iconContent);
 
-            let isAdditionalInfoShown = false;
+    let isAdditionalInfoShown = false;
 
-            conversations_area
-              .find(".sb-top > a > span")
-              .on("click", function () {
-                // Toggle additional info
-                let currentSpan = $(this).next(".additional-info");
-                if (!isAdditionalInfoShown) {
-                  currentSpan.show();
-                } else {
-                  currentSpan.hide();
-                }
-                isAdditionalInfoShown = !isAdditionalInfoShown;
-              });
+    conversations_area
+      .find(".sb-top > a.routin-top-tip > span")
+      .on("click", function () {
+        // Toggle additional info
+        let currentSpan = $(this).next(".additional-info");
+        if (!isAdditionalInfoShown) {
+          currentSpan.show();
+        } else {
+          currentSpan.hide();
+        }
+        isAdditionalInfoShown = !isAdditionalInfoShown;
+      });
 
-            // Handle clicking on the profile image
-            // conversations_area
-            //   .find(".open-profile-name")
-            //   .on("click", function () {
-            //     SBProfile.showEdit(activeUser());
-                
-            //   });
-
-            $(".sb-list").prepend(
-              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
-            );
-
+    $(".sb-list").prepend(
+      '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
+    );
+  
 
         if (SB_ADMIN_SETTINGS["smart-reply"]) suggestions_area.html("");
 

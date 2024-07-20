@@ -10,27 +10,21 @@
  */
 
 
- // define('WW_URL_GO', 'http://localhost');
-// define('WW_TOKEN', 'QWERTYUIOP');
+ define('WW_URL_GO', 'http://go.steambox.uno');
+ define('WW_TOKEN', 'EAApH1KmWEt0BO5M');
+ 
+ define('WX_URL_GO', 'http://go.steambox.uno');
+ define('WX_TOKEN', 'EAApH1KmWEt0BO5M');
+ 
+ /* Access token */
+ define('PAYMENT_LINK', 'https://wa.me/13028035360');
+ define('MESSAGE_TYPE', ''); // we can define trial or payment
+ define('TOKEN', '2024-12-11');
 
-// define('WX_URL_GO', 'http://localhost');
-// define('WX_TOKEN', 'QWERTYUIOP');
-
-/* URL for WhatsApp */
-define('WW_URL_GO', 'http://195.35.11.3');
-define('WW_TOKEN', 'TESTING1');
-
-define('WX_URL_GO', 'http://195.35.11.3');
-define('WX_TOKEN', 'TESTING2');
-
-/* Access token */
-define('PAYMENT_LINK', 'https://wa.me/13028035360');
-define('MESSAGE_TYPE', ''); // we can define trial or payment
-define('TOKEN', '2024-12-11');
 
 /* Plugin folder url */
 define('STMBX_URL', '[url]');
-// define('STMBX_URL', 'http://localhost:8888');
+// define('STMBX_URL', 'http://localhost');
 
 /* The name of the database */
 define('SB_DB_NAME', '[name]');

@@ -510,7 +510,7 @@ function sb_notes_box()
             </div>
             <div class="sb-bottom" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap: wrap;flex-direction: column-reverse;">
                 <div style="display:flex;">
-                    <a style="" class="sb-add-note sb-btn sb-icon"><i class="bi-stickies"></i><?php sb_e('Save note') ?></a>
+                    <a style="" class="sb-add-note sb-btn sb-icon"><i class="bi-pencil"></i><?php sb_e('Save note') ?></a>
                 </div>
             </div>
         </div>
@@ -1271,6 +1271,7 @@ function sb_component_admin()
                                 <div class="sb-labels"></div>
 
                                 <a class="routin-top-tip"></a>
+                                <a class="routin-calls-chat"></a>
 
                                 <div class="sb-menu-mobile sb-menu-top extra-background-color">
                                     <i class="bi-three-dots-vertical bkg-color-menu"></i>
@@ -1374,10 +1375,11 @@ function sb_component_admin()
 
                             <div class="sb-scroll-area">
                                 <div class="close-button-div"><i class="bi-x-lg no-show sb-btn-collapse collapse"></i></div>
-                                <div class="open-profile sb-profile sb-profile-detail">
+                                <!-- <div class="open-profile sb-profile sb-profile-detail">
                                     <i style="font-size: var(--chat-text-size-1-3);" class="bi-pencil-square"></i>
                                     <span class="sb-name span-profile-detail"></span>
-                                </div>
+                                </div> -->
+                                <div style="margin-top:90px"></div>
                                 <?php sb_departments('custom-select'); ?>
                                 <?php sb_routing_select() ?>
 
@@ -1385,12 +1387,12 @@ function sb_component_admin()
 
                                 echo '<div class="sb-panel-details sb-panel-tags">';
                                 echo '<i class="bi-plus-lg"></i><h3>' . sb_('Tags') . '</h3>';
-                                echo '<div id="tags-container" class="tagged">';
+                                echo '<p class="description-p">Crea etiquetas para filtrar búsqueda de chats.</p><div id="tags-container" class="tagged">';
                                 echo '<span class="sb-active">';
                                 echo '<i class="bi-tags"></i></span>';
                                 echo '</div></div>';
                                 if (!sb_get_setting('disable-notes')) {
-                                    echo '<div class="sb-panel-details sb-panel-notes' . $collapse . '"><i class="bi-stickies"></i><h3>' . sb_('Notes') . '</h3><div></div></div>';
+                                    echo '<div class="sb-panel-details sb-panel-notes' . $collapse . '"><i class="bi-pencil"></i><h3>' . sb_('Notes') . '</h3><p class="description-p">Anota información relevante sobre la conversación.</p><div></div></div>';
                                 }
                                 if (!sb_get_setting('disable-attachments')) {
                                     echo '<div class="sb-panel-details sb-panel-attachments' . $collapse . '"></div>';
@@ -1400,19 +1402,13 @@ function sb_component_admin()
                                     // sb_routing_select();
 
                                 }
-
-
-
-
-
-
-
                                 ?>
 
 
-                                <h3>
+                                <h3 class="h3-c">
                                     <?php sb_e('User conversations') ?>
                                 </h3>
+                                <p class="description-c">Conversaciones generadas por agente.</p>
                                 <ul class="sb-user-conversations"></ul>
                             </div>
                             <div class="sb-no-conversation-message"></div>
