@@ -2108,3 +2108,37 @@ Array
     [Conversation] => hjhjh
     [ExtraFields] => map[]
 )
+Array
+(
+    [ID] => 1E7AC5EEBA5986C61C05ADB247B1FE6F
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => Ro
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-21 03:35:33 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => xf
+    [ExtraFields] => map[]
+)
+Array
+(
+    [ID] => A8ABD543AF19CA0767D456F9FE186CC3
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => Ro
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-21 03:35:41 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => gjh
+    [ExtraFields] => map[]
+)
