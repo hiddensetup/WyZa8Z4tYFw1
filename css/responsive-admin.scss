@@ -172,6 +172,7 @@ body {
         z-index: 99;
         cursor: pointer;
         color: var(--chat-text-primary);
+        top:0;
 
         &:active,
         &:hover {
@@ -683,7 +684,7 @@ a.sb-btn {
         >.sb-admin-nav {
             display: flex;
             margin: auto;
-            padding-right: 30px;
+            // padding-right: 30px;
 
 
             >img {
@@ -1685,7 +1686,7 @@ a.sb-btn {
         background-attachment: fixed;
 
         .sb-top {
-            display: none;
+            // display: none;
         }
 
         &.sb-active {

@@ -9475,28 +9475,25 @@ function sb_component_editor($admin = false)
         } ?>
 
         <div class="sb-bar-icons sb-hide">
-
-
-            <div id="send-rating-button">
-                <i class="bi bi-stoplights-fill"></i>
-                <span><?php sb_e("Feedback"); ?></span>
-            </div>
-
             <div id="set-status">
                 <i class="bi bi-kanban-fill"></i>
                 <span><?php sb_e("Status"); ?></span>
             </div>
-
-            <?php if ($admin || !sb_get_setting("disable-uploads")) {
-                echo '<div id="upload-files">
-                <i class="bi-folder-fill"></i>
-                <span>Uploads</span>
-                </div>';
-            } ?>
-
             <div id="load-saved-replies">
                 <i class="bi bi-envelope-fill"></i>
-                <span><?php sb_e("Saved Replies"); ?></span>
+                <span><?php sb_e("Replies"); ?></span>
+            </div>
+            <?php if ($admin || !sb_get_setting("disable-uploads")) { ?>
+    <div id="upload-files">
+        <i class="bi bi-folder-fill"></i>
+        <span><?php sb_e("Uploads"); ?></span>
+    </div>
+<?php } ?>
+
+           
+            <div id="send-rating-button">
+                <i class="bi bi-stoplights-fill"></i>
+                <span><?php sb_e("Feedback"); ?></span>
             </div>
             <div class="api-whatsapp-button sb-hide" id="open-modal-button">
                 <i class="bi bi-wind wind-whatsapp-color"></i>

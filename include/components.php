@@ -283,22 +283,17 @@ function displayMessage()
 
         echo '<div id="login-message" style="padding-top:40px">';
         echo '<div class="alert-special">';
-        // echo '<span class="closebtn-special" onclick="this.parentElement.style.display=\'none\';">&times;</span>';
         echo $message;
         echo '</div>';
         echo '</div>';
-
-        // Return true if a message is to be displayed
         return true;
     } else {
-        // Return false if no message is to be displayed
         return false;
     }
 }
 
 function sb_login_box()
 {
-    // Check if a message is to be displayed
     $messageDisplayed = displayMessage();
 ?>
     <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo ($messageDisplayed ? 'style="display:none;"' : ''); ?>>
@@ -306,10 +301,8 @@ function sb_login_box()
         <div class="sb-top-bar">
             <div id="announcement">
                 <?php
-                // If no message is to be displayed, show the login form
                 if (!$messageDisplayed) {
                 ?>
-                    <!-- Your login form HTML goes here -->
                     <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/routin.svg' ?>" />
                 <?php } ?>
             </div>
@@ -334,8 +327,6 @@ function sb_login_box()
 
         <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly" class="sb-text">
             <div style="margin: 0.2rem auto 1rem auto;max-width: 270px;" class="sb-info"></div>
-
-            <!-- <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a> -->
             <small>&copy; <?php echo date("Y"); ?> Routin Cloud</small>
 
         </div>
@@ -344,25 +335,7 @@ function sb_login_box()
 
     <img id="sb-error-check" style="display:none" src="<?php echo STMBX_URL . '/media/icon.svg' ?>" />
     <script>
-        (function($) {
-            $(document).ready(function() {
-                $('.sb-admin-start').removeAttr('style');
-                $('.sb-submit-login').on('click', function() {
-                    SBF.loginForm(this, false, function() {
-                        location.reload();
-                    });
-                });
-                $('#sb-error-check').one('error', function() {
-                    // $('.sb-info').html('It looks like the chat URL has changed. Edit the config.php file(it\'s in the Routin Cloud folder) and update the STMBX_URL constant with the new URL.').addClass('sb-active');
-                });
-                SBPusher.initServiceWorker();
-            });
-            $(window).keydown(function(e) {
-                if (e.which == 13) {
-                    $('.sb-submit-login').click();
-                }
-            });
-        }(jQuery));
+        !function(n){n(document).ready(function(){n(".sb-admin-start").removeAttr("style"),n(".sb-submit-login").on("click",function(){SBF.loginForm(this,!1,function(){location.reload()})}),n("#sb-error-check").one("error",function(){}),SBPusher.initServiceWorker()}),n(window).keydown(function(i){13==i.which&&n(".sb-submit-login").click()})}(jQuery);
     </script>
 
 
@@ -757,203 +730,7 @@ function sb_send_template_box()
     <script>
         const meta = new Metatemplate();
         meta.init("#template-form");
-
-        const themeToggleBtns = document.querySelectorAll(".themeToggleBtn");
-        const htmlTag = document.documentElement;
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-
-        const updateTheme = () => {
-            const currentTheme = htmlTag.dataset.theme;
-            let newTheme;
-            let newThemeColor;
-
-            switch (currentTheme) {
-                case "dark":
-                    newTheme = "light";
-                    newThemeColor = "white";
-                    htmlTag.classList.remove("dark");
-                    break;
-                case "light":
-                    newTheme = "app";
-                    newThemeColor = "white";
-                    htmlTag.classList.remove("dark");
-                    break;
-                case "app":
-                    newTheme = "routin";
-                    newThemeColor = "white";
-                    htmlTag.classList.remove("dark");
-                    break;
-                case "routin":
-                    newTheme = "steambox";
-                    newThemeColor = "white";
-                    htmlTag.classList.remove("dark");
-                    break;
-                case "steambox":
-                default:
-                    newTheme = "dark";
-                    newThemeColor = "#181620";
-                    htmlTag.classList.add("dark");
-                    break;
-            }
-
-            htmlTag.dataset.theme = newTheme;
-            metaThemeColor.content = newThemeColor;
-            localStorage.setItem("theme", newTheme);
-        };
-
-        const storedTheme = localStorage.getItem("theme");
-        if (storedTheme) {
-            htmlTag.dataset.theme = storedTheme;
-            switch (storedTheme) {
-                case "light":
-                    metaThemeColor.content = "white";
-                    break;
-                case "app":
-                    metaThemeColor.content = "white";
-                    break;
-                case "routin":
-                    metaThemeColor.content = "white";
-                    break;
-                case "steambox":
-                    metaThemeColor.content = "white";
-                    break;
-                case "dark":
-                default:
-                    metaThemeColor.content = "#181620";
-                    htmlTag.classList.add("dark");
-                    break;
-            }
-        } else {
-            htmlTag.dataset.theme = "light";
-            metaThemeColor.content = "white";
-        }
-
-        themeToggleBtns.forEach((btn) => {
-            btn.addEventListener("click", updateTheme);
-        });
-
-        // Rating
-        const sendRatingButton = document.getElementById("send-rating-button");
-        sendRatingButton.addEventListener("click", function() {
-            SBChat.sendMessage(-1, "[rating]");
-        });
-
-        // Utility function to delay execution for a given time
-        const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-        // Function to get the first active WhatsApp conversation item
-        async function getFirstActiveWAConversationItem() {
-            await delay(1000); // Wait for 1 second
-            return document.querySelector("li.sb-active[data-conversation-source='wa']");
-        }
-
-        // Function to set element visibility
-        function setElementVisibility(selector, visible) {
-            const element = document.querySelector(selector);
-            if (element) {
-                element.style.display = visible ? "block" : "none";
-            }
-        }
-
-        // Function to toggle the WhatsApp button visibility based on active WhatsApp conversation
-        function toggleWhatsAppButton(visible) {
-            const button = document.querySelector(".api-whatsapp-button");
-            if (button) {
-                if (visible) {
-                    button.classList.remove("sb-hide");
-                } else {
-                    button.classList.add("sb-hide");
-                }
-            }
-        }
-
-        // Function to handle visibility based on active WhatsApp conversation
-        async function handleActiveConversation(visible) {
-            setElementVisibility("#floatingText", !visible);
-            // Update WhatsApp button based on whether there is an active WhatsApp conversation
-            toggleWhatsAppButton(visible);
-        }
-
-        // Function to handle clicks on conversation items
-        async function handleConversationClick(event) {
-            if (event.target.closest("div.sb-header")) return;
-
-            const conversationItem = event.target.closest(
-                "li[data-conversation-source='wa']"
-            );
-            if (conversationItem && conversationItem.classList.contains("sb-active")) {
-                await handleActiveConversation(false); // Hide floatingText for active conversation
-            } else {
-                await handleActiveConversation(true); // Show floatingText if no active conversation
-            }
-        }
-
-        // Function to check and toggle WhatsApp button based on active conversation
-        function checkActiveWAConversation() {
-            const hasActiveConversation = !!document.querySelector(
-                "li.sb-active[data-conversation-source='wa']"
-            );
-            setElementVisibility("#floatingText", !hasActiveConversation);
-            toggleWhatsAppButton(hasActiveConversation); // Ensure WhatsApp button is correctly toggled
-        }
-
-        // Event listener for DOM content loaded
-        document.addEventListener("DOMContentLoaded", async () => {
-            // Check active conversation immediately, no async delay needed here
-            checkActiveWAConversation(); // Ensure initial check for active conversations
-
-            // Handle active conversation state
-            const conversationItem = await getFirstActiveWAConversationItem();
-            await handleActiveConversation(!conversationItem);
-
-            // Event listeners
-            document.addEventListener("click", handleConversationClick);
-            document
-                .getElementById("floatingText")
-                .addEventListener("click", () =>
-                    setElementVisibility("#floatingText", false)
-                );
-            document
-                .querySelector(".menu-plus.bi-plus-lg")
-                .addEventListener("click", () => {
-                    // Only handle button visibility based on immediate DOM state
-                    const conversationItem = document.querySelector(
-                        "li.sb-active[data-conversation-source='wa']"
-                    );
-                    if (!conversationItem) {
-                        setElementVisibility("#floatingText", false);
-                        toggleWhatsAppButton(false); // Restore sb-hide if no active WhatsApp conversation
-                    }
-                });
-        });
-
-        const sbIconDrag = document.querySelector(".menu-plus"),
-            sbBarIcons = document.querySelector(".sb-bar-icons"),
-            loadSavedReplies = document.getElementById("load-saved-replies"),
-            setStatus = document.getElementById("set-status");
-
-        // Function to toggle the visibility of sbBarIcons
-        function toggleSbBarIcons() {
-            sbBarIcons.classList.toggle("sb-hide");
-        }
-
-        // Function to check if the click is inside the specified elements
-        function isClickInside(t) {
-            return sbBarIcons.contains(t) || t === loadSavedReplies || t === setStatus;
-        }
-
-        // Event listener for sbIconDrag click
-        sbIconDrag.addEventListener("click", function(t) {
-            t.stopPropagation();
-            toggleSbBarIcons();
-        });
-
-        // Event listener for document click to hide sbBarIcons if click is outside
-        document.addEventListener("click", function(t) {
-            if (!isClickInside(t.target) && !sbIconDrag.contains(t.target)) {
-                sbBarIcons.classList.add("sb-hide");
-            }
-        });
+        const themeToggleBtns=document.querySelectorAll(".themeToggleBtn"),htmlTag=document.documentElement,metaThemeColor=document.querySelector('meta[name="theme-color"]'),updateTheme=()=>{let e=htmlTag.dataset.theme,t,a;switch(e){case"dark":t="light",a="white",htmlTag.classList.remove("dark");break;case"light":t="app",a="white",htmlTag.classList.remove("dark");break;case"app":t="routin",a="white",htmlTag.classList.remove("dark");break;case"routin":t="steambox",a="white",htmlTag.classList.remove("dark");break;default:t="dark",a="#181620",htmlTag.classList.add("dark")}htmlTag.dataset.theme=t,metaThemeColor.content=a,localStorage.setItem("theme",t)},storedTheme=localStorage.getItem("theme");if(storedTheme)switch(htmlTag.dataset.theme=storedTheme,storedTheme){case"light":case"app":case"routin":case"steambox":metaThemeColor.content="white";break;default:metaThemeColor.content="#181620",htmlTag.classList.add("dark")}else htmlTag.dataset.theme="light",metaThemeColor.content="white";themeToggleBtns.forEach(e=>{e.addEventListener("click",updateTheme)});const sendRatingButton=document.getElementById("send-rating-button");sendRatingButton.addEventListener("click",function(){SBChat.sendMessage(-1,"[rating]")});const delay=e=>new Promise(t=>setTimeout(t,e));async function getFirstActiveWAConversationItem(){return await delay(1e3),document.querySelector("li.sb-active[data-conversation-source='wa']")}function setElementVisibility(e,t){let a=document.querySelector(e);a&&(a.style.display=t?"block":"none")}function toggleWhatsAppButton(e){let t=document.querySelector(".api-whatsapp-button");t&&(e?t.classList.remove("sb-hide"):t.classList.add("sb-hide"))}async function handleActiveConversation(e){setElementVisibility("#floatingText",!e),toggleWhatsAppButton(e)}async function handleConversationClick(e){if(e.target.closest("div.sb-header"))return;let t=e.target.closest("li[data-conversation-source='wa']");t&&t.classList.contains("sb-active")?await handleActiveConversation(!1):await handleActiveConversation(!0)}function checkActiveWAConversation(){let e=!!document.querySelector("li.sb-active[data-conversation-source='wa']");setElementVisibility("#floatingText",!e),toggleWhatsAppButton(e)}document.addEventListener("DOMContentLoaded",async()=>{checkActiveWAConversation();let e=await getFirstActiveWAConversationItem();await handleActiveConversation(!e),document.addEventListener("click",handleConversationClick),document.getElementById("floatingText").addEventListener("click",()=>setElementVisibility("#floatingText",!1)),document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click",()=>{let e=document.querySelector("li.sb-active[data-conversation-source='wa']");e||(setElementVisibility("#floatingText",!1),toggleWhatsAppButton(!1))})});const sbIconDrag=document.querySelector(".menu-plus"),sbBarIcons=document.querySelector(".sb-bar-icons"),loadSavedReplies=document.getElementById("load-saved-replies"),setStatus=document.getElementById("set-status");function toggleSbBarIcons(){sbBarIcons.classList.toggle("sb-hide")}function isClickInside(e){return sbBarIcons.contains(e)||e===loadSavedReplies||e===setStatus}sbIconDrag.addEventListener("click",function(e){e.stopPropagation(),toggleSbBarIcons()}),document.addEventListener("click",function(e){isClickInside(e.target)||sbIconDrag.contains(e.target)||sbBarIcons.classList.add("sb-hide")});
     </script>
 <?php } ?>
 
@@ -1369,7 +1146,7 @@ function sb_component_admin()
 
                         <!--added-->
                         <div class="sb-user-details sb-top">
-                            <div style="display:none;" class="sb-top">
+                            <div class="sb-top">
 
                             </div>
 
@@ -1379,10 +1156,12 @@ function sb_component_admin()
                                     <i style="font-size: var(--chat-text-size-1-3);" class="bi-pencil-square"></i>
                                     <span class="sb-name span-profile-detail"></span>
                                 </div> -->
-                                <div style="margin-top:90px"></div>
+                                <div class="sb-panel-details no-overflow">
+                                <h3>Enrutamiento manual</h3>
+                                <p class="description-p">Asigna conversaciones con agentes y equipos de forma manual sin el chatbot.</p>
                                 <?php sb_departments('custom-select'); ?>
                                 <?php sb_routing_select() ?>
-
+                                </div>
                                 <?php
 
                                 echo '<div class="sb-panel-details sb-panel-tags">';

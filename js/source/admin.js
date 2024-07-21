@@ -4490,7 +4490,7 @@ if (conversation_id != -1) {
           ? ` data-conversation-source="${conversation.conversation_source}"`
           : ""
       }>
-        <small style="visibility:hidden;" class="source-conversation-icon">
+        <small class="source-conversation-icon">
             <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
               conversation.conversation_source
             }.svg">
@@ -5207,9 +5207,9 @@ if (conversation_id != -1) {
             bm: "Google",
           };
           const sourceLabel = sourceLabels[source] || source;
-          otherRows += this.profileRow("conversation-source", sourceLabel, sb_("Source"), false); // Hide source span and icon
+          otherRows += this.profileRow("conversation-source", sourceLabel, sb_("Source"), true); // Hide source span and icon
         } else {
-          otherRows += this.profileRow("conversation-source", "Unknown", "", false); // Hide source span and icon
+          otherRows += this.profileRow("conversation-source", "Unknown", "",  true); // Hide source span and icon
         }
       }
       if (SB_ACTIVE_AGENT.user_type != "admin") {

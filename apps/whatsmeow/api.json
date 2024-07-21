@@ -3313,3 +3313,20 @@ Array
     [Conversation] => ki
     [ExtraFields] => map[]
 )
+Array
+(
+    [ID] => 1CAAB93A8D80D7DB797DA12523FACA0D
+    [Chat] => 5491165900208@s.whatsapp.net
+    [Caption] => 
+    [Sender] => 5491165900208@s.whatsapp.net
+    [SenderName] => Ro
+    [IsFromMe] => false
+    [IsGroup] => false
+    [IsEphemeral] => false
+    [IsViewOnce] => false
+    [Timestamp] => 2024-07-20 19:55:28 -0300 -03
+    [MediaType] => 
+    [Multicast] => false
+    [Conversation] => x
+    [ExtraFields] => map[]
+)
