@@ -1457,7 +1457,7 @@ div ul.sb-menu,
 
 .sb-label-date-top {
   position: absolute;
-  top: 3.67rem;
+  top: 3.6rem;
   left: 0px;
   right: 0px;
   z-index: 1;
@@ -1465,7 +1465,7 @@ div ul.sb-menu,
 
   &.sb-active {
     opacity: 1;
-    font-size: .75rem;
+    font-size: var(--chat-text-size-8);
     text-align: center;
     background-color: var(--color-green);
     color: var(--chat-app-background);
