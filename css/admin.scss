@@ -3056,6 +3056,7 @@ BODY
                 bottom: 0px;
                 color: var(--chat-text-tertiary);
                 transition: color 1s ease-in;
+                opacity:1;
 
                 &:active, &:hover {
                     color: var(--chat-text-primary);
@@ -3071,6 +3072,8 @@ BODY
                 border-radius: var(--chat-rounded-size-6);
                 width: 100%;
                 margin: 0 5px;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                opacity: 1;
 
 
             }

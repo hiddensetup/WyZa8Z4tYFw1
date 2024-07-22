@@ -158,6 +158,10 @@ function sb_profile_edit_box()
                         <input type="email" name="email" />
                     </div>
                 </div>
+
+
+
+
                 <a class="sb-delete sb-btn-text sb-btn-red">
                     <i class="bi-trash"></i><?php sb_e('Delete user') ?>
                 </a>
@@ -335,7 +339,17 @@ function sb_login_box()
 
     <img id="sb-error-check" style="display:none" src="<?php echo STMBX_URL . '/media/icon.svg' ?>" />
     <script>
-        !function(n){n(document).ready(function(){n(".sb-admin-start").removeAttr("style"),n(".sb-submit-login").on("click",function(){SBF.loginForm(this,!1,function(){location.reload()})}),n("#sb-error-check").one("error",function(){}),SBPusher.initServiceWorker()}),n(window).keydown(function(i){13==i.which&&n(".sb-submit-login").click()})}(jQuery);
+        ! function(n) {
+            n(document).ready(function() {
+                n(".sb-admin-start").removeAttr("style"), n(".sb-submit-login").on("click", function() {
+                    SBF.loginForm(this, !1, function() {
+                        location.reload()
+                    })
+                }), n("#sb-error-check").one("error", function() {}), SBPusher.initServiceWorker()
+            }), n(window).keydown(function(i) {
+                13 == i.which && n(".sb-submit-login").click()
+            })
+        }(jQuery);
     </script>
 
 
@@ -728,9 +742,104 @@ function sb_send_template_box()
 
     </div>
     <script>
-        const meta = new Metatemplate();
+        const meta = new Metatemplate;
         meta.init("#template-form");
-        const themeToggleBtns=document.querySelectorAll(".themeToggleBtn"),htmlTag=document.documentElement,metaThemeColor=document.querySelector('meta[name="theme-color"]'),updateTheme=()=>{let e=htmlTag.dataset.theme,t,a;switch(e){case"dark":t="light",a="white",htmlTag.classList.remove("dark");break;case"light":t="app",a="white",htmlTag.classList.remove("dark");break;case"app":t="routin",a="white",htmlTag.classList.remove("dark");break;case"routin":t="steambox",a="white",htmlTag.classList.remove("dark");break;default:t="dark",a="#181620",htmlTag.classList.add("dark")}htmlTag.dataset.theme=t,metaThemeColor.content=a,localStorage.setItem("theme",t)},storedTheme=localStorage.getItem("theme");if(storedTheme)switch(htmlTag.dataset.theme=storedTheme,storedTheme){case"light":case"app":case"routin":case"steambox":metaThemeColor.content="white";break;default:metaThemeColor.content="#181620",htmlTag.classList.add("dark")}else htmlTag.dataset.theme="light",metaThemeColor.content="white";themeToggleBtns.forEach(e=>{e.addEventListener("click",updateTheme)});const sendRatingButton=document.getElementById("send-rating-button");sendRatingButton.addEventListener("click",function(){SBChat.sendMessage(-1,"[rating]")});const delay=e=>new Promise(t=>setTimeout(t,e));async function getFirstActiveWAConversationItem(){return await delay(1e3),document.querySelector("li.sb-active[data-conversation-source='wa']")}function setElementVisibility(e,t){let a=document.querySelector(e);a&&(a.style.display=t?"block":"none")}function toggleWhatsAppButton(e){let t=document.querySelector(".api-whatsapp-button");t&&(e?t.classList.remove("sb-hide"):t.classList.add("sb-hide"))}async function handleActiveConversation(e){setElementVisibility("#floatingText",!e),toggleWhatsAppButton(e)}async function handleConversationClick(e){if(e.target.closest("div.sb-header"))return;let t=e.target.closest("li[data-conversation-source='wa']");t&&t.classList.contains("sb-active")?await handleActiveConversation(!1):await handleActiveConversation(!0)}function checkActiveWAConversation(){let e=!!document.querySelector("li.sb-active[data-conversation-source='wa']");setElementVisibility("#floatingText",!e),toggleWhatsAppButton(e)}document.addEventListener("DOMContentLoaded",async()=>{checkActiveWAConversation();let e=await getFirstActiveWAConversationItem();await handleActiveConversation(!e),document.addEventListener("click",handleConversationClick),document.getElementById("floatingText").addEventListener("click",()=>setElementVisibility("#floatingText",!1)),document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click",()=>{let e=document.querySelector("li.sb-active[data-conversation-source='wa']");e||(setElementVisibility("#floatingText",!1),toggleWhatsAppButton(!1))})});const sbIconDrag=document.querySelector(".menu-plus"),sbBarIcons=document.querySelector(".sb-bar-icons"),loadSavedReplies=document.getElementById("load-saved-replies"),setStatus=document.getElementById("set-status");function toggleSbBarIcons(){sbBarIcons.classList.toggle("sb-hide")}function isClickInside(e){return sbBarIcons.contains(e)||e===loadSavedReplies||e===setStatus}sbIconDrag.addEventListener("click",function(e){e.stopPropagation(),toggleSbBarIcons()}),document.addEventListener("click",function(e){isClickInside(e.target)||sbIconDrag.contains(e.target)||sbBarIcons.classList.add("sb-hide")});
+
+        const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
+        const htmlTag = document.documentElement;
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+        const updateTheme = () => {
+            const currentTheme = htmlTag.dataset.theme;
+            let newTheme;
+            let newThemeColor;
+
+            switch (currentTheme) {
+                case 'dark':
+                    newTheme = 'light';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'light':
+                    newTheme = 'app';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'app':
+                    newTheme = 'routin';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'routin':
+                    newTheme = 'steambox';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'steambox':
+                default:
+                    newTheme = 'dark';
+                    newThemeColor = '#181620';
+                    htmlTag.classList.add('dark');
+                    break;
+            }
+
+            htmlTag.dataset.theme = newTheme;
+            metaThemeColor.content = newThemeColor;
+            localStorage.setItem('theme', newTheme);
+        };
+
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            htmlTag.dataset.theme = storedTheme;
+            switch (storedTheme) {
+                case 'light':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'app':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'routin':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'steambox':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'dark':
+                default:
+                    metaThemeColor.content = '#181620';
+                    htmlTag.classList.add('dark');
+                    break;
+            }
+        } else {
+            htmlTag.dataset.theme = 'light';
+            metaThemeColor.content = 'white';
+        }
+
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', updateTheme);
+        });
+
+        // Rating
+        const sendRatingButton = document.getElementById("send-rating-button");
+        sendRatingButton.addEventListener("click", function() {
+            SBChat.sendMessage(-1, "[rating]");
+        });
+
+ 
+         const sbIconDrag = document.querySelector(".menu-plus");
+        const sbBarIcons = document.querySelector(".sb-bar-icons");
+        const elementsToHideIcons = [
+            document.querySelector(".sb-list"),
+            document.querySelector(".sorting-by-last-message"),
+            document.querySelector("textarea")
+        ];
+
+         sbIconDrag.addEventListener("click", () => sbBarIcons.classList.toggle("sb-hide"));
+
+         elementsToHideIcons.forEach(el => el?.addEventListener("click", () => sbBarIcons.classList.add("sb-hide")));
+
+
+
     </script>
 <?php } ?>
 
@@ -826,7 +935,7 @@ function sb_installation_box($error = false)
                 </div>
                 <div id="db-user" class="sb-input">
                     <span>Username</span>
-                    <input type="text" required placeholder="Enter username" />
+                    <input type="text" placeholder="Enter username" />
                 </div>
                 <div id="db-password" class="sb-input">
                     <span>Password</span>
@@ -1157,10 +1266,10 @@ function sb_component_admin()
                                     <span class="sb-name span-profile-detail"></span>
                                 </div> -->
                                 <div class="sb-panel-details no-overflow">
-                                <h3>Enrutamiento manual</h3>
-                                <p class="description-p">Asigna conversaciones con agentes y equipos de forma manual sin el chatbot.</p>
-                                <?php sb_departments('custom-select'); ?>
-                                <?php sb_routing_select() ?>
+                                    <h3>Enrutamiento manual</h3>
+                                    <p class="description-p">Asigna conversaciones con agentes y equipos de forma manual sin el chatbot.</p>
+                                    <?php sb_departments('custom-select'); ?>
+                                    <?php sb_routing_select() ?>
                                 </div>
                                 <?php
 
@@ -1274,7 +1383,7 @@ function sb_component_admin()
                                             </a>
                                         </li>
                                         <li class="flex-buttons-users transition-opacity">
-                                            <a data-value="email" class="routin-buttons-top-tip data-sb-tooltip="<?php sb_e('Send email') ?>">
+                                            <a data-value="email" class="routin-buttons-top-tip data-sb-tooltip=" <?php sb_e('Send email') ?>">
                                                 <i class="bi-envelope-at"></i>
                                                 <span class="routin-buttons-top-content"><?php sb_e('Send email') ?></span>
                                             </a>

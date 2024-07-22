@@ -1835,6 +1835,7 @@ div ul.sb-menu,
   .sb-attachments {
     width: calc(100% - 58px);
     display: inline-flex;
+    transition: var(--transition);
     overflow: auto;
     font-size: 0.85rem;
     color: #d1d3da;
@@ -1855,6 +1856,7 @@ div ul.sb-menu,
       border-radius: var(--chat-rounded-size-6);
       background-color: var(--chat-app-tooltip-color);
       font-weight: 300;
+      animation: fade-in .5s ease;
       box-shadow: var(--box-shadow-bubble-chat);
       -webkit-box-shadow: var(--box-shadow-bubble-chat);
 
@@ -1902,10 +1904,13 @@ div ul.sb-menu,
 
 .sb-hide {
   display: none;
+  opacity: 0;
+
 }
 
 .sb-invisible {
-  visibility: hidden;
+  opacity: 0!important;
+  visibility: hidden!important;
 }
 
 .li-data-content {
@@ -3660,7 +3665,7 @@ div ul.sb-menu,
   }
 }
 
-.start {
+#recordButton {
   color: var(--chat-text-primary);
   cursor: pointer;
   font-size: var(--chat-text-size-1-4);

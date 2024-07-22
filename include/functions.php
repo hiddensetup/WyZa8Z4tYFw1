@@ -1411,18 +1411,7 @@ function sb_update_user(
     if (sb_is_agent($user_type) && !sb_is_agent(false, true, true)) {
         return new SBError("security-error", "sb_update_user");
     }
-    // Clean and format the phone number
-    if (!empty($settings_extra["phone"])) {
-        $cleanedPhone = preg_replace("/[^a-zA-Z0-9@.]/", "", $settings_extra["phone"][0]);
 
-        // Add plus "+" symbol if not already present
-        if (strpos($cleanedPhone, '+') === false) {
-            $cleanedPhone = '+' . $cleanedPhone;
-        }
-
-
-        $settings_extra["phone"][0] = $cleanedPhone;
-    }
     // Validate duplicate email
     if ($email) {
         $email = sb_db_escape($email);
@@ -9484,16 +9473,20 @@ function sb_component_editor($admin = false)
                 <span><?php sb_e("Replies"); ?></span>
             </div>
             <?php if ($admin || !sb_get_setting("disable-uploads")) { ?>
-    <div id="upload-files">
-        <i class="bi bi-folder-fill"></i>
-        <span><?php sb_e("Uploads"); ?></span>
-    </div>
-<?php } ?>
+                <div id="upload-files">
+                    <i class="bi bi-folder-fill"></i>
+                    <span><?php sb_e("Uploads"); ?></span>
+                </div>
+            <?php } ?>
 
-           
+
             <div id="send-rating-button">
                 <i class="bi bi-stoplights-fill"></i>
                 <span><?php sb_e("Feedback"); ?></span>
+            </div>
+            <div id="set-agent-name">
+                <input type="checkbox" id="agentNameToggle" class="switch-toggle">
+                <span><?php sb_e("Name"); ?></span>
             </div>
             <div class="api-whatsapp-button sb-hide" id="open-modal-button">
                 <i class="bi bi-wind wind-whatsapp-color"></i>
@@ -9501,45 +9494,28 @@ function sb_component_editor($admin = false)
             </div>
 
         </div>
-
-        
-
-       
-
-        <div class="sb-show-menu-bar flex-align-center-relative">
-
-            <div class="menu-plus bi-plus-lg"></div>
-            <div class="routin-bottom-tip sb-setting">
-                <input type="checkbox" id="agentNameToggle" class="switch-toggle">
-                <p class="routin-bottom-content">Mostrar nombre</p>
-            </div>
-            <div style="min-height: 35px;" class="sb-textarea">
-                <?php
-                // Placeholder values, replace these with your actual data
-                $source = "wa"; // Placeholder value for the conversation source
-                $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
-                ?>
-                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+        <script>
+        document.addEventListener('DOMContentLoaded',()=>{const agentNameToggle=document.getElementById('agentNameToggle');const savedState=localStorage.getItem('agentNameToggle')==='true';agentNameToggle.checked=savedState;agentNameToggle.addEventListener('change',()=>{localStorage.setItem('agentNameToggle',agentNameToggle.checked);});});document.addEventListener("DOMContentLoaded",function(){var toggleButton=document.querySelector(".to-make-invisible-sb-text-area");var recordButton=document.querySelector("#stopButton");var textAreaDiv=document.querySelector(".sb-textarea");var emojiGrinDiv=document.querySelector(".bi-emoji-grin");function toggleVisibility(){if(textAreaDiv.classList.contains("sb-invisible")){textAreaDiv.classList.remove("sb-invisible");emojiGrinDiv.classList.remove("sb-invisible");textAreaDiv.style.visibility="visible";emojiGrinDiv.style.visibility="visible";}else{textAreaDiv.classList.add("sb-invisible");emojiGrinDiv.classList.add("sb-invisible");setTimeout(function(){textAreaDiv.style.visibility="hidden";emojiGrinDiv.style.visibility="hidden";},500);} }toggleButton.addEventListener("click",toggleVisibility);recordButton.addEventListener("click",toggleVisibility);});
+        </script>
 
 
-            </div>
-
-            <div class="sb-bar sb-space-between">
-                <div id='btns'>
-                    <select style="display: none;" id="encodingTypeSelect">
-                        <option selected value="mp3">.mp3</option>
-                    </select>
-                </div>
-                <div class="bi-emoji-grin"></div>
-
-                <div id='recordButton' class="bi-mic-fill start stop-time" ></div>
-                <div id='stopButton' disabled class="bi-record-fill time" ></div>
-                <div class="bi-arrow-up-circle-fill sb-submit"></div>
-                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
-
-            </div>
-        </div>
-
+<div class="sb-show-menu-bar flex-align-center-relative">
+    <div class="menu-plus bi-plus-lg"></div>
+    <div style="min-height: 35px;" class="sb-textarea">
+        <?php
+        $source = "wa";  
+        $disabled = ($source !== "wa") ? "visibility: hidden;" : "";  
+        ?>
+        <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+    </div>
+    <div class="sb-bar sb-space-between">
+        <div class="bi-emoji-grin"></div>
+        <div id="recordButton" class="bi-mic-fill to-make-invisible-sb-text-area"></div>
+        <div id="stopButton" disabled class="bi-record-fill"></div>
+        <div class="bi-arrow-up-circle-fill sb-submit"></div>
+        <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+    </div>
+</div>
 
         <?php if ($admin) { ?>
             <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
@@ -9640,45 +9616,9 @@ function sb_component_editor($admin = false)
         <div class="sb-attachments"> </div>
 
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const textarea = document.querySelector('.sb-textarea textarea');
-            const submitButton = document.querySelector('.sb-submit');
-            const agentNameToggle = document.getElementById('agentNameToggle');
 
-            // Load saved preference from localStorage
-            const agentNameEnabled = localStorage.getItem('agentNameEnabled') === 'true';
-            agentNameToggle.checked = agentNameEnabled;
 
-            // Save preference to localStorage when checkbox is toggled
-            agentNameToggle.addEventListener('change', function() {
-                localStorage.setItem('agentNameEnabled', this.checked);
-            });
 
-            function prependAgentName() {
-                if (!agentNameToggle.checked) return; // Don't prepend if checkbox is unchecked
-
-                let message = textarea.value.trim();
-                if (message && !message.startsWith('*{agent_name}*')) {
-                    textarea.value = `*{agent_name}*\n ${message}`;
-                }
-            }
-
-            // Modify the textarea content just before submission
-            submitButton.addEventListener('click', function(e) {
-                prependAgentName();
-            });
-
-            // Also handle Enter key press
-            textarea.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    prependAgentName();
-                    submitButton.click(); // Trigger the submit button click
-                }
-            });
-        });
-    </script>
 <?php
 }
 

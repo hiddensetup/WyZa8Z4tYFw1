@@ -90,7 +90,7 @@ require('include/components.php');
   sb_js_admin();
 } ?>
 <!-- <script src="js/vue.global.prod.js"></script> -->
-<script src="<?php echo $steambox_url . 'js/app.js' ?>"></script>
-<script src="<?php echo $steambox_url . 'js/WebAudioRecorder.min.js' ?>"></script>
+<script src="<?php echo $steambox_url . 'js/rtn/app.js' ?>"></script>
+<script src="<?php echo $steambox_url . 'js/rtn/WebAudioRecorder.min.js' ?>"></script>
 
 </html>

@@ -2240,7 +2240,6 @@ function processMessage(message) {
         attachments_code += "</div>";
       }
 
-
       var code = "";
       if (message.includes("〚")) {
         var telf = activeUser().getExtra("phone").value;
@@ -2328,7 +2327,9 @@ function processMessage(message) {
       } else {
         // MESSAGE CREATION CHAT
         code = `
-              <div data-id="${this.details["id"]}" ${type} class="sb-shadow-conversation ${css}" style="transition: 0.3s all">
+              <div data-id="${
+                this.details["id"]
+              }" ${type} class="sb-shadow-conversation ${css}" style="transition: 0.3s all">
                 ${thumb}
                   <div class="server-response">
                     <i class="bi-check2-all"></i>
@@ -2337,19 +2338,26 @@ function processMessage(message) {
                         <div class="sb-message" data-value="${this.linksData}">
                             ${media_code}
                             <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
-                            ${this.linksData? this.linksData.message : message.replace(/\|/g, " ")}
+                            ${
+                              this.linksData
+                                ? this.linksData.message
+                                : message.replace(/\|/g, " ")
+                            }
                             </div>
                         </div>
                         ${attachments_code}
                         <div class="menu-bubble">
                             <div class="sb-time">
-                                ${SBF.beautifyTime(this.details["creation_time"],true)}
+                                ${SBF.beautifyTime(
+                                  this.details["creation_time"],
+                                  true
+                                )}
                             </div>
                         </div>
                   </div>
                   ${admin_menu}
               </div>`;
-          }
+      }
       return code;
     }
 
@@ -2573,7 +2581,7 @@ function processMessage(message) {
       return results;
     }
 
-    // this update message added in chat. Like variables.. 
+    // this update message added in chat. Like variables..
     updateMessage(id, message) {
       if (message instanceof SBMessage) {
         for (var i = 0; i < this.messages.length; i++) {
@@ -2590,7 +2598,6 @@ function processMessage(message) {
       }
       return false;
     }
-
 
     addMessages(messages) {
       if (Array.isArray(messages)) {
@@ -2984,153 +2991,162 @@ function processMessage(message) {
         conversation_status_code = 2;
       }
 
-      // Send message
-      if (message || attachments.length || payload) {
-        let message_response = {
+// Helper function to format the message
+function formatMessage(message, prependAgentName) {
+  return prependAgentName ? `*{agent_name}*\n${message}` : message;
+}
+
+// Send message
+if (message || attachments.length || payload) {
+  // Retrieve the checkbox state from localStorage
+  const prependAgentName = localStorage.getItem('agentNameToggle') === 'true';
+  const formattedMessage = formatMessage(message, prependAgentName);
+
+  let message_response = {
+    user_id: user_id,
+    user: activeUser(),
+    conversation_id: this.conversation.id,
+    conversation: this.conversation,
+    conversation_status_code: conversation_status_code,
+    message: formattedMessage, // render in chat app
+    attachments: attachments,
+  };
+
+  SBF.ajax(
+    {
+      function: "send-message",
+      user_id: user_id,
+      conversation_id: this.conversation.id,
+      message: formattedMessage, // render WhatsApp or chat app message
+      attachments: attachments,
+      conversation_status_code: conversation_status_code,
+      queue: !admin && CHAT_SETTINGS["queue"] && is_user,
+      payload: payload,
+      recipient_id: admin ? activeUser().id : false,
+    },
+    (response) => {
+      // Update the dashboard conversations area
+      if (!admin && user_id == bot_id) {
+        if (this.dashboard) {
+          this.updateConversations();
+        } else if (!this.chat_open) {
+          this.updateNotifications("add", this.conversation.id);
+        }
+      }
+
+      // Update the chat current conversation
+      if (
+        (admin && !this.user_online) ||
+        (!admin && !this.agent_online)
+      ) {
+        this.update();
+      }
+
+      // Follow up and offline messages
+      if (!admin && is_user && !dialogflow_human_takeover) {
+        this.followUp();
+        this.offlineMessage();
+      }
+
+      // Dialogflow
+      if (
+        !admin &&
+        is_user &&
+        (!payload ||
+          (payload["id"] != "sb-human-takeover" &&
+            SBF.null(payload["skip-dialogflow"])))
+      ) {
+        SBApps.dialogflow.message(formattedMessage, attachments);
+      }
+
+      // Language detection
+      if (
+        is_user &&
+        CHAT_SETTINGS["language-detection"] &&
+        this.conversation &&
+        formattedMessage.split(" ").length > 1 &&
+        !SBF.storage("language-detection-completed")
+      ) {
+        SBF.ajax({
+          function: "google-language-detection-update-user",
           user_id: user_id,
-          user: activeUser(),
-          conversation_id: this.conversation.id,
-          conversation: this.conversation,
-          conversation_status_code: conversation_status_code,
-          message: message, // render whatsapp name
-          attachments: attachments,
-        };
+          string: formattedMessage,
+          token: SBApps.dialogflow.token,
+        });
+        SBF.storage("language-detection-completed", true);
+      }
 
-        SBF.ajax(
-          {
-            function: "send-message",
-            user_id: user_id,
-            conversation_id: this.conversation.id,
-            message: message, //render only in chat onveersation
-            attachments: attachments,
-            conversation_status_code: conversation_status_code,
-            queue: !admin && CHAT_SETTINGS["queue"] && is_user,
-            payload: payload,
-            recipient_id: admin ? activeUser().id : false,
-          },
-          (response) => {
-            // Update the dashboard conversations area
-            if (!admin && user_id == bot_id) {
-              if (this.dashboard) {
-                this.updateConversations();
-              } else if (!this.chat_open) {
-                this.updateNotifications("add", this.conversation.id);
-              }
-            }
-
-            // Update the chat current conversation
-            if (
-              (admin && !this.user_online) ||
-              (!admin && !this.agent_online)
-            ) {
-              this.update();
-            }
-
-            // Follow up and offline messages
-            if (!admin && is_user && !dialogflow_human_takeover) {
-              this.followUp();
-              this.offlineMessage();
-            }
-
-            // Dialogflow
-            if (
-              !admin &&
-              is_user &&
-              (!payload ||
-                (payload["id"] != "sb-human-takeover" &&
-                  SBF.null(payload["skip-dialogflow"])))
-            ) {
-              SBApps.dialogflow.message(message, attachments);
-            }
-
-            // Language detection
-            if (
-              is_user &&
-              CHAT_SETTINGS["language-detection"] &&
-              this.conversation &&
-              message.split(" ").length > 1 &&
-              !SBF.storage("language-detection-completed")
-            ) {
-              SBF.ajax({
-                function: "google-language-detection-update-user",
-                user_id: user_id,
-                string: message,
-                token: SBApps.dialogflow.token,
-              });
-              SBF.storage("language-detection-completed", true);
-            }
-
-            // Articles
-            if (
-              this.articles &&
-              !admin &&
-              CHAT_SETTINGS["articles"] &&
-              !CHAT_SETTINGS["office-hours"] &&
-              !this.isInitDashboard()
-            ) {
-              setTimeout(() => {
-                if (this.conversation) {
-                  this.sendMessage(bot_id, "[articles]");
-                  this.scrollBottom();
-                  this.articles = false;
-                }
-              }, 5000);
-            }
-
-            // Queue
-            if (response["queue"]) {
-              this.queue(this.conversation.id);
-            }
-
-            // Events
-            message_response["message_id"] = response.id;
-            SBF.event("SBMessageSent", message_response);
-            if (tickets) SBTickets.onMessageSent();
-            if (onSuccess) onSuccess(message_response);
-            if (response.notifications.length)
-              SBF.event("SBNotificationsSent", response.notifications);
-
-            // Miscellaneous
-            if (this.skip) this.skip = false;
-            this.busy(false);
+      // Articles
+      if (
+        this.articles &&
+        !admin &&
+        CHAT_SETTINGS["articles"] &&
+        !CHAT_SETTINGS["office-hours"] &&
+        !this.isInitDashboard()
+      ) {
+        setTimeout(() => {
+          if (this.conversation) {
+            this.sendMessage(bot_id, "[articles]");
+            this.scrollBottom();
+            this.articles = false;
           }
-        );
+        }, 5000);
+      }
 
-        // Display the message as sending in progress
-        if (is_user) {
-          message = SBF.escape(message);
-          chat.append(
-            new SBMessage({
-              id: "sending",
-              profile_image: admin
-                ? SB_ACTIVE_AGENT["profile_image"]
-                : activeUser().image,
-              full_name: activeUser().name,
-              creation_time: "0000-00-00 00:00:00",
-              message: message,
-              user_type: admin ? "agent" : "user",
-            })
-              .getCode()
-              .replace(
-                '<div class="sb-time"></div>',
-                `<div class="sb-time">${sb_("Sending")}<i></i></div>`
-              )
-          );
-          if (!this.dashboard) this.scrollBottom();
-        }
+      // Queue
+      if (response["queue"]) {
+        this.queue(this.conversation.id);
+      }
 
-        // Sounds
-        if (
-          (this.audio &&
-            !admin &&
-            this.chat_open &&
-            is_user &&
-            ["a", "aa"].includes(CHAT_SETTINGS["chat-sound"])) ||
-          (admin && SB_ADMIN_SETTINGS["sounds"] == "a")
-        ) {
-          this.audio_out.play();
-        }
-      } else this.busy(false);
+      // Events
+      message_response["message_id"] = response.id;
+      SBF.event("SBMessageSent", message_response);
+      if (tickets) SBTickets.onMessageSent();
+      if (onSuccess) onSuccess(message_response);
+      if (response.notifications.length)
+        SBF.event("SBNotificationsSent", response.notifications);
+
+      // Miscellaneous
+      if (this.skip) this.skip = false;
+      this.busy(false);
+    }
+  );
+
+  // Display the message as sending in progress
+  if (is_user) {
+    const escapedMessage = SBF.escape(formattedMessage);
+    chat.append(
+      new SBMessage({
+        id: "sending",
+        profile_image: admin
+          ? SB_ACTIVE_AGENT["profile_image"]
+          : activeUser().image,
+        full_name: activeUser().name,
+        creation_time: "0000-00-00 00:00:00",
+        message: escapedMessage,
+        user_type: admin ? "agent" : "user",
+      })
+        .getCode()
+        .replace(
+          '<div class="sb-time"></div>',
+          `<div class="sb-time">${sb_("Sending")}<i></i></div>`
+        )
+    );
+    if (!this.dashboard) this.scrollBottom();
+  }
+
+  // Sounds
+  if (
+    (this.audio &&
+      !admin &&
+      this.chat_open &&
+      is_user &&
+      ["a", "aa"].includes(CHAT_SETTINGS["chat-sound"])) ||
+    (admin && SB_ADMIN_SETTINGS["sounds"] == "a")
+  ) {
+    this.audio_out.play();
+  }
+} else this.busy(false);
     },
 
     // [Deprecated] This function will be removed soon
@@ -7394,7 +7410,6 @@ function processMessage(message) {
         // console.log("load new", total_more, loadmore.getLoad());
       }
     });
-    //rate and review was moved to test
     // Send a message
     $(chat_editor).on("click", ".sb-submit", function () {
       SBChat.submit();
@@ -7969,21 +7984,8 @@ function processMessage(message) {
 
     // LOADER EXTRA
 
-    // $(document).ready(function () {
-    //   let sbConversations = $("#sb-conversations, #theme-toggle");
-    //   sbConversations.click(function () {
-    //     $("body").append(
-    //       "<div id='overlay'><img style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);animation: fade-in 9s'></div>"
-    //     );
-    //     $("#overlay").fadeIn("slow"); // Changed ".overlay" to "#overlay"
-    //     $(document).ready(function () {
-    //       setTimeout(function () {
-    //         if ($("#overlay").length > 0) $("#overlay").fadeOut("slow"); // Changed ".overlay" to "#overlay"
-    //         window.location.href = "admin.php?conversation=";
-    //       }, 100);
-    //     });
-    //   });
-    // });
+    async function getFirstActiveWAConversationItem(){await new Promise(resolve=>setTimeout(resolve,1000));const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");return conversationItem;}window.onload=async()=>{const conversationItem=await getFirstActiveWAConversationItem();if(conversationItem){setTimeout(()=>toggleMenuBarAndFloatingText(false),20);}else{toggleMenuBarAndFloatingText(true);}};async function toggleMenuBarAndFloatingText(visible){await new Promise(resolve=>setTimeout(resolve,0));const menuBar=document.querySelector(".sb-show-menu-bar,.sb-bar");if(menuBar){menuBar.style.visibility=visible?"visible":"hidden";menuBar.style.opacity=visible?"1":"0";}const floatingText=document.getElementById("floatingText");if(floatingText){floatingText.style.display=visible?"none":"block";floatingText.style.opacity=visible?"0":"1";}}document.addEventListener("click",handleConversationClick);async function handleConversationClick(event){if(event.target.closest("div.sb-header"))return;toggleElementsVisibility();const conversationItem=event.target.closest("li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]");if(!conversationItem)return;const source=conversationItem.dataset.conversationSource;const status=conversationItem.dataset.conversationStatus;if(source==="wa"&&!isNaN(status)){await toggleMenuBarAndFloatingText(false);}}function toggleElementsVisibility(){const floatingText=document.getElementById("floatingText");const container=document.querySelector(".sb-show-menu-bar");if(floatingText){floatingText.style.opacity="0";floatingText.style.display="none";}if(container){container.style.visibility="visible";container.style.opacity="1";}}const floatingText=document.getElementById("floatingText");if(floatingText){floatingText.addEventListener("click",toggleElementsVisibility);}function toggleWhatsAppButton(visible){const whatsAppButton=document.querySelector(".api-whatsapp-button");if(whatsAppButton){whatsAppButton.style.visibility=visible?"visible":"hidden";}}function checkActiveWAConversation(){const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");toggleWhatsAppButton(conversationItem!==null);}document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click",function(){const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");if(conversationItem){toggleWhatsAppButton(true);}else{toggleWhatsAppButton(false);}});document.getElementById("floatingText").addEventListener("click",function(){toggleWhatsAppButton(false);});document.addEventListener("DOMContentLoaded",function(){checkActiveWAConversation();});
+
 
     // CONTEXTUAL BLOCKED
     // $(document).on("contextmenu",function(e){
@@ -8077,3 +8079,4 @@ $(document).on("click", function (event) {
   window.speechSynthesis.cancel();
   isSpeechSynthesisActive = false; // Reset flag on document click
 });
+

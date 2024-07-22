@@ -8995,66 +8995,38 @@ if (conversation_id != -1) {
       });
     });
 
-    /*
+   
+/*
      * ----------------------------------------------------------
      * Recording MP3 for chat
      * ----------------------------------------------------------
      */
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const recButton = document.getElementById("recordButton");
-      const stopButton = document.getElementById("stopButton");
-      const sending = document.querySelector(".bi-arrow-up-circle-fill");
-      const textArea = document.querySelector(".sb-textarea > textarea");
-      const sbTextArea = document.querySelector(".sb-textarea");
-      const micIcon = document.querySelector(".bi-mic-fill");
-
-      let isTextAreaVisible = true;
-
-      const toggleTextAreaVisibility = () => {
-        isTextAreaVisible = !isTextAreaVisible;
-        sbTextArea.style.visibility = isTextAreaVisible ? "visible" : "hidden";
-      };
-
-      const showTextArea = () => {
-        isTextAreaVisible = true;
-        sbTextArea.style.visibility = "visible";
-      };
-
-      sending.addEventListener("click", () => {
-        recButton.style.visibility = "visible";
-        sending.style.visibility = "hidden";
-        showTextArea();
-        micIcon.style.visibility = "visible";
-      });
-
-      textArea.addEventListener("input", () => {
-        if (textArea.value.trim() === "") {
-          sending.style.visibility = "hidden";
-          recButton.style.visibility = "visible";
-        } else {
-          sending.style.visibility = "visible";
-          recButton.style.visibility = "hidden";
-        }
-        showTextArea();
-      });
-
-      recButton.addEventListener("click", () => {
-        micIcon.style.visibility = "hidden";
-        toggleTextAreaVisibility();
-        setTimeout(() => {
-          sending.style.visibility = "visible";
-        }, 500);
-      });
-
-      stopButton.addEventListener("click", () => {
-        micIcon.style.visibility = "visible";
-        showTextArea();
-        setTimeout(() => {
-          sending.style.visibility = "visible";
-        }, 500);
-      });
-    });
+  //   document.addEventListener("DOMContentLoaded", () => {
+  //     const recButton = document.getElementById("recordButton");
+  //     const stopButton = document.getElementById("stopButton");
+  //     const sending = document.querySelector(".bi-arrow-up-circle-fill");
+  //     const micIcon = document.querySelector(".bi-mic-fill");
+  
+  //     sending.addEventListener("click", () => {
+  //         recButton.style.visibility = "visible";
+  //         sending.style.visibility = "hidden";
+  //         micIcon.style.visibility = "visible";
+  //     });
+  
+  //     recButton.addEventListener("click", () => {
+  //         micIcon.style.visibility = "hidden";
+  //         setTimeout(() => {
+  //             sending.style.visibility = "visible";
+  //         }, 500);
+  //     });
+  
+  //     stopButton.addEventListener("click", () => {
+  //         micIcon.style.visibility = "visible";
+  //         setTimeout(() => {
+  //             sending.style.visibility = "visible";
+  //         }, 500);
+  //     });
+  // });
 
     /*
      * ----------------------------------------------------------
