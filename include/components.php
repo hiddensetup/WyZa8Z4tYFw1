@@ -1388,13 +1388,13 @@ function sb_component_admin()
                                                 <span class="routin-buttons-top-content"><?php sb_e('Send email') ?></span>
                                             </a>
                                         </li>
-                                        <li class="flex-buttons-users transition-opacity">
+                                        <!-- <li class="flex-buttons-users transition-opacity">
                                             <a data-value="message" class="routin-buttons-top-tip">
                                                 <i class="bi-megaphone"></i>
                                                 <span class="routin-buttons-top-content"><?php sb_e('Push messages') ?></span>
 
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <!-- <?php if (sb_is_agent() && $is_admin) { ?>
                                             <li class="flex-buttons-users transition-opacity">
                                                 <a data-value="csv" class="routin-buttons-top-tip bi-google">
