@@ -25,7 +25,7 @@
       {
         "type": "checkbox",
         "id": "whatsmeow-go-active",
-        "title": "Deshabilitar"
+        "title": "Active"
       },
       {
         "type": "text",
