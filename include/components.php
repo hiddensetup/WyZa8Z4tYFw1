@@ -1395,14 +1395,14 @@ function sb_component_admin()
 
                                             </a>
                                         </li> -->
-                                        <!-- <?php if (sb_is_agent() && $is_admin) { ?>
+                                        <?php if (sb_is_agent() && $is_admin) { ?>
                                             <li class="flex-buttons-users transition-opacity">
                                                 <a data-value="csv" class="routin-buttons-top-tip bi-google">
                                                 <span class="routin-buttons-top-content"><?= sb_('Download CSV') ?></span>
 
                                                 </a>
                                             </li>
-                                        <?php } ?> -->
+                                        <?php } ?>
                                         <!-- <li class="flex-buttons-users transition-opacity">
                                             <a style="display: none;" class="routin-buttons-top-tip">
                                                 <i class="bi-chat-text"></i>
