@@ -14,13 +14,13 @@
  
       {
         "type": "button",
-        "id": "whatsmeow-go-restart",
-        "button-text": "<i class=\"bi bi-qr-code\"></i> Generar conexión"
+        "id": "whatsmeow-go-start",
+        "button-text": "<i class=\"bi bi-window-x\"></i> Generar conexión"
       },
       {
         "type": "button",
-        "id": "whatsmeow-go-start",
-        "button-text": "<i class=\"bi bi-window-x\"></i> Desconectar"
+        "id": "whatsmeow-go-restart",
+        "button-text": "<i class=\"bi bi-qr-code\"></i> Desconectar"
       },
       {
         "type": "checkbox",
