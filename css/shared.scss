@@ -641,6 +641,7 @@
 sb-hidden {
   display: none !important;
   scale: .95;
+  opacity: 0
 }
 
 .profile-top-circle:active {
@@ -1902,7 +1903,7 @@ div ul.sb-menu,
 }
 
 
-.sb-hide {
+.sb-hidex {
   display: none;
   opacity: 0;
 
