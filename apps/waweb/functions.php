@@ -27,8 +27,9 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
 
     // Security
     if (!sb_is_agent() && !sb_is_agent($user) && sb_get_active_user_ID() != sb_isset($user, 'id') && empty($GLOBALS['SB_FORCE_ADMIN'])) {
-        return json_encode(['status' => 'error', 'message' => 'Security error']);
+        return new SBError('security-error', 'sb_waweb_send_message');
     }
+
 
     // Send the message
     if (is_string($message)) {
@@ -77,8 +78,14 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
             }
         }
         return $response;
-    } 
+    } else {
+        if ($message) {
+            $query = ['messaging_product' => 'waweb', 'recipient_type' => 'individual', 'to' => $to];
+        }
+        return $response;
+    }
 }
+
 
 function sb_waweb_rich_messages($message, $extra = false)
 {
