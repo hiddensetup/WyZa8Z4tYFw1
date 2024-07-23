@@ -23,7 +23,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
     $merge_field = false;
 
     // Custom Messaging
-    $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active')) && !empty(sb_get_multi_setting('waweb-go', 'waweb-go-url'));
+    $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active'));
 
     // Security
     if (!sb_is_agent() && !sb_is_agent($user) && sb_get_active_user_ID() != sb_isset($user, 'id') && empty($GLOBALS['SB_FORCE_ADMIN'])) {
@@ -52,9 +52,9 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
     }
 
     if ($goproxy) {
-        $wawebGoUrl = sb_get_multi_setting('waweb-go', 'waweb-go-url');
+        $wawebGoUrl = WX_TOKEN;
         $goUrl = WX_URL_GO; // Use the base URL constant
-        $port = sb_get_multi_setting('waweb-go', 'waweb-go-qr');
+        $port = WX_PORT_GO;
         $url = $goUrl . ':' . $port . "/api/message/send?auth=" . $wawebGoUrl;
         $header = ['Content-Type: application/json'];
         $query = [

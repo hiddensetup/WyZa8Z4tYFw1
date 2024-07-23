@@ -3,7 +3,7 @@ header("Content-Type: application/json");
 header("Cache-Control: no-cache, must-revalidate");
 require_once('../config.php');
 
-$qrurl = $_GET['qrurl'];
+$qrurl = WX_PORT_GO;
 $authToken = WX_TOKEN;  
 $url = WX_URL_GO . ':' . $qrurl . '/api/user/login?auth=' . $authToken;
 $ch = curl_init($url);

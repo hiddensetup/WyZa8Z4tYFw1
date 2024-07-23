@@ -5,10 +5,8 @@ header("Cache-Control: no-cache, must-revalidate");
 // Include the configuration file
 require_once('../config.php');
 
-$qrurl = $_GET['qrurl'];
-$authToken = WX_TOKEN;  
-
-// Construct the URL for the first task
+$qrurl = WX_PORT_GO;
+$authToken = WX_TOKEN;
 $logoutUrl = WX_URL_GO . ':' . $qrurl . '/api/user/logout?auth=' . $authToken;
 
 $ch = curl_init($logoutUrl);

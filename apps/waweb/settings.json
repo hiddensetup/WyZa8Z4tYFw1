@@ -27,17 +27,6 @@
         "type": "checkbox",
         "id": "waweb-go-active",
         "title": "Active"
-      },
-      {
-        "type": "text",
-        "id": "waweb-go-url",
-        "title": "CLIENT TOKEN"
-      },
-
-      {
-        "type": "text",
-        "id": "waweb-go-qr",
-        "title": "PORT"
       }
     ]
   },

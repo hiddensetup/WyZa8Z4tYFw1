@@ -1,5 +1,5 @@
 <?php
-file_put_contents("api.json", print_r($_POST, true), FILE_APPEND);
+// file_put_contents("api.json", print_r($_POST, true), FILE_APPEND);
 
 $raw = file_get_contents('php://input');
 

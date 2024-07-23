@@ -23,7 +23,7 @@ function sb_whatsmeow_send_message($to, $message = '', $attachments = [])
     $merge_field = false;
 
     // Custom Messaging
-    $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active')) && !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-url'));
+    $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active'));
 
     // Security
     if (!sb_is_agent() && !sb_is_agent($user) && sb_get_active_user_ID() != sb_isset($user, 'id') && empty($GLOBALS['SB_FORCE_ADMIN'])) {
@@ -52,9 +52,9 @@ function sb_whatsmeow_send_message($to, $message = '', $attachments = [])
     }
 
     if ($goproxy) {
-        $whatsmeowGoUrl = sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-url');
+        $whatsmeowGoUrl = WW_TOKEN;
         $goUrl = WW_URL_GO; // Use the base URL constant
-        $port = sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-qr');
+        $port = WW_PORT_GO;
         $url = $goUrl . ':' . $port . "/api/message/send?auth=" . $whatsmeowGoUrl;
         $header = ['Content-Type: application/json'];
         $query = [
