@@ -8,7 +8,12 @@ const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
   scssIcons: ['media/icons/bootstrap-icons.scss'], // Source SCSS files for icons
-  src: ['js/source/main.js', 'js/source/admin.js', 'js/source/metatemplate.js'], // Source JavaScript files including toast.js
+  src: [
+    'js/source/main.js',
+    'js/source/admin.js',
+    'js/source/metatemplate.js',
+    'js/source/wa.js' // Added wa.js to the source files
+  ], // Source JavaScript files including toast.js
   scssl: [
     'css/shared.scss',
     'css/admin.scss',

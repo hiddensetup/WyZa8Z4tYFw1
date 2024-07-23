@@ -8717,8 +8717,30 @@
     // });
 
     // WHATSAPP CONNECTION
-    $.getScript("/js/min/wa.js", function () {
-      console.log("wa.js loaded and executed.");
+    const primaryScriptPath = "/js/min/wa.js";
+    const fallbackScriptPath = "/js/source/wa.js";
+
+    // Function to load the script
+    function loadScript(url, successCallback, errorCallback) {
+      $.getScript(url)
+        .done(function() {
+          successCallback();
+        })
+        .fail(function() {
+          errorCallback();
+        });
+    }
+
+    // Attempt to load the primary script
+    loadScript(primaryScriptPath, function() {
+      console.log("wa.js loaded and executed from /js/min/wa.js.");
+    }, function() {
+      // If the primary script fails, try the fallback script
+      loadScript(fallbackScriptPath, function() {
+        console.log("wa.js loaded and executed from /js/source/wa.js.");
+      }, function() {
+        console.error("Failed to load wa.js from both locations.");
+      });
     });
 
     $(document).ready(function () {
