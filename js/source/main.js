@@ -7982,15 +7982,123 @@ if (message || attachments.length || payload) {
       }, 500);
     }
 
-    // LOADER EXTRA
+    // button API hide and show template
 
-    async function getFirstActiveWAConversationItem(){await new Promise(resolve=>setTimeout(resolve,1000));const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");return conversationItem;}window.onload=async()=>{const conversationItem=await getFirstActiveWAConversationItem();if(conversationItem){setTimeout(()=>toggleMenuBarAndFloatingText(false),20);}else{toggleMenuBarAndFloatingText(true);}};async function toggleMenuBarAndFloatingText(visible){await new Promise(resolve=>setTimeout(resolve,0));const menuBar=document.querySelector(".sb-show-menu-bar,.sb-bar");if(menuBar){menuBar.style.visibility=visible?"visible":"hidden";menuBar.style.opacity=visible?"1":"0";}const floatingText=document.getElementById("floatingText");if(floatingText){floatingText.style.display=visible?"none":"block";floatingText.style.opacity=visible?"0":"1";}}document.addEventListener("click",handleConversationClick);async function handleConversationClick(event){if(event.target.closest("div.sb-header"))return;toggleElementsVisibility();const conversationItem=event.target.closest("li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]");if(!conversationItem)return;const source=conversationItem.dataset.conversationSource;const status=conversationItem.dataset.conversationStatus;if(source==="wa"&&!isNaN(status)){await toggleMenuBarAndFloatingText(false);}}function toggleElementsVisibility(){const floatingText=document.getElementById("floatingText");const container=document.querySelector(".sb-show-menu-bar");if(floatingText){floatingText.style.opacity="0";floatingText.style.display="none";}if(container){container.style.visibility="visible";container.style.opacity="1";}}const floatingText=document.getElementById("floatingText");if(floatingText){floatingText.addEventListener("click",toggleElementsVisibility);}function toggleWhatsAppButton(visible){const whatsAppButton=document.querySelector(".api-whatsapp-button");if(whatsAppButton){whatsAppButton.style.visibility=visible?"visible":"hidden";}}function checkActiveWAConversation(){const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");toggleWhatsAppButton(conversationItem!==null);}document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click",function(){const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");if(conversationItem){toggleWhatsAppButton(true);}else{toggleWhatsAppButton(false);}});document.getElementById("floatingText").addEventListener("click",function(){toggleWhatsAppButton(false);});document.addEventListener("DOMContentLoaded",function(){checkActiveWAConversation();});
+    async function getFirstActiveWAConversationItem() {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const conversationItem = document.querySelector(
+        "li.sb-active[data-conversation-source='wa']"
+      );
+      return conversationItem;
+    }
+    window.onload = async () => {
+      const conversationItem = await getFirstActiveWAConversationItem();
+      if (conversationItem) {
+        setTimeout(() => toggleMenuBarAndFloatingText(false), 20);
+      } else {
+        toggleMenuBarAndFloatingText(true);
+      }
+    };
+    async function toggleMenuBarAndFloatingText(visible) {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      const menuBar = document.querySelector(".sb-show-menu-bar,.sb-bar");
+      if (menuBar) {
+        menuBar.style.visibility = visible ? "visible" : "hidden";
+        menuBar.style.opacity = visible ? "1" : "0";
+      }
+      const floatingText = document.getElementById("floatingText");
+      if (floatingText) {
+        floatingText.style.display = visible ? "none" : "block";
+        floatingText.style.opacity = visible ? "0" : "1";
+      }
+    }
+    document.addEventListener("click", handleConversationClick);
+    async function handleConversationClick(event) {
+      if (event.target.closest("div.sb-header")) return;
+      toggleElementsVisibility();
+      const conversationItem = event.target.closest(
+        "li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]"
+      );
+      if (!conversationItem) return;
+      const source = conversationItem.dataset.conversationSource;
+      const status = conversationItem.dataset.conversationStatus;
+      if (source === "wa" && !isNaN(status)) {
+        await toggleMenuBarAndFloatingText(false);
+      }
+    }
+    function toggleElementsVisibility() {
+      const floatingText = document.getElementById("floatingText");
+      const container = document.querySelector(".sb-show-menu-bar");
+      if (floatingText) {
+        floatingText.style.opacity = "0";
+        floatingText.style.display = "none";
+      }
+      if (container) {
+        container.style.visibility = "visible";
+        container.style.opacity = "1";
+      }
+    }
+    const floatingText = document.getElementById("floatingText");
+    if (floatingText) {
+      floatingText.addEventListener("click", toggleElementsVisibility);
+    }
+
+    function addHideClass() {
+      const whatsAppButton = document.querySelector(".api-whatsapp-button");
+      if (whatsAppButton) {
+        whatsAppButton.classList.add("sb-hide");
+      }
+    }
+
+    function removeHideClass() {
+      const whatsAppButton = document.querySelector(".api-whatsapp-button");
+      if (whatsAppButton) {
+        whatsAppButton.classList.remove("sb-hide");
+      }
+    }
+
+    function toggleWhatsAppButton(visible) {
+      if (visible) {
+        removeHideClass();
+      } else {
+        addHideClass();
+      }
+    }
+
+    function checkActiveWAConversation() {
+      const conversationItem = document.querySelector(
+        "li.sb-active[data-conversation-source='wa']"
+      );
+      toggleWhatsAppButton(conversationItem !== null);
+    }
+    document
+      .querySelector(".menu-plus.bi-plus-lg")
+      .addEventListener("click", function () {
+        const conversationItem = document.querySelector(
+          "li.sb-active[data-conversation-source='wa']"
+        );
+        if (conversationItem) {
+          toggleWhatsAppButton(true);
+        } else {
+          toggleWhatsAppButton(false);
+        }
+      });
+
+    document
+      .getElementById("floatingText")
+      .addEventListener("click", function () {
+        toggleWhatsAppButton(false);
+      });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      checkActiveWAConversation();
+    });
 
 
     // CONTEXTUAL BLOCKED
-    // $(document).on("contextmenu",function(e){
-    //     return false;
-    // });
+    $(document).on("contextmenu",function(e){
+        return false;
+    });
 
     // LISTENER
     $(global).on(
