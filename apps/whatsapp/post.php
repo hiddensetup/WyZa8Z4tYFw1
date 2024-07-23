@@ -1,9 +1,16 @@
 <?php
 require('../../include/functions.php');
-$cloud_active = sb_get_multi_setting('whatsapp-cloud', 'cloud-active');
 
+// Retrieve the blacklist
+$blacklist_json = sb_get_multi_setting('blacklist', 'blacklist');
+$blacklist = json_decode($blacklist_json, true);
+if (!is_array($blacklist)) {
+    $blacklist = [];
+}
+
+// Check if the cloud-active setting is enabled
+$cloud_active = sb_get_multi_setting('whatsapp-cloud', 'cloud-active');
 if (!$cloud_active) {
-    // Do not process incoming messages if cloud-active setting is disabled
     die();
 }
 
@@ -16,6 +23,8 @@ if (isset($_GET['hub_mode']) && $_GET['hub_mode'] == 'subscribe') {
 }
 
 $raw = file_get_contents('php://input');
+file_put_contents('debug.json', $raw);
+
 flush();
 
 if (function_exists('fastcgi_finish_request')) {
@@ -41,6 +50,7 @@ if ($raw) {
         $department = sb_whatsapp_cloud_get_token($phone_number_id, true);
         $payload = [];
         $message = '';
+        $attachments = [];
         $reply_msg = '';
         $new_conversation = false;
 
@@ -52,17 +62,43 @@ if ($raw) {
             $replyid = $message_2['context']['id'];
         }
 
-        // If there is a reply ID, try to retrieve the original message's waid
         if ($replyid !== null) {
             $original_message = sb_db_get('SELECT * FROM sb_messages WHERE payload LIKE "%\"' . sb_db_escape($replyid) . '\"%"');
             if ($original_message) {
                 $payload['waid'] = $original_message['waid'];
-                $reply_msg = '{+' . $message_2['context']['from'] . '@s.whatsapp.net} 〚' . $original_message['message'] . '〛';
+                
+                // Always include the original message text, even if it's empty
+                $original_text = !empty($original_message['message']) ? $original_message['message'] : "[No text]";
+                $reply_msg = '{+' . $message_2['context']['from'] . '@s.whatsapp.net} 〚' . $original_text . '〛';
+                
+                $attachment_found = false;
+                
+                // Check if the original message had attachments
+                if (!empty($original_message['attachments'])) {
+                    $original_attachments = json_decode($original_message['attachments'], true);
+                    if (is_array($original_attachments)) {
+                        foreach ($original_attachments as $attachment) {
+                            if (isset($attachment[1]) && file_exists($attachment[1])) {
+                                // Add existing attachment to the current message's attachments
+                                $attachments[] = $attachment;
+                                $attachment_found = true;
+                            }
+                        }
+                    }
+                }
+                
+                // If no attachments were found, add a note
+                if (!$attachment_found) {
+                    $reply_msg .= "\n";
+                }
+            } else {
+                $reply_msg = "〚Reply〛 \n" . $original_message['message'];
             }
         }
-
+        
+        // Process the message type
         $message_type = $message_2['type']; // Define the message type
-
+        
         switch ($message_type) {
             case 'location':
                 $lat = $message_2['location']['latitude'];
@@ -75,7 +111,7 @@ if ($raw) {
 
             case 'reaction':
                 $emoji = html_entity_decode($message_2['reaction']['emoji'], ENT_COMPAT, 'UTF-8');
-                $message = strip_tags($emoji);
+                $message = "#" . strip_tags($emoji);
                 break;
 
             case 'button':

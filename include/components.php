@@ -145,7 +145,7 @@ function sb_profile_edit_box()
 
                     <div id="last_name" data-type="text" name="last_name" class="sb-input">
                         <span><?php sb_e('Last name') ?></span>
-                        <input type="text" name="last_name" required />
+                        <input type="text" name="last_name" />
                     </div>
 
                     <div id="password" data-type="password" name="password" class="sb-input">
@@ -270,7 +270,7 @@ function sb_profile_edit_box()
 function displayMessage()
 {
     $jsonString = '{
-        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin.botchat, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
+        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin Cloud, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
         "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Routin.bot mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Routin.bot también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Sistema Sobrecargado! </h2><span style=\"color:var(--chat-text-primary)\">Estamos experimentando una alta demanda en nuestros servidores en este momento. Por favor, sé paciente y vuelve a intentarlo más tarde. Agradecemos tu comprensión.</span><br><br><span style=\"color:var(--chat-text-primary)\">Mientras tanto, ¿por qué no exploras otras funciones de Steambox? ¡Hay mucho por descubrir!</span>"
     }
@@ -287,22 +287,17 @@ function displayMessage()
 
         echo '<div id="login-message" style="padding-top:40px">';
         echo '<div class="alert-special">';
-        // echo '<span class="closebtn-special" onclick="this.parentElement.style.display=\'none\';">&times;</span>';
         echo $message;
         echo '</div>';
         echo '</div>';
-
-        // Return true if a message is to be displayed
         return true;
     } else {
-        // Return false if no message is to be displayed
         return false;
     }
 }
 
 function sb_login_box()
 {
-    // Check if a message is to be displayed
     $messageDisplayed = displayMessage();
 ?>
     <form class="sb sb-rich-login sb-admin-box sb-form-container" <?php echo ($messageDisplayed ? 'style="display:none;"' : ''); ?>>
@@ -310,11 +305,9 @@ function sb_login_box()
         <div class="sb-top-bar">
             <div id="announcement">
                 <?php
-                // If no message is to be displayed, show the login form
                 if (!$messageDisplayed) {
                 ?>
-                    <!-- Your login form HTML goes here -->
-                    <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/cube.svg' ?>" />
+                    <img style="margin: 50px auto 10px auto;" src="<?php echo sb_get_setting('login-icon') != false ? sb_get_setting('login-icon') : '/media/routin.svg' ?>" />
                 <?php } ?>
             </div>
         </div>
@@ -338,9 +331,7 @@ function sb_login_box()
 
         <div style="display: flex;flex-wrap: wrap;justify-content: space-evenly" class="sb-text">
             <div style="margin: 0.2rem auto 1rem auto;max-width: 270px;" class="sb-info"></div>
-
-            <a target="_blank" style="font-size: .8rem; text-decoration: none; color: var(--chat-text-primary); margin-right:4px" href="https://steamboxchat.com/privacy"> Privacy Policy</a><a style=" text-decoration: none; color: var(--chat-text-tertiary-color);    font-size: .8rem;  " target="_blank" href="https://steamboxchat.com/terms">Terms and Condition</a>
-            <small>&copy; <?php echo date("Y"); ?> Routin.botchat</small>
+            <small>&copy; <?php echo date("Y"); ?> Routin Cloud</small>
 
         </div>
     </form>
@@ -348,25 +339,17 @@ function sb_login_box()
 
     <img id="sb-error-check" style="display:none" src="<?php echo STMBX_URL . '/media/icon.svg' ?>" />
     <script>
-        (function($) {
-            $(document).ready(function() {
-                $('.sb-admin-start').removeAttr('style');
-                $('.sb-submit-login').on('click', function() {
-                    SBF.loginForm(this, false, function() {
-                        location.reload();
-                    });
-                });
-                $('#sb-error-check').one('error', function() {
-                    // $('.sb-info').html('It looks like the chat URL has changed. Edit the config.php file(it\'s in the Routin.bot folder) and update the STMBX_URL constant with the new URL.').addClass('sb-active');
-                });
-                SBPusher.initServiceWorker();
-            });
-            $(window).keydown(function(e) {
-                if (e.which == 13) {
-                    $('.sb-submit-login').click();
-                }
-            });
-        }(jQuery));
+        ! function(n) {
+            n(document).ready(function() {
+                n(".sb-admin-start").removeAttr("style"), n(".sb-submit-login").on("click", function() {
+                    SBF.loginForm(this, !1, function() {
+                        location.reload()
+                    })
+                }), n("#sb-error-check").one("error", function() {}), SBPusher.initServiceWorker()
+            }), n(window).keydown(function(i) {
+                13 == i.which && n(".sb-submit-login").click()
+            })
+        }(jQuery);
     </script>
 
 
@@ -514,7 +497,7 @@ function sb_notes_box()
             </div>
             <div class="sb-bottom" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap: wrap;flex-direction: column-reverse;">
                 <div style="display:flex;">
-                    <a style="" class="sb-add-note sb-btn sb-icon"><i class="bi-stickies"></i><?php sb_e('Save note') ?></a>
+                    <a style="" class="sb-add-note sb-btn sb-icon"><i class="bi-pencil"></i><?php sb_e('Save note') ?></a>
                 </div>
             </div>
         </div>
@@ -617,7 +600,7 @@ function sb_direct_message_box()
                 <form id="user-template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
                     <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
                         <div class="api-bubble-container">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:240px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height: auto!important;box-sizing: border-box;min-height: 10px;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
 
@@ -638,7 +621,7 @@ function sb_direct_message_box()
                             </select>
                             <!-- Add this new input for Image URL -->
                             <div style="display:flex"">
-                            <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                            <input type=" text" class="ImageUrl" name="ImageUrl" style="width: -webkit-fill-available;margin-left: -1px;border-radius: var(--chat-rounded-size-6);" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
                             </div>
                             <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
                                 <div class='variables'>
@@ -709,7 +692,7 @@ function sb_send_template_box()
                 <form id="template-form" style="display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;">
                     <div class="sb-input-setting api-cloud-bubble" style="width: 100%;max-width: 316px;background: var(--chat-text-theme-background);box-shadow: var(--box-shadow-inner);">
                         <div class="api-bubble-container">
-                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height:240px;box-sizing: border-box;" name="BodyTemplate"></textarea>
+                            <textarea disabled="" type="text" class="BodyTemplate textarea-api" style="height: auto!important;box-sizing: border-box;min-height: 10px;" name="BodyTemplate"></textarea>
                             <div class="FooterTemplate"></div>
                             <div class="Buttons"></div>
                         </div>
@@ -730,7 +713,7 @@ function sb_send_template_box()
                             </select>
                             <!-- Add this new input for Image URL -->
                             <div style="display:flex"">
-                                    <input type=" text" class="ImageUrl" name="ImageUrl" style=" width:revert-layer; margin-left: -1px; border-radius: 0px 8px 8px 0px;" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
+                                    <input type=" text" class="ImageUrl" name="ImageUrl" style="width: -webkit-fill-available;margin-left: -1px;border-radius: var(--chat-rounded-size-6);" placeholder="<?php sb_e('Image URL Chat Area (optional)') ?>">
                             </div>
                             <div style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: stretch;" class="sb-input-setting Variables">
                                 <div class='variables'>
@@ -761,85 +744,80 @@ function sb_send_template_box()
     <script>
         const meta = new Metatemplate;
         meta.init("#template-form");
-       
-       
-       
+
         const themeToggleBtns = document.querySelectorAll('.themeToggleBtn');
-const htmlTag = document.documentElement;
-const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        const htmlTag = document.documentElement;
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-const updateTheme = () => {
-    const currentTheme = htmlTag.dataset.theme;
-    let newTheme;
-    let newThemeColor;
+        const updateTheme = () => {
+            const currentTheme = htmlTag.dataset.theme;
+            let newTheme;
+            let newThemeColor;
 
-    switch (currentTheme) {
-        case 'dark':
-            newTheme = 'light';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'light':
-            newTheme = 'app';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'app':
-            newTheme = 'routin';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'routin':
-            newTheme = 'steambox';
-            newThemeColor = 'white';
-            htmlTag.classList.remove('dark');
-            break;
-        case 'steambox':
-        default:
-            newTheme = 'dark';
-            newThemeColor = '#181620';
-            htmlTag.classList.add('dark');
-            break;
-    }
+            switch (currentTheme) {
+                case 'dark':
+                    newTheme = 'light';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'light':
+                    newTheme = 'app';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'app':
+                    newTheme = 'routin';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'routin':
+                    newTheme = 'steambox';
+                    newThemeColor = 'white';
+                    htmlTag.classList.remove('dark');
+                    break;
+                case 'steambox':
+                default:
+                    newTheme = 'dark';
+                    newThemeColor = '#181620';
+                    htmlTag.classList.add('dark');
+                    break;
+            }
 
-    htmlTag.dataset.theme = newTheme;
-    metaThemeColor.content = newThemeColor;
-    localStorage.setItem('theme', newTheme);
-};
+            htmlTag.dataset.theme = newTheme;
+            metaThemeColor.content = newThemeColor;
+            localStorage.setItem('theme', newTheme);
+        };
 
-const storedTheme = localStorage.getItem('theme');
-if (storedTheme) {
-    htmlTag.dataset.theme = storedTheme;
-    switch (storedTheme) {
-        case 'light':
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            htmlTag.dataset.theme = storedTheme;
+            switch (storedTheme) {
+                case 'light':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'app':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'routin':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'steambox':
+                    metaThemeColor.content = 'white';
+                    break;
+                case 'dark':
+                default:
+                    metaThemeColor.content = '#181620';
+                    htmlTag.classList.add('dark');
+                    break;
+            }
+        } else {
+            htmlTag.dataset.theme = 'light';
             metaThemeColor.content = 'white';
-            break;
-        case 'app':
-            metaThemeColor.content = 'white';
-            break;
-        case 'routin':
-            metaThemeColor.content = 'white';
-            break;
-        case 'steambox':
-            metaThemeColor.content = 'white';
-            break;
-        case 'dark':
-        default:
-            metaThemeColor.content = '#181620';
-            htmlTag.classList.add('dark');
-            break;
-    }
-} else {
-    htmlTag.dataset.theme = 'light';
-    metaThemeColor.content = 'white';
-}
+        }
 
-themeToggleBtns.forEach(btn => {
-    btn.addEventListener('click', updateTheme);
-});
-
-
-
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', updateTheme);
+        });
 
         // Rating
         const sendRatingButton = document.getElementById("send-rating-button");
@@ -847,155 +825,21 @@ themeToggleBtns.forEach(btn => {
             SBChat.sendMessage(-1, "[rating]");
         });
 
-
-
-        // Function to check if there are active WhatsApp conversation items and return the first one
-        async function getFirstActiveWAConversationItem() {
-            await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
-
-            const conversationItem = document.querySelector(
-                "li.sb-active[data-conversation-source='wa']",
-            );
-            return conversationItem;
-        }
-
-        // Execute the following code asynchronously onload
-        window.onload = async () => {
-            const conversationItem = await getFirstActiveWAConversationItem();
-
-            // Toggle visibility of the menu bar and floating text based on the presence of active WhatsApp conversations
-            if (conversationItem) {
-                setTimeout(() => toggleMenuBarAndFloatingText(false), 600); // Adding a slight delay after confirming WhatsApp conversations
-            } else {
-                toggleMenuBarAndFloatingText(true);
-            }
-        };
-
-        // Function to toggle visibility of the menu bar and floating text
-        async function toggleMenuBarAndFloatingText(visible) {
-            await new Promise((resolve) => setTimeout(resolve, 0)); // Wait for the next tick
-
-            const menuBar = document.querySelector(".sb-show-menu-bar");
-            menuBar.style.visibility = visible ? "visible" : "hidden";
-
-            const floatingText = document.getElementById("floatingText");
-            floatingText.style.display = visible ? "none" : "block";
-        }
-
-        // Add click event listener to the document to handle clicks on conversation items
-        document.addEventListener("click", handleConversationClick);
-
-        // Function to handle click on conversation items
-        async function handleConversationClick(event) {
-            // Exclude clicks on ul.sb-menu elements
-            if (event.target.closest("div.sb-header")) return;
-
-            // Hide the floating text and menu bar initially
-            toggleElementsVisibility();
-
-            const conversationItem = event.target.closest(
-                "li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]",
-            );
-            if (!conversationItem) return; // Exit if clicked outside the conversation item
-
-            const source = conversationItem.dataset.conversationSource;
-            const status = conversationItem.dataset.conversationStatus;
-
-            // Toggle visibility of the menu bar and floating text based on the conversation source and status
-            if (source === "wa" && !isNaN(status)) {
-                await toggleMenuBarAndFloatingText(false);
-            }
-        }
-
-
-        // Function to toggle visibility of floating text, sb-bar, and container
-        function toggleElementsVisibility() {
-            // Get references to the floatingText, sb-bar, and container elements
-            const floatingText = document.getElementById("floatingText");
-            const sbBar = document.querySelector(".sb-bar");
-            const container = document.querySelector(".sb-show-menu-bar");
-
-            // Toggle visibility of floating text
-            floatingText.style.display = "none";
-            // Make sb-bar visible
-            sbBar.style.visibility = "visible";
-            // Remove hidden style from container
-            container.style.visibility = "visible";
-        }
-
-        // Add click event listener to the floatingText element
-        floatingText.addEventListener("click", toggleElementsVisibility);
-
-        // Function to toggle visibility of the WhatsApp button
-        function toggleWhatsAppButton(visible) {
-            const whatsAppButton = document.querySelector(".api-whatsapp-button");
-            if (whatsAppButton) {
-                whatsAppButton.style.visibility = visible ? "visible" : "hidden"; // Fix: Use the 'visible' argument to set visibility
-            }
-        }
-
-
-        // Function to check if there are active WhatsApp conversation items and toggle the WhatsApp button accordingly
-        function checkActiveWAConversation() {
-            const conversationItem = document.querySelector(
-                "li.sb-active[data-conversation-source='wa']",
-            );
-            toggleWhatsAppButton(conversationItem !== null);
-        }
-
-        // Add click event listener to the menu-plus element to toggle the WhatsApp button
-        document
-            .querySelector(".menu-plus.bi-plus-lg")
-            .addEventListener("click", function() {
-                const conversationItem = document.querySelector(
-                    "li.sb-active[data-conversation-source='wa']",
-                );
-                if (conversationItem) {
-                    toggleWhatsAppButton(true);
-                } else {
-                    toggleWhatsAppButton(false);
-                }
-            });
-
-        // Add click event listener to the floatingText element to hide the WhatsApp button
-        document.getElementById("floatingText").addEventListener("click", function() {
-            toggleWhatsAppButton(false);
-        });
-
-        // Execute the following code when the DOM content is loaded
-        document.addEventListener("DOMContentLoaded", function() {
-            // Check initially on page load
-            checkActiveWAConversation();
-        });
-
-        //DONT TOUCH THIS CODE BELOW
-
-        // Get references to the elements
-        const sbIconDrag = document.querySelector(".menu-plus");
+ 
+         const sbIconDrag = document.querySelector(".menu-plus");
         const sbBarIcons = document.querySelector(".sb-bar-icons");
+        const elementsToHideIcons = [
+            document.querySelector(".sb-list"),
+            document.querySelector(".sorting-by-last-message"),
+            document.querySelector("textarea")
+        ];
 
-        // Function to toggle the visibility of sb-bar-icons
-        function toggleSbBarIcons() {
-            sbBarIcons.classList.toggle("sb-hide");
-        }
+         sbIconDrag.addEventListener("click", () => sbBarIcons.classList.toggle("sb-hide"));
 
-        // Add a click event listener to menu-plus to toggle the visibility
-        sbIconDrag.addEventListener("click", toggleSbBarIcons);
+         elementsToHideIcons.forEach(el => el?.addEventListener("click", () => sbBarIcons.classList.add("sb-hide")));
 
-        // Add a click event listener to sb-list and textarea to hide sb-bar-icons
-        document.querySelector(".sb-list").addEventListener("click", function() {
-            sbBarIcons.classList.add("sb-hide");
-        });
 
-        document
-            .querySelector(".sorting-by-last-message")
-            .addEventListener("click", function() {
-                sbBarIcons.classList.add("sb-hide");
-            });
 
-        document.querySelector("textarea").addEventListener("click", function() {
-            sbBarIcons.classList.add("sb-hide");
-        });
     </script>
 <?php } ?>
 
@@ -1055,7 +899,7 @@ function sb_routing_select($exclude_id = false)
  * INSTALLATION BOX
  * ----------------------------------------------------------
  *
- * Display the form to install Routin.bot
+ * Display the form to install Routin Cloud
  *
  */
 
@@ -1091,7 +935,7 @@ function sb_installation_box($error = false)
                 </div>
                 <div id="db-user" class="sb-input">
                     <span>Username</span>
-                    <input type="text" required placeholder="Enter username" />
+                    <input type="text" placeholder="Enter username" />
                 </div>
                 <div id="db-password" class="sb-input">
                     <span>Password</span>
@@ -1179,13 +1023,13 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
-        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin.botchat.'],
-        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Routin.botchat to read and reply to all messages sent to your Telegram bot directly in Routin.botchat.'],
-        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Routin.botchat.'],
-        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin.botchat.'],
-        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Routin.botchat.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Routin Cloud to read and reply to all messages sent to your Telegram bot directly in Routin Cloud.'],
+        ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Routin Cloud.'],
+        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin Cloud.'],
+        ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Routin Cloud.'],
         ['SB_TICKETS', 'tickets', 'Tickets', 'Provide help desk support to your customers by including a ticket area, with all chat features included, on any web page in seconds.'],
     ];
     $logged = $active_user && sb_is_agent($active_user);
@@ -1220,14 +1064,14 @@ function sb_component_admin()
                     ?>
                     <div>
                         <a id="sb-conversations" class="sb-active bi-chat-left-dots">
-                            <span>
+                            <span class="routin-left-tooltip">
                                 <?php sb_e('Conversations') ?>
                             </span>
                         </a>
                         <?php
-                        if ($active_areas['users']) echo '<a id="sb-users" class="bi-people" ><span>' . sb_('Users') . '</span></a>';
-                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-chart"><span>' . sb_('Reports') . '</span></a>';
-                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear-fill"><span>' . sb_('Settings') . '</span></a>';
+                        if ($active_areas['users']) echo '<a id="sb-users" class="bi-people" ><span class="routin-left-tooltip">' . sb_('Users') . '</span></a>';
+                        if ($active_areas['reports']) echo '<a id="sb-reports" class="bi-chart"><span class="routin-left-tooltip">' . sb_('Reports') . '</span></a>';
+                        if ($active_areas['settings']) echo '<a id="sb-settings" class="bi-gear-fill"><span class="routin-left-tooltip">' . sb_('Settings') . '</span></a>';
 
                         ?>
                     </div>
@@ -1235,7 +1079,7 @@ function sb_component_admin()
                 </div>
 
                 <div style="color:var(--chat-text-primary);" class="sb-admin-nav-right sb-menu-mobile">
-                    <i style="padding:17px 0px;" class="bi-three-dots-vertical"></i>
+                    <i class="bi-three-dots-vertical bottom"></i>
                     <div class="sb-desktop">
                         <div class="sb-account">
                             <img src="<?php echo STMBX_URL ?>/media/user.svg" />
@@ -1255,7 +1099,8 @@ function sb_component_admin()
                     </div>
                     <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);-webkit-animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);padding:8px;font-size: 1.1rem;font-weight: 500;">
                         <a href="#" class="sb-online" data-value="status"><?php sb_e('Online') ?></a>
-                        <a href="#" class="themeToggleBtn"> <i class="bi bi-palette2"></i> <?php sb_e('Tema') ?></a>
+                        <a href="#" class="themeToggleBtn"> <i class="bi-circle" style=" background: var(--chat-app-theme-color); border-radius: 24px; color: white; padding:0.8px 1px 0px 1px"></i> <?php sb_e('Tema') ?></a>
+                        <!-- <a href="#" class="startConversation"> <i class="bi-wind"></i> <?php sb_e('WhatsApp') ?></a> START CONVERSATION CREATION -->
                         <hr>
                         <a href="#" class="logout"><i class="bi bi-power"></i> <?php sb_e('Logout') ?></a>
 
@@ -1269,7 +1114,6 @@ function sb_component_admin()
                     <div class="sb-board">
                         <div class="sb-admin-list">
                             <div class="sb-top">
-
                                 <div class="sb-select inbox">
                                     <p class="non-hover" data-value="0">
                                         <i class="bi-inboxes-fill"></i>&nbsp; <?php sb_e('Inbox') ?><span> </span>
@@ -1281,7 +1125,7 @@ function sb_component_admin()
                                         </li>
                                         <hr>
                                         <li data-value="6">
-                                            <i class="bi-pin-fill"></i>&nbsp; <?php sb_e('Follow up') ?>
+                                            <i class="bi-stars"></i>&nbsp; <?php sb_e('My chats') ?>
                                             <span></span>
                                         </li>
                                         <li data-value="3">
@@ -1311,51 +1155,84 @@ function sb_component_admin()
                             <div class="sb-top">
                                 <i class="sb-btn-back bi-chevron-left"></i>
                                 <div class="sb-labels"></div>
-                                <a></a>
+                                <a class="routin-calls-chat"></a>
+
+                                <a class="routin-top-tip"></a>
+
                                 <div class="sb-menu-mobile sb-menu-top extra-background-color">
-                                    <i class="bi-three-dots-vertical bkg-color-menu"></i>
+                                    <i class="bi-three-dots-vertical top bkg-color-menu"></i>
                                     <ul class="ul-nav-top-mobile">
-                                        <li>
-                                            <a data-value="Details" class="sb-btn-icon open-profile" data-sb-tooltip="<?php sb_e('Details') ?>">
-                                                <i class="bi-info-square"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details open-profile">
+                                                <i class="i-details bi-info-circle"></i>
+                                                <span>
+                                                    <?php sb_e('Details') ?>
+                                                </span>
                                             </a>
                                         </li>
                                         <?php
                                         if ($is_admin || sb_get_setting('agents-delete') || sb_get_multi_setting('agents', 'agents-delete-conversation') || ($supervisor && $supervisor['supervisor-delete-conversation'])) {
-                                            echo '<li><a data-value="delete" class="sb-btn-icon" data-sb-tooltip="' . sb_('Delete conversation') . '"><i class="bi-robot"></i></a></li>';
+                                            echo '<li class="li-data-content">
+        <a class="a-details" data-value="delete">
+        <i class="i-details bi-robot"></i>
+            <span>
+                ' . sb_('Delete conversation') . '
+            </span>
+        </a>
+    </li>';
                                         }
                                         ?>
-                                        <!-- <li>
-                                            <a data-value="transcript" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Transcript') ?>" data-action="<?php echo sb_get_multi_setting('transcript', 'transcript-action') ?>">
-                                                <i class="bi-arrow-down-circle"></i>
-                                            </a>
-                                        </li> -->
-                                        <li>
-                                            <a data-value="archive" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Archive conversation') ?>">
-                                                <i class="bi-archive"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details" data-value="archive">
+                                                <i class="i-details bi-archive"></i>
+                                                <span>
+                                                    <?php sb_e('Archive conversation') ?>
+                                                </span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="read" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Mark as read') ?>">
-                                                <i class="bi-check-lg-circle"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details" data-value="read">
+                                                <i class="i-details bi-check-all"></i>
+                                                <span>
+                                                    <?php sb_e('Mark as unread') ?>
+                                                </span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="inbox" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send to inbox') ?>">
-                                                <i class="bi-arrow-up-left-circle-fill"></i>
+                                        <li class="li-data-content">
+                                            <a class="a-details" data-value="inbox">
+                                                <i class="i-details bi-arrow-up-left-circle-fill"></i>
+                                                <span>
+                                                    <?php sb_e('Send to inbox') ?>
+                                                </span>
                                             </a>
                                         </li>
                                         <?php
                                         if ($is_admin || sb_get_setting('agents-delete') || sb_get_multi_setting('agents', 'agents-delete-conversation') || ($supervisor && $supervisor['supervisor-delete-conversation'])) {
-                                            echo '<li><a data-value="empty-trash" class="sb-btn-icon sb-btn-red" data-sb-tooltip="' . sb_('Empty trash') . '"><i class="bi-trash"></i></a></li>';
+                                            echo '<li class="li-data-content">
+        <a class="a-details" data-value="empty-trash">
+        <i class="i-details bi-trash"></i>
+            <span>
+                ' . sb_('Empty trash') . '
+            </span>
+        </a>
+    </li>';
                                         }
                                         ?>
                                     </ul>
+
+
                                 </div>
                                 <div class="sb-label-date-top"></div>
 
                             </div>
                             <div class="sb-list"></div>
+                            <div class=" api-cloud-notif" id="floatingText">
+                                <p><i class="bi-info-circle-fill"></i>
+                                    Estás usando la API de WhatsApp Business Cloud de Meta. <strong>Tienes 1000 conversaciones gratuitas. </strong> Las conversaciones que inicie un cliente duran 24 horas. Si quieres seguir hablando después de 24 horas, debes enviar una plantilla; de lo contrario, el mensaje no llegará. Si el cliente te escribe después de 24 horas, obtienes otras 24 horas para chatear con él. <strong>Puedes presionar el
+                                        <i class="bi bi-plus-square-dotted"></i> y <i class="bi bi-wind"></i> para enviar una plantilla.</strong>
+                                    <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> Más información</a>.
+                                </p>
+                            </div>
 
                             <?php sb_component_editor(true); ?>
                             <div class="sb-no-conversation-message">
@@ -1378,29 +1255,32 @@ function sb_component_admin()
 
                         <!--added-->
                         <div class="sb-user-details sb-top">
-                            <div style="display:none;" class="sb-top">
+                            <div class="sb-top">
 
                             </div>
 
                             <div class="sb-scroll-area">
                                 <div class="close-button-div"><i class="bi-x-lg no-show sb-btn-collapse collapse"></i></div>
-                                <div class="open-profile sb-profile sb-profile-detail">
+                                <!-- <div class="open-profile sb-profile sb-profile-detail">
                                     <i style="font-size: var(--chat-text-size-1-3);" class="bi-pencil-square"></i>
                                     <span class="sb-name span-profile-detail"></span>
+                                </div> -->
+                                <div class="sb-panel-details no-overflow">
+                                    <h3>Enrutamiento manual</h3>
+                                    <p class="description-p">Asigna conversaciones con agentes y equipos de forma manual sin el chatbot.</p>
+                                    <?php sb_departments('custom-select'); ?>
+                                    <?php sb_routing_select() ?>
                                 </div>
-                                <?php sb_departments('custom-select'); ?>
-                                <?php sb_routing_select() ?>
-
                                 <?php
 
                                 echo '<div class="sb-panel-details sb-panel-tags">';
                                 echo '<i class="bi-plus-lg"></i><h3>' . sb_('Tags') . '</h3>';
-                                echo '<div id="tags-container" class="tagged">';
+                                echo '<p class="description-p">Crea etiquetas para filtrar búsqueda de chats.</p><div id="tags-container" class="tagged">';
                                 echo '<span class="sb-active">';
                                 echo '<i class="bi-tags"></i></span>';
                                 echo '</div></div>';
                                 if (!sb_get_setting('disable-notes')) {
-                                    echo '<div class="sb-panel-details sb-panel-notes' . $collapse . '"><i class="bi-stickies"></i><h3>' . sb_('Notes') . '</h3><div></div></div>';
+                                    echo '<div class="sb-panel-details sb-panel-notes' . $collapse . '"><i class="bi-pencil"></i><h3>' . sb_('Notes') . '</h3><p class="description-p">Anota información relevante sobre la conversación.</p><div></div></div>';
                                 }
                                 if (!sb_get_setting('disable-attachments')) {
                                     echo '<div class="sb-panel-details sb-panel-attachments' . $collapse . '"></div>';
@@ -1410,19 +1290,13 @@ function sb_component_admin()
                                     // sb_routing_select();
 
                                 }
-
-
-
-
-
-
-
                                 ?>
 
 
-                                <h3>
+                                <h3 class="h3-c">
                                     <?php sb_e('User conversations') ?>
                                 </h3>
+                                <p class="description-c">Conversaciones generadas por agente.</p>
                                 <ul class="sb-user-conversations"></ul>
                             </div>
                             <div class="sb-no-conversation-message"></div>
@@ -1492,50 +1366,61 @@ function sb_component_admin()
                                     <i class="bi-three-dots-vertical"></i>
                                     <ul id="hideOnSearchClick">
                                         <?php if ($supervisor || $is_admin) { ?>
-                                            <li>
-                                                <a class="sb-btn-icon sb-new-user" data-sb-tooltip="<?= sb_('Add user') ?>">
+                                            <li class="flex-add-users">
+                                                <a class="routin-users-top-tip sb-new-user">
                                                     <i class="bi-person-circle"></i>
+                                                    <span class="routin-users-top-content"><?= sb_('Add user') ?></span>
                                                 </a>
                                             </li>
                                         <?php } ?>
-                                        <li>
+                                        <li class="flex-buttons-users transition-opacity">
                                             <div style="display: none;">
                                                 <input type="file" id="csvimport" name="csv" class="form-control" required>
                                             </div>
-                                            <a data-value="csvimport" id="csv_contacts" class="not-show-small-screen sb-btn-icon" data-sb-tooltip="<?= sb_('Upload CSV') ?>">
+                                            <a data-value="csvimport" id="csv_contacts" class="routin-buttons-top-tip not-show-small-screen">
                                                 <i class="bi-filetype-csv"></i>
+                                                <span class="routin-buttons-top-content"><?= sb_('Upload CSV') ?></span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="email" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Send email') ?>">
+                                        <li class="flex-buttons-users transition-opacity">
+                                            <a data-value="email" class="routin-buttons-top-tip data-sb-tooltip=" <?php sb_e('Send email') ?>">
                                                 <i class="bi-envelope-at"></i>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Send email') ?></span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a data-value="message" class="sb-btn-icon" data-sb-tooltip="<?php sb_e('Broadcast message') ?>">
+                                        <!-- <li class="flex-buttons-users transition-opacity">
+                                            <a data-value="message" class="routin-buttons-top-tip">
                                                 <i class="bi-megaphone"></i>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Push messages') ?></span>
+
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <?php if (sb_is_agent() && $is_admin) { ?>
-                                            <li>
-                                                <a data-value="csv" class="sb-btn-icon bi-google" data-sb-tooltip="<?= sb_('Download CSV') ?>">
+                                            <li class="flex-buttons-users transition-opacity">
+                                                <a data-value="csv" class="routin-buttons-top-tip bi-google">
+                                                <span class="routin-buttons-top-content"><?= sb_('Download CSV') ?></span>
+
                                                 </a>
                                             </li>
                                         <?php } ?>
-                                        <li>
-                                            <a style="display: none;" class="sb-btn-icon">
+                                        <!-- <li class="flex-buttons-users transition-opacity">
+                                            <a style="display: none;" class="routin-buttons-top-tip">
                                                 <i class="bi-chat-text"></i>
+                                                <spanclass="routin-buttons-top-content">Does nothing</span>
+
                                             </a>
-                                        </li>
-                                        <li>
-                                            <a data-value="delete" class="sb-btn-icon sb-btn-red" data-sb-tooltip="<?php sb_e('Delete users') ?>" style="display: none;">
+                                        </li> -->
+                                        <li class="flex-buttons-users transition-opacity">
+                                            <a data-value="delete" class="routin-buttons-top-tip" style="display: none;">
                                                 <i class="bi-trash"></i>
+                                                <span class="routin-buttons-top-content"><?php sb_e('Delete users') ?></span>
                                             </a>
                                         </li>
                                         <?php if ($sms) { ?>
-                                            <li>
-                                                <a data-value="sms" class="sb-btn-icon" data-sb-tooltip="<?= sb_('Send text message') ?>">
+                                            <li class="flex-buttons-users transition-opacity">
+                                                <a data-value="sms" class="routin-buttons-top-tip">
                                                     <i class="bi-chat-square-dots"></i>
+                                                    <span class="routin-buttons-top-content"><?= sb_('Send text message') ?></span>
                                                 </a>
                                             </li>
                                         <?php } ?>
@@ -1608,9 +1493,11 @@ function sb_component_admin()
                                     </li>
 
                                     <li id="tab-automatica">
-                                        <i class="bi-robot"></i> <?php sb_e('Automatica') ?>
+                                        <i class="bi-robot"></i> <?php sb_e('Automática') ?>
                                     </li>
-
+                                    <li id="tab-saved-replies">
+                                        <i class="bi-envelope-open"></i> <?php sb_e('Respuestas Rápidas') ?>
+                                    </li>
                                     <li id="tab-notifications">
                                         <i class="bi-app-indicator"></i> <?php sb_e('Notifications') ?>
                                     </li>
@@ -1633,6 +1520,9 @@ function sb_component_admin()
                                     <li id="tab-chat">
                                         <i class="bi-chat-text"></i> <?php sb_e('Chat') ?>
                                     </li>
+                                    <li id="tab-form">
+                                        <i class="bi-person-vcard"></i> <?php sb_e('Form') ?>
+                                    </li>
                                     <li id="tab-design">
                                         <i class="bi-paint-bucket"></i> <?php sb_e('Design') ?>
                                     </li>
@@ -1648,6 +1538,9 @@ function sb_component_admin()
                                     <?php sb_populate_settings('automatica', $sb_settings) ?>
                                 </div>
                                 <div>
+                                    <?php sb_populate_settings('saved-replies', $sb_settings) ?>
+                                </div>
+                                <div>
                                     <?php sb_populate_settings('notifications', $sb_settings) ?>
                                 </div>
                                 <div>
@@ -1659,6 +1552,9 @@ function sb_component_admin()
                                 <?php sb_apps_area($apps) ?>
                                 <div>
                                     <?php sb_populate_settings('chat', $sb_settings) ?>
+                                </div>
+                                <div>
+                                    <?php sb_populate_settings('form', $sb_settings) ?>
                                 </div>
                                 <div>
                                     <?php sb_populate_settings('design', $sb_settings) ?>

@@ -30,11 +30,20 @@ try {
         $isAdmnAnswer =  false;
         $user_id         = false;
         $conversation_id = false;
+         // Retrieve and process the blacklist
+         $blacklist_whatsmeow_string = sb_get_setting('blacklist_whatsmeow');
+         $blacklist_whatsmeow = array_map('trim', explode(',', $blacklist_whatsmeow_string)); 
+         
+ 
         if ($senderPhone == $adminPhone) {
             $isAdminAnswer = true;
             $phone         = '+' . api_whatsmeow_parse_phone($response['Chat']);
         }
 
+          // Check if sender's phone is blacklist
+          if (in_array($phone, $blacklist_whatsmeow)) {
+            die(); 
+        }
         $user            = sb_get_user_by('phone', $phone);
         $department      = sb_get_setting('whatsmeow-department');
         $payload = array('isGroup' => !empty($_POST['isGroup']) ? true : false,);

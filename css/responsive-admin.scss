@@ -123,11 +123,12 @@ body {
 }
 
 .sb-admin {
-    width: 100%;
+    // width: 100%;
     padding: 0;
     // background: var(--chat-app-background);
     // -webkit-tap-highlight-color: var(--chat-app-background);
     user-select: auto;
+    left: 0;
     animation: fade-in .9s cubic-bezier(0.99, -0.62, 0, 0.87) !important;
 
 
@@ -171,6 +172,7 @@ body {
         z-index: 99;
         cursor: pointer;
         color: var(--chat-text-primary);
+        top:0;
 
         &:active,
         &:hover {
@@ -429,7 +431,7 @@ body {
 }
 
 .additional-info {
-    position: fixed;
+    position: absolute;
     right: 45px;
     color: var(--chat-text-primary);
     z-index: 4;
@@ -470,7 +472,7 @@ body {
 
     .sb-menu-mobile {
         height: 24px;
-        right: 5px !important;
+        right: 12px !important;
 
 
         >i {
@@ -491,7 +493,7 @@ body {
 main>div .sb-top-bar .sb-menu-mobile>ul {
     right: 10px;
     top: 16px;
-    width: 50px;
+    // width: 50px;
 }
 
 /*
@@ -519,7 +521,7 @@ div ul.sb-menu li,
 .sb-title {
     font-size: var(--chat-text-size-1-2);
     line-height: 47px;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
 }
 
 .sb-lightbox .sb-main>.sb-title+*,
@@ -658,7 +660,7 @@ a.sb-btn {
 */
 
 .sb-admin {
-    width: 100%;
+    // width: 100%;
     padding: 0 !important;
 
     >.sb-header {
@@ -666,8 +668,8 @@ a.sb-btn {
         // backdrop-filter: blur(100px);
         // -webkit-backdrop-filter: blur(100px);
         border-bottom: none;
-        width: 100%;
-        height: 60px;
+        width: auto;
+        height: auto;
         right: 0;
         top: auto;
         padding: 5px;
@@ -682,7 +684,7 @@ a.sb-btn {
         >.sb-admin-nav {
             display: flex;
             margin: auto;
-            padding-right: 30px;
+            // padding-right: 30px;
 
 
             >img {
@@ -923,24 +925,30 @@ a.sb-btn {
         position: absolute;
         bottom: auto !important;
         left: auto !important;
-        right: 5px !important;
+        right: 12px !important;
         padding: 0 !important;
-        height: 56px;
+        height: 50px;
         display: flex;
        justify-content: flex-end;
         z-index: 95;
         color: var(--chat-top-text-color);
         width: 30px !important;
 
-        >i {
+        >i, .top {
             display: block;
             width: 55px;
             cursor: pointer;
             text-align: center;
             font-size: 1.8rem;
             margin: auto;
-            margin: auto;
             padding: 0px 0px;
+
+        &i, .bottom {
+            margin: 10px auto;
+
+        }    
+
+
 
             // padding: 17px;
             // overflow: hidden;
@@ -963,7 +971,7 @@ a.sb-btn {
                     position: absolute;
                     animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
                     -webkit-animation: scale-up-tr 0.2s cubic-bezier(0, 1.45, 1, 1);
-                    padding: var(--chat-spacing-size-8);
+                    padding: var(--chat-spacing-size-7);
                 }
             }
         }
@@ -1008,6 +1016,51 @@ a.sb-btn {
     }
 
 
+.flex-add-users {
+    transition: var(--transition-2);
+}
+
+.flex-add-users {
+    margin-bottom: 5px!important;
+
+}
+.flex-add-users:active {
+    border-radius: 40px;
+    box-shadow: var(--box-shadow-bubble-chat);
+    background: var(--chat-btn-background)!important;
+    box-shadow: var(--chat-btn-ring-shadow) !important;
+    color: var(--chat-btn-text);
+  }
+
+  .flex-buttons-users:active {
+    border-radius: 40px;
+    // color: var(--chat-btn-text);
+  }
+
+  .routin-users-top-tip {
+    font-size: var(--chat-text-size-1-0);
+  
+    &:active {
+      scale: .8;
+
+      border-radius: 40px;
+    }
+  
+    > span {
+      display: block;
+    }
+  }
+
+  .routin-buttons-top-tip {
+    font-size: var(--chat-text-size-1-0);
+    padding: 10px!important;
+  
+  
+    > span {
+      display: block;
+    }
+  }
+  
     .sb-inner-tab {
         display: block;
 
@@ -1229,8 +1282,7 @@ a.sb-btn {
     min-height: 100%;
     border: none;
     border-radius: 0;
-    background: var(--chat-app-backdrop-b);
-    background-image: var(--chat-app-backdrop-b);
+    background: var(--chat-app-background);
 
 }
 
@@ -1302,7 +1354,7 @@ a.sb-btn {
 
 .styling-caller {
     visibility: visible;
-    font-size: 1rem;
+    font-size: var(--chat-text-size-1-0);
     border-radius: 50%;
     padding: 2px 3px;
 
@@ -1492,7 +1544,7 @@ a.sb-btn {
                 }
 
                 a {
-                    text-align: center;
+                    text-align: left;
                 }
 
                 [data-value="panel"] {
@@ -1634,7 +1686,7 @@ a.sb-btn {
         background-attachment: fixed;
 
         .sb-top {
-            display: none;
+            // display: none;
         }
 
         &.sb-active {
@@ -1848,10 +1900,11 @@ a.sb-btn {
 }
 
 .profile-log-background {
-    background: url(/media/whatsapp-bkg.png), var(--chat-conversation-background);
+    background: var(--chat-background-image);
+    background-color: var(--chat-conversation-background);
+    background-blend-mode: soft-light;
     padding: var(--chat-spacing-size-8);
     border-radius: var(--chat-rounded-size-8);
-    background-size: contain;
 }
 
 .sb-profile-edit-box,

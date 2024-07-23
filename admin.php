@@ -37,7 +37,7 @@ require('include/components.php');
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
-  <title><?php echo $connection_success && sb_get_setting('admin-title') ? sb_get_setting('admin-title') : 'Routin®️' ?></title>
+  <title><?php echo $connection_success && sb_get_setting('admin-title') ? sb_get_setting('admin-title') : 'Routin | Cloud' ?></title>
   <!-- <script src="js/vue.global.prod.js" rel="preload" as="script"></script> -->
   <script src="<?php echo (file_exists('js/jquery.js')) ? $steambox_url . 'js/jquery.js' : 'https://code.jquery.com/jquery-3.6.4.min.js'; ?>" integrity="<?php echo (file_exists('js/jquery.js')) ? '' : 'sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8='; ?>" crossorigin="<?php echo (file_exists('js/jquery.js')) ? '' : 'anonymous'; ?>"></script>
   <script src="<?php echo file_exists('js/min/main.js') ? $steambox_url . 'js/min/main.js' : $steambox_url . 'js/source/main.js'; ?>"></script>
@@ -51,6 +51,7 @@ require('include/components.php');
   <link href="<?php echo sb_get_setting('manifest-url', $steambox_url . 'resources/pwa/manifest.json') ?>" rel="manifest">
   <link rel="shortcut icon" type="image/png" href="<?php echo sb_get_setting('admin-icon', $steambox_url . 'icon.png') ?>" />
   <link href="<?php echo $steambox_url . 'css/responsive-admin.css' ?>" rel="stylesheet" media="(max-width:554px)">
+
 </head>
 
 <body>
@@ -89,7 +90,7 @@ require('include/components.php');
   sb_js_admin();
 } ?>
 <!-- <script src="js/vue.global.prod.js"></script> -->
-<script src="<?php echo $steambox_url . 'js/app.js' ?>"></script>
-<script src="<?php echo $steambox_url . 'js/WebAudioRecorder.min.js' ?>"></script>
+<script src="<?php echo $steambox_url . 'js/rtn/app.js' ?>"></script>
+<script src="<?php echo $steambox_url . 'js/rtn/WebAudioRecorder.min.js' ?>"></script>
 
 </html>

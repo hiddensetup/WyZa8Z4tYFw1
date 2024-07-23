@@ -6076,7 +6076,7 @@ function sb_get_setting_code($setting)
             case "article":
                 $content .= '
                  <div>
-                 <p class="active">Download link: <a class="sb-btn" href="js/ef59c86d2fc11514f162bc00504408d46e61d3.html" target="_blank">Get Live Chat</a>
+                 <p class="active">Download link: <a class="sb-btn" href="https://routin.cloud/webchat" target="_blank">Obtener</a>
                  </p>
                  </div>';
                 break;
@@ -9078,7 +9078,7 @@ function sb_json_array($json, $default = [])
  * 10. Chat editor
  * 11. Return the position of the least occurence on left searching from right to left
  * 12. Verification cookie
- * 13. On Routin.bot close
+ * 13. On Routin Cloud close
  * 14. Auto messages server-side execution
  * 15. Messaging platforms function
  * 16. Send a messaging platform message
@@ -9245,14 +9245,10 @@ function sb_office_hours()
 
 function sb_css(
     $color_1 = false,
-    $color_2 = false,
-    $color_3 = false,
     $return = false
 ) {
     $css = "";
     $color_1 = $color_1 ? $color_1 : sb_get_setting("color-1");
-    $color_2 = $color_2 ? $color_2 : sb_get_setting("color-2");
-    $color_3 = $color_3 ? $color_3 : sb_get_setting("color-3");
     $chat_button_offset_top = sb_get_multi_setting(
         "chat-button-offset",
         "chat-button-offset-top"
@@ -9281,31 +9277,11 @@ function sb_css(
             : ["", ""]);
     if ($color_1) {
         $css .=
-            '.sb-chat-btn, .sb-chat>div>.sb-header,.sb-chat ,.sb-btn:hover,.sb-chat .sb-scroll-area .sb-header,.sb-input.sb-input-btn>div,div ul.sb-menu li:hover,
-                  .sb-select ul li:hover,.sb-popup.sb-emoji .sb-emoji-bar>div.sb-active, .sb-popup.sb-emoji .sb-emoji-bar>div:hover,.sb-btn,a.sb-btn,.sb-rich-message[disabled] .sb-buttons .sb-btn,
-                  .sb-ul>span:before,.sb-article-category-links>span+span:before { background-color: ' .
+            '.sb-chat-btn, .sb-label-date-top.sb-active { background-color: ' .
             $color_1 .
             "; }";
-
-        $css .=
-            '.sb-top, .sb-chat ,.sb-btn,.sb-editor .sb-bar-icons>div:hover:before,.sb-articles>div:hover>div,.sb-main .sb-btn-text:hover,.sb-editor,.sb-table input[type="checkbox"]:checked:before,
-                  .sb-select p:hover,div ul.sb-menu li.sb-active, .sb-select ul li.sb-active,.sb-search-btn>i:hover,.sb-search-btn.sb-active i,.sb-rich-message .sb-input>span.sb-active:not(.sb-filled),
-                  .sb-input.sb-input-image .image:hover:before,.sb-rich-message .sb-card .sb-card-btn,.sb-slider-arrow:hover,.sb-loading:not(.sb-btn):before,.sb-articles>div.sb-title,.sb-article-categories>div:hover, .sb-article-categories>div.sb-active,
-                  .sb-article-categories>div span:hover,.sb-article-categories>div span.sb-active,.sb-btn-text:hover { color: ' .
-            $color_1 .
-            "; }";
-        $css .=
-            ".sb-search-btn>input:focus,.sb-input>input:focus, .sb-input>select:focus, .sb-input>textarea:focus { box-shadow: 0 0 5px rgba(104, 104, 104, 0.2); }";
-        $css .=
-            ".sb-list>div.sb-rich-cnt";
     }
 
-    if ($color_3) {
-        $css .=
-            ".sb-list>.sb-right,.sb-user-conversations>li:hover { background-color: " .
-            $color_3 .
-            "; }";
-    }
     if ($chat_button_offset_top) {
         $css .=
             $chat_button_offset_left_mobile[0] .
@@ -9482,55 +9458,64 @@ function sb_component_editor($admin = false)
 ?>
 
     <div class="sb-editor" id="controls">
+
         <?php if ($admin) {
             echo '<div class="sb-agent-label"></div>';
         } ?>
 
         <div class="sb-bar-icons sb-hide">
-            <div class="bi-emoji-grin" data-sb-tooltip="<?php sb_e("Emojis"); ?>"></div>
-            <div class="bi-list-stars" id="send-rating-button" data-sb-tooltip="<?php sb_e("Feedback?"); ?>"></div>
-
-            <div class="bi-crosshair"></div>
-
-            <?php if ($admin || !sb_get_setting("disable-uploads")) {
-                echo '<div class="bi-paperclip" ></div>';
-            } ?>
-            <div class="bi-envelope-arrow-up" data-sb-tooltip="<?php sb_e("Load a saved reply"); ?>"></div>
-            <div class="bi-wind api-whatsapp-button" id="open-modal-button" data-sb-tooltip="<?php sb_e("Templates"); ?>"></div>
-
-        </div>
-
-        <div class=" api-cloud-notif" id="floatingText">
-            <small><i class="bi-info-circle-fill"></i> WhatsApp Business API permite conversar durante 24 horas desde que te escriben o cuando un cliente responde una de tus plantillas de mensaje. Para conocer más puedes ver <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> más detalles sobre WhatsApp Business</a>.<br><br></small>
-        </div>
-
-        <div class="sb-show-menu-bar flex-align-center-relative" style="visibility:hidden">
-
-            <div class="menu-plus bi-plus-lg"></div>
-
-            <div style="min-height: 25px;" class="sb-textarea">
-                <?php
-                // Placeholder values, replace these with your actual data
-                $source = "wa"; // Placeholder value for the conversation source
-                $disabled = ($source !== "wa") ? "visibility: hidden;" : ""; // Determine if the menu bar should be hidden initially
-                ?>
-                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+            <div id="set-status">
+                <i class="bi bi-kanban-fill"></i>
+                <span><?php sb_e("Status"); ?></span>
             </div>
-
-            <div class="sb-bar sb-space-between">
-                <div id='btns'>
-                    <select style="display: none;" id="encodingTypeSelect">
-                        <option selected value="mp3">.mp3</option>
-                    </select>
+            <div id="load-saved-replies">
+                <i class="bi bi-envelope-fill"></i>
+                <span><?php sb_e("Replies"); ?></span>
+            </div>
+            <?php if ($admin || !sb_get_setting("disable-uploads")) { ?>
+                <div id="upload-files">
+                    <i class="bi bi-folder-fill"></i>
+                    <span><?php sb_e("Uploads"); ?></span>
                 </div>
-                <div id='recordButton' class="bi-mic-fill start stop-time" data-sb-tooltip=""></div>
-                <div id='stopButton' disabled class="bi-record-fill time" data-sb-tooltip=""></div>
-                <div class="bi-arrow-up-circle-fill sb-submit" data-sb-tooltip="<?php sb_e("Send message"); ?>"></div>
-                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+            <?php } ?>
 
+
+            <div id="send-rating-button">
+                <i class="bi bi-stoplights-fill"></i>
+                <span><?php sb_e("Feedback"); ?></span>
             </div>
-        </div>
+            <div id="set-agent-name">
+                <input type="checkbox" id="agentNameToggle" class="switch-toggle">
+                <span><?php sb_e("Name"); ?></span>
+            </div>
+            <div class="api-whatsapp-button sb-hide" id="open-modal-button">
+                <i class="bi bi-wind wind-whatsapp-color"></i>
+                <span><?php sb_e("Templates"); ?></span>
+            </div>
 
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded',()=>{const agentNameToggle=document.getElementById('agentNameToggle');const savedState=localStorage.getItem('agentNameToggle')==='true';agentNameToggle.checked=savedState;agentNameToggle.addEventListener('change',()=>{localStorage.setItem('agentNameToggle',agentNameToggle.checked);});});document.addEventListener("DOMContentLoaded",function(){var toggleButton=document.querySelector(".to-make-invisible-sb-text-area");var recordButton=document.querySelector("#stopButton");var textAreaDiv=document.querySelector(".sb-textarea");var emojiGrinDiv=document.querySelector(".bi-emoji-grin");function toggleVisibility(){if(textAreaDiv.classList.contains("sb-invisible")){textAreaDiv.classList.remove("sb-invisible");emojiGrinDiv.classList.remove("sb-invisible");textAreaDiv.style.visibility="visible";emojiGrinDiv.style.visibility="visible";}else{textAreaDiv.classList.add("sb-invisible");emojiGrinDiv.classList.add("sb-invisible");setTimeout(function(){textAreaDiv.style.visibility="hidden";emojiGrinDiv.style.visibility="hidden";},500);} }toggleButton.addEventListener("click",toggleVisibility);recordButton.addEventListener("click",toggleVisibility);});
+        </script>
+
+
+<div class="sb-show-menu-bar flex-align-center-relative">
+    <div class="menu-plus bi-plus-lg"></div>
+    <div style="min-height: 35px;" class="sb-textarea">
+        <?php
+        $source = "wa";  
+        $disabled = ($source !== "wa") ? "visibility: hidden;" : "";  
+        ?>
+        <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+    </div>
+    <div class="sb-bar sb-space-between">
+        <div class="bi-emoji-grin"></div>
+        <div id="recordButton" class="bi-mic-fill to-make-invisible-sb-text-area"></div>
+        <div id="stopButton" disabled class="bi-record-fill"></div>
+        <div class="bi-arrow-up-circle-fill sb-submit"></div>
+        <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+    </div>
+</div>
 
         <?php if ($admin) { ?>
             <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
@@ -9554,7 +9539,7 @@ function sb_component_editor($admin = false)
                 foreach ($clientStatus as $label) {
                 ?>
                     <a id="<?= $label ?>" class="sb-input-setting cst-a">
-                        <i class="<?= "cst-i bi-crosshair tags-" . $label ?>"></i>&nbsp;<?= $label ?>
+                        <i class="<?= "cst-i bi-kanban-fill tags-" . $label ?>"></i>&nbsp;<?= $label ?>
                     </a>
                 <?php } ?>
 
@@ -9629,7 +9614,10 @@ function sb_component_editor($admin = false)
             <input type="file" name="files[]" class="sb-upload-files" multiple />
         </form>
         <div class="sb-attachments"> </div>
+
     </div>
+
+
 
 <?php
 }
@@ -9682,6 +9670,20 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 }
 
 
+
+
+
+
+
+
+
+
+
+function sb_count_fallback_messages($conversation_id)
+{
+    return sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true))['count'];
+}
+
 function sb_option_assign_reply($option, $conversation_id)
 {
     $opt = "option";
@@ -9698,14 +9700,14 @@ function sb_option_assign_reply($option, $conversation_id)
     if (json_last_error() === JSON_ERROR_NONE && isset($flowData['main_flow'])) {
         foreach ($flowData['main_flow'] as $flow) {
             foreach ($flow as $response) {
-                // Check if the provided option matches any of the responses in the JSON flow
-                if (isset($response['response']) && is_array($response['response'])) {
-                    foreach ($response['response'] as $res) {
-                        if ($option === strtolower($res)) {
-                            $reply["option"] = $res;
+                // Check if the provided option matches any of the keywords in the JSON flow
+                if (isset($response['keywords']) && is_array($response['keywords'])) {
+                    foreach ($response['keywords'] as $keyword) {
+                        if ($option === strtolower($keyword)) {
+                            $reply["option"] = $keyword;
                             // Handle replies as an array
-                            $replies = isset($response['replies']) ? $response['replies'] : [];
-                            $reply["reply"] = is_array($replies) ? $replies : [$replies]; // Ensure $reply["reply"] is always an array
+                            $bot_replies = isset($response['bot_reply']) ? $response['bot_reply'] : [];
+                            $reply["reply"] = is_array($bot_replies) ? $bot_replies : [$bot_replies]; // Ensure $reply["reply"] is always an array
                             $reply["assign"] = isset($response['assign']) ? $response['assign'] : '';
                             break 3; // Exit all loops once a match is found
                         }
@@ -9715,36 +9717,86 @@ function sb_option_assign_reply($option, $conversation_id)
         }
     }
 
-    // Proceed with sending the appropriate reply based on matched option
-    if (!empty($reply)) {
-        // Choose a random reply from the array of replies
-        $randomIndex = array_rand($reply["reply"]);
-        $message = $reply["reply"][$randomIndex];
+    // Check if the assigned option reply was sent recently
+    if (sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' . $opt . '_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true))["count"] == 0) {
+        if (!empty($reply)) {
+            if (!empty($reply["assign"]) && filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
+                $api_response = sb_fetch_api_response($reply["assign"]);
+                if ($api_response) {
+                    $bot_replies = is_array($api_response) ? $api_response : [$api_response];
+                } else {
+                    $bot_replies = ["No se pudo obtener la respuesta del servidor."];
+                }
+            } else {
+                $bot_replies = $reply["reply"];
+            }
 
-        if (!empty($reply["assign"])) {
-            sb_update_conversation_department($conversation_id, $reply["assign"], false);
+            $response_ids = [];
+            foreach ($bot_replies as $bot_reply) {
+                // Ensure $bot_reply is an array if it isn't already
+                $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
+                $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
+
+                if (!empty($reply["assign"]) && !filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
+                    sb_update_conversation_department($conversation_id, $reply["assign"], false);
+                    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"];
+                    sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+                    $response_ids[] = $response_id;
+                } else {
+                    sb_db_query('UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' . $wel . '_option%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true));
+                    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
+                    sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+                    $response_ids[] = $response_id;
+                }
+
+                // Apply delay between messages
+                if ($delay > 0) {
+                    usleep($delay * 1000); // Convert milliseconds to microseconds
+                }
+            }
+
             return [
-                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"],
-                "message" => $message,
+                "ids" => $response_ids,
+                "messages" => $bot_replies,
             ];
         } else {
-            sb_db_query('UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' . $wel . '_option%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true));
-            return [
-                "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
-                "message" => $message,
-            ];
+            // Verificar el número de veces que se ha enviado el mensaje de fallback
+            $fallback_count = sb_count_fallback_messages($conversation_id);
+
+            if ($fallback_count < 3) {
+                // Si no se ha enviado 3 veces, enviar el mensaje de fallback
+                $message = sb_get_multi_setting("welcome-message", "fallback-msg");
+                return [
+                    "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["fallback_message" => true])["id"],
+                    "message" => $message,
+                ];
+            } else {
+                // Si ya se ha enviado 3 veces, no enviar nada
+                return false;
+            }
         }
-    } else {
-        // If no matching option is found, send a fallback message
-        $message = sb_get_multi_setting("welcome-message", "fallback-msg");
-        return [
-            "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"],
-            "message" => $message,
-        ];
     }
 
     return false;
 }
+
+function sb_fetch_api_response($url)
+{
+    // Fetch response from the API endpoint
+    $response = file_get_contents($url);
+    if ($response === FALSE) {
+        return false;
+    }
+
+    // Parse response (assuming JSON for simplicity, adjust if necessary)
+    $data = json_decode($response, true);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        return false;
+    }
+
+    return $data;
+}
+
 
 
 function sb_get_user_detail($conversation_id)
@@ -9754,6 +9806,7 @@ function sb_get_user_detail($conversation_id)
             sb_db_escape($conversation_id, true)
     );
 }
+
 function sb_messaging_platforms_functions(
     $conversation_id,
     $message,
@@ -9950,7 +10003,6 @@ function sb_messaging_platforms_functions(
     return $human_takeover ? "human_takeover" : true;
 }
 
-
 function sb_messaging_platforms_send_message(
     $message,
     $conversation,
@@ -9985,7 +10037,7 @@ function sb_messaging_platforms_send_message(
                 $platform_value ? $platform_value : sb_get_user_extra($user_id, "phone"),
                 $message,
                 $attachments,
-                $conversation["extra"],
+                $conversation["extra"]
             );
         case "ww":
             return sb_whatsmeow_send_message(
@@ -9993,7 +10045,7 @@ function sb_messaging_platforms_send_message(
                     ? $platform_value
                     : sb_get_user_extra($user_id, "phone"),
                 $message,
-                $attachments,
+                $attachments
             );
         case "wx":
             return sb_waweb_send_message(
@@ -10001,7 +10053,7 @@ function sb_messaging_platforms_send_message(
                     ? $platform_value
                     : sb_get_user_extra($user_id, "phone"),
                 $message,
-                $attachments,
+                $attachments
             );
         case "tg":
             return sb_telegram_send_message(
@@ -10014,7 +10066,7 @@ function sb_messaging_platforms_send_message(
                     ),
                 $message,
                 $attachments
-            ); // Added semicolon here
+            );
         case "tw":
             return sb_twitter_send_message(
                 $platform_value
@@ -10022,7 +10074,7 @@ function sb_messaging_platforms_send_message(
                     : sb_get_user_extra($user_id, "twitter-id"),
                 $message,
                 $attachments
-            ); // Added semicolon here
+            );
         case "bm":
             return sb_gbm_send_message(
                 $platform_value
@@ -10030,10 +10082,11 @@ function sb_messaging_platforms_send_message(
                     : sb_get_user_extra($user_id, "gbm-id"),
                 $message,
                 $attachments
-            ); // Added semicolon here
+            );
     }
     return false;
 }
+
 
 function sb_dialogflow_active()
 {

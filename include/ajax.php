@@ -5,7 +5,7 @@
  * AJAX.PHP
  * ==========================================================
  *
- * AJAX functions. This file must be executed only via AJAX. © 2017-2022 Routin.bot.dev. All rights reserved.
+ * AJAX functions. This file must be executed only via AJAX. © 2017-2022 Routin Cloud All rights reserved.
  *
  */
 if (file_exists('../config.php')) require_once('../config.php');
@@ -156,10 +156,10 @@ switch ($_POST['function']) {
         die(sb_json_response(sb_get_translations()));
     case 'get-translation':
         die(sb_json_response(sb_get_translation($_POST['language_code'])));
-       
+
     case 'installation':
         die(sb_json_response(sb_installation($_POST['details'])));
-        
+
     case 'webhooks':
         die(sb_json_response(sb_webhooks($_POST['function_name'], $_POST['parameters'])));
     case 'system-requirements':
@@ -178,7 +178,7 @@ switch ($_POST['function']) {
         die(sb_json_response(sb_subscribe_email($_POST['email'])));
     case 'agents-online':
         die(sb_json_response(sb_agents_online()));
-      
+
     case 'email-piping':
         die(sb_json_response(sb_email_piping(sb_post('force'))));
     case 'reports':
@@ -204,7 +204,7 @@ switch ($_POST['function']) {
     case 'waweb-send-message':
         die(sb_json_response(sb_waweb_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));
     case 'whatsmeow-send-message':
-            die(sb_json_response(sb_whatsmeow_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));    
+        die(sb_json_response(sb_whatsmeow_send_message($_POST['to'], sb_post('message', ''), sb_post('attachments', []))));
     case 'whatsapp-send-template':
         die(sb_json_response(sb_whatsapp_send_template($_POST['phone'], sb_post('language', ''), sb_post('conversation_url_parameter', ''), sb_post('user_name', ''), sb_post('user_email', ''), sb_post('template_name'),  sb_post('phone_id'))));
     case 'whatsapp-send-meta-template':
@@ -213,12 +213,12 @@ switch ($_POST['function']) {
         die(sb_json_response(sb_telegram_send_message($_POST['chat_id'], sb_post('message', ''), sb_post('attachments', []))));
     case 'telegram-synchronization':
         die(sb_json_response(sb_telegram_synchronization($_POST['token'], sb_post('cloud_token'))));
-        // case 'twitter-send-message':
-        //     die(sb_json_response(sb_twitter_send_message($_POST['twitter_id'], sb_post('message', ''), sb_post('attachments', []))));
-        // case 'twitter-subscribe':
-        //     die(sb_json_response(sb_twitter_subscribe(sb_post('cloud_token'))));
-        // case 'gbm-send-message':
-        //     die(sb_json_response(sb_gbm_send_message($_POST['google_conversation_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('token'))));
+    case 'twitter-send-message':
+        die(sb_json_response(sb_twitter_send_message($_POST['twitter_id'], sb_post('message', ''), sb_post('attachments', []))));
+    case 'twitter-subscribe':
+        die(sb_json_response(sb_twitter_subscribe(sb_post('cloud_token'))));
+    case 'gbm-send-message':
+        die(sb_json_response(sb_gbm_send_message($_POST['google_conversation_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('token'))));
         // case 'wechat-send-message':
         //     die(sb_json_response(sb_wechat_send_message($_POST['open_id'], sb_post('message', ''), sb_post('attachments', []), sb_post('token'))));
     case 'send-sms':
@@ -247,12 +247,12 @@ switch ($_POST['function']) {
         //     die(sb_json_response(sb_updates_available()));
         // case 'google-translate':
         //     die(sb_json_response(sb_google_translate($_POST['strings'], $_POST['language_code'])));
-        case 'set-rating':
-            die(sb_json_response(sb_set_rating($_POST['settings'], sb_post('payload'), sb_post('message_id'), sb_post('message'))));
-        case 'get-rating':
-            die(sb_json_response(sb_get_rating($_POST['user_id'])));
-    
-    
+    case 'set-rating':
+        die(sb_json_response(sb_set_rating($_POST['settings'], sb_post('payload'), sb_post('message_id'), sb_post('message'))));
+    case 'get-rating':
+        die(sb_json_response(sb_get_rating($_POST['user_id'])));
+
+
     case 'get-setting':
         die(sb_json_response($_POST['type'] == 'multi' ? sb_get_multi_setting($_POST['setting'], $_POST['key']) : sb_get_setting($_POST['setting'])));
     case 'get-select-setting':
@@ -276,7 +276,7 @@ switch ($_POST['function']) {
     case 'get-tags':
         die(sb_json_response(sb_tags_get()));
     default:
-        die('["error", "Routin.bot error [ajax.php]: No functions found with name: ' . $_POST['function'] . '."]');
+        die('["error", "Routin Cloud error [ajax.php]: No functions found with name: ' . $_POST['function'] . '."]');
 }
 
 function sb_json_response($result)
@@ -301,190 +301,190 @@ function sb_security()
             'app-activation',
             'app-get-key',
             'automations-save',
-    
+
             // Actions starting with 'd'
             'delete-file',
             'delete-leads',
 
-    
+
             // Actions starting with 'e'
             'export-settings',
-    
+
             // Actions starting with 'g'
             // 'get-all-settings',
             'get-articles-categories',
             // 'get-settings',
-    
+
             // Actions starting with 'i'
             'import-settings',
-    
+
             // Actions starting with 'p'
             'path',
-    
+
             // Actions starting with 'r'
             'reports',
-    
+
             // Actions starting with 's'
             'save-articles-categories',
             // 'save-settings',
             // 'system-requirements',
-    
+
             // Actions starting with 't'
             'telegram-synchronization',
             'twitter-subscribe',
         ],
-    
+
 
 
 
         'agent' => [
-    // Actions starting with 'a'
-    'add-note',
-    'add-user',
+            // Actions starting with 'a'
+            'add-note',
+            'add-user',
 
-    // Actions starting with 'c'
-    'check-conversations-assignment',
-    'clean-data',
-    'close-message',
-    'count-conversations',
-    'count-users',
-    'csv-conversations',
-    'csv-users',
+            // Actions starting with 'c'
+            'check-conversations-assignment',
+            'clean-data',
+            'close-message',
+            'count-conversations',
+            'count-users',
+            'csv-conversations',
+            'csv-users',
 
-    // Actions starting with 'd'
-    'delete-note',
-    'delete-user',
-    'delete-users',
-    'direct-message',
+            // Actions starting with 'd'
+            'delete-note',
+            'delete-user',
+            'delete-users',
+            'direct-message',
 
-    // Actions starting with 'g'
-    'get-agents-ids',
-    'get-all-settings',
-    'get-conversations',
-    'get-new-conversations',
-    'get-new-users',
-    'get-notes',
-    'get-online-users',
-    'get-rating',
-    'get-tags',
-    'get-user-conversations',
-    'get-user-from-conversation',
-    'get-user-language',
-    'get-users',
-    'get-users-with-details',
+            // Actions starting with 'g'
+            'get-agents-ids',
+            'get-all-settings',
+            'get-conversations',
+            'get-new-conversations',
+            'get-new-users',
+            'get-notes',
+            'get-online-users',
+            'get-rating',
+            'get-tags',
+            'get-user-conversations',
+            'get-user-from-conversation',
+            'get-user-language',
+            'get-users',
+            'get-users-with-details',
 
-    // Actions starting with 'i'
-    'is-agent-typing',
+            // Actions starting with 'i'
+            'is-agent-typing',
 
 
-    // Actions starting with 'm'
-    'messenger-send-message',
+            // Actions starting with 'm'
+            'messenger-send-message',
 
-    // Actions starting with 'o'
-    'on-close',
+            // Actions starting with 'o'
+            'on-close',
 
-    // Actions starting with 'r'
-    'reports',
-    'reports-update',
+            // Actions starting with 'r'
+            'reports',
+            'reports-update',
 
-    // Actions starting with 's'
-    'save-articles',
-    'save-settings',
-    'save-translations',
-    'send-custom-email',
-    // 'search-conversations',
-    // 'search-users',
-    // 'send-custom-email',
-    // 'send-test-email',
-    // 'slack-users',
+            // Actions starting with 's'
+            'save-articles',
+            'save-settings',
+            'save-translations',
+            'send-custom-email',
+            // 'search-conversations',
+            // 'search-users',
+            // 'send-custom-email',
+            // 'send-test-email',
+            // 'slack-users',
 
-    // Actions starting with 't'
-    'telegram-send-message',
-    'twitter-send-message',
+            // Actions starting with 't'
+            'telegram-send-message',
+            'twitter-send-message',
 
-    // Actions starting with 'u'
-    'update',
-    'update-user',
-    'user-online',
+            // Actions starting with 'u'
+            'update',
+            'update-user',
+            'user-online',
 
-    // Actions starting with 'w'
-    'wechat-send-message',
-    'whatsapp-send-message',
-    'whatsapp-send-template',
-    'whatsmeow-send-message',
-    'waweb-send-message',
-],
+            // Actions starting with 'w'
+            'wechat-send-message',
+            'whatsapp-send-message',
+            'whatsapp-send-template',
+            'whatsmeow-send-message',
+            'waweb-send-message',
+        ],
 
-    
-'user' => [
-    // Actions starting with 'c'
-    'create-email',
 
-    // Actions starting with 'd'
-    'delete-message',
+        'user' => [
+            // Actions starting with 'c'
+            'create-email',
 
-    // Actions starting with 'g'
-    'get-agents-in-conversation',
-    'get-avatar',
-    'get-conversation',
-    'get-label-conversations',
-    'get-new-messages',
-    'get-new-user-conversations',
-    'get-user',
-    'get-user-conversations',
-    'get-user-extra',
+            // Actions starting with 'd'
+            'delete-message',
 
-    // Actions starting with 'n'
-    'new-conversation',
+            // Actions starting with 'g'
+            'get-agents-in-conversation',
+            'get-avatar',
+            'get-conversation',
+            'get-label-conversations',
+            'get-new-messages',
+            'get-new-user-conversations',
+            'get-user',
+            'get-user-conversations',
+            'get-user-extra',
 
-    // Actions starting with 's'
-    'search-user-conversations',
-    'send-email',
-    'set-rating',
+            // Actions starting with 'n'
+            'new-conversation',
 
-    // Actions starting with 'u'
-    'update-conversation-agent',
-    'update-conversation-department',
-    'update-login',
-    'update-message',
-    'update-tags',
-    'update-user',
-    'update-user-and-message',
-    'update-user-to-lead',
+            // Actions starting with 's'
+            'search-user-conversations',
+            'send-email',
+            'set-rating',
 
-    // Other actions
-    'google-language-detection-update-user',
-    'google-translate',
-],
+            // Actions starting with 'u'
+            'update-conversation-agent',
+            'update-conversation-department',
+            'update-login',
+            'update-message',
+            'update-tags',
+            'update-user',
+            'update-user-and-message',
+            'update-user-to-lead',
 
-'login' => [
-    // Actions starting with 'a'
-    'automations-get',
+            // Other actions
+            'google-language-detection-update-user',
+            'google-translate',
+        ],
 
-    // Actions starting with 'i'
-    'is-typing',
+        'login' => [
+            // Actions starting with 'a'
+            'automations-get',
 
-    // Actions starting with 'p'
-    'push-notification',
-    'pusher-trigger',
+            // Actions starting with 'i'
+            'is-typing',
 
-    // Actions starting with 'q'
-    'queue',
+            // Actions starting with 'p'
+            'push-notification',
+            'pusher-trigger',
 
-    // Actions starting with 's'
-    'saved-replies',
-    'send-message',
-    'send-sms',
-    'set-typing',
-    'subscribe-email',
+            // Actions starting with 'q'
+            'queue',
 
-    // Actions starting with 't'
-    'transcript',
+            // Actions starting with 's'
+            'saved-replies',
+            'send-message',
+            'send-sms',
+            'set-typing',
+            'subscribe-email',
 
-    // Actions starting with 'u'
-    'update-conversation-status',
-    'update-users-last-activity',
-],
+            // Actions starting with 't'
+            'transcript',
+
+            // Actions starting with 'u'
+            'update-conversation-status',
+            'update-users-last-activity',
+        ],
 
     ];
     $function = $_POST['function'];

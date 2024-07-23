@@ -2,34 +2,26 @@
   {
     "type": "multi-input",
     "id": "waweb-go",
-    "title": "WhatsApp Web",
-    "content": "Explore our API for external use!<br><br>With WhatsApp Web, you can connect WhatsApp to your ERP directly or use it in Routin.bot at no cost. Link up to 15 agents using your own hosting with no API cost.<br><br>Routin.bot Support: Starting from $79/month, prepaid for 6 months.",
-    "help": "https://wa.me/5491156165558/?text=¡Hola!%20Estoy%20interesado%20en%20usar%20WhatsApp%20Web%20con%20Routin.bot.%0A¿Podrías%20proporcionarme%20el%20token%20de%20acceso%3F%0A%0AOlá!%20Estou%20interessado%20em%20usar%20o%20WhatsApp%20Web%20com%20o%20Routin.bot.%0AVocê%20poderia%20me%20fornecer%20o%20token%20de%20acesso%3F",
+    "title": "WhatsApp Web <small style=\"color:var(--color-green);\">(3)</small>",
+    "content": "Link an extra WhatsApp account to Routin Cloud using your phone number. This connection is secure and free of extra charge. You can also use our external API at https://routin.cloud",
+    "help": "https://routin.cloud/",
     "value": [
       {
         "type": "text",
         "id": "waweb-go-phone",
-        "title": "WhatsApp Phone Number"
+        "title": "Phone Number"
       },
-      {
-        "type": "text",
-        "id": "waweb-go-qr",
-        "title": "WhatsApp QR code link"
-      },
+
       {
         "type": "button",
         "id": "waweb-go-start",
-        "button-text": "Get the QR-Code"
+        "button-text": "<i class=\"bi bi-qr-code\"></i> Generar conexión"
       },
-      {
-        "type": "text",
-        "id": "waweb-go-url",
-        "title": "Auth Token"
-      },
+       
       {
         "type": "button",
         "id": "waweb-go-restart",
-        "button-text": "Restart"
+        "button-text": "<i class=\"bi bi-window-x\"></i> Desconectar"
       },
       {
         "type": "checkbox",
@@ -38,6 +30,14 @@
       }
     ]
   },
+  {
+    "type": "textarea",
+    "id": "blacklist_waweb",
+    "title": "Blacklist WhatsApp Web",
+    "content": "Block unwanted messages by entering phone numbers. This feature only blocks messages within our platform, not on WhatsApp or other messaging apps"
+   
+  },
+  
   {
     "type": "number",
     "id": "waweb-department",

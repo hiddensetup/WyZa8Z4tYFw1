@@ -7,6 +7,45 @@
 
 "use strict";
 
+// PROCESADOR DE MENSAJES SIMBOLOS
+function processMessage(message) {
+  return (
+    message
+      .replace(/- /g, "• ")
+      .replace(/[\[\]"\,}]/g, "")
+      .replace(/@s\.whatsapp\.net/g, "")
+      .replace('["', "<div class='group-chat-reply'>")
+      .replace('"]', "</div>")
+      .replace("→Forwarded←", '<i class="bi bi-arrow-right-square"></i> ')
+      .replace(/\{agent_name\}/g, '<i class="bi-people-fill"></i>')
+      .replace(
+        /\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g,
+        '<i class="bi-file-text" data-options="$1" data-message="$2"></i>'
+      )
+      .replace(/\[card[^\]]*\]/g, '<i class="bi-file-text"></i>')
+      .replace(/〚/g, " ")
+      .replace(/〛/g, " ")
+      // Replace single underscores for italic
+      .replace(/(_[^_]+_)/g, function (match) {
+        return `<em>${match.slice(1, -1)}</em>`;
+      })
+      // Replace single backticks for code
+      .replace(/(`[^`]+`)/g, function (match) {
+        return `<code>${match.slice(1, -1)}</code>`;
+      })
+      // Replace single tildes for strikethrough
+      .replace(/~([^~]+)~/g, function (match) {
+        return `<del>${match.slice(1, -1)}</del>`;
+      })
+      // Replace single asterisks for bold
+      .replace(/(\*[^*]+\*)/g, function (match) {
+        return `<strong>${match.slice(1, -1)}</strong>`;
+      })
+      // Custom replacement for ⟦ ⟧
+      .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E")
+  );
+}
+
 (function ($) {
   var version = "2.28";
   var main;
@@ -60,7 +99,7 @@
       var t = this[0];
       (t.style.height = "auto"), (t.style.maxHeight = "25px");
       window.getComputedStyle(t);
-      (t.style.height = (t.scrollHeight > 350 ? 350 : t.scrollHeight) + "px"),
+      (t.style.height = (t.scrollHeight > 35 ? 100 : t.scrollHeight) + "px"),
         (t.style.maxHeight = ""),
         $(t).trigger("textareaChanged");
     },
@@ -727,7 +766,7 @@
       const reply = pattern.test(message);
       return reply;
     },
-     // Get the active user
+    // Get the active user
     getActiveUser: function (database = false, onSuccess) {
       let app_login = SBApps.login();
       if (
@@ -740,7 +779,6 @@
         this.cookie("sb-login", "", "", "delete");
         activeUser(false);
         storage("login", "");
-   
       }
       SBF.ajax(
         {
@@ -1637,7 +1675,6 @@
     }
     return showed;
   };
-  
 
   // Uploader
   $.fn.sbUploadFiles = function (onSuccess) {
@@ -2191,7 +2228,7 @@
           } else if (
             attachments.toString().substr(attachments.length - 4) === "mp4"
           ) {
-            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
+            media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);min-width:150px"><source src="${url}"  type="video/mp4"></video></a>`;
           } else {
             media_code += `${
               url
@@ -2203,43 +2240,8 @@
         attachments_code += "</div>";
       }
 
-      //   if (attachments.length) {
-      //     attachments_code = '<div style="padding-top: 0px" class="sb-message-attachments">';
-      //     for (var i = 0; i < attachments.length; i++) {
-      //         let url = attachments[i][1];
-      //         if (/.jpg|.jpeg|.png|.webp|.gif/.test(url)) {
-      //             // Code for image attachments
-      //         } else if (attachments[i][1].endsWith(".pdf") && window.innerWidth > 555) {
-      //             // Code for PDF attachments and screen width greater than 555 pixels
-      //             media_code += `<embed src="${url}" type="application/pdf" style="width:100%;height:500px;" />`;
-      //         } else if (
-      //             attachments.toString().substr(attachments.length - 4) === "oga" ||
-      //             attachments.toString().substr(attachments.length - 4) === "mp3" ||
-      //             attachments.toString().substr(attachments.length - 4) === "ogg" ||
-      //             attachments.toString().substr(attachments.length - 4) === "amr"
-      //         ) {
-      //             // Code for audio attachments
-      //             media_code += `<audio controls style="max-width:100%;border-radius:8px;margin-bottom: 8px;background:#f1f3f4;"><source src="${url}" type="audio/mpeg"></audio></a>`;
-      //         } else if (
-      //             attachments.toString().substr(attachments.length - 4) === "mp4"
-      //         ) {
-      //             // Code for video attachments
-      //             media_code += `<video width="auto" controls style="object-fit: cover;width:100%;border-radius:var(--chat-rounded-size-8);"><source src="${url}"  type="video/mp4"></video></a>`;
-      //         } else {
-      //             // Code for other file types
-      //             media_code += `${
-      //               url
-      //                 ? `<a rel="noopener" style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);" target="_blank" class="sb-message" href="${url}"><i class="bi-file-text"></i> ${attachments[i][0]}</a>`
-      //                 : " "
-      //             }`;
-      //         }
-      //     }
-      //     attachments_code += "</div>";
-      // }
-
       var code = "";
       if (message.includes("〚")) {
-        var name = activeUser().name;
         var telf = activeUser().getExtra("phone").value;
         var tel = Number(telf);
         var alt = "";
@@ -2272,9 +2274,7 @@
 
         message = message.replace(
           "〚",
-          alt == "alt"
-            ? `<div id='sb-reply-to-alt'><strong id='sb-reply-top-name-alt'>Tú</strong><br>`
-            : `<div id='sb-reply-to'><strong id='sb-reply-top-name'>${name}</strong><br>`
+          alt == "alt" ? `<div id='sb-reply-to-alt'>` : `<div id='sb-reply-to'>`
         );
         message = message.replace(
           "〛",
@@ -2283,7 +2283,12 @@
         message = message.replace(/\|(?=\n)/, `</div>`);
         message = message.replace(/<p\s*\/?>\s*<p\s*\/?>/g, "");
         message = message.replace("{", "");
+        message = message.replace("}", "");
         message = message.replace("@s.whatsapp.net}", "");
+        message = message.replace(
+          "→Forwarded←",
+          '<i class="bi bi-arrow-right-square"></i> '
+        );
 
         // Ensure the name is not displayed at the top of the message
         if (message.startsWith(name)) {
@@ -2291,7 +2296,6 @@
         }
 
         // Convert dashes with space to bullets
-
         code = `<div data-id="${
           this.details["id"]
         }" ${type} class="sb-shadow-conversation ${css}">${thumb}
@@ -2322,38 +2326,42 @@
             </div>`;
       } else {
         // MESSAGE CREATION CHAT
-        code = `<div data-id="${
-          this.details["id"]
-        }" ${type}  class="sb-shadow-conversation ${css}"  style="transition: 0.3s all">${thumb}
-        <div class="server-response"> <i class="bi-check2-all"></i></div>
-				  <div class="sb-cnt" style="width:fit-content;margin:6px;">
-                 
-				  <div class="sb-message" data-value="${
-            this.linksData
-              ? encodeURIComponent(this.linksData.message)
-              : encodeURIComponent(message)
-          }">
-				  ${media_code}
-				 
-				  <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
-					${this.linksData ? this.linksData.message : message.replace(/\|/g, " ")}
-				  </div>
-				</div>
-				${attachments_code}<div class="menu-bubble"><div class="sb-time">${SBF.beautifyTime(
-          this.details["creation_time"],
-          true
-        )}</div></div>
-				  </div>
-				  ${admin_menu}
-				</div>
-			
-			  `;
+        code = `
+              <div data-id="${
+                this.details["id"]
+              }" ${type} class="sb-shadow-conversation ${css}" style="transition: 0.3s all">
+                ${thumb}
+                  <div class="server-response">
+                    <i class="bi-check2-all"></i>
+                  </div>
+                  <div class="sb-cnt" style="width:fit-content;margin:6px;">
+                        <div class="sb-message" data-value="${this.linksData}">
+                            ${media_code}
+                            <div style="padding-right: var(--chat-spacing-size-1-4);text-decoration:none;padding-left: var(--chat-spacing-size-5);">
+                            ${
+                              this.linksData
+                                ? this.linksData.message
+                                : message.replace(/\|/g, " ")
+                            }
+                            </div>
+                        </div>
+                        ${attachments_code}
+                        <div class="menu-bubble">
+                            <div class="sb-time">
+                                ${SBF.beautifyTime(
+                                  this.details["creation_time"],
+                                  true
+                                )}
+                            </div>
+                        </div>
+                  </div>
+                  ${admin_menu}
+              </div>`;
       }
       return code;
     }
 
     // RENDER BUBBLE MESSAGE
-
     render(message = false) {
       if (message === false) message = "" + this.details["message"];
       let len = message.length;
@@ -2365,7 +2373,6 @@
         ) + "</li>";
 
       // Breakline
-
       message = message.replace(/(?:\r\n|\r|\n)/g, "<br>");
 
       // Code block
@@ -2381,17 +2388,20 @@
         let codePlaceholder = `{{inline_code_placeholder_${i}}}`;
         message = message.replace(inlineCodes[i], codePlaceholder);
       }
-
-      // Bold (requires spaces around asterisks)
       message = message.replace(
         /(?<!\*)\*(.*?)\*(?!\*)/g,
         "<strong>$1</strong>"
       );
-
-      // Italic (requires spaces around underscores)
+      message = message.replace(/@s\.whatsapp\.net/g, "");
+      message = message.replace('["', "<div class='group-chat-reply'>");
+      message = message.replace('"]', "</div>");
+      message = message.replace(
+        "→",
+        '<small style="color:var(--chat-text-tertiary)"><i class="bi bi-arrow-right-square"></i> '
+      );
+      message = message.replace("←", "</small>");
+      message = message.replace("←", "</small>");
       message = message.replace(/(^|\s)\_([^\_]+)\_/g, "$1<em>$2</em>");
-
-      // Strikethrough (handles cases with or without spaces around tildes)
       message = message.replace(
         /(<li>\s*)?~([^~]+)~/g,
         function (match, liPrefix, content) {
@@ -2402,16 +2412,6 @@
           }
         }
       );
-
-      // // Unicode
-      // let false_positives = ["cede", "ubbed", "U4BEae", "UEDC72", "EAuEACd", "udada", "ucced"];
-      // for (var i = 0; i < false_positives.length; i++) {
-      //   message = message.replaceAll(false_positives[i], `SBR${i}`);
-      // }
-      // message = message.replace(/u([0-9a-f]{4,5})/im, "&#x$1;");
-      // for (var i = 0; i < false_positives.length; i++) {
-      //   message = message.replaceAll(`SBR${i}`, false_positives[i]);
-      // }
 
       // Single emoji
       if (
@@ -2426,7 +2426,9 @@
 
       // Links
       if (message.includes("http")) {
-        message = message.autoLink({ target: "_blank" });
+        message = message.autoLink({
+          target: "_blank",
+        });
       }
 
       // Inline code block restore
@@ -2465,11 +2467,8 @@
           )}</span>`
       );
 
-  // // Encode the message to handle special characters and ensure URL integrity
-  // message = encodeURIComponent(message);
-
-  return message;
-}
+      return message;
+    }
   }
 
   window.SBMessage = SBMessage;
@@ -2582,6 +2581,7 @@
       return results;
     }
 
+    // this update message added in chat. Like variables..
     updateMessage(id, message) {
       if (message instanceof SBMessage) {
         for (var i = 0; i < this.messages.length; i++) {
@@ -2620,10 +2620,15 @@
     }
 
     getCode() {
+      // LEFT CHAT LIST MESSAGES
       let count = this.messages.length;
       if (count) {
         let message = this.messages[count - 1];
         let text = message.message;
+
+        // Process the message with the helper function
+        text = processMessage(text);
+
         if (text.indexOf("[") !== false) {
           let shortcodes = text.match(/\[.+?\]/g) || [];
           if (shortcodes.length) {
@@ -2986,153 +2991,162 @@
         conversation_status_code = 2;
       }
 
-      // Send message
-      if (message || attachments.length || payload) {
-        let message_response = {
+// Helper function to format the message
+function formatMessage(message, prependAgentName) {
+  return prependAgentName ? `*{agent_name}*\n${message}` : message;
+}
+
+// Send message
+if (message || attachments.length || payload) {
+  // Retrieve the checkbox state from localStorage
+  const prependAgentName = localStorage.getItem('agentNameToggle') === 'true';
+  const formattedMessage = formatMessage(message, prependAgentName);
+
+  let message_response = {
+    user_id: user_id,
+    user: activeUser(),
+    conversation_id: this.conversation.id,
+    conversation: this.conversation,
+    conversation_status_code: conversation_status_code,
+    message: formattedMessage, // render in chat app
+    attachments: attachments,
+  };
+
+  SBF.ajax(
+    {
+      function: "send-message",
+      user_id: user_id,
+      conversation_id: this.conversation.id,
+      message: formattedMessage, // render WhatsApp or chat app message
+      attachments: attachments,
+      conversation_status_code: conversation_status_code,
+      queue: !admin && CHAT_SETTINGS["queue"] && is_user,
+      payload: payload,
+      recipient_id: admin ? activeUser().id : false,
+    },
+    (response) => {
+      // Update the dashboard conversations area
+      if (!admin && user_id == bot_id) {
+        if (this.dashboard) {
+          this.updateConversations();
+        } else if (!this.chat_open) {
+          this.updateNotifications("add", this.conversation.id);
+        }
+      }
+
+      // Update the chat current conversation
+      if (
+        (admin && !this.user_online) ||
+        (!admin && !this.agent_online)
+      ) {
+        this.update();
+      }
+
+      // Follow up and offline messages
+      if (!admin && is_user && !dialogflow_human_takeover) {
+        this.followUp();
+        this.offlineMessage();
+      }
+
+      // Dialogflow
+      if (
+        !admin &&
+        is_user &&
+        (!payload ||
+          (payload["id"] != "sb-human-takeover" &&
+            SBF.null(payload["skip-dialogflow"])))
+      ) {
+        SBApps.dialogflow.message(formattedMessage, attachments);
+      }
+
+      // Language detection
+      if (
+        is_user &&
+        CHAT_SETTINGS["language-detection"] &&
+        this.conversation &&
+        formattedMessage.split(" ").length > 1 &&
+        !SBF.storage("language-detection-completed")
+      ) {
+        SBF.ajax({
+          function: "google-language-detection-update-user",
           user_id: user_id,
-          user: activeUser(),
-          conversation_id: this.conversation.id,
-          conversation: this.conversation,
-          conversation_status_code: conversation_status_code,
-          message: message,
-          attachments: attachments,
-        };
+          string: formattedMessage,
+          token: SBApps.dialogflow.token,
+        });
+        SBF.storage("language-detection-completed", true);
+      }
 
-        SBF.ajax(
-          {
-            function: "send-message",
-            user_id: user_id,
-            conversation_id: this.conversation.id,
-            message: message,
-            attachments: attachments,
-            conversation_status_code: conversation_status_code,
-            queue: !admin && CHAT_SETTINGS["queue"] && is_user,
-            payload: payload,
-            recipient_id: admin ? activeUser().id : false,
-          },
-          (response) => {
-            // Update the dashboard conversations area
-            if (!admin && user_id == bot_id) {
-              if (this.dashboard) {
-                this.updateConversations();
-              } else if (!this.chat_open) {
-                this.updateNotifications("add", this.conversation.id);
-              }
-            }
-
-            // Update the chat current conversation
-            if (
-              (admin && !this.user_online) ||
-              (!admin && !this.agent_online)
-            ) {
-              this.update();
-            }
-
-            // Follow up and offline messages
-            if (!admin && is_user && !dialogflow_human_takeover) {
-              this.followUp();
-              this.offlineMessage();
-            }
-
-            // Dialogflow
-            if (
-              !admin &&
-              is_user &&
-              (!payload ||
-                (payload["id"] != "sb-human-takeover" &&
-                  SBF.null(payload["skip-dialogflow"])))
-            ) {
-              SBApps.dialogflow.message(message, attachments);
-            }
-
-            // Language detection
-            if (
-              is_user &&
-              CHAT_SETTINGS["language-detection"] &&
-              this.conversation &&
-              message.split(" ").length > 1 &&
-              !SBF.storage("language-detection-completed")
-            ) {
-              SBF.ajax({
-                function: "google-language-detection-update-user",
-                user_id: user_id,
-                string: message,
-                token: SBApps.dialogflow.token,
-              });
-              SBF.storage("language-detection-completed", true);
-            }
-
-            // Articles
-            if (
-              this.articles &&
-              !admin &&
-              CHAT_SETTINGS["articles"] &&
-              !CHAT_SETTINGS["office-hours"] &&
-              !this.isInitDashboard()
-            ) {
-              setTimeout(() => {
-                if (this.conversation) {
-                  this.sendMessage(bot_id, "[articles]");
-                  this.scrollBottom();
-                  this.articles = false;
-                }
-              }, 5000);
-            }
-
-            // Queue
-            if (response["queue"]) {
-              this.queue(this.conversation.id);
-            }
-
-            // Events
-            message_response["message_id"] = response.id;
-            SBF.event("SBMessageSent", message_response);
-            if (tickets) SBTickets.onMessageSent();
-            if (onSuccess) onSuccess(message_response);
-            if (response.notifications.length)
-              SBF.event("SBNotificationsSent", response.notifications);
-
-            // Miscellaneous
-            if (this.skip) this.skip = false;
-            this.busy(false);
+      // Articles
+      if (
+        this.articles &&
+        !admin &&
+        CHAT_SETTINGS["articles"] &&
+        !CHAT_SETTINGS["office-hours"] &&
+        !this.isInitDashboard()
+      ) {
+        setTimeout(() => {
+          if (this.conversation) {
+            this.sendMessage(bot_id, "[articles]");
+            this.scrollBottom();
+            this.articles = false;
           }
-        );
+        }, 5000);
+      }
 
-        // Display the message as sending in progress
-        if (is_user) {
-          message = SBF.escape(message);
-          chat.append(
-            new SBMessage({
-              id: "sending",
-              profile_image: admin
-                ? SB_ACTIVE_AGENT["profile_image"]
-                : activeUser().image,
-              full_name: activeUser().name,
-              creation_time: "0000-00-00 00:00:00",
-              message: message,
-              user_type: admin ? "agent" : "user",
-            })
-              .getCode()
-              .replace(
-                '<div class="sb-time"></div>',
-                `<div class="sb-time">${sb_("Sending")}<i></i></div>`
-              )
-          );
-          if (!this.dashboard) this.scrollBottom();
-        }
+      // Queue
+      if (response["queue"]) {
+        this.queue(this.conversation.id);
+      }
 
-        // Sounds
-        if (
-          (this.audio &&
-            !admin &&
-            this.chat_open &&
-            is_user &&
-            ["a", "aa"].includes(CHAT_SETTINGS["chat-sound"])) ||
-          (admin && SB_ADMIN_SETTINGS["sounds"] == "a")
-        ) {
-          this.audio_out.play();
-        }
-      } else this.busy(false);
+      // Events
+      message_response["message_id"] = response.id;
+      SBF.event("SBMessageSent", message_response);
+      if (tickets) SBTickets.onMessageSent();
+      if (onSuccess) onSuccess(message_response);
+      if (response.notifications.length)
+        SBF.event("SBNotificationsSent", response.notifications);
+
+      // Miscellaneous
+      if (this.skip) this.skip = false;
+      this.busy(false);
+    }
+  );
+
+  // Display the message as sending in progress
+  if (is_user) {
+    const escapedMessage = SBF.escape(formattedMessage);
+    chat.append(
+      new SBMessage({
+        id: "sending",
+        profile_image: admin
+          ? SB_ACTIVE_AGENT["profile_image"]
+          : activeUser().image,
+        full_name: activeUser().name,
+        creation_time: "0000-00-00 00:00:00",
+        message: escapedMessage,
+        user_type: admin ? "agent" : "user",
+      })
+        .getCode()
+        .replace(
+          '<div class="sb-time"></div>',
+          `<div class="sb-time">${sb_("Sending")}<i></i></div>`
+        )
+    );
+    if (!this.dashboard) this.scrollBottom();
+  }
+
+  // Sounds
+  if (
+    (this.audio &&
+      !admin &&
+      this.chat_open &&
+      is_user &&
+      ["a", "aa"].includes(CHAT_SETTINGS["chat-sound"])) ||
+    (admin && SB_ADMIN_SETTINGS["sounds"] == "a")
+  ) {
+    this.audio_out.play();
+  }
+} else this.busy(false);
     },
 
     // [Deprecated] This function will be removed soon
@@ -3218,6 +3232,64 @@
     },
 
     // Desktop notifications
+    // desktopNotification: function (
+    //   title,
+    //   message,
+    //   icon,
+    //   conversation_id = false,
+    //   user_id = false
+    // ) {
+    //   if (Notification.permission !== "granted") {
+    //     Notification.requestPermission();
+    //   } else {
+    //     let formattedMessage = message
+    //       .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
+    //       .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
+    //       .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
+    //       .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
+    //       .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
+    //       .replace(/^([{,+,0-9,}]+[@s.whatsapp.net])/g, "\u200E$1") // Replace the given pattern
+    //       .replace('["', "<div class='group-chat-reply'>")
+    //       .replace('"]', "</div>")
+    //       .replace(
+    //         "→",
+    //         '<small style="color:var(--chat-text-tertiary)"><i class="bi bi-arrow-right-square"></i> '
+    //       )
+    //       .replace("←", "</small>")
+    //       .replace("←", "</small>");
+
+    //       //this code above format in chat conversation whatsapp web
+
+    //     if (!formattedMessage) {
+    //       formattedMessage = "📄";
+    //     }
+
+    //     let notify = SBPusher.sw.showNotification(title, {
+    //       body: new SBMessage().strip(formattedMessage),
+    //       icon:
+    //         icon.indexOf("user.svg") > 0
+    //           ? CHAT_SETTINGS["notifications-icon"]
+    //           : icon,
+    //     });
+    //     notify.onclick = () => {
+    //       if (admin) {
+    //         if (conversation_id) {
+    //           SBAdmin.conversations.openConversation(
+    //             conversation_id,
+    //             user_id == false ? activeUser().id : user_id
+    //           );
+    //           SBAdmin.conversations.update();
+    //         } else if (user_id) {
+    //           SBAdmin.profile.show(user_id);
+    //         }
+    //       } else {
+    //         this.start();
+    //       }
+    //       window.focus();
+    //     };
+    //   }
+    // },
+
     desktopNotification: function (
       title,
       message,
@@ -3228,13 +3300,8 @@
       if (Notification.permission !== "granted") {
         Notification.requestPermission();
       } else {
-        let formattedMessage = message
-          .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
-          .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
-          .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
-          .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
-          .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
-          .replace(/^([{,+,0-9,}]+[@s.whatsapp.net])/g, "\u200E$1"); // Replace the given pattern
+        // Use processMessage to format the message
+        let formattedMessage = processMessage(message);
 
         if (!formattedMessage) {
           formattedMessage = "📄";
@@ -3388,7 +3455,7 @@
             .find(".sb-title")
             .html(`${sb_("Hello")} ${activeUser().nameBeautified}!`);
         }
-        this.welcome();
+        // this.welcome();
         // this.subscribe();
         if (!SBPusher.active) {
           setInterval(() => {
@@ -3479,7 +3546,7 @@
         main.sbActive(true);
         $("body").addClass("sb-chat-open");
         if (CHAT_SETTINGS["welcome-trigger"] == "open") {
-          this.welcome();
+          // this.welcome();
         }
         this.calculateLabelDates();
       }
@@ -4357,9 +4424,7 @@
           this.start_header = [chat_header.html(), chat_header.attr("class")];
         chat_header
           .attr("class", "sb-header sb-header-panel")
-          .html(
-            `${sb_(title)}<div class="sb-dashboard-btn bi-x-lg"></div>`
-          );
+          .html(`${sb_(title)}<div class="sb-dashboard-btn bi-x-lg"></div>`);
         main.addClass("sb-panel-active");
         this.dashboard = true;
       }
@@ -7345,7 +7410,6 @@
         // console.log("load new", total_more, loadmore.getLoad());
       }
     });
-    //rate and review was moved to test
     // Send a message
     $(chat_editor).on("click", ".sb-submit", function () {
       SBChat.submit();
@@ -7368,55 +7432,53 @@
       storage("open-conversation", 0);
       force_action = false;
     });
-// Send whatsapp template
-$("#template-form").on("submit", function (e) {
-  e.preventDefault();
-  const template = new Metatemplate().payload("#template-form");
+    // Send whatsapp template
+    $("#template-form").on("submit", function (e) {
+      e.preventDefault();
+      const template = new Metatemplate().payload("#template-form");
 
-  const payload = {
-      type: template.type,
-      to: activeUser().getExtra("phone").value,
-      template_name: template.template_name,
-      language: template.language,
-      variables: template.variables,
-      image_url: template.image_url,
-  };
-  console.log("Payload:", payload);
+      const payload = {
+        type: template.type,
+        to: activeUser().getExtra("phone").value,
+        template_name: template.template_name,
+        language: template.language,
+        variables: template.variables,
+        image_url: template.image_url,
+      };
+      console.log("Payload:", payload);
 
-  const submit = $("#send-meta-template");
+      const submit = $("#send-meta-template");
 
-  submit.sbLoading(true);
-  SBF.ajax(
-      {
+      submit.sbLoading(true);
+      SBF.ajax(
+        {
           function: "whatsapp-send-meta-template",
           payload: payload,
-      },
-      (response) => {
+        },
+        (response) => {
           submit.sbLoading(false);
           if (response?.error && response.error.message) {
-              SBForm.showErrorMessage(
-                  $(".sb-admin").find(".sb-send-template-box"),
-                  response.error.message
-              );
+            SBForm.showErrorMessage(
+              $(".sb-admin").find(".sb-send-template-box"),
+              response.error.message
+            );
           } else if (response) {
-              SBChat.sendMessage(
-                  -1,
-                  `*~Registro de contacto*, {agent_name} \n\n ${template.BodyTemplate}`,
-                  false
-              );
-              SBChat.showResponse(`${template.BodyTemplate}`);
-              $(admin ? global : main)
-                  .find(
-                      ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
-                  )
-                  .sbActive(false);
+            SBChat.sendMessage(
+              -1,
+              `*Plantilla WhatsApp*, {agent_name} \n\n ${template.BodyTemplate}`,
+              false
+            );
+            SBChat.showResponse(`${template.BodyTemplate}`);
+            $(admin ? global : main)
+              .find(
+                ".sb-lightbox-media, .sb-lightbox-overlay, .sb-send-template-box"
+              )
+              .sbActive(false);
           }
           console.log("temp", response);
-      }
-  );
-});
-
-
+        }
+      );
+    });
 
     //rate and review
     SBF.get_select_setting();
@@ -7452,103 +7514,103 @@ $("#template-form").on("submit", function (e) {
         .removeClass("sb-conversations-hidden");
     });
 
-  // Events uploader
-  $(chat_editor).on("click", ".bi-paperclip", function () {
-    if (!SBChat.is_busy) {
-      chat_editor.find(".sb-upload-files").val("").click();
-      chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+    // Events uploader
+    $(chat_editor).on("click", "#upload-files", function () {
+      if (!SBChat.is_busy) {
+        chat_editor.find(".sb-upload-files").val("").click();
+        chat_editor.find(".bi-arrow-up-circle-fill").removeClass("sb-hide");
 
-      console.log("to upload file");
-    }
-  });
-
-  $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
-    $(this).parent().remove();
-    if (
-      chat_textarea.val() == "" &&
-      chat_editor.find(".sb-attachments > div").length == 0
-    ) {
-      SBChat.activateBar(false);
-    }
-    e.preventDefault();
-    return false;
-  });
-
-  $(chat_editor).on("change", ".sb-upload-files", function (data) {
-    SBChat.busy(true);
-    $(this).sbUploadFiles(function (response) {
-      SBChat.uploadResponse(response);
+        console.log("to upload file");
+      }
     });
 
-    SBF.event("SBAttachments");
-  });
+    $(chat_editor).on("click", ".sb-attachments > div > i", function (e) {
+      $(this).parent().remove();
+      if (
+        chat_textarea.val() == "" &&
+        chat_editor.find(".sb-attachments > div").length == 0
+      ) {
+        SBChat.activateBar(false);
+      }
+      e.preventDefault();
+      return false;
+    });
 
-  $(chat_editor).on("dragover", function (e) {
-    $(this).addClass("sb-drag");
-    clearTimeout(timeout);
-    e.preventDefault();
-    e.stopPropagation();
-    // Show the send icon after a timeout
-    showSendIconAfterTimeout();
-  });
+    $(chat_editor).on("change", ".sb-upload-files", function (data) {
+      SBChat.busy(true);
+      $(this).sbUploadFiles(function (response) {
+        SBChat.uploadResponse(response);
+      });
 
-  $(chat_editor).on("dragleave", function (e) {
-    timeout = setTimeout(() => {
-      $(this).removeClass("sb-drag");
+      SBF.event("SBAttachments");
+    });
+
+    $(chat_editor).on("dragover", function (e) {
+      $(this).addClass("sb-drag");
+      clearTimeout(timeout);
+      e.preventDefault();
+      e.stopPropagation();
       // Show the send icon after a timeout
       showSendIconAfterTimeout();
-    }, 200);
-    e.preventDefault();
-    e.stopPropagation();
-  });
+    });
 
-  $(chat_editor).on("drop", function (e) {
-    let files = e.originalEvent.dataTransfer.files;
-    e.preventDefault();
-    e.stopPropagation();
-    if (files.length > 0) {
-      for (var i = 0; i < files.length; ++i) {
-        let form = new FormData();
-        form.append("file", files[i]);
-        SBF.upload(form, function (response) {
-          SBChat.uploadResponse(response);
-        });
+    $(chat_editor).on("dragleave", function (e) {
+      timeout = setTimeout(() => {
+        $(this).removeClass("sb-drag");
+        // Show the send icon after a timeout
+        showSendIconAfterTimeout();
+      }, 200);
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    $(chat_editor).on("drop", function (e) {
+      let files = e.originalEvent.dataTransfer.files;
+      e.preventDefault();
+      e.stopPropagation();
+      if (files.length > 0) {
+        for (var i = 0; i < files.length; ++i) {
+          let form = new FormData();
+          form.append("file", files[i]);
+          SBF.upload(form, function (response) {
+            SBChat.uploadResponse(response);
+          });
+        }
       }
+      $(this).removeClass("sb-drag");
+      return false;
+    });
+
+    // Function to show the send icon after a timeout
+    function showSendIconAfterTimeout() {
+      setTimeout(() => {
+        $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
+      }, 500); // Adjust the timeout duration as needed
     }
-    $(this).removeClass("sb-drag");
-    return false;
-  });
 
-  // Function to show the send icon after a timeout
-  function showSendIconAfterTimeout() {
-    setTimeout(() => {
-      $(".bi-arrow-up-circle-fill").removeClass("sb-hide");
-    }, 500); // Adjust the timeout duration as needed
-  }
+    // Articles
+    $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
+      SBChat.showArticles();
+    });
 
-  // Articles
-  $(main).on("click", ".sb-btn-all-articles:not([onclick])", function () {
-    SBChat.showArticles();
-  });
+    $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
+      SBChat.showArticles($(this).attr("data-id"));
+    });
 
-  $(main).on("click", ".sb-articles > div:not(.sb-title)", function () {
-    SBChat.showArticles($(this).attr("data-id"));
-  });
+    $(main).on(
+      "click",
+      ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
+      function () {
+        SBChat.searchArticles(
+          $(this).parent().find("input").val(),
+          this,
+          $(this).parent().next()
+        );
+      }
+    );
 
-  $(main).on(
-    "click",
-    ".sb-dashboard-articles .sb-input-btn .sb-submit-articles",
-    function () {
-      SBChat.searchArticles(
-        $(this).parent().find("input").val(),
-        this,
-        $(this).parent().next()
-      );
-    }
-  );
-
-  $(global).on("click", ".sb-article [data-rating]", function () {
-    SBChat.articleRatingOnClick(this);
+    $(global).on("click", ".sb-article [data-rating]", function () {
+      SBChat.articleRatingOnClick(this);
     });
 
     $(chat).on("click", ".sb-rich-button a", function (e) {
@@ -7870,8 +7932,7 @@ $("#template-form").on("submit", function (e) {
       if (admin) SBAdmin.open_popup = active ? false : this;
     });
 
-
-    /**inbox loader $('.sb-select li[data-value="6"]').eq(0).click();}**/
+    /**inbox loader**/
     $(global).on("click", ".sb-select li", function () {
       let select = $(this).closest(".sb-select");
       let value = $(this).data("value");
@@ -7887,15 +7948,11 @@ $("#template-form").on("submit", function (e) {
       chat_editor.find(".sb-upload-files").click();
     });
 
-    $(global).on(
-      "click",
-      ".sb-input-image .image > .bi-x-lg",
-      function (e) {
-        $(this).parent().removeAttr("data-value").css("background-image", "");
-        e.preventDefault();
-        return false;
-      }
-    );
+    $(global).on("click", ".sb-input-image .image > .bi-x-lg", function (e) {
+      $(this).parent().removeAttr("data-value").css("background-image", "");
+      e.preventDefault();
+      return false;
+    });
 
     let alertOnConfirmation = false;
 
@@ -7927,24 +7984,8 @@ $("#template-form").on("submit", function (e) {
 
     // LOADER EXTRA
 
-    // $(document).ready(function () {
-    //   let sbConversations = $("#sb-conversations, #theme-toggle");
-    //   sbConversations.click(function () {
-    //     $("body").append(
-    //       "<div id='overlay'><img style='position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);animation: fade-in 9s'></div>"
-    //     );
-    //     $("#overlay").fadeIn("slow"); // Changed ".overlay" to "#overlay"
-    //     $(document).ready(function () {
-    //       setTimeout(function () {
-    //         if ($("#overlay").length > 0) $("#overlay").fadeOut("slow"); // Changed ".overlay" to "#overlay"
-    //         window.location.href = "admin.php?conversation=";
-    //       }, 100);
-    //     });
-    //   });
-    // });
+    async function getFirstActiveWAConversationItem(){await new Promise(resolve=>setTimeout(resolve,1000));const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");return conversationItem;}window.onload=async()=>{const conversationItem=await getFirstActiveWAConversationItem();if(conversationItem){setTimeout(()=>toggleMenuBarAndFloatingText(false),20);}else{toggleMenuBarAndFloatingText(true);}};async function toggleMenuBarAndFloatingText(visible){await new Promise(resolve=>setTimeout(resolve,0));const menuBar=document.querySelector(".sb-show-menu-bar,.sb-bar");if(menuBar){menuBar.style.visibility=visible?"visible":"hidden";menuBar.style.opacity=visible?"1":"0";}const floatingText=document.getElementById("floatingText");if(floatingText){floatingText.style.display=visible?"none":"block";floatingText.style.opacity=visible?"0":"1";}}document.addEventListener("click",handleConversationClick);async function handleConversationClick(event){if(event.target.closest("div.sb-header"))return;toggleElementsVisibility();const conversationItem=event.target.closest("li.sb-active[data-conversation-source='wa'][data-conversation-status][data-user-id][data-conversation-id][data-time]");if(!conversationItem)return;const source=conversationItem.dataset.conversationSource;const status=conversationItem.dataset.conversationStatus;if(source==="wa"&&!isNaN(status)){await toggleMenuBarAndFloatingText(false);}}function toggleElementsVisibility(){const floatingText=document.getElementById("floatingText");const container=document.querySelector(".sb-show-menu-bar");if(floatingText){floatingText.style.opacity="0";floatingText.style.display="none";}if(container){container.style.visibility="visible";container.style.opacity="1";}}const floatingText=document.getElementById("floatingText");if(floatingText){floatingText.addEventListener("click",toggleElementsVisibility);}function toggleWhatsAppButton(visible){const whatsAppButton=document.querySelector(".api-whatsapp-button");if(whatsAppButton){whatsAppButton.style.visibility=visible?"visible":"hidden";}}function checkActiveWAConversation(){const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");toggleWhatsAppButton(conversationItem!==null);}document.querySelector(".menu-plus.bi-plus-lg").addEventListener("click",function(){const conversationItem=document.querySelector("li.sb-active[data-conversation-source='wa']");if(conversationItem){toggleWhatsAppButton(true);}else{toggleWhatsAppButton(false);}});document.getElementById("floatingText").addEventListener("click",function(){toggleWhatsAppButton(false);});document.addEventListener("DOMContentLoaded",function(){checkActiveWAConversation();});
 
-    
-    
 
     // CONTEXTUAL BLOCKED
     // $(document).on("contextmenu",function(e){
@@ -8038,5 +8079,4 @@ $(document).on("click", function (event) {
   window.speechSynthesis.cancel();
   isSpeechSynthesisActive = false; // Reset flag on document click
 });
-
 
