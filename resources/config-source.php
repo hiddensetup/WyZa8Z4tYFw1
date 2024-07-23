@@ -10,10 +10,13 @@
  */
 
 
+
  define('WW_URL_GO', 'http://go.steambox.uno');
+ define('WW_PORT_GO', '');
  define('WW_TOKEN', 'EAApH1KmWEt0BO5M');
  
  define('WX_URL_GO', 'http://go.steambox.uno');
+ define('WX_PORT_GO', '');
  define('WX_TOKEN', 'EAApH1KmWEt0BO5M');
  
  /* Access token */

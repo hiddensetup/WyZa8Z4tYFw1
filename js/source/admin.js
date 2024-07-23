@@ -99,205 +99,6 @@
     "NA",
   ];
 
-  // /*
-  //  * ----------------------------------------------------------
-  //  * External plugins
-  //  * ----------------------------------------------------------
-  //  */
-
-  // // miniTip 1.5.3 | (c) 2011, James Simpson | Dual licensed under the MIT and GPL
-  // $.fn.miniTip = function (t) {
-  //   var e = $.extend(
-  //     {
-  //       title: "",
-  //       content: !1,
-  //       delay: 100,
-  //       anchor: "n",
-  //       event: "hover",
-  //       fadeIn: 100,
-  //       fadeOut: 300,
-  //       aHide: !0,
-  //       maxW: "250px",
-  //       offset: 4,
-  //       stemOff: 0,
-  //       doHide: !1,
-  //     },
-  //     t
-  //   );
-  //   0 == admin.find("#miniTip").length &&
-  //     admin.append('<div id="miniTip" class="sb-tooltip"><div></div></div>');
-  //   var n = admin.find("#miniTip"),
-  //     o = n.find("div");
-  //   return e.doHide
-  //     ? (n.stop(!0, !0).fadeOut(e.fadeOut), !1)
-  //     : this.each(function () {
-  //         var t = $(this),
-  //           i = e.content ? e.content : t.attr("title");
-  //         if ("" != i && void 0 !== i) {
-  //           window.delay = !1;
-  //           var r = !1,
-  //             a = !0;
-  //           e.content || t.removeAttr("title"),
-  //             "hover" == e.event
-  //               ? (t.hover(
-  //                   function () {
-  //                     n.removeAttr("click"), (a = !0), c.call(this);
-  //                   },
-  //                   function () {
-  //                     (a = !1), s();
-  //                   }
-  //                 ),
-  //                 e.aHide ||
-  //                   n.hover(
-  //                     function () {
-  //                       r = !0;
-  //                     },
-  //                     function () {
-  //                       (r = !1),
-  //                         setTimeout(function () {
-  //                           a || n.attr("click") || s();
-  //                         }, 20);
-  //                     }
-  //                   ))
-  //               : "click" == e.event &&
-  //                 ((e.aHide = !0),
-  //                 t.click(function () {
-  //                   return (
-  //                     n.attr("click", "t"),
-  //                     n.data("last_target") !== t
-  //                       ? c.call(this)
-  //                       : "none" == n.css("display")
-  //                       ? c.call(this)
-  //                       : s(),
-  //                     n.data("last_target", t),
-  //                     $("html")
-  //                       .unbind("click")
-  //                       .click(function (t) {
-  //                         "block" != n.css("display") ||
-  //                           $(t.target).closest("#miniTip").length ||
-  //                           ($("html").unbind("click"), s());
-  //                       }),
-  //                     !1
-  //                   );
-  //                 }));
-  //           var c = function () {
-  //               e.show && e.show.call(this, e),
-  //                 e.content && "" != e.content && (i = e.content),
-  //                 o.html(i),
-  //                 e.render && e.render(n),
-  //                 n.hide().width("").width(n.width()).css("max-width", e.maxW);
-  //               var r = t.is("area");
-  //               if (r) {
-  //                 var a,
-  //                   c = [],
-  //                   s = [],
-  //                   d = t.attr("coords").split(",");
-  //                 function f(t, e) {
-  //                   return t - e;
-  //                 }
-  //                 for (a = 0; a < d.length; a++) c.push(d[a++]), s.push(d[a]);
-  //                 var h = $(
-  //                     "img[usemap=\\#" + t.parent().attr("name") + "]"
-  //                   ).offset(),
-  //                   l =
-  //                     parseInt(h.left, 10) +
-  //                     parseInt(
-  //                       (parseInt(c.sort(f)[0], 10) +
-  //                         parseInt(c.sort(f)[c.length - 1], 10)) /
-  //                         2,
-  //                       10
-  //                     ),
-  //                   u =
-  //                     parseInt(h.top, 10) +
-  //                     parseInt(
-  //                       (parseInt(s.sort(f)[0], 10) +
-  //                         parseInt(s.sort(f)[s.length - 1], 10)) /
-  //                         2,
-  //                       10
-  //                     );
-  //               } else
-  //                 (u = parseInt(t.offset().top, 10)),
-  //                   (l = parseInt(t.offset().left, 10));
-  //               var _ = r ? 0 : parseInt(t.outerWidth(), 10),
-  //                 p = r ? 0 : parseInt(t.outerHeight(), 10),
-  //                 v = n.outerWidth(),
-  //                 m = n.outerHeight(),
-  //                 g = Math.round(l + Math.round((_ - v) / 2)),
-  //                 b = Math.round(u + p + e.offset + 8),
-  //                 w =
-  //                   Math.round(v - 16) / 2 -
-  //                   parseInt(n.css("borderLeftWidth"), 10),
-  //                 H = 0,
-  //                 W =
-  //                   l + _ + v + e.offset + 8 > parseInt($(window).width(), 10),
-  //                 k = v + e.offset + 8 > l,
-  //                 T = m + e.offset + 8 > u - $(window).scrollTop(),
-  //                 x =
-  //                   u + p + m + e.offset + 8 >
-  //                   parseInt($(window).height() + $(window).scrollTop(), 10),
-  //                 y = e.anchor;
-  //               k || ("e" == e.anchor && !W)
-  //                 ? ("w" != e.anchor && "e" != e.anchor) ||
-  //                   ((y = "e"),
-  //                   (H = Math.round(
-  //                     m / 2 - 8 - parseInt(n.css("borderRightWidth"), 10)
-  //                   )),
-  //                   (w = -8 - parseInt(n.css("borderRightWidth"), 10)),
-  //                   (g = l + _ + e.offset + 8),
-  //                   (b = Math.round(u + p / 2 - m / 2)))
-  //                 : (W || ("w" == e.anchor && !k)) &&
-  //                   (("w" != e.anchor && "e" != e.anchor) ||
-  //                     ((y = "w"),
-  //                     (H = Math.round(
-  //                       m / 2 - 8 - parseInt(n.css("borderLeftWidth"), 10)
-  //                     )),
-  //                     (w = v - parseInt(n.css("borderLeftWidth"), 10)),
-  //                     (g = l - v - e.offset - 8),
-  //                     (b = Math.round(u + p / 2 - m / 2)))),
-  //                 x || ("n" == e.anchor && !T)
-  //                   ? ("n" != e.anchor && "s" != e.anchor) ||
-  //                     ((y = "n"),
-  //                     (H = m - parseInt(n.css("borderTopWidth"), 10)),
-  //                     (b = u - (m + e.offset + 8)))
-  //                   : (T || ("s" == e.anchor && !x)) &&
-  //                     (("n" != e.anchor && "s" != e.anchor) ||
-  //                       ((y = "s"),
-  //                       (H = -8 - parseInt(n.css("borderBottomWidth"), 10)),
-  //                       (b = u + p + e.offset + 8))),
-  //                 "n" == e.anchor || "s" == e.anchor
-  //                   ? v / 2 > l
-  //                     ? ((g = g < 0 ? w + g : w), (w = 0))
-  //                     : l + v / 2 > parseInt($(window).width(), 10) &&
-  //                       ((g -= w), (w *= 2))
-  //                   : T
-  //                   ? ((b += H), (H = 0))
-  //                   : x && ((b -= H), (H *= 2)),
-  //                 delay && clearTimeout(delay),
-  //                 (delay = setTimeout(function () {
-  //                   n.css({ "margin-left": g + "px", "margin-top": b + "px" })
-  //                     .stop(!0, !0)
-  //                     .fadeIn(e.fadeIn);
-  //                 }, e.delay)),
-  //                 n.attr("class", "sb-tooltip " + y);
-  //             },
-  //             s = function () {
-  //               ((e.aHide || r) && !e.aHide) ||
-  //                 (delay && clearTimeout(delay),
-  //                 (delay = setTimeout(function () {
-  //                   d();
-  //                 }, e.delay)));
-  //             },
-  //             d = function () {
-  //               (e.aHide || r) && !e.aHide
-  //                 ? setTimeout(function () {
-  //                     s();
-  //                   }, 200)
-  //                 : (n.stop(!0, !0).fadeOut(e.fadeOut),
-  //                   e.hide && e.hide.call(this));
-  //             };
-  //         }
-  //       });
-  // };
 
   /*
    * ----------------------------------------------------------
@@ -391,26 +192,6 @@
     return this;
   };
 
-  $.fn.sbInitTooltips = function () {
-    return $(this)
-      .find("[data-sb-tooltip]")
-      .each(function () {
-        // Get the position of the element relative to the viewport
-        var rect = this.getBoundingClientRect();
-        // Check if the element is closer to the top or bottom of the viewport
-        var closerToTop = rect.top < window.innerHeight / 2;
-
-        // Determine the anchor position based on the element's position
-        var anchor = closerToTop ? "n" : "w";
-
-        // Initialize the tooltip with the determined anchor position
-        $(this).miniTip({
-          content: $(this).attr("data-sb-tooltip"),
-          anchor: anchor, // Use the determined anchor position
-          delay: 100,
-        });
-      });
-  };
 
   // Display the bottom card information box
   function showResponse(text, type = false) {
@@ -501,6 +282,7 @@
       ? SB_TRANSLATIONS[text]
       : text;
   }
+ 
 
   // PWA functions
   function isPWA() {
@@ -3656,60 +3438,60 @@
           });
         }
 
-     // Open the conversation
-conversations_admin_list_ul.find("li").sbActive(false);
-conversation.sbActive(true);
-if (conversation_id != -1) {
-  activeUser().getFullConversation(conversation_id, (response) => {
-    let conversation_status_code = response.get(
-      "conversation_status_code"
-    );
-    let select = conversations_filters.eq(0);
-    let select_status_code = select
-      .find(".sb-active")
-      .attr("data-value");
+        // Open the conversation
+        conversations_admin_list_ul.find("li").sbActive(false);
+        conversation.sbActive(true);
+        if (conversation_id != -1) {
+          activeUser().getFullConversation(conversation_id, (response) => {
+            let conversation_status_code = response.get(
+              "conversation_status_code"
+            );
+            let select = conversations_filters.eq(0);
+            let select_status_code = select
+              .find(".sb-active")
+              .attr("data-value");
 
-    SBChat.setConversation(response);
-    SBChat.populate();
+            SBChat.setConversation(response);
+            SBChat.populate();
 
-    this.setReadIcon(conversation_status_code);
-    conversations_area.find(".sb-conversation-busy").remove();
-    this.updateUserDetails();
+            this.setReadIcon(conversation_status_code);
+            conversations_area.find(".sb-conversation-busy").remove();
+            this.updateUserDetails();
 
-    let profileImage = response.get("profile_image");
-    let originalTitle = response.get("first_name");
-    let screenWidth = $(window).width();
-    let firstName;
+            let profileImage = response.get("profile_image");
+            let originalTitle = response.get("first_name");
+            let screenWidth = $(window).width();
+            let firstName;
 
-    // Determine the character limit based on screen width
-    if (screenWidth < 555) {
-      firstName =
-        originalTitle.length > 18
-          ? originalTitle.slice(0, 18) + "..."
-          : originalTitle;
-    } else {
-      firstName =
-        originalTitle.length > 27
-          ? originalTitle.slice(0, 27) + "..."
-          : originalTitle;
-    }
+            // Determine the character limit based on screen width
+            if (screenWidth < 555) {
+              firstName =
+                originalTitle.length > 18
+                  ? originalTitle.slice(0, 18) + "..."
+                  : originalTitle;
+            } else {
+              firstName =
+                originalTitle.length > 27
+                  ? originalTitle.slice(0, 27) + "..."
+                  : originalTitle;
+            }
 
-    let phoneNumber = activeUser().getExtra("phone").value;
+            let phoneNumber = activeUser().getExtra("phone").value;
 
-    // Determine which icon to use based on screen width
-    let iconClass =
-      screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
+            // Determine which icon to use based on screen width
+            let iconClass =
+              screenWidth < 555 ? "bi-telephone-fill" : "bi-skype";
 
-    // Construct the HTML with the profile image and first name
-    let htmlContent = `
+            // Construct the HTML with the profile image and first name
+            let htmlContent = `
     <span style="padding-right:5px;" class="open-profile-name">
         <img src="${profileImage}" class="top-image-profile">
         <span class="routin-top-content">Editar</span>
     </span> 
     <span style="margin: 0px 10px 0px 0px;">${firstName}</span>`;
 
-    // Construct the HTML for the icon
-    let iconContent = `
+            // Construct the HTML for the icon
+            let iconContent = `
     <span class="additional-info">${
       phoneNumber
         ? `<a alt="Call from your Phone" href="tel:${phoneNumber}"><i class="styling-caller bi ${iconClass}"></i></a>`
@@ -3717,33 +3499,33 @@ if (conversation_id != -1) {
     }
     </span>`;
 
-    // Insert the constructed HTML into the respective elements
-    conversations_area.find(".sb-top > a.routin-top-tip").html(htmlContent);
-    conversations_area.find(".sb-top > a.routin-calls-chat").html(iconContent);
+            // Insert the constructed HTML into the respective elements
+            conversations_area
+              .find(".sb-top > a.routin-top-tip")
+              .html(htmlContent);
+            conversations_area
+              .find(".sb-top > a.routin-calls-chat")
+              .html(iconContent);
 
-    let isAdditionalInfoShown = false;
+            let isAdditionalInfoShown = false;
 
-    conversations_area
-      .find(".sb-top > a.routin-top-tip > span")
-      .on("click", function () {
-        // Toggle additional info
-        let currentSpan = $(this).next(".additional-info");
-        if (!isAdditionalInfoShown) {
-          currentSpan.show();
-        } else {
-          currentSpan.hide();
-        }
-        isAdditionalInfoShown = !isAdditionalInfoShown;
-      });
+            conversations_area
+              .find(".sb-top > a.routin-top-tip > span")
+              .on("click", function () {
+                // Toggle additional info
+                let currentSpan = $(this).next(".additional-info");
+                if (!isAdditionalInfoShown) {
+                  currentSpan.show();
+                } else {
+                  currentSpan.hide();
+                }
+                isAdditionalInfoShown = !isAdditionalInfoShown;
+              });
 
-    $(".sb-list").prepend(
-      '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
-    );
-  
+            $(".sb-list").prepend(
+              '<div class="load-more"><span id="load-more" ><i style="vertical-align:middle;font-size: var(--chat-text-size-1-0);" class="bi-arrow-up-circle"></i> </div>'
+            );
 
-        if (SB_ADMIN_SETTINGS["smart-reply"]) suggestions_area.html("");
-
-       
             // Automatic translation
             SBAdmin.must_translate =
               SB_ADMIN_SETTINGS["translation"] &&
@@ -4159,16 +3941,6 @@ if (conversation_id != -1) {
                   }
                   if (item.message != "" || item.attachments != "") {
                     SBConversations.newMsgTop(response[i], "add");
-
-                    // Update the data-time attribute of the conversation item
-                    let conversationItem = conversations_admin_list_ul.find(
-                      `[data-conversation-id="${conversation_id}"]`
-                    );
-                    conversationItem.attr("data-time", item["creation_time"]);
-
-                    // Call positionList to reorder the conversations
-                    this.positionList();
-                    SBUsers.update(); //(update user list in users section)
                   }
 
                   // Desktop, flash, sounds notifications
@@ -4186,10 +3958,15 @@ if (conversation_id != -1) {
                         item["first_name"] + " " + item["last_name"],
                         SBUsers.userProfileImage(item["profile_image"]),
                       ];
-
-                      let messageToProcess =
-                        "preview" in payload ? payload.preview : "notfimy";
-                      let formattedMessage = processMessage(messageToProcess);
+                      let formattedMessage = (
+                        "preview" in payload ? payload.preview : "notfimy"
+                      )
+                        .replace(/\*(.*?)\*/g, "\u200E*$1*\u200E") // bold
+                        .replace(/_(.*?)_/g, "\u200E_$1_\u200E") // italic
+                        .replace(/~(.*?)~/g, "\u200E~$1~\u200E") // strikethrough
+                        .replace(/```(.*?)```/g, "\u200E```\n$1\n```\u200E") // code block
+                        .replace(/`(.*?)`/g, "\u200E`$1`\u200E") // inline code
+                        .replace(/⟦(.*?)⟧/g, "\u200E⟦$1⟧\u200E"); // custom replacement for ⟦ ⟧
 
                       SBChat.desktopNotification(
                         user_details[0],
@@ -4266,45 +4043,59 @@ if (conversation_id != -1) {
 
     //function updates a menu or notification element with the count of conversations
     updateMenu: function () {
-      const count = conversations_admin_list_ul.find(
+      let count = conversations_admin_list_ul.find(
         '[data-conversation-status="2"]'
       ).length;
-      const item = conversations_filters.eq(0);
-      const anchorTag = item.find(" > a");
-      const span = anchorTag.find(" > p span");
+      let item = conversations_filters.eq(0);
+      let anchorTag = item.find(" > a");
+      let span = anchorTag.find(" > p span");
+
+      let existingFloatingElement = document.getElementById("floatingElement");
 
       if (count == 100 || this.menu_count_ajax) {
-        const status_code = item.find("li.sb-active").data("value");
+        let status_code = item.find("li.sb-active").data("value");
         this.menu_count_ajax = true;
         SBF.ajax(
           {
             function: "count-conversations",
             status_code: status_code == 0 ? 2 : status_code,
           },
-          (response) => span.html(`(${response})`)
+          (response) => {
+            span.html(`(${response})`);
+          }
         );
       } else {
-        let floatingElement = document.getElementById("floatingElement");
-
-        if (!floatingElement) {
-          floatingElement = document.createElement("div");
+        if (!existingFloatingElement) {
+          let floatingElement = document.createElement("div");
           floatingElement.id = "floatingElement";
           floatingElement.style.cssText =
             "position: relative; top: 10px; margin: auto; display: flex; justify-content: center; z-index: 33;";
 
-          const notifElement = document.createElement("small");
+          let notifElement = document.createElement("small");
           notifElement.className = "notif";
           notifElement.style.cssText =
             "font-size: medium; padding: 6px 10px; border-radius: 30px;";
+          notifElement.textContent = count;
 
           floatingElement.appendChild(notifElement);
+
           document
             .getElementById("sb-conversations")
             .appendChild(floatingElement);
+        } else {
+          let notifElement = existingFloatingElement.querySelector(".notif");
+          notifElement.textContent = count;
         }
 
-        floatingElement.querySelector(".notif").textContent = count;
-        floatingElement.style.visibility = count === 0 ? "hidden" : "visible";
+        // Modificar la visibilidad del div que contiene el elemento notif
+        let divInsideAnchor = document
+          .getElementById("sb-conversations")
+          .querySelector("div");
+        if (count === 0) {
+          divInsideAnchor.style.visibility = "hidden";
+        } else {
+          divInsideAnchor.style.visibility = "visible";
+        }
       }
     },
 
@@ -4386,64 +4177,86 @@ if (conversation_id != -1) {
       if (conversation instanceof SBConversation) {
         const lastMessage = conversation.getLastMessage();
         conversation = {
-          ...conversation,
-          ...lastMessage,
+          message: lastMessage.message,
+          attachments: lastMessage.attachments,
+          user_id: conversation.get("user_id"),
+          conversation_id: conversation.id,
+          conversation_status_code: conversation.get(
+            "conversation_status_code"
+          ),
+          conversation_source: conversation.get("source"),
+          label: conversation.get("label"),
+          profile_image: conversation.get("profile_image"),
+          first_name: conversation.get("first_name"),
+          last_name: conversation.get("last_name"),
+          creation_time: conversation.get("creation_time"),
+          payload: conversation.get("payload"),
         };
       }
 
+      // MESSAGE SPLIT BY WORDS IN LEFT BAR
+
       let message = conversation.message;
+      let truncatedWords = [];
 
-      // Apply the processMessage function
-      message = processMessage(message);
+      message = message.replace(/- /g, "• ");
 
-      // Truncate message if necessary
-      if (message.length > 40) {
+      // Remove specified symbols from the message, including '}'
+      message = message.replace(/[\[\]"\,}]/g, "");
+
+      // Remove symbols and words matching the pattern [{,+,0-9]+@s.whatsapp.net}]
+      const pattern = /[{,+0-9]+@s\.whatsapp\.net/g;
+      message = message.replace(pattern, "");
+
+      // Replace [buttons options="..." message="..."] with <i class="bi-file-text"></i> preserving dynamic content
+      message = message.replace(
+        /\[buttons\s+options="([^"]+)"\s+message="([^"]+)"\]/g,
+        '<i class="bi-file-text" data-options="$1" data-message="$2"></i>'
+      );
+
+      // Replace [card image="" header="" description="" link="" link-text=" " extra="" target=""] with <i class="bi-file-text"></i>, including '}'
+      message = message.replace(
+        /\[card[^\]]*\]/g,
+        '<i class="bi-file-text"></i>'
+      );
+
+      // Replace the symbols 〚 and 〛 with <i class="bi-pencil-square"></i>
+      message = message.replace(/〚/g, "").replace(/〛/g, " ↪️ ");
+
+      const MAX_CHARACTERS = 40;
+      const MAX_WORDS = 5;
+
+      if (message.length > MAX_CHARACTERS) {
         const words = message.split(" ");
-        message = words.slice(0, 5).join(" ") + (words.length > 5 ? "..." : "");
+        let currentLength = 0;
+        let wordCount = 0;
+
+        for (const word of words) {
+          if (
+            wordCount >= MAX_WORDS ||
+            currentLength + word.length + 1 > MAX_CHARACTERS
+          ) {
+            break;
+          }
+          truncatedWords.push(word);
+          currentLength += word.length + 1; // Add 1 for the space
+          wordCount++;
+        }
+
+        message = truncatedWords.join(" ") + "...";
       }
 
-      // Attachments handling
-      if (!message && conversation.attachments) {
-        const files = JSON.parse(conversation.attachments);
-        const mediaFiles = files.filter((file) =>
-          /\.(jpg|jpeg|png|webp|mp4)\b/g.test(file)
-        );
-        const docFiles = files.filter((file) =>
-          /\.(docx?|xlsx?|pdf)\b/g.test(file)
-        );
-        const voiceFiles = files.filter((file) => /\.(mp3|ogg)\b/g.test(file));
+      const labelname = [conversation.label];
+      const cloud_active = SBF.admin_set("whatsapp-cloud")["cloud-active"];
 
-        const mediaMessage =
-          mediaFiles.length > 0
-            ? `<i class="bi-box"></i> ${sb_("Media")}: ${
-                mediaFiles.length > 1
-                  ? `+${mediaFiles.length - 1}`
-                  : mediaFiles.length
-              }`
-            : "";
-        const docMessage =
-          docFiles.length > 0
-            ? `<i class="bi-file-text"></i> ${sb_("Doc")}: ${
-                docFiles.length > 1
-                  ? `+${docFiles.length - 1}`
-                  : docFiles.length
-              }`
-            : "";
-        const voiceMessage =
-          voiceFiles.length > 0
-            ? `<i class="bi-mic-fill vertical-align"></i> ${sb_("Voice")}: ${
-                voiceFiles.length > 1
-                  ? `+${voiceFiles.length - 1}`
-                  : voiceFiles.length
-              }`
-            : "";
-
-        message = [mediaMessage, docMessage, voiceMessage]
-          .filter(Boolean)
-          .join(" ");
+      const reply = pattern.test(message);
+      if (reply) {
+        truncatedWords = message.replace(/^.*?]/, "");
       }
 
-      // Handle conversation.payload for preview
+      let strip = new SBMessage();
+      let is_title = !SBF.null(conversation.title);
+
       if (conversation.payload.includes("preview")) {
         const payload = JSON.parse(conversation.payload.replace("\\'", "'"));
         if (payload && "preview" in payload) {
@@ -4469,61 +4282,120 @@ if (conversation_id != -1) {
         }
       });
 
-      // Handle status
       if (SBF.null(status)) {
         status = conversation.conversation_status_code;
       }
 
-      const formattedMessage = new SBMessage()
-        .strip(message)
-        .replace(/_/g, " ");
+      //Conversation List Attachments Received
 
-      const isTitle = !SBF.null(conversation.title);
+      if (!message && !SBF.null(conversation.attachments)) {
+        const files = JSON.parse(conversation.attachments);
+        if (Array.isArray(files)) {
+          const mediaRegex = /\.(jpg|jpeg|png|webp|mp4)\b/g;
+          const docRegex = /\.(docx?|xlsx?|pdf)\b/g;
+          const voiceRegex = /\.(mp3|ogg)\b/g;
 
-      return `
-    <li data-user-id="${conversation.user_id}" data-conversation-id="${
-        conversation.conversation_id
-      }" data-time="${new Date(
-        conversation.creation_time
-      ).getTime()}" data-conversation-status="${status}" ${
-        conversation.conversation_source
-          ? ` data-conversation-source="${conversation.conversation_source}"`
+          const mediaFiles = files.filter((file) => mediaRegex.test(file));
+          const docFiles = files.filter((file) => docRegex.test(file));
+          const voiceFiles = files.filter((file) => voiceRegex.test(file));
+
+          let mediaMessage = "";
+          let docMessage = "";
+          let voiceMessage = "";
+
+          if (mediaFiles.length > 0) {
+            mediaMessage =
+              `<i class="bi-box"></i>` +
+              " " +
+              sb_("Media") +
+              ": " +
+              (mediaFiles.length > 1
+                ? "+" + (mediaFiles.length - 1)
+                : mediaFiles.length);
+          }
+
+          if (docFiles.length > 0) {
+            docMessage =
+              `<i class="bi-file-text"></i>` +
+              " " +
+              sb_("Doc") +
+              ": " +
+              (docFiles.length > 1
+                ? "+" + (docFiles.length - 1)
+                : docFiles.length);
+          }
+
+          if (voiceFiles.length > 0) {
+            voiceMessage =
+              `<i class="bi-mic-fill vertical-align"></i>` +
+              " " +
+              sb_("Voice") +
+              ": " +
+              (voiceFiles.length > 1
+                ? "+" + (voiceFiles.length - 1)
+                : voiceFiles.length);
+          }
+
+          // Combine the messages
+          if (mediaMessage || docMessage || voiceMessage) {
+            message = [mediaMessage, docMessage, voiceMessage]
+              .filter(Boolean)
+              .join(" ");
+          }
+        }
+      }
+
+      let order_css = `
+			 `;
+      return `<li style="${order_css}" data-user-id="${
+        conversation["user_id"]
+      }" data-conversation-id="${
+        conversation["conversation_id"]
+      }"  data-time="${new Date(
+        conversation["creation_time"]
+      ).getTime()}" data-conversation-status="${status}"${
+        !SBF.null(conversation["conversation_source"])
+          ? ` data-conversation-source="${conversation["conversation_source"]}"`
           : ""
       }>
-        <small class="source-conversation-icon">
-            <img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
-              conversation.conversation_source
-            }.svg">
-        </small>
-        <div class="sb-profile client-status">
-            <img  class="client-icon-status sb-icon tags-${
-              conversation.label
-            } bi-kanban-fill loading="lazy" src="${conversation.profile_image}">
-            <h3 class="sb-name${isTitle ? " sb-custom-name" : ""}">${
-        isTitle
+			<small class="source-conversation-icon"><img id="conversation-source-icon" class="source-buttons" src="../media/apps/${
+        conversation["conversation_source"]
+      }.svg">
+      </small>
+			<div class="sb-profile client-status"><img class="client-icon-status sb-icon tags-${
+        conversation["label"]
+      } bi-crosshair loading="lazy" src="${conversation["profile_image"]}">
+    
+			<h3 class="sb-name${is_title ? " sb-custom-name" : ""}">${
+        is_title
           ? conversation.title
-          : `${conversation.first_name} ${conversation.last_name}`
-      }</h3>
-            <div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">
-                ${SBF.beautifyTime(conversation.creation_time)}
-            </div>
-        </div>
-        <div>
-            <a class="phone-number" style="color:inherit">${
-              conversation.phone
-            }</a>
-        </div>
-        <p class="message-received" style="max-width:calc(100% - 145px);">${formattedMessage}</p>
-        <div class="conversation-bar">
-            <div class="no-read-icon sb-hide" style="margin: 0px 1px;">
-                <svg width="20" height="20" viewBox="0 0 24.5 24.5" xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
-                    <circle cx="12" cy="12" r="10" class="check-circle"/>
-                    
-                </svg>
-            </div>
-        </div>
-    </li>
-`;
+          : conversation["first_name"] + " " + conversation["last_name"]
+      } </h3>
+			<div class="sb-info-conversations" style="min-width: 60px;text-align:right;flex: auto;font-size: .75rem;letter-spacing: .3px;margin: -2px 0px;">${SBF.beautifyTime(
+        conversation["creation_time"]
+      )}</div>
+			</div>
+			<div>
+			<a class="phone-number" style="color:inherit">${conversation.phone}</a>
+			</div>
+			<p class="message-received" style="max-width:calc(100% - 145px);">${strip
+        .strip(message)
+        .replace(/_/g, " ")}</p>
+			<div class="conversation-bar">
+
+			<div class="no-read-icon sb-hide" style="margin: 0px 1px;">
+				<svg width="20" height="20" viewBox="0 0 24.5 24.5" data-name="Flat Color"
+					xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
+					<circle cx="12" cy="12" r="10" class="check-circle" />
+					<path
+						d="M11 16a1 1 0 0 1-.71-.29l-3-3a1 1 0 1 1 1.42-1.42l2.29 2.3 4.29-4.3a1 1 0 0 1 1.42 1.42l-5 5A1 1 0 0 1 11 16Z"
+						class="check-inside" />
+				</svg>
+			</div>
+		</div>
+		</div>
+		</li> 
+		`;
     },
 
     newMsgTop(user = false, status) {
@@ -5095,24 +4967,35 @@ if (conversation_id != -1) {
    * # Profile
    * ----------------------------------------------------------
    */
+
   var SBProfile = {
+    // Get all profile settings
     getAll: function (profile_area) {
       return SBForm.getAll(profile_area);
     },
+
+    // Get a single setting
     get: function (input) {
       return SBForm.get(input);
     },
+
+    // Set a single setting
     set: function (item, value) {
       return SBForm.set(item, value);
     },
     getUserExtra: function (user_id) {
-      SBF.ajax({
-        function: "get-user-extra",
-        user_id: user_id,
-      }, (res) => {
-        this.getUserExtra(user_id, response);
-      });
+      SBF.ajax(
+        {
+          function: "get-user-extra",
+          user_id: user_id,
+        },
+        (res) => {
+          this.getUserExtra(user_id, response);
+        }
+      );
     },
+
+    // Display the user box
     show: function (user_id) {
       loadingGlobal();
       activeUser(new SBUser({ id: user_id }));
@@ -5124,7 +5007,9 @@ if (conversation_id != -1) {
           if (SBF.isAgent(user_type)) {
             this.agentData();
           }
-          profile_box.find(".sb-user-conversations").html(activeUser().getConversationsCode(response));
+          profile_box
+            .find(".sb-user-conversations")
+            .html(activeUser().getConversationsCode(response));
           profile_box.find(".sb-top-bar [data-value]").sbActive(!1);
           if (!SBF.null(activeUser().get("email"))) {
             profile_box.find(".sb-top-bar [data-value=email]").sbActive(!0);
@@ -5146,52 +5031,115 @@ if (conversation_id != -1) {
         let password = profile_edit_box.find("#password input");
         let current_user_type = user.type;
         let select = profile_edit_box.find("#user_type select");
-        profile_edit_box.removeClass("sb-user-new").attr("data-user-id", user.id);
-        profile_edit_box.find(".sb-top-bar .sb-save").html(`<i class="bi-check-lg"></i>${sb_("Save changes")}`);
+
+        profile_edit_box
+          .removeClass("sb-user-new")
+          .attr("data-user-id", user.id);
+        profile_edit_box
+          .find(".sb-top-bar .sb-save")
+          .html(`<i class="bi-check-lg"></i>${sb_("Save changes")}`);
         profile_edit_box.find(".sb-profile").setProfile();
         profile_edit_box.find(".sb-custom-detail").remove();
-        profile_edit_box.find("input,select,textarea").removeClass("sb-error");
+        profile_edit_box.find("input,select,textarea").removeClass("sb-error"); //texara or textarea
+
+        // Custom details
         let code = "";
-        let default_ids = profile_edit_box.find(".sb-additional-details [id]").map(function () {
-          return this.id;
-        }).get().concat(["facebook-id", "ip", "os", "current_url", "country_code", "browser_language", "browser",]);
+        let default_ids = profile_edit_box
+          .find(".sb-additional-details [id]")
+          .map(function () {
+            return this.id;
+          })
+          .get()
+          .concat([
+            "facebook-id",
+            "ip",
+            "os",
+            "current_url",
+            "country_code",
+            "browser_language",
+            "browser",
+          ]);
         for (var id in user.extra) {
           if (!default_ids.includes(id)) {
-            code += `<div id="${id}" data-type="text" class="sb-input sb-custom-detail"><span>${sb_(user.extra[id].name)}</span><input type="text"></div>`;
+            code += `<div id="${id}" data-type="text" class="sb-input sb-custom-detail"><span>${sb_(
+              user.extra[id].name
+            )}</span><input type="text"></div>`;
           }
         }
-        profile_edit_box.find(".sb-additional-details .sb-edit-box").append(code);
+        profile_edit_box
+          .find(".sb-additional-details .sb-edit-box")
+          .append(code);
+
+        // Set values
         this.populateEdit(user, profile_edit_box);
         this.updateRequiredFields(current_user_type);
-        if (SB_ACTIVE_AGENT.user_type == "admin" && SBF.isAgent(current_user_type)) {
-          select.html(`<option value="agent">${sb_("Agent")}</option><option value="admin"${current_user_type == "admin" ? " selected" : ""}>${sb_("Admin")}</option>`);
+
+        // User type select
+        if (
+          SB_ACTIVE_AGENT["user_type"] == "admin" &&
+          SBF.isAgent(current_user_type)
+        ) {
+          select.html(
+            `<option value="agent">${sb_(
+              "Agent"
+            )}</option><option value="admin"${
+              current_user_type == "admin" ? " selected" : ""
+            }>${sb_("Admin")}</option>`
+          );
         }
+
+        // Password
         if (password.val()) {
           password.val("********");
         }
+
+        // // Cloud
+        // if (SB_ADMIN_SETTINGS.cloud) {
+        //   profile_edit_box.setClass(
+        //     "sb-cloud-admin",
+        //     SB_ADMIN_SETTINGS.cloud.id == user.id
+        //   );
+        // }
+
+        // Show the edit box
         this.boxClasses(profile_edit_box, current_user_type);
         profile_edit_box.sbShowLightbox();
-        SBF.event("SBProfileEditBoxOpened", { user_id: user.id });
+        SBF.event("SBProfileEditBoxOpened", {
+          user_id: user.id,
+        });
       } else {
         SBF.error("User not of type SBUser", "SBUsers.showEdit");
-        return !1;
+        return false;
       }
     },
+
+    // Populate profile
     populate: function (user, profile_area) {
       let exclude = ["first_name", "last_name", "password", "profile_image"];
-      let phoneRow = ""; // Store phone row separately
-      let otherRows = ""; // Store other rows separately
-    
+      let code = "";
       if (profile_area.hasClass("sb-profile-list") && SBChat.conversation) {
         var source = SBChat.conversation.get("source");
         var label = SBChat.conversation.get("label");
-        otherRows += this.profileRow("conversation-id", SBChat.conversation.id, sb_("Conversation ID"));
+        code = this.profileRow(
+          "conversation-id",
+          SBChat.conversation.id,
+          sb_("Conversation ID")
+        );
         if (!SBF.null(label)) {
-          otherRows += this.profileRow("conversation-label", label, sb_("Client status"), true); // Hide label span and icon
+          code += this.profileRow(
+            "conversation-label",
+            label,
+            sb_("Client status")
+          );
         } else {
-          otherRows += this.profileRow("conversation-label", "Unknown", sb_("Label"), true); // Hide label span and icon
+          code += this.profileRow(
+            "conversation-label",
+            "Unknown",
+            sb_("Label")
+          );
         }
         if (!SBF.null(source)) {
+          // Mapping object for source labels
           const sourceLabels = {
             fb: "Facebook",
             ww: "Whatsmeow",
@@ -5206,113 +5154,239 @@ if (conversation_id != -1) {
             tw: "Twitter",
             bm: "Google",
           };
+
+          // Get the label directly from the mapping object
           const sourceLabel = sourceLabels[source] || source;
-          otherRows += this.profileRow("conversation-source", sourceLabel, sb_("Source"), true); // Hide source span and icon
+          code += this.profileRow(
+            "conversation-source",
+            sourceLabel,
+            sb_("Source")
+          );
         } else {
-          otherRows += this.profileRow("conversation-source", "Unknown", "",  true); // Hide source span and icon
+          code += this.profileRow("conversation-source", "Unknown");
         }
       }
-      if (SB_ACTIVE_AGENT.user_type != "admin") {
+      if (SB_ACTIVE_AGENT["user_type"] != "admin") {
         exclude.push("token");
       }
       for (var key in user.details) {
         if (!exclude.includes(key)) {
-          otherRows += this.profileRow(key, user.get(key));
+          code += this.profileRow(key, user.get(key));
         }
       }
       if (user.isExtraEmpty()) {
-        SBF.ajax({
-          function: "get-user-extra",
-          user_id: user.id,
-        }, (response) => {
-          for (var i = 1; i < response.length; i++) {
-            let slug = response[i].slug;
-            user.setExtra(slug, response[i]);
-            otherRows += this.profileRow(slug, response[i].value, response[i].name);
+        SBF.ajax(
+          {
+            function: "get-user-extra",
+            user_id: user.id,
+          },
+          (response) => {
+            //added ↓
+            for (var i = 1; i < response.length; i++) {
+              let slug = response[i]["slug"];
+              user.setExtra(slug, response[i]);
+              code += this.profileRow(
+                slug,
+                response[i].value,
+                response[i]["name"]
+              );
+            }
+            profile_area.html(`<ul>${code}</ul>`);
+            collapse(profile_area, 56);
           }
-          // Insert phone row before other rows
-          profile_area.html(`<h3 class="sb-user-details-info">${sb_("User information")}</h3><ul>${phoneRow}${otherRows}</ul>`);
-          collapse(profile_area, 56);
-        });
+        );
       } else {
         for (var key in user.extra) {
           let info = user.getExtra(key);
-          if (key === "phone") {
-            phoneRow += this.profileRow(key, info.value, info.name); // Place phone row separately
-          } else {
-            otherRows += this.profileRow(key, info.value, info.name);
-          }
+          code += this.profileRow(key, info.value, info["name"]);
         }
-        // Insert phone row before other rows
-        profile_area.html(`<h3 class="sb-user-details-info">${sb_("User information")}</h3><ul>${phoneRow}${otherRows}</ul>`);
+        profile_area.html(
+          `<h3 class="sb-user-details-info">${sb_(
+            "User information"
+          )}</h3><ul>${code}</ul>`
+        );
         collapse(profile_area, 56);
       }
+
+      // Listen for change_conversation_source
       $("#change-conversation-source").change(function (e) {
+        // Save the selected value before updating options
         const selectedValue = e.target.value;
+
+        // Construct the URL using the selected source code
         const url = `${STMBX_URL}/media/apps/${selectedValue}.svg`;
+
+        // Update the image source with the selected source
         $("#conversation-source-icon").attr("src", url);
-        SBF.ajax({
-          function: "update-conversation-source",
-          conversation_id: SBChat.conversation.id,
-          source: selectedValue,
-        }, (response) => {
-          showResponse("Required reload");
-          $("#change-conversation-source").val(selectedValue);
-          SBConversations.update();
-        });
+
+        // Send an AJAX request to update the conversation source on the server
+        SBF.ajax(
+          {
+            function: "update-conversation-source",
+            conversation_id: SBChat.conversation.id,
+            source: selectedValue, // Use the saved selected value
+          },
+          (response) => {
+            showResponse("Required reload");
+            SBChat.update();
+            // Set the selected value back after updating options
+            $("#change-conversation-source").val(selectedValue);
+          }
+        );
+
+        // Update the source icon directly without reloading
         const iconClass = `sb-icon bi-${selectedValue}`;
-        $('.sb-profile-list [data-id="conversation-source"] i').attr("class", iconClass);
+        $('.sb-profile-list [data-id="conversation-source"] i').attr(
+          "class",
+          iconClass
+        );
       });
+
+      // $("#change-conversation-source").change(function (e) {
+      //     // change icon of source type
+      //     if (e.target.value !== "Unknown") {
+      //         const name = e.target.options[e.target.selectedIndex].text
+      //         const url = `${STMBX_URL}/media/apps/${name.toLowerCase()}.svg`;
+      //         $('.sb-profile-list [data-id="conversation-source"] img').attr("src", url);
+      //     }
+
+      //     SBF.ajax({
+      //         function: 'update-conversation-source',
+      //         conversation_id: SBChat.conversation.id,
+      //         source: e.target.value
+      //     }, (response) => {
+      //         showResponse('Reload to change the conversation source');
+      //     });
+      // });
+
       $("#change-conversation-labels").change(function (e) {
+        // change icon of source type
         if (e.target.value !== "Unknown") {
           const name = e.target.options[e.target.selectedIndex].text;
-          let labcolor = `sb-icon bi-kanban-fill tags-${e.target.value}`;
-          $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
-          $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
+          let labcolor = `sb-icon bi-crosshair tags-${e.target.value}`;
+          $('.sb-profile-list [data-id="conversation-label"] i').attr(
+            "class",
+            labcolor
+          );
+          $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+            "class",
+            labcolor
+          );
           $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
         }
         SBProfile.updateLabel(e.target.value);
       });
+
+      //change label
+      //   $("#CstBtn a").click(function (e) {
+      //     const label = $(this).attr("id");
+      //     const name = sb_(SBF.admin_set("label-names")[label] + " ");
+      //     let labcolor = `sb-icon bi-crosshair tags-${label}`;
+      //     $('.sb-profile-list [data-id="conversation-label"] i').attr(
+      //       "class",
+      //       labcolor
+      //     );
+      //     $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+      //       "class",
+      //       labcolor
+      //     );
+      //     $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
+      //     SBProfile.updateLabel(label);
+      //   });
+      // },
+
+      //     getLabel: function (label) {
+      //       SBF.ajax(
+      //         {
+      //           function: "get-clientStatus-conversations",
+      //           conversation_id: SBChat.conversation.id,
+      //           label: label,
+      //         },
+      //         (response) => {
+      //           if (SBReports.active_report == "status-client") {
+      //             SBReports.initReport("status-client");
+      //           }
+      //         }
+      //       );
+      //     },
+
+      //     updateLabel: function (label) {
+      //       SBF.ajax(
+      //         {
+      //           function: "update-clientStatus-conversations",
+      //           conversation_id: SBChat.conversation.id,
+      //           label: label,
+      //         },
+      //         (response) => {
+      //           if (SBReports.active_report == "status-client") {
+      //             SBReports.initReport("status-client");
+      //           }
+
+      //         }
+      //       );
+      //     },
+
+      // Change label
       $("#CstBtn a").click(function (e) {
         const label = $(this).attr("id");
         const name = sb_(SBF.admin_set("label-names")[label] + " ");
         let labcolor = `sb-icon bi-kanban-fill tags-${label}`;
-        $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
-        $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
+        $('.sb-profile-list [data-id="conversation-label"] i').attr(
+          "class",
+          labcolor
+        );
+        $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr(
+          "class",
+          labcolor
+        );
         $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
         SBProfile.updateLabelUI(label, name, labcolor);
         SBProfile.updateLabel(label);
       });
     },
-    
+    // Update label UI
     updateLabelUI: function (label, name, labcolor) {
+      // Update label name and color in UI
+      $(`[data-user-id="${activeUser().id}"] .bi-crosshair`).attr(
+        "class",
+        labcolor
+      );
       $(`[data-user-id="${activeUser().id}"] #label-name`).text(name);
-      $('.sb-profile-list [data-id="conversation-label"] i').attr("class", labcolor);
-      $(`[data-user-id="${activeUser().id}"] .bi-kanban-fill`).attr("class", labcolor);
     },
+
+    // Get label
     getLabel: function (label) {
-      SBF.ajax({
-        function: "get-clientStatus-conversations",
-        conversation_id: SBChat.conversation.id,
-        label: label,
-      }, (response) => {
-        if (SBReports.active_report == "status-client") {
-          SBReports.initReport("status-client");
+      SBF.ajax(
+        {
+          function: "get-clientStatus-conversations",
+          conversation_id: SBChat.conversation.id,
+          label: label,
+        },
+        (response) => {
+          if (SBReports.active_report == "status-client") {
+            SBReports.initReport("status-client");
+          }
         }
-      });
+      );
     },
+
+    // Update label
     updateLabel: function (label) {
-      SBF.ajax({
-        function: "update-clientStatus-conversations",
-        conversation_id: SBChat.conversation.id,
-        label: label,
-      }, (response) => {
-        if (SBReports.active_report == "status-client") {
-          SBReports.initReport("status-client");
+      SBF.ajax(
+        {
+          function: "update-clientStatus-conversations",
+          conversation_id: SBChat.conversation.id,
+          label: label,
+        },
+        (response) => {
+          if (SBReports.active_report == "status-client") {
+            SBReports.initReport("status-client");
+          }
         }
-      });
+      );
     },
-    profileRow: function (key, value, name = key, hidden = false) {
+
+    profileRow: function (key, value, name = key) {
       if (value == "") return "";
       let icons = {
         id: "person-vcard",
@@ -5336,9 +5410,13 @@ if (conversation_id != -1) {
         current_url: "radar",
         timezone: "clock",
       };
-      let icon = `<i class="sb-icon bi-${key in icons ? icons[key] : "app"}"></i>`;
+
+      //added ↑
+      let icon = `<i class="sb-icon bi-${
+        key in icons ? icons[key] : "app"
+      }"></i>`;
       let lowercase;
-      let image = !1;
+      let image = false;
       switch (key) {
         case "last_activity":
         case "creation_time":
@@ -5370,7 +5448,12 @@ if (conversation_id != -1) {
           lowercase = value.toLowerCase();
           if (lowercase.includes("windows")) {
             image = "windows";
-          } else if (lowercase.includes("mac") || lowercase.includes("apple") || lowercase.includes("ipad") || lowercase.includes("iphone")) {
+          } else if (
+            lowercase.includes("mac") ||
+            lowercase.includes("apple") ||
+            lowercase.includes("ipad") ||
+            lowercase.includes("iphone")
+          ) {
             image = "apple";
           } else if (lowercase.includes("android")) {
             image = "android";
@@ -5383,97 +5466,172 @@ if (conversation_id != -1) {
         case "conversation-source":
         case "browser":
         case "os":
+        case "conversation-source":
           image = value.toLowerCase();
-          value = `<select disabled style="display:none; background: transparent; border-color: transparent;" id="change-conversation-source">
-            <option value="tk" ${value == "Tickets" ? "selected" : ""}>Live Chat</option>
-            <option value="ww" ${value == "Whatsmeow" ? "selected" : ""}>WhatsApp QR</option>
-            <option value="wx" ${value == "waweb" ? "selected" : ""}>WhatsApp Web</option>
-            <option value="wa" ${value == "WhatsApp" ? "selected" : ""}>WhatsApp API</option>
-            <option hidden value="tg" ${value == "Telegram" ? "selected" : ""}>Telegram</option>
-            <option hidden value="bm" ${value == "Google" ? "selected" : ""}>Google</option>
-            <option hidden value="tm" ${value == "Text message" ? "selected" : ""}>Text message</option>
-            <option hidden value="un" ${value == "Unknown" ? "selected" : ""}>Facebook</option>
-            <option hidden value="ig" ${value == "Instagram" ? "selected" : ""}>Instagram</option>
-            <option hidden value="wc" ${value == "WeChat" ? "selected" : ""}>WeChat</option>
-            <option hidden value="em" ${value == "Email" ? "selected" : ""}>Email</option>
-            <option hidden value="tw" ${value == "Twitter" ? "selected" : ""}>Twitter</option>
-          </select>`;
+          value = `<select disabled style="background: transparent;border-color: transparent;" id="change-conversation-source">
+                                <option  value="tk" ${
+                                  value == "Tickets" ? "selected" : ""
+                                } value>Live Chat</option>
+                                <option value="ww" ${
+                                  value == "Whatsmeow" ? "selected" : ""
+                                } value>WhatsApp QR</option>
+                                <option value="wx" ${
+                                  value == "waweb" ? "selected" : ""
+                                } value>WhatsApp Web</option>                                
+                                <option value="wa" ${
+                                  value == "WhatsApp" ? "selected" : ""
+                                } value>WhatsApp API</option>
+                                <option   hidden value="tg" ${
+                                  value == "Telegram" ? "selected" : ""
+                                } value>Telegram</option>
+                                <option  hidden value="bm" ${
+                                  value == "Google" ? "selected" : ""
+                                } value>Google</option>
+                                <option  hidden value="tm" ${
+                                  value == "Text message" ? "selected" : ""
+                                } value>Text message</option>
+                                <option hidden value="un" ${
+                                  value == "Unknown" ? "selected" : ""
+                                } value>Facebook</option>                                
+                                <option hidden value="ig" ${
+                                  value == "Instagram" ? "selected" : ""
+                                } value>Instagram</option>
+                                <option hidden value="wc" ${
+                                  value == "WeChat" ? "selected" : ""
+                                } value>WeChat</option>
+                                <option hidden value="em" ${
+                                  value == "Email" ? "selected" : ""
+                                } value>Email</option>
+                                <option  hidden value="tw" ${
+                                  value == "Twitter" ? "selected" : ""
+                                } value>Twitter</option>
+                             </select>`;
           if (image && value !== "Unknown") {
-            icon = `<img style="visibility:hidden;" src="${STMBX_URL}/media/${key == "conversation-source" ? "apps" : "devices"}/${image}.svg" />`;
+            icon = `<img src="${STMBX_URL}/media/${
+              key == "conversation-source" ? "apps" : "devices"
+            }/${image}.svg" />`;
           }
+          // console.log('ok');
+          // console.log(this);
+
           break;
         case "conversation-label":
           let bgselect = value;
           let labelset = clientStatus;
           let optlist = "";
+
           if (Array.isArray(labelset)) {
             labelset.forEach(function (label) {
-              optlist += `<option value="${label}" ${value === label ? "selected" : ""}>${sb_(SBF.get_value(label) + " ")}</option>`;
+              optlist += `<option value="${label}" ${
+                value === label ? "selected" : ""
+              }>${sb_(SBF.get_value(label) + " ")}</option>`;
             });
           }
           let selectedClass = `class="sb-invisible sb-icon bi-kanban-fill tags-${bgselect}"`;
           value = `<select style="visibility:hidden;background: transparent; border-color: transparent;" id="change-conversation-labels">
-            <option value='unknown'>${sb_("Client status")}</option> ${optlist} </select>`;
+            <option value='unknown'>${sb_(
+              "Client status"
+            )}</option> ${optlist} </select>`;
           icon = `<i ${selectedClass}></i>`;
-          break;
       }
-      let visibility = hidden ? 'style="visibility: hidden;"' : '';
-      return `<li data-id="${key}">${icon}<span ${visibility}>${sb_(SBF.slugToString(name))}</span><label style="overflow-wrap: break-word">${value}</label></li>`;
+      return `<li data-id="${key}">${icon}<span>${sb_(
+        SBF.slugToString(name)
+      )}</span><label style="overflow-wrap: break-word">${value}</label></li>`;
     },
+
+    // Populate profile edit box
     populateEdit: function (user, profile_edit_area) {
       profile_edit_area.find(".sb-details .sb-input").each((i, element) => {
         this.set(element, user.details[$(element).attr("id")]);
       });
-      profile_edit_area.find(".sb-additional-details .sb-input").each((i, element) => {
-        let key = $(element).attr("id");
-        if (key in user.extra) {
-          this.set(element, user.extra[key].value);
-        } else {
-          this.set(element, "");
-        }
-      });
+      profile_edit_area
+        .find(".sb-additional-details .sb-input")
+        .each((i, element) => {
+          let key = $(element).attr("id");
+          if (key in user.extra) {
+            this.set(element, user.extra[key].value);
+          } else {
+            this.set(element, "");
+          }
+        });
     },
+
+    // Clear the profile edit area
     clear: function (profile_edit_area) {
       SBForm.clear(profile_edit_area);
     },
+
+    // Check for errors on user input
     errors: function (profile_edit_area) {
       return SBForm.errors(profile_edit_area.find(".sb-details"));
     },
+
+    // Display a error message
     showErrorMessage: function (profile_edit_area, message) {
       SBForm.showErrorMessage(profile_edit_area, message);
     },
+
+    // Agents data area
     agentData: function () {
-      let code = `<div class="sb-title">${sb_("Feedback rating")}</div><div class="sb-rating-area sb-loading"></div>`;
+      let code = `<div class="sb-title">${sb_(
+        "Feedback rating"
+      )}</div><div class="sb-rating-area sb-loading"></div>`;
       let area = profile_box.find(".sb-agent-area");
       area.html(code);
-      SBF.ajax({
-        function: "get-rating",
-      }, (response) => {
-        if (response[0] == 0 && response[1] == 0) {
-          code = `<p class="sb-no-results">${sb_("No ratings yet.")}</p>`;
-        } else {
-          let total = response[0] + response[1];
-          let positive = (response[0] * 100) / total;
-          let negative = (response[1] * 100) / total;
-          code = `<div><div>${sb_("Helpful")}</div><span data-count="${response[0]}" style="width: ${Math.round(positive * 2)}px"></span><div>${positive.toFixed(2)} %</div></div>
-          <div><div>${sb_("Not helpful")}</div><span data-count="${response[1]}" style="width: ${Math.round(negative * 2)}px"></span><div>${negative.toFixed(2)} %</div></div>
-          <p class="sb-rating-count">${total} ${sb_("Ratings")}</p>`;
+      SBF.ajax(
+        {
+          function: "get-rating",
+        },
+        (response) => {
+          if (response[0] == 0 && response[1] == 0) {
+            code = `<p class="sb-no-results">${sb_("No ratings yet.")}</p>`;
+          } else {
+            let total = response[0] + response[1];
+            let positive = (response[0] * 100) / total;
+            let negative = (response[1] * 100) / total;
+            code = `<div><div>${sb_("Helpful")}</div><span data-count="${
+              response[0]
+            }" style="width: ${Math.round(
+              positive * 2
+            )}px"></span><div>${positive.toFixed(
+              2
+            )} %</div></div><div><div>${sb_(
+              "Not helpful"
+            )}</div><span data-count="${
+              response[1]
+            }" style="width: ${Math.round(
+              negative * 2
+            )}px"></span><div>${negative.toFixed(
+              2
+            )} %</div></div><p class="sb-rating-count">${total} ${sb_(
+              "Ratings"
+            )}</p>`;
+          }
+          area.find(".sb-rating-area").html(code).sbLoading(false);
         }
-        area.find(".sb-rating-area").html(code).sbLoading(!1);
-      });
+      );
     },
-    boxClasses: function (box, user_type = !1) {
-      $(box).removeClass("sb-type-admin sb-type-agent sb-type-lead sb-type-user sb-type-visitor")
-        .addClass(`${user_type != false ? `sb-type-${user_type}` : ""} sb-agent-${SB_ACTIVE_AGENT["user_type"]}`);
+
+    boxClasses: function (box, user_type = false) {
+      $(box)
+        .removeClass(
+          "sb-type-admin sb-type-agent sb-type-lead sb-type-user sb-type-visitor"
+        )
+        .addClass(
+          `${user_type != false ? `sb-type-${user_type}` : ""} sb-agent-${
+            SB_ACTIVE_AGENT["user_type"]
+          }`
+        );
     },
+
     updateRequiredFields: function (user_type) {
       let agent = SBF.isAgent(user_type);
       profile_edit_box.find("#password input").prop("required", agent);
-      profile_edit_box.find("#email input").prop(agent || user_type == "user" || user_type == "lead");
+      profile_edit_box
+        .find("#email input")
+        .prop(agent || user_type == "user" || user_type == "lead");
     },
   };
-
-  
 
   /*
    * ----------------------------------------------------------
@@ -7011,14 +7169,14 @@ if (conversation_id != -1) {
           // Logic specific to routin-top-tip element
           user_id = $(this).attr("data-user-id");
         }
-    
+
         if (activeUser().id != user_id) {
           activeUser(users[user_id]);
         }
         SBProfile.show(activeUser().id);
       }
     );
-    
+
     // custom to display location wa, tg, ww
     $(admin).on("click", '.sb-profile-list [data-id="location"]', function () {
       let location = $(this).find("label").html().replace(", ", "+");
@@ -7688,7 +7846,7 @@ if (conversation_id != -1) {
       profile_edit_box
         .find(".sb-top-bar .sb-save")
         .html(`<i class="bi-check-lg"></i>${sb_("Add user")}`);
-      profile_edit_box.find("input,select,textara").removeClass("sb-error");
+      profile_edit_box.find("input,select,textarea").removeClass("sb-error"); //textara or textarea
       // profile_edit_box.removeClass("sb-cloud-admin");
       if (SB_ACTIVE_AGENT["user_type"] == "admin") {
         profile_edit_box
@@ -8557,17 +8715,12 @@ if (conversation_id != -1) {
 
     // 	return false;
     // });
-    
-
 
     // WHATSAPP CONNECTION
-    $.getScript("/js/min/wa.js", function() {
+    $.getScript("/js/min/wa.js", function () {
       console.log("wa.js loaded and executed.");
     });
 
-
-
-    
     $(document).ready(function () {
       $(document).on("click", "#get-templates-api .sb-btn", function (event) {
         event.preventDefault();
@@ -8743,38 +8896,37 @@ if (conversation_id != -1) {
       });
     });
 
-   
-/*
+    /*
      * ----------------------------------------------------------
      * Recording MP3 for chat
      * ----------------------------------------------------------
      */
-  //   document.addEventListener("DOMContentLoaded", () => {
-  //     const recButton = document.getElementById("recordButton");
-  //     const stopButton = document.getElementById("stopButton");
-  //     const sending = document.querySelector(".bi-arrow-up-circle-fill");
-  //     const micIcon = document.querySelector(".bi-mic-fill");
-  
-  //     sending.addEventListener("click", () => {
-  //         recButton.style.visibility = "visible";
-  //         sending.style.visibility = "hidden";
-  //         micIcon.style.visibility = "visible";
-  //     });
-  
-  //     recButton.addEventListener("click", () => {
-  //         micIcon.style.visibility = "hidden";
-  //         setTimeout(() => {
-  //             sending.style.visibility = "visible";
-  //         }, 500);
-  //     });
-  
-  //     stopButton.addEventListener("click", () => {
-  //         micIcon.style.visibility = "visible";
-  //         setTimeout(() => {
-  //             sending.style.visibility = "visible";
-  //         }, 500);
-  //     });
-  // });
+    //   document.addEventListener("DOMContentLoaded", () => {
+    //     const recButton = document.getElementById("recordButton");
+    //     const stopButton = document.getElementById("stopButton");
+    //     const sending = document.querySelector(".bi-arrow-up-circle-fill");
+    //     const micIcon = document.querySelector(".bi-mic-fill");
+
+    //     sending.addEventListener("click", () => {
+    //         recButton.style.visibility = "visible";
+    //         sending.style.visibility = "hidden";
+    //         micIcon.style.visibility = "visible";
+    //     });
+
+    //     recButton.addEventListener("click", () => {
+    //         micIcon.style.visibility = "hidden";
+    //         setTimeout(() => {
+    //             sending.style.visibility = "visible";
+    //         }, 500);
+    //     });
+
+    //     stopButton.addEventListener("click", () => {
+    //         micIcon.style.visibility = "visible";
+    //         setTimeout(() => {
+    //             sending.style.visibility = "visible";
+    //         }, 500);
+    //     });
+    // });
 
     /*
      * ----------------------------------------------------------
