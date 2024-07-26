@@ -3213,7 +3213,7 @@ a.sb-btn {
   height: 2.3rem;
   vertical-align: bottom;
   border-radius: 50%;
-  box-shadow: var(--box-shadow-bubble-chat);
+  // box-shadow: var(--box-shadow-bubble-chat);
 
   &:active {
     scale: .95;
@@ -5072,23 +5072,49 @@ div {
   }
 }
 
+
+.roadmap-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+.roadmap-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #007bff;
+}
+.roadmap-item::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
 .api-cloud-notif {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  border-radius: var(--chat-rounded-size-7);
-  transition: var(--transition);
-  background-color: var(--pink-root-color-pastel);
-  padding: 10px 15px;
-  display: block;
-  visibility: visible;
-  font-size: .8em;
-  bottom: 70px;
-  width: 92.8%;
-  z-index: 99;
-  overflow: scroll;
-  height: fit-content;
-  box-shadow: var(--box-shadow);
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: var(--chat-rounded-size-7);
+    transition: var(--transition);
+    background-color: unset;
+    padding: 0px;
+    display: block;
+    visibility: visible;
+    font-size: .8em;
+    bottom: 0;
+    width: 280px;
+    z-index: 99;
+    overflow: scroll;
+    height: fit-content;
+    box-shadow: none;
   color: var(--chat-text-bubble-info);
 
   &:active,
@@ -5125,3 +5151,4 @@ div {
   padding-left: 0px;
   font-size: var(--chat-text-size-9);
 }
+

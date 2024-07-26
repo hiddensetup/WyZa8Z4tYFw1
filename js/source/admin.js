@@ -9911,36 +9911,29 @@ window.onclick = function (t) {
  *	Chat with Support
  * ----------------------------------------------------------
  */
+ document.addEventListener("DOMContentLoaded", function () {
+  const helpCenter = document.querySelector(".help-center");
+  const customerSupportFrame = document.getElementById("customer-support");
 
-//  document.addEventListener("DOMContentLoaded", function () {
-//   const helpCenter = document.querySelector(".help-center");
-//   const customerSupportFrame = document.getElementById("customer-support");
+  helpCenter.addEventListener("click", function () {
+    if (customerSupportFrame) {
+      // Fetch the content from data.php
+      fetch('data.php')
+        .then(response => response.text())
+        .then(data => {
+          const iframeDoc = customerSupportFrame.contentDocument;
+          iframeDoc.open();
+          iframeDoc.write(data);
+          iframeDoc.close();
 
-//   helpCenter.addEventListener("click", function () {
-//     // Verificamos que el iframe exista
-//     if (customerSupportFrame) {
-//       // Actualizamos el contenido del iframe con el estado de la conexión
-//       const iframeContent = `
-//         <html>
-//           <head>
-//             <title>Estado de la conexión</title>
-//           </head>
-//           <body>
-//             <h1>Estado de la conexión</h1>
-//             <p>¡Aquí va el estado de la conexión!</p>
-//             <!-- Puedes agregar más contenido dinámico aquí -->
-//           </body>
-//         </html>
-//       `;
-//       const iframeDoc = customerSupportFrame.contentDocument;
-//       iframeDoc.open();
-//       iframeDoc.write(iframeContent);
-//       iframeDoc.close();
-
-//       // Mostramos el iframe
-//       customerSupportFrame.style.display = "block";
-//     } else {
-//       console.error("No se encontró el elemento iframe con el id 'customer-support'");
-//     }
-//   });
-// });
+          // Show the iframe
+          customerSupportFrame.style.display = "block";
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    } else {
+      console.error("No se encontró el elemento iframe con el id 'customer-support'");
+    }
+  });
+});

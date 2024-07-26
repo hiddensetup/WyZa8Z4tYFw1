@@ -1120,7 +1120,7 @@ function sb_component_admin()
                                     </p>
                                     <ul style="min-width: 8rem;max-height: none;">
                                         <li data-value="0" class="sb-active">
-                                            <i class="bi bi-clock-history"></i>&nbsp; <?php sb_e('Inbox') ?>
+                                            <i class="bi bi-arrow-clockwise"></i>&nbsp; <?php sb_e('Inbox') ?>
                                             <span></span>
                                         </li>
                                         <hr>
@@ -1227,12 +1227,7 @@ function sb_component_admin()
                             </div>
                             <div class="sb-list"></div>
                             <div class=" api-cloud-notif" id="floatingText">
-                                <p><i class="bi-info-circle-fill"></i>
-                                    Estás usando la API de WhatsApp Business Cloud de Meta. <strong>Tienes 1000 conversaciones gratuitas. </strong> Las conversaciones que inicie un cliente duran 24 horas. Si quieres seguir hablando después de 24 horas, debes enviar una plantilla; de lo contrario, el mensaje no llegará. Si el cliente te escribe después de 24 horas, obtienes otras 24 horas para chatear con él. <strong>Puedes presionar el
-                                        <i class="bi bi-plus-square-dotted"></i> y <i class="bi bi-wind"></i> para enviar una plantilla.</strong>
-                                    <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> Más información</a>.
-                                </p>
-                            </div>
+                            <p><i class="bi-info-circle-fill"></i> Esta conversación dura 24 horas. Pasado el tiempo <i class="bi bi-plus-square-dotted"></i> <i class="bi bi-wind"></i> envía una plantilla HSM <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> ¿Por qué pasa esto? </a>.</p>                            </div>
 
                             <?php sb_component_editor(true); ?>
                             <div class="sb-no-conversation-message">
@@ -1778,12 +1773,12 @@ function sb_conversations_filter()
     // Generar el botón de filtro y la lista de departamentos
     $code = '<div class="sb-filter-btn"><i class="bi-filter"></i><div><div class="sb-select' . ($count ? '' : ' sb-hide') . '">';
     $code .= '<p><i class="bi-building"></i> &nbsp;' . sb_('All departments') . '</p><ul style="min-width: 8rem;max-height: none;">';
-    $code .= '<li data-value=""><i class="bi-clock-history"></i> &nbsp;' . sb_('All departments') . '</li><hr>';
+    $code .= '<li data-value=""><i class="bi-arrow-clockwise"></i> &nbsp;' . sb_('All departments') . '</li><hr>';
 
     // Añadir cada departamento a la lista
     for ($i = 0; $i < $count; $i++) {
         $code .= '<li data-value="' . $departments[$i]['department-id'] . '">';
-        $code .= '<i class="bi bi-diagram-3-fill"></i> &nbsp; ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
+        $code .= '<i class="bi bi-inbox-fill"></i> &nbsp; ' . ucfirst(sb_($departments[$i]['department-name'])) . '</li>';
     }
     $code .= '</ul></div>';
 
@@ -1804,7 +1799,7 @@ function sb_conversations_filter()
 
     // Generar la lista de canales de comunicación
     $code .= '<div class="sb-select"><p><i class="bi-collection"></i><span> &nbsp; ' . sb_('All channels') . '</span></p><ul style="min-width: 8rem;max-height: none;">';
-    $code .= '<li data-value=""><i class="bi bi-clock-history"></i> &nbsp;' . sb_('All channels') . '</li><hr>';
+    $code .= '<li data-value=""><i class="bi bi-arrow-clockwise"></i> &nbsp;' . sb_('All channels') . '</li><hr>';
 
     // Añadir cada canal a la lista
     for ($i = 0; $i < count($sources); $i++) {
