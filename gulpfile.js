@@ -27,7 +27,7 @@ const paths = {
 };
 
 // Task to minify JavaScript files and move to the specified destination
-function minifyJS() {
+function js() {
   return gulp
     .src(paths.src)
     .pipe(uglify())
@@ -57,5 +57,8 @@ function compileAndMoveSCSSL() {
     .pipe(gulp.dest('css/'));
 }
 
-// Define a default task that runs the compileAndMoveIcons, compileAndMoveSCSSL, and minifyJS tasks in parallel
-exports.default = gulp.parallel(compileAndMoveIcons, compileAndMoveSCSSL, minifyJS);
+// Define a default task that runs the compileAndMoveIcons and compileAndMoveSCSSL tasks in parallel
+exports.default = gulp.parallel(compileAndMoveIcons, compileAndMoveSCSSL);
+
+// Define a task for minifying JavaScript files that can be run manually
+exports.js = js;
