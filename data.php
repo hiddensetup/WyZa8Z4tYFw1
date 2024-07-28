@@ -8,9 +8,10 @@ $apiUrl = "https://api.github.com/repos/$owner/$repo/commits?per_page=5";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Commits Roadmap with Cache Clearing</title>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+    <title>Changelog</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -55,9 +56,8 @@ $apiUrl = "https://api.github.com/repos/$owner/$repo/commits?per_page=5";
         }
         .notification-card.latest {
             background-color: #e5deff;
-    border-color: #472db3;
-    color: #472db3;
-
+            border-color: #472db3;
+            color: #472db3;
         }
         .notification-content {
             flex-grow: 1;
@@ -75,6 +75,16 @@ $apiUrl = "https://api.github.com/repos/$owner/$repo/commits?per_page=5";
             color: #472db3;
             margin-top: 5px;
         }
+        .red-circle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
@@ -84,6 +94,7 @@ $apiUrl = "https://api.github.com/repos/$owner/$repo/commits?per_page=5";
             <!-- Commit notifications will be inserted here -->
         </div>
     </div>
+    <div id="newCommitIndicator" class="red-circle" style="display: none;"></div>
 
     <script>
         const apiUrl = '<?php echo $apiUrl; ?>';
@@ -94,29 +105,40 @@ $apiUrl = "https://api.github.com/repos/$owner/$repo/commits?per_page=5";
                 .then(data => {
                     const roadmap = document.getElementById('commitRoadmap');
                     roadmap.innerHTML = ''; // Clear existing content
+                    let newCommit = false;
+                    const fiveHoursAgo = new Date(Date.now() - 5 * 60 * 60 * 1000);
+
                     data.forEach((commit, index) => {
-                        const date = new Date(commit.commit.author.date).toLocaleDateString();
+                        const date = new Date(commit.commit.author.date);
                         const sha = commit.sha.substring(0, 7);
                         const description = commit.commit.message;
+
+                        if (date > fiveHoursAgo) {
+                            newCommit = true;
+                        }
 
                         const item = document.createElement('div');
                         item.className = 'notification-card' + (index === 0 ? ' latest' : '');
                         item.innerHTML = `
                             <div class="notification-content">
                                 <p><strong>▶︎ ${description}</strong></p>
-                                <p>Date: ${date}</p>
-                                <p>SHA: ${sha}</p>
-                                ${index === 0 ? '<p class="notification-footer">Click to clear cache and avoid visual issues.</p>' : ''}
+                                <p>Updated: ${date.toLocaleDateString()}</p>
+                                <p>Version: ${sha}</p>
+                                ${index === 0 ? '<p class="notification-footer">Click para limpiar cache</p>' : ''}
                             </div>
                         `;
                         item.addEventListener('click', clearCacheAndReload);
 
                         roadmap.appendChild(item);
                     });
+
+                    if (newCommit) {
+                        document.getElementById('newCommitIndicator').style.display = 'block';
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    document.getElementById('commitRoadmap').innerHTML = '<p class="text-danger">Error fetching commits. Please check the console for details.</p>';
+                    document.getElementById('commitRoadmap').innerHTML = '<p class="text-danger">Error</p>';
                 });
         }
 
