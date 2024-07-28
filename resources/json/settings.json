@@ -41,7 +41,7 @@
     {
       "type": "multi-input",
       "id": "welcome-message",
-      "title": "Routin'",
+      "title": "Routin Bot",
       "content": "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.",
       "help": "https://linktr.ee/routinbot",
       "value": [
