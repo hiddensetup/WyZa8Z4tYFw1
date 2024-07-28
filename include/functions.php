@@ -9495,27 +9495,58 @@ function sb_component_editor($admin = false)
 
         </div>
         <script>
-        document.addEventListener('DOMContentLoaded',()=>{const agentNameToggle=document.getElementById('agentNameToggle');const savedState=localStorage.getItem('agentNameToggle')==='true';agentNameToggle.checked=savedState;agentNameToggle.addEventListener('change',()=>{localStorage.setItem('agentNameToggle',agentNameToggle.checked);});});document.addEventListener("DOMContentLoaded",function(){var toggleButton=document.querySelector(".to-make-invisible-sb-text-area");var recordButton=document.querySelector("#stopButton");var textAreaDiv=document.querySelector(".sb-textarea");var emojiGrinDiv=document.querySelector(".bi-emoji-grin");function toggleVisibility(){if(textAreaDiv.classList.contains("sb-invisible")){textAreaDiv.classList.remove("sb-invisible");emojiGrinDiv.classList.remove("sb-invisible");textAreaDiv.style.visibility="visible";emojiGrinDiv.style.visibility="visible";}else{textAreaDiv.classList.add("sb-invisible");emojiGrinDiv.classList.add("sb-invisible");setTimeout(function(){textAreaDiv.style.visibility="hidden";emojiGrinDiv.style.visibility="hidden";},500);} }toggleButton.addEventListener("click",toggleVisibility);recordButton.addEventListener("click",toggleVisibility);});
+            document.addEventListener('DOMContentLoaded', () => {
+                const agentNameToggle = document.getElementById('agentNameToggle');
+                const savedState = localStorage.getItem('agentNameToggle') === 'true';
+                agentNameToggle.checked = savedState;
+                agentNameToggle.addEventListener('change', () => {
+                    localStorage.setItem('agentNameToggle', agentNameToggle.checked);
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function() {
+                var toggleButton = document.querySelector(".to-make-invisible-sb-text-area");
+                var recordButton = document.querySelector("#stopButton");
+                var textAreaDiv = document.querySelector(".sb-textarea");
+                var emojiGrinDiv = document.querySelector(".bi-emoji-grin");
+
+                function toggleVisibility() {
+                    if (textAreaDiv.classList.contains("sb-invisible")) {
+                        textAreaDiv.classList.remove("sb-invisible");
+                        emojiGrinDiv.classList.remove("sb-invisible");
+                        textAreaDiv.style.visibility = "visible";
+                        emojiGrinDiv.style.visibility = "visible";
+                    } else {
+                        textAreaDiv.classList.add("sb-invisible");
+                        emojiGrinDiv.classList.add("sb-invisible");
+                        setTimeout(function() {
+                            textAreaDiv.style.visibility = "hidden";
+                            emojiGrinDiv.style.visibility = "hidden";
+                        }, 500);
+                    }
+                }
+                toggleButton.addEventListener("click", toggleVisibility);
+                recordButton.addEventListener("click", toggleVisibility);
+            });
         </script>
 
 
-<div class="sb-show-menu-bar flex-align-center-relative">
-    <div class="menu-plus bi-plus-lg"></div>
-    <div style="min-height: 35px;" class="sb-textarea">
-        <?php
-        $source = "wa";  
-        $disabled = ($source !== "wa") ? "visibility: hidden;" : "";  
-        ?>
-        <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
-    </div>
-    <div class="sb-bar sb-space-between">
-        <div class="bi-emoji-grin"></div>
-        <div id="recordButton" class="bi-mic-fill to-make-invisible-sb-text-area"></div>
-        <div id="stopButton" disabled class="bi-record-fill"></div>
-        <div class="bi-arrow-up-circle-fill sb-submit"></div>
-        <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
-    </div>
-</div>
+        <div class="sb-show-menu-bar flex-align-center-relative">
+            <div class="menu-plus bi-plus-lg"></div>
+            <div style="min-height: 35px;" class="sb-textarea">
+                <?php
+                $source = "wa";
+                $disabled = ($source !== "wa") ? "visibility: hidden;" : "";
+                ?>
+                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
+            </div>
+            <div class="sb-bar sb-space-between">
+                <div class="bi-emoji-grin"></div>
+                <div id="recordButton" class="bi-mic-fill to-make-invisible-sb-text-area"></div>
+                <div id="stopButton" disabled class="bi-record-fill"></div>
+                <div class="bi-arrow-up-circle-fill sb-submit"></div>
+                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+            </div>
+        </div>
 
         <?php if ($admin) { ?>
             <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
@@ -9673,122 +9704,207 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 
 
 
-
-
-
-
-
-
 function sb_count_fallback_messages($conversation_id)
 {
-    return sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true))['count'];
+    $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true);
+    return sb_db_get($query)['count'];
 }
 
-function sb_option_assign_reply($option, $conversation_id)
+function sb_get_assigned_department($conversation_id)
 {
-    $opt = "option";
-    $wel = "welcome";
-    $reply = [];
+    $query = 'SELECT department FROM sb_conversations WHERE id = ' . sb_db_escape($conversation_id, true);
+    return sb_db_get($query)['department'];
+}
 
-    // Convert the input option to lowercase
-    $option = strtolower($option);
+function sb_send_fallback_message($conversation_id)
+{
+    $message = sb_get_multi_setting("welcome-message", "fallback-msg");
+    $message_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["fallback_message" => true])["id"];
+    return [
+        "id" => $message_id,
+        "message" => $message,
+    ];
+}
 
-    // Get the JSON flow data and decode it
+function sb_assigned_fallback($conversation_id)
+{
+    $assigned_department = sb_get_assigned_department($conversation_id);
+    if (!empty($assigned_department)) {
+        return false; // Conversation is assigned, no fallback message needed
+    }
+
+    $fallback_count = sb_count_fallback_messages($conversation_id);
+    if ($fallback_count < 2) {
+        return sb_send_fallback_message($conversation_id);
+    }
+
+    return false;
+}
+
+function sb_get_flow_data()
+{
     $jsonFlow = sb_get_multi_setting("welcome-message", "json-flow");
-    $flowData = json_decode($jsonFlow, true);
+    return json_decode($jsonFlow, true);
+}
 
-    if (json_last_error() === JSON_ERROR_NONE && isset($flowData['main_flow'])) {
-        foreach ($flowData['main_flow'] as $flow) {
-            foreach ($flow as $response) {
-                // Check if the provided option matches any of the keywords in the JSON flow
-                if (isset($response['keywords']) && is_array($response['keywords'])) {
-                    foreach ($response['keywords'] as $keyword) {
-                        if ($option === strtolower($keyword)) {
-                            $reply["option"] = $keyword;
-                            // Handle replies as an array
-                            $bot_replies = isset($response['bot_reply']) ? $response['bot_reply'] : [];
-                            $reply["reply"] = is_array($bot_replies) ? $bot_replies : [$bot_replies]; // Ensure $reply["reply"] is always an array
-                            $reply["assign"] = isset($response['assign']) ? $response['assign'] : '';
-                            break 3; // Exit all loops once a match is found
-                        }
+function sb_find_reply_by_option($option, $flowData)
+{
+    foreach ($flowData['main_flow'] as $flow) {
+        foreach ($flow as $response) {
+            if (isset($response['keywords']) && is_array($response['keywords'])) {
+                foreach ($response['keywords'] as $keyword) {
+                    if ($option === strtolower($keyword)) {
+                        return [
+                            "option" => $keyword,
+                            "reply" => isset($response['bot_reply']) ? (array)$response['bot_reply'] : [],
+                            "actions" => isset($response['actions']) ? $response['actions'] : [],
+                        ];
                     }
                 }
             }
         }
     }
+    return [];
+}
 
-    // Check if the assigned option reply was sent recently
-    if (sb_db_get('SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' . $opt . '_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true))["count"] == 0) {
+
+function sb_option_process_reply($option, $conversation_id)
+{
+    $option = strtolower($option);
+    $flowData = sb_get_flow_data();
+    $reply = sb_find_reply_by_option($option, $flowData);
+
+    $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE "{\"option_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true);
+    if (sb_db_get($query)["count"] == 0) {
         if (!empty($reply)) {
-            if (!empty($reply["assign"]) && filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
-                $api_response = sb_fetch_api_response($reply["assign"]);
-                if ($api_response) {
-                    $bot_replies = is_array($api_response) ? $api_response : [$api_response];
-                } else {
-                    $bot_replies = ["No se pudo obtener la respuesta del servidor."];
-                }
+            $response_ids = sb_send_bot_replies($reply["reply"], $conversation_id);
+            if (isset($reply["actions"]) && !empty($reply["actions"])) {
+                sb_process_actions($reply["actions"], $conversation_id);
             } else {
-                $bot_replies = $reply["reply"];
+                sb_handle_missing_actions($conversation_id);
             }
-
-            $response_ids = [];
-            foreach ($bot_replies as $bot_reply) {
-                // Ensure $bot_reply is an array if it isn't already
-                $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
-                $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
-
-                if (!empty($reply["assign"]) && !filter_var($reply["assign"], FILTER_VALIDATE_URL)) {
-                    sb_update_conversation_department($conversation_id, $reply["assign"], false);
-                    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["option_assigned" => $reply["option"]])["id"];
-                    sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
-                    $response_ids[] = $response_id;
-                } else {
-                    sb_db_query('UPDATE sb_messages SET payload = "" WHERE payload LIKE "{\"' . $wel . '_option%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true));
-                    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
-                    sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
-                    $response_ids[] = $response_id;
-                }
-
-                // Apply delay between messages
-                if ($delay > 0) {
-                    usleep($delay * 1000); // Convert milliseconds to microseconds
-                }
-            }
-
             return [
                 "ids" => $response_ids,
-                "messages" => $bot_replies,
+                "messages" => $reply["reply"],
             ];
         } else {
-            // Verificar el número de veces que se ha enviado el mensaje de fallback
-            $fallback_count = sb_count_fallback_messages($conversation_id);
-
-            if ($fallback_count < 3) {
-                // Si no se ha enviado 3 veces, enviar el mensaje de fallback
-                $message = sb_get_multi_setting("welcome-message", "fallback-msg");
-                return [
-                    "id" => sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["fallback_message" => true])["id"],
-                    "message" => $message,
-                ];
-            } else {
-                // Si ya se ha enviado 3 veces, no enviar nada
-                return false;
-            }
+            return sb_assigned_fallback($conversation_id);
         }
     }
 
     return false;
 }
 
+
+
+function sb_send_bot_replies($bot_replies, $conversation_id)
+{
+    $response_ids = [];
+    foreach ($bot_replies as $bot_reply) {
+        $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
+        $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
+
+        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
+        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+        $response_ids[] = $response_id;
+
+        if ($delay > 0) {
+            usleep($delay * 1000);
+        }
+    }
+    return $response_ids;
+}
+function sb_process_actions($actions, $conversation_id)
+{
+    $fallback_sent = false; // Flag to track if fallback has been sent
+
+    foreach ($actions as $action) {
+        // Handle 'assign' action
+        if (isset($action["assign"]) && !empty($action["assign"])) {
+            sb_update_conversation_department($conversation_id, $action["assign"], false);
+        }
+
+        // Handle 'move' action
+        if (isset($action["move"]) && !empty($action["move"])) {
+            sb_move_conversation_flow($action, $conversation_id);
+        } else {
+            // Skip sending fallback message if 'move' action is missing
+            if (!$fallback_sent) {
+                sb_handle_missing_move_action($conversation_id);
+                $fallback_sent = true; // Set flag to indicate fallback has been sent
+            }
+        }
+
+        // Handle 'api_call' action
+        if (isset($action["api_call"]) && !empty($action["api_call"])) {
+            sb_handle_api_call($action["api_call"], $conversation_id);
+        }
+    }
+}
+
+function sb_handle_missing_actions($conversation_id)
+{
+    // Define the fallback logic if 'actions' array is missing
+    $fallback_message = "";
+    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
+    sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
+}
+function sb_handle_missing_move_action($conversation_id)
+{
+    // Define the fallback logic if 'move' action is missing
+    $fallback_message = "";
+    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
+    sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
+}
+
+// Example of sb_move_conversation_flow with a check for 'move'
+function sb_move_conversation_flow($action, $conversation_id)
+{
+    if (isset($action["move"]) && !empty($action["move"])) {
+        $move_flow = $action["move"];
+        if (isset($action["bot_reply"]) && is_array($action["bot_reply"])) {
+            $move_reply = $action["bot_reply"];
+            $move_message = is_array($move_reply) ? $move_reply['message'] : $move_reply;
+            $move_delay = isset($move_reply['delay']) ? (int)$move_reply['delay'] : 0;
+
+            $move_response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $move_message)["id"];
+            sb_messaging_platforms_send_message($move_message, $conversation_id, $move_response_id);
+
+            if ($move_delay > 0) {
+                usleep($move_delay * 1000);
+            }
+        }
+        sb_update_conversation_flow($conversation_id, $move_flow);
+    }
+}
+
+function sb_handle_api_call($url, $conversation_id)
+{
+    $api_response = sb_fetch_api_response($url);
+    if ($api_response !== false) {
+        $message = "Bot\n" . $api_response["message"];
+        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
+        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+    } else {
+        $message = "Bot\n No se pudo obtener la información solicitada.";
+        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
+        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+    }
+}
+
+function sb_update_conversation_flow($conversation_id, $new_flow)
+{
+    $query = 'UPDATE sb_conversations SET current_flow = ' . sb_db_escape($new_flow, true) . ' WHERE id = ' . sb_db_escape($conversation_id, true);
+    sb_db_query($query);
+}
+
 function sb_fetch_api_response($url)
 {
-    // Fetch response from the API endpoint
     $response = file_get_contents($url);
-    if ($response === FALSE) {
+    if ($response === false) {
         return false;
     }
 
-    // Parse response (assuming JSON for simplicity, adjust if necessary)
     $data = json_decode($response, true);
     if (json_last_error() !== JSON_ERROR_NONE) {
         return false;
@@ -9797,15 +9913,16 @@ function sb_fetch_api_response($url)
     return $data;
 }
 
-
-
 function sb_get_user_detail($conversation_id)
 {
-    return $conversation = sb_db_get(
-        "SELECT user_id, agent_id, source FROM sb_conversations WHERE id = " .
-            sb_db_escape($conversation_id, true)
-    );
+    $query = "SELECT user_id, agent_id, source FROM sb_conversations WHERE id = " . sb_db_escape($conversation_id, true);
+    return sb_db_get($query);
 }
+
+
+
+
+
 
 function sb_messaging_platforms_functions(
     $conversation_id,
@@ -9983,7 +10100,7 @@ function sb_messaging_platforms_functions(
                         "message" => $message,
                     ];
                 } else {
-                    $bot_message = sb_option_assign_reply(
+                    $bot_message = sb_option_process_reply(
                         $message,
                         $conversation_id
                     );
@@ -11780,4 +11897,3 @@ function steambox_pusher()
 
 
 ?>
-

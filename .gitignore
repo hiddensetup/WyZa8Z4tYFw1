@@ -30,3 +30,5 @@ apps/waweb/api.txt
 apps/waweb/api.txt
 /composer.lock
 tools
+/include/output.txt
+/apps/waweb/output.txt

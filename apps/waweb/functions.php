@@ -7,16 +7,14 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
 
     $to = trim(str_replace('+', '', $to));
 
-   
-        // Retrieve and process the blacklist
-        $blacklist_waweb_string = sb_get_setting('blacklist_waweb');
-        $blacklist_waweb = array_map('trim', explode(',', $blacklist_waweb_string)); 
-        
+    // Retrieve and process the blacklist
+    $blacklist_waweb_string = sb_get_setting('blacklist_waweb');
+    $blacklist_waweb = array_map('trim', explode(',', $blacklist_waweb_string)); 
 
-        // Check if sender's phone is blacklist
-        if (in_array($to, $blacklist_waweb)) {
-            die(); 
-        }
+    // Check if sender's phone is blacklist
+    if (in_array($to, $blacklist_waweb)) {
+        die(); 
+    }
 
     $user = sb_get_user_by('phone', $to);
     $response = false;
@@ -30,8 +28,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
         return new SBError('security-error', 'sb_waweb_send_message');
     }
 
-
-    // Send the message
+    // Process message
     if (is_string($message)) {
         $message = sb_merge_fields($message, [$user]);
         $message = sb_waweb_rich_messages($message, ['user_id' => $user['id']]);
@@ -44,10 +41,10 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
     $supported_mime_types = ['jpg', 'webp', 'jpeg', 'png', 'gif', 'pdf', 'mp3', 'ogg', 'amr', 'mp4', 'mpeg'];
     foreach ($attachments as $attachment) {
         $extension = strtolower(sb_isset(pathinfo($attachment[1]), 'extension'));
-        if (in_array($extension, $supported_mime_types)) {
-            // handle attachment
-        } else {
+        if (!in_array($extension, $supported_mime_types)) {
             $attachment_info = "Attachment: " . $attachment[1] . " (" . $extension . ")";
+            // Log the attachment info
+            // file_put_contents('output.txt', "Unsupported Attachment - " . $attachment_info . PHP_EOL, FILE_APPEND);
             // send a text message with the attachment info
         }
     }
@@ -66,14 +63,20 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
 
         if ($attachments_count) {
             $query['media'] = str_replace(' ', '%20', $attachments[0][1]);
+            // Log the request details
+            file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
             $response = sb_curl($url, json_encode($query), $header);
         } else {
+            // Log the request details
+            file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
             $response = sb_curl($url, json_encode($query), $header);
         }
         if ($attachments_count > 1) {
             for ($i = 1; $i < $attachments_count; $i++) {
                 $query = ["receiver" => $to];
                 $query['media'] = str_replace(' ', '%20', $attachments[$i][1]);
+                // Log the request details
+                file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
                 $response = sb_curl($url, json_encode($query), $header);
             }
         }
@@ -81,11 +84,12 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
     } else {
         if ($message) {
             $query = ['messaging_product' => 'waweb', 'recipient_type' => 'individual', 'to' => $to];
+            // Log the request details
+            file_put_contents('output.txt', "No Proxy - Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
         }
         return $response;
     }
 }
-
 
 function sb_waweb_rich_messages($message, $extra = false)
 {
