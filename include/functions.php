@@ -9669,6 +9669,7 @@ function sb_on_close()
     sb_set_agent_active_conversation(0);
 }
 
+// ---- Bot Message Handling Functions ----
 
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
 {
@@ -9700,22 +9701,6 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
     ];
 }
 
-
-
-
-
-function sb_count_fallback_messages($conversation_id)
-{
-    $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true);
-    return sb_db_get($query)['count'];
-}
-
-function sb_get_assigned_department($conversation_id)
-{
-    $query = 'SELECT department FROM sb_conversations WHERE id = ' . sb_db_escape($conversation_id, true);
-    return sb_db_get($query)['department'];
-}
-
 function sb_send_fallback_message($conversation_id)
 {
     $message = sb_get_multi_setting("welcome-message", "fallback-msg");
@@ -9730,7 +9715,7 @@ function sb_assigned_fallback($conversation_id)
 {
     $assigned_department = sb_get_assigned_department($conversation_id);
     if (!empty($assigned_department)) {
-        return false; // Conversation is assigned, no fallback message needed
+        return false;
     }
 
     $fallback_count = sb_count_fallback_messages($conversation_id);
@@ -9740,6 +9725,26 @@ function sb_assigned_fallback($conversation_id)
 
     return false;
 }
+
+function sb_send_bot_replies($bot_replies, $conversation_id)
+{
+    $response_ids = [];
+    foreach ($bot_replies as $bot_reply) {
+        $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
+        $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
+
+        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
+        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+        $response_ids[] = $response_id;
+
+        if ($delay > 0) {
+            usleep($delay * 1000);
+        }
+    }
+    return $response_ids;
+}
+
+// ---- Flow Data and Reply Functions ----
 
 function sb_get_flow_data()
 {
@@ -9767,12 +9772,18 @@ function sb_find_reply_by_option($option, $flowData)
     return [];
 }
 
-
 function sb_option_process_reply($option, $conversation_id)
 {
     $option = strtolower($option);
     $flowData = sb_get_flow_data();
     $reply = sb_find_reply_by_option($option, $flowData);
+
+    // Check if the conversation is assigned
+    $assigned_department = sb_get_assigned_department($conversation_id);
+    if (!empty($assigned_department)) {
+        // If assigned, skip processing further options
+        return false;
+    }
 
     $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE "{\"option_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true);
     if (sb_db_get($query)["count"] == 0) {
@@ -9796,46 +9807,26 @@ function sb_option_process_reply($option, $conversation_id)
 }
 
 
+// ---- Actions and Flow Handling Functions ----
 
-function sb_send_bot_replies($bot_replies, $conversation_id)
-{
-    $response_ids = [];
-    foreach ($bot_replies as $bot_reply) {
-        $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
-        $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
-
-        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
-        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
-        $response_ids[] = $response_id;
-
-        if ($delay > 0) {
-            usleep($delay * 1000);
-        }
-    }
-    return $response_ids;
-}
 function sb_process_actions($actions, $conversation_id)
 {
-    $fallback_sent = false; // Flag to track if fallback has been sent
+    $fallback_sent = false;
 
     foreach ($actions as $action) {
-        // Handle 'assign' action
         if (isset($action["assign"]) && !empty($action["assign"])) {
             sb_update_conversation_department($conversation_id, $action["assign"], false);
         }
 
-        // Handle 'move' action
         if (isset($action["move"]) && !empty($action["move"])) {
             sb_move_conversation_flow($action, $conversation_id);
         } else {
-            // Skip sending fallback message if 'move' action is missing
             if (!$fallback_sent) {
                 sb_handle_missing_move_action($conversation_id);
-                $fallback_sent = true; // Set flag to indicate fallback has been sent
+                $fallback_sent = true;
             }
         }
 
-        // Handle 'api_call' action
         if (isset($action["api_call"]) && !empty($action["api_call"])) {
             sb_handle_api_call($action["api_call"], $conversation_id);
         }
@@ -9844,20 +9835,18 @@ function sb_process_actions($actions, $conversation_id)
 
 function sb_handle_missing_actions($conversation_id)
 {
-    // Define the fallback logic if 'actions' array is missing
-    $fallback_message = "";
-    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
-    sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
-}
-function sb_handle_missing_move_action($conversation_id)
-{
-    // Define the fallback logic if 'move' action is missing
     $fallback_message = "";
     $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
     sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
 }
 
-// Example of sb_move_conversation_flow with a check for 'move'
+function sb_handle_missing_move_action($conversation_id)
+{
+    $fallback_message = "";
+    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
+    sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
+}
+
 function sb_move_conversation_flow($action, $conversation_id)
 {
     if (isset($action["move"]) && !empty($action["move"])) {
@@ -9890,6 +9879,20 @@ function sb_handle_api_call($url, $conversation_id)
         $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
         sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
     }
+}
+
+// ---- Database and Utility Functions ----
+
+function sb_count_fallback_messages($conversation_id)
+{
+    $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true);
+    return sb_db_get($query)['count'];
+}
+
+function sb_get_assigned_department($conversation_id)
+{
+    $query = 'SELECT department FROM sb_conversations WHERE id = ' . sb_db_escape($conversation_id, true);
+    return sb_db_get($query)['department'];
 }
 
 function sb_update_conversation_flow($conversation_id, $new_flow)
