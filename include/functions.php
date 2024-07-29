@@ -6851,21 +6851,19 @@ function sb_get_block_setting($value)
                     "image" => $settings["popup-image"],
                 ]
                 : $default;
-        case "welcome":
+         case "welcome":
             $settings = sb_get_setting("welcome-message");
-            return $settings
-                ? [
-                    "active" => sb_isset($settings, "welcome-active"),
-                    "message" => sb_rich_value(
-                        $settings["welcome-msg"],
-                        true,
-                        true,
-                        true
-                    ),
-                    "open" => $settings["welcome-open"],
-                    "sound" => $settings["welcome-sound"],
-                ]
-                : $default;
+            $flowData = sb_get_flow_data();
+            $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) 
+                ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] 
+                : "Default welcome message";
+            
+            return [
+                "active" => sb_isset($settings, "welcome-active"),
+                "message" => sb_rich_value($welcomeMessage, true, true, true),
+                "open" => $settings["welcome-open"],
+                "sound" => $settings["welcome-sound"],
+            ];
         case "follow":
             $settings = sb_get_setting("follow-message");
             return $settings
@@ -9681,28 +9679,7 @@ function sb_on_close()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ---- Bot Message Handling Functions ----
-
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
 {
     $valid = false;
@@ -9714,6 +9691,12 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
             $settings = sb_get_setting("chat-timetable");
             $valid = $settings["chat-timetable-active"] && (!sb_office_hours() || (!$settings["chat-timetable-agents"] && !sb_agents_online()));
             $message = $valid ? sb_get_multi_setting("chat-timetable", "chat-timetable-msg") : "";
+            break;
+        case "welcome":
+            $flowData = sb_get_flow_data();
+            $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
+            $message = $welcomeMessage;
+            $valid = true;
             break;
         default:
             return false;
@@ -9731,7 +9714,11 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
         "id" => $message_id,
     ];
 }
-
+function sb_get_flow_data()
+{
+    $jsonFlow = sb_get_multi_setting("welcome-message", "json-flow");
+    return json_decode($jsonFlow, true);
+}
 function sb_send_fallback_message($conversation_id)
 {
     $flowData = sb_get_flow_data();
@@ -9743,62 +9730,18 @@ function sb_send_fallback_message($conversation_id)
     ];
 }
 
-function sb_assigned_fallback($conversation_id)
+function sb_find_reply_by_option($option, $flowData)
 {
-    $assigned_department = sb_get_assigned_department($conversation_id);
-    if (!empty($assigned_department)) {
-        return false;
-    }
-
-    $fallback_count = sb_count_fallback_messages($conversation_id);
-    if ($fallback_count < 3) {
-        return sb_send_fallback_message($conversation_id);
-    }
-
-    return false;
-}
-
-function sb_send_bot_replies($bot_replies, $conversation_id)
-{
-    $response_ids = [];
-    foreach ($bot_replies as $bot_reply) {
-        $message = is_array($bot_reply) ? $bot_reply['message'] : $bot_reply;
-        $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
-
-        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
-        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
-        $response_ids[] = $response_id;
-
-        if ($delay > 0) {
-            usleep($delay * 1000);
-        }
-    }
-    return $response_ids;
-}
-
-// ---- Flow Data and Reply Functions ----
-
-function sb_get_flow_data()
-{
-    $jsonFlow = sb_get_multi_setting("welcome-message", "json-flow");
-    return json_decode($jsonFlow, true);
-}
-
-function sb_find_reply_by_option($option, $flowData, $flowType = 'main_flow')
-{
-    if (!isset($flowData[$flowType])) {
-        return [];
-    }
-
-    foreach ($flowData[$flowType] as $flow) {
-        foreach ($flow as $response) {
-            if (isset($response['keywords']) && is_array($response['keywords'])) {
-                foreach ($response['keywords'] as $keyword) {
+    foreach ($flowData['main_flow'] as $flow_name => $flows) {
+        foreach ($flows as $flow) {
+            if (isset($flow['keywords']) && is_array($flow['keywords'])) {
+                foreach ($flow['keywords'] as $keyword) {
                     if ($option === strtolower($keyword)) {
                         return [
                             "option" => $keyword,
-                            "reply" => isset($response['bot_reply']) ? (array)$response['bot_reply'] : [],
-                            "actions" => isset($response['actions']) ? $response['actions'] : [],
+                            "reply" => isset($flow['bot_reply']) ? $flow['bot_reply'] : [],
+                            "actions" => isset($flow['actions']) ? $flow['actions'] : [],
+                            "next_flow" => isset($flow['next_flow']) ? $flow['next_flow'] : null,
                         ];
                     }
                 }
@@ -9808,13 +9751,13 @@ function sb_find_reply_by_option($option, $flowData, $flowType = 'main_flow')
     return [];
 }
 
-function sb_option_process_reply($option, $conversation_id, $flowType = 'main_flow')
+function sb_option_process_reply($option, $conversation_id)
 {
     $option = strtolower($option);
     $flowData = sb_get_flow_data();
-    $reply = sb_find_reply_by_option($option, $flowData, $flowType);
+    $reply = sb_find_reply_by_option($option, $flowData);
 
-    if ($option === '/quit') {
+    if ($option === 'quit') {
         return sb_handle_quit_trigger($conversation_id);
     }
 
@@ -9830,10 +9773,10 @@ function sb_option_process_reply($option, $conversation_id, $flowType = 'main_fl
 
             if (isset($reply["actions"]) && !empty($reply["actions"])) {
                 sb_process_actions($reply["actions"], $conversation_id);
-            } else {
-                if (empty($reply["reply"]) && $flowType === 'main_flow') {
-                    return sb_handle_quit_trigger($conversation_id);
-                }
+            }
+
+            if ($reply["next_flow"]) {
+                sb_update_conversation_flow($conversation_id, $reply["next_flow"]);
             }
 
             return [
@@ -9848,7 +9791,23 @@ function sb_option_process_reply($option, $conversation_id, $flowType = 'main_fl
     return false;
 }
 
-// ---- Actions and Flow Handling Functions ----
+function sb_send_bot_replies($bot_replies, $conversation_id)
+{
+    $response_ids = [];
+    foreach ($bot_replies as $bot_reply) {
+        $message = $bot_reply['message'];
+        $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
+
+        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
+        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
+        $response_ids[] = $response_id;
+
+        if ($delay > 0) {
+            usleep($delay * 1000); // Convert milliseconds to microseconds
+        }
+    }
+    return $response_ids;
+}
 
 function sb_process_actions($actions, $conversation_id)
 {
@@ -9869,7 +9828,7 @@ function sb_move_conversation_flow($action, $conversation_id)
         $move_flow = $action["move"];
         if (isset($action["bot_reply"]) && is_array($action["bot_reply"])) {
             $move_reply = $action["bot_reply"];
-            $move_message = is_array($move_reply) ? $move_reply['message'] : $move_reply;
+            $move_message = $move_reply['message'];
             $move_delay = isset($move_reply['delay']) ? (int)$move_reply['delay'] : 0;
 
             $move_response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $move_message)["id"];
@@ -9914,7 +9873,6 @@ function sb_get_user_detail($conversation_id)
 
     return $result;
 }
-
 function sb_handle_quit_trigger($conversation_id)
 {
     file_put_contents('file.txt', "Entering sb_handle_quit_trigger with conversation_id: " . $conversation_id . PHP_EOL, FILE_APPEND);
@@ -9928,34 +9886,13 @@ function sb_handle_quit_trigger($conversation_id)
     $query = 'UPDATE sb_conversations SET status_code = 4 WHERE id = ' . sb_db_escape($conversation_id, true);
     sb_db_query($query);
 
-    $welcome_msg = sb_get_multi_setting("welcome-message", "welcome-msg");
+    $flowData = sb_get_flow_data();
+    $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
 
     return [
-        "message" => $welcome_msg,
+        "message" => $welcomeMessage,
     ];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -10112,7 +10049,8 @@ function sb_messaging_platforms_functions(
                     $last_message
                 )
                 : false;
-            //auto reply
+
+            // Handle welcome message
             if (
                 empty($user["department"]) &&
                 empty($conversation["agent_id"]) &&
@@ -10134,20 +10072,18 @@ function sb_messaging_platforms_functions(
                             sb_db_escape($conversation_id, true)
                     )["count"] == 0
                 ) {
-                    $message = sb_get_multi_setting(
-                        "welcome-message",
-                        "welcome-msg"
-                    );
+                    $flowData = sb_get_flow_data();
+                    $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
                     $bot_message = [
                         "id" => sb_send_message(
                             sb_get_bot_id(),
                             $conversation_id,
-                            $message,
+                            $welcomeMessage,
                             [],
                             -1,
                             ["welcome_option" => true]
                         )["id"],
-                        "message" => $message,
+                        "message" => $welcomeMessage,
                     ];
                 } else {
                     $bot_message = sb_option_process_reply(
@@ -10169,6 +10105,7 @@ function sb_messaging_platforms_functions(
 
     return $human_takeover ? "human_takeover" : true;
 }
+
 
 function sb_messaging_platforms_send_message(
     $message,

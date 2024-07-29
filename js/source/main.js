@@ -3455,7 +3455,7 @@ if (message || attachments.length || payload) {
             .find(".sb-title")
             .html(`${sb_("Hello")} ${activeUser().nameBeautified}!`);
         }
-        // this.welcome();
+        this.welcome();
         // this.subscribe();
         if (!SBPusher.active) {
           setInterval(() => {
@@ -3546,7 +3546,7 @@ if (message || attachments.length || payload) {
         main.sbActive(true);
         $("body").addClass("sb-chat-open");
         if (CHAT_SETTINGS["welcome-trigger"] == "open") {
-          // this.welcome();
+          this.welcome();
         }
         this.calculateLabelDates();
       }
