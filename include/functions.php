@@ -9701,12 +9701,6 @@ function sb_on_close()
 
 
 
-
-
-
-
-
-
 // ---- Bot Message Handling Functions ----
 
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
@@ -9820,6 +9814,10 @@ function sb_option_process_reply($option, $conversation_id, $flowType = 'main_fl
     $flowData = sb_get_flow_data();
     $reply = sb_find_reply_by_option($option, $flowData, $flowType);
 
+    if ($option === '/quit') {
+        return sb_handle_quit_trigger($conversation_id);
+    }
+
     $assigned_department = sb_get_assigned_department($conversation_id);
     if (!empty($assigned_department)) {
         return false;
@@ -9829,11 +9827,15 @@ function sb_option_process_reply($option, $conversation_id, $flowType = 'main_fl
     if (sb_db_get($query)["count"] == 0) {
         if (!empty($reply)) {
             $response_ids = sb_send_bot_replies($reply["reply"], $conversation_id);
+
             if (isset($reply["actions"]) && !empty($reply["actions"])) {
                 sb_process_actions($reply["actions"], $conversation_id);
             } else {
-                sb_handle_missing_actions($conversation_id);
+                if (empty($reply["reply"]) && $flowType === 'main_flow') {
+                    return sb_handle_quit_trigger($conversation_id);
+                }
             }
+
             return [
                 "ids" => $response_ids,
                 "messages" => $reply["reply"],
@@ -9850,8 +9852,6 @@ function sb_option_process_reply($option, $conversation_id, $flowType = 'main_fl
 
 function sb_process_actions($actions, $conversation_id)
 {
-    $fallback_sent = false;
-
     foreach ($actions as $action) {
         if (isset($action["assign"]) && !empty($action["assign"])) {
             sb_update_conversation_department($conversation_id, $action["assign"], false);
@@ -9859,23 +9859,8 @@ function sb_process_actions($actions, $conversation_id)
 
         if (isset($action["move"]) && !empty($action["move"])) {
             sb_move_conversation_flow($action, $conversation_id);
-        } else {
-            if (!$fallback_sent) {
-                sb_handle_missing_move_action($conversation_id);
-                $fallback_sent = true;
-            }
         }
     }
-}
-
-function sb_handle_missing_actions($conversation_id)
-{
-    return sb_send_fallback_message($conversation_id);
-}
-
-function sb_handle_missing_move_action($conversation_id)
-{
-    return sb_send_fallback_message($conversation_id);
 }
 
 function sb_move_conversation_flow($action, $conversation_id)
@@ -9903,13 +9888,17 @@ function sb_move_conversation_flow($action, $conversation_id)
 function sb_count_fallback_messages($conversation_id)
 {
     $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE \'%"fallback_message"%\' AND conversation_id = ' . sb_db_escape($conversation_id, true);
-    return sb_db_get($query)['count'];
+    $result = sb_db_get($query)['count'];
+
+    return $result;
 }
 
 function sb_get_assigned_department($conversation_id)
 {
     $query = 'SELECT department FROM sb_conversations WHERE id = ' . sb_db_escape($conversation_id, true);
-    return sb_db_get($query)['department'];
+    $result = sb_db_get($query)['department'];
+
+    return $result;
 }
 
 function sb_update_conversation_flow($conversation_id, $new_flow)
@@ -9918,27 +9907,33 @@ function sb_update_conversation_flow($conversation_id, $new_flow)
     sb_db_query($query);
 }
 
-function sb_get_current_flow($conversation_id)
-{
-    $query = 'SELECT current_flow FROM sb_conversations WHERE id = ' . sb_db_escape($conversation_id, true);
-    return sb_db_get($query)['current_flow'];
-}
-
 function sb_get_user_detail($conversation_id)
 {
     $query = "SELECT user_id, agent_id, source FROM sb_conversations WHERE id = " . sb_db_escape($conversation_id, true);
-    return sb_db_get($query);
+    $result = sb_db_get($query);
+
+    return $result;
 }
 
+function sb_handle_quit_trigger($conversation_id)
+{
+    file_put_contents('file.txt', "Entering sb_handle_quit_trigger with conversation_id: " . $conversation_id . PHP_EOL, FILE_APPEND);
 
+    $query = 'UPDATE sb_conversations SET agent_id = NULL WHERE id = ' . sb_db_escape($conversation_id, true);
+    sb_db_query($query);
 
+    $query = 'UPDATE sb_conversations SET department = NULL WHERE id = ' . sb_db_escape($conversation_id, true);
+    sb_db_query($query);
 
+    $query = 'UPDATE sb_conversations SET status_code = 4 WHERE id = ' . sb_db_escape($conversation_id, true);
+    sb_db_query($query);
 
+    $welcome_msg = sb_get_multi_setting("welcome-message", "welcome-msg");
 
-
-
-
-
+    return [
+        "message" => $welcome_msg,
+    ];
+}
 
 
 
