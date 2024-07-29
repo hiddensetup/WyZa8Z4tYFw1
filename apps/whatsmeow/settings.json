@@ -2,7 +2,7 @@
   {
     "type": "multi-input",
     "id": "whatsmeow-go",
-    "title": "WhatsApp QR <small style=\"color:var(--color-green);\">(2)</small>",
+    "title": "WhatsApp <small style=\"color:var(--color-green);\">(2)</small>",
     "content": "Link your WhatsApp account to Routin Cloud using your phone number. This connection is secure and free of extra charge. You can also use our external API at https://routin.cloud",
     "help": "https://routin.cloud/",
     "value": [
@@ -31,7 +31,7 @@
   {
     "type": "textarea",
     "id": "blacklist_whatsmeow",
-    "title": "Blacklist WhatsApp QR",
+    "title": "Blacklist WhatsApp",
     "content": "Block unwanted messages by entering phone numbers. This feature only blocks messages within our platform, not on WhatsApp or other messaging apps"
    
   },

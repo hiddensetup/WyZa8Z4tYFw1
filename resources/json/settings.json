@@ -41,9 +41,6 @@
     {
       "type": "multi-input",
       "id": "welcome-message",
-      "title": "Routin Bot",
-      "content": "Create a custom menu with numbered options for user interactions.<br><br>  When users select a number, they receive a tailored welcome message.<br><br>  If not, a fallback message is displayed.<br><br>  After their choice, an automatic reply is sent, and conversations are directed to relevant departments.",
-      "help": "https://linktr.ee/routinbot",
       "value": [
         {
           "type": "checkbox",
@@ -57,22 +54,36 @@
         },
         {
           "type": "textarea",
-          "id": "welcome-msg",
-          "title": "Welcome message"
-        },
-     
-        {
-          "type": "textarea",
           "id": "json-flow",
           "title": "Main Flow"
         },
         {
           "type": "textarea",
-          "id": "fallback-msg",
-          "title": "Fallback message"
+          "id": "welcome-msg",
+          "title": "Welcome message"
+        },
+        {
+          "type": "checkbox",
+          "id": "welcome-open",
+          "title": "Open chat"
+        },
+        {
+          "type": "checkbox",
+          "id": "welcome-sound",
+          "title": "Sound"
+        },
+        {
+          "type": "select",
+          "id": "welcome-trigger",
+          "title": "Trigger",
+          "value": [
+            [ "load", "On page load" ],
+            [ "open", "On chat open" ]
+          ]
         }
       ]
     },
+    
     {
       "type": "repeater",
       "id": "departments",

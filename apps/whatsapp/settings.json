@@ -3,7 +3,7 @@
   {
     "type": "multi-input",
     "id": "whatsapp-cloud",
-    "title": "Meta Cloud API <small style=\"color:var(--color-green);\">(1)</small> ",
+    "title": "Cloud API <small style=\"color:var(--color-green);\">(1)</small> ",
     "content": "Start using WhatsApp Business API Cloud for free only at Routin Cloud. <br><br>You can send messages, multimedia, alerts, and massive text templates without any charge or surprise fees. <br><br>Routin Cloud Support: starting from $49/month prepaid for 6 months.",
     "help": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#pricing---payment-methods",
     "value": [
@@ -50,7 +50,7 @@
   {
     "type": "textarea",
     "id": "blacklist_api_cloud",
-    "title": "Blacklist API Cloud",
+    "title": "Blacklist Cloud API <small style=\"color:var(--color-green);\">(1)</small>",
     "content": "Block unwanted messages by entering phone numbers. This feature only blocks messages within our platform, not on WhatsApp or other messaging apps"
    
   },

@@ -1,8 +1,8 @@
 [
   {
     "type": "multi-input",
-    "id": "twitter",
-    "title": "<img style='padding: 3px;background: #dae4ea;border-radius: 3px;width: 11px;vertical-align: text-bottom;' src='/media/apps/twitter.svg'> Twitter",
+    "id": "X",
+    "title": "<img style='padding: 3px;background: #dae4ea;border-radius: 3px;width: 11px;vertical-align: text-bottom;' src='/media/apps/twitter.svg'> X",
     "content": "Insert the details of your  Twitter app.",
     "help": "https://linktr.ee/steamboxchat",
     "value": [

@@ -39,14 +39,14 @@ function sb_profile_box()
                         $goproxy = !empty(sb_get_multi_setting('whatsmeow-go', 'whatsmeow-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('ww')">
-                                <?php sb_e('<i class="sb-start-conversation bi-qr-code"></i> WhatsApp QR'); ?>
+                                <?php sb_e('<i class="sb-start-conversation bi-whatsapp"></i> WhatsApp <small style="color:var(--color-green);">(2)</small>'); ?>
                             </li>
                         <?php endif; ?>
                         <?php include SB_PATH . "/apps/" . $sb_apps[2] . "/functions.php";
                         $goproxy = !empty(sb_get_multi_setting('waweb-go', 'waweb-go-active')); ?>
                         <?php if ($goproxy) : ?>
                             <li class="sb-start-qr-conversation" onclick="updateSource('wx')">
-                                <?php sb_e('<i class="sb-start-conversation bi-whatsapp"></i> WhatsApp Web'); ?>
+                                <?php sb_e('<i class="sb-start-conversation bi-whatsapp"></i> WhatsApp <small style="color:var(--color-green);">(3)</small>'); ?>
                             </li>
                         <?php endif; ?>
 
@@ -218,7 +218,7 @@ function sb_profile_edit_box()
                     </div>
 
                     <div id="twitter" data-type="text" name="twitter" class="sb-input">
-                        <span><?php sb_e('Twitter') ?></span>
+                        <span><?php sb_e('X') ?></span>
                         <input type="text" name="twitter" />
                     </div>
 
@@ -678,7 +678,7 @@ function sb_send_template_box()
         <div class="sb-info"></div>
         <div class="sb-top-bar">
             <div>
-                <i data-value="wa" class="bi-whatsapp"></i> <span style="margin-left:5px">WhatsApp API </span>
+                <i data-value="wa" class="bi-whatsapp"></i> <span style="margin-left:5px">Cloud API <small style="color:var(--color-green);">(1)</small> </span>
             </div>
             <div>
                 <a class="sb-close sb-btn-icon">
@@ -1023,12 +1023,12 @@ function sb_component_admin()
     $active_user = sb_get_active_user(false, true);
     $collapse = sb_get_setting('collapse') ? ' sb-collapse' : '';
     $apps = [
-        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> WhatsApp API', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
-        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-qr-code"></i> WhatsApp QR', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
-        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp Web', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WHATSAPP', 'whatsapp', '<i class="bi bi-wind"></i> Cloud API <small style="color:var(--color-green);">(1)</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WHATSMEOW', 'whatsmeow', '<i class="bi bi-whatsapp"></i> WhatsApp <small style="color:var(--color-green);">(2)</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
+        ['SB_WAWEB', 'waweb', '<i class="bi bi-whatsapp"></i> WhatsApp <small style="color:var(--color-green);">(3)</small>', 'Lets your users reach you via WhatsApp. Read and reply to all messages sent to your WhatsApp Business account directly from Routin Cloud.'],
         ['SB_TELEGRAM', 'telegram', '<i class="bi-telegram"></i> Telegram Bot', 'Connect your Telegram bot to Routin Cloud to read and reply to all messages sent to your Telegram bot directly in Routin Cloud.'],
         ['SB_GBM', 'gbm', '<i class="bi-google"></i> Google', 'Read and reply to messages sent from Google Search, Maps and brand-owned channels directly in Routin Cloud.'],
-        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> Twitter', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin Cloud.'],
+        ['SB_TWITTER', 'twitter', '<i class="bi-twitter-x"></i> X', 'Lets your users reach you via Twitter. Read and reply to messages sent to your Twitter account directly from Routin Cloud.'],
         ['SB_MESSENGER', 'messenger', '<i class="bi-messenger"></i> Messenger', 'Read, manage and reply to all messages sent to your Facebook pages and Instagram accounts directly from Routin Cloud.'],
         ['SB_TICKETS', 'tickets', 'Tickets', 'Provide help desk support to your customers by including a ticket area, with all chat features included, on any web page in seconds.'],
     ];
@@ -1785,13 +1785,13 @@ function sb_conversations_filter()
     // Definir los canales de comunicación
     $sources = [
         ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
-        ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-qr-code'], // WhatsApp QR
+        ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-whatsapp'], // WhatsApp QR
         ['wx', 'WhatsApp', 'SB_WAWEB', 'bi-whatsapp'], // WhatsApp Web
         ['tk', 'Live Chat', true, 'bi-chat-dots'], // Live Chat
         ['tg', 'Telegram', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
         ['fb', 'Messenger', 'SB_MESSENGER', 'bi-messenger'], // Messenger
         ['ig', 'Instagram', 'SB_MESSENGER', 'bi-instagram'], // Instagram
-        ['tw', 'Twitter', 'SB_TWITTER', 'bi-twitter'], // Twitter
+        ['tw', 'X', 'SB_TWITTER', 'bi-twitter-x'], // Twitter
         ['bm', 'Google', 'SB_GBM', 'bi-google'], // Google
         ['wc', 'WeChat', false, ''], // WeChat (no icon provided)
         ['tm', 'SMS', false, ''] // SMS (no icon provided)

@@ -2,7 +2,7 @@
   {
     "type": "multi-input",
     "id": "waweb-go",
-    "title": "WhatsApp Web <small style=\"color:var(--color-green);\">(3)</small>",
+    "title": "WhatsApp <small style=\"color:var(--color-green);\">(3)</small>",
     "content": "Link an extra WhatsApp account to Routin Cloud using your phone number. This connection is secure and free of extra charge. You can also use our external API at https://routin.cloud",
     "help": "https://routin.cloud/",
     "value": [
@@ -33,7 +33,7 @@
   {
     "type": "textarea",
     "id": "blacklist_waweb",
-    "title": "Blacklist WhatsApp Web",
+    "title": "Blacklist WhatsApp <small style=\"color:var(--color-green);\">(3)</small>",
     "content": "Block unwanted messages by entering phone numbers. This feature only blocks messages within our platform, not on WhatsApp or other messaging apps"
    
   },

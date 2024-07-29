@@ -5910,12 +5910,12 @@ function sb_get_setting_code($setting)
                 : "") .
             '  class="sb-setting sb-type-' .
             $type .
-            '"><div class="sb-setting-content"><h2 class="settings-button" style="cursor: pointer;">' .
+            '"><div style="width:auto;padding: 10px;" class="sb-setting-content"><h2 class="settings-button" style="cursor: pointer;">' .
             sb_s($setting["title"]) .
             ' </h2><p class="active">' .
             sb_s($setting["content"]) .
             (isset($setting["help"]) ? ' <a href="' . $setting["help"] . '" target="_blank" style=" font-size: var(--chat-text-size-1-0); color: var(--pink-root-color); line-height: 0; " class="bi bi-play-circle"></a>' : "") .
-            '</p></div><div class="active input">';
+            '</p></div><div style="padding-left: 5%" class="active input">';
         switch ($type) {
             case "multi-input":
                 $values = $setting["value"];
@@ -5923,7 +5923,7 @@ function sb_get_setting_code($setting)
                     $sub_type = $values[$i]["type"];
                     $sub_value = $values[$i]["value"];
                     $content .=
-                        '<div id="' .
+                        '<div style="text-align: start;" id="' .
                         $values[$i]["id"] .
                         '" data-type="' .
                         $sub_type .
@@ -6851,19 +6851,21 @@ function sb_get_block_setting($value)
                     "image" => $settings["popup-image"],
                 ]
                 : $default;
-         case "welcome":
+        case "welcome":
             $settings = sb_get_setting("welcome-message");
-            $flowData = sb_get_flow_data();
-            $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) 
-                ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] 
-                : "Default welcome message";
-            
-            return [
-                "active" => sb_isset($settings, "welcome-active"),
-                "message" => sb_rich_value($welcomeMessage, true, true, true),
-                "open" => $settings["welcome-open"],
-                "sound" => $settings["welcome-sound"],
-            ];
+            return $settings
+                ? [
+                    "active" => sb_isset($settings, "welcome-active"),
+                    "message" => sb_rich_value(
+                        $settings["welcome-msg"],
+                        true,
+                        true,
+                        true
+                    ),
+                    "open" => $settings["welcome-open"],
+                    "sound" => $settings["welcome-sound"],
+                ]
+                : $default;
         case "follow":
             $settings = sb_get_setting("follow-message");
             return $settings
