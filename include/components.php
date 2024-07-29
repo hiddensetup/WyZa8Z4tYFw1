@@ -1784,9 +1784,9 @@ function sb_conversations_filter()
 
     // Definir los canales de comunicación
     $sources = [
-        ['wa', 'WhatsApp', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
-        ['ww', 'WhatsApp', 'SB_WHATSMEOW', 'bi-whatsapp'], // WhatsApp QR
-        ['wx', 'WhatsApp', 'SB_WAWEB', 'bi-whatsapp'], // WhatsApp Web
+        ['wa', 'WhatsApp <small style="color:var(--color-green);">(1)</small>', 'SB_WHATSAPP', 'bi-wind'], // WhatsApp
+        ['ww', 'WhatsApp <small style="color:var(--color-green);">(2)</small>', 'SB_WHATSMEOW', 'bi-whatsapp'], // WhatsApp QR
+        ['wx', 'WhatsApp <small style="color:var(--color-green);">(3)</small>', 'SB_WAWEB', 'bi-whatsapp'], // WhatsApp Web
         ['tk', 'Live Chat', true, 'bi-chat-dots'], // Live Chat
         ['tg', 'Telegram', 'SB_TELEGRAM', 'bi-telegram'], // Telegram
         ['fb', 'Messenger', 'SB_MESSENGER', 'bi-messenger'], // Messenger
