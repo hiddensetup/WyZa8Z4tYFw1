@@ -9669,6 +9669,45 @@ function sb_on_close()
     sb_set_agent_active_conversation(0);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ---- Bot Message Handling Functions ----
 
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
@@ -9921,6 +9960,46 @@ function sb_get_user_detail($conversation_id)
     $query = "SELECT user_id, agent_id, source FROM sb_conversations WHERE id = " . sb_db_escape($conversation_id, true);
     return sb_db_get($query);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
