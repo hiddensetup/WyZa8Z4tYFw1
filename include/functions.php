@@ -9707,7 +9707,6 @@ function sb_on_close()
 
 
 
-
 // ---- Bot Message Handling Functions ----
 
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
@@ -9722,7 +9721,6 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
             $valid = $settings["chat-timetable-active"] && (!sb_office_hours() || (!$settings["chat-timetable-agents"] && !sb_agents_online()));
             $message = $valid ? sb_get_multi_setting("chat-timetable", "chat-timetable-msg") : "";
             break;
-
         default:
             return false;
     }
@@ -9742,11 +9740,12 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 
 function sb_send_fallback_message($conversation_id)
 {
-    $message = sb_get_multi_setting("welcome-message", "fallback-msg");
-    $message_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message, [], -1, ["fallback_message" => true])["id"];
+    $flowData = sb_get_flow_data();
+    $fallbackMessage = isset($flowData['fallback'][0]['bot_reply'][0]['message']) ? $flowData['fallback'][0]['bot_reply'][0]['message'] : "Default fallback message";
+    $message_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallbackMessage, [], -1, ["fallback_message" => true])["id"];
     return [
         "id" => $message_id,
-        "message" => $message,
+        "message" => $fallbackMessage,
     ];
 }
 
@@ -9758,7 +9757,7 @@ function sb_assigned_fallback($conversation_id)
     }
 
     $fallback_count = sb_count_fallback_messages($conversation_id);
-    if ($fallback_count < 2) {
+    if ($fallback_count < 3) {
         return sb_send_fallback_message($conversation_id);
     }
 
@@ -9791,9 +9790,13 @@ function sb_get_flow_data()
     return json_decode($jsonFlow, true);
 }
 
-function sb_find_reply_by_option($option, $flowData)
+function sb_find_reply_by_option($option, $flowData, $flowType = 'main_flow')
 {
-    foreach ($flowData['main_flow'] as $flow) {
+    if (!isset($flowData[$flowType])) {
+        return [];
+    }
+
+    foreach ($flowData[$flowType] as $flow) {
         foreach ($flow as $response) {
             if (isset($response['keywords']) && is_array($response['keywords'])) {
                 foreach ($response['keywords'] as $keyword) {
@@ -9811,16 +9814,14 @@ function sb_find_reply_by_option($option, $flowData)
     return [];
 }
 
-function sb_option_process_reply($option, $conversation_id)
+function sb_option_process_reply($option, $conversation_id, $flowType = 'main_flow')
 {
     $option = strtolower($option);
     $flowData = sb_get_flow_data();
-    $reply = sb_find_reply_by_option($option, $flowData);
+    $reply = sb_find_reply_by_option($option, $flowData, $flowType);
 
-    // Check if the conversation is assigned
     $assigned_department = sb_get_assigned_department($conversation_id);
     if (!empty($assigned_department)) {
-        // If assigned, skip processing further options
         return false;
     }
 
@@ -9838,13 +9839,12 @@ function sb_option_process_reply($option, $conversation_id)
                 "messages" => $reply["reply"],
             ];
         } else {
-            return sb_assigned_fallback($conversation_id);
+            return sb_send_fallback_message($conversation_id);
         }
     }
 
     return false;
 }
-
 
 // ---- Actions and Flow Handling Functions ----
 
@@ -9865,25 +9865,17 @@ function sb_process_actions($actions, $conversation_id)
                 $fallback_sent = true;
             }
         }
-
-        if (isset($action["api_call"]) && !empty($action["api_call"])) {
-            sb_handle_api_call($action["api_call"], $conversation_id);
-        }
     }
 }
 
 function sb_handle_missing_actions($conversation_id)
 {
-    $fallback_message = "";
-    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
-    sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
+    return sb_send_fallback_message($conversation_id);
 }
 
 function sb_handle_missing_move_action($conversation_id)
 {
-    $fallback_message = "";
-    $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallback_message)["id"];
-    sb_messaging_platforms_send_message($fallback_message, $conversation_id, $response_id);
+    return sb_send_fallback_message($conversation_id);
 }
 
 function sb_move_conversation_flow($action, $conversation_id)
@@ -9903,20 +9895,6 @@ function sb_move_conversation_flow($action, $conversation_id)
             }
         }
         sb_update_conversation_flow($conversation_id, $move_flow);
-    }
-}
-
-function sb_handle_api_call($url, $conversation_id)
-{
-    $api_response = sb_fetch_api_response($url);
-    if ($api_response !== false) {
-        $message = "Bot\n" . $api_response["message"];
-        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
-        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
-    } else {
-        $message = "Bot\n No se pudo obtener la información solicitada.";
-        $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
-        sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
     }
 }
 
@@ -9940,19 +9918,10 @@ function sb_update_conversation_flow($conversation_id, $new_flow)
     sb_db_query($query);
 }
 
-function sb_fetch_api_response($url)
+function sb_get_current_flow($conversation_id)
 {
-    $response = file_get_contents($url);
-    if ($response === false) {
-        return false;
-    }
-
-    $data = json_decode($response, true);
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        return false;
-    }
-
-    return $data;
+    $query = 'SELECT current_flow FROM sb_conversations WHERE id = ' . sb_db_escape($conversation_id, true);
+    return sb_db_get($query)['current_flow'];
 }
 
 function sb_get_user_detail($conversation_id)
@@ -9960,6 +9929,10 @@ function sb_get_user_detail($conversation_id)
     $query = "SELECT user_id, agent_id, source FROM sb_conversations WHERE id = " . sb_db_escape($conversation_id, true);
     return sb_db_get($query);
 }
+
+
+
+
 
 
 
