@@ -9684,8 +9684,6 @@ function sb_on_close()
 
 
 
-
-// ---- Bot Message Handling Functions ----
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
 {
     $valid = false;
@@ -9699,6 +9697,9 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
             $message = $valid ? sb_get_multi_setting("chat-timetable", "chat-timetable-msg") : "";
             break;
         case "welcome":
+            if (!sb_get_multi_setting("welcome-message", "welcome-active")) {
+                return false; // Skip if welcome-active is not active
+            }
             $flowData = sb_get_flow_data();
             $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
             $message = $welcomeMessage;
@@ -10060,42 +10061,47 @@ function sb_messaging_platforms_functions(
             if (
                 empty($user["department"]) &&
                 empty($conversation["agent_id"]) &&
-                $i == 3 &&
-                sb_get_multi_setting("welcome-message", "welcome-active") &&
-                (!sb_get_multi_setting(
-                    "welcome-message",
-                    "welcome-disable-office-hours"
-                ) ||
-                    sb_office_hours())
+                $i == 3
             ) {
-                if (
-                    sb_db_get(
-                        'SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' .
-                            $bot_messages[$i] .
-                            '_option%" AND creation_time > "' .
-                            gmdate("Y-m-d H:i:s", time() - 864000) .
-                            '" AND conversation_id = ' .
-                            sb_db_escape($conversation_id, true)
-                    )["count"] == 0
+                // Check if welcome-active is enabled
+                if (sb_get_multi_setting("welcome-message", "welcome-active") &&
+                    (!sb_get_multi_setting(
+                        "welcome-message",
+                        "welcome-disable-office-hours"
+                    ) ||
+                        sb_office_hours())
                 ) {
-                    $flowData = sb_get_flow_data();
-                    $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
-                    $bot_message = [
-                        "id" => sb_send_message(
-                            sb_get_bot_id(),
-                            $conversation_id,
-                            $welcomeMessage,
-                            [],
-                            -1,
-                            ["welcome_option" => true]
-                        )["id"],
-                        "message" => $welcomeMessage,
-                    ];
+                    if (
+                        sb_db_get(
+                            'SELECT COUNT(*) AS `count` FROM sb_messages WHERE payload LIKE "{\"' .
+                                $bot_messages[$i] .
+                                '_option%" AND creation_time > "' .
+                                gmdate("Y-m-d H:i:s", time() - 864000) .
+                                '" AND conversation_id = ' .
+                                sb_db_escape($conversation_id, true)
+                        )["count"] == 0
+                    ) {
+                        $flowData = sb_get_flow_data();
+                        $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
+                        $bot_message = [
+                            "id" => sb_send_message(
+                                sb_get_bot_id(),
+                                $conversation_id,
+                                $welcomeMessage,
+                                [],
+                                -1,
+                                ["welcome_option" => true]
+                            )["id"],
+                            "message" => $welcomeMessage,
+                        ];
+                    } else {
+                        $bot_message = sb_option_process_reply(
+                            $message,
+                            $conversation_id
+                        );
+                    }
                 } else {
-                    $bot_message = sb_option_process_reply(
-                        $message,
-                        $conversation_id
-                    );
+                    $bot_message = false; // Skip welcome message if not active
                 }
             }
 
