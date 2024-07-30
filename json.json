@@ -1,0 +1,127 @@
+
+{
+    "main_flow": {
+      "flow_1": [
+        {
+          "keywords": ["planes", "precios"],
+          "bot_reply": [
+            {
+              "message": "Un momento...",
+              "delay": 2000
+            },
+            {
+              "message": "Nuestros planes: https://routin.cloud/pricing",
+              "delay": 3000
+            }
+          ]
+        }
+      ],
+      "flow_2": [
+        {
+          "keywords": ["chatbot", "ai"],
+          "bot_reply": [
+            {
+              "message": "Un momento...",
+              "delay": 2000
+            },
+            {
+              "message": "¿Qué tipo de bot? Simple o Personalizado.",
+              "delay": 1500
+            }
+          ],
+          "actions": [
+            {
+              "assign": ""
+            },
+            {
+              "move": "info_2",
+              "bot_reply": {
+                "message": "¿Qué tipo de bot quieres? \nSimple \nCon AI \nPersonalizado.",
+                "delay": 1500
+              }
+            }
+          ]
+        }
+      ],
+      "info_1": [
+        {
+          "keywords": ["basic"],
+          "bot_reply": [
+            {
+              "message": "Detalles del Plan Basic: [URL]",
+              "delay": 1000
+            }
+          ],
+          "actions": [
+            {
+              "assign": "1"
+            }
+          ]
+        },
+        {
+          "keywords": ["standard"],
+          "bot_reply": [
+            {
+              "message": "Detalles del Plan Standard: [URL]",
+              "delay": 1000
+            }
+          ],
+          "actions": [
+            {
+              "assign": "1"
+            }
+          ]
+        }
+      ],
+      "info_2": [
+        {
+          "keywords": ["simple"],
+          "bot_reply": [
+            {
+              "message": "Info sobre Bot Simple: [URL]",
+              "delay": 1000
+            }
+          ],
+          "actions": [
+            {
+              "assign": "2"
+            }
+          ]
+        },
+        {
+          "keywords": ["personalizado"],
+          "bot_reply": [
+            {
+              "message": "Info sobre Bot Personalizado: [URL]",
+              "delay": 1000
+            }
+          ],
+          "actions": [
+            {
+              "assign": "2"
+            }
+          ]
+        }
+      ]
+    },
+    "welcome_message": [
+      {
+        "bot_reply": [
+          {
+            "message": "Bienvenido! ¿En qué puedo ayudarte hoy?\n presiona *planes* o *chatbot*",
+            "delay": 1000
+          }
+        ]
+      }
+    ],
+    "fallback": [
+      {
+        "bot_reply": [
+          {
+            "message": "No se pudo obtener la info. ¿Podrías intentar de nuevo?",
+            "delay": 1000
+          }
+        ]
+      }
+    ]
+  }

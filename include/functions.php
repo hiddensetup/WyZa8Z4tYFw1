@@ -9700,7 +9700,7 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
             break;
         case "welcome":
             $flowData = sb_get_flow_data();
-            $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
+            $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
             $message = $welcomeMessage;
             $valid = true;
             break;
