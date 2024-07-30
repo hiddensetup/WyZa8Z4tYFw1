@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatbot Flow</h1>
+    <textarea id="modelTextarea">
+    {
+        "main_flow": {
+            "flow_1": [
+                {
+                    "keywords": ["planes", "precios"],
+                    "bot_reply": [
+                        {
+                            "message": "Un momento...",
+                            "delay": 2000
+                        },
+                        {
+                            "message": "Nuestros planes: https://routin.cloud/pricing",
+                            "delay": 3000
+                        }
+                    ]
+                }
+            ],
+            "flow_2": [
+                {
+                    "keywords": ["chatbot", "ai"],
+                    "bot_reply": [
+                        {
+                            "message": "Un momento...",
+                            "delay": 2000
+                        },
+                        {
+                            "message": "¿Qué tipo de bot? Simple o Personalizado.",
+                            "delay": 1500
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "assign": ""
+                        },
+                        {
+                            "move": "info_2",
+                            "bot_reply": {
+                                "message": "¿Qué tipo de bot quieres? \nSimple \nCon AI \nPersonalizado.",
+                                "delay": 1500
+                            }
+                        }
+                    ]
+                }
+            ],
+            "info_1": [
+                {
+                    "keywords": ["basic"],
+                    "bot_reply": [
+                        {
+                            "message": "Detalles del Plan Basic: [URL]",
+                            "delay": 1000
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "assign": "1"
+                        }
+                    ]
+                },
+                {
+                    "keywords": ["standard"],
+                    "bot_reply": [
+                        {
+                            "message": "Detalles del Plan Standard: [URL]",
+                            "delay": 1000
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "assign": "1"
+                        }
+                    ]
+                }
+            ],
+            "info_2": [
+                {
+                    "keywords": ["simple"],
+                    "bot_reply": [
+                        {
+                            "message": "Info sobre Bot Simple: [URL]",
+                            "delay": 1000
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "assign": "2"
+                        }
+                    ]
+                },
+                {
+                    "keywords": ["personalizado"],
+                    "bot_reply": [
+                        {
+                            "message": "Info sobre Bot Personalizado: [URL]",
+                            "delay": 1000
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "assign": "2"
+                        }
+                    ]
+                }
+            ]
+        },
+        "welcome_message": [
+            {
+                "bot_reply": [
+                    {
+                        "message": "Bienvenido! ¿En qué puedo ayudarte hoy?\n presiona *planes* o *chatbot*",
+                        "delay": 1000
+                    }
+                ]
+            }
+        ],
+        "fallback": [
+            {
+                "bot_reply": [
+                    {
+                        "message": "No se pudo obtener la info. ¿Podrías intentar de nuevo?",
+                        "delay": 1000
+                    }
+                ]
+            }
+        ]
+    }
+    </textarea>
+    <button id="loadModelButton">Load Model</button>
+    <div id="chatContainer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loadModelButton').click(function() {
+                const modelTextarea = $('#modelTextarea').val();
+                const model = JSON.parse(modelTextarea);
+                initializeChatbot(model);
+            });
+        });
+
+        function initializeChatbot(model) {
+            const chatContainer = $('#chatContainer');
+            chatContainer.empty(); // Clear any previous chat
+            const welcomeMessage = model.welcome_message[0].bot_reply[0].message;
+            displayMessage(welcomeMessage, model.welcome_message[0].bot_reply[0].delay);
+        }
+
+        function displayMessage(message, delay) {
+            setTimeout(() => {
+                const chatContainer = $('#chatContainer');
+                const messageElement = $('<div>').text(message);
+                chatContainer.append(messageElement);
+            }, delay);
+        }
+
+        // Example function to handle keyword matching and flow navigation
+        function handleUserInput(userInput, model) {
+            const mainFlow = model.main_flow;
+            for (const flow in mainFlow) {
+                for (const step of mainFlow[flow]) {
+                    if (step.keywords.includes(userInput)) {
+                        for (const reply of step.bot_reply) {
+                            displayMessage(reply.message, reply.delay);
+                        }
+                        // Handle actions if any
+                        if (step.actions) {
+                            for (const action of step.actions) {
+                                if (action.move) {
+                                    handleFlowTransition(action.move, model);
+                                }
+                            }
+                        }
+                        return;
+                    }
+                }
+            }
+            // Handle fallback if no match found
+            const fallbackMessage = model.fallback[0].bot_reply[0].message;
+            displayMessage(fallbackMessage, model.fallback[0].bot_reply[0].delay);
+        }
+
+        function handleFlowTransition(flowName, model) {
+            const flow = model.main_flow[flowName];
+            for (const step of flow) {
+                for (const reply of step.bot_reply) {
+                    displayMessage(reply.message, reply.delay);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

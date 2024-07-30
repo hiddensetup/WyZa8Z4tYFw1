@@ -99,7 +99,7 @@ function processMessage(message) {
       var t = this[0];
       (t.style.height = "auto"), (t.style.maxHeight = "25px");
       window.getComputedStyle(t);
-      (t.style.height = (t.scrollHeight > 35 ? 100 : t.scrollHeight) + "px"),
+      (t.style.height = (t.scrollHeight > 35 ? 60 : t.scrollHeight) + "px"),
         (t.style.maxHeight = ""),
         $(t).trigger("textareaChanged");
     },
@@ -5068,7 +5068,13 @@ if (message || attachments.length || payload) {
     // Display the send button
     activateBar: function (show = true) {
       chat_editor.find(".sb-bar").sbActive(show);
+      if (show) {
+        chat_editor.find(".bi-mic-fill").hide();
+      } else {
+        chat_editor.find(".bi-mic-fill").show();
+      }
     },
+
 
     // Shortcut for add user and login function
     addUserAndLogin: function (onSuccess = false, lead = false) {
@@ -6603,7 +6609,6 @@ if (message || attachments.length || payload) {
                   items.eq(i + 1).val() != value))) ||
               (type == "email" &&
                 (value.indexOf("@") < 0 ||
-                  value.indexOf(".") < 0 ||
                   /;|:|\/|\\|,|#|"|!|=|\+|\*|{|}|[|]|£|\$|€|~|'|>|<|\^|&/.test(
                     value
                   ))) ||
@@ -7164,6 +7169,7 @@ if (message || attachments.length || payload) {
     if (main.length && typeof SB_AJAX_URL != ND) {
       chat = main.find(".sb-list");
       chat_editor = main.find(".sb-editor");
+      
       chat_textarea = chat_editor.find("textarea");
       chat_scroll_area = main.find(
         admin || tickets ? ".sb-list" : "> div > .sb-scroll-area"
@@ -7415,6 +7421,7 @@ if (message || attachments.length || payload) {
       SBChat.submit();
     });
 
+    
     // Open the chat
     $("body").on(
       "click",

@@ -9530,23 +9530,26 @@ function sb_component_editor($admin = false)
         </script>
 
 
-        <div class="sb-show-menu-bar flex-align-center-relative">
-            <div class="menu-plus bi-plus-lg"></div>
-            <div style="min-height: 35px;" class="sb-textarea">
-                <?php
-                $source = "wa";
-                $disabled = ($source !== "wa") ? "visibility: hidden;" : "";
-                ?>
-                <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
-            </div>
-            <div class="sb-bar sb-space-between">
-                <div class="bi-emoji-grin"></div>
-                <div id="recordButton" class="bi-mic-fill to-make-invisible-sb-text-area"></div>
-                <div id="stopButton" disabled class="bi-record-fill"></div>
-                <div class="bi-arrow-up-circle-fill sb-submit"></div>
-                <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
-            </div>
+<div class="sb-show-menu-bar flex-align-center-relative">
+        <div class="menu-plus bi-plus-lg"></div>
+        <div style="min-height: 35px;" class="sb-textarea">
+            <?php
+            $source = "wa";
+            $disabled = ($source !== "wa") ? "visibility: hidden;" : "";
+            ?>
+            <textarea placeholder="<?php sb_e("Write a message..."); ?>" autofocus <?php echo $disabled; ?>></textarea>
         </div>
+        <div class="sb-bar sb-space-between">
+            <div id="recordButton" class="bi-mic-fill to-make-invisible-sb-text-area"></div>
+            <div id="stopButton" disabled class="bi-record-fill"></div>
+            <div class="bi-arrow-up-circle-fill sb-submit"></div>
+            <img class="sb-loader" src="<?php echo STMBX_URL; ?>/media/loading.svg" alt="loading..." />
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Initialize the emoji picker
+        new lc_emoji_picker('textarea');
+    </script>
 
         <?php if ($admin) { ?>
             <div id="CstBtn" class="cstdown-content sb-popup sb-status-chat" style="height: auto;">
@@ -9591,6 +9594,7 @@ function sb_component_editor($admin = false)
                     <ul style="margin: 0px auto;" class="sb-loading"></ul>
                 </div>
             </div>
+
             <div class="sb-popup sb-emoji">
                 <div class="sb-header" style="justify-content: space-between;">
                     <div class="sb-select">

@@ -8708,18 +8708,20 @@
       });
     });
 
-    // // Messenger
-    // $(settings_area).on('click', '#messenger-button .sb-btn', () => {
-    // 	alert("Este servicio requiere implementación y aprobación de Facebook. Te llevaremos al chat para que converses con un asesor especializado en el tema");
-    // 	window.open('https://steambox.dev/?service=messenger&plugin_url=' + '');
+    // Messenger
+    $(settings_area).on('click', '#messenger-button .sb-btn', () => {
+    	alert("Este servicio requiere implementación y aprobación de Facebook. Te llevaremos al chat para que converses con un asesor especializado en el tema");
+    	window.open('https://steambox.dev/?service=messenger&plugin_url=' + '');
 
-    // 	return false;
-    // });
+    	return false;
+    });
 
     // WHATSAPP CONNECTION
     const primaryScriptPath = "/js/min/wa.js";
     const fallbackScriptPath = "/js/source/wa.js";
-
+    const primaryEmojiPickerPath = "/js/min/lc_emoji_picker.min.js";
+    const fallbackEmojiPickerPath = "/js/source/lc_emoji_picker.min.js";
+    
     // Function to load the script
     function loadScript(url, successCallback, errorCallback) {
       $.getScript(url)
@@ -8730,7 +8732,7 @@
           errorCallback();
         });
     }
-
+    
     // Attempt to load the primary script
     loadScript(primaryScriptPath, function() {
       console.log("wa.js loaded and executed from /js/min/wa.js.");
@@ -8742,6 +8744,19 @@
         console.error("Failed to load wa.js from both locations.");
       });
     });
+    
+    // Attempt to load the primary emoji picker script
+    loadScript(primaryEmojiPickerPath, function() {
+      console.log("lc_emoji_picker.min.js loaded and executed from /js/min/lc_emoji_picker.min.js.");
+    }, function() {
+      // If the primary emoji picker script fails, try the fallback emoji picker script
+      loadScript(fallbackEmojiPickerPath, function() {
+        console.log("lc_emoji_picker.min.js loaded and executed from /js/source/lc_emoji_picker.min.js.");
+      }, function() {
+        console.error("Failed to load lc_emoji_picker.min.js from both locations.");
+      });
+    });
+    
 
     $(document).ready(function () {
       $(document).on("click", "#get-templates-api .sb-btn", function (event) {

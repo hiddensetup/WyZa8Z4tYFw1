@@ -753,7 +753,17 @@ div.sb-list.sb-hide-fast {
   margin: 0px auto;
   text-align: center;
   z-index: 99;
+  border-radius: var(--chat-rounded-size-7);
   transform: translateY(7%);
+  background: aliceblue;
+  scale: 1;
+  transition: scale 1s ease;
+  box-shadow: var(--box-shadow-bubble-chat);
+
+  &.alert-special:hover {
+    background: aliceblue;
+    scale:1.01
+  }
 }
 
 .closebtn-special {
@@ -1692,8 +1702,8 @@ div ul.sb-menu,
 
   textarea {
     margin: 0 !important;
-    border-radius: .6rem !important;
-    font-size: var(--chat-text-size-9);
+    border-radius: var(--chat-rounded-size-1-2)!important;
+    font-size: var(--chat-text-size-1-0);
     padding: 10px 35px 0 15px;
     letter-spacing: 0.3px;
     width: calc(100% - 30px);
@@ -1720,13 +1730,13 @@ div ul.sb-menu,
     opacity: 1;
     display: none;
     cursor: pointer;
-    font-size: var(--chat-text-size-1-4);
+    font-size: 1.8rem;
     padding: 10px;
     align-self: flex-end;
-    margin: auto 0px;
     transition: var(--transition-2);
     -webkit-transition: var(--transition-2);
     color: var(--chat-text-primary);
+    margin-left: 10px;
 
     &:hover {
       color: var(--chat-btn-background);
@@ -3250,7 +3260,7 @@ a.sb-btn {
 .sb-search-btn,
 .sb-filter-btn {
   position: relative;
-  width: 48px;
+  width: 3px;
   height: 35px;
   bottom: 4px;
 
@@ -3742,10 +3752,11 @@ div ul.sb-menu,
 #recordButton {
   color: var(--chat-text-primary);
   cursor: pointer;
-  font-size: var(--chat-text-size-1-4);
+  font-size: 1.8rem;
   padding: 10px;
   align-self: flex-end;
-  margin: auto 0px;
+  margin-left:10px;
+
   transition: var(--transition-2);
 
 
@@ -3785,10 +3796,10 @@ div ul.sb-menu,
   display: none;
   color: var(--chat-text-primary);
   cursor: pointer;
-  font-size: var(--chat-text-size-1-4);
+  font-size:1.8rem;
   padding: 10px;
   align-self: flex-end;
-  margin: auto 0px;
+  margin-left:10px;
   transition: var(--transition-2);
 
 

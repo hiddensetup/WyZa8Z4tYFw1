@@ -82,10 +82,10 @@
   --chat-app-theme-color: #23c35f;
   --chat-app-background-2: var(--chat-btn-background-active);
   --chat-app-logo-color: var(--chat-text-white-or-black);
-  --chat-background-menu-selected: #eaeff2;
+  --chat-background-menu-selected: #f2f4f6;
   --chat-background-menu: var(--chat-app-background);
   --chat-border-color: rgba(66, 103, 132, 0.26);
-  --chat-list-background-selected: #eaeff2;
+  --chat-list-background-selected: #f2f4f6;
   --chat-scroll-area-background: transparent;
   --chat-toggle-selector: white;
   --chat-background-notification: rgb(27 29 34);
@@ -190,14 +190,16 @@
 [data-theme="light"] {
   --chat-app-theme-color: linear-gradient(332deg, #3503ff, #7c17b8),
     linear-gradient(#25008c, transparent);
-  --chat-conversation-background: white;
+  --chat-conversation-background: #fcfcfd;
   --chat-bottom-bar-color: white;
   --chat-text-theme-background: rgb(26, 29, 34);
   --chat-app-loader-color: white;
-  --chat-bubble-agent: #5220f1;
+  --chat-bubble-agent: #4708ec;
   --chat-text-bubble-agent: #ffffff;
-  --chat-text-url: rgb(17 219 73);
+  --chat-text-url:#6eb9ff;
   --chat-text-theme-button: white;
+  --chat-input-background: rgb(234 239 242);
+
   --steambox-color: rgba(0, 0, 0, 0.737);
   --chat-background-image: url(../media/chatbkg.png);
   --chat-text-theme-background: linear-gradient(332deg, #3503ff, #7c17b8),
@@ -208,25 +210,28 @@
 /* Insta theme #ffc127 */
 [data-theme="routin"] {
   --chat-app-theme-color: linear-gradient(37deg, #ffc500 0%, #ff6b37 25%, #fe2f88 50%, #d812ab 75%, #771c7d 100%);
-  --chat-conversation-background: white;
+  --chat-conversation-background: #fcfcfd;
+  --chat-background-image: #fcfcfd;
   --chat-bottom-bar-color: white;
   --chat-bubble-agent: rgb(9, 8, 10);
   --chat-text-bubble-agent: #ffffff;
   --chat-text-url: #00a3ff;
   --chat-background-image: none;
   --chat-text-theme-button: white;
+  --chat-input-background: rgb(234 239 242);
   --chat-text-theme-background: linear-gradient(37deg, #ffc500 0%, #ff6b37 25%, #fe2f88 50%, #d812ab 75%, #771c7d 100%);
 }
 
 /* steambox theme */
-[data-theme="steambox"] {
+[data-theme="apollo"] {
   --chat-app-theme-color: rgb(26, 29, 34);
-  --chat-conversation-background:#f5f7f8;
+  --chat-conversation-background:#fcfcfd;
   --chat-bottom-bar-color: #f5f7f8;
   --chat-bubble-agent: rgb(26, 29, 34);
   --chat-text-bubble-agent: #ffffff;
-  --chat-text-url: #a88bed;
+  --chat-text-url: #00a3ff;
   --chat-text-theme-button: white;
+  --chat-input-background: rgb(234 239 242);
   --chat-background-image: none;
   --chat-text-theme-background: #ffc127;
   --chat-app-loader-color: white;
@@ -234,7 +239,7 @@
 }
 
 /* Dark theme */
-[data-theme="dark"] {
+[data-theme="steambox"] {
   // --chat-app-background: rgba(16, 16, 37, 0.544);
   --chat-app-background: linear-gradient(48deg,
   rgb(37, 35, 49) -12.9%,
@@ -245,7 +250,7 @@
   --chat-bottom-bar-color: #181335;
   --chat-bubble-agent: var(--chat-app-theme-color);
   --chat-text-bubble-agent: #ffffff;
-  --chat-text-url: #0cc691;
+  --chat-text-url: #00a3ff;
   --chat-background-image: none;
   --chat-lightbox-top: rgb(18 16 23 / 17%);
   --chat-text-primary: rgb(251, 251, 251);
@@ -277,7 +282,7 @@
   --chat-text-tooltip: white;
   --chat-app-tooltip-color: black;
   --chat-tooltip-background: #191821;
-  --chat-bottom-bar-color: #fbfbfb03;
+  --chat-bottom-bar-color: ##fbfcfd03;
   --chat-btn-translucid-color: #ffffffde;
   --chat-input-toggle-color: white;
   --chat-text-bubble-client: rgb(29 33 40);

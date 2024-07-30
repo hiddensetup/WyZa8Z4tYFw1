@@ -270,8 +270,8 @@ function sb_profile_edit_box()
 function displayMessage()
 {
     $jsonString = '{
-        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin Cloud, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button class=\"sb-btn\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
-        "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Routin.bot mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Routin.bot también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
+        "payment": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Pago Requerido! </h2><span style=\"color:var(--chat-text-primary)\">Para seguir disfrutando de Routin Cloud, necesitas realizar un pago. ¡No dejes que la diversión se detenga! Haz clic <button onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">aquí</button> para realizar tu pago ahora mismo.</span><br><br><span style=\"color:var(--chat-text-primary)\">¿Necesitas ayuda? No dudes en contactarnos.</span>",
+        "trial": "<h2 style=\"color:var(--chat-text-primary)\"> ¡Prueba Finalizada! </h2><span style=\"color:var(--chat-text-primary)\">Tu período de prueba ha terminado. ¡Pero no te preocupes! Puedes seguir disfrutando de Routin.bot mientras eliges un plan. Continua ahora por solo $8.5 USD por día. Haz clic en el botón a continuación para continuar tu experiencia.</span><br><br><button class=\"sb-btn\" style=\"background: var(--chat-app-theme-color);width: 75%; margin: 10px auto;border:none;box-shadow:var(--box-shadow-bubble-chat);\" onclick=\"window.location.href=\'' . PAYMENT_LINK . '\'\">Continuar 1 día más</button><br><br><span style=\"color:var(--chat-text-primary)\"><span style=\"color:var(--chat-text-primary)\">¿Sabías que con Routin.bot también puedes generar códigos QR dinámicos y acortar enlaces con tu propio dominio? Accede gratis desde <a style=\"color:var(--chat-text-url);font-size:13px\" href=\"https://qrcode.steamboxchat.com\">qrcode.steamboxchat.com</a></span>",
         "overloaded": "<h2 style=\"color:var(--chat-text-primary)\"><i class=\"bi-info-circle-fill\"></i> ¡Sistema Sobrecargado! </h2><span style=\"color:var(--chat-text-primary)\">Estamos experimentando una alta demanda en nuestros servidores en este momento. Por favor, sé paciente y vuelve a intentarlo más tarde. Agradecemos tu comprensión.</span><br><br><span style=\"color:var(--chat-text-primary)\">Mientras tanto, ¿por qué no exploras otras funciones de Steambox? ¡Hay mucho por descubrir!</span>"
     }
     ';
@@ -755,31 +755,31 @@ function sb_send_template_box()
             let newThemeColor;
 
             switch (currentTheme) {
-                case 'dark':
+                case 'steambox':
                     newTheme = 'light';
                     newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                    htmlTag.classList.remove('steambox');
                     break;
                 case 'light':
                     newTheme = 'app';
                     newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                    htmlTag.classList.remove('steambox');
                     break;
                 case 'app':
                     newTheme = 'routin';
                     newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                    htmlTag.classList.remove('steambox');
                     break;
                 case 'routin':
-                    newTheme = 'steambox';
+                    newTheme = 'apollo';
                     newThemeColor = 'white';
-                    htmlTag.classList.remove('dark');
+                    htmlTag.classList.remove('steambox');
                     break;
-                case 'steambox':
+                case 'apollo':
                 default:
-                    newTheme = 'dark';
+                    newTheme = 'steambox';
                     newThemeColor = '#181620';
-                    htmlTag.classList.add('dark');
+                    htmlTag.classList.add('steambox');
                     break;
             }
 
@@ -801,13 +801,13 @@ function sb_send_template_box()
                 case 'routin':
                     metaThemeColor.content = 'white';
                     break;
-                case 'steambox':
+                case 'apollo':
                     metaThemeColor.content = 'white';
                     break;
-                case 'dark':
+                case 'steambox':
                 default:
                     metaThemeColor.content = '#181620';
-                    htmlTag.classList.add('dark');
+                    htmlTag.classList.add('steambox');
                     break;
             }
         } else {

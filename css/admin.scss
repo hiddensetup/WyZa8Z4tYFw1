@@ -324,6 +324,7 @@ td.sb-offline {
     align-content: center;
     flex-direction: row;
     padding-right: 15px;
+    gap: 40px;
 }
 
 /*
@@ -6788,12 +6789,12 @@ grammarly-editor-plugin {
         display: none;
         position: absolute;
         left: 10px;
-        top: 11px;
+        top: 12px;
         transition: color .4s;
         cursor: pointer;
         width: 30px;
         height: 30px;
-        line-height: 34px;
+        line-height: 30px;
         font-size: var(--chat-text-size-1-4);
         text-align: center;
         z-index: 3;
@@ -7176,7 +7177,7 @@ grammarly-editor-plugin {
         }
 
         >.sb-admin-list .sb-top {
-            padding-left: 45px;
+            padding-left: 50px;
             border-right: none;
         }
 
@@ -7209,32 +7210,40 @@ grammarly-editor-plugin {
         margin-left: 0px;
     }
 
-    .sb-area-conversations>.sb-btn-collapse {
+    .sb-area-conversations > .sb-btn-collapse {
         display: block;
-        background: 0 0;
-        border-radius: 50%;
-        animation: fade-in .5s ease-in;
-        -webkit-animation: fade-in .5s ease-in;
-
-        &.bi-chevron-left:not(.sb-active) {
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            display: block;
-            background: transparent;
-            border-radius: 20%;
-            width: 35px;
-            left: 10px;
-        }
-
-        &.bi-chevron-right {
-            display: block;
-            // background: var(--background-conversation);
-            border-radius: var(--chat-rounded-size-5);
-            // opacity: 0.6;
-            width: 35px;
-            left: 76px;
-        }
+        border-radius: var(--chat-rounded-size-5);
+        transition: opacity 0.2s ease-out, background-color 0.2s ease-in;
+        -webkit-transition: opacity 0.2s ease-out, background-color 0.2s ease-in;
+        opacity: 0.8;
+        box-shadow: var(--box-shadow-bubble-chat);
+        font-size: 15px;
     }
+    
+    .sb-area-conversations > .sb-btn-collapse:active {
+        transform: scale(1);
+        opacity: 1;
+        background-color: var(--chat-border-color);
+    }
+    
+    .sb-area-conversations > .sb-btn-collapse.bi-chevron-left:not(.sb-active) {
+        transform: scaleX(-1);
+        opacity: 1;
+        display: block;
+        border-radius: var(--chat-rounded-size-5);
+        box-shadow: var(--box-shadow-bubble-chat);
+        left: 10px;
+    }
+    
+    .sb-area-conversations > .sb-btn-collapse.bi-chevron-right {
+        transform: scaleX(-1);
+        opacity: 1;
+        display: block;
+        border-radius: var(--chat-rounded-size-5);
+        box-shadow: var(--box-shadow-bubble-chat);
+        left: 76px;
+    }
+    
 
     .sb-admin-list .sb-filter-btn.sb-active>div {
         padding-left: 35px;

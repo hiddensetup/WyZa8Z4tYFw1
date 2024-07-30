@@ -431,16 +431,16 @@ body {
 }
 
 .additional-info {
-    position: absolute;
-    right: 45px;
-    color: var(--chat-text-primary);
-    z-index: 4;
-    top: 10.5px;
+        position: absolute;
+        right: 55px;
+        color: var(--chat-text-primary);
+        z-index: 4;
+        top: 10.5px;
 
 
     .styling-caller {
         visibility: visible;
-        font-size: var(--chat-text-size-1-0) !important;
+        // font-size: var(--chat-text-size-1-0) !important;
         color: var(--chat-text-primary);
         border-radius: 50%;
         padding: 7px 9px;
@@ -925,7 +925,7 @@ a.sb-btn {
         position: absolute;
         bottom: auto !important;
         left: auto !important;
-        right: 12px !important;
+        right:16px !important;
         padding: 0 !important;
         height: 50px;
         display: flex;
@@ -1530,7 +1530,7 @@ a.sb-btn {
 
 
             >a {
-                font-size: var(--chat-text-size-1-0);
+                font-size: var(--chat-text-size-1-1);
                 left: 1px;
                 padding: 0px;
             }

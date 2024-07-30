@@ -12,7 +12,8 @@ const paths = {
     'js/source/main.js',
     'js/source/admin.js',
     'js/source/metatemplate.js',
-    'js/source/wa.js' // Added wa.js to the source files
+    'js/source/wa.js', // Added wa.js to the source files
+    'js/source/lc_emoji_picker.min.js' // Added lc_emoji_picker.min.js to the source files
   ], // Source JavaScript files including toast.js
   scssl: [
     'css/shared.scss',
