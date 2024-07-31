@@ -10068,7 +10068,7 @@ function sb_messaging_platforms_functions(
                 ? sb_execute_bot_message(
                     $bot_messages[$i],
                     $conversation_id,
-                    $last_message,
+                    $last_message
                 )
                 : false;
 
@@ -10082,7 +10082,7 @@ function sb_messaging_platforms_functions(
                 $log_message = "Processing welcome message: welcome-active=" . (sb_get_multi_setting("welcome-message", "welcome-active") ? "true" : "false") .
                     ", welcome-disable-office-hours=" . (sb_get_multi_setting("welcome-message", "welcome-disable-office-hours") ? "true" : "false") .
                     ", office-hours=" . (sb_office_hours() ? "true" : "false");
-                file_put_contents('log.txt', $log_message . PHP_EOL, FILE_APPEND);
+                // file_put_contents('log.txt', $log_message . PHP_EOL, FILE_APPEND);
 
                 if (sb_get_multi_setting("welcome-message", "welcome-active") &&
                     (!sb_get_multi_setting(
@@ -10112,7 +10112,7 @@ function sb_messaging_platforms_functions(
                                 $conversation_id,
                                 $welcomeMessage,
                                 $attachments
-                                [],
+                                
                                 -1,
                                 ["welcome_option" => true]
                             )["id"],
@@ -10121,7 +10121,7 @@ function sb_messaging_platforms_functions(
                     } else {
                         $bot_message = sb_option_process_reply(
                             $message,
-                            $conversation_id,
+                            $conversation_id
                         );
                     }
                 } else {
