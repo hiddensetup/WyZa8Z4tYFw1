@@ -9741,6 +9741,9 @@ function sb_get_flow_data()
     $jsonFlow = sb_get_multi_setting("welcome-message", "json-flow");
     return json_decode($jsonFlow, true);
 }
+
+
+
 function sb_send_fallback_message($conversation_id)
 {
     $flowData = sb_get_flow_data();

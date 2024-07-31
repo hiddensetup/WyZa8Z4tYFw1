@@ -9932,11 +9932,16 @@ window.onclick = function (t) {
 
   helpCenter.addEventListener("click", function () {
     if (customerSupportFrame) {
+      // Clear previous content before loading new data
+      const iframeDoc = customerSupportFrame.contentDocument || customerSupportFrame.contentWindow.document;
+      iframeDoc.open();
+      iframeDoc.write(""); // Clear the iframe content
+      iframeDoc.close();
+
       // Fetch the content from data.php
-      fetch('data.php')
+      fetch('resources/data.php')
         .then(response => response.text())
         .then(data => {
-          const iframeDoc = customerSupportFrame.contentDocument;
           iframeDoc.open();
           iframeDoc.write(data);
           iframeDoc.close();
@@ -9948,7 +9953,7 @@ window.onclick = function (t) {
           console.error('Error fetching data:', error);
         });
     } else {
-      console.error("No se encontró el elemento iframe con el id 'customer-support'");
     }
   });
 });
+

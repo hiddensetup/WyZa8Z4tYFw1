@@ -1094,7 +1094,9 @@ function sb_component_admin()
                                 </ul>
                             </div>
                         </div>
-                        <?php echo '<div class="help-center"><i style="color:var(--chat-text-primary);" class="bi bi-app-indicator"></i></div>' ?>
+                        <?php echo '<div style="cursor: pointer;" class="help-center"><i style="color:var(--chat-text-primary);" class="bi bi-app-indicator"></i></div>' ?>
+                        <?php include 'notifications.php'; ?>
+
 
                     </div>
                     <div class="sb-mobile" style="top: -150px;animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);-webkit-animation:scale-up-br 0.2s cubic-bezier(0,1.45,1,1);padding:8px;font-size: 1.1rem;font-weight: 500;">
