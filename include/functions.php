@@ -10111,8 +10111,7 @@ function sb_messaging_platforms_functions(
                                 sb_get_bot_id(),
                                 $conversation_id,
                                 $welcomeMessage,
-                                $attachments
-                                
+                                [],
                                 -1,
                                 ["welcome_option" => true]
                             )["id"],
