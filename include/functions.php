@@ -9208,8 +9208,9 @@ function sb_office_hours()
         intval($today_array[1]),
         intval($today_array[2]),
     ];
+
+    $status = false;
     if (isset($timetable[$today]) && !empty($timetable[$today][0][0])) {
-        $status = false;
         for ($i = 0; $i < 3; $i += 2) {
             if (
                 !empty($timetable[$today][$i][0]) &&
@@ -9238,9 +9239,15 @@ function sb_office_hours()
                 }
             }
         }
-        return $status;
     }
-    return true;
+    
+    // Debug log to track office hours status
+    $log_message = "Current time: " . gmdate("Y-m-d H:i:s", $now) .
+        ", Today: " . $today .
+        ", Office Hours Status: " . ($status ? "Open" : "Closed");
+    // file_put_contents('log.txt', $log_message . PHP_EOL, FILE_APPEND);
+
+    return $status;
 }
 
 function sb_css(
@@ -9700,9 +9707,15 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
             if (!sb_get_multi_setting("welcome-message", "welcome-active")) {
                 return false; // Skip if welcome-active is not active
             }
-            $flowData = sb_get_flow_data();
-            $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
-            $message = $welcomeMessage;
+
+            // Check if office hours are disabled for welcome messages
+            if (sb_get_multi_setting("welcome-message", "welcome-disable-office-hours") && !sb_office_hours()) {
+                $message = ""; // Send an empty message if office hours are closed and it's configured to disable
+            } else {
+                $flowData = sb_get_flow_data();
+                $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
+                $message = $welcomeMessage;
+            }
             $valid = true;
             break;
         default:
@@ -9721,6 +9734,8 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
         "id" => $message_id,
     ];
 }
+
+
 function sb_get_flow_data()
 {
     $jsonFlow = sb_get_multi_setting("welcome-message", "json-flow");
@@ -9764,7 +9779,7 @@ function sb_option_process_reply($option, $conversation_id)
     $flowData = sb_get_flow_data();
     $reply = sb_find_reply_by_option($option, $flowData);
 
-    if ($option === 'quit') {
+    if ($option === '/quit') {
         return sb_handle_quit_trigger($conversation_id);
     }
 
@@ -9882,7 +9897,7 @@ function sb_get_user_detail($conversation_id)
 }
 function sb_handle_quit_trigger($conversation_id)
 {
-    file_put_contents('file.txt', "Entering sb_handle_quit_trigger with conversation_id: " . $conversation_id . PHP_EOL, FILE_APPEND);
+    // file_put_contents('file.txt', "Entering sb_handle_quit_trigger with conversation_id: " . $conversation_id . PHP_EOL, FILE_APPEND);
 
     $query = 'UPDATE sb_conversations SET agent_id = NULL WHERE id = ' . sb_db_escape($conversation_id, true);
     sb_db_query($query);
@@ -10053,7 +10068,7 @@ function sb_messaging_platforms_functions(
                 ? sb_execute_bot_message(
                     $bot_messages[$i],
                     $conversation_id,
-                    $last_message
+                    $last_message,
                 )
                 : false;
 
@@ -10064,6 +10079,11 @@ function sb_messaging_platforms_functions(
                 $i == 3
             ) {
                 // Check if welcome-active is enabled
+                $log_message = "Processing welcome message: welcome-active=" . (sb_get_multi_setting("welcome-message", "welcome-active") ? "true" : "false") .
+                    ", welcome-disable-office-hours=" . (sb_get_multi_setting("welcome-message", "welcome-disable-office-hours") ? "true" : "false") .
+                    ", office-hours=" . (sb_office_hours() ? "true" : "false");
+                file_put_contents('log.txt', $log_message . PHP_EOL, FILE_APPEND);
+
                 if (sb_get_multi_setting("welcome-message", "welcome-active") &&
                     (!sb_get_multi_setting(
                         "welcome-message",
@@ -10082,12 +10102,16 @@ function sb_messaging_platforms_functions(
                         )["count"] == 0
                     ) {
                         $flowData = sb_get_flow_data();
-                        $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "Default welcome message";
+                        $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
+                         if (sb_office_hours()) {
+                            $welcomeMessage = ""; 
+                        }
                         $bot_message = [
                             "id" => sb_send_message(
                                 sb_get_bot_id(),
                                 $conversation_id,
                                 $welcomeMessage,
+                                $attachments
                                 [],
                                 -1,
                                 ["welcome_option" => true]
@@ -10097,7 +10121,7 @@ function sb_messaging_platforms_functions(
                     } else {
                         $bot_message = sb_option_process_reply(
                             $message,
-                            $conversation_id
+                            $conversation_id,
                         );
                     }
                 } else {
@@ -10117,7 +10141,6 @@ function sb_messaging_platforms_functions(
 
     return $human_takeover ? "human_takeover" : true;
 }
-
 
 function sb_messaging_platforms_send_message(
     $message,
