@@ -571,6 +571,10 @@ div ul.sb-menu li,
     font-size: var(--chat-text-size-1-0);
 }
 
+.sb-input-setting>.input, .sb-setting>.input {
+    display: block;
+}
+
 .sb-lightbox .sb-info,
 .sb-btn-text,
 .sb-updates-box .sb-input>div,
@@ -922,7 +926,7 @@ a.sb-btn {
     }
 
     .sb-menu-mobile {
-        position: absolute;
+        position: fixed;
         bottom: auto !important;
         left: auto !important;
         right:16px !important;
@@ -1492,7 +1496,11 @@ a.sb-btn {
         .sb-scroll-area {
             li {
                 box-shadow: none !important;
-
+                box-shadow: none !important;
+                color: var(--chat-text-secondary);
+                border: 1px solid var(--chat-border-color);
+                border-radius: var(--chat-rounded-size-3);
+                margin: 2px;
                 >div {
                     // padding-left: 65px;
                     align-items: flex-start;

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Updates</title>
+    <style>
+        /* Your CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            max-width: 600px;
+            margin: auto;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        #updtsRoadmap {
+            height: 246px;
+        }
+        .container {
+            margin: 10px;
+        }
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0px;
+        }
+        .info-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .info-text {
+            max-width: 600px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .notification-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: small
+        }
+
+        .notification-card.latest {
+            border-color: #333;
+        }
+
+        .notification-card p {
+            margin: 0;
+        }
+
+        .tiny-button {
+            font-size: 0.8rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-top: 5px;
+        }
+
+        .tiny-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info-section">
+            <div class="info-text">
+                <h2>Panel de actualizaciones</h2>
+                <p>Estimados usuarios, Les informamos que a partir de ahora somos Routin.cloud Este cambio nos permitirá optimizar nuestros procesos y mejorar la eficiencia en la atención a sus necesidades. Agradecemos su comprensión y apoyo durante esta transición de Steamboxchat. Seguimos comprometidos en brindarles el mejor servicio posible.</p>
+            </div>
+        </div>
+        <h2>Updates</h2>
+        <div id="updtsRoadmap"></div>
+        <div>
+            <h2>APIs</h2>
+            <div class="status-container">
+                <div class="status-item">Telegram <div class="status-bar">
+                        <div class="status-bar-inner" id="telegram-bar">OK</div>
+                    </div>
+                </div>
+                <div class="status-item">Routin.cloud <div class="status-bar">
+                        <div class="status-bar-inner" id="routin-bar">OK</div>
+                    </div>
+                </div>
+                <div class="status-item">WhatsApp Web <div class="status-bar">
+                        <div class="status-bar-inner" id="whatsapp-web-bar">OK</div>
+                    </div>
+                </div>
+                <div class="status-item">WhatsApp API Cloud <div class="status-bar">
+                        <div class="status-bar-inner" id="whatsapp-api-bar">OK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Guides</h2>
+            <div id="help-center"></div>
+        </div>
+    </div>
+
+    <script>
+        const apiUrl = "resources/Fof8gLQDrgr.php";
+
+        function fetchUpdts() {
+    fetch(apiUrl)
+        .then(res => {
+            if (!res.ok) throw new Error('Network response was not ok: ' + res.statusText);
+            return res.text(); // Read the response as plain text
+        })
+        .then(text => {
+            try {
+                const data = JSON.parse(text); // Attempt to parse the text as JSON
+                const updtsRoadmap = document.getElementById("updtsRoadmap");
+                updtsRoadmap.innerHTML = "";
+                let hasNewUpdts = false,
+                    cutoffDate = new Date(Date.now() - 18e6);
+                data.forEach((updts, index) => {
+                    let updtsDate = new Date(updts.commit.author.date),
+                        version = updts.sha.substring(0, 7),
+                        message = updts.commit.message;
+                    if (updtsDate > cutoffDate) hasNewUpdts = true;
+                    let card = document.createElement("div");
+                    card.className = "notification-card" + (index === 0 ? " latest" : "");
+                    card.innerHTML = `
+                        <p><strong>▶︎ ${message}</strong></p>
+                        <p>Actualizado: ${updtsDate.toLocaleDateString()}</p>
+                        <p>Versión: ${version}</p>
+                        ${index === 0 ? '<button class="tiny-button" onclick="clearCacheAndReload()">Limpiar caché</button>' : ""}
+                    `;
+                    updtsRoadmap.appendChild(card);
+                });
+            } catch (err) {
+                console.error("Error parsing JSON:", err);
+                document.getElementById("updtsRoadmap").innerHTML = `<p>Error: ${err.message}</p>`;
+            }
+        })
+        .catch(err => {
+            console.error("Fetch Error:", err);
+            document.getElementById("updtsRoadmap").innerHTML = `<p>Error: ${err.message}</p>`;
+        });
+}
+
+
+        function clearCacheAndReload() {
+            if ("caches" in window) caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+            localStorage.clear();
+            sessionStorage.clear();
+            document.cookie.split(";").forEach(cookie => {
+                document.cookie = cookie.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+            });
+            location.reload(true);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            fetchUpdts();
+            setInterval(fetchUpdts, 216e5);
+        });
+    </script>
+</body>
+
+</html>

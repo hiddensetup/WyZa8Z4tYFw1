@@ -25,7 +25,7 @@ require('include/components.php');
 
 <!DOCTYPE html>
 
-<html lang="en" data-theme="routin">
+<html lang="en" data-theme="routin" style="background:transparent">
 
 <head>
   <meta charset="UTF-8">

@@ -2505,11 +2505,10 @@ BODY
                 cursor: pointer;
                 transition: var(--transition);
                 -webkit-transition: var(--transition);
-                margin-bottom: 0px;
-                margin-top: 0px;
+                // margin-bottom: 0px;
+                // margin-top: 0px;
                 box-shadow: var(--box-shadow-conversation-line);
                 color: var(--chat-text-secondary);
-
                 span {
                     color: var(--chat-text-primary);
 
@@ -6534,6 +6533,8 @@ grammarly-editor-plugin {
     .sb-input-setting select,
     .sb-input-setting textarea {
         min-width: 0;
+        padding: 10px 30px 10px 10px !important;
+        width: calc(100% - 30px);
     }
 
     .sb-type-timetable {

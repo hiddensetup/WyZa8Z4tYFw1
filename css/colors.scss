@@ -173,7 +173,7 @@
     0 0 0 0.5px var(--chat-border-color);
   --box-shadow-left-side: -1px -1px 10px -4px var(--chat-border-color);
   --box-shadow-right-side: 1px 1px 10px -4px var(--chat-border-color);
-  --box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
+  --box-shadow-conversation-line: 76px 1px 1px -0.7px rgba(66, 103, 132, 0.26);
   --box-shadow-bordered: 0 0 1px 0.6px var(--chat-border-color),
     0 0px 10px 0px var(--chat-border-color);
   --box-shadow-menu: 0px -1px 5px -1px rgb(0 0 0 / 30%);
@@ -309,7 +309,7 @@
     0 0 0 0.5px var(--chat-border-color);
   --box-shadow-left-side: 1px 1px 10px -4px var(--chat-border-color);
   --box-shadow-right-side: -1px -1px 10px -4px var(--chat-border-color);
-  --box-shadow-conversation-line: 76px -1px 1px -0.7px var(--chat-border-color);
+  --box-shadow-conversation-line: 76px 1px 1px -0.7px rgba(66, 103, 132, 0.26);
   --box-shadow-bordered: 0 0 1px 0.6px var(--chat-border-color),
     0 0px 10px 0px var(--chat-border-color);
   --box-shadow-menu: 0px -1px 5px -1px var(--chat-border-color);

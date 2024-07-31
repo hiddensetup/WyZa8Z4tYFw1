@@ -9926,34 +9926,36 @@ window.onclick = function (t) {
  *	Chat with Support
  * ----------------------------------------------------------
  */
- document.addEventListener("DOMContentLoaded", function () {
-  const helpCenter = document.querySelector(".help-center");
-  const customerSupportFrame = document.getElementById("customer-support");
 
-  helpCenter.addEventListener("click", function () {
-    if (customerSupportFrame) {
-      // Clear previous content before loading new data
-      const iframeDoc = customerSupportFrame.contentDocument || customerSupportFrame.contentWindow.document;
-      iframeDoc.open();
-      iframeDoc.write(""); // Clear the iframe content
-      iframeDoc.close();
+//  document.addEventListener("DOMContentLoaded", function () {
+//   const helpCenter = document.querySelector(".help-center");
+//   const customerSupportFrame = document.getElementById("customer-support");
 
-      // Fetch the content from data.php
-      fetch('resources/data.php')
-        .then(response => response.text())
-        .then(data => {
-          iframeDoc.open();
-          iframeDoc.write(data);
-          iframeDoc.close();
+//   helpCenter.addEventListener("click", function () {
+//       if (customerSupportFrame) {
+//           const iframeDoc = customerSupportFrame.contentDocument || customerSupportFrame.contentWindow.document;
 
-          // Show the iframe
-          customerSupportFrame.style.display = "block";
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
-    } else {
-    }
-  });
-});
+//           if (iframeDoc) {
+//               iframeDoc.open();
+//               iframeDoc.write(""); // Clear previous content
+//               iframeDoc.close();
+
+//               // Fetch and load content into iframe
+//               fetch('resources/data.html')
+//                   .then(response => response.text())
+//                   .then(data => {
+//                       iframeDoc.open();
+//                       iframeDoc.write(data);
+//                       iframeDoc.close();
+//                       customerSupportFrame.style.display = "block";
+//                   })
+//                   .catch(error => {
+//                       console.error('Error fetching data:', error);
+//                   });
+//           } else {
+//               console.error('Failed to access iframe document.');
+//           }
+//       }
+//   });
+// });
 

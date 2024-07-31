@@ -393,9 +393,245 @@ function sb_dialog()
 function sb_updates_box()
 { ?>
     <div class="sb-lightbox sb-updates-box">
-        <iframe id="customer-support" style="display:none;width:100%;height:100%;border:none;border-radius:1rem"></iframe>
-    </div>
+        <style>
+            /* Your CSS styles */
+            .div-1 {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 600px;
+                margin: auto;
+                padding: 0;
+                flex-wrap: wrap;
+            }
 
+            .h2-style {
+                background: var(--chat-lightbox-top);
+                border-radius: var(--chat-rounded-top-1-0);
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0;
+                color: var(--chat-btn-background);
+            }
+
+            #updtsRoadmap {
+                height: 520px;
+                margin-bottom: 3rem;
+                margin: 10px 20px;
+            }
+
+            .container {
+                margin: 10px;
+            }
+
+            .status-item {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0px;
+                align-items: center;
+                margin: 10px 20px;
+
+            }
+
+            .info-section {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .info-text {
+                max-width: 600px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .notification-card {
+                background-color: var(--chat-app-background);
+                border: 1px solid var(--chat-border-color);
+                border-radius: 5px;
+                padding: 10px;
+                margin: 5px 0;
+                font-size: 0.9rem;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+
+            .notification-card:hover {
+                background-color: var(--chat-background-menu-selected) !important;
+                border: 1px solid var(--chat-border-color);
+                border-radius: 5px;
+                padding: 10px;
+                margin: 5px 0;
+                font-size: 0.9rem;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            }
+
+            .help-videos {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+
+            .notification-card.latest {
+                border: 1px solid var(--chat-border-color);
+                background: var(--chat-background-menu-selected);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .notification-card p {
+                margin: 0;
+            }
+
+            .tiny-button {
+                font-size: 0.8rem;
+                color: var(--chat-btn-text);
+                background-color: var(--chat-btn-background);
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                padding: 5px 10px;
+                margin-top: 5px;
+            }
+
+            .tiny-button:hover {
+                background-color: var(--chat-btn-background-active);
+                color: var(--chat-btn-text-active);
+            }
+        </style>
+
+        <div class="sb-top-bar">
+            <div>Panel de <?php sb_e('Updates') ?></div>
+            <div>
+                <a class="sb-close sb-btn-icon">
+                    <i class="bi-x-lg"></i>
+                </a>
+            </div>
+        </div>
+        <div class="sb-scroll-area sb-main">
+            <div>
+                <div class="container">
+                    <div class="info-section">
+                        <div class="info-text">
+                            <p>Estimados usuarios, Les informamos que a partir de ahora somos Routin.cloud Este cambio nos permitirá optimizar nuestros procesos y mejorar la eficiencia en la atención a sus necesidades. Agradecemos su comprensión y apoyo durante esta transición de Steamboxchat. Seguimos comprometidos en brindarles el mejor servicio posible.</p>
+                        </div>
+                    </div>
+                    <div id="updtsRoadmap"></div>
+                    <div>
+                        <h2 class="h2-style">APIs</h2>
+                        <div class="status-container">
+                            <div class="status-item">
+                                <h3> Telegram API </h3>
+                                <div class="status-bar">
+                                    <div class="status-bar-inner" id="telegram-bar">OK</div>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <h3> Routin Cloud API </h3>
+                                <div class="status-bar">
+                                    <div class="status-bar-inner" id="routin-bar">OK</div>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <h3> WhatsApp Cloud API </h3>
+                                <div class="status-bar">
+                                    <div class="status-bar-inner" id="whatsapp-web-bar">OK</div>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <h3> WhatsApp API </h3>
+                                <div class="status-bar">
+                                    <div class="status-bar-inner" id="whatsapp-api-bar">OK</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="h2-style">Centro de ayuda</h2>
+                        <div class="status-container">
+                            <div class="help-videos">
+                                <h3> Solicita el proceso que quieras aprender: verify@routin.cloud</h3>
+                                <div class="status-bar">
+                                    <div class="video-uploading" id="video-custom">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function fetchUpdts() {
+                        fetch(apiUrl)
+                            .then(res => {
+                                if (!res.ok) throw new Error('Network response was not ok: ' + res.statusText);
+                                return res.text(); // Read the response as plain text
+                            })
+                            .then(text => {
+                                try {
+                                    const data = JSON.parse(text); // Attempt to parse the text as JSON
+                                    const updtsRoadmap = document.getElementById("updtsRoadmap");
+                                    updtsRoadmap.innerHTML = "";
+                                    let hasNewUpdts = false,
+                                        cutoffDate = new Date(Date.now() - 18e6);
+                                    data.forEach((updts, index) => {
+                                        let updtsDate = new Date(updts.commit.author.date),
+                                            version = updts.sha.substring(0, 7),
+                                            message = updts.commit.message;
+                                        if (updtsDate > cutoffDate) hasNewUpdts = true;
+                                        let card = document.createElement("div");
+                                        card.className = "notification-card" + (index === 0 ? " latest" : "");
+                                        card.innerHTML = `
+                        <div><p><strong>▶︎ ${message}</strong></p>
+                        <p>Actualizado: ${updtsDate.toLocaleDateString()}</p>
+                        <p>Versión: ${version}</p></div>
+                        ${index === 0 ? '<div><button class="tiny-button" onclick="clearCacheAndReload()"> Descargar <i class="bi bi-arrow-down-circle"></i></button></div>' : ""}
+                    `;
+                                        updtsRoadmap.appendChild(card);
+                                    });
+                                } catch (err) {
+                                    console.error("Error parsing JSON:", err);
+                                    document.getElementById("updtsRoadmap").innerHTML = `<p>Error: ${err.message}</p>`;
+                                }
+                            })
+                            .catch(err => {
+                                console.error("Fetch Error:", err);
+                                document.getElementById("updtsRoadmap").innerHTML = `<p>Error: ${err.message}</p>`;
+                            });
+                    }
+
+
+                    function clearCacheAndReload() {
+                        if ("caches" in window) caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+                        localStorage.clear();
+                        sessionStorage.clear();
+                        document.cookie.split(";").forEach(cookie => {
+                            document.cookie = cookie.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+                        });
+                        location.reload(true);
+                    }
+
+                    document.addEventListener("DOMContentLoaded", function() {
+                        fetchUpdts();
+                        setInterval(fetchUpdts, 216e5);
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
 
 <?php } ?>
 
@@ -825,8 +1061,8 @@ function sb_send_template_box()
             SBChat.sendMessage(-1, "[rating]");
         });
 
- 
-         const sbIconDrag = document.querySelector(".menu-plus");
+
+        const sbIconDrag = document.querySelector(".menu-plus");
         const sbBarIcons = document.querySelector(".sb-bar-icons");
         const elementsToHideIcons = [
             document.querySelector(".sb-list"),
@@ -834,12 +1070,9 @@ function sb_send_template_box()
             document.querySelector("textarea")
         ];
 
-         sbIconDrag.addEventListener("click", () => sbBarIcons.classList.toggle("sb-hide"));
+        sbIconDrag.addEventListener("click", () => sbBarIcons.classList.toggle("sb-hide"));
 
-         elementsToHideIcons.forEach(el => el?.addEventListener("click", () => sbBarIcons.classList.add("sb-hide")));
-
-
-
+        elementsToHideIcons.forEach(el => el?.addEventListener("click", () => sbBarIcons.classList.add("sb-hide")));
     </script>
 <?php } ?>
 
@@ -1229,7 +1462,8 @@ function sb_component_admin()
                             </div>
                             <div class="sb-list"></div>
                             <div class=" api-cloud-notif" id="floatingText">
-                            <p><i class="bi-info-circle-fill"></i> Esta conversación dura 24 horas. Pasado el tiempo <i class="bi bi-plus-square-dotted"></i> <i class="bi bi-wind"></i> envía una plantilla HSM <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> ¿Por qué pasa esto? </a>.</p>                            </div>
+                                <p><i class="bi-info-circle-fill"></i> Esta conversación dura 24 horas. Pasado el tiempo <i class="bi bi-plus-square-dotted"></i> <i class="bi bi-wind"></i> envía una plantilla HSM <a style="color: var(--blue-root-color)" href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank"> ¿Por qué pasa esto? </a>.</p>
+                            </div>
 
                             <?php sb_component_editor(true); ?>
                             <div class="sb-no-conversation-message">
@@ -1395,7 +1629,7 @@ function sb_component_admin()
                                         <?php if (sb_is_agent() && $is_admin) { ?>
                                             <li class="flex-buttons-users transition-opacity">
                                                 <a data-value="csv" class="routin-buttons-top-tip bi-google">
-                                                <span class="routin-buttons-top-content"><?= sb_('Download CSV') ?></span>
+                                                    <span class="routin-buttons-top-content"><?= sb_('Download CSV') ?></span>
 
                                                 </a>
                                             </li>
@@ -1606,7 +1840,9 @@ function sb_component_admin()
                                     <li id="agents-response-time">
                                         <?php sb_e('Agent response time') ?>
                                     </li>
-
+                                    <li id="agents-availability">
+                        <?php sb_e('Agent availability') ?>
+                    </li>
                                     <li id="agents-ratings">
                                         <?php sb_e('Agent ratings') ?>
                                     </li>

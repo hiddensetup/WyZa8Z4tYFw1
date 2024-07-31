@@ -5915,7 +5915,7 @@ function sb_get_setting_code($setting)
             ' </h2><p class="active">' .
             sb_s($setting["content"]) .
             (isset($setting["help"]) ? ' <a href="' . $setting["help"] . '" target="_blank" style=" font-size: var(--chat-text-size-1-0); color: var(--pink-root-color); line-height: 0; " class="bi bi-play-circle"></a>' : "") .
-            '</p></div><div style="padding-left: 5%" class="active input">';
+            '</p></div><div style="padding-left: 1%" class="active input">';
         switch ($type) {
             case "multi-input":
                 $values = $setting["value"];
@@ -8612,7 +8612,6 @@ function sb_pusher_init()
         ["cluster" => $settings["pusher-cluster"]]
     );
 }
-
 
 /*
  * -----------------------------------------------------------
