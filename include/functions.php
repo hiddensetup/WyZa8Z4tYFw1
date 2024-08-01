@@ -2936,11 +2936,17 @@ function sb_get_conversations_users($conversations)
 
 
 // refactored function to search conversations
-
-function sb_search_conversations($search)
-{
+function sb_search_conversations($search) {
     $search = sb_db_escape(mb_strtolower($search));
+    $cache_key = "search_$search";
 
+    // Intenta obtener los datos de la caché
+    $cached_result = cache_get($cache_key);
+    if ($cached_result !== false) {
+        return json_decode($cached_result, true); // Decodifica el JSON en array
+    }
+
+    // Construye la consulta SQL
     $query = "
         SELECT 
             sb_messages.*, 
@@ -2960,7 +2966,8 @@ function sb_search_conversations($search)
             LOWER(sb_conversations.title) LIKE '%$search%' OR
             LOWER(sb_conversations.tags) LIKE '%$search%' OR
             LOWER(sb_conversations.label) LIKE '%$search%' OR
-            LOWER(sb_users_data.value) LIKE '%$search%' -- Condition for phone search
+            LOWER(sb_users_data.value) LIKE '%$search%' OR -- Condition for phone search
+            LOWER(sb_messages.message) LIKE '%$search%' -- Condition for message search
             )
         GROUP BY sb_messages.conversation_id 
         ORDER BY sb_messages.creation_time DESC";
@@ -2968,12 +2975,36 @@ function sb_search_conversations($search)
     $result = sb_db_get($query, false);
 
     if (is_array($result)) {
-        return sb_get_conversations_users($result);
+        $data = sb_get_conversations_users($result);
+        cache_set($cache_key, json_encode($data)); // Almacena los datos en caché
+        return $data;
     } else {
         return new SBError('db-error', 'sb_search_conversations', $result);
     }
 }
 
+function log_cache_action($message) {
+    $log_file = 'log.txt'; // Ruta del archivo de log
+    $timestamp = date('Y-m-d H:i:s');
+    $log_message = "$timestamp - $message\n";
+    file_put_contents($log_file, $log_message, FILE_APPEND);
+}
+
+function cache_get($key) {
+    $filename = 'cache/' . md5($key) . '.cache';
+    if (file_exists($filename) && (filemtime($filename) > (time() - 600))) { // 10 minutos de expiración
+        log_cache_action("Cache hit for key: $key");
+        return file_get_contents($filename);
+    }
+    log_cache_action("Cache miss for key: $key");
+    return false;
+}
+
+function cache_set($key, $data) {
+    $filename = 'cache/' . md5($key) . '.cache';
+    file_put_contents($filename, $data);
+    log_cache_action("Cache set for key: $key");
+}
 
 
 
@@ -3240,63 +3271,75 @@ function sb_get_new_messages(
         // return new SBError("db-error", "sb_get_new_messages", $result);
     }
 }
-function sb_get_conversation_total($user_id = false, $conversation_id = false)
-{
+function sb_get_conversation_total($user_id = false, $conversation_id = false) {
     $user_id = $user_id ? $_POST["user_id"] : $user_id;
-    $conversation_id = $conversation_id
-        ? $_POST["conversation_id"]
-        : $conversation_id;
+    $conversation_id = $conversation_id ? $_POST["conversation_id"] : $conversation_id;
+    $cache_key = "conversation_total_$user_id_$conversation_id";
+    
+    // Intenta obtener los datos de la caché
+    $cached_result = cache_get($cache_key);
+    if ($cached_result !== false) {
+        return intval($cached_result); // Decodifica el JSON en un entero
+    }
+
     $limit = $_POST["limit"];
-    $messages = sb_db_get(
-        "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type FROM sb_messages, sb_users, sb_conversations WHERE sb_messages.conversation_id = " .
-            $conversation_id .
-            (sb_is_agent()
-                ? ""
-                : " AND sb_conversations.user_id = " . $user_id) .
-            " AND sb_messages.conversation_id = sb_conversations.id AND sb_users.id = sb_messages.user_id ORDER BY sb_messages.id ASC",
-        false
-    );
+    $query = "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type 
+              FROM sb_messages, sb_users, sb_conversations 
+              WHERE sb_messages.conversation_id = $conversation_id" .
+              (sb_is_agent() ? "" : " AND sb_conversations.user_id = $user_id") .
+              " AND sb_messages.conversation_id = sb_conversations.id 
+              AND sb_users.id = sb_messages.user_id 
+              ORDER BY sb_messages.id ASC";
+    
+    $messages = sb_db_get($query, false);
+
     if (isset($messages) && is_array($messages)) {
-        return COUNT($messages);
+        $total = COUNT($messages);
+        cache_set($cache_key, $total); // Almacena el total en caché
+        return $total;
     } else {
         return new SBError("db-error", "sb_get_conversation_total", $messages);
     }
 }
 
-function sb_get_conversation($user_id = false, $conversation_id = false)
-{
+
+function sb_get_conversation($user_id = false, $conversation_id = false) {
     $user_id = $user_id ? sb_db_escape($user_id, true) : false;
     $conversation_id = sb_db_escape($conversation_id, true);
+    $cache_key = "conversation_$user_id_$conversation_id";
+
+    // Intenta obtener los datos de la caché
+    $cached_result = cache_get($cache_key);
+    if ($cached_result !== false) {
+        return json_decode($cached_result, true); // Decodifica el JSON en array
+    }
+
     $rows = sb_get_conversation_total($user_id, $conversation_id);
-    $start =
-        isset($_POST["load_chat"]) && $rows - $_POST["load_chat"] > 0
-        ? abs($rows - $_POST["load_chat"])
-        : 0;
-    $limit =
-        $rows - $_POST["load_chat"] > 0
-        ? $_POST["limit"]
-        : $rows % $_POST["limit"];
-    $limit_query =
-        $limit != 0
-        ? "ORDER BY sb_messages.id ASC LIMIT " . $start . "," . $limit
-        : "";
-    $messages = sb_db_get(
-        "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type FROM sb_messages, sb_users, sb_conversations WHERE sb_messages.conversation_id = " .
-            $conversation_id .
-            (sb_is_agent()
-                ? ""
-                : " AND sb_conversations.user_id = " . $user_id) .
-            " AND sb_messages.conversation_id = sb_conversations.id AND sb_users.id = sb_messages.user_id " .
-            $limit_query,
-        false
-    );
+    $start = isset($_POST["load_chat"]) && $rows - $_POST["load_chat"] > 0 ? abs($rows - $_POST["load_chat"]) : 0;
+    $limit = $rows - $_POST["load_chat"] > 0 ? $_POST["limit"] : $rows % $_POST["limit"];
+    $limit_query = $limit != 0 ? "ORDER BY sb_messages.id ASC LIMIT $start, $limit" : "";
+
+    $query_messages = "SELECT sb_messages.*, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type 
+                       FROM sb_messages, sb_users, sb_conversations 
+                       WHERE sb_messages.conversation_id = $conversation_id" .
+                       (sb_is_agent() ? "" : " AND sb_conversations.user_id = $user_id") .
+                       " AND sb_messages.conversation_id = sb_conversations.id 
+                       AND sb_users.id = sb_messages.user_id 
+                       $limit_query";
+
+    $messages = sb_db_get($query_messages, false);
+
     if (isset($messages) && is_array($messages)) {
-        $details = sb_db_get(
-            "SELECT sb_users.id as user_id, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type, sb_conversations.id, sb_conversations.title, sb_conversations.creation_time, sb_conversations.status_code as conversation_status_code, sb_conversations.department, sb_conversations.agent_id, sb_conversations.source, sb_conversations.label, sb_conversations.extra, sb_conversations.tags FROM sb_users, sb_conversations WHERE sb_conversations.id = " .
-                $conversation_id .
-                (sb_is_agent() ? "" : " AND sb_users.id = " . $user_id) .
-                " AND sb_users.id = sb_conversations.user_id LIMIT 1"
-        );
+        $query_details = "SELECT sb_users.id as user_id, sb_users.first_name, sb_users.last_name, sb_users.profile_image, sb_users.user_type, 
+                          sb_conversations.id, sb_conversations.title, sb_conversations.creation_time, sb_conversations.status_code as conversation_status_code, 
+                          sb_conversations.department, sb_conversations.agent_id, sb_conversations.source, sb_conversations.label, sb_conversations.extra, sb_conversations.tags 
+                          FROM sb_users, sb_conversations 
+                          WHERE sb_conversations.id = $conversation_id" .
+                          (sb_is_agent() ? "" : " AND sb_users.id = $user_id") .
+                          " AND sb_users.id = sb_conversations.user_id LIMIT 1";
+
+        $details = sb_db_get($query_details);
+
         if ($details) {
             $details["busy"] = false;
             if (sb_is_agent()) {
@@ -3304,14 +3347,9 @@ function sb_get_conversation($user_id = false, $conversation_id = false)
                 if ($active_user) {
                     $is_queue = sb_get_multi_setting("queue", "queue-active");
                     $is_routing = sb_get_setting("routing");
-                    $is_hide_conversations = sb_get_multi_setting(
-                        "agent-hide-conversations",
-                        "agent-hide-conversations-active"
-                    );
-                    $is_show_unassigned_conversations = sb_get_multi_setting(
-                        "agent-hide-conversations",
-                        "agent-hide-conversations-view"
-                    );
+                    $is_hide_conversations = sb_get_multi_setting("agent-hide-conversations", "agent-hide-conversations-active");
+                    $is_show_unassigned_conversations = sb_get_multi_setting("agent-hide-conversations", "agent-hide-conversations-view");
+                   
                     // if (
                     //     $active_user["user_type"] == "agent" &&
                     //     ((!empty($active_user["department"]) &&
@@ -3328,16 +3366,8 @@ function sb_get_conversation($user_id = false, $conversation_id = false)
                     // ) {
                     //     return "agent-not-authorized";
                     // }
-                    if (
-                        !$is_queue &&
-                        !$is_routing &&
-                        (!$is_hide_conversations ||
-                            $is_show_unassigned_conversations)
-                    ) {
-                        $agent_id = sb_is_active_conversation_busy(
-                            $conversation_id,
-                            sb_get_active_user_ID()
-                        );
+                    if (!$is_queue && !$is_routing && (!$is_hide_conversations || $is_show_unassigned_conversations)) {
+                        $agent_id = sb_is_active_conversation_busy($conversation_id, sb_get_active_user_ID());
                         if ($agent_id) {
                             $details["busy"] = sb_get_user($agent_id);
                         }
@@ -3346,16 +3376,17 @@ function sb_get_conversation($user_id = false, $conversation_id = false)
                     if (!sb_get_setting('disable-notes')) {
                         $details['notes'] = sb_get_notes($conversation_id);
                     }
-
                     $details['tags'] = $details['tags'] ? explode(',', $details['tags']) : [];
                 }
             }
 
-            return [
+            $result = [
                 "messages" => $messages,
                 "details" => $details,
                 "total_rows" => $rows,
             ];
+            cache_set($cache_key, json_encode($result)); // Almacena el resultado en caché
+            return $result;
         }
     } else {
         return new SBError("db-error", "sb_get_conversation", $messages);
@@ -3365,7 +3396,7 @@ function sb_get_conversation($user_id = false, $conversation_id = false)
 
 function sb_new_conversation(
     $user_id,
-    $status_code = 0,
+    $status_code = false,
     $title = "",
     $department = -1,
     $agent_id = -1,
