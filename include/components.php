@@ -1840,9 +1840,7 @@ function sb_component_admin()
                                     <li id="agents-response-time">
                                         <?php sb_e('Agent response time') ?>
                                     </li>
-                                    <li id="agents-availability">
-                        <?php sb_e('Agent availability') ?>
-                    </li>
+                                    
                                     <li id="agents-ratings">
                                         <?php sb_e('Agent ratings') ?>
                                     </li>
@@ -1918,6 +1916,7 @@ function sb_component_admin()
             sb_profile_box();
             sb_profile_edit_box();
             sb_dialog();
+            sb_updates_box();
 
             if (!sb_get_setting('disable-notes')) sb_notes_box();
             if (!sb_get_setting('disable-tags')) sb_tags_box();
@@ -1927,7 +1926,6 @@ function sb_component_admin()
             if ($is_admin || $supervisor) {
                 //  if (agent) {
 
-                sb_updates_box();
                 sb_requirements_box();
             }
 

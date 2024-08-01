@@ -9239,7 +9239,7 @@ function sb_office_hours()
             }
         }
     }
-
+    
     // Debug log to track office hours status
     $log_message = "Current time: " . gmdate("Y-m-d H:i:s", $now) .
         ", Today: " . $today .
@@ -10659,43 +10659,6 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $chart_type = "bar";
             $label_type = 2;
             break;
-            case "agents-availability":
-                $title = "Agent availability";
-                $description = "The average duration of an agent's online presence per day.";
-                $table = [sb_("Agent name"), sb_("Average time")];
-                $time_range = false;
-                $label_type = 2;
-                $rows = sb_db_get('SELECT B.id, B.first_name, B.last_name, B.department, A.value, A.creation_time FROM sb_reports A, sb_users B WHERE A.external_id = B.id ORDER BY B.id', false);
-                $current_rows = [];
-                $seconds = 0;
-                $days = 0;
-                $count = count($rows);
-                $current_agent_id = $count ? $rows[0]["id"] : 0;
-                $data = [];
-                for ($i = 0; $i < $count; $i++) {
-                    $row = $rows[$i];
-                    if ($seconds && (($i && $current_agent_id != $row["id"]) || ($count > 1 && $count == $i + 1))) {
-                        $seconds = intval($seconds / $days / 60);
-                        $data[sb_get_user_name($rows[$i - 1])] = [$seconds, $current_rows, gmdate("H:i:s", $seconds)];
-                        $seconds = 0;
-                        $days = 0;
-                        $current_rows = [];
-                        $current_agent_id = $row["id"];
-                    } else {
-                        $intervals = explode(" ", $row["value"]);
-                        $intervals_string = "";
-                        for ($j = 0; $j < count($intervals); $j++) {
-                            $interval = explode("-", $intervals[$j]);
-                            if ($interval[1] && is_numeric($interval[0]) && strlen($interval[1]) < 12) {
-                                $seconds += intval($interval[1]) - intval($interval[0]);
-                                $intervals_string .= gmdate("H:i:s", intval($interval[0])) . " " . sb_("To") . " " . gmdate("H:i:s", intval($interval[1])) . ", ";
-                            }
-                        }
-                        $current_rows[$row["creation_time"]] = $intervals_string ? substr($intervals_string, 0, -2) : "";
-                        $days++;
-                    }
-                }
-                break;
         case "agents-conversations-time":
             $query = "SELECT creation_time, conversation_id FROM sb_messages A WHERE creation_time >= DATE_SUB(NOW(), INTERVAL 8 DAY)";
             $title = "Average agent conversations duration";
@@ -10786,7 +10749,6 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
             $extra = sb_get_clientStatus_conversations();
             $description = "Count of all tagged conversations by team members.";
             break;
-            
     }
 
     switch ($report_name) {
@@ -11258,7 +11220,6 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
                     : [$data[$date_row][0] + 1, $data[$date_row][1] . $search];
             }
             break;
-            
     }
 
     // Generate all days, months, years within the date range
@@ -11336,6 +11297,7 @@ function sb_reports($report_name, $date_start = false, $date_end = false)
         "chart_type" => $chart_type,
     ];
 }
+
 function sb_reports_update(
     $name,
     $value = false,
@@ -11363,27 +11325,13 @@ function sb_reports_update(
                     '", NULL, NULL)'
             );
 
-        case "online":
-        case "offline":
-            if (!sb_get_active_user()) {
-                return false;
-            }
-            $is_online = $name == "online";
-            $where = ' WHERE name = "availability" AND external_id = "' . sb_get_active_user_ID() . '" AND creation_time = "' . $now . '"';
-            $value_db = sb_isset(sb_db_get("SELECT value FROM sb_reports" . $where . " LIMIT 1"), "value");
-            $last_char = substr($value_db, -1);
-            if (($last_char == "-" && $is_online) || (!$value_db && !$is_online)) {
-                return false;
-            }
-            $value = time() . ($is_online ? "-" : "");
-            return sb_db_query(
-                empty($value_db) 
-                    ? 'INSERT INTO sb_reports (name, value, creation_time, external_id, extra) VALUES ("availability", "' . sb_db_escape($value) . '", "' . $now . '", ' . sb_get_active_user_ID() . ', NULL)' 
-                    : 'UPDATE sb_reports SET value = "' . sb_db_escape($value_db) . ($is_online || ($last_char && $last_char != "-") ? " " : "") . $value . '"' . $where
-            );
-
         default:
-            $where = ' WHERE name = "' . $name . '" AND creation_time = "' . $now . '"';
+            $where =
+                ' WHERE name = "' .
+                $name .
+                '" AND creation_time = "' .
+                $now .
+                '"';
             $count = sb_db_get("SELECT value FROM sb_reports" . $where);
             return sb_db_query(
                 empty($count)
@@ -11404,40 +11352,6 @@ function sb_reports_update(
             );
     }
 }
-function sb_reports_export($report_name, $date_start = false, $date_end = false, $timezone = false) {
-    $response = sb_reports($report_name, $date_start, $date_end, $timezone);
-    if ($response) {
-        $data = sb_isset($response, "data", []);
-        $rows = [];
-        if ($report_name == "agents-ratings") {
-            $response["table"] = [$response["table"][0], sb_("Positive"), sb_("Positive percentage"), sb_("Negative")];
-            foreach ($data as $key => $value) {
-                $ratings = explode('<i class="sb-icon-dislike"></i>', $value[1]);
-                $ratings[0] = str_replace('<i class="sb-icon-like"></i>', "", $ratings[0]);
-                $ratings[0] = substr($ratings[0], 0, strpos($ratings[0], "("));
-                array_push($rows, [$key, $ratings[0], $value[0], $ratings[1]]);
-            }
-        } else if ($report_name == "agents-availability") {
-            $response["table"] = [$response["table"][0], sb_("Date"), sb_("Intervals")];
-            foreach ($data as $key => $value) {
-                foreach ($value[1] as $date => $intervals) {
-                    array_push($rows, [$key, $date, $intervals]);
-                }
-            }
-        } else {
-            foreach ($data as $key => $value) {
-                $value = $value[count($value) - 1];
-                if (strpos($value, " />")) {
-                    $value = substr($value, strpos($value, "/>") + 2);
-                }
-                array_push($rows, [$key, $value]);
-            }
-        }
-        return sb_csv($rows, $response["table"], "report-" . rand(100000, 999999999));
-    }
-    return false;
-}
-
 
 /*
  * -----------------------------------------------------------
