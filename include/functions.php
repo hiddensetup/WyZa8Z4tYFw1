@@ -86,7 +86,7 @@ class SBValidationError
 $sb_apps = [
     // "dialogflow",
     // "tickets",
-    // "messenger",
+    "messenger",
     "whatsapp",
     "whatsmeow",
     "waweb",

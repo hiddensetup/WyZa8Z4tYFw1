@@ -104,6 +104,13 @@
     ]
   },
   {
+    "type": "input-button",
+    "id": "whatsapp-test-template",
+    "title": "Test Fallback template",
+    "content": "Send the template message to a WhatsApp number.",
+    "button-text": "Send message"
+  },
+  {
     "type": "number",
     "id": "whatsapp-department",
     "title": "Department ID",

@@ -3921,8 +3921,8 @@ BODY
         -webkit-appearance: none !important;
         -moz-appearance: none !important;
         appearance: none !important;
-        width: 33px !important;
-        height: 17px !important;
+        width: 40px !important;
+        height: 20px !important;
         background-color: var(--chat-input-search-responsive) !important;
         border-radius: 24px !important;
         position: relative !important;
@@ -3936,8 +3936,8 @@ BODY
     .switch-toggle:before {
         content: "";
         position: absolute !important;
-        width: 15px;
-        height: 15px;
+        width: 19px;
+        height: 19px;
         background: var(--chat-input-toggle-color) !important;
         border-radius: 24px !important;
         top: 0px !important;
@@ -3950,7 +3950,7 @@ BODY
     }
 
     .switch-toggle:checked:before {
-        left: 16px !important;
+        left: 20px !important;
         color: transparent;
     }
 }
