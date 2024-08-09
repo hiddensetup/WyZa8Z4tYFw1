@@ -28,10 +28,9 @@ apps/waweb/api.txt
 apps/waweb/api.txt
 apps/waweb/api.txt
 apps/waweb/api.txt
-/composer.lock
+composer.lock
 tools
-/include/output.txt
-/apps/waweb/output.txt
-/apps/waweb/file.txt
+include/output.txt
+apps/waweb/output.txt
+apps/waweb/file.txt
 include/log.txt
-/include/log.txt
