@@ -9920,19 +9920,20 @@ function sb_send_bot_replies($bot_replies, $conversation_id)
 {
     $response_ids = [];
     foreach ($bot_replies as $bot_reply) {
-        $message = $bot_reply['message'];
         $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
 
+        if ($delay > 0) {
+            usleep($delay * 2000); // Convert milliseconds to microseconds
+        }
+
+        $message = $bot_reply['message'];
         $response_id = sb_send_message(sb_get_bot_id(), $conversation_id, $message)["id"];
         sb_messaging_platforms_send_message($message, $conversation_id, $response_id);
         $response_ids[] = $response_id;
-
-        if ($delay > 0) {
-            usleep($delay * 1000); // Convert milliseconds to microseconds
-        }
     }
     return $response_ids;
 }
+
 
 function sb_process_actions($actions, $conversation_id)
 {
