@@ -9720,7 +9720,6 @@ function sb_on_close()
 
 
 
-
 function sb_execute_bot_message($name, $conversation_id, $last_user_message = false)
 {
     $valid = false;
@@ -9729,6 +9728,13 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
 
     switch ($name) {
         case "offline":
+            // Check if the welcome message is active
+            if (sb_get_multi_setting("welcome-message", "welcome-active")) {
+                // Set the message to empty if welcome message is active
+                $message = "";
+                break;
+            }
+
             $settings = sb_get_setting("chat-timetable");
             $valid = $settings["chat-timetable-active"] && (!sb_office_hours() || (!$settings["chat-timetable-agents"] && !sb_agents_online()));
             $message = $valid ? sb_get_multi_setting("chat-timetable", "chat-timetable-msg") : "";
@@ -9742,9 +9748,10 @@ function sb_execute_bot_message($name, $conversation_id, $last_user_message = fa
             if (sb_get_multi_setting("welcome-message", "welcome-disable-office-hours") && !sb_office_hours()) {
                 $message = ""; // Send an empty message if office hours are closed and it's configured to disable
             } else {
-                $flowData = sb_get_flow_data();
-                $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
-                $message = $welcomeMessage;
+                // Optionally, you can uncomment the following line if you want to use it later
+                // $flowData = sb_get_flow_data();
+                // $welcomeMessage = isset($flowData['welcome_message'][0]['bot_reply'][0]['message']) ? $flowData['welcome_message'][0]['bot_reply'][0]['message'] : "";
+                // $message = $welcomeMessage;
             }
             $valid = true;
             break;
@@ -9777,13 +9784,35 @@ function sb_get_flow_data()
 function sb_send_fallback_message($conversation_id)
 {
     $flowData = sb_get_flow_data();
-    $fallbackMessage = isset($flowData['fallback'][0]['bot_reply'][0]['message']) ? $flowData['fallback'][0]['bot_reply'][0]['message'] : "Default fallback message";
+    $fallbackMessage = isset($flowData['fallback'][0]['bot_reply'][0]['message']) ? $flowData['fallback'][0]['bot_reply'][0]['message'] : "";
     $message_id = sb_send_message(sb_get_bot_id(), $conversation_id, $fallbackMessage, [], -1, ["fallback_message" => true])["id"];
     return [
         "id" => $message_id,
         "message" => $fallbackMessage,
     ];
 }
+
+// function sb_find_reply_by_option($option, $flowData)
+// {
+//     foreach ($flowData['main_flow'] as $flow_name => $flows) {
+//         foreach ($flows as $flow) {
+//             if (isset($flow['keywords']) && is_array($flow['keywords'])) {
+//                 foreach ($flow['keywords'] as $keyword) {
+//                     if ($option === strtolower($keyword)) {
+//                         return [
+//                             "option" => $keyword,
+//                             "reply" => isset($flow['bot_reply']) ? $flow['bot_reply'] : [],
+//                             "actions" => isset($flow['actions']) ? $flow['actions'] : [],
+//                             "next_flow" => isset($flow['next_flow']) ? $flow['next_flow'] : null,
+//                         ];
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     return [];
+// }
+
 
 function sb_find_reply_by_option($option, $flowData)
 {
@@ -9805,6 +9834,47 @@ function sb_find_reply_by_option($option, $flowData)
     }
     return [];
 }
+
+// function sb_option_process_reply($option, $conversation_id)
+// {
+//     $option = strtolower($option);
+//     $flowData = sb_get_flow_data();
+//     $reply = sb_find_reply_by_option($option, $flowData);
+
+//     if ($option === '/quit') {
+//         return sb_handle_quit_trigger($conversation_id);
+//     }
+
+//     $assigned_department = sb_get_assigned_department($conversation_id);
+//     if (!empty($assigned_department)) {
+//         return false;
+//     }
+
+//     $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE "{\"option_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true);
+//     if (sb_db_get($query)["count"] == 0) {
+//         if (!empty($reply)) {
+//             $response_ids = sb_send_bot_replies($reply["reply"], $conversation_id);
+
+//             if (isset($reply["actions"]) && !empty($reply["actions"])) {
+//                 sb_process_actions($reply["actions"], $conversation_id);
+//             }
+
+//             if ($reply["next_flow"]) {
+//                 sb_update_conversation_flow($conversation_id, $reply["next_flow"]);
+//             }
+
+//             return [
+//                 "ids" => $response_ids,
+//                 "messages" => $reply["reply"],
+//             ];
+//         } else {
+//             return sb_send_fallback_message($conversation_id);
+//         }
+//     }
+
+//     return false;
+// }
+
 
 function sb_option_process_reply($option, $conversation_id)
 {

@@ -34,3 +34,4 @@ tools
 /apps/waweb/output.txt
 /apps/waweb/file.txt
 include/log.txt
+/include/log.txt
