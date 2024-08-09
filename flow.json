@@ -1,0 +1,177 @@
+{
+  "welcome_message": [
+      {
+          "bot_reply": [
+              {
+                  "message": "Hello! How can I assist you today? Type 'help' for options."
+              }
+          ]
+      }
+  ],
+  "fallback": [
+      {
+          "bot_reply": [
+              {
+                  "message": "I'm sorry, I didn't understand that. Please type 'help' for options or provide more details."
+              }
+          ]
+      }
+  ],
+  "main_flow": {
+      "initial": [
+          {
+              "keywords": ["help"],
+              "bot_reply": [
+                  {
+                      "message": "Here are some options: \n1. Billing\n2. Support\n3. Technical Issues", "delay": 500
+                  },
+                  {
+                      "message": "If you need more help, just ask.", "delay": 5000
+                  }
+              ],
+              "next_flow": "help_options"
+          }
+      ],
+      "help_options": [
+          {
+              "keywords": ["billing"],
+              "bot_reply": [
+                  {
+                      "message": "For billing inquiries, type 'invoice' or 'payment'."
+                  },
+                  {
+                      "message": "You can also contact our billing team directly."
+                  }
+              ],
+              "next_flow": "billing_options"
+          },
+          {
+              "keywords": ["support"],
+              "bot_reply": [
+                  {
+                      "message": "For support, type 'technical' or 'general'."
+                  },
+                  {
+                      "message": "Our support team is here to help with any issues."
+                  }
+              ],
+              "next_flow": "support_options"
+          },
+          {
+              "keywords": ["technical"],
+              "bot_reply": [
+                  {
+                      "message": "Describe your technical issue or type 'troubleshoot' for common fixes."
+                  },
+                  {
+                      "message": "If needed, our technical team will assist you further."
+                  }
+              ],
+              "next_flow": "technical_issues",
+              "actions": [
+                  {
+                      "assign": 3
+                  }
+              ]
+          }
+      ],
+      "billing_options": [
+          {
+              "keywords": ["invoice"],
+              "bot_reply": [
+                  {
+                      "message": "Please provide your invoice number."
+                  },
+                  {
+                      "message": "Our billing team will process your request shortly."
+                  }
+              ],
+              "next_flow": "end_flow",
+              "actions": [
+                  {
+                      "assign": 1
+                  }
+              ]
+          },
+          {
+              "keywords": ["payment"],
+              "bot_reply": [
+                  {
+                      "message": "Describe your payment issue."
+                  },
+                  {
+                      "message": "We'll review your payment issue and get back to you."
+                  }
+              ],
+              "next_flow": "end_flow",
+              "actions": [
+                  {
+                      "assign": 1
+                  }
+              ]
+          }
+      ],
+      "support_options": [
+          {
+              "keywords": ["technical"],
+              "bot_reply": [
+                  {
+                      "message": "Describe your technical issue or type 'troubleshoot' for common fixes."
+                  },
+                  {
+                      "message": "Our technical support team is ready to assist you."
+                  }
+              ],
+              "next_flow": "technical_issues",
+              "actions": [
+                  {
+                      "assign": 3
+                  }
+              ]
+          },
+          {
+              "keywords": ["general"],
+              "bot_reply": [
+                  {
+                      "message": "Describe your general support request."
+                  },
+                  {
+                      "message": "We will address your general support request as soon as possible."
+                  }
+              ],
+              "next_flow": "end_flow",
+              "actions": [
+                  {
+                      "assign": 2
+                  }
+              ]
+          }
+      ],
+      "technical_issues": [
+          {
+              "keywords": ["troubleshoot"],
+              "bot_reply": [
+                  {
+                      "message": "Common fixes: 1. Restart your device, 2. Check your connection."
+                  },
+                  {
+                      "message": "If these don't work, please describe your issue in detail."
+                  }
+              ],
+              "next_flow": "end_flow"
+          }
+      ],
+      "end_flow": [
+          {
+              "bot_reply": [
+                  {
+                      "message": "Thank you for reaching out. If you need further assistance, feel free to ask!"
+                  },
+                  {
+                      "message": "Have a great day!"
+                  }
+              ]
+          }
+      ]
+  }
+}

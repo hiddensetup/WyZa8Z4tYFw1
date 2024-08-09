@@ -1825,6 +1825,7 @@ function sb_component_admin()
                                         <?php sb_e('Total time') ?>
                                     </li>
                                     <li id="status-client">
+                                        
                                         <?php sb_e('Tagged') ?>
                                     </li>
 

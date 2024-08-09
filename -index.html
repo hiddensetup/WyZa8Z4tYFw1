@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Tree with JSONEditor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsoneditor@9.5.6/dist/jsoneditor.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #jsoneditor {
+            height: 500px;
+            border: 1px solid #ddd;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Upload flow.json and View JSON Tree</h2>
+        <div class="mb-3">
+            <label for="fileInput" class="form-label">Choose a flow.json file</label>
+            <input class="form-control" type="file" id="fileInput" accept=".json">
+        </div>
+        <div id="jsoneditor"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsoneditor@9.5.6/dist/jsoneditor.min.js"></script>
+    <script>
+        let editor;
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const content = e.target.result;
+                    try {
+                        const json = JSON.parse(content);
+                        if (!editor) {
+                            const container = document.getElementById('jsoneditor');
+                            editor = new JSONEditor(container, {
+                                mode: 'tree'
+                            });
+                        }
+                        editor.set(json);
+                    } catch (err) {
+                        alert('Error parsing JSON. Please ensure the file contains valid JSON.');
+                    }
+                };
+                reader.readAsText(file);
+            }
+        });
+    </script>
+</body>
+</html>
