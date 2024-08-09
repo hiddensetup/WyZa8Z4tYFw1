@@ -9791,28 +9791,7 @@ function sb_send_fallback_message($conversation_id)
         "message" => $fallbackMessage,
     ];
 }
-
-// function sb_find_reply_by_option($option, $flowData)
-// {
-//     foreach ($flowData['main_flow'] as $flow_name => $flows) {
-//         foreach ($flows as $flow) {
-//             if (isset($flow['keywords']) && is_array($flow['keywords'])) {
-//                 foreach ($flow['keywords'] as $keyword) {
-//                     if ($option === strtolower($keyword)) {
-//                         return [
-//                             "option" => $keyword,
-//                             "reply" => isset($flow['bot_reply']) ? $flow['bot_reply'] : [],
-//                             "actions" => isset($flow['actions']) ? $flow['actions'] : [],
-//                             "next_flow" => isset($flow['next_flow']) ? $flow['next_flow'] : null,
-//                         ];
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//     return [];
-// }
-
+ 
 
 function sb_find_reply_by_option($option, $flowData)
 {
@@ -9834,47 +9813,6 @@ function sb_find_reply_by_option($option, $flowData)
     }
     return [];
 }
-
-// function sb_option_process_reply($option, $conversation_id)
-// {
-//     $option = strtolower($option);
-//     $flowData = sb_get_flow_data();
-//     $reply = sb_find_reply_by_option($option, $flowData);
-
-//     if ($option === '/quit') {
-//         return sb_handle_quit_trigger($conversation_id);
-//     }
-
-//     $assigned_department = sb_get_assigned_department($conversation_id);
-//     if (!empty($assigned_department)) {
-//         return false;
-//     }
-
-//     $query = 'SELECT COUNT(*) AS count FROM sb_messages WHERE payload LIKE "{\"option_assigned%" AND creation_time > "' . gmdate("Y-m-d H:i:s", time() - 864000) . '" AND conversation_id = ' . sb_db_escape($conversation_id, true);
-//     if (sb_db_get($query)["count"] == 0) {
-//         if (!empty($reply)) {
-//             $response_ids = sb_send_bot_replies($reply["reply"], $conversation_id);
-
-//             if (isset($reply["actions"]) && !empty($reply["actions"])) {
-//                 sb_process_actions($reply["actions"], $conversation_id);
-//             }
-
-//             if ($reply["next_flow"]) {
-//                 sb_update_conversation_flow($conversation_id, $reply["next_flow"]);
-//             }
-
-//             return [
-//                 "ids" => $response_ids,
-//                 "messages" => $reply["reply"],
-//             ];
-//         } else {
-//             return sb_send_fallback_message($conversation_id);
-//         }
-//     }
-
-//     return false;
-// }
-
 
 function sb_option_process_reply($option, $conversation_id)
 {
@@ -9923,7 +9861,7 @@ function sb_send_bot_replies($bot_replies, $conversation_id)
         $delay = isset($bot_reply['delay']) ? (int)$bot_reply['delay'] : 0;
 
         if ($delay > 0) {
-            usleep($delay * 2000); // Convert milliseconds to microseconds
+            usleep($delay * 1500); // Convert milliseconds to microseconds
         }
 
         $message = $bot_reply['message'];

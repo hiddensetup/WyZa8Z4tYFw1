@@ -68,7 +68,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
             $response = sb_curl($url, json_encode($query), $header);
         } else {
             // Log the request details
-            file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
+            // file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
             $response = sb_curl($url, json_encode($query), $header);
         }
         if ($attachments_count > 1) {
@@ -76,7 +76,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
                 $query = ["receiver" => $to];
                 $query['media'] = str_replace(' ', '%20', $attachments[$i][1]);
                 // Log the request details
-                file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
+                // file_put_contents('output.txt', "Sending to API - URL: " . $url . " Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
                 $response = sb_curl($url, json_encode($query), $header);
             }
         }
@@ -85,7 +85,7 @@ function sb_waweb_send_message($to, $message = '', $attachments = [])
         if ($message) {
             $query = ['messaging_product' => 'waweb', 'recipient_type' => 'individual', 'to' => $to];
             // Log the request details
-            file_put_contents('output.txt', "No Proxy - Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
+            // file_put_contents('output.txt', "No Proxy - Query: " . json_encode($query) . PHP_EOL, FILE_APPEND);
         }
         return $response;
     }
